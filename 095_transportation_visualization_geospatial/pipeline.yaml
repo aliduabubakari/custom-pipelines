@@ -1,0 +1,310 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-4827-11983-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "N/A"
+    abilities: ""
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-loading-profiling-initial-data-exploration
+        template: step-01-data-loading-profiling-initial-data-exploration
+    - - name: step-02-data-loading-profiling-data-quality-enhancement
+        template: step-02-data-loading-profiling-data-quality-enhancement
+    - - name: step-03-geospatial-normalization-entity-resolution
+        template: step-03-geospatial-normalization-entity-resolution
+    - - name: step-04-data-loading-profiling-code-optimization
+        template: step-04-data-loading-profiling-code-optimization
+    - - name: step-05-data-visualization-ci-calculation-improvement
+        template: step-05-data-visualization-ci-calculation-improvement
+    - - name: step-06-data-cleaning-standardization-file-handling-improv
+        template: step-06-data-cleaning-standardization-file-handling-improv
+    - - name: step-07-data-validation-quality-report
+        template: step-07-data-validation-quality-report
+    - - name: step-08-data-merging-integration
+        template: step-08-data-merging-integration
+    - - name: step-09-statistical-analysis-hypothesis-testing
+        template: step-09-statistical-analysis-hypothesis-testing
+    - - name: step-10-data-visualization-error-bar-handling
+        template: step-10-data-visualization-error-bar-handling
+    - - name: step-11-data-cleaning-standardization-performance-benchmar
+        template: step-11-data-cleaning-standardization-performance-benchmar
+    - - name: step-12-data-validation-quality-report-phase-2
+        template: step-12-data-validation-quality-report-phase-2
+    - - name: step-13-model-training-prediction
+        template: step-13-model-training-prediction
+
+  - name: step-01-data-loading-profiling-initial-data-exploration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-loading-profiling-initial-data-expl.py", --all_star_csv /data/all_star.csv --player_college_csv /data/player_college.csv --all_star_sample_csv /mnt/output/all_star_sample.csv --player_college_sample_csv /mnt/output/player_college_sample.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-data-loading-profiling-data-quality-enhancement
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-loading-profiling-data-quality-enha.py", --all_star_csv /data/all_star.csv --player_college_csv /data/player_college.csv --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-geospatial-normalization-entity-resolution
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_geospatial-normalization-entity-resoluti.py", --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv --top_allstar_colleges_csv /mnt/output/top_allstar_colleges.csv --college_position_specialization_csv /mnt/output/college_position_specialization.csv --college_allstar_stats_csv /mnt/output/college_allstar_stats.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-data-loading-profiling-code-optimization
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_data-loading-profiling-code-optimization.py", --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv --enhanced_college_stats_csv /mnt/output/enhanced_college_stats.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-data-visualization-ci-calculation-improvement
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_data-visualization-ci-calculation-improv.py", --enhanced_college_stats_csv /mnt/output/enhanced_college_stats.csv --final_college_stats_csv /mnt/output/final_college_stats.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-data-cleaning-standardization-file-handling-improv
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_data-cleaning-standardization-file-handl.py", --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-data-validation-quality-report
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_data-validation-quality-report.py", --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-data-merging-integration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_data-merging-integration.py", --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv --analysis_output/revised_college_stats_csv /mnt/output/analysis_output/revised_college_stats.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-statistical-analysis-hypothesis-testing
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_statistical-analysis-hypothesis-testing.py", --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv --analysis_output/final_enhanced_stats_csv /mnt/output/analysis_output/final_enhanced_stats.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-10-data-visualization-error-bar-handling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_data-visualization-error-bar-handling.py", --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-11-data-cleaning-standardization-performance-benchmar
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_data-cleaning-standardization-performanc.py", --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --player_college_csv /data/player_college.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv --analysis_output/college_impact_scores_csv /mnt/output/analysis_output/college_impact_scores.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-12-data-validation-quality-report-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_data-validation-quality-report-phase-2.py", --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --player_college_csv /data/player_college.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv --analysis_output/era_stats_csv /mnt/output/analysis_output/era_stats.csv --analysis_output/final_college_stats_csv /mnt/output/analysis_output/final_college_stats.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-13-model-training-prediction
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_model-training-prediction.py", --cleaned_all_star_csv /mnt/output/cleaned_all_star.csv --cleaned_player_college_csv /mnt/output/cleaned_player_college.csv --analysis_output/college_impact_coefficients_csv /mnt/output/analysis_output/college_impact_coefficients.csv --analysis_output/full_player_universe_csv /mnt/output/analysis_output/full_player_universe.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

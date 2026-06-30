@@ -1,0 +1,310 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-44-15629-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "N/A"
+    abilities: ""
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-this-dataset-appears-to-be-a-collection-of-csv-fil
+        template: step-01-this-dataset-appears-to-be-a-collection-of-csv-fil
+    - - name: step-02-data-merging-integration
+        template: step-02-data-merging-integration
+    - - name: step-03-next-steps-for-deeper-analysis
+        template: step-03-next-steps-for-deeper-analysis
+    - - name: step-04-error-recovery-robust-loading
+        template: step-04-error-recovery-robust-loading
+    - - name: step-05-data-validation-quality-report
+        template: step-05-data-validation-quality-report
+    - - name: step-06-data-loading-profiling
+        template: step-06-data-loading-profiling
+    - - name: step-07-data-validation-quality-report-phase-2
+        template: step-07-data-validation-quality-report-phase-2
+    - - name: step-08-data-merging-integration-phase-2
+        template: step-08-data-merging-integration-phase-2
+    - - name: step-09-data-validation-quality-report-phase-3
+        template: step-09-data-validation-quality-report-phase-3
+    - - name: step-10-data-visualization
+        template: step-10-data-visualization
+    - - name: step-11-data-merging-integration-phase-3
+        template: step-11-data-merging-integration-phase-3
+    - - name: step-12-1-missing-dependency
+        template: step-12-1-missing-dependency
+    - - name: step-13-regression-modeling
+        template: step-13-regression-modeling
+
+  - name: step-01-this-dataset-appears-to-be-a-collection-of-csv-fil
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_this-dataset-appears-to-be-a-collection-.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-data-merging-integration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-merging-integration.py", --EmployeeDepartmentHistory_csv /data/EmployeeDepartmentHistory.csv --Employee_csv /data/Employee.csv --Person_csv /data/Person.csv --Department_csv /data/Department.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-next-steps-for-deeper-analysis
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_next-steps-for-deeper-analysis.py", --EmployeePayHistory_csv /data/EmployeePayHistory.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-error-recovery-robust-loading
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_error-recovery-robust-loading.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-data-validation-quality-report
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_data-validation-quality-report.py", --Employee_csv /data/Employee.csv --EmployeePayHistory_csv /data/EmployeePayHistory.csv --Person_csv /data/Person.csv --Department_csv /data/Department.csv --EmployeeDepartmentHistory_csv /data/EmployeeDepartmentHistory.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-data-loading-profiling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_data-loading-profiling.py", --EmployeeDepartmentHistory_csv /data/EmployeeDepartmentHistory.csv --Employee_csv /data/Employee.csv --Person_csv /data/Person.csv --Department_csv /data/Department.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-data-validation-quality-report-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_data-validation-quality-report-phase-2.py", --EmployeeDepartmentHistory_csv /data/EmployeeDepartmentHistory.csv --Employee_csv /data/Employee.csv --Person_csv /data/Person.csv --Department_csv /data/Department.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-data-merging-integration-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_data-merging-integration-phase-2.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-data-validation-quality-report-phase-3
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_data-validation-quality-report-phase-3.py", --EmployeeDepartmentHistory_csv /data/EmployeeDepartmentHistory.csv --Employee_csv /data/Employee.csv --EmployeePayHistory_csv /data/EmployeePayHistory.csv --Department_csv /data/Department.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-10-data-visualization
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_data-visualization.py", --EmployeeDepartmentHistory_csv /data/EmployeeDepartmentHistory.csv --Employee_csv /data/Employee.csv --EmployeePayHistory_csv /data/EmployeePayHistory.csv --Department_csv /data/Department.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-11-data-merging-integration-phase-3
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_data-merging-integration-phase-3.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-12-1-missing-dependency
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_1-missing-dependency.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-13-regression-modeling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_regression-modeling.py", --EmployeeDepartmentHistory_csv /data/EmployeeDepartmentHistory.csv --Employee_csv /data/Employee.csv --EmployeePayHistory_csv /data/EmployeePayHistory.csv --Department_csv /data/Department.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

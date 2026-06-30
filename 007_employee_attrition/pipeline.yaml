@@ -1,0 +1,426 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: employee_attrition-
+  labels:
+    pipeline: employee_attrition
+    domain: Human Resources
+    type: ml-pipeline
+spec:
+  entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-loading-profiling
+        template: step-01-data-loading-profiling
+    - - name: step-02-data-aggregation--surveys
+        template: step-02-data-aggregation--surveys
+    - - name: step-03-data-aggregation--performance
+        template: step-03-data-aggregation--performance
+    - - name: step-04-data-merging-integration
+        template: step-04-data-merging-integration
+    - - name: step-05-data-cleaning-standardization
+        template: step-05-data-cleaning-standardization
+    - - name: step-06-feature-engineering
+        template: step-06-feature-engineering
+    - - name: step-07-data-validation-quality-report
+        template: step-07-data-validation-quality-report
+    - - name: step-08-exploratory-data-analysis
+        template: step-08-exploratory-data-analysis
+    - - name: step-09-data-visualization--attrition-patterns
+        template: step-09-data-visualization--attrition-patterns
+    - - name: step-10-data-visualization--engagement-performance
+        template: step-10-data-visualization--engagement-performance
+    - - name: step-11-statistical-analysis
+        template: step-11-statistical-analysis
+    - - name: step-12-data-preparation-for-modeling
+        template: step-12-data-preparation-for-modeling
+    - - name: step-13-model-training-comparison
+        template: step-13-model-training-comparison
+    - - name: step-14-model-optimization
+        template: step-14-model-optimization
+    - - name: step-15-model-explainability-retention-insights
+        template: step-15-model-explainability-retention-insights
+    - - name: step-16-final-synthesis-retention-strategy
+        template: step-16-final-synthesis-retention-strategy
+
+  - name: step-01-data-loading-profiling
+    metadata:
+      annotations:
+        step-description: "Load employees CSV, engagement_surveys JSON, performance_reviews Excel. Profile each: headcount by d"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-loading-profiling.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-02-data-aggregation--surveys
+    metadata:
+      annotations:
+        step-description: "Aggregate engagement surveys to employee level: average_score, score_trend (recent - historical), lo"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-aggregation--surveys.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-03-data-aggregation--performance
+    metadata:
+      annotations:
+        step-description: "Aggregate performance reviews: avg_rating, rating_trend, goal_achievement_avg, promotion_recommendat"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_data-aggregation--performance.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-04-data-merging-integration
+    metadata:
+      annotations:
+        step-description: "Merge aggregated surveys and performance metrics with employees. Left join to preserve all employees"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_data-merging-integration.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-05-data-cleaning-standardization
+    metadata:
+      annotations:
+        step-description: "Handle missing survey/performance data (employees without data flagged separately). Standardize depa"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_data-cleaning-standardization.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-06-feature-engineering
+    metadata:
+      annotations:
+        step-description: "Create derived features: tenure_years (from hire_date), salary_ratio (salary / department_median), p"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_feature-engineering.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-07-data-validation-quality-report
+    metadata:
+      annotations:
+        step-description: "Validate data integrity: all manager_ids reference valid employees, review dates are after hire date"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_data-validation-quality-report.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-08-exploratory-data-analysis
+    metadata:
+      annotations:
+        step-description: "Analyze attrition rate by department, role, location (on-site/hybrid/remote), education, tenure buck"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_exploratory-data-analysis.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-09-data-visualization--attrition-patterns
+    metadata:
+      annotations:
+        step-description: "Create 3x2 dashboard: (1) Attrition rate by department bar chart with error bars, (2) Tenure histogr"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_data-visualization--attrition-patterns.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-10-data-visualization--engagement-performance
+    metadata:
+      annotations:
+        step-description: "Visualize people analytics: (1) Engagement score vs attrition scatter with quadrants (Engaged/Diseng"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_data-visualization--engagement-performance.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-11-statistical-analysis
+    metadata:
+      annotations:
+        step-description: "Chi-square tests: department, role, education, location vs attrition. T-tests: salary, tenure, engag"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_statistical-analysis.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-12-data-preparation-for-modeling
+    metadata:
+      annotations:
+        step-description: "Encode categoricals: one-hot for department, role, education, location. Scale numerical with Standar"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_data-preparation-for-modeling.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-13-model-training-comparison
+    metadata:
+      annotations:
+        step-description: "Train LogisticRegression (L1 and L2), RandomForest, XGBoost, LightGBM. 5-fold stratified CV. Evaluat"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_model-training-comparison.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-14-model-optimization
+    metadata:
+      annotations:
+        step-description: "Hyperparameter tune via Optuna (50 trials each for top 2 models). Calibrate probabilities. Create so"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_14_model-optimization.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-15-model-explainability-retention-insights
+    metadata:
+      annotations:
+        step-description: "SHAP analysis: global feature importance, dependence plots for top 10 features. Identify attrition a"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_15_model-explainability-retention-insights.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-16-final-synthesis-retention-strategy
+    metadata:
+      annotations:
+        step-description: "Compile comprehensive HR analytics report: Executive Summary, 
+Attrition Driver Analysis (top factor"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_16_final-synthesis-retention-strategy.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

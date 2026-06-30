@@ -1,0 +1,41 @@
+{
+  "readmit_by_gender": {
+    "Female": 0.3127,
+    "Male": 0.3444
+  },
+  "readmit_by_race": {
+    "Asian": 0.4615,
+    "Black": 0.402,
+    "Hispanic": 0.2687,
+    "Other": 0.4211,
+    "White": 0.2972
+  },
+  "readmit_by_insurance_type": {
+    "Medicaid": 0.3857,
+    "Medicare": 0.31,
+    "Private": 0.2842,
+    "Uninsured": 0.4894
+  },
+  "readmit_by_has_diabetes": {
+    "0": 0.2853,
+    "1": 0.4315
+  },
+  "readmit_by_has_heart_condition": {
+    "0": 0.284,
+    "1": 0.372
+  },
+  "readmit_by_smoker": {
+    "0": 0.2808,
+    "1": 0.479
+  },
+  "top_correlations": {
+    "risk_score": 0.3144938417939047,
+    "age": 0.2550217192513241,
+    "age_group": 0.2348689411245872,
+    "total_los": 0.18587975856086944,
+    "smoker": 0.1797389548432249,
+    "n_admissions": 0.15938953272909728,
+    "has_diabetes": 0.14158665695682973,
+    "icu_stays": 0.11411715393043796
+  }
+}

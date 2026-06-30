@@ -1,0 +1,7 @@
+department,headcount,budget_millions,location
+Engineering,60,5,NY
+Sales,50,8,SF
+Marketing,40,3,Chicago
+HR,20,2,NY
+Finance,30,4,SF
+Operations,50,3,Remote

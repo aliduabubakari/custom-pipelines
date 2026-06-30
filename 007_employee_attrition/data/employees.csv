@@ -1,0 +1,501 @@
+employee_id,department,job_role,education,marital_status,location,age,gender,hire_date,tenure_days,monthly_salary,commute_miles,work_life_balance,job_satisfaction,num_companies_worked,promotions,overtime,training_hours,is_attrited
+EMP_0001,Product,Director,PhD,Married,Seattle,42,Male,2016-04-11,3187,13424.75,7.1,1,4,3,0,1,29,0
+EMP_0002,Operations,Supervisor,Associate,Single,Austin,43,Male,2022-12-14,749,6949.08,10.5,2,4,4,1,0,61,0
+EMP_0003,Marketing,Director,Bachelor,Married,Chicago,58,Female,2020-08-30,1585,15790.83,1.1,1,4,6,2,1,59,0
+EMP_0004,Product,Director,Bachelor,Single,Remote,38,Male,2017-10-18,2632,16260.42,8.9,2,1,7,5,0,61,1
+EMP_0005,IT,Support,Bachelor,Single,Seattle,45,Male,2017-02-02,2890,4679.83,4.2,1,3,5,3,0,10,0
+EMP_0006,Marketing,Coordinator,Master,Married,Chicago,26,Female,2020-09-19,1565,6308.58,20.0,4,2,1,0,0,87,0
+EMP_0007,Finance,Manager,Bachelor,Single,Chicago,22,Male,2019-01-25,2168,12320.08,13.8,3,3,6,2,0,76,0
+EMP_0008,Marketing,Manager,Master,Married,Seattle,53,Female,2021-12-07,1121,9621.75,6.3,3,1,4,4,0,5,0
+EMP_0009,HR,Director,Associate,Married,Remote,32,Male,2020-07-31,1615,18798.58,4.8,1,1,1,1,0,2,1
+EMP_0010,Product,PM,Bachelor,Married,Seattle,54,Male,2016-11-14,2970,8798.67,2.8,4,4,1,1,0,11,0
+EMP_0011,Operations,Manager,Bachelor,Single,New York,38,Male,2015-01-02,3652,10762.0,1.5,1,4,1,6,0,16,1
+EMP_0012,Product,PM,Bachelor,Married,Remote,43,Male,2022-08-31,854,11084.83,2.6,3,2,5,1,0,89,1
+EMP_0013,Marketing,Manager,Associate,Married,Austin,62,Female,2019-07-22,1990,10829.83,19.2,3,4,1,0,1,93,0
+EMP_0014,Sales,Sales Manager,Associate,Single,New York,23,Female,2021-04-20,1352,12537.42,24.1,3,3,1,1,1,19,0
+EMP_0015,IT,Admin,Master,Married,Chicago,29,Female,2015-04-14,3550,6550.17,1.1,2,1,3,4,1,99,0
+EMP_0016,Engineering,Architect,Associate,Single,Austin,29,Female,2016-02-05,3253,12357.83,8.8,3,3,6,3,1,26,0
+EMP_0017,Marketing,Specialist,Bachelor,Married,New York,26,Male,2017-03-26,2838,5695.33,1.2,1,4,1,6,0,94,0
+EMP_0018,Marketing,Director,Master,Single,Seattle,53,Female,2015-05-08,3526,15265.58,6.0,2,2,3,4,0,1,0
+EMP_0019,Sales,SDR,Master,Single,Remote,60,Male,2022-09-07,847,4761.58,4.0,4,1,4,1,1,64,0
+EMP_0020,IT,Manager,Bachelor,Single,Chicago,44,Male,2017-04-13,2820,10473.08,12.1,3,1,2,3,0,69,0
+EMP_0021,Product,PM,Bachelor,Single,Seattle,26,Male,2017-02-12,2880,8004.83,8.6,3,3,7,1,1,29,0
+EMP_0022,Marketing,Coordinator,Bachelor,Married,San Francisco,47,Male,2015-04-27,3537,4431.92,6.6,4,1,1,1,0,47,0
+EMP_0023,Engineering,Architect,Master,Married,Seattle,60,Female,2016-08-03,3073,14065.92,6.4,4,2,3,1,0,68,0
+EMP_0024,Product,Associate PM,Bachelor,Divorced,Seattle,33,Male,2021-11-26,1132,5356.08,7.4,1,2,6,1,1,99,0
+EMP_0025,Sales,Director,Bachelor,Married,San Francisco,53,Female,2018-09-10,2305,17366.75,10.6,4,3,2,0,0,90,0
+EMP_0026,HR,Director,Bachelor,Married,New York,54,Female,2019-06-25,2017,16975.08,18.2,4,2,3,1,0,1,0
+EMP_0027,Finance,Manager,Bachelor,Single,San Francisco,29,Male,2019-06-14,2028,10032.75,4.0,3,4,2,5,0,72,0
+EMP_0028,IT,Manager,Bachelor,Married,Austin,39,Male,2020-11-13,1510,10033.58,27.7,1,4,1,2,0,61,0
+EMP_0029,HR,Director,Bachelor,Single,Chicago,57,Male,2015-03-17,3578,15145.58,32.4,3,4,4,4,1,99,0
+EMP_0030,Finance,Manager,Master,Single,Seattle,63,Female,2021-09-11,1208,10972.83,6.8,3,1,3,5,0,39,0
+EMP_0031,Sales,SDR,Master,Married,Seattle,50,Male,2021-07-14,1267,5094.75,20.9,2,4,1,3,0,60,1
+EMP_0032,HR,Generalist,Master,Single,Chicago,60,Male,2015-06-22,3481,4631.83,7.3,2,4,4,5,0,24,0
+EMP_0033,IT,Support,Associate,Divorced,Austin,53,Female,2017-03-25,2839,5212.5,8.5,3,4,5,2,0,48,0
+EMP_0034,Operations,Manager,Bachelor,Married,Remote,24,Female,2017-11-01,2618,12814.08,1.6,2,4,4,1,0,7,0
+EMP_0035,Sales,Director,Bachelor,Single,New York,57,Female,2021-12-24,1104,12968.08,4.3,1,4,5,1,1,5,0
+EMP_0036,Sales,Sales Manager,Master,Married,San Francisco,31,Female,2017-05-26,2777,9241.75,6.3,2,1,2,3,1,26,0
+EMP_0037,Engineering,Junior Dev,High School,Single,New York,42,Male,2016-06-01,3136,5322.42,8.6,1,2,3,5,0,50,0
+EMP_0038,Finance,Analyst,Associate,Divorced,San Francisco,49,Male,2019-04-24,2079,6721.17,8.3,2,3,3,3,1,16,1
+EMP_0039,IT,Engineer,High School,Married,Seattle,35,Female,2016-03-10,3219,10470.08,10.6,2,2,2,4,0,87,0
+EMP_0040,Product,Director,Bachelor,Married,New York,26,Female,2015-05-18,3516,19004.42,7.8,4,4,5,4,0,22,0
+EMP_0041,Product,Director,Associate,Single,Austin,61,Female,2015-10-08,3373,18803.25,7.4,1,4,2,4,0,69,0
+EMP_0042,Engineering,Junior Dev,Bachelor,Single,San Francisco,35,Male,2022-10-12,812,5544.58,10.9,3,4,6,0,0,80,0
+EMP_0043,Sales,Director,Master,Married,Seattle,36,Male,2015-02-25,3598,16020.5,10.6,3,2,2,2,1,22,0
+EMP_0044,Operations,Manager,Bachelor,Single,San Francisco,59,Male,2018-04-30,2438,9711.58,5.7,2,3,1,1,0,24,0
+EMP_0045,Engineering,Junior Dev,Bachelor,Married,Chicago,62,Male,2020-11-28,1495,5100.67,14.3,3,4,1,1,0,51,0
+EMP_0046,Sales,Director,Bachelor,Married,Seattle,27,Female,2018-08-05,2341,12800.83,3.6,2,3,4,1,1,23,1
+EMP_0047,Product,Associate PM,High School,Married,Seattle,57,Female,2015-01-06,3648,5145.17,35.9,4,3,6,8,1,67,0
+EMP_0048,Marketing,Director,Bachelor,Single,New York,47,Female,2019-04-23,2080,16673.33,2.7,4,1,3,2,0,9,1
+EMP_0049,HR,Generalist,Bachelor,Married,New York,58,Male,2022-09-25,829,6056.0,7.4,3,3,6,0,1,59,0
+EMP_0050,HR,Generalist,Associate,Married,New York,55,Male,2019-04-20,2083,6862.33,13.8,4,4,5,1,0,29,0
+EMP_0051,Marketing,Coordinator,Associate,Single,Remote,47,Female,2016-08-23,3053,6223.67,6.0,4,4,7,6,0,65,0
+EMP_0052,Operations,Coordinator,Master,Married,Chicago,27,Female,2021-09-04,1215,5893.67,12.8,4,3,7,2,1,37,0
+EMP_0053,Engineering,Junior Dev,Master,Married,New York,25,Female,2016-05-31,3137,5704.08,5.2,2,1,7,4,0,67,0
+EMP_0054,HR,Coordinator,Master,Married,Chicago,57,Male,2020-01-09,1819,5597.75,18.5,2,2,6,1,0,11,0
+EMP_0055,Sales,SDR,Associate,Single,New York,61,Female,2015-12-22,3298,5790.75,16.6,1,4,7,3,1,39,0
+EMP_0056,Engineering,Senior Dev,Master,Single,Seattle,42,Male,2021-10-03,1186,7173.25,26.4,3,2,7,0,0,46,1
+EMP_0057,Engineering,Junior Dev,Bachelor,Married,Seattle,47,Male,2016-07-28,3079,4750.67,20.9,2,2,7,3,0,50,0
+EMP_0058,Operations,Director,Bachelor,Single,Seattle,45,Male,2015-10-12,3369,16668.92,11.0,4,2,5,6,0,95,0
+EMP_0059,Finance,Accountant,Master,Single,Chicago,53,Male,2016-03-04,3225,6374.83,19.1,3,2,1,4,0,62,0
+EMP_0060,HR,Coordinator,Bachelor,Single,Chicago,53,Male,2020-03-16,1752,5434.75,17.1,3,4,2,3,0,71,0
+EMP_0061,Operations,Coordinator,Master,Single,New York,49,Male,2020-11-13,1510,6474.58,10.2,2,3,4,1,0,54,1
+EMP_0062,IT,Admin,High School,Single,Seattle,40,Male,2017-07-03,2739,6488.75,6.5,2,1,7,3,0,19,0
+EMP_0063,Finance,Analyst,Bachelor,Married,San Francisco,56,Female,2022-12-11,752,7005.17,2.2,2,4,3,2,0,13,0
+EMP_0064,Engineering,Architect,Bachelor,Married,New York,43,Female,2020-08-13,1602,11369.0,24.1,2,3,5,0,1,84,1
+EMP_0065,Sales,Director,Bachelor,Single,Seattle,46,Male,2016-08-10,3066,14143.33,1.1,1,3,1,3,0,9,0
+EMP_0066,Finance,Analyst,Bachelor,Married,San Francisco,23,Male,2018-10-18,2267,5442.25,1.9,3,2,5,2,1,38,0
+EMP_0067,IT,Engineer,Master,Married,Remote,43,Female,2018-08-05,2341,8095.5,8.8,3,3,4,0,0,97,0
+EMP_0068,Engineering,Senior Dev,Bachelor,Single,New York,22,Male,2017-07-27,2715,8860.5,7.2,3,3,2,4,0,48,0
+EMP_0069,Finance,Analyst,PhD,Married,Austin,37,Female,2019-12-05,1854,6635.5,15.2,1,2,6,4,1,31,1
+EMP_0070,Sales,Director,Master,Single,Seattle,43,Female,2015-12-01,3319,17457.58,4.5,4,4,2,3,0,58,0
+EMP_0071,Sales,Sales Manager,High School,Married,Chicago,55,Female,2018-04-09,2459,10029.42,13.9,4,3,7,5,1,65,0
+EMP_0072,Product,Senior PM,Master,Single,Seattle,34,Male,2019-06-20,2022,9574.75,62.8,4,1,6,0,0,56,1
+EMP_0073,IT,Manager,Bachelor,Married,Remote,46,Male,2015-12-06,3314,11819.08,3.7,3,1,6,4,1,78,0
+EMP_0074,Engineering,Tech Lead,Bachelor,Married,Austin,58,Female,2017-07-27,2715,12077.5,41.4,3,2,3,3,0,92,0
+EMP_0075,Product,PM,Bachelor,Married,San Francisco,64,Male,2021-03-15,1388,7943.17,32.5,4,2,5,0,1,48,1
+EMP_0076,Engineering,Tech Lead,Bachelor,Married,Chicago,63,Male,2017-04-29,2804,12601.42,2.7,4,3,6,2,1,97,0
+EMP_0077,Marketing,Coordinator,Bachelor,Single,Seattle,30,Male,2022-08-17,868,6189.75,17.6,4,1,5,1,0,37,0
+EMP_0078,IT,Engineer,Master,Married,Remote,58,Male,2017-03-06,2858,7368.75,20.1,4,1,6,5,1,18,0
+EMP_0079,IT,Manager,Associate,Single,New York,34,Female,2019-09-13,1937,11560.58,10.6,2,4,7,4,1,52,0
+EMP_0080,Operations,Manager,Associate,Married,Remote,34,Male,2015-10-22,3359,9369.08,1.9,3,1,1,5,1,73,0
+EMP_0081,Engineering,Architect,Master,Married,Remote,58,Male,2018-05-04,2434,11602.33,15.7,4,3,1,3,0,81,0
+EMP_0082,Sales,AE,PhD,Divorced,Austin,56,Female,2021-11-12,1146,5740.42,1.2,2,3,7,1,0,97,1
+EMP_0083,Operations,Supervisor,PhD,Married,Seattle,62,Male,2017-06-05,2767,8653.42,4.5,4,2,7,4,0,20,0
+EMP_0084,Product,Director,Master,Divorced,Chicago,26,Female,2016-07-23,3084,18785.17,3.6,1,3,1,5,1,52,0
+EMP_0085,IT,Engineer,Bachelor,Married,Chicago,50,Male,2016-11-23,2961,10502.67,35.3,4,2,7,2,1,99,1
+EMP_0086,Engineering,Senior Dev,Associate,Single,Remote,23,Female,2016-01-30,3259,10235.92,2.6,1,2,6,3,1,32,0
+EMP_0087,HR,Generalist,Master,Married,Chicago,45,Male,2022-03-20,1018,7009.08,2.5,4,2,6,0,0,39,0
+EMP_0088,IT,Admin,Bachelor,Married,New York,62,Male,2022-03-21,1017,5164.58,6.1,2,2,7,0,1,14,0
+EMP_0089,Sales,AE,Associate,Single,Chicago,24,Female,2020-08-18,1597,8475.25,1.5,4,1,2,5,1,79,0
+EMP_0090,HR,Generalist,Master,Married,Chicago,62,Male,2015-01-14,3640,4803.08,1.6,3,4,5,6,0,43,0
+EMP_0091,Sales,AE,Master,Single,New York,24,Male,2017-01-24,2899,7707.33,1.7,3,3,1,4,0,91,0
+EMP_0092,HR,Generalist,PhD,Single,New York,53,Female,2018-06-27,2380,6371.92,7.7,2,3,2,4,0,17,1
+EMP_0093,IT,Support,Master,Single,Austin,51,Male,2017-07-28,2714,4240.75,8.2,1,1,6,3,0,88,0
+EMP_0094,HR,Generalist,High School,Married,New York,49,Male,2018-06-06,2401,4626.17,9.9,4,4,4,3,0,73,0
+EMP_0095,Finance,Accountant,Bachelor,Single,Seattle,41,Female,2022-01-04,1093,6022.67,5.5,4,1,3,2,1,43,0
+EMP_0096,IT,Manager,Master,Married,Chicago,41,Male,2017-08-26,2685,10890.25,28.6,1,1,7,1,0,32,1
+EMP_0097,Engineering,Tech Lead,High School,Single,Seattle,45,Female,2015-05-06,3528,13848.33,11.2,1,3,7,3,0,44,0
+EMP_0098,HR,Director,Master,Married,San Francisco,42,Male,2019-12-05,1854,13804.08,3.7,3,2,7,5,1,75,0
+EMP_0099,Marketing,Director,Master,Divorced,New York,40,Female,2019-08-05,1976,15408.58,11.5,2,2,4,1,0,32,0
+EMP_0100,Engineering,Junior Dev,Master,Married,Seattle,52,Female,2018-09-09,2306,5237.5,15.5,4,2,3,5,0,88,0
+EMP_0101,Finance,Manager,Bachelor,Married,Seattle,40,Male,2019-02-05,2157,11184.17,8.9,3,4,6,0,0,77,0
+EMP_0102,Sales,AE,Bachelor,Married,San Francisco,29,Male,2021-11-06,1152,8409.33,17.8,1,4,5,1,0,14,0
+EMP_0103,Marketing,Director,Bachelor,Married,Austin,64,Male,2016-02-11,3247,15658.25,23.7,1,4,7,2,1,85,0
+EMP_0104,Marketing,Specialist,Associate,Married,Seattle,48,Female,2018-03-25,2474,6373.58,4.7,4,2,2,4,1,38,0
+EMP_0105,Finance,Manager,Master,Single,San Francisco,63,Female,2018-01-12,2546,10675.92,17.4,1,4,5,5,0,9,0
+EMP_0106,IT,Admin,Bachelor,Divorced,New York,47,Male,2019-05-23,2050,5679.67,18.3,4,3,2,2,0,68,1
+EMP_0107,Product,Associate PM,Master,Divorced,Seattle,38,Male,2022-10-23,801,5694.42,10.3,4,3,2,0,0,56,1
+EMP_0108,Operations,Coordinator,PhD,Single,Seattle,39,Male,2022-05-08,969,5864.58,12.8,3,4,4,2,1,35,0
+EMP_0109,IT,Support,Master,Single,New York,27,Male,2016-12-08,2946,4371.17,18.8,4,1,4,4,0,2,0
+EMP_0110,Operations,Supervisor,High School,Married,Remote,38,Female,2019-02-03,2159,7503.67,1.6,4,2,4,3,0,29,0
+EMP_0111,Engineering,Tech Lead,Master,Single,Austin,29,Female,2019-08-07,1974,11073.08,2.3,3,4,6,5,0,31,0
+EMP_0112,Engineering,Junior Dev,Master,Married,San Francisco,35,Male,2019-08-14,1967,4438.5,5.5,1,2,3,1,1,61,0
+EMP_0113,Product,PM,Bachelor,Married,Chicago,43,Male,2015-12-08,3312,10128.75,6.0,4,3,1,2,1,29,0
+EMP_0114,Operations,Supervisor,Associate,Single,Remote,30,Male,2022-03-10,1028,6511.0,3.5,2,4,2,2,1,35,0
+EMP_0115,Product,PM,Associate,Divorced,Remote,24,Female,2023-01-28,704,8395.42,5.6,4,1,2,1,0,11,0
+EMP_0116,IT,Manager,Bachelor,Single,Remote,41,Male,2020-01-26,1802,12331.5,1.0,3,2,2,1,0,82,0
+EMP_0117,Sales,AE,Associate,Married,San Francisco,52,Female,2016-04-01,3197,6957.67,2.9,1,1,4,1,1,96,0
+EMP_0118,HR,Director,PhD,Married,Austin,50,Female,2015-05-04,3530,18474.08,13.9,1,4,7,3,1,85,0
+EMP_0119,Finance,Accountant,Associate,Single,Seattle,59,Male,2022-05-21,956,7227.67,3.1,1,1,5,0,0,84,0
+EMP_0120,Finance,Accountant,High School,Single,New York,56,Male,2021-09-08,1211,6590.42,19.6,3,1,2,0,1,81,1
+EMP_0121,IT,Engineer,Bachelor,Married,Remote,63,Female,2021-09-10,1209,7582.58,2.1,4,1,1,2,1,57,0
+EMP_0122,IT,Manager,Master,Married,San Francisco,29,Female,2021-02-25,1406,9521.33,23.0,3,4,5,0,1,64,0
+EMP_0123,Product,Associate PM,High School,Single,Chicago,22,Male,2016-02-12,3246,4487.0,1.4,4,1,2,7,1,7,1
+EMP_0124,IT,Admin,High School,Single,Austin,38,Male,2015-12-26,3294,6598.0,5.8,2,3,1,2,1,61,0
+EMP_0125,Product,PM,Bachelor,Single,Chicago,61,Male,2017-02-19,2873,10194.08,14.8,4,4,4,1,0,17,0
+EMP_0126,Product,Associate PM,Bachelor,Married,Austin,46,Male,2021-09-27,1192,6338.67,12.3,3,2,1,1,1,38,0
+EMP_0127,Engineering,Architect,Master,Single,Seattle,42,Female,2015-10-29,3352,14722.75,16.0,4,4,3,4,0,84,0
+EMP_0128,Product,Director,Master,Single,Chicago,44,Female,2016-04-05,3193,15540.5,15.2,1,4,3,6,0,15,0
+EMP_0129,IT,Support,Master,Divorced,Austin,61,Male,2020-01-30,1798,5041.75,3.3,2,1,6,1,0,12,0
+EMP_0130,Engineering,Architect,Bachelor,Married,San Francisco,33,Female,2017-11-03,2616,14841.17,15.2,4,3,3,3,0,3,0
+EMP_0131,HR,Generalist,Master,Married,Seattle,59,Male,2020-07-16,1630,5038.92,1.3,2,4,4,1,0,3,1
+EMP_0132,Finance,Accountant,Master,Single,San Francisco,25,Male,2022-01-27,1070,7215.0,17.3,3,4,4,0,0,82,1
+EMP_0133,Operations,Director,Bachelor,Married,Remote,52,Female,2020-08-28,1587,15721.33,2.6,3,1,7,1,0,91,0
+EMP_0134,Marketing,Manager,PhD,Divorced,Seattle,54,Male,2018-07-07,2370,10732.67,3.0,3,2,7,4,0,49,0
+EMP_0135,Marketing,Coordinator,Master,Married,Remote,27,Male,2020-03-15,1753,6010.75,1.6,3,2,2,2,1,73,0
+EMP_0136,IT,Support,Master,Married,Remote,60,Female,2023-02-26,675,4360.75,14.1,2,1,6,0,0,56,1
+EMP_0137,Product,Director,Bachelor,Divorced,Remote,45,Male,2021-09-27,1192,12994.92,4.2,3,4,6,0,0,53,0
+EMP_0138,Product,PM,Master,Single,New York,57,Male,2022-03-28,1010,10347.92,9.3,1,4,2,1,1,81,0
+EMP_0139,IT,Manager,Bachelor,Single,Seattle,63,Female,2017-06-14,2758,11309.83,7.8,1,2,5,3,1,11,1
+EMP_0140,Engineering,Junior Dev,Associate,Single,Austin,63,Male,2016-08-20,3056,5053.33,8.4,1,1,2,5,1,73,0
+EMP_0141,Finance,Analyst,Master,Married,San Francisco,31,Male,2020-03-18,1750,6166.25,14.8,4,4,7,3,1,63,0
+EMP_0142,IT,Engineer,Master,Married,Austin,43,Male,2022-08-23,862,10375.17,22.2,4,2,3,2,0,65,1
+EMP_0143,Engineering,Architect,Bachelor,Divorced,New York,63,Male,2017-02-12,2880,12717.08,7.0,3,2,3,4,1,35,0
+EMP_0144,Finance,Analyst,Bachelor,Married,Remote,61,Male,2022-11-15,778,6785.0,16.8,3,4,3,0,1,39,0
+EMP_0145,Operations,Coordinator,Bachelor,Single,Seattle,53,Female,2016-09-04,3041,5240.67,10.6,2,3,1,7,1,94,0
+EMP_0146,Marketing,Manager,Associate,Married,Chicago,54,Male,2020-04-23,1714,12506.08,1.8,1,3,5,1,1,5,0
+EMP_0147,Marketing,Director,Bachelor,Married,Austin,30,Male,2018-06-03,2404,18279.92,22.2,2,2,5,1,1,34,0
+EMP_0148,HR,Generalist,Bachelor,Married,San Francisco,32,Female,2017-06-14,2758,5463.0,19.4,3,2,7,1,1,33,1
+EMP_0149,Sales,Sales Manager,Bachelor,Single,Remote,30,Female,2020-08-10,1605,12266.67,4.3,3,3,4,1,0,20,0
+EMP_0150,Marketing,Coordinator,Bachelor,Married,Remote,57,Female,2016-07-04,3103,6066.58,1.6,3,2,3,3,0,37,0
+EMP_0151,Operations,Director,Bachelor,Single,Chicago,51,Female,2019-03-11,2123,15602.17,1.4,4,2,2,2,1,2,0
+EMP_0152,Sales,Sales Manager,Master,Single,Remote,30,Male,2018-10-30,2255,10897.0,11.1,4,2,6,1,0,8,1
+EMP_0153,IT,Support,Bachelor,Single,Chicago,56,Male,2021-07-09,1272,4935.08,1.5,4,4,2,3,0,92,0
+EMP_0154,Operations,Coordinator,Bachelor,Married,Chicago,42,Male,2018-09-10,2305,4817.67,3.5,4,1,5,0,1,67,0
+EMP_0155,Marketing,Coordinator,High School,Divorced,Seattle,44,Male,2021-07-07,1274,6299.0,7.2,3,1,3,2,0,19,0
+EMP_0156,Engineering,Junior Dev,Bachelor,Married,Austin,49,Male,2020-10-24,1530,4901.58,11.6,2,4,2,2,0,85,0
+EMP_0157,Engineering,Senior Dev,Bachelor,Married,San Francisco,48,Male,2015-12-28,3292,10190.25,5.0,1,3,6,2,0,48,0
+EMP_0158,Operations,Coordinator,Associate,Single,Austin,54,Male,2015-12-07,3313,5236.67,3.5,2,3,6,2,0,87,0
+EMP_0159,Finance,Manager,Master,Married,Seattle,32,Male,2017-06-25,2747,9091.67,4.2,1,4,4,5,1,91,0
+EMP_0160,Sales,SDR,High School,Married,Remote,44,Male,2020-02-19,1778,5311.92,2.2,2,1,7,1,0,39,0
+EMP_0161,HR,Coordinator,High School,Single,New York,60,Male,2015-04-15,3549,5704.5,22.9,1,2,6,5,1,37,0
+EMP_0162,Marketing,Director,PhD,Married,New York,33,Male,2020-01-31,1797,13319.58,6.1,1,1,6,2,1,27,0
+EMP_0163,Finance,Accountant,Master,Married,Seattle,30,Male,2017-11-19,2600,6568.0,17.0,3,3,4,2,1,31,0
+EMP_0164,Sales,Sales Manager,Bachelor,Married,New York,45,Male,2021-10-23,1166,9245.25,11.4,1,4,1,1,0,59,1
+EMP_0165,Sales,Director,High School,Married,Chicago,32,Male,2020-01-04,1824,18468.17,8.6,4,4,4,1,0,49,0
+EMP_0166,Finance,Accountant,High School,Married,Chicago,25,Male,2020-07-30,1616,7915.83,6.3,3,2,6,2,1,36,0
+EMP_0167,Sales,Director,Bachelor,Divorced,Austin,39,Female,2021-08-13,1237,13345.33,10.3,2,4,1,1,0,36,0
+EMP_0168,Engineering,Junior Dev,Bachelor,Single,Seattle,44,Male,2019-04-27,2076,5601.08,13.3,2,1,5,1,1,67,0
+EMP_0169,Marketing,Coordinator,Bachelor,Single,Chicago,34,Female,2020-12-26,1467,4716.42,16.3,3,4,2,2,0,84,1
+EMP_0170,IT,Manager,Master,Married,Remote,40,Male,2018-02-14,2513,11196.0,5.4,3,4,6,2,1,19,0
+EMP_0171,Engineering,Senior Dev,High School,Divorced,Chicago,40,Male,2022-04-21,986,8451.25,20.9,3,3,2,1,0,22,1
+EMP_0172,Product,Senior PM,Bachelor,Married,San Francisco,38,Female,2015-03-23,3572,8308.92,10.2,3,4,7,2,1,80,0
+EMP_0173,Engineering,Junior Dev,Bachelor,Single,Remote,24,Male,2017-11-02,2617,5899.58,3.5,3,4,2,4,0,79,0
+EMP_0174,HR,Generalist,Bachelor,Married,Remote,51,Male,2015-01-19,3635,5093.25,53.3,4,3,6,0,1,24,1
+EMP_0175,Finance,Analyst,High School,Single,Seattle,30,Female,2016-06-30,3107,6569.0,1.9,1,2,6,2,0,71,0
+EMP_0176,Marketing,Specialist,Master,Divorced,San Francisco,40,Male,2019-04-01,2102,6747.92,2.2,2,2,4,1,0,12,0
+EMP_0177,IT,Engineer,Associate,Divorced,Chicago,29,Male,2016-09-23,3022,8602.42,24.7,1,3,5,3,0,18,0
+EMP_0178,Engineering,Junior Dev,Associate,Divorced,Remote,31,Female,2019-01-19,2174,5039.75,11.1,2,2,2,5,1,81,0
+EMP_0179,HR,BP,Associate,Divorced,San Francisco,32,Male,2019-01-04,2189,6375.42,8.2,2,2,6,1,1,40,0
+EMP_0180,Operations,Coordinator,Master,Single,Austin,32,Female,2019-07-01,2011,4858.33,19.5,4,4,4,4,1,16,0
+EMP_0181,Sales,Sales Manager,Bachelor,Married,Chicago,46,Female,2017-06-24,2748,9126.0,3.9,3,1,5,5,1,11,0
+EMP_0182,Finance,Accountant,Associate,Married,Austin,62,Male,2019-02-28,2134,5899.92,5.6,4,1,4,2,0,1,0
+EMP_0183,IT,Support,Bachelor,Married,Remote,54,Female,2020-02-22,1775,4681.17,4.5,4,4,7,0,1,69,1
+EMP_0184,HR,Director,Bachelor,Married,Remote,22,Female,2015-08-23,3419,15232.5,1.6,2,2,2,3,1,1,0
+EMP_0185,Operations,Coordinator,Associate,Married,New York,24,Male,2020-08-26,1589,6288.58,4.1,1,3,1,3,1,46,0
+EMP_0186,Engineering,Architect,Associate,Divorced,Remote,63,Female,2022-08-24,861,11301.08,4.1,4,4,5,0,1,6,0
+EMP_0187,HR,Coordinator,Bachelor,Single,Chicago,57,Male,2022-04-24,983,5770.0,8.9,4,1,7,1,0,3,1
+EMP_0188,IT,Engineer,Master,Divorced,San Francisco,49,Male,2018-02-21,2506,8860.08,1.6,2,4,1,3,0,21,0
+EMP_0189,Engineering,Junior Dev,Associate,Single,San Francisco,47,Female,2021-12-29,1099,5088.5,2.6,1,4,4,1,0,48,0
+EMP_0190,Product,Director,Bachelor,Married,New York,52,Female,2022-10-12,812,13744.25,1.1,4,1,3,0,0,37,0
+EMP_0191,Marketing,Specialist,Associate,Married,Seattle,26,Female,2022-03-30,1008,6955.5,8.9,2,1,7,0,0,92,1
+EMP_0192,IT,Manager,Master,Married,New York,32,Female,2019-03-27,2107,10263.33,11.8,1,4,4,5,0,18,0
+EMP_0193,Product,Senior PM,Associate,Single,Remote,25,Female,2017-03-07,2857,9963.5,29.8,3,3,5,6,0,80,1
+EMP_0194,Marketing,Director,Bachelor,Married,Remote,30,Female,2019-06-25,2017,15294.58,9.0,3,3,5,1,1,71,0
+EMP_0195,IT,Engineer,Bachelor,Single,Seattle,24,Female,2018-04-11,2457,7527.67,4.4,4,3,3,4,0,93,1
+EMP_0196,Marketing,Manager,PhD,Married,Remote,38,Female,2015-04-26,3538,10238.42,9.5,2,4,1,3,0,74,0
+EMP_0197,Engineering,Junior Dev,Associate,Divorced,Remote,55,Female,2020-05-14,1693,5856.08,9.7,3,4,3,1,1,59,1
+EMP_0198,Product,Senior PM,Master,Married,Seattle,42,Female,2022-10-09,815,8426.08,7.9,4,1,5,0,0,45,1
+EMP_0199,HR,Generalist,High School,Single,Chicago,58,Male,2018-10-22,2263,6580.67,19.1,1,4,2,4,0,22,0
+EMP_0200,Finance,Analyst,Bachelor,Married,New York,27,Male,2019-08-01,1980,5484.75,3.3,1,1,4,1,1,91,0
+EMP_0201,HR,Generalist,Master,Married,New York,26,Female,2020-01-24,1804,5342.5,4.9,1,4,3,1,0,46,0
+EMP_0202,Operations,Director,PhD,Married,Seattle,42,Male,2015-09-29,3382,13279.5,8.9,2,4,3,3,0,16,0
+EMP_0203,HR,Director,Bachelor,Married,Seattle,58,Male,2020-01-31,1797,17532.25,2.9,1,1,7,5,1,56,0
+EMP_0204,Engineering,Senior Dev,Master,Single,Seattle,27,Male,2018-08-24,2322,7289.58,2.3,1,4,7,2,0,99,0
+EMP_0205,IT,Manager,Master,Married,Chicago,64,Female,2021-12-10,1118,12088.92,10.6,2,1,7,0,1,82,0
+EMP_0206,Operations,Coordinator,Bachelor,Married,Seattle,22,Male,2016-01-25,3264,4516.58,33.6,2,3,3,3,0,22,1
+EMP_0207,Sales,Director,Master,Married,Remote,24,Female,2016-08-17,3059,16988.92,3.8,4,4,1,3,0,96,0
+EMP_0208,Finance,Analyst,Master,Married,Chicago,54,Male,2015-01-19,3635,6736.83,1.7,2,3,7,5,1,19,0
+EMP_0209,Finance,CFO,Bachelor,Married,New York,29,Male,2019-08-20,1961,26868.67,2.1,2,1,4,3,0,75,0
+EMP_0210,Product,Senior PM,Bachelor,Married,Chicago,37,Female,2022-03-18,1020,9186.5,2.6,3,3,3,0,1,90,0
+EMP_0211,Engineering,Senior Dev,Bachelor,Married,Chicago,23,Male,2022-10-20,804,9236.42,5.7,3,2,1,1,0,99,1
+EMP_0212,Marketing,Director,High School,Single,Chicago,47,Male,2017-03-31,2833,19126.92,14.3,4,1,3,3,0,44,0
+EMP_0213,HR,BP,Bachelor,Married,New York,31,Male,2020-09-24,1560,7011.25,12.2,4,2,1,2,1,84,0
+EMP_0214,Product,Associate PM,Bachelor,Single,Seattle,30,Male,2023-02-10,691,5576.25,10.5,1,1,2,1,1,22,1
+EMP_0215,Product,Director,Master,Single,New York,26,Male,2017-03-12,2852,13172.0,7.1,3,2,2,3,1,18,0
+EMP_0216,HR,BP,Bachelor,Married,Chicago,31,Male,2017-10-11,2639,8865.42,8.4,3,2,2,2,0,59,0
+EMP_0217,HR,Coordinator,Master,Married,Chicago,42,Male,2015-12-29,3291,5685.33,18.9,4,4,2,3,0,10,0
+EMP_0218,Sales,SDR,Associate,Married,Seattle,64,Male,2017-04-02,2831,5366.25,1.1,1,1,6,1,0,73,0
+EMP_0219,HR,Coordinator,Master,Married,Austin,40,Male,2015-03-10,3585,4267.92,26.8,3,4,2,5,1,95,0
+EMP_0220,Finance,CFO,Bachelor,Married,San Francisco,60,Male,2023-01-07,725,18669.83,6.0,3,1,3,0,0,4,0
+EMP_0221,Sales,Sales Manager,Master,Divorced,Chicago,51,Male,2022-08-05,880,9831.67,7.1,3,1,6,0,0,44,0
+EMP_0222,Engineering,Tech Lead,High School,Married,Remote,39,Male,2017-01-27,2896,9615.58,1.2,3,4,2,3,0,27,0
+EMP_0223,Marketing,Specialist,Associate,Single,Chicago,36,Female,2019-08-15,1966,6576.08,9.1,3,1,6,4,0,12,0
+EMP_0224,Operations,Coordinator,Bachelor,Married,Seattle,50,Male,2017-05-05,2798,5807.08,3.3,1,2,1,7,1,31,0
+EMP_0225,Sales,Director,Master,Married,New York,22,Male,2019-06-10,2032,18442.42,7.6,3,2,1,3,0,10,0
+EMP_0226,Finance,Accountant,Bachelor,Married,Chicago,23,Male,2022-01-25,1072,6660.42,3.0,4,4,7,0,0,44,0
+EMP_0227,Sales,AE,Bachelor,Divorced,Austin,50,Female,2021-06-28,1283,6327.0,5.3,4,4,3,1,0,74,1
+EMP_0228,Sales,Sales Manager,Master,Single,Chicago,23,Female,2022-02-21,1045,10179.58,11.0,2,1,7,0,0,72,1
+EMP_0229,Sales,AE,Master,Married,San Francisco,38,Male,2018-05-19,2419,7528.08,14.6,3,4,1,2,0,94,0
+EMP_0230,Marketing,Coordinator,Bachelor,Divorced,Seattle,43,Female,2022-12-01,762,5316.25,13.6,2,4,3,0,0,1,0
+EMP_0231,Operations,Supervisor,Master,Married,New York,47,Female,2021-09-09,1210,7435.58,7.0,2,4,1,0,1,66,0
+EMP_0232,Operations,Manager,Bachelor,Single,Seattle,53,Male,2017-07-11,2731,11178.83,4.1,3,1,7,6,0,36,0
+EMP_0233,Product,PM,High School,Divorced,Chicago,36,Female,2020-01-12,1816,10542.33,4.9,4,2,3,3,0,7,0
+EMP_0234,Marketing,Coordinator,Bachelor,Single,Chicago,41,Female,2017-08-14,2697,5933.33,17.4,2,3,5,3,1,74,0
+EMP_0235,Marketing,Coordinator,Master,Married,Austin,56,Male,2021-11-14,1144,6312.33,13.2,4,4,7,2,0,84,0
+EMP_0236,Finance,Accountant,Bachelor,Single,Seattle,40,Male,2020-10-22,1532,5701.83,9.6,4,3,7,3,0,50,0
+EMP_0237,Finance,CFO,Bachelor,Divorced,San Francisco,41,Female,2017-11-03,2616,18208.42,7.1,2,3,7,3,0,58,0
+EMP_0238,Product,Associate PM,Bachelor,Single,Chicago,22,Female,2021-02-18,1413,4653.5,13.2,2,2,7,2,1,32,1
+EMP_0239,Product,Senior PM,Bachelor,Married,Remote,41,Female,2022-05-14,963,9005.67,31.7,1,1,2,1,1,25,1
+EMP_0240,Marketing,Director,High School,Married,Austin,29,Male,2017-07-14,2728,18930.75,10.6,3,4,6,4,1,87,0
+EMP_0241,IT,Engineer,Associate,Single,Seattle,63,Female,2022-05-02,975,9404.5,29.3,1,2,6,0,0,11,1
+EMP_0242,Engineering,Junior Dev,Master,Divorced,Chicago,32,Female,2017-12-30,2559,4330.58,3.6,4,2,6,1,0,83,0
+EMP_0243,Marketing,Coordinator,Master,Divorced,Austin,44,Female,2015-04-20,3544,5668.75,3.5,4,4,2,3,0,85,0
+EMP_0244,HR,BP,Master,Single,Remote,23,Female,2015-01-11,3643,8276.5,17.3,1,4,6,3,0,86,0
+EMP_0245,Engineering,Junior Dev,Bachelor,Single,New York,63,Male,2015-08-14,3428,4841.33,13.9,4,2,3,3,0,12,0
+EMP_0246,Engineering,Architect,Master,Married,Chicago,42,Male,2019-10-10,1910,14315.25,9.2,2,3,4,2,0,67,0
+EMP_0247,Marketing,Coordinator,Bachelor,Divorced,Seattle,38,Female,2018-11-14,2240,5527.33,9.7,2,2,7,4,0,91,1
+EMP_0248,Finance,Accountant,Master,Married,Remote,55,Female,2022-04-09,998,7920.0,36.0,4,2,1,1,1,58,1
+EMP_0249,HR,Coordinator,Master,Married,Seattle,46,Male,2021-05-23,1319,4740.92,21.7,3,3,6,3,0,80,0
+EMP_0250,Operations,Director,Bachelor,Married,New York,45,Male,2020-07-26,1620,19152.33,29.9,4,4,3,2,0,88,1
+EMP_0251,Finance,CFO,Bachelor,Married,New York,51,Female,2022-04-09,998,21231.5,13.3,2,1,3,0,0,54,0
+EMP_0252,Engineering,Architect,Associate,Married,Austin,31,Female,2016-07-18,3089,10907.58,1.4,1,1,4,5,0,77,0
+EMP_0253,Engineering,Junior Dev,Associate,Divorced,Austin,22,Female,2017-06-01,2771,5444.25,2.3,1,1,2,4,0,63,0
+EMP_0254,Marketing,Specialist,High School,Single,Chicago,32,Male,2019-01-13,2180,6711.42,28.1,4,3,1,2,0,36,0
+EMP_0255,Marketing,Director,Master,Single,Chicago,57,Female,2015-11-04,3346,17327.25,8.8,4,3,4,3,0,0,0
+EMP_0256,Sales,AE,PhD,Married,Austin,29,Female,2021-08-14,1236,8452.5,1.6,1,3,4,0,0,24,0
+EMP_0257,Product,PM,Associate,Single,Remote,63,Female,2017-07-04,2738,10901.33,9.6,3,4,5,3,1,43,0
+EMP_0258,Sales,Sales Manager,Bachelor,Divorced,Austin,33,Female,2015-03-28,3567,9844.83,2.1,2,1,2,2,1,85,0
+EMP_0259,Finance,Accountant,Bachelor,Single,Seattle,36,Female,2023-01-04,728,6988.92,6.7,1,4,1,0,0,46,0
+EMP_0260,Product,Director,Bachelor,Single,Chicago,43,Male,2015-07-11,3462,18814.08,6.1,1,4,1,1,1,52,0
+EMP_0261,Product,Associate PM,Associate,Divorced,Seattle,26,Male,2022-08-31,854,6012.83,13.0,3,2,3,1,0,71,0
+EMP_0262,Product,Director,Master,Married,San Francisco,51,Male,2022-07-08,908,15660.75,5.3,3,3,4,0,0,21,0
+EMP_0263,IT,Support,Bachelor,Single,San Francisco,63,Female,2018-05-17,2421,3684.92,23.6,4,4,6,2,0,80,0
+EMP_0264,IT,Admin,Master,Married,Remote,29,Female,2015-09-26,3385,6163.5,4.6,3,4,6,2,0,46,0
+EMP_0265,Finance,Accountant,Bachelor,Single,San Francisco,39,Male,2018-06-26,2381,7322.67,1.7,4,4,7,2,1,34,0
+EMP_0266,Marketing,Director,Bachelor,Married,Austin,61,Male,2021-08-25,1225,15270.83,3.9,1,3,4,1,1,78,0
+EMP_0267,Product,PM,Associate,Single,Austin,37,Male,2016-03-04,3225,8699.5,8.3,2,3,3,4,1,56,0
+EMP_0268,IT,Engineer,High School,Single,San Francisco,26,Female,2016-02-27,3231,9826.42,18.4,1,3,5,0,1,3,0
+EMP_0269,Finance,Manager,Bachelor,Married,San Francisco,53,Male,2018-05-10,2428,11078.67,4.9,3,3,3,4,0,31,0
+EMP_0270,Operations,Director,Master,Divorced,Austin,43,Female,2017-02-17,2875,15817.17,16.1,1,4,4,2,1,22,0
+EMP_0271,Sales,Sales Manager,Master,Married,Austin,44,Male,2023-02-19,682,9087.25,9.3,3,1,2,1,0,40,1
+EMP_0272,Engineering,Senior Dev,Associate,Single,San Francisco,56,Male,2019-06-09,2033,9703.58,37.8,3,1,6,3,0,17,1
+EMP_0273,Marketing,Coordinator,Master,Divorced,New York,64,Male,2021-06-09,1302,5819.83,5.5,4,3,6,1,1,71,0
+EMP_0274,Product,Senior PM,Bachelor,Married,Austin,33,Male,2015-01-17,3637,7519.25,4.8,4,1,5,1,0,46,1
+EMP_0275,HR,Coordinator,High School,Single,San Francisco,28,Male,2018-11-05,2249,5244.67,5.1,4,3,6,2,0,54,0
+EMP_0276,HR,Coordinator,Associate,Single,Austin,23,Male,2017-02-22,2870,4635.33,18.6,2,1,3,3,1,51,1
+EMP_0277,Product,Director,Associate,Single,Remote,27,Female,2021-10-24,1165,13702.42,8.9,2,2,5,0,1,36,1
+EMP_0278,Operations,Supervisor,High School,Divorced,Seattle,63,Male,2019-06-19,2023,9171.42,38.8,2,3,3,3,0,9,1
+EMP_0279,Sales,AE,Bachelor,Married,Remote,60,Female,2020-12-16,1477,6054.17,2.0,3,2,7,1,1,91,0
+EMP_0280,IT,Support,Bachelor,Married,San Francisco,63,Female,2018-02-05,2522,3656.0,4.4,2,3,3,4,1,59,0
+EMP_0281,Operations,Supervisor,Bachelor,Single,Seattle,31,Female,2017-03-18,2846,7053.0,11.8,2,2,7,1,0,83,1
+EMP_0282,Sales,Sales Manager,Associate,Divorced,San Francisco,46,Female,2018-12-18,2206,9068.67,1.3,2,4,1,1,0,64,0
+EMP_0283,Marketing,Director,Master,Married,San Francisco,52,Female,2016-06-10,3127,18760.08,9.6,1,3,5,1,0,13,0
+EMP_0284,Sales,Director,Master,Single,Remote,57,Female,2021-03-03,1400,18047.17,52.9,4,1,1,3,1,15,1
+EMP_0285,Marketing,Coordinator,Bachelor,Married,Remote,60,Male,2016-12-10,2944,5790.33,24.3,3,2,5,1,0,40,0
+EMP_0286,Operations,Manager,Bachelor,Single,Chicago,44,Female,2020-03-29,1739,9844.5,23.2,1,3,3,1,0,86,0
+EMP_0287,IT,Manager,Master,Married,Seattle,30,Female,2019-03-15,2119,10969.92,5.8,1,1,4,1,0,43,0
+EMP_0288,Product,Director,Associate,Divorced,Chicago,50,Male,2022-01-19,1078,19470.08,9.7,1,3,2,1,0,83,0
+EMP_0289,Operations,Director,Bachelor,Single,Chicago,56,Female,2021-03-09,1394,17479.08,15.0,4,3,6,1,1,12,0
+EMP_0290,HR,Coordinator,Bachelor,Married,Seattle,43,Male,2020-07-28,1618,5489.83,8.4,3,2,7,2,0,38,0
+EMP_0291,Marketing,Director,Bachelor,Single,Chicago,47,Male,2022-10-24,800,16281.67,4.2,2,2,4,0,0,64,0
+EMP_0292,Marketing,Director,Bachelor,Single,Chicago,60,Male,2020-04-28,1709,17477.83,15.7,4,3,3,1,0,12,0
+EMP_0293,Engineering,Junior Dev,Master,Single,Remote,25,Male,2021-06-10,1301,5290.25,4.7,4,2,1,0,0,27,1
+EMP_0294,Marketing,Manager,Bachelor,Married,Seattle,40,Male,2022-09-30,824,9228.58,11.7,1,3,6,0,0,78,1
+EMP_0295,Operations,Director,PhD,Single,Chicago,59,Male,2021-03-14,1389,19098.33,11.5,2,1,1,0,0,49,1
+EMP_0296,Operations,Manager,Bachelor,Single,Seattle,55,Male,2016-10-05,3010,9439.67,1.6,1,3,6,1,0,23,0
+EMP_0297,Marketing,Director,Bachelor,Single,Chicago,53,Female,2018-03-25,2474,14750.17,2.5,3,3,3,3,0,3,0
+EMP_0298,Operations,Supervisor,Bachelor,Married,Austin,51,Male,2016-11-23,2961,6643.0,12.3,3,2,2,3,0,17,0
+EMP_0299,Product,PM,Master,Married,New York,31,Female,2017-05-11,2792,7882.67,41.5,1,4,7,2,0,43,1
+EMP_0300,Operations,Supervisor,Bachelor,Divorced,Austin,59,Male,2021-08-08,1242,6174.92,18.2,4,3,2,0,0,87,0
+EMP_0301,Operations,Supervisor,Master,Married,New York,42,Male,2015-05-24,3510,8782.08,2.8,4,4,3,3,0,41,0
+EMP_0302,Finance,CFO,Master,Married,San Francisco,36,Female,2020-12-10,1483,19239.83,3.0,4,1,7,2,1,66,1
+EMP_0303,IT,Manager,Master,Single,Austin,42,Male,2018-03-05,2494,11082.33,9.3,4,1,4,1,1,70,0
+EMP_0304,Operations,Supervisor,Associate,Married,Seattle,22,Male,2018-05-16,2422,8705.17,4.5,1,2,4,4,0,5,0
+EMP_0305,Product,Associate PM,Master,Single,Seattle,64,Female,2022-05-29,948,5762.83,2.9,4,3,3,1,1,91,1
+EMP_0306,Engineering,Architect,Associate,Single,Chicago,47,Female,2020-06-22,1654,16042.75,2.2,1,1,5,0,0,81,0
+EMP_0307,Sales,AE,Bachelor,Married,Austin,34,Male,2019-11-20,1869,7609.0,19.6,3,1,2,3,0,85,0
+EMP_0308,Product,Director,Master,Single,Austin,49,Female,2018-08-05,2341,18370.08,17.3,1,2,1,6,0,27,1
+EMP_0309,IT,Engineer,Bachelor,Single,Austin,43,Female,2019-11-03,1886,7561.67,6.3,2,3,3,2,0,17,0
+EMP_0310,Product,Senior PM,Associate,Married,Chicago,39,Male,2018-08-19,2327,6818.92,5.4,2,4,4,3,0,39,0
+EMP_0311,IT,Support,Bachelor,Single,Seattle,49,Female,2023-03-04,669,3884.25,4.8,1,2,3,0,1,44,1
+EMP_0312,Marketing,Specialist,Associate,Single,Seattle,56,Male,2019-04-04,2099,6600.67,9.0,1,4,5,2,0,97,0
+EMP_0313,Engineering,Architect,Bachelor,Married,Chicago,46,Female,2019-03-03,2131,12063.5,5.0,1,2,4,3,0,69,0
+EMP_0314,IT,Support,High School,Single,San Francisco,31,Male,2022-09-04,850,4627.17,1.1,1,1,7,0,0,8,0
+EMP_0315,Finance,Analyst,Bachelor,Single,Chicago,26,Male,2017-02-26,2866,7078.58,22.7,1,1,4,4,0,8,0
+EMP_0316,Operations,Coordinator,High School,Divorced,San Francisco,34,Male,2016-10-14,3001,5768.5,3.7,4,1,4,5,0,89,0
+EMP_0317,Marketing,Coordinator,Master,Married,San Francisco,41,Male,2015-07-28,3445,4660.5,34.6,2,3,4,3,0,63,1
+EMP_0318,Finance,Manager,Bachelor,Single,Remote,37,Female,2021-06-29,1282,12077.75,4.9,3,3,6,0,1,6,0
+EMP_0319,Operations,Manager,Master,Divorced,Remote,61,Female,2019-10-22,1898,11199.83,7.6,1,3,5,3,1,86,0
+EMP_0320,Operations,Coordinator,Bachelor,Single,Remote,45,Male,2023-01-20,712,4952.08,17.2,2,1,6,0,0,53,0
+EMP_0321,IT,Engineer,Master,Married,Austin,53,Female,2018-09-12,2303,7577.08,13.2,3,4,6,2,0,26,0
+EMP_0322,Engineering,Tech Lead,Associate,Single,New York,32,Female,2016-11-20,2964,11167.0,9.6,3,3,1,4,1,62,0
+EMP_0323,IT,Support,Master,Single,Austin,45,Male,2020-02-17,1780,4306.25,22.7,3,3,6,2,1,61,1
+EMP_0324,Product,Associate PM,Bachelor,Married,Seattle,53,Female,2020-03-22,1746,5474.5,38.2,2,3,4,1,0,70,0
+EMP_0325,Finance,Manager,Bachelor,Married,Remote,35,Female,2021-06-15,1296,10633.0,7.0,1,4,6,1,1,34,0
+EMP_0326,Finance,CFO,Master,Married,Chicago,38,Male,2021-12-25,1103,24759.33,8.2,2,2,6,0,1,68,1
+EMP_0327,HR,Director,Bachelor,Single,New York,26,Female,2020-02-01,1796,12751.5,25.7,4,2,6,5,1,3,1
+EMP_0328,HR,Coordinator,Bachelor,Married,New York,49,Male,2015-08-16,3426,6315.08,2.1,2,3,2,1,0,17,0
+EMP_0329,Operations,Coordinator,Master,Married,Seattle,63,Female,2022-05-29,948,6198.5,1.1,2,2,2,0,1,17,0
+EMP_0330,Sales,Sales Manager,Master,Single,New York,25,Female,2015-02-21,3602,12383.08,4.1,2,2,1,0,0,50,0
+EMP_0331,IT,Engineer,High School,Divorced,Chicago,59,Female,2015-08-29,3413,7597.08,8.7,3,3,6,3,1,83,0
+EMP_0332,Operations,Coordinator,Master,Married,New York,52,Male,2021-09-15,1204,4919.67,4.5,2,3,1,3,0,97,0
+EMP_0333,Marketing,Specialist,Associate,Married,Seattle,27,Male,2015-06-28,3475,6209.17,14.4,4,4,3,1,0,64,0
+EMP_0334,HR,Generalist,Bachelor,Single,Chicago,44,Female,2022-07-03,913,5296.83,4.4,2,1,4,1,0,1,0
+EMP_0335,Sales,AE,Bachelor,Married,Remote,43,Female,2015-05-09,3525,6133.92,8.9,2,3,2,3,0,26,1
+EMP_0336,Sales,SDR,High School,Single,Chicago,26,Male,2019-05-10,2063,5605.92,8.1,2,3,6,4,0,70,1
+EMP_0337,Marketing,Specialist,Bachelor,Married,New York,22,Female,2018-04-18,2450,6626.83,5.4,3,2,2,3,1,41,0
+EMP_0338,Marketing,Director,Master,Married,Remote,48,Female,2021-02-12,1419,18156.33,3.0,4,2,7,1,0,62,0
+EMP_0339,Sales,SDR,Master,Married,Chicago,59,Male,2015-12-10,3310,4199.33,4.5,1,4,5,4,0,49,0
+EMP_0340,IT,Admin,Associate,Married,Seattle,39,Female,2015-06-01,3502,5170.83,21.9,2,4,4,4,1,19,0
+EMP_0341,IT,Manager,Bachelor,Single,Seattle,36,Male,2017-09-23,2657,12426.75,1.9,2,1,2,4,1,16,0
+EMP_0342,HR,Coordinator,Bachelor,Single,Chicago,64,Female,2016-10-27,2988,5067.25,16.8,1,2,7,2,1,0,0
+EMP_0343,Engineering,Junior Dev,Bachelor,Married,San Francisco,29,Female,2017-05-09,2794,5172.92,7.5,3,1,6,2,1,44,1
+EMP_0344,HR,BP,Associate,Married,San Francisco,32,Female,2016-09-11,3034,7978.42,23.8,4,1,5,5,0,86,0
+EMP_0345,Product,Associate PM,Bachelor,Married,Austin,23,Male,2019-09-19,1931,6362.08,7.8,4,2,4,1,1,5,1
+EMP_0346,Finance,CFO,Associate,Single,Austin,51,Male,2017-12-30,2559,22916.08,9.8,4,3,5,1,1,10,1
+EMP_0347,Product,Director,Master,Married,Seattle,58,Male,2018-11-11,2243,14076.25,3.4,1,4,5,5,1,37,0
+EMP_0348,HR,BP,Bachelor,Single,San Francisco,38,Male,2017-06-01,2771,8002.67,1.6,2,1,2,7,1,62,0
+EMP_0349,Engineering,Tech Lead,Associate,Married,San Francisco,32,Male,2017-01-09,2914,10171.42,17.4,4,4,5,5,0,19,0
+EMP_0350,IT,Engineer,Bachelor,Single,Remote,59,Male,2019-04-29,2074,8268.25,20.1,2,2,6,3,1,69,0
+EMP_0351,Finance,Analyst,Associate,Married,Chicago,39,Male,2017-04-04,2829,6157.42,19.7,2,3,2,2,0,74,0
+EMP_0352,Product,PM,Bachelor,Married,Seattle,52,Male,2018-06-09,2398,11684.75,3.9,3,1,5,0,0,17,0
+EMP_0353,Operations,Supervisor,Bachelor,Single,Austin,31,Male,2015-06-26,3477,9100.75,36.1,4,1,7,4,0,53,0
+EMP_0354,IT,Support,High School,Married,New York,29,Male,2020-11-29,1494,4686.08,8.9,1,3,5,0,0,57,0
+EMP_0355,Sales,Sales Manager,High School,Single,Austin,39,Male,2018-07-05,2372,8547.42,6.0,2,4,4,1,1,31,0
+EMP_0356,Product,Associate PM,Bachelor,Single,Austin,34,Male,2021-08-10,1240,4946.75,3.3,3,3,4,1,0,84,0
+EMP_0357,Operations,Coordinator,Associate,Married,Seattle,58,Female,2020-02-20,1777,5304.25,2.6,3,3,5,0,0,60,1
+EMP_0358,Product,Director,Master,Married,San Francisco,46,Male,2019-06-14,2028,18262.42,22.6,4,1,4,3,1,97,0
+EMP_0359,Finance,Manager,Master,Married,Remote,32,Female,2022-11-23,770,11328.25,3.4,1,4,5,1,1,37,0
+EMP_0360,Product,Associate PM,Bachelor,Single,San Francisco,33,Female,2022-12-20,743,5696.17,13.6,1,3,4,0,0,8,0
+EMP_0361,Finance,Analyst,Associate,Divorced,New York,55,Female,2017-02-10,2882,6242.5,2.4,2,3,4,1,0,0,0
+EMP_0362,Product,Director,Bachelor,Married,Chicago,45,Female,2018-04-08,2460,17299.75,1.2,2,2,7,3,0,87,0
+EMP_0363,IT,Engineer,Master,Married,Chicago,64,Male,2016-11-19,2965,9773.0,9.7,3,1,7,4,1,48,1
+EMP_0364,HR,BP,High School,Married,Austin,52,Male,2015-07-26,3447,9151.58,4.7,1,3,1,3,0,99,0
+EMP_0365,HR,Director,PhD,Single,New York,25,Male,2019-09-26,1924,15065.42,45.3,2,1,5,0,0,9,1
+EMP_0366,Operations,Manager,PhD,Single,New York,49,Female,2015-03-26,3569,11946.33,1.8,1,1,2,3,0,99,1
+EMP_0367,Sales,SDR,Associate,Married,Remote,50,Female,2018-11-02,2252,4413.25,8.1,1,1,7,4,0,53,0
+EMP_0368,Engineering,Architect,Bachelor,Married,Remote,50,Female,2018-05-01,2437,13930.33,18.2,3,1,3,2,0,43,0
+EMP_0369,Finance,Accountant,Bachelor,Divorced,Remote,34,Male,2021-02-26,1405,5329.83,17.6,3,4,7,4,0,61,0
+EMP_0370,HR,BP,Master,Divorced,Seattle,28,Male,2021-10-07,1182,6945.92,38.9,1,2,4,1,0,23,1
+EMP_0371,Operations,Coordinator,Bachelor,Divorced,Austin,39,Male,2015-12-10,3310,6088.67,1.1,1,3,4,1,0,34,0
+EMP_0372,Operations,Manager,Bachelor,Married,New York,42,Male,2022-05-12,965,9561.92,2.5,4,2,7,1,1,26,1
+EMP_0373,HR,Generalist,Bachelor,Divorced,San Francisco,29,Female,2019-11-25,1864,6212.83,5.9,4,2,3,2,1,34,1
+EMP_0374,Sales,SDR,Bachelor,Married,Austin,46,Female,2021-02-19,1412,4980.83,12.6,3,4,4,0,0,78,0
+EMP_0375,IT,Support,Bachelor,Single,Austin,63,Male,2015-06-27,3476,3554.33,15.4,3,2,2,5,0,33,0
+EMP_0376,Operations,Supervisor,Bachelor,Married,Remote,55,Female,2018-01-06,2552,8617.92,6.4,4,3,3,2,0,47,0
+EMP_0377,Engineering,Tech Lead,Bachelor,Divorced,San Francisco,60,Female,2017-12-11,2578,10249.33,6.3,2,1,3,1,1,23,0
+EMP_0378,Marketing,Manager,Master,Single,Remote,56,Male,2022-04-21,986,10445.0,2.0,2,2,5,0,1,98,0
+EMP_0379,Engineering,Junior Dev,PhD,Married,San Francisco,49,Female,2021-11-26,1132,4811.92,2.5,3,3,4,2,1,40,0
+EMP_0380,Engineering,Junior Dev,Bachelor,Married,San Francisco,54,Male,2016-10-01,3014,4462.25,7.4,1,2,3,4,0,70,0
+EMP_0381,Finance,Accountant,Master,Single,Austin,55,Male,2021-09-09,1210,5687.33,27.3,3,2,5,1,0,85,0
+EMP_0382,HR,Coordinator,Bachelor,Single,Seattle,54,Male,2020-12-20,1473,4327.33,11.2,1,1,6,1,0,47,0
+EMP_0383,HR,Generalist,Associate,Single,Remote,56,Male,2022-01-05,1092,5891.58,7.3,3,1,7,1,1,60,0
+EMP_0384,Marketing,Specialist,Associate,Single,San Francisco,59,Male,2017-09-14,2666,6560.5,19.0,2,4,7,4,0,63,0
+EMP_0385,Finance,CFO,Bachelor,Divorced,Chicago,48,Male,2022-08-14,871,20968.75,1.2,4,3,7,1,0,30,0
+EMP_0386,HR,BP,Master,Married,Austin,24,Male,2015-07-29,3444,6591.75,10.0,2,1,1,5,0,69,0
+EMP_0387,IT,Support,PhD,Married,San Francisco,42,Female,2021-04-21,1351,4044.42,4.8,2,3,3,0,0,2,1
+EMP_0388,HR,BP,Master,Married,Chicago,42,Female,2021-01-11,1451,9146.75,3.8,3,2,6,2,1,20,1
+EMP_0389,IT,Engineer,Bachelor,Single,Austin,29,Female,2020-09-09,1575,9452.83,8.5,1,3,6,2,0,36,0
+EMP_0390,Operations,Manager,Bachelor,Married,Remote,49,Male,2015-06-08,3495,12187.67,5.0,1,1,7,8,0,57,0
+EMP_0391,Operations,Supervisor,Bachelor,Divorced,New York,44,Female,2017-08-05,2706,7115.08,5.0,2,1,2,4,1,23,1
+EMP_0392,IT,Manager,Bachelor,Single,New York,51,Male,2015-02-15,3608,11985.5,3.5,4,4,5,3,0,79,0
+EMP_0393,IT,Manager,Master,Single,New York,55,Female,2019-10-20,1900,9892.5,6.9,3,1,2,0,1,40,0
+EMP_0394,Sales,AE,Bachelor,Single,Chicago,33,Male,2021-01-17,1445,5977.08,11.7,1,3,7,0,0,35,0
+EMP_0395,IT,Manager,Bachelor,Married,Chicago,51,Male,2020-08-02,1613,11085.58,8.2,3,1,5,0,0,52,0
+EMP_0396,HR,Director,High School,Single,San Francisco,37,Female,2019-04-07,2096,14298.33,3.5,4,3,7,1,0,79,0
+EMP_0397,HR,BP,Associate,Married,New York,58,Male,2015-06-25,3478,8650.67,40.1,3,2,7,3,1,81,0
+EMP_0398,IT,Manager,Bachelor,Married,Austin,56,Female,2016-05-20,3148,12712.75,29.3,1,1,5,4,0,77,1
+EMP_0399,Engineering,Tech Lead,Bachelor,Married,Seattle,25,Female,2019-01-04,2189,9674.17,23.8,3,2,3,2,0,81,0
+EMP_0400,Sales,Sales Manager,Associate,Single,New York,59,Male,2017-06-05,2767,11482.83,34.7,1,4,4,4,1,66,1
+EMP_0401,Operations,Supervisor,Bachelor,Married,New York,51,Male,2016-01-21,3268,9148.92,10.9,1,3,5,2,0,40,0
+EMP_0402,HR,Director,Master,Married,San Francisco,34,Female,2015-02-27,3596,13176.42,10.4,4,3,7,2,0,54,0
+EMP_0403,Marketing,Coordinator,High School,Married,Seattle,27,Female,2022-07-08,908,6254.75,17.8,4,2,3,1,0,51,0
+EMP_0404,Operations,Director,Master,Single,San Francisco,64,Female,2017-06-10,2762,16948.33,22.4,3,1,3,4,0,39,1
+EMP_0405,IT,Admin,Bachelor,Married,San Francisco,63,Female,2015-06-18,3485,5340.25,22.0,1,3,7,2,0,68,1
+EMP_0406,Engineering,Senior Dev,Bachelor,Married,Austin,54,Male,2020-03-03,1765,8467.25,3.3,2,2,5,3,1,45,0
+EMP_0407,Sales,AE,High School,Married,New York,29,Female,2019-12-14,1845,7058.42,3.8,2,2,6,3,1,47,1
+EMP_0408,Product,Director,High School,Married,New York,31,Female,2015-09-08,3403,13092.92,7.3,1,1,2,3,1,69,0
+EMP_0409,Product,Director,Bachelor,Married,San Francisco,60,Male,2019-01-23,2170,17124.17,3.8,2,4,5,1,0,11,0
+EMP_0410,Finance,Analyst,Bachelor,Single,Chicago,43,Female,2019-03-07,2127,7059.67,19.7,4,2,7,1,0,73,0
+EMP_0411,Engineering,Architect,Master,Single,San Francisco,59,Female,2019-04-14,2089,11523.08,16.6,1,4,1,0,0,17,0
+EMP_0412,Engineering,Senior Dev,Master,Married,Seattle,48,Female,2015-07-17,3456,8582.42,1.4,4,1,1,5,1,29,0
+EMP_0413,Finance,Analyst,Master,Single,Chicago,23,Male,2016-11-03,2981,5676.33,6.1,3,4,4,0,0,1,0
+EMP_0414,IT,Support,High School,Single,Seattle,42,Male,2022-07-02,914,4557.92,7.2,3,1,6,1,1,25,0
+EMP_0415,Operations,Coordinator,Associate,Married,Chicago,26,Female,2017-07-09,2733,4438.5,11.3,2,1,2,5,0,32,1
+EMP_0416,IT,Manager,Bachelor,Married,San Francisco,33,Male,2016-07-04,3103,12833.92,26.0,2,4,7,2,0,59,0
+EMP_0417,Marketing,Director,Master,Single,Seattle,43,Male,2017-09-04,2676,13605.83,21.1,2,1,4,2,0,13,0
+EMP_0418,Product,Associate PM,High School,Single,New York,64,Female,2021-09-11,1208,5440.83,9.8,1,3,5,1,0,17,0
+EMP_0419,Engineering,Junior Dev,Master,Married,Chicago,48,Female,2016-09-04,3041,4984.33,9.2,2,2,5,2,0,79,0
+EMP_0420,Product,Director,Master,Single,Remote,33,Male,2020-08-30,1585,19267.17,5.7,1,4,1,1,1,8,0
+EMP_0421,HR,Coordinator,High School,Married,Remote,60,Male,2017-02-07,2885,6376.92,25.9,3,3,5,3,1,87,0
+EMP_0422,Marketing,Manager,Bachelor,Single,Remote,61,Male,2016-05-10,3158,9056.58,9.8,3,1,3,6,1,82,0
+EMP_0423,Operations,Coordinator,Associate,Married,Chicago,52,Female,2017-09-25,2655,5396.83,4.6,4,3,7,3,0,83,0
+EMP_0424,Product,Director,Bachelor,Divorced,Chicago,47,Male,2023-02-19,682,15191.17,2.1,1,3,5,1,0,73,0
+EMP_0425,Marketing,Coordinator,Master,Married,Austin,24,Male,2018-01-06,2552,5387.0,12.4,1,1,2,3,0,49,0
+EMP_0426,Product,Associate PM,Master,Single,New York,56,Male,2019-08-09,1972,4368.83,10.8,4,1,3,2,1,11,0
+EMP_0427,Finance,Accountant,Bachelor,Married,New York,53,Male,2018-03-25,2474,6408.0,3.8,4,2,6,1,0,23,1
+EMP_0428,Operations,Supervisor,PhD,Single,Remote,45,Male,2016-07-09,3098,6319.25,32.0,4,4,7,3,1,27,0
+EMP_0429,Marketing,Specialist,Bachelor,Married,San Francisco,29,Male,2020-11-17,1506,6987.0,17.3,2,4,7,1,1,6,0
+EMP_0430,Product,Director,Associate,Married,Austin,35,Male,2016-04-30,3168,19405.0,16.2,4,1,7,1,0,19,0
+EMP_0431,Marketing,Director,Bachelor,Married,Seattle,28,Male,2020-03-12,1756,17672.17,7.9,3,2,1,0,1,77,0
+EMP_0432,HR,Coordinator,Bachelor,Single,Chicago,61,Male,2015-11-20,3330,5487.17,10.7,1,3,7,5,1,75,1
+EMP_0433,Operations,Supervisor,High School,Single,Seattle,51,Female,2018-10-04,2281,7772.08,9.9,3,4,5,5,0,32,0
+EMP_0434,Operations,Director,Associate,Single,New York,63,Male,2021-08-20,1230,17776.0,34.4,3,1,6,2,0,23,1
+EMP_0435,Sales,AE,High School,Married,Chicago,56,Female,2015-02-07,3616,7363.42,8.0,4,4,2,5,0,59,0
+EMP_0436,Engineering,Junior Dev,Bachelor,Single,Seattle,31,Female,2015-04-25,3539,4946.67,8.9,1,3,6,5,1,61,0
+EMP_0437,Operations,Director,Bachelor,Single,New York,25,Female,2017-02-18,2874,14420.33,11.4,3,2,3,5,1,11,0
+EMP_0438,Product,Director,Associate,Married,Remote,47,Male,2021-03-30,1373,18957.5,4.7,3,4,1,1,0,92,0
+EMP_0439,Sales,Director,Master,Married,New York,41,Female,2021-08-01,1249,15033.92,28.4,4,2,3,2,1,53,0
+EMP_0440,Finance,Analyst,Bachelor,Single,Chicago,60,Female,2019-02-12,2150,6421.08,14.6,1,3,2,4,0,26,0
+EMP_0441,IT,Manager,Bachelor,Divorced,New York,50,Female,2022-01-19,1078,8768.92,22.9,4,4,6,1,1,30,0
+EMP_0442,HR,Director,Master,Married,New York,60,Male,2016-01-31,3258,17980.75,14.3,3,4,6,2,0,53,0
+EMP_0443,Engineering,Senior Dev,Master,Married,New York,53,Male,2022-09-04,850,9299.25,29.3,4,1,4,0,0,19,1
+EMP_0444,Finance,Manager,Associate,Single,Remote,43,Male,2022-10-06,818,8646.17,10.0,2,2,3,1,0,43,0
+EMP_0445,Sales,AE,PhD,Married,Remote,44,Female,2022-07-11,905,6883.75,1.4,2,1,4,3,1,44,0
+EMP_0446,HR,BP,High School,Divorced,Austin,44,Male,2015-09-24,3387,8560.33,35.7,2,3,2,6,0,46,0
+EMP_0447,Operations,Director,Bachelor,Divorced,Chicago,60,Male,2021-09-09,1210,13194.08,13.2,3,1,1,1,0,24,1
+EMP_0448,Product,Senior PM,Bachelor,Divorced,New York,28,Male,2020-08-20,1595,6857.25,11.7,4,4,4,3,1,11,0
+EMP_0449,Sales,Sales Manager,High School,Divorced,Remote,34,Female,2018-10-14,2271,12913.42,2.7,3,4,3,6,0,65,0
+EMP_0450,Engineering,Senior Dev,Associate,Single,San Francisco,28,Female,2015-11-22,3328,8509.25,1.6,2,3,4,4,0,64,0
+EMP_0451,Marketing,Specialist,Associate,Married,New York,22,Male,2015-12-06,3314,5731.67,4.0,1,2,7,1,1,25,0
+EMP_0452,Finance,Analyst,Bachelor,Single,Remote,26,Male,2017-10-26,2624,6787.92,9.2,1,3,1,3,0,45,1
+EMP_0453,IT,Admin,Master,Single,Austin,29,Female,2021-05-11,1331,7430.83,14.5,4,2,2,1,1,4,0
+EMP_0454,Sales,SDR,Master,Married,Chicago,51,Male,2016-12-03,2951,4138.17,3.9,1,3,1,3,0,97,0
+EMP_0455,Sales,AE,Associate,Married,Austin,64,Male,2021-01-11,1451,7958.92,3.8,2,1,6,2,0,71,0
+EMP_0456,Marketing,Director,Associate,Married,Remote,56,Male,2018-09-01,2314,19315.58,4.4,2,3,4,3,1,17,1
+EMP_0457,Engineering,Senior Dev,High School,Married,Seattle,62,Male,2021-08-30,1220,9423.67,16.8,3,2,3,0,0,91,1
+EMP_0458,Sales,AE,Bachelor,Divorced,San Francisco,39,Male,2016-08-22,3054,6953.42,9.8,3,2,7,1,0,33,0
+EMP_0459,IT,Support,Master,Married,Seattle,44,Male,2021-09-09,1210,4937.42,2.6,2,2,1,2,1,54,0
+EMP_0460,Finance,CFO,Bachelor,Single,San Francisco,23,Male,2019-11-09,1880,25918.58,15.0,3,3,5,1,0,27,0
+EMP_0461,Finance,Manager,Associate,Married,San Francisco,35,Male,2022-02-14,1052,12114.42,9.3,4,2,3,1,0,80,0
+EMP_0462,Operations,Director,Master,Married,New York,43,Male,2019-07-23,1989,19026.92,8.9,4,4,5,0,0,21,0
+EMP_0463,Sales,Director,Associate,Single,Remote,40,Female,2021-04-05,1367,14307.42,4.4,1,3,5,2,0,85,0
+EMP_0464,Operations,Director,High School,Divorced,Remote,41,Male,2018-10-18,2267,19050.75,5.2,4,1,4,3,0,57,0
+EMP_0465,Marketing,Coordinator,Bachelor,Divorced,Seattle,31,Female,2016-08-19,3057,5226.17,14.8,3,1,5,3,0,24,0
+EMP_0466,Marketing,Coordinator,Associate,Divorced,New York,54,Male,2016-08-04,3072,4395.08,36.9,2,1,2,4,1,61,1
+EMP_0467,IT,Admin,Bachelor,Married,Remote,63,Male,2022-05-10,967,7555.17,1.6,2,1,7,1,0,19,0
+EMP_0468,Sales,Sales Manager,Master,Married,New York,55,Male,2018-07-13,2364,9865.75,6.1,1,1,7,2,0,97,0
+EMP_0469,Finance,Accountant,Associate,Single,Chicago,52,Female,2021-11-09,1149,6511.5,5.1,3,2,5,0,0,74,0
+EMP_0470,HR,Director,Bachelor,Single,Austin,57,Female,2017-03-03,2861,16783.83,17.6,4,2,2,4,0,75,0
+EMP_0471,Engineering,Junior Dev,Bachelor,Divorced,Seattle,29,Female,2018-09-10,2305,4218.67,5.6,3,3,5,3,1,29,1
+EMP_0472,Engineering,Senior Dev,Associate,Married,Austin,27,Male,2022-04-03,1004,8267.83,5.9,3,1,3,0,0,74,0
+EMP_0473,IT,Admin,PhD,Married,San Francisco,43,Female,2021-01-15,1447,5162.25,8.6,3,3,5,1,0,76,0
+EMP_0474,Marketing,Coordinator,High School,Married,Remote,55,Female,2015-10-24,3357,5326.08,3.0,2,4,2,3,0,9,0
+EMP_0475,Product,Senior PM,Master,Single,New York,37,Male,2018-09-16,2299,8369.92,24.1,2,4,7,2,0,57,1
+EMP_0476,IT,Admin,Bachelor,Single,Chicago,29,Male,2015-08-11,3431,6960.75,15.5,2,1,4,5,0,46,0
+EMP_0477,Operations,Manager,Master,Married,Austin,61,Male,2015-04-04,3560,12704.83,1.5,1,4,4,5,1,76,0
+EMP_0478,Product,Director,Associate,Single,New York,34,Male,2022-01-31,1066,17922.5,7.9,2,1,2,1,0,14,0
+EMP_0479,IT,Support,Master,Single,Seattle,37,Female,2018-06-01,2406,5244.83,2.0,1,4,4,4,0,32,0
+EMP_0480,Operations,Manager,Master,Divorced,Austin,44,Female,2022-11-17,776,10364.42,2.2,2,2,6,2,0,61,1
+EMP_0481,Engineering,Architect,Master,Single,San Francisco,43,Male,2019-12-22,1837,15321.58,19.5,3,1,7,0,1,47,1
+EMP_0482,Finance,CFO,Master,Single,Chicago,59,Male,2018-08-08,2338,23143.33,12.0,3,2,1,3,0,82,1
+EMP_0483,Engineering,Architect,Bachelor,Married,Seattle,33,Female,2020-05-10,1697,12033.92,17.4,3,2,2,1,0,12,1
+EMP_0484,HR,BP,Bachelor,Married,Remote,57,Female,2018-04-29,2439,9273.25,13.1,3,1,7,0,1,32,0
+EMP_0485,IT,Manager,High School,Married,Austin,41,Female,2018-10-20,2265,10505.75,19.1,2,2,4,2,0,10,0
+EMP_0486,IT,Support,Associate,Divorced,New York,56,Female,2016-11-19,2965,5032.75,2.5,3,4,5,4,1,13,0
+EMP_0487,Operations,Coordinator,Bachelor,Married,San Francisco,37,Female,2022-04-24,983,5602.08,1.3,2,2,3,2,0,13,1
+EMP_0488,Product,Associate PM,Bachelor,Single,New York,47,Female,2018-04-30,2438,5971.42,6.7,4,2,4,0,0,10,0
+EMP_0489,Marketing,Specialist,Bachelor,Single,Austin,30,Female,2022-03-09,1029,5291.92,5.4,3,1,6,2,1,75,1
+EMP_0490,Finance,Accountant,PhD,Married,Austin,36,Male,2015-04-15,3549,6000.83,22.3,3,4,6,1,1,84,1
+EMP_0491,HR,Coordinator,Master,Married,New York,60,Female,2015-04-02,3562,4504.83,15.8,4,4,6,3,0,61,0
+EMP_0492,Sales,Sales Manager,Master,Divorced,Remote,51,Male,2020-11-03,1520,11823.42,21.2,1,3,7,3,0,33,1
+EMP_0493,IT,Support,Master,Married,Remote,42,Female,2018-01-11,2547,3736.58,33.8,2,2,7,3,0,97,1
+EMP_0494,Operations,Supervisor,Master,Married,Chicago,30,Female,2019-09-30,1920,8431.25,4.2,1,1,3,3,0,27,0
+EMP_0495,Operations,Director,Bachelor,Married,Seattle,38,Female,2019-05-16,2057,14874.92,7.6,1,3,3,2,0,98,0
+EMP_0496,Marketing,Coordinator,Master,Married,Chicago,25,Male,2015-09-28,3383,6347.92,30.4,4,3,2,3,0,94,0
+EMP_0497,Product,Senior PM,Bachelor,Married,San Francisco,44,Male,2015-10-23,3358,9772.42,16.2,3,3,5,5,0,85,0
+EMP_0498,HR,Director,Master,Married,New York,39,Female,2020-05-06,1701,15736.08,1.5,1,3,7,1,1,13,0
+EMP_0499,Sales,SDR,Bachelor,Married,Austin,45,Male,2017-09-24,2656,4011.33,7.5,3,2,1,5,0,35,0
+EMP_0500,IT,Engineer,PhD,Divorced,New York,32,Male,2016-01-20,3269,9595.58,1.0,4,3,6,1,0,46,0

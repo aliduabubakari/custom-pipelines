@@ -1,0 +1,34 @@
+{
+  "churn_by_segment": {
+    "New": 0.4902,
+    "Occasional": 0.513,
+    "Regular": 0.4746,
+    "VIP": 0.3867
+  },
+  "churn_by_acquisition_channel": {
+    "Email": 0.4886,
+    "Organic": 0.4741,
+    "Paid": 0.44,
+    "Referral": 0.5102,
+    "Social": 0.4796
+  },
+  "churn_by_location": {
+    "CA": 0.4559,
+    "FL": 0.4706,
+    "IL": 0.5909,
+    "NY": 0.5072,
+    "OH": 0.4706,
+    "PA": 0.4886,
+    "TX": 0.3699
+  },
+  "top_correlations": {
+    "R_score": -0.8502798221948217,
+    "recency": 0.6751077210247921,
+    "frequency": -0.2172528991961785,
+    "F_score": -0.19535066266177561,
+    "monetary": -0.16741448039426327,
+    "M_score": -0.16137663437277142,
+    "category_diversity": -0.15038836106367784,
+    "brand_diversity": -0.04273126053042596
+  }
+}

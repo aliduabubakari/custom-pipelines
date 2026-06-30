@@ -1,0 +1,501 @@
+customer_id,segment,acquisition_channel,city,state,payment_method,plan_type,signup_date,tenure_days,monthly_fee,support_contacts,is_churned
+CUST_0001,Basic,Direct,Austin,TX,Bank Transfer,Monthly,2019-05-02,2070,13.12,0,0
+CUST_0002,Enterprise,Referral,Chicago,IL,Credit Card,Annual,2023-02-24,676,192.63,0,0
+CUST_0003,Enterprise,Referral,Jacksonville,FL,Credit Card,Monthly,2020-05-25,1681,96.74,1,0
+CUST_0004,Basic,Social Media,Denver,CO,Credit Card,Annual,2023-03-09,663,10.93,1,1
+CUST_0005,Basic,Direct,Columbus,OH,Debit Card,Monthly,2020-07-18,1627,14.62,1,0
+CUST_0006,Premium,Social Media,Chicago,IL,Debit Card,Monthly,2024-03-10,296,67.77,1,0
+CUST_0007,Premium,Organic,Seattle,WA,Bank Transfer,Annual,2021-09-22,1196,59.89,1,1
+CUST_0008,Basic,Organic,San Diego,CA,Debit Card,Annual,2021-05-28,1313,26.57,1,0
+CUST_0009,Premium,Organic,Charlotte,NC,Credit Card,Monthly,2020-06-04,1671,68.61,0,0
+CUST_0010,Basic,Social Media,San Francisco,CA,Bank Transfer,Annual,2020-01-14,1813,11.48,1,1
+CUST_0011,Enterprise,Referral,Los Angeles,CA,Credit Card,Monthly,2023-05-17,594,119.02,3,1
+CUST_0012,Basic,Referral,New York,NY,Bank Transfer,Monthly,2020-02-02,1794,19.88,2,1
+CUST_0013,Basic,Organic,San Antonio,TX,PayPal,Monthly,2024-04-07,268,28.15,1,1
+CUST_0014,Premium,Organic,San Antonio,TX,Credit Card,Monthly,2020-07-31,1614,61.22,1,0
+CUST_0015,Basic,Organic,Boston,MA,Debit Card,Monthly,2023-03-10,662,12.44,2,1
+CUST_0016,Premium,Organic,Fort Worth,TX,Debit Card,Monthly,2023-01-19,712,56.7,2,0
+CUST_0017,Basic,Organic,Dallas,TX,PayPal,Monthly,2020-03-17,1750,29.25,1,0
+CUST_0018,Basic,Organic,San Francisco,CA,Credit Card,Annual,2019-08-08,1972,11.03,2,0
+CUST_0019,Basic,Paid Search,Philadelphia,PA,Credit Card,Annual,2019-07-22,1989,17.39,1,1
+CUST_0020,Basic,Direct,Austin,TX,Debit Card,Annual,2022-05-09,967,16.42,0,0
+CUST_0021,Basic,Referral,Houston,TX,Credit Card,Monthly,2019-05-27,2045,16.97,0,0
+CUST_0022,Enterprise,Paid Search,San Antonio,TX,Debit Card,Monthly,2024-05-30,215,93.62,2,0
+CUST_0023,Premium,Social Media,Boston,MA,PayPal,Monthly,2022-08-20,864,78.27,2,0
+CUST_0024,Basic,Referral,Indianapolis,IN,Debit Card,Annual,2022-02-17,1048,27.76,5,1
+CUST_0025,Enterprise,Direct,Seattle,WA,Credit Card,Monthly,2021-04-01,1370,133.81,1,0
+CUST_0026,Basic,Paid Search,Indianapolis,IN,Bank Transfer,Annual,2022-03-04,1033,24.42,1,0
+CUST_0027,Premium,Referral,Columbus,OH,PayPal,Annual,2020-07-16,1629,74.6,3,0
+CUST_0028,Basic,Organic,Indianapolis,IN,Credit Card,Monthly,2021-12-08,1119,10.87,2,0
+CUST_0029,Enterprise,Referral,Phoenix,AZ,Debit Card,Monthly,2019-06-30,2011,148.68,1,0
+CUST_0030,Basic,Organic,New York,NY,Credit Card,Monthly,2023-12-22,375,17.89,2,1
+CUST_0031,Basic,Referral,Los Angeles,CA,Credit Card,Monthly,2021-02-23,1407,26.97,0,0
+CUST_0032,Premium,Referral,San Jose,CA,Debit Card,Annual,2021-07-09,1271,60.58,0,0
+CUST_0033,Basic,Referral,Boston,MA,PayPal,Annual,2020-02-04,1792,11.02,1,0
+CUST_0034,Premium,Paid Search,Denver,CO,PayPal,Monthly,2022-02-22,1043,71.95,1,0
+CUST_0035,Basic,Paid Search,Austin,TX,Credit Card,Monthly,2021-12-12,1115,15.43,3,1
+CUST_0036,Basic,Referral,San Diego,CA,Bank Transfer,Annual,2020-09-27,1556,24.29,0,0
+CUST_0037,Basic,Paid Search,Phoenix,AZ,Credit Card,Monthly,2022-02-24,1041,23.92,1,0
+CUST_0038,Basic,Organic,Indianapolis,IN,Credit Card,Annual,2021-06-15,1295,29.1,3,0
+CUST_0039,Basic,Paid Search,Phoenix,AZ,Credit Card,Monthly,2022-05-28,948,10.92,0,1
+CUST_0040,Enterprise,Referral,Jacksonville,FL,Credit Card,Annual,2019-12-07,1851,136.82,0,0
+CUST_0041,Basic,Paid Search,San Jose,CA,Debit Card,Annual,2022-04-18,988,17.49,3,1
+CUST_0042,Basic,Organic,Los Angeles,CA,Credit Card,Monthly,2023-02-07,693,26.02,2,0
+CUST_0043,Premium,Social Media,Jacksonville,FL,Credit Card,Annual,2024-02-09,326,40.33,1,0
+CUST_0044,Basic,Organic,Seattle,WA,Bank Transfer,Monthly,2021-02-14,1416,17.71,2,1
+CUST_0045,Basic,Referral,Seattle,WA,PayPal,Annual,2022-12-14,748,18.36,3,0
+CUST_0046,Premium,Referral,Houston,TX,Credit Card,Annual,2023-08-15,504,73.36,1,0
+CUST_0047,Premium,Referral,Chicago,IL,Credit Card,Annual,2019-03-03,2130,54.83,1,0
+CUST_0048,Basic,Organic,Dallas,TX,Debit Card,Monthly,2023-12-25,372,29.0,3,0
+CUST_0049,Basic,Paid Search,Houston,TX,Debit Card,Annual,2021-11-28,1129,11.82,1,1
+CUST_0050,Premium,Paid Search,Austin,TX,Bank Transfer,Annual,2021-10-29,1159,68.08,1,0
+CUST_0051,Basic,Referral,San Jose,CA,Credit Card,Annual,2022-05-02,974,11.63,0,0
+CUST_0052,Enterprise,Paid Search,New York,NY,Debit Card,Monthly,2022-09-12,841,198.32,2,0
+CUST_0053,Premium,Referral,San Jose,CA,Debit Card,Monthly,2023-01-14,717,42.68,2,0
+CUST_0054,Premium,Social Media,San Antonio,TX,Bank Transfer,Monthly,2019-07-09,2002,50.01,1,0
+CUST_0055,Premium,Paid Search,Jacksonville,FL,Debit Card,Monthly,2021-03-25,1377,74.56,2,1
+CUST_0056,Premium,Direct,Seattle,WA,Credit Card,Monthly,2022-03-12,1025,52.73,3,0
+CUST_0057,Basic,Direct,San Diego,CA,Credit Card,Monthly,2020-01-08,1819,15.55,0,1
+CUST_0058,Basic,Paid Search,Seattle,WA,Credit Card,Monthly,2021-01-09,1452,29.72,2,1
+CUST_0059,Premium,Referral,Fort Worth,TX,Debit Card,Annual,2023-06-06,574,50.83,2,0
+CUST_0060,Enterprise,Referral,Phoenix,AZ,Credit Card,Monthly,2021-12-24,1103,137.64,3,0
+CUST_0061,Premium,Referral,New York,NY,PayPal,Monthly,2020-01-20,1807,30.68,0,0
+CUST_0062,Premium,Paid Search,Phoenix,AZ,Debit Card,Monthly,2021-09-23,1195,66.31,2,0
+CUST_0063,Basic,Organic,Fort Worth,TX,PayPal,Monthly,2021-05-30,1311,25.14,0,0
+CUST_0064,Basic,Organic,Los Angeles,CA,PayPal,Annual,2022-08-22,862,27.04,3,1
+CUST_0065,Basic,Organic,Charlotte,NC,Bank Transfer,Annual,2019-03-16,2117,14.26,0,0
+CUST_0066,Basic,Paid Search,Los Angeles,CA,PayPal,Monthly,2020-03-10,1757,28.08,1,0
+CUST_0067,Premium,Paid Search,San Jose,CA,Debit Card,Annual,2021-06-18,1292,52.97,2,1
+CUST_0068,Basic,Referral,Los Angeles,CA,Credit Card,Annual,2023-11-11,416,16.83,2,1
+CUST_0069,Basic,Referral,Houston,TX,Credit Card,Monthly,2022-05-03,973,27.49,3,0
+CUST_0070,Premium,Paid Search,San Jose,CA,Credit Card,Monthly,2023-03-17,655,56.72,2,0
+CUST_0071,Basic,Paid Search,Charlotte,NC,PayPal,Monthly,2019-12-16,1842,13.14,1,0
+CUST_0072,Enterprise,Organic,Chicago,IL,Credit Card,Monthly,2020-09-30,1553,190.89,1,0
+CUST_0073,Premium,Referral,Columbus,OH,Credit Card,Monthly,2021-10-23,1165,74.76,2,1
+CUST_0074,Basic,Paid Search,Charlotte,NC,Credit Card,Annual,2019-01-28,2164,10.4,1,1
+CUST_0075,Basic,Organic,San Francisco,CA,Credit Card,Monthly,2022-11-18,774,25.78,1,0
+CUST_0076,Premium,Referral,San Diego,CA,PayPal,Monthly,2023-04-27,614,44.19,2,0
+CUST_0077,Basic,Direct,Phoenix,AZ,Debit Card,Monthly,2019-10-04,1915,13.06,1,1
+CUST_0078,Basic,Organic,Dallas,TX,Credit Card,Monthly,2021-11-29,1128,23.94,4,1
+CUST_0079,Enterprise,Paid Search,Philadelphia,PA,Bank Transfer,Annual,2021-04-26,1345,144.2,2,0
+CUST_0080,Enterprise,Referral,Boston,MA,PayPal,Monthly,2020-07-12,1633,164.87,1,0
+CUST_0081,Premium,Direct,Fort Worth,TX,PayPal,Monthly,2020-11-20,1502,52.71,2,0
+CUST_0082,Premium,Organic,Phoenix,AZ,Credit Card,Monthly,2021-06-29,1281,53.58,1,0
+CUST_0083,Enterprise,Social Media,Jacksonville,FL,PayPal,Annual,2023-01-22,709,192.6,0,0
+CUST_0084,Basic,Referral,San Diego,CA,Debit Card,Annual,2024-01-26,340,13.27,0,0
+CUST_0085,Premium,Referral,Houston,TX,Credit Card,Monthly,2020-02-06,1790,70.83,1,1
+CUST_0086,Basic,Paid Search,Charlotte,NC,PayPal,Monthly,2021-10-03,1185,17.68,3,1
+CUST_0087,Enterprise,Referral,San Diego,CA,Bank Transfer,Monthly,2023-07-05,545,154.41,3,0
+CUST_0088,Basic,Organic,New York,NY,Credit Card,Monthly,2023-03-26,646,19.88,1,0
+CUST_0089,Premium,Paid Search,Fort Worth,TX,Credit Card,Monthly,2022-03-26,1011,56.99,1,1
+CUST_0090,Premium,Organic,Denver,CO,Bank Transfer,Monthly,2024-01-09,357,59.95,3,0
+CUST_0091,Basic,Organic,Austin,TX,Credit Card,Monthly,2021-08-15,1234,12.02,1,1
+CUST_0092,Premium,Organic,Indianapolis,IN,Bank Transfer,Annual,2024-02-07,328,62.57,2,0
+CUST_0093,Basic,Organic,Dallas,TX,Debit Card,Monthly,2021-03-24,1378,14.72,0,0
+CUST_0094,Basic,Social Media,New York,NY,Debit Card,Monthly,2021-07-24,1256,22.16,2,1
+CUST_0095,Premium,Referral,Chicago,IL,Credit Card,Monthly,2019-03-16,2117,76.15,2,0
+CUST_0096,Premium,Organic,Denver,CO,Credit Card,Monthly,2022-04-18,988,50.95,2,0
+CUST_0097,Premium,Organic,San Francisco,CA,Credit Card,Annual,2020-11-19,1503,57.87,2,0
+CUST_0098,Basic,Paid Search,Denver,CO,Credit Card,Annual,2019-02-01,2160,19.36,2,1
+CUST_0099,Premium,Organic,Denver,CO,PayPal,Monthly,2021-09-14,1204,54.05,2,0
+CUST_0100,Basic,Organic,Chicago,IL,Credit Card,Monthly,2024-03-16,290,20.53,5,1
+CUST_0101,Basic,Organic,San Diego,CA,Credit Card,Annual,2020-08-01,1613,27.75,4,0
+CUST_0102,Premium,Direct,Boston,MA,Bank Transfer,Monthly,2021-01-04,1457,46.2,0,0
+CUST_0103,Premium,Referral,Denver,CO,Credit Card,Annual,2022-08-01,883,51.07,3,1
+CUST_0104,Basic,Referral,Jacksonville,FL,Debit Card,Monthly,2022-07-03,912,21.04,1,0
+CUST_0105,Enterprise,Social Media,San Francisco,CA,Debit Card,Monthly,2023-10-17,441,175.98,1,1
+CUST_0106,Basic,Paid Search,Fort Worth,TX,PayPal,Monthly,2022-07-25,890,26.7,2,1
+CUST_0107,Basic,Organic,Seattle,WA,PayPal,Annual,2019-02-10,2151,15.48,3,0
+CUST_0108,Basic,Organic,Philadelphia,PA,Bank Transfer,Monthly,2023-11-08,419,23.3,0,0
+CUST_0109,Enterprise,Paid Search,Columbus,OH,Credit Card,Monthly,2022-10-18,805,102.12,0,0
+CUST_0110,Premium,Organic,Austin,TX,Credit Card,Monthly,2022-02-10,1055,66.08,3,0
+CUST_0111,Basic,Paid Search,Houston,TX,PayPal,Monthly,2022-06-21,924,11.03,2,0
+CUST_0112,Premium,Organic,Dallas,TX,Credit Card,Monthly,2019-03-02,2131,64.42,1,0
+CUST_0113,Premium,Social Media,Jacksonville,FL,Debit Card,Monthly,2020-06-07,1668,48.05,0,0
+CUST_0114,Enterprise,Organic,San Jose,CA,Bank Transfer,Monthly,2019-01-12,2180,145.03,5,0
+CUST_0115,Basic,Paid Search,Charlotte,NC,Bank Transfer,Monthly,2023-04-11,630,10.79,2,1
+CUST_0116,Premium,Direct,Columbus,OH,Credit Card,Annual,2021-06-01,1309,76.22,5,0
+CUST_0117,Premium,Organic,Chicago,IL,PayPal,Monthly,2019-05-11,2061,64.81,2,0
+CUST_0118,Basic,Paid Search,Fort Worth,TX,PayPal,Annual,2022-12-20,742,27.53,1,0
+CUST_0119,Enterprise,Organic,Fort Worth,TX,PayPal,Annual,2023-10-29,429,88.4,0,0
+CUST_0120,Basic,Organic,Jacksonville,FL,PayPal,Annual,2022-06-16,929,17.97,0,0
+CUST_0121,Basic,Paid Search,New York,NY,Credit Card,Monthly,2022-03-11,1026,15.94,3,0
+CUST_0122,Enterprise,Organic,Charlotte,NC,Credit Card,Annual,2022-03-09,1028,194.77,1,0
+CUST_0123,Premium,Direct,Columbus,OH,PayPal,Annual,2019-08-14,1966,38.35,2,0
+CUST_0124,Premium,Referral,Fort Worth,TX,Credit Card,Monthly,2021-04-04,1367,41.02,0,0
+CUST_0125,Premium,Paid Search,Phoenix,AZ,PayPal,Monthly,2023-03-25,647,76.39,1,0
+CUST_0126,Basic,Social Media,San Francisco,CA,Credit Card,Annual,2021-02-19,1411,14.48,2,0
+CUST_0127,Basic,Social Media,Chicago,IL,Credit Card,Monthly,2022-05-03,973,29.11,4,0
+CUST_0128,Basic,Paid Search,San Diego,CA,Bank Transfer,Monthly,2021-07-02,1278,11.62,0,0
+CUST_0129,Premium,Organic,San Francisco,CA,Credit Card,Annual,2019-11-14,1874,59.62,2,0
+CUST_0130,Premium,Organic,Philadelphia,PA,PayPal,Annual,2019-04-02,2100,72.53,5,0
+CUST_0131,Premium,Organic,Austin,TX,Debit Card,Monthly,2021-11-20,1137,71.29,0,0
+CUST_0132,Basic,Referral,Seattle,WA,Debit Card,Annual,2023-03-28,644,10.13,1,0
+CUST_0133,Enterprise,Referral,Los Angeles,CA,PayPal,Monthly,2020-11-05,1517,95.41,1,0
+CUST_0134,Basic,Social Media,Charlotte,NC,Debit Card,Monthly,2022-05-04,972,13.48,2,1
+CUST_0135,Premium,Referral,New York,NY,Credit Card,Monthly,2019-07-29,1982,73.58,3,0
+CUST_0136,Premium,Organic,Austin,TX,Debit Card,Monthly,2024-05-05,240,68.52,2,0
+CUST_0137,Enterprise,Paid Search,Fort Worth,TX,Debit Card,Monthly,2021-03-07,1395,163.24,0,0
+CUST_0138,Basic,Referral,Austin,TX,Credit Card,Annual,2021-01-17,1444,10.63,5,1
+CUST_0139,Basic,Paid Search,Philadelphia,PA,Credit Card,Monthly,2024-01-30,336,27.36,2,0
+CUST_0140,Premium,Organic,San Francisco,CA,Credit Card,Monthly,2021-11-16,1141,72.24,2,1
+CUST_0141,Basic,Direct,Chicago,IL,Credit Card,Monthly,2021-01-03,1458,12.35,0,0
+CUST_0142,Premium,Paid Search,Philadelphia,PA,Credit Card,Monthly,2020-12-26,1466,59.1,1,1
+CUST_0143,Basic,Paid Search,San Diego,CA,PayPal,Annual,2019-12-04,1854,19.6,1,0
+CUST_0144,Premium,Social Media,Philadelphia,PA,Debit Card,Annual,2023-09-11,477,35.25,2,0
+CUST_0145,Basic,Referral,Boston,MA,Credit Card,Annual,2019-08-30,1950,16.53,1,0
+CUST_0146,Basic,Organic,Boston,MA,Credit Card,Monthly,2022-04-04,1002,21.35,2,0
+CUST_0147,Basic,Organic,Austin,TX,Credit Card,Annual,2019-01-09,2183,28.72,0,0
+CUST_0148,Premium,Referral,San Diego,CA,Debit Card,Annual,2022-01-12,1084,46.97,1,0
+CUST_0149,Enterprise,Paid Search,Chicago,IL,Credit Card,Monthly,2019-01-14,2178,89.8,0,0
+CUST_0150,Basic,Organic,Fort Worth,TX,PayPal,Monthly,2021-01-19,1442,16.74,0,0
+CUST_0151,Premium,Referral,Denver,CO,Credit Card,Monthly,2023-10-13,445,41.42,3,1
+CUST_0152,Premium,Organic,Charlotte,NC,Credit Card,Monthly,2021-05-11,1330,78.04,2,1
+CUST_0153,Premium,Social Media,Seattle,WA,Debit Card,Monthly,2020-02-24,1772,31.47,2,0
+CUST_0154,Premium,Referral,Denver,CO,PayPal,Annual,2022-07-15,900,49.19,2,0
+CUST_0155,Premium,Paid Search,San Jose,CA,Credit Card,Annual,2020-01-10,1817,50.65,0,0
+CUST_0156,Basic,Organic,Charlotte,NC,PayPal,Monthly,2022-01-12,1084,21.86,0,1
+CUST_0157,Basic,Direct,Los Angeles,CA,Debit Card,Monthly,2023-01-12,719,25.47,0,0
+CUST_0158,Enterprise,Paid Search,Austin,TX,Debit Card,Monthly,2020-08-14,1600,142.37,2,0
+CUST_0159,Basic,Referral,New York,NY,Credit Card,Monthly,2022-07-31,884,10.73,3,1
+CUST_0160,Premium,Referral,Charlotte,NC,PayPal,Monthly,2024-04-23,252,43.49,0,0
+CUST_0161,Premium,Direct,New York,NY,Credit Card,Monthly,2023-11-16,411,34.43,0,0
+CUST_0162,Premium,Referral,Boston,MA,Debit Card,Annual,2024-01-09,357,30.87,2,0
+CUST_0163,Basic,Paid Search,Jacksonville,FL,PayPal,Monthly,2023-07-20,530,16.16,1,0
+CUST_0164,Premium,Direct,New York,NY,Bank Transfer,Monthly,2022-10-13,810,73.41,0,0
+CUST_0165,Premium,Social Media,Austin,TX,Bank Transfer,Monthly,2022-03-14,1023,71.54,2,0
+CUST_0166,Premium,Direct,New York,NY,Credit Card,Annual,2021-12-12,1115,63.35,1,0
+CUST_0167,Basic,Referral,Dallas,TX,Debit Card,Annual,2021-02-19,1411,25.65,3,0
+CUST_0168,Basic,Referral,Philadelphia,PA,Debit Card,Annual,2022-07-26,889,18.71,1,0
+CUST_0169,Premium,Organic,Charlotte,NC,PayPal,Annual,2019-05-23,2049,64.77,1,1
+CUST_0170,Basic,Paid Search,Jacksonville,FL,Credit Card,Monthly,2021-08-25,1224,23.36,2,1
+CUST_0171,Enterprise,Paid Search,Philadelphia,PA,Debit Card,Annual,2020-10-26,1527,125.62,2,1
+CUST_0172,Premium,Social Media,Philadelphia,PA,Bank Transfer,Annual,2020-03-02,1765,30.91,0,0
+CUST_0173,Basic,Referral,Charlotte,NC,Credit Card,Annual,2023-12-12,385,13.94,1,0
+CUST_0174,Basic,Referral,Boston,MA,Bank Transfer,Annual,2022-03-25,1012,20.78,1,0
+CUST_0175,Premium,Organic,Houston,TX,Debit Card,Monthly,2022-07-10,905,64.06,0,0
+CUST_0176,Premium,Referral,San Francisco,CA,PayPal,Monthly,2019-02-05,2156,51.23,0,0
+CUST_0177,Premium,Paid Search,Fort Worth,TX,PayPal,Annual,2021-06-05,1305,61.9,3,0
+CUST_0178,Basic,Paid Search,San Jose,CA,Debit Card,Monthly,2022-03-23,1014,15.11,1,0
+CUST_0179,Enterprise,Referral,Seattle,WA,Bank Transfer,Monthly,2023-01-02,729,150.39,0,1
+CUST_0180,Premium,Social Media,San Francisco,CA,Credit Card,Monthly,2020-02-23,1773,60.35,1,0
+CUST_0181,Basic,Referral,Los Angeles,CA,Credit Card,Monthly,2023-08-09,510,18.09,2,0
+CUST_0182,Enterprise,Organic,Denver,CO,PayPal,Monthly,2019-10-15,1904,112.9,0,0
+CUST_0183,Basic,Social Media,Chicago,IL,PayPal,Monthly,2021-12-29,1098,17.1,0,0
+CUST_0184,Premium,Organic,Phoenix,AZ,Credit Card,Annual,2021-02-14,1416,74.0,2,0
+CUST_0185,Basic,Referral,Jacksonville,FL,Bank Transfer,Monthly,2019-12-20,1838,18.93,1,0
+CUST_0186,Basic,Direct,Charlotte,NC,Credit Card,Monthly,2020-03-21,1746,18.45,1,0
+CUST_0187,Basic,Direct,Chicago,IL,Debit Card,Monthly,2019-12-14,1844,29.48,0,0
+CUST_0188,Premium,Social Media,New York,NY,Debit Card,Monthly,2020-02-10,1786,34.46,1,1
+CUST_0189,Premium,Social Media,Los Angeles,CA,Credit Card,Monthly,2023-08-14,505,43.16,1,1
+CUST_0190,Enterprise,Referral,Austin,TX,Debit Card,Monthly,2023-08-17,502,152.07,4,0
+CUST_0191,Basic,Direct,San Jose,CA,PayPal,Annual,2022-03-27,1010,27.56,3,1
+CUST_0192,Basic,Paid Search,Los Angeles,CA,Credit Card,Monthly,2022-05-14,962,29.51,2,0
+CUST_0193,Enterprise,Direct,Columbus,OH,Credit Card,Annual,2019-08-26,1954,100.98,1,0
+CUST_0194,Basic,Paid Search,San Diego,CA,PayPal,Monthly,2022-01-07,1089,29.26,3,1
+CUST_0195,Premium,Paid Search,Philadelphia,PA,Credit Card,Monthly,2022-02-27,1038,62.51,0,0
+CUST_0196,Basic,Social Media,San Jose,CA,Credit Card,Monthly,2020-11-20,1502,11.16,2,0
+CUST_0197,Basic,Organic,Columbus,OH,Credit Card,Annual,2021-02-02,1428,22.36,1,0
+CUST_0198,Basic,Organic,Boston,MA,Bank Transfer,Annual,2023-09-10,478,12.61,2,1
+CUST_0199,Basic,Paid Search,Columbus,OH,Credit Card,Monthly,2023-07-27,523,10.22,1,1
+CUST_0200,Basic,Organic,San Jose,CA,Bank Transfer,Monthly,2021-06-19,1291,14.3,0,1
+CUST_0201,Basic,Direct,Seattle,WA,Credit Card,Monthly,2020-04-09,1727,12.19,2,1
+CUST_0202,Basic,Paid Search,Houston,TX,Debit Card,Monthly,2020-08-16,1598,19.52,1,0
+CUST_0203,Basic,Social Media,Fort Worth,TX,Credit Card,Monthly,2022-02-17,1048,16.31,2,0
+CUST_0204,Premium,Organic,San Diego,CA,PayPal,Annual,2021-03-12,1390,49.32,1,0
+CUST_0205,Enterprise,Paid Search,Fort Worth,TX,Credit Card,Annual,2020-03-24,1743,133.19,0,0
+CUST_0206,Basic,Referral,New York,NY,Credit Card,Monthly,2020-10-25,1528,10.71,1,1
+CUST_0207,Basic,Direct,Boston,MA,Bank Transfer,Annual,2020-06-23,1652,17.1,2,1
+CUST_0208,Basic,Paid Search,Charlotte,NC,Credit Card,Annual,2022-05-31,945,25.65,1,0
+CUST_0209,Premium,Organic,Houston,TX,PayPal,Annual,2019-06-18,2023,77.99,2,0
+CUST_0210,Basic,Paid Search,Los Angeles,CA,PayPal,Monthly,2019-12-17,1841,20.42,1,0
+CUST_0211,Basic,Organic,Seattle,WA,Credit Card,Monthly,2024-01-25,341,21.0,1,0
+CUST_0212,Basic,Direct,Jacksonville,FL,Credit Card,Annual,2021-06-06,1304,29.85,1,0
+CUST_0213,Enterprise,Organic,Charlotte,NC,Credit Card,Annual,2020-10-22,1531,197.41,2,0
+CUST_0214,Basic,Paid Search,Austin,TX,Credit Card,Monthly,2023-12-10,387,13.3,0,1
+CUST_0215,Premium,Social Media,Charlotte,NC,PayPal,Annual,2020-04-05,1731,50.67,3,1
+CUST_0216,Basic,Organic,Jacksonville,FL,PayPal,Annual,2022-02-08,1057,13.22,4,1
+CUST_0217,Basic,Social Media,Los Angeles,CA,Credit Card,Monthly,2024-04-03,272,26.3,2,0
+CUST_0218,Premium,Paid Search,San Jose,CA,Bank Transfer,Monthly,2019-07-28,1983,30.55,5,0
+CUST_0219,Premium,Organic,Charlotte,NC,PayPal,Annual,2020-06-19,1656,40.86,0,1
+CUST_0220,Premium,Organic,San Antonio,TX,Credit Card,Annual,2023-12-01,396,39.07,1,0
+CUST_0221,Enterprise,Paid Search,Chicago,IL,Credit Card,Monthly,2021-12-14,1113,164.35,0,0
+CUST_0222,Basic,Referral,Denver,CO,Credit Card,Annual,2024-01-15,351,22.73,0,0
+CUST_0223,Premium,Referral,Philadelphia,PA,Credit Card,Annual,2019-01-19,2173,52.01,0,0
+CUST_0224,Basic,Paid Search,Seattle,WA,Credit Card,Monthly,2020-04-20,1716,24.71,4,1
+CUST_0225,Premium,Organic,Philadelphia,PA,Debit Card,Annual,2024-03-09,297,58.59,1,0
+CUST_0226,Basic,Paid Search,Fort Worth,TX,Bank Transfer,Monthly,2023-07-12,538,15.46,1,1
+CUST_0227,Enterprise,Organic,Columbus,OH,Credit Card,Monthly,2024-01-30,336,102.33,2,0
+CUST_0228,Basic,Organic,San Antonio,TX,Debit Card,Annual,2021-03-02,1400,24.59,1,0
+CUST_0229,Premium,Organic,Boston,MA,Bank Transfer,Annual,2021-07-14,1266,44.14,0,0
+CUST_0230,Basic,Organic,Columbus,OH,Credit Card,Monthly,2022-04-20,986,18.58,2,0
+CUST_0231,Enterprise,Organic,Seattle,WA,Debit Card,Monthly,2019-07-15,1996,117.82,1,0
+CUST_0232,Basic,Referral,Austin,TX,Debit Card,Monthly,2019-07-18,1993,17.87,3,0
+CUST_0233,Enterprise,Organic,Phoenix,AZ,PayPal,Monthly,2024-02-24,311,193.64,1,0
+CUST_0234,Basic,Referral,San Jose,CA,Credit Card,Annual,2019-10-16,1903,20.47,0,0
+CUST_0235,Enterprise,Referral,Dallas,TX,Bank Transfer,Monthly,2023-06-22,558,89.81,1,0
+CUST_0236,Basic,Direct,Indianapolis,IN,Credit Card,Monthly,2022-03-13,1024,18.24,2,1
+CUST_0237,Premium,Social Media,San Jose,CA,Debit Card,Annual,2020-07-14,1631,40.07,1,0
+CUST_0238,Basic,Social Media,Charlotte,NC,Credit Card,Annual,2023-10-16,442,13.23,2,0
+CUST_0239,Premium,Referral,Los Angeles,CA,Credit Card,Monthly,2021-12-03,1124,56.94,1,0
+CUST_0240,Premium,Social Media,Seattle,WA,Credit Card,Monthly,2021-02-17,1413,40.19,1,0
+CUST_0241,Premium,Referral,San Diego,CA,Bank Transfer,Monthly,2024-05-21,224,74.85,2,0
+CUST_0242,Basic,Referral,Fort Worth,TX,Debit Card,Monthly,2019-02-09,2152,20.14,1,1
+CUST_0243,Basic,Referral,Indianapolis,IN,Credit Card,Monthly,2021-08-23,1226,29.36,1,0
+CUST_0244,Premium,Paid Search,New York,NY,PayPal,Annual,2023-04-06,635,66.26,3,1
+CUST_0245,Basic,Referral,Chicago,IL,PayPal,Annual,2021-07-18,1262,14.2,2,0
+CUST_0246,Basic,Direct,Philadelphia,PA,Bank Transfer,Monthly,2022-11-19,773,28.03,1,0
+CUST_0247,Basic,Social Media,Jacksonville,FL,Credit Card,Monthly,2022-07-24,891,12.26,0,0
+CUST_0248,Premium,Paid Search,Los Angeles,CA,Credit Card,Monthly,2022-08-30,854,60.69,2,0
+CUST_0249,Premium,Social Media,Chicago,IL,Credit Card,Annual,2024-05-07,238,46.26,1,0
+CUST_0250,Basic,Social Media,New York,NY,Debit Card,Monthly,2019-07-10,2001,16.81,1,1
+CUST_0251,Basic,Organic,Columbus,OH,Bank Transfer,Annual,2022-11-25,767,25.32,2,1
+CUST_0252,Enterprise,Referral,Los Angeles,CA,PayPal,Monthly,2020-09-03,1580,125.79,0,0
+CUST_0253,Basic,Social Media,Boston,MA,Credit Card,Monthly,2019-09-27,1922,28.36,2,1
+CUST_0254,Enterprise,Social Media,Dallas,TX,Debit Card,Annual,2023-10-08,450,167.2,2,0
+CUST_0255,Enterprise,Organic,Philadelphia,PA,Credit Card,Monthly,2020-04-09,1727,109.03,0,0
+CUST_0256,Basic,Paid Search,Austin,TX,Credit Card,Monthly,2019-11-30,1858,24.86,0,0
+CUST_0257,Enterprise,Social Media,Dallas,TX,Credit Card,Monthly,2023-07-14,536,102.24,0,0
+CUST_0258,Basic,Social Media,Jacksonville,FL,PayPal,Annual,2023-05-05,606,21.47,1,0
+CUST_0259,Basic,Paid Search,Dallas,TX,Debit Card,Annual,2021-09-03,1215,11.29,1,1
+CUST_0260,Premium,Organic,Jacksonville,FL,PayPal,Monthly,2020-10-20,1533,74.63,2,0
+CUST_0261,Premium,Referral,Houston,TX,Bank Transfer,Monthly,2021-02-10,1420,49.23,3,0
+CUST_0262,Premium,Paid Search,Philadelphia,PA,Credit Card,Monthly,2024-04-20,255,31.99,2,0
+CUST_0263,Basic,Paid Search,Fort Worth,TX,PayPal,Monthly,2022-08-07,877,18.95,2,0
+CUST_0264,Enterprise,Organic,San Diego,CA,Credit Card,Monthly,2020-08-24,1590,135.54,1,1
+CUST_0265,Basic,Organic,Dallas,TX,Credit Card,Monthly,2020-07-06,1639,26.36,3,0
+CUST_0266,Premium,Organic,Austin,TX,Credit Card,Monthly,2019-01-01,2191,49.49,3,0
+CUST_0267,Premium,Organic,San Antonio,TX,Debit Card,Annual,2022-03-22,1015,61.82,0,0
+CUST_0268,Basic,Organic,Charlotte,NC,Debit Card,Monthly,2022-09-09,844,17.68,1,0
+CUST_0269,Basic,Paid Search,Boston,MA,Debit Card,Monthly,2023-11-14,413,17.1,3,1
+CUST_0270,Premium,Organic,Seattle,WA,Credit Card,Monthly,2023-04-24,617,73.68,1,1
+CUST_0271,Enterprise,Organic,Indianapolis,IN,Debit Card,Annual,2024-05-14,231,130.64,1,0
+CUST_0272,Premium,Organic,San Francisco,CA,Credit Card,Monthly,2022-12-02,760,62.61,3,1
+CUST_0273,Basic,Paid Search,Jacksonville,FL,Bank Transfer,Annual,2022-03-25,1012,21.59,1,0
+CUST_0274,Enterprise,Organic,Houston,TX,Credit Card,Monthly,2022-08-06,878,100.02,1,0
+CUST_0275,Enterprise,Paid Search,Boston,MA,Credit Card,Monthly,2021-07-02,1278,156.43,1,0
+CUST_0276,Basic,Paid Search,Philadelphia,PA,Debit Card,Monthly,2023-09-08,480,14.36,3,0
+CUST_0277,Basic,Organic,Chicago,IL,Debit Card,Monthly,2022-03-24,1013,14.18,2,0
+CUST_0278,Basic,Organic,San Jose,CA,Debit Card,Monthly,2019-06-19,2022,17.5,1,1
+CUST_0279,Enterprise,Paid Search,Fort Worth,TX,PayPal,Monthly,2024-04-20,255,126.26,1,0
+CUST_0280,Basic,Referral,Los Angeles,CA,Credit Card,Monthly,2019-12-09,1849,18.81,1,0
+CUST_0281,Basic,Organic,Columbus,OH,Bank Transfer,Monthly,2019-05-19,2053,21.15,1,0
+CUST_0282,Basic,Paid Search,Charlotte,NC,Debit Card,Monthly,2020-05-23,1683,29.88,3,0
+CUST_0283,Basic,Paid Search,Phoenix,AZ,PayPal,Monthly,2023-08-10,509,12.65,2,1
+CUST_0284,Basic,Organic,Austin,TX,PayPal,Monthly,2022-04-22,984,15.52,2,1
+CUST_0285,Basic,Direct,Jacksonville,FL,Bank Transfer,Monthly,2020-11-25,1497,17.51,1,0
+CUST_0286,Premium,Paid Search,Austin,TX,Debit Card,Monthly,2023-01-28,703,73.28,4,0
+CUST_0287,Enterprise,Organic,Dallas,TX,Credit Card,Monthly,2019-12-03,1855,181.64,1,0
+CUST_0288,Enterprise,Paid Search,Fort Worth,TX,Debit Card,Monthly,2020-12-20,1472,171.51,1,1
+CUST_0289,Enterprise,Paid Search,Indianapolis,IN,Debit Card,Monthly,2023-04-20,621,105.28,1,0
+CUST_0290,Enterprise,Referral,San Francisco,CA,Credit Card,Monthly,2020-08-01,1613,168.54,2,0
+CUST_0291,Premium,Social Media,Dallas,TX,Bank Transfer,Annual,2019-07-13,1998,35.22,2,0
+CUST_0292,Premium,Organic,Austin,TX,Credit Card,Monthly,2019-07-07,2004,58.85,1,1
+CUST_0293,Basic,Social Media,Los Angeles,CA,Credit Card,Monthly,2023-11-05,422,14.84,1,1
+CUST_0294,Premium,Referral,Los Angeles,CA,Credit Card,Annual,2021-08-31,1218,37.62,1,0
+CUST_0295,Premium,Social Media,San Francisco,CA,PayPal,Annual,2023-04-06,635,40.73,2,0
+CUST_0296,Premium,Social Media,San Jose,CA,PayPal,Annual,2023-05-07,604,61.85,2,0
+CUST_0297,Basic,Organic,Houston,TX,Credit Card,Annual,2023-01-29,702,18.03,0,0
+CUST_0298,Enterprise,Social Media,Austin,TX,Credit Card,Monthly,2023-01-04,727,80.02,1,0
+CUST_0299,Basic,Referral,Seattle,WA,PayPal,Monthly,2021-07-28,1252,24.82,1,0
+CUST_0300,Basic,Organic,Los Angeles,CA,Credit Card,Annual,2021-06-29,1281,28.86,1,0
+CUST_0301,Enterprise,Referral,San Francisco,CA,Bank Transfer,Monthly,2021-07-17,1263,191.62,2,0
+CUST_0302,Basic,Social Media,Phoenix,AZ,Debit Card,Annual,2023-12-14,383,23.52,2,0
+CUST_0303,Premium,Direct,San Francisco,CA,Credit Card,Annual,2020-06-23,1652,73.29,1,1
+CUST_0304,Premium,Social Media,Dallas,TX,Credit Card,Annual,2019-07-29,1982,57.6,2,0
+CUST_0305,Enterprise,Referral,New York,NY,Bank Transfer,Annual,2023-11-08,419,115.44,0,0
+CUST_0306,Premium,Referral,Philadelphia,PA,PayPal,Monthly,2020-05-02,1704,53.41,1,0
+CUST_0307,Basic,Referral,San Francisco,CA,Credit Card,Monthly,2021-12-03,1124,12.0,1,1
+CUST_0308,Enterprise,Social Media,San Francisco,CA,Credit Card,Monthly,2024-04-28,247,168.34,2,0
+CUST_0309,Premium,Social Media,Philadelphia,PA,Bank Transfer,Monthly,2021-02-22,1408,68.65,2,0
+CUST_0310,Basic,Social Media,Dallas,TX,Credit Card,Monthly,2023-10-26,432,15.87,2,0
+CUST_0311,Basic,Organic,Austin,TX,Bank Transfer,Monthly,2022-06-05,940,26.94,0,0
+CUST_0312,Enterprise,Social Media,San Diego,CA,Credit Card,Monthly,2020-09-07,1576,87.88,1,0
+CUST_0313,Basic,Referral,Jacksonville,FL,Credit Card,Annual,2020-01-28,1799,14.78,2,0
+CUST_0314,Premium,Social Media,San Francisco,CA,Credit Card,Monthly,2019-12-28,1830,74.8,2,0
+CUST_0315,Enterprise,Paid Search,Houston,TX,Credit Card,Annual,2020-05-05,1701,177.18,3,0
+CUST_0316,Basic,Referral,San Francisco,CA,Debit Card,Monthly,2019-12-27,1831,18.95,0,1
+CUST_0317,Enterprise,Paid Search,Charlotte,NC,Credit Card,Annual,2023-05-01,610,89.15,1,0
+CUST_0318,Basic,Paid Search,Fort Worth,TX,PayPal,Monthly,2023-03-22,650,18.91,0,1
+CUST_0319,Basic,Social Media,Indianapolis,IN,Debit Card,Monthly,2021-05-12,1329,14.84,1,0
+CUST_0320,Enterprise,Direct,Jacksonville,FL,Credit Card,Monthly,2021-11-08,1149,101.13,0,0
+CUST_0321,Basic,Organic,Jacksonville,FL,Bank Transfer,Annual,2022-10-09,814,23.97,3,1
+CUST_0322,Enterprise,Social Media,Houston,TX,Credit Card,Annual,2021-11-28,1129,173.76,6,0
+CUST_0323,Premium,Social Media,San Jose,CA,Credit Card,Annual,2020-03-31,1736,70.41,1,0
+CUST_0324,Basic,Social Media,Fort Worth,TX,Credit Card,Monthly,2023-11-19,408,29.8,3,1
+CUST_0325,Premium,Organic,Chicago,IL,Credit Card,Monthly,2024-02-25,310,47.86,1,0
+CUST_0326,Premium,Paid Search,Houston,TX,Debit Card,Annual,2019-06-03,2038,75.91,0,0
+CUST_0327,Premium,Organic,Dallas,TX,Credit Card,Annual,2022-07-25,890,73.34,2,0
+CUST_0328,Basic,Referral,Chicago,IL,Credit Card,Annual,2022-02-06,1059,17.06,5,1
+CUST_0329,Basic,Organic,San Diego,CA,Credit Card,Monthly,2020-09-06,1577,10.66,2,0
+CUST_0330,Enterprise,Paid Search,Charlotte,NC,Debit Card,Annual,2019-07-08,2003,167.21,3,0
+CUST_0331,Basic,Organic,Boston,MA,PayPal,Monthly,2019-09-11,1938,20.93,2,0
+CUST_0332,Basic,Referral,San Diego,CA,Credit Card,Monthly,2022-09-02,851,18.75,1,1
+CUST_0333,Basic,Paid Search,Denver,CO,Bank Transfer,Annual,2024-04-16,259,18.45,1,0
+CUST_0334,Premium,Social Media,Columbus,OH,Credit Card,Monthly,2021-12-06,1121,70.33,3,0
+CUST_0335,Premium,Organic,San Jose,CA,Bank Transfer,Monthly,2021-02-05,1425,55.88,1,0
+CUST_0336,Basic,Paid Search,Indianapolis,IN,Credit Card,Annual,2021-07-05,1275,21.2,2,1
+CUST_0337,Enterprise,Paid Search,Los Angeles,CA,Bank Transfer,Annual,2024-03-29,277,176.42,0,0
+CUST_0338,Basic,Social Media,San Francisco,CA,Credit Card,Monthly,2019-03-14,2119,16.91,3,1
+CUST_0339,Premium,Referral,New York,NY,Credit Card,Monthly,2022-01-28,1068,69.31,2,0
+CUST_0340,Premium,Organic,New York,NY,Debit Card,Monthly,2024-04-07,268,57.95,2,0
+CUST_0341,Premium,Paid Search,Phoenix,AZ,Bank Transfer,Annual,2020-06-08,1667,78.08,2,0
+CUST_0342,Enterprise,Social Media,Houston,TX,PayPal,Monthly,2021-11-11,1146,160.72,1,0
+CUST_0343,Premium,Referral,Indianapolis,IN,Debit Card,Annual,2020-05-14,1692,63.7,0,0
+CUST_0344,Premium,Organic,Austin,TX,Credit Card,Monthly,2021-06-20,1290,46.7,2,0
+CUST_0345,Premium,Organic,Indianapolis,IN,Credit Card,Annual,2024-03-29,277,32.83,3,0
+CUST_0346,Premium,Organic,Denver,CO,Bank Transfer,Annual,2020-02-08,1788,43.89,1,0
+CUST_0347,Enterprise,Organic,San Jose,CA,Credit Card,Annual,2022-09-10,843,197.47,1,0
+CUST_0348,Premium,Organic,San Francisco,CA,Credit Card,Monthly,2021-02-16,1414,55.84,3,0
+CUST_0349,Basic,Referral,Charlotte,NC,Debit Card,Monthly,2021-08-07,1242,23.92,1,1
+CUST_0350,Premium,Referral,Chicago,IL,Credit Card,Monthly,2019-03-14,2119,65.33,1,0
+CUST_0351,Basic,Referral,Houston,TX,Debit Card,Monthly,2019-09-23,1926,22.25,0,0
+CUST_0352,Enterprise,Organic,Houston,TX,Bank Transfer,Annual,2019-10-11,1908,155.3,2,0
+CUST_0353,Enterprise,Organic,Dallas,TX,Debit Card,Monthly,2023-12-29,368,105.76,3,0
+CUST_0354,Enterprise,Organic,Charlotte,NC,Credit Card,Monthly,2019-03-14,2119,132.61,2,0
+CUST_0355,Premium,Referral,Fort Worth,TX,Credit Card,Monthly,2019-05-31,2041,32.5,1,0
+CUST_0356,Basic,Organic,Austin,TX,Credit Card,Monthly,2019-03-02,2131,18.5,0,0
+CUST_0357,Premium,Referral,Indianapolis,IN,Credit Card,Annual,2020-09-30,1553,71.15,2,0
+CUST_0358,Premium,Referral,Columbus,OH,Credit Card,Annual,2020-12-21,1471,76.04,2,0
+CUST_0359,Basic,Social Media,Dallas,TX,Credit Card,Annual,2021-02-08,1422,22.6,1,0
+CUST_0360,Basic,Paid Search,Austin,TX,Debit Card,Monthly,2024-03-04,302,20.0,2,0
+CUST_0361,Premium,Paid Search,Austin,TX,PayPal,Annual,2022-05-15,961,44.05,1,0
+CUST_0362,Basic,Direct,Indianapolis,IN,PayPal,Annual,2021-05-09,1332,23.28,3,1
+CUST_0363,Basic,Paid Search,San Jose,CA,PayPal,Monthly,2022-09-04,849,11.53,2,0
+CUST_0364,Premium,Social Media,Columbus,OH,Credit Card,Monthly,2021-03-17,1385,41.59,2,0
+CUST_0365,Premium,Paid Search,Dallas,TX,Debit Card,Annual,2020-04-09,1727,47.24,1,0
+CUST_0366,Basic,Organic,Charlotte,NC,Bank Transfer,Monthly,2023-05-01,610,17.7,1,0
+CUST_0367,Premium,Social Media,Phoenix,AZ,Bank Transfer,Monthly,2020-10-23,1530,57.07,1,0
+CUST_0368,Premium,Social Media,San Jose,CA,PayPal,Monthly,2020-11-04,1518,55.96,1,0
+CUST_0369,Basic,Paid Search,Denver,CO,Credit Card,Annual,2023-08-15,504,22.33,2,1
+CUST_0370,Premium,Referral,Charlotte,NC,Bank Transfer,Monthly,2022-10-09,814,50.6,3,0
+CUST_0371,Premium,Organic,San Antonio,TX,Credit Card,Annual,2019-03-12,2121,35.71,5,0
+CUST_0372,Enterprise,Referral,Chicago,IL,PayPal,Annual,2020-02-20,1776,165.76,4,0
+CUST_0373,Enterprise,Organic,Jacksonville,FL,Credit Card,Annual,2020-12-18,1474,141.27,2,0
+CUST_0374,Basic,Paid Search,San Diego,CA,Credit Card,Monthly,2019-07-13,1998,11.34,2,1
+CUST_0375,Enterprise,Organic,San Francisco,CA,Credit Card,Monthly,2020-07-10,1635,198.71,1,0
+CUST_0376,Basic,Paid Search,Chicago,IL,Credit Card,Monthly,2019-02-28,2133,24.13,1,1
+CUST_0377,Basic,Paid Search,Austin,TX,Debit Card,Annual,2021-06-23,1287,10.11,3,1
+CUST_0378,Premium,Referral,Phoenix,AZ,PayPal,Monthly,2023-02-12,688,55.9,0,1
+CUST_0379,Premium,Referral,San Antonio,TX,Bank Transfer,Monthly,2024-04-09,266,67.5,5,0
+CUST_0380,Premium,Organic,San Jose,CA,PayPal,Annual,2020-06-11,1664,40.11,1,0
+CUST_0381,Basic,Paid Search,Jacksonville,FL,Bank Transfer,Annual,2022-09-21,832,11.54,2,0
+CUST_0382,Premium,Social Media,Philadelphia,PA,PayPal,Annual,2022-05-30,946,41.25,2,0
+CUST_0383,Basic,Referral,San Antonio,TX,Credit Card,Annual,2021-09-01,1217,26.43,4,1
+CUST_0384,Basic,Organic,Phoenix,AZ,Credit Card,Monthly,2020-02-09,1787,27.77,4,1
+CUST_0385,Basic,Paid Search,San Antonio,TX,Debit Card,Annual,2022-07-05,910,24.96,7,0
+CUST_0386,Basic,Paid Search,Charlotte,NC,Credit Card,Monthly,2021-03-13,1389,10.45,2,1
+CUST_0387,Basic,Referral,Chicago,IL,Credit Card,Monthly,2021-07-08,1272,22.47,1,1
+CUST_0388,Premium,Referral,Chicago,IL,Debit Card,Monthly,2022-02-22,1043,59.35,3,0
+CUST_0389,Premium,Paid Search,Boston,MA,PayPal,Annual,2020-10-12,1541,76.46,1,1
+CUST_0390,Basic,Direct,Jacksonville,FL,PayPal,Annual,2019-06-19,2022,24.3,1,0
+CUST_0391,Basic,Referral,Seattle,WA,Credit Card,Annual,2021-07-28,1252,20.01,3,1
+CUST_0392,Basic,Referral,Houston,TX,PayPal,Monthly,2020-02-10,1786,19.1,2,1
+CUST_0393,Basic,Social Media,Austin,TX,PayPal,Monthly,2020-06-15,1660,29.22,2,0
+CUST_0394,Basic,Referral,Philadelphia,PA,PayPal,Monthly,2023-05-30,581,21.86,1,0
+CUST_0395,Basic,Paid Search,San Francisco,CA,PayPal,Annual,2022-03-13,1024,23.81,3,0
+CUST_0396,Basic,Social Media,Dallas,TX,Debit Card,Monthly,2022-06-11,934,23.82,4,0
+CUST_0397,Basic,Paid Search,Jacksonville,FL,Debit Card,Annual,2022-10-05,818,16.12,2,1
+CUST_0398,Basic,Paid Search,Seattle,WA,Credit Card,Monthly,2020-07-17,1628,18.77,2,0
+CUST_0399,Basic,Organic,San Diego,CA,Credit Card,Annual,2022-01-21,1075,14.65,0,1
+CUST_0400,Basic,Paid Search,Fort Worth,TX,Credit Card,Monthly,2022-01-14,1082,27.96,1,1
+CUST_0401,Enterprise,Organic,Los Angeles,CA,Debit Card,Annual,2022-08-18,866,176.46,0,0
+CUST_0402,Premium,Paid Search,Columbus,OH,Credit Card,Monthly,2024-01-26,340,54.39,0,0
+CUST_0403,Basic,Paid Search,San Jose,CA,Credit Card,Monthly,2021-02-28,1402,24.5,4,0
+CUST_0404,Premium,Social Media,San Francisco,CA,Bank Transfer,Annual,2022-05-26,950,39.76,2,1
+CUST_0405,Basic,Social Media,San Antonio,TX,Credit Card,Annual,2021-06-30,1280,16.56,2,1
+CUST_0406,Basic,Direct,Phoenix,AZ,PayPal,Annual,2019-07-07,2004,19.79,1,0
+CUST_0407,Premium,Paid Search,Philadelphia,PA,Credit Card,Annual,2019-02-22,2139,43.93,0,0
+CUST_0408,Basic,Social Media,Philadelphia,PA,Debit Card,Monthly,2019-07-04,2007,25.71,2,0
+CUST_0409,Basic,Referral,Phoenix,AZ,Credit Card,Annual,2024-05-14,231,15.05,2,1
+CUST_0410,Premium,Referral,San Jose,CA,Bank Transfer,Annual,2020-12-17,1475,41.6,1,0
+CUST_0411,Basic,Organic,San Diego,CA,Debit Card,Monthly,2023-09-06,482,22.2,3,0
+CUST_0412,Premium,Referral,Los Angeles,CA,Bank Transfer,Monthly,2022-08-02,882,79.98,3,1
+CUST_0413,Basic,Organic,San Francisco,CA,PayPal,Annual,2022-05-09,967,19.37,1,1
+CUST_0414,Premium,Organic,Boston,MA,Debit Card,Annual,2021-12-03,1124,31.25,1,0
+CUST_0415,Basic,Referral,Columbus,OH,Debit Card,Monthly,2023-08-18,501,13.47,2,1
+CUST_0416,Premium,Organic,San Francisco,CA,Credit Card,Monthly,2023-10-15,443,58.29,2,0
+CUST_0417,Basic,Social Media,San Diego,CA,Bank Transfer,Monthly,2019-05-19,2053,15.85,1,0
+CUST_0418,Basic,Referral,San Francisco,CA,Bank Transfer,Monthly,2021-11-17,1140,26.96,3,0
+CUST_0419,Basic,Direct,Boston,MA,Bank Transfer,Monthly,2022-06-05,940,22.45,2,1
+CUST_0420,Basic,Paid Search,New York,NY,Credit Card,Annual,2020-08-31,1583,28.71,0,1
+CUST_0421,Basic,Direct,Jacksonville,FL,Credit Card,Monthly,2019-07-03,2008,21.9,0,0
+CUST_0422,Enterprise,Paid Search,Los Angeles,CA,Credit Card,Monthly,2020-09-21,1562,159.43,5,0
+CUST_0423,Basic,Organic,Jacksonville,FL,Debit Card,Monthly,2023-09-07,481,18.05,4,1
+CUST_0424,Basic,Organic,Chicago,IL,Credit Card,Monthly,2022-12-27,735,26.45,0,1
+CUST_0425,Basic,Organic,Charlotte,NC,Debit Card,Monthly,2021-09-01,1217,18.68,0,0
+CUST_0426,Basic,Paid Search,San Francisco,CA,Credit Card,Monthly,2020-04-15,1721,23.17,5,0
+CUST_0427,Basic,Organic,Austin,TX,Debit Card,Monthly,2022-06-14,931,11.51,1,0
+CUST_0428,Premium,Organic,Indianapolis,IN,Bank Transfer,Annual,2021-03-29,1373,62.94,1,1
+CUST_0429,Basic,Referral,Dallas,TX,Credit Card,Annual,2023-09-16,472,16.95,0,0
+CUST_0430,Basic,Referral,San Diego,CA,Debit Card,Monthly,2021-01-30,1431,21.55,3,1
+CUST_0431,Basic,Paid Search,Charlotte,NC,Credit Card,Monthly,2023-08-04,515,11.69,2,1
+CUST_0432,Basic,Paid Search,Charlotte,NC,Debit Card,Monthly,2023-11-12,415,15.52,0,1
+CUST_0433,Basic,Referral,San Francisco,CA,PayPal,Annual,2024-01-13,353,19.51,1,0
+CUST_0434,Premium,Direct,San Francisco,CA,Debit Card,Annual,2021-06-21,1289,50.88,0,0
+CUST_0435,Premium,Direct,Jacksonville,FL,Bank Transfer,Annual,2024-04-23,252,57.53,3,0
+CUST_0436,Basic,Organic,New York,NY,PayPal,Annual,2021-04-05,1366,20.76,1,0
+CUST_0437,Basic,Referral,Indianapolis,IN,Debit Card,Monthly,2020-03-04,1763,14.4,2,0
+CUST_0438,Basic,Direct,Dallas,TX,Credit Card,Annual,2020-08-05,1609,28.69,3,1
+CUST_0439,Premium,Paid Search,Phoenix,AZ,Bank Transfer,Monthly,2023-06-22,558,71.22,0,0
+CUST_0440,Premium,Paid Search,Columbus,OH,Credit Card,Annual,2019-01-06,2186,42.56,2,1
+CUST_0441,Basic,Referral,Indianapolis,IN,Debit Card,Monthly,2022-02-03,1062,10.13,4,1
+CUST_0442,Premium,Social Media,New York,NY,PayPal,Annual,2021-02-17,1413,52.72,2,0
+CUST_0443,Basic,Paid Search,Dallas,TX,Credit Card,Monthly,2019-05-05,2067,14.45,1,1
+CUST_0444,Basic,Organic,Fort Worth,TX,PayPal,Monthly,2023-05-29,582,27.96,0,1
+CUST_0445,Basic,Organic,Dallas,TX,Credit Card,Monthly,2019-02-17,2144,13.26,1,0
+CUST_0446,Premium,Direct,San Francisco,CA,Credit Card,Annual,2021-04-23,1348,31.8,1,0
+CUST_0447,Basic,Organic,Chicago,IL,Credit Card,Monthly,2019-09-19,1930,25.63,1,0
+CUST_0448,Premium,Paid Search,Houston,TX,Debit Card,Monthly,2021-04-06,1365,56.77,2,1
+CUST_0449,Premium,Organic,Jacksonville,FL,PayPal,Monthly,2021-12-22,1105,41.22,1,0
+CUST_0450,Enterprise,Organic,Charlotte,NC,Debit Card,Monthly,2020-02-04,1792,119.84,4,0
+CUST_0451,Premium,Referral,Fort Worth,TX,PayPal,Annual,2019-01-27,2165,75.54,2,1
+CUST_0452,Basic,Organic,Seattle,WA,Credit Card,Monthly,2019-02-14,2147,16.75,1,0
+CUST_0453,Enterprise,Paid Search,Boston,MA,Debit Card,Monthly,2023-11-02,425,93.34,3,0
+CUST_0454,Premium,Organic,Phoenix,AZ,Credit Card,Annual,2023-08-28,491,34.1,0,0
+CUST_0455,Enterprise,Organic,Dallas,TX,Credit Card,Annual,2022-03-16,1021,100.29,2,1
+CUST_0456,Premium,Direct,Los Angeles,CA,PayPal,Monthly,2019-07-13,1998,46.51,2,0
+CUST_0457,Enterprise,Referral,New York,NY,Credit Card,Monthly,2022-09-12,841,81.94,1,0
+CUST_0458,Enterprise,Direct,New York,NY,Bank Transfer,Annual,2020-12-11,1481,110.36,1,0
+CUST_0459,Basic,Direct,Austin,TX,Debit Card,Monthly,2019-07-14,1997,23.53,3,0
+CUST_0460,Basic,Organic,San Jose,CA,Bank Transfer,Monthly,2021-04-24,1347,23.22,1,0
+CUST_0461,Premium,Organic,Boston,MA,Bank Transfer,Monthly,2019-12-02,1856,47.07,2,0
+CUST_0462,Basic,Organic,Los Angeles,CA,Debit Card,Monthly,2020-07-31,1614,18.53,1,1
+CUST_0463,Basic,Referral,Columbus,OH,Credit Card,Annual,2020-09-04,1579,21.54,2,1
+CUST_0464,Basic,Referral,Columbus,OH,Debit Card,Annual,2022-03-19,1018,12.87,1,1
+CUST_0465,Premium,Referral,Houston,TX,PayPal,Monthly,2021-07-29,1251,63.98,2,0
+CUST_0466,Basic,Organic,Houston,TX,Credit Card,Monthly,2023-11-02,425,10.32,2,1
+CUST_0467,Premium,Paid Search,Charlotte,NC,Credit Card,Annual,2020-05-09,1697,54.95,2,0
+CUST_0468,Basic,Organic,Austin,TX,Credit Card,Annual,2021-02-23,1407,21.09,0,0
+CUST_0469,Basic,Social Media,Fort Worth,TX,Debit Card,Monthly,2022-05-09,967,21.06,2,0
+CUST_0470,Enterprise,Organic,San Diego,CA,Credit Card,Monthly,2024-02-22,313,89.72,3,0
+CUST_0471,Basic,Social Media,Chicago,IL,Debit Card,Monthly,2022-02-08,1057,16.37,3,1
+CUST_0472,Basic,Referral,Phoenix,AZ,PayPal,Annual,2023-07-03,547,15.13,3,0
+CUST_0473,Premium,Referral,Boston,MA,PayPal,Annual,2021-12-02,1125,39.81,0,0
+CUST_0474,Enterprise,Organic,Austin,TX,Credit Card,Annual,2020-03-15,1752,86.84,0,0
+CUST_0475,Premium,Paid Search,Columbus,OH,Credit Card,Monthly,2023-03-27,645,32.08,2,0
+CUST_0476,Basic,Referral,New York,NY,Debit Card,Monthly,2019-02-21,2140,24.6,2,1
+CUST_0477,Basic,Referral,Columbus,OH,Credit Card,Annual,2022-12-15,747,10.42,1,1
+CUST_0478,Premium,Referral,Boston,MA,Bank Transfer,Monthly,2019-11-01,1887,63.81,1,0
+CUST_0479,Premium,Social Media,Seattle,WA,PayPal,Annual,2020-06-21,1654,70.79,1,0
+CUST_0480,Basic,Organic,San Francisco,CA,Credit Card,Monthly,2020-05-14,1692,18.01,0,0
+CUST_0481,Enterprise,Paid Search,San Jose,CA,PayPal,Annual,2022-06-23,922,157.79,0,0
+CUST_0482,Premium,Direct,San Francisco,CA,Debit Card,Monthly,2020-10-11,1542,43.12,1,0
+CUST_0483,Enterprise,Organic,Jacksonville,FL,Credit Card,Monthly,2021-07-01,1279,154.4,1,0
+CUST_0484,Basic,Paid Search,Chicago,IL,Credit Card,Monthly,2019-10-19,1900,20.81,0,1
+CUST_0485,Premium,Direct,Seattle,WA,Credit Card,Annual,2022-10-10,813,37.57,2,0
+CUST_0486,Enterprise,Social Media,San Antonio,TX,PayPal,Monthly,2022-07-25,890,137.22,3,0
+CUST_0487,Enterprise,Organic,Fort Worth,TX,Credit Card,Annual,2023-08-15,504,128.65,3,1
+CUST_0488,Basic,Social Media,San Antonio,TX,Debit Card,Monthly,2023-11-18,409,14.53,1,0
+CUST_0489,Premium,Organic,Jacksonville,FL,Credit Card,Monthly,2023-09-03,485,52.97,3,0
+CUST_0490,Basic,Organic,Houston,TX,Credit Card,Annual,2019-01-22,2170,14.36,2,0
+CUST_0491,Basic,Organic,Columbus,OH,Credit Card,Monthly,2019-06-28,2013,22.51,1,0
+CUST_0492,Basic,Referral,San Jose,CA,Credit Card,Annual,2022-06-28,917,23.33,0,0
+CUST_0493,Basic,Organic,Denver,CO,Bank Transfer,Monthly,2019-02-04,2157,11.02,1,0
+CUST_0494,Basic,Paid Search,Boston,MA,PayPal,Monthly,2020-03-26,1741,11.42,3,1
+CUST_0495,Enterprise,Organic,Charlotte,NC,Bank Transfer,Annual,2023-12-19,378,144.95,1,0
+CUST_0496,Enterprise,Social Media,San Francisco,CA,Credit Card,Monthly,2023-01-28,703,175.58,2,0
+CUST_0497,Basic,Referral,Phoenix,AZ,Debit Card,Monthly,2022-03-10,1027,11.82,1,0
+CUST_0498,Basic,Organic,Charlotte,NC,PayPal,Annual,2021-01-01,1460,16.71,0,0
+CUST_0499,Basic,Direct,San Diego,CA,PayPal,Annual,2023-02-19,681,17.86,1,0
+CUST_0500,Basic,Social Media,Los Angeles,CA,PayPal,Monthly,2019-06-24,2017,28.45,0,0

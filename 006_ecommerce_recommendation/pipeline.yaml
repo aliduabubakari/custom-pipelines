@@ -1,0 +1,355 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: ecommerce_recommendation-
+  labels:
+    pipeline: ecommerce_recommendation
+    domain: Retail / E-Commerce
+    type: ml-pipeline
+spec:
+  entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-loading-profiling
+        template: step-01-data-loading-profiling
+    - - name: step-02-data-merging-integration
+        template: step-02-data-merging-integration
+    - - name: step-03-data-cleaning-standardization
+        template: step-03-data-cleaning-standardization
+    - - name: step-04-rfm-analysis
+        template: step-04-rfm-analysis
+    - - name: step-05-feature-engineering
+        template: step-05-feature-engineering
+    - - name: step-06-exploratory-data-analysis
+        template: step-06-exploratory-data-analysis
+    - - name: step-07-data-visualization--sales-dashboard
+        template: step-07-data-visualization--sales-dashboard
+    - - name: step-08-data-visualization--customer-insights
+        template: step-08-data-visualization--customer-insights
+    - - name: step-09-statistical-analysis
+        template: step-09-statistical-analysis
+    - - name: step-10-collaborative-filtering-model
+        template: step-10-collaborative-filtering-model
+    - - name: step-11-content-based-recommendation
+        template: step-11-content-based-recommendation
+    - - name: step-12-customer-churn-prediction
+        template: step-12-customer-churn-prediction
+    - - name: step-13-customer-lifetime-value-prediction
+        template: step-13-customer-lifetime-value-prediction
+    - - name: step-14-model-evaluation-a-b-test-design
+        template: step-14-model-evaluation-a-b-test-design
+    - - name: step-15-final-synthesis-strategy-playbook
+        template: step-15-final-synthesis-strategy-playbook
+
+  - name: step-01-data-loading-profiling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-loading-profiling.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-02-data-merging-integration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-merging-integration.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-03-data-cleaning-standardization
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_data-cleaning-standardization.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-04-rfm-analysis
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_rfm-analysis.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-05-feature-engineering
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_feature-engineering.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-06-exploratory-data-analysis
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_exploratory-data-analysis.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-07-data-visualization--sales-dashboard
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_data-visualization--sales-dashboard.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-08-data-visualization--customer-insights
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_data-visualization--customer-insights.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-09-statistical-analysis
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_statistical-analysis.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-10-collaborative-filtering-model
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_collaborative-filtering-model.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-11-content-based-recommendation
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_content-based-recommendation.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-12-customer-churn-prediction
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_customer-churn-prediction.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-13-customer-lifetime-value-prediction
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_customer-lifetime-value-prediction.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-14-model-evaluation-a-b-test-design
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_14_model-evaluation-a-b-test-design.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-15-final-synthesis-strategy-playbook
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_15_final-synthesis-strategy-playbook.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

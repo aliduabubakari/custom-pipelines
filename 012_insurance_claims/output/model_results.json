@@ -1,0 +1,22 @@
+{
+  "LR": {
+    "test_roc_auc": 0.6966,
+    "test_pr_auc": 0.6381,
+    "test_f2": 0.6901
+  },
+  "RF": {
+    "test_roc_auc": 0.9615,
+    "test_pr_auc": 0.9508,
+    "test_f2": 0.9518
+  },
+  "XGB": {
+    "test_roc_auc": 0.9601,
+    "test_pr_auc": 0.9499,
+    "test_f2": 0.9487
+  },
+  "LGBM": {
+    "test_roc_auc": 0.9568,
+    "test_pr_auc": 0.949,
+    "test_f2": 0.9398
+  }
+}

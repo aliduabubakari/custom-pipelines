@@ -1,0 +1,14 @@
+{
+  "RandomForest": {
+    "MAE": 53.3,
+    "RMSE": 85.04
+  },
+  "GradientBoosting": {
+    "MAE": 53.07,
+    "RMSE": 85.09
+  },
+  "XGBoost": {
+    "MAE": 57.39,
+    "RMSE": 92.7
+  }
+}

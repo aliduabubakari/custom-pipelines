@@ -1,0 +1,332 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-4780-11892-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "N/A"
+    abilities: ""
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-loading-profiling-data-inspection-joining-str
+        template: step-01-data-loading-profiling-data-inspection-joining-str
+    - - name: step-02-data-merging-integration
+        template: step-02-data-merging-integration
+    - - name: step-03-data-loading-profiling-data-loading-reliability
+        template: step-03-data-loading-profiling-data-loading-reliability
+    - - name: step-04-statistical-analysis-hypothesis-testing
+        template: step-04-statistical-analysis-hypothesis-testing
+    - - name: step-05-data-visualization-address-technical-warnings
+        template: step-05-data-visualization-address-technical-warnings
+    - - name: step-06-data-visualization-finalize-statistical-reporting
+        template: step-06-data-visualization-finalize-statistical-reporting
+    - - name: step-07-data-visualization-visualization-adaptation
+        template: step-07-data-visualization-visualization-adaptation
+    - - name: step-08-data-visualization-data-structure-correction
+        template: step-08-data-visualization-data-structure-correction
+    - - name: step-09-model-training-prediction
+        template: step-09-model-training-prediction
+    - - name: step-10-data-visualization-model-improvement
+        template: step-10-data-visualization-model-improvement
+    - - name: step-11-final-synthesis-reporting
+        template: step-11-final-synthesis-reporting
+    - - name: step-12-data-preparation-feature-engineering-data-persiste
+        template: step-12-data-preparation-feature-engineering-data-persiste
+    - - name: step-13-revised-analysis-refinement
+        template: step-13-revised-analysis-refinement
+    - - name: step-14-regression-modeling
+        template: step-14-regression-modeling
+
+  - name: step-01-data-loading-profiling-data-inspection-joining-str
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-loading-profiling-data-inspection-j.py", --data_inspection_report_txt /mnt/output/data_inspection_report.txt --all_star_csv /data/all_star.csv --batting_postseason_csv /data/batting_postseason.csv --data_inspection_report_txt /mnt/output/data_inspection_report.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-data-merging-integration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-merging-integration.py", --summary_statistics_csv /mnt/output/summary_statistics.csv --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --statistical_tests_csv /mnt/output/statistical_tests.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-data-loading-profiling-data-loading-reliability
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_data-loading-profiling-data-loading-reli.py", --all_star_csv /data/all_star.csv --batting_postseason_csv /data/batting_postseason.csv --summary_statistics_csv /mnt/output/summary_statistics.csv --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-statistical-analysis-hypothesis-testing
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_statistical-analysis-hypothesis-testing.py", --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --statistical_results_csv /mnt/output/statistical_results.csv --yearly_trends_csv /mnt/output/yearly_trends.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-data-visualization-address-technical-warnings
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_data-visualization-address-technical-war.py", --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --nl_enhanced_results_csv /mnt/output/nl_enhanced_results.csv --al_enhanced_results_csv /mnt/output/al_enhanced_results.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-data-visualization-finalize-statistical-reporting
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_data-visualization-finalize-statistical-.py", --nl_enhanced_results_csv /mnt/output/nl_enhanced_results.csv --al_enhanced_results_csv /mnt/output/al_enhanced_results.csv --mixed_model_results_txt /mnt/output/mixed_model_results.txt --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --mixed_model_results_txt /mnt/output/mixed_model_results.txt --al_publication_table_csv /mnt/output/al_publication_table.csv --nl_publication_table_csv /mnt/output/nl_publication_table.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-data-visualization-visualization-adaptation
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_data-visualization-visualization-adaptat.py", --nl_enhanced_results_csv /mnt/output/nl_enhanced_results.csv --al_enhanced_results_csv /mnt/output/al_enhanced_results.csv --mixed_model_results_txt /mnt/output/mixed_model_results.txt --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --mixed_model_results_txt /mnt/output/mixed_model_results.txt --al_publication_table_csv /mnt/output/al_publication_table.csv --nl_publication_table_csv /mnt/output/nl_publication_table.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-data-visualization-data-structure-correction
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_data-visualization-data-structure-correc.py", --nl_enhanced_results_csv /mnt/output/nl_enhanced_results.csv --al_enhanced_results_csv /mnt/output/al_enhanced_results.csv --mixed_model_results_txt /mnt/output/mixed_model_results.txt --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --mixed_model_results_txt /mnt/output/mixed_model_results.txt --al_publication_table_csv /mnt/output/al_publication_table.csv --nl_publication_table_csv /mnt/output/nl_publication_table.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-model-training-prediction
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_model-training-prediction.py", --nl_enhanced_results_csv /mnt/output/nl_enhanced_results.csv --al_enhanced_results_csv /mnt/output/al_enhanced_results.csv --mixed_model_results_txt /mnt/output/mixed_model_results.txt --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --mixed_model_results_txt /mnt/output/mixed_model_results.txt --al_publication_table_csv /mnt/output/al_publication_table.csv --nl_publication_table_csv /mnt/output/nl_publication_table.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-10-data-visualization-model-improvement
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_data-visualization-model-improvement.py", --final_report_txt /mnt/output/final_report.txt --al_publication_table_csv /mnt/output/al_publication_table.csv --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --nl_publication_table_csv /mnt/output/nl_publication_table.csv --final_report_txt /mnt/output/final_report.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-11-final-synthesis-reporting
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_final-synthesis-reporting.py", --final_report_txt /mnt/output/final_report.txt --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --final_report_txt /mnt/output/final_report.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-12-data-preparation-feature-engineering-data-persiste
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_data-preparation-feature-engineering-dat.py", --final_report_txt /mnt/output/final_report.txt --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --final_report_txt /mnt/output/final_report.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-13-revised-analysis-refinement
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_revised-analysis-refinement.py", --final_report_txt /mnt/output/final_report.txt --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --final_report_txt /mnt/output/final_report.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-14-regression-modeling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_14_regression-modeling.py", --final_report_txt /mnt/output/final_report.txt --processed_postseason_data_csv /mnt/output/processed_postseason_data.csv --final_report_txt /mnt/output/final_report.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

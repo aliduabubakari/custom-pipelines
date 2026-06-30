@@ -1,0 +1,10 @@
+{
+  "naive_lag24": {
+    "MAE": 19.77,
+    "RMSE": 24.77
+  },
+  "rolling_mean": {
+    "MAE": 22.31,
+    "RMSE": 27.15
+  }
+}

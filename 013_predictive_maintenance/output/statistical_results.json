@@ -1,0 +1,27 @@
+{
+  "ttest_temperature_c": {
+    "t": -48.08,
+    "p": 0.0,
+    "sig": true
+  },
+  "ttest_vibration_mm_s": {
+    "t": -65.51,
+    "p": 0.0,
+    "sig": true
+  },
+  "ttest_pressure_bar": {
+    "t": 34.01,
+    "p": 0.0,
+    "sig": true
+  },
+  "ttest_rpm": {
+    "t": 6.72,
+    "p": 0.0,
+    "sig": true
+  },
+  "ttest_power_consumption_kw": {
+    "t": -11.59,
+    "p": 0.0,
+    "sig": true
+  }
+}

@@ -1,0 +1,6 @@
+playerID,last_name,first_name,season_id,conference,league_id,games_played,minutes,points,o_rebounds,d_rebounds,rebounds,assists,steals,blocks,turnovers,personal_fouls,fg_attempted,fg_made,ft_attempted,ft_made,three_attempted,three_made
+playerID_1,last_name_1,first_name_1,1,conference_1,league_id_1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+playerID_2,last_name_2,first_name_2,2,conference_2,league_id_2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2
+playerID_3,last_name_3,first_name_3,3,conference_3,league_id_3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3
+playerID_4,last_name_4,first_name_4,4,conference_4,league_id_4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4
+playerID_5,last_name_5,first_name_5,5,conference_5,league_id_5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5

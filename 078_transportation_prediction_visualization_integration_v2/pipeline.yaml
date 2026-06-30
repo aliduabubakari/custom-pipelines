@@ -1,0 +1,222 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-9822-21888-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "4"
+    abilities: "Data Preparation, Data Analysis, Data Visualization"
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-geospatial-normalization-entity-resolution
+        template: step-01-geospatial-normalization-entity-resolution
+    - - name: step-02-error-recovery-robust-loading
+        template: step-02-error-recovery-robust-loading
+    - - name: step-03-data-loading-profiling
+        template: step-03-data-loading-profiling
+    - - name: step-04-data-merging-integration
+        template: step-04-data-merging-integration
+    - - name: step-05-geospatial-normalization-entity-resolution-phase-2
+        template: step-05-geospatial-normalization-entity-resolution-phase-2
+    - - name: step-06-data-visualization
+        template: step-06-data-visualization
+    - - name: step-07-data-validation-quality-report
+        template: step-07-data-validation-quality-report
+    - - name: step-08-model-training-prediction
+        template: step-08-model-training-prediction
+    - - name: step-09-data-merging-integration-phase-2
+        template: step-09-data-merging-integration-phase-2
+
+  - name: step-01-geospatial-normalization-entity-resolution
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_geospatial-normalization-entity-resoluti.py", --all_star_json /mnt/output/all_star.json --all_star_parsed_csv /mnt/output/all_star_parsed.csv --all_star_json /mnt/output/all_star.json]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-error-recovery-robust-loading
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_error-recovery-robust-loading.py", --pitching_postseason_csv /data/pitching_postseason.csv --pitching_post_info_txt /mnt/output/pitching_post_info.txt --pitching_post_info_txt /mnt/output/pitching_post_info.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-data-loading-profiling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_data-loading-profiling.py", --pitching_postseason_csv /data/pitching_postseason.csv --all_star_parsed_csv /mnt/output/all_star_parsed.csv --merged_data_csv /mnt/output/merged_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-data-merging-integration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_data-merging-integration.py", --merged_data_csv /mnt/output/merged_data.csv --feature_description_txt /mnt/output/feature_description.txt --enhanced_data_csv /mnt/output/enhanced_data.csv --feature_description_txt /mnt/output/feature_description.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-geospatial-normalization-entity-resolution-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_geospatial-normalization-entity-resoluti.py", --enhanced_data_csv /mnt/output/enhanced_data.csv --pitching_postseason_csv /data/pitching_postseason.csv --performance_analysis_txt /mnt/output/performance_analysis.txt --performance_analysis_txt /mnt/output/performance_analysis.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-data-visualization
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_data-visualization.py", --enhanced_data_csv /mnt/output/enhanced_data.csv --pitching_postseason_csv /data/pitching_postseason.csv --performance_analysis_txt /mnt/output/performance_analysis.txt --performance_analysis_txt /mnt/output/performance_analysis.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-data-validation-quality-report
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_data-validation-quality-report.py", --pitching_postseason_csv /data/pitching_postseason.csv --model_preparation_pkl /mnt/output/model_preparation.pkl --all_star_parsed_csv /mnt/output/all_star_parsed.csv --model_features_txt /mnt/output/model_features.txt --model_preparation_pkl /mnt/output/model_preparation.pkl --model_features_txt /mnt/output/model_features.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-model-training-prediction
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_model-training-prediction.py", --model_preparation_pkl /mnt/output/model_preparation.pkl --model_evaluation_txt /mnt/output/model_evaluation.txt --all_star_predictor_pkl /mnt/output/all_star_predictor.pkl --model_preparation_pkl /mnt/output/model_preparation.pkl --model_evaluation_txt /mnt/output/model_evaluation.txt --all_star_predictor_pkl /mnt/output/all_star_predictor.pkl]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-data-merging-integration-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_data-merging-integration-phase-2.py", --model_preparation_pkl /mnt/output/model_preparation.pkl --final_report_txt /mnt/output/final_report.txt --all_star_predictor_pkl /mnt/output/all_star_predictor.pkl --model_preparation_pkl /mnt/output/model_preparation.pkl --final_report_txt /mnt/output/final_report.txt --all_star_predictor_pkl /mnt/output/all_star_predictor.pkl]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

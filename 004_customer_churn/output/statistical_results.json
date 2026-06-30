@@ -1,0 +1,72 @@
+{
+  "chi2_segment": {
+    "chi2": 44.75,
+    "p_value": 0.0,
+    "significant": "True"
+  },
+  "chi2_acquisition_channel": {
+    "chi2": 10.18,
+    "p_value": 0.0375,
+    "significant": "True"
+  },
+  "chi2_payment_method": {
+    "chi2": 3.15,
+    "p_value": 0.3692,
+    "significant": "False"
+  },
+  "chi2_plan_type": {
+    "chi2": 0.27,
+    "p_value": 0.6033,
+    "significant": "False"
+  },
+  "anova_tenure_days": {
+    "F": 0.41,
+    "p_value": 0.5234,
+    "significant": "False"
+  },
+  "anova_monthly_fee": {
+    "F": 30.2,
+    "p_value": 0.0,
+    "significant": "True"
+  },
+  "anova_total_spend": {
+    "F": 40.32,
+    "p_value": 0.0,
+    "significant": "True"
+  },
+  "anova_purchase_frequency": {
+    "F": 19.08,
+    "p_value": 0.0,
+    "significant": "True"
+  },
+  "anova_return_rate": {
+    "F": 6.86,
+    "p_value": 0.0091,
+    "significant": "True"
+  },
+  "anova_support_contacts": {
+    "F": 11.01,
+    "p_value": 0.001,
+    "significant": "True"
+  },
+  "anova_recency_score": {
+    "F": 77.96,
+    "p_value": 0.0,
+    "significant": "True"
+  },
+  "anova_rfm_score": {
+    "F": 27.2,
+    "p_value": 0.0,
+    "significant": "True"
+  },
+  "cox_ph": {
+    "concordance": 0.767,
+    "coefficients": {
+      "monthly_fee": -0.0258,
+      "support_contacts": 0.2413,
+      "purchase_frequency": 0.9796,
+      "return_rate": 2.8512,
+      "rfm_score": -0.018
+    }
+  }
+}

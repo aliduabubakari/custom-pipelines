@@ -1,0 +1,52 @@
+{
+  "chi2_department": {
+    "chi2": 4.32,
+    "p": 0.7417,
+    "sig": false
+  },
+  "chi2_gender": {
+    "chi2": 0.13,
+    "p": 0.7182,
+    "sig": false
+  },
+  "chi2_education": {
+    "chi2": 5.06,
+    "p": 0.2808,
+    "sig": false
+  },
+  "chi2_marital_status": {
+    "chi2": 1.59,
+    "p": 0.4509,
+    "sig": false
+  },
+  "chi2_overtime": {
+    "chi2": 0.11,
+    "p": 0.737,
+    "sig": false
+  },
+  "ttest_monthly_salary": {
+    "t": 0.67,
+    "p": 0.5035,
+    "sig": false
+  },
+  "ttest_tenure_days": {
+    "t": 4.01,
+    "p": 0.0001,
+    "sig": true
+  },
+  "ttest_avg_engagement": {
+    "t": 4.06,
+    "p": 0.0001,
+    "sig": true
+  },
+  "ttest_avg_performance": {
+    "t": 0.92,
+    "p": 0.3565,
+    "sig": false
+  },
+  "ttest_commute_miles": {
+    "t": -6.74,
+    "p": 0.0,
+    "sig": true
+  }
+}

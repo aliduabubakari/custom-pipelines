@@ -1,0 +1,30 @@
+{
+  "churn_by_segment": {
+    "Basic": 41.2,
+    "Enterprise": 9.8,
+    "Premium": 17.3
+  },
+  "churn_by_channel": {
+    "Direct": 23.3,
+    "Organic": 23.8,
+    "Paid Search": 39.1,
+    "Referral": 28.0,
+    "Social Media": 21.9
+  },
+  "churn_by_plan": {
+    "Annual": 26.4,
+    "Monthly": 29.0
+  },
+  "top_correlations": {
+    "days_since_last_purchase": 0.37949795730535524,
+    "recency_score": -0.3679134962426406,
+    "lapsed_flag": 0.33010936684465164,
+    "churn_risk_score": 0.304300470656991,
+    "purchase_count": -0.3041265521758245,
+    "total_discount": -0.2875838717175761,
+    "category_diversity": -0.28417772283565707,
+    "unique_categories": -0.28417772283565707,
+    "total_spend": -0.2736814595195673,
+    "engagement_score": -0.2730195792138755
+  }
+}

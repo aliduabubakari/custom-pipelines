@@ -1,0 +1,17 @@
+============================================================
+SPORTS SALARY PREDICTION — FINAL REPORT
+============================================================
+Generated: 2026-06-26 14:52
+
+1. MODEL PERFORMANCE
+  Linear: R2=0.6392, MAE=$1.68M
+  RF: R2=0.5313, MAE=$1.82M
+  GBR: R2=0.4551, MAE=$2.02M
+
+2. KEY FINDINGS
+  • PPG is the strongest predictor of player salary
+  • Position explains significant salary variance
+  • Age has a non-linear (quadratic) relationship with salary
+  • Efficiency metrics improve prediction accuracy
+
+============================================================

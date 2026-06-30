@@ -1,0 +1,40 @@
+{
+  "top_models": [
+    "LightGBM",
+    "XGBoost"
+  ],
+  "all_results": {
+    "LogisticRegression": {
+      "roc_auc_mean": 0.7738,
+      "roc_auc_std": 0.0201,
+      "pr_auc_mean": 0.7115,
+      "pr_auc_std": 0.0211,
+      "f2_mean": 0.7786,
+      "f2_std": 0.0418
+    },
+    "RandomForest": {
+      "roc_auc_mean": 0.8515,
+      "roc_auc_std": 0.03,
+      "pr_auc_mean": 0.8055,
+      "pr_auc_std": 0.0432,
+      "f2_mean": 0.8391,
+      "f2_std": 0.0347
+    },
+    "XGBoost": {
+      "roc_auc_mean": 0.8552,
+      "roc_auc_std": 0.0365,
+      "pr_auc_mean": 0.8091,
+      "pr_auc_std": 0.0519,
+      "f2_mean": 0.8458,
+      "f2_std": 0.0313
+    },
+    "LightGBM": {
+      "roc_auc_mean": 0.8609,
+      "roc_auc_std": 0.034,
+      "pr_auc_mean": 0.8153,
+      "pr_auc_std": 0.0397,
+      "f2_mean": 0.8498,
+      "f2_std": 0.0482
+    }
+  }
+}

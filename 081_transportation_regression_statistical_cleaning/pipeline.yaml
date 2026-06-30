@@ -1,0 +1,332 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-5098-12532-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "N/A"
+    abilities: ""
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-loading-profiling
+        template: step-01-data-loading-profiling
+    - - name: step-02-data-cleaning-standardization
+        template: step-02-data-cleaning-standardization
+    - - name: step-03-statistical-analysis-hypothesis-testing
+        template: step-03-statistical-analysis-hypothesis-testing
+    - - name: step-04-regression-modeling
+        template: step-04-regression-modeling
+    - - name: step-05-regression-modeling-phase-2
+        template: step-05-regression-modeling-phase-2
+    - - name: step-06-regression-modeling-phase-3
+        template: step-06-regression-modeling-phase-3
+    - - name: step-07-error-recovery-robust-loading
+        template: step-07-error-recovery-robust-loading
+    - - name: step-08-data-visualization
+        template: step-08-data-visualization
+    - - name: step-09-model-training-prediction
+        template: step-09-model-training-prediction
+    - - name: step-10-regression-modeling-phase-4
+        template: step-10-regression-modeling-phase-4
+    - - name: step-11-error-recovery-robust-loading-phase-2
+        template: step-11-error-recovery-robust-loading-phase-2
+    - - name: step-12-data-validation-quality-report
+        template: step-12-data-validation-quality-report
+    - - name: step-13-data-validation-quality-report-phase-2
+        template: step-13-data-validation-quality-report-phase-2
+    - - name: step-14-model-training-prediction-phase-2
+        template: step-14-model-training-prediction-phase-2
+
+  - name: step-01-data-loading-profiling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-loading-profiling.py", --all_star_csv /data/all_star.csv --team_csv /data/team.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-data-cleaning-standardization
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-cleaning-standardization.py", --all_star_csv /data/all_star.csv --team_csv /data/team.csv --processed_team_data_csv /mnt/output/processed_team_data.csv --processed_all_star_csv /mnt/output/processed_all_star.csv --team_all_star_counts_csv /mnt/output/team_all_star_counts.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-statistical-analysis-hypothesis-testing
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_statistical-analysis-hypothesis-testing.py", --processed_team_data_csv /mnt/output/processed_team_data.csv --processed_all_star_csv /mnt/output/processed_all_star.csv --team_all_star_counts_csv /mnt/output/team_all_star_counts.csv --final_merged_data_csv /mnt/output/final_merged_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-regression-modeling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_regression-modeling.py", --final_merged_data_csv /mnt/output/final_merged_data.csv --enhanced_final_data_csv /mnt/output/enhanced_final_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-regression-modeling-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_regression-modeling-phase-2.py", --final_merged_data_csv /mnt/output/final_merged_data.csv --enhanced_final_data_corrected_csv /mnt/output/enhanced_final_data_corrected.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-regression-modeling-phase-3
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_regression-modeling-phase-3.py", --final_merged_data_csv /mnt/output/final_merged_data.csv --final_cleaned_data_csv /mnt/output/final_cleaned_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-error-recovery-robust-loading
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_error-recovery-robust-loading.py", --final_merged_data_csv /mnt/output/final_merged_data.csv --final_cleaned_robust_data_csv /mnt/output/final_cleaned_robust_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-data-visualization
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_data-visualization.py", --final_merged_data_csv /mnt/output/final_merged_data.csv --fully_validated_data_csv /mnt/output/fully_validated_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-model-training-prediction
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_model-training-prediction.py", --final_merged_data_csv /mnt/output/final_merged_data.csv --fully_aligned_data_csv /mnt/output/fully_aligned_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-10-regression-modeling-phase-4
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_regression-modeling-phase-4.py", --fully_aligned_data_csv /mnt/output/fully_aligned_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-11-error-recovery-robust-loading-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_error-recovery-robust-loading-phase-2.py", --fully_aligned_data_csv /mnt/output/fully_aligned_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-12-data-validation-quality-report
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_data-validation-quality-report.py", --fully_aligned_data_csv /mnt/output/fully_aligned_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-13-data-validation-quality-report-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_data-validation-quality-report-phase-2.py", --fully_aligned_data_csv /mnt/output/fully_aligned_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-14-model-training-prediction-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_14_model-training-prediction-phase-2.py", --fully_aligned_data_csv /mnt/output/fully_aligned_data.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

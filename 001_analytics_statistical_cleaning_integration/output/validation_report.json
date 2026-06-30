@@ -1,0 +1,8 @@
+{
+  "rows": 5000,
+  "nulls": 0,
+  "tickers": 10,
+  "sectors": 5,
+  "avg_daily_return": 0.000635,
+  "positive_days_pct": 50.6
+}

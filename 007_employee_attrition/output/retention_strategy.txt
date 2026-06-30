@@ -1,0 +1,38 @@
+============================================================
+EMPLOYEE ATTRITION — RETENTION STRATEGY REPORT
+============================================================
+Generated: 2026-06-26 13:54
+
+1. MODEL PERFORMANCE
+  ROC-AUC: 0.6719
+  F1 Score: 0.5185
+
+  Model Comparison (CV ROC-AUC):
+    RandomForest: 0.9003
+    LightGBM: 0.8635
+    XGBoost: 0.8617
+    LogisticRegression: 0.7325
+
+2. KEY ATTRITION DRIVERS
+  commute_miles: r=0.289
+  high_commute_flag: r=0.272
+  risk_score: r=0.235
+  commute_stress: r=0.227
+  avg_engagement: r=-0.179
+
+3. RETENTION RECOMMENDATIONS
+  • Target employees with low engagement scores for stay interviews
+  • Review compensation for high-attrition roles
+  • Address overtime concerns in departments with high attrition
+  • Implement flexible work for employees with long commutes
+  • Create career development paths for roles with low promotion rates
+  • Conduct exit interview analysis quarterly
+
+4. MONITORING PLAN
+  • Track monthly attrition rate by department
+  • Monitor model PSI quarterly
+  • Retrain model every 6 months
+
+============================================================
+END OF REPORT
+============================================================

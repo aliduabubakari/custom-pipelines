@@ -1,0 +1,425 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: credit_risk-
+  labels:
+    pipeline: credit_risk
+    domain: Finance
+    type: ml-pipeline
+spec:
+  entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-loading-profiling
+        template: step-01-data-loading-profiling
+    - - name: step-02-data-merging-integration
+        template: step-02-data-merging-integration
+    - - name: step-03-data-cleaning-standardization
+        template: step-03-data-cleaning-standardization
+    - - name: step-04-data-validation-compliance-check
+        template: step-04-data-validation-compliance-check
+    - - name: step-05-feature-engineering
+        template: step-05-feature-engineering
+    - - name: step-06-exploratory-data-analysis
+        template: step-06-exploratory-data-analysis
+    - - name: step-07-data-visualization--risk-profiles
+        template: step-07-data-visualization--risk-profiles
+    - - name: step-08-data-visualization--credit-behavior
+        template: step-08-data-visualization--credit-behavior
+    - - name: step-09-statistical-analysis-hypothesis-testing
+        template: step-09-statistical-analysis-hypothesis-testing
+    - - name: step-10-data-preparation-for-modeling
+        template: step-10-data-preparation-for-modeling
+    - - name: step-11-model-training--baseline-models
+        template: step-11-model-training--baseline-models
+    - - name: step-12-model-training--advanced-ensemble
+        template: step-12-model-training--advanced-ensemble
+    - - name: step-13-model-evaluation-threshold-optimization
+        template: step-13-model-evaluation-threshold-optimization
+    - - name: step-14-model-explainability--shap-lime
+        template: step-14-model-explainability--shap-lime
+    - - name: step-15-fairness-regulatory-assessment
+        template: step-15-fairness-regulatory-assessment
+    - - name: step-16-final-synthesis-business-recommendations
+        template: step-16-final-synthesis-business-recommendations
+
+  - name: step-01-data-loading-profiling
+    metadata:
+      annotations:
+        step-description: "Load applications CSV, credit_history JSON, bureau_data Excel. Profile each: row counts, column type"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-loading-profiling.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-02-data-merging-integration
+    metadata:
+      annotations:
+        step-description: "Aggregate credit history per application: count of accounts by type, average balance, max delinquenc"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-merging-integration.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-03-data-cleaning-standardization
+    metadata:
+      annotations:
+        step-description: "Handle missing values: median for numerical, 'Unknown' for categorical. Standardize employment_statu"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_data-cleaning-standardization.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-04-data-validation-compliance-check
+    metadata:
+      annotations:
+        step-description: "Validate data against regulatory requirements: check for required fields (SSN format, DOB validity)."
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_data-validation-compliance-check.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-05-feature-engineering
+    metadata:
+      annotations:
+        step-description: "Create risk features: DTI_category (Low/Medium/High/Very High), FICO_band (Poor/Fair/Good/Very Good/"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_feature-engineering.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-06-exploratory-data-analysis
+    metadata:
+      annotations:
+        step-description: "Analyze default rate by FICO band, loan purpose, employment status, home ownership. Compute correlat"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_exploratory-data-analysis.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-07-data-visualization--risk-profiles
+    metadata:
+      annotations:
+        step-description: "Create dashboard: (1) Default rate heatmap by FICO band × DTI category, (2) Loan amount distribution"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_data-visualization--risk-profiles.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-08-data-visualization--credit-behavior
+    metadata:
+      annotations:
+        step-description: "Visualize credit behavior patterns: (1) Utilization ratio histogram by default status, (2) Payment h"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_data-visualization--credit-behavior.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-09-statistical-analysis-hypothesis-testing
+    metadata:
+      annotations:
+        step-description: "Test hypotheses: H1: FICO score significantly differs between defaulted/non-defaulted (t-test). H2: "
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_statistical-analysis-hypothesis-testing.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-10-data-preparation-for-modeling
+    metadata:
+      annotations:
+        step-description: "Encode categoricals: one-hot for loan_purpose, employment_status; ordinal for FICO_band, DTI_categor"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_data-preparation-for-modeling.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-11-model-training--baseline-models
+    metadata:
+      annotations:
+        step-description: "Train LogisticRegression, RandomForest, and LightGBM with default parameters. Use StratifiedKFold (k"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_model-training--baseline-models.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-12-model-training--advanced-ensemble
+    metadata:
+      annotations:
+        step-description: "Train XGBoost with hyperparameter tuning via Optuna (50 trials, optimizing ROC-AUC). Train a Stackin"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_model-training--advanced-ensemble.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-13-model-evaluation-threshold-optimization
+    metadata:
+      annotations:
+        step-description: "Evaluate on test set: ROC curve, confusion matrix at optimal threshold (maximizing F2-score to prior"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_model-evaluation-threshold-optimization.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-14-model-explainability--shap-lime
+    metadata:
+      annotations:
+        step-description: "Generate global SHAP summary plot. Create SHAP dependence plots for top 5 features. Run LIME explana"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_14_model-explainability--shap-lime.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-15-fairness-regulatory-assessment
+    metadata:
+      annotations:
+        step-description: "Compute fairness metrics across protected classes (age, gender proxies, zip code): statistical parit"
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_15_fairness-regulatory-assessment.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  - name: step-16-final-synthesis-business-recommendations
+    metadata:
+      annotations:
+        step-description: "Compile final report: Model Performance Summary, Risk Tier Definitions (Prime/Near-Prime/Subprime), "
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_16_final-synthesis-business-recommendations.py", --data_dir /data, --output_dir /mnt/output]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "1Gi"
+          cpu: "1000m"
+        limits:
+          memory: "2Gi"
+          cpu: "2000m"
+
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

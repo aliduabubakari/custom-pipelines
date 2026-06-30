@@ -1,0 +1,37 @@
+{
+  "rows": 500,
+  "nulls": 0,
+  "default_rate": 0.334,
+  "duplicate_ids": 0,
+  "default_by_loan_purpose": {
+    "Business": 0.4,
+    "Car Purchase": 0.3099,
+    "Debt Consolidation": 0.3889,
+    "Education": 0.3611,
+    "Home Improvement": 0.2055,
+    "Medical": 0.4342,
+    "Vacation": 0.2273
+  },
+  "default_by_home_ownership": {
+    "Mortgage": 0.3036,
+    "Own": 0.3659,
+    "Rent": 0.3557
+  },
+  "default_by_state": {
+    "AZ": 0.2414,
+    "CA": 0.3529,
+    "FL": 0.303,
+    "GA": 0.2889,
+    "IL": 0.4286,
+    "MA": 0.2903,
+    "MI": 0.3478,
+    "NC": 0.3333,
+    "NJ": 0.2903,
+    "NY": 0.3889,
+    "OH": 0.3261,
+    "PA": 0.2759,
+    "TX": 0.3333,
+    "VA": 0.5,
+    "WA": 0.3158
+  }
+}

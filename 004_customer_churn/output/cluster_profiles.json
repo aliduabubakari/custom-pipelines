@@ -1,0 +1,58 @@
+[
+  {
+    "cluster": 0,
+    "size": 36,
+    "pct_of_at_risk": 39.6,
+    "avg_churn_prob": 0.652,
+    "avg_tenure_days": 889.0,
+    "avg_monthly_fee": 35.31,
+    "avg_support_contacts": 1.9,
+    "avg_return_rate": 0.086,
+    "avg_days_since_last": 50.0,
+    "top_segment": "Basic",
+    "top_channel": "Paid Search",
+    "retention_strategy": "Discount/Loyalty Upgrade: Offer 20% discount or free upgrade to annual plan. Target price-sensitive customers showing early churn signals."
+  },
+  {
+    "cluster": 1,
+    "size": 28,
+    "pct_of_at_risk": 30.8,
+    "avg_churn_prob": 0.652,
+    "avg_tenure_days": 1492.0,
+    "avg_monthly_fee": 24.21,
+    "avg_support_contacts": 1.7,
+    "avg_return_rate": 0.141,
+    "avg_days_since_last": 87.0,
+    "top_segment": "Basic",
+    "top_channel": "Paid Search",
+    "retention_strategy": "Feature Education/Re-engagement: Send personalized tutorial emails, highlight unused features. Target disengaged customers with low activity."
+  },
+  {
+    "cluster": 2,
+    "size": 2,
+    "pct_of_at_risk": 2.2,
+    "avg_churn_prob": 0.55,
+    "avg_tenure_days": 518.0,
+    "avg_monthly_fee": 147.5,
+    "avg_support_contacts": 2.0,
+    "avg_return_rate": 0.109,
+    "avg_days_since_last": 16.0,
+    "top_segment": "Enterprise",
+    "top_channel": "Referral",
+    "retention_strategy": "Account Review/Support Outreach: Schedule 1:1 account review call. Target high-value customers with recent support issues."
+  },
+  {
+    "cluster": 3,
+    "size": 25,
+    "pct_of_at_risk": 27.5,
+    "avg_churn_prob": 0.872,
+    "avg_tenure_days": 1669.0,
+    "avg_monthly_fee": 18.93,
+    "avg_support_contacts": 1.8,
+    "avg_return_rate": 0.073,
+    "avg_days_since_last": 330.0,
+    "top_segment": "Basic",
+    "top_channel": "Paid Search",
+    "retention_strategy": "Win-Back Campaign: Offer reactivation discount. Target lapsed customers with >90 days since last purchase."
+  }
+]

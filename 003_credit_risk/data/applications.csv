@@ -1,0 +1,501 @@
+application_id,annual_income,loan_amount,loan_purpose,home_ownership,employment_length,state,dti_ratio,age,months_at_address,default_flag
+APP_00001,66040,24438,Medical,Mortgage,3-5 years,OH,7.3,44,122,1
+APP_00002,45118,13959,Business,Own,10+ years,VA,42.5,22,197,1
+APP_00003,49678,10532,Education,Rent,1-3 years,AZ,36.4,71,113,1
+APP_00004,37923,10236,Debt Consolidation,Own,3-5 years,IL,23.0,38,137,1
+APP_00005,51900,10616,Home Improvement,Own,5-10 years,MA,32.3,64,13,0
+APP_00006,73042,2221,Car Purchase,Mortgage,1-3 years,FL,17.5,26,59,0
+APP_00007,22094,10741,Home Improvement,Mortgage,1-3 years,FL,28.9,68,20,0
+APP_00008,55166,3352,Vacation,Mortgage,10+ years,IL,20.5,38,116,0
+APP_00009,37183,5942,Education,Mortgage,1-3 years,WA,8.0,27,14,1
+APP_00010,92436,35919,Education,Mortgage,< 1 year,NY,33.3,55,168,1
+APP_00011,29627,12922,Education,Mortgage,< 1 year,OH,31.8,57,104,0
+APP_00012,40719,12447,Car Purchase,Rent,3-5 years,IL,43.9,23,6,0
+APP_00013,27993,4327,Business,Mortgage,3-5 years,MI,22.6,71,68,0
+APP_00014,78474,35251,Debt Consolidation,Mortgage,3-5 years,AZ,10.6,59,148,0
+APP_00015,30529,2098,Business,Rent,10+ years,MI,37.3,73,139,0
+APP_00016,76590,18026,Education,Mortgage,10+ years,NJ,18.0,48,222,0
+APP_00017,32169,4438,Car Purchase,Own,1-3 years,NY,5.3,28,160,0
+APP_00018,40271,8987,Medical,Rent,1-3 years,GA,42.7,74,165,0
+APP_00019,152011,18817,Debt Consolidation,Mortgage,1-3 years,OH,24.9,69,106,0
+APP_00020,54434,8467,Debt Consolidation,Mortgage,10+ years,VA,7.1,57,229,0
+APP_00021,43677,4019,Education,Mortgage,3-5 years,OH,31.9,31,189,0
+APP_00022,58743,7742,Vacation,Rent,3-5 years,TX,30.3,31,149,0
+APP_00023,36458,4213,Medical,Rent,1-3 years,FL,5.7,23,152,1
+APP_00024,85297,15521,Vacation,Mortgage,5-10 years,OH,42.5,21,16,0
+APP_00025,30639,14241,Car Purchase,Rent,1-3 years,MI,44.3,72,65,1
+APP_00026,40407,6008,Debt Consolidation,Own,10+ years,IL,40.3,29,238,1
+APP_00027,106898,44958,Car Purchase,Rent,3-5 years,NJ,42.4,56,171,1
+APP_00028,29135,10076,Car Purchase,Own,< 1 year,NY,43.9,38,133,1
+APP_00029,44990,10638,Medical,Mortgage,5-10 years,CA,24.8,68,153,1
+APP_00030,15355,3447,Vacation,Rent,1-3 years,VA,25.4,42,124,0
+APP_00031,67762,33186,Business,Rent,3-5 years,TX,19.0,53,33,1
+APP_00032,19950,7003,Debt Consolidation,Mortgage,5-10 years,NY,27.9,69,22,1
+APP_00033,48681,7525,Car Purchase,Mortgage,< 1 year,GA,18.2,66,186,1
+APP_00034,54959,16154,Education,Rent,1-3 years,IL,12.6,53,72,1
+APP_00035,55740,26154,Home Improvement,Rent,< 1 year,TX,29.6,42,156,0
+APP_00036,23215,2485,Business,Mortgage,1-3 years,GA,32.9,63,181,0
+APP_00037,16628,4070,Home Improvement,Rent,10+ years,MI,5.2,56,178,0
+APP_00038,64901,7110,Car Purchase,Rent,10+ years,OH,6.1,54,71,0
+APP_00039,152318,17079,Home Improvement,Mortgage,1-3 years,MI,39.4,69,185,0
+APP_00040,32679,1595,Vacation,Mortgage,< 1 year,CA,38.1,64,113,0
+APP_00041,31627,1765,Education,Mortgage,5-10 years,GA,34.0,33,119,0
+APP_00042,55819,14893,Car Purchase,Own,1-3 years,NY,22.6,46,234,0
+APP_00043,142739,3851,Home Improvement,Mortgage,1-3 years,AZ,8.8,45,237,0
+APP_00044,32648,15322,Debt Consolidation,Rent,5-10 years,MA,22.4,49,200,0
+APP_00045,31620,12223,Debt Consolidation,Mortgage,< 1 year,MA,6.6,66,195,1
+APP_00046,22743,8297,Education,Own,5-10 years,IL,23.9,53,227,0
+APP_00047,38100,18132,Education,Own,1-3 years,MI,42.3,52,6,1
+APP_00048,53290,14832,Medical,Mortgage,< 1 year,OH,42.8,48,133,1
+APP_00049,99058,33862,Business,Rent,3-5 years,NY,37.8,32,72,0
+APP_00050,67429,27839,Home Improvement,Mortgage,1-3 years,VA,9.0,22,40,1
+APP_00051,102552,19884,Home Improvement,Own,5-10 years,NC,24.8,73,119,1
+APP_00052,22590,7474,Medical,Own,3-5 years,WA,16.3,30,106,1
+APP_00053,76755,38022,Education,Mortgage,5-10 years,GA,39.7,52,42,1
+APP_00054,70701,9195,Vacation,Rent,5-10 years,NC,20.1,69,67,0
+APP_00055,11226,2372,Business,Mortgage,< 1 year,NC,38.9,29,204,0
+APP_00056,46820,22441,Vacation,Rent,3-5 years,MA,8.3,25,104,1
+APP_00057,96194,11018,Medical,Rent,5-10 years,WA,42.2,59,147,0
+APP_00058,177357,27926,Medical,Rent,3-5 years,NJ,9.7,32,14,0
+APP_00059,70848,4481,Vacation,Mortgage,1-3 years,NC,37.9,22,10,0
+APP_00060,110716,26152,Car Purchase,Rent,1-3 years,CA,40.2,37,76,1
+APP_00061,31854,12600,Car Purchase,Rent,1-3 years,NY,9.4,23,178,1
+APP_00062,43128,1233,Education,Mortgage,5-10 years,GA,9.7,61,172,0
+APP_00063,66943,32243,Vacation,Mortgage,< 1 year,CA,13.9,26,63,0
+APP_00064,122963,1595,Medical,Own,10+ years,PA,42.0,57,169,0
+APP_00065,65132,17512,Debt Consolidation,Mortgage,1-3 years,CA,30.1,74,8,0
+APP_00066,50645,22918,Debt Consolidation,Rent,10+ years,GA,20.8,44,161,1
+APP_00067,27110,9121,Home Improvement,Mortgage,1-3 years,IL,44.0,47,196,0
+APP_00068,36508,10249,Debt Consolidation,Mortgage,3-5 years,WA,10.3,55,139,1
+APP_00069,22200,10420,Home Improvement,Mortgage,1-3 years,GA,20.1,21,151,0
+APP_00070,147101,49376,Debt Consolidation,Mortgage,5-10 years,NC,43.8,47,182,1
+APP_00071,45765,10077,Debt Consolidation,Own,< 1 year,VA,37.5,51,138,1
+APP_00072,103021,49835,Medical,Mortgage,5-10 years,MI,39.0,37,90,1
+APP_00073,25833,12368,Medical,Mortgage,10+ years,GA,29.7,48,100,0
+APP_00074,45006,3441,Home Improvement,Mortgage,3-5 years,NY,25.8,32,198,0
+APP_00075,168796,43956,Debt Consolidation,Mortgage,3-5 years,OH,35.2,41,147,1
+APP_00076,140533,35499,Business,Rent,3-5 years,TX,19.0,54,87,0
+APP_00077,24101,10991,Education,Mortgage,3-5 years,MA,20.9,62,56,0
+APP_00078,14421,5332,Medical,Own,10+ years,MI,35.8,40,221,1
+APP_00079,52935,9847,Car Purchase,Rent,1-3 years,NY,26.5,43,188,0
+APP_00080,36724,11152,Business,Own,3-5 years,GA,32.9,45,200,1
+APP_00081,50323,24511,Medical,Mortgage,< 1 year,IL,18.8,62,66,1
+APP_00082,93359,2452,Car Purchase,Own,3-5 years,MI,40.8,69,83,0
+APP_00083,23597,1996,Vacation,Rent,< 1 year,AZ,11.3,68,66,0
+APP_00084,24435,1029,Education,Rent,5-10 years,WA,44.5,67,132,0
+APP_00085,47996,18477,Car Purchase,Mortgage,5-10 years,AZ,10.9,71,12,0
+APP_00086,50712,17736,Vacation,Mortgage,3-5 years,WA,39.7,58,232,1
+APP_00087,29063,10978,Education,Own,1-3 years,OH,8.6,64,30,0
+APP_00088,42785,19160,Education,Mortgage,1-3 years,NC,24.9,67,233,0
+APP_00089,203739,37526,Debt Consolidation,Mortgage,1-3 years,IL,19.5,46,69,1
+APP_00090,90103,26143,Business,Rent,3-5 years,CA,5.3,41,203,0
+APP_00091,43315,18575,Car Purchase,Mortgage,1-3 years,OH,38.7,23,36,0
+APP_00092,12496,3153,Education,Rent,10+ years,FL,43.8,24,84,1
+APP_00093,34680,3792,Business,Rent,5-10 years,NJ,27.9,71,178,0
+APP_00094,77129,29905,Car Purchase,Rent,5-10 years,FL,25.3,69,145,1
+APP_00095,57287,8978,Medical,Mortgage,10+ years,WA,26.3,53,139,0
+APP_00096,28492,5458,Home Improvement,Mortgage,3-5 years,TX,17.9,22,89,1
+APP_00097,80936,31004,Business,Mortgage,3-5 years,NY,19.0,69,74,0
+APP_00098,24888,10505,Education,Mortgage,10+ years,NJ,42.5,32,232,1
+APP_00099,51634,15256,Medical,Own,5-10 years,AZ,37.0,55,218,0
+APP_00100,44649,4974,Business,Rent,3-5 years,FL,17.6,62,94,0
+APP_00101,36298,13240,Business,Rent,3-5 years,MA,25.1,45,150,1
+APP_00102,153923,45079,Vacation,Mortgage,< 1 year,GA,30.0,71,203,0
+APP_00103,54128,9728,Education,Rent,3-5 years,FL,34.7,47,169,1
+APP_00104,68965,34405,Debt Consolidation,Mortgage,1-3 years,OH,10.7,24,91,1
+APP_00105,47521,18175,Car Purchase,Rent,< 1 year,FL,23.3,72,189,1
+APP_00106,147940,25612,Medical,Mortgage,3-5 years,WA,33.8,51,120,0
+APP_00107,62822,8657,Medical,Rent,10+ years,GA,28.3,28,28,0
+APP_00108,151157,23638,Car Purchase,Rent,10+ years,GA,25.2,45,230,0
+APP_00109,52346,18536,Medical,Rent,1-3 years,VA,20.0,29,56,1
+APP_00110,75770,28163,Debt Consolidation,Rent,3-5 years,AZ,14.4,46,115,0
+APP_00111,63026,11134,Car Purchase,Mortgage,3-5 years,IL,20.2,73,142,0
+APP_00112,38809,4783,Debt Consolidation,Own,1-3 years,MA,21.6,46,80,0
+APP_00113,47132,11850,Business,Mortgage,1-3 years,VA,41.5,74,157,1
+APP_00114,79574,23404,Education,Mortgage,10+ years,CA,36.2,63,155,0
+APP_00115,32745,8919,Debt Consolidation,Rent,< 1 year,PA,39.4,60,54,1
+APP_00116,33088,5656,Medical,Mortgage,3-5 years,GA,40.9,52,163,1
+APP_00117,229109,4219,Car Purchase,Rent,3-5 years,PA,22.6,70,227,0
+APP_00118,25228,7499,Vacation,Own,1-3 years,OH,42.8,52,15,0
+APP_00119,80816,17107,Vacation,Rent,5-10 years,OH,31.4,21,62,0
+APP_00120,22116,3232,Vacation,Rent,< 1 year,PA,18.6,57,72,0
+APP_00121,53419,19531,Business,Mortgage,5-10 years,GA,37.3,36,201,1
+APP_00122,88165,41687,Car Purchase,Mortgage,1-3 years,TX,5.5,27,166,0
+APP_00123,59616,13140,Home Improvement,Rent,3-5 years,NJ,15.4,22,200,0
+APP_00124,23140,7239,Education,Rent,1-3 years,AZ,19.5,73,177,1
+APP_00125,39615,11640,Business,Rent,5-10 years,CA,24.4,37,19,1
+APP_00126,57209,21473,Home Improvement,Rent,1-3 years,PA,30.8,66,9,0
+APP_00127,95017,39257,Medical,Rent,3-5 years,TX,27.2,45,235,1
+APP_00128,97817,40751,Vacation,Own,< 1 year,NJ,41.0,26,224,1
+APP_00129,129614,33586,Vacation,Mortgage,5-10 years,IL,20.3,66,69,0
+APP_00130,125780,18339,Car Purchase,Rent,< 1 year,FL,35.8,49,154,0
+APP_00131,42830,19690,Business,Mortgage,3-5 years,TX,20.9,44,155,0
+APP_00132,101169,36896,Debt Consolidation,Mortgage,3-5 years,NY,28.8,63,86,0
+APP_00133,227760,17377,Home Improvement,Mortgage,1-3 years,GA,34.1,45,66,0
+APP_00134,46275,16239,Home Improvement,Mortgage,< 1 year,TX,37.0,64,184,1
+APP_00135,71188,13487,Education,Rent,10+ years,CA,43.0,69,52,1
+APP_00136,19108,1741,Business,Rent,5-10 years,OH,34.0,36,203,0
+APP_00137,110515,3528,Home Improvement,Own,5-10 years,OH,45.0,46,218,0
+APP_00138,90870,22027,Vacation,Own,5-10 years,NC,12.7,28,64,0
+APP_00139,47871,20771,Vacation,Mortgage,3-5 years,OH,6.5,51,157,0
+APP_00140,73784,9255,Education,Mortgage,10+ years,NJ,18.6,43,113,0
+APP_00141,109132,27381,Car Purchase,Mortgage,3-5 years,WA,29.6,22,60,1
+APP_00142,59319,14239,Home Improvement,Own,10+ years,WA,20.4,52,232,0
+APP_00143,48311,14447,Education,Rent,5-10 years,NC,18.5,40,138,1
+APP_00144,35131,13130,Debt Consolidation,Own,1-3 years,AZ,39.1,38,195,1
+APP_00145,18867,8677,Vacation,Mortgage,1-3 years,GA,10.0,57,66,0
+APP_00146,71824,10041,Education,Mortgage,10+ years,AZ,29.0,33,231,0
+APP_00147,98741,25798,Home Improvement,Own,1-3 years,NC,12.5,23,125,0
+APP_00148,129659,18156,Medical,Rent,1-3 years,NC,42.1,69,66,0
+APP_00149,52323,13358,Debt Consolidation,Mortgage,5-10 years,PA,29.9,67,94,0
+APP_00150,17583,5619,Car Purchase,Rent,3-5 years,GA,15.6,48,34,1
+APP_00151,58192,19409,Medical,Rent,1-3 years,VA,19.9,28,138,1
+APP_00152,59914,2412,Home Improvement,Own,1-3 years,WA,40.8,33,86,0
+APP_00153,84499,24566,Home Improvement,Mortgage,10+ years,CA,40.1,39,85,1
+APP_00154,50087,16831,Debt Consolidation,Mortgage,1-3 years,WA,38.5,45,186,0
+APP_00155,89779,34036,Vacation,Rent,10+ years,NC,6.2,43,175,0
+APP_00156,122886,7314,Business,Mortgage,10+ years,TX,37.7,34,82,0
+APP_00157,42811,6857,Car Purchase,Mortgage,3-5 years,GA,15.4,44,114,0
+APP_00158,49121,19373,Car Purchase,Mortgage,< 1 year,NC,43.5,48,65,0
+APP_00159,68480,27219,Education,Rent,< 1 year,NJ,11.7,32,155,0
+APP_00160,32133,11675,Car Purchase,Mortgage,3-5 years,NJ,39.1,34,197,1
+APP_00161,34477,11515,Education,Rent,< 1 year,NJ,37.9,67,84,1
+APP_00162,154273,41120,Business,Rent,3-5 years,AZ,23.7,24,214,0
+APP_00163,106851,15620,Home Improvement,Rent,1-3 years,NJ,15.9,37,131,0
+APP_00164,52292,4798,Education,Rent,10+ years,IL,30.5,26,152,0
+APP_00165,84013,10429,Medical,Mortgage,10+ years,GA,19.7,35,213,0
+APP_00166,43306,12219,Education,Mortgage,10+ years,IL,11.1,47,179,0
+APP_00167,39256,15842,Education,Own,10+ years,NY,12.4,35,158,1
+APP_00168,49711,1029,Vacation,Own,5-10 years,FL,27.3,68,193,0
+APP_00169,52937,7850,Business,Rent,< 1 year,IL,7.9,38,115,1
+APP_00170,32577,15901,Car Purchase,Mortgage,5-10 years,CA,43.1,61,141,0
+APP_00171,86155,7140,Education,Rent,< 1 year,PA,29.7,40,166,0
+APP_00172,81438,23228,Home Improvement,Mortgage,3-5 years,CA,40.3,50,166,0
+APP_00173,36950,6628,Car Purchase,Mortgage,5-10 years,TX,37.9,62,124,0
+APP_00174,93439,31649,Business,Own,10+ years,NC,42.4,59,228,1
+APP_00175,145391,43677,Home Improvement,Rent,5-10 years,MA,37.6,27,208,0
+APP_00176,60764,27291,Education,Mortgage,5-10 years,MA,30.7,61,193,0
+APP_00177,39272,2124,Vacation,Rent,3-5 years,NY,13.8,66,105,0
+APP_00178,55421,20880,Medical,Rent,5-10 years,NY,11.5,26,151,0
+APP_00179,22320,6511,Business,Rent,1-3 years,NY,13.8,74,196,1
+APP_00180,100616,10975,Vacation,Mortgage,10+ years,MA,21.6,44,153,0
+APP_00181,112495,38618,Education,Own,10+ years,NC,22.5,73,103,0
+APP_00182,77224,19304,Home Improvement,Mortgage,5-10 years,OH,16.1,71,191,0
+APP_00183,118886,36922,Business,Rent,3-5 years,AZ,12.2,64,19,0
+APP_00184,112201,48598,Vacation,Mortgage,< 1 year,NC,14.9,67,19,1
+APP_00185,12827,4209,Car Purchase,Rent,1-3 years,VA,15.3,57,10,1
+APP_00186,56450,9853,Education,Own,10+ years,MA,14.4,30,200,0
+APP_00187,15503,4029,Education,Rent,3-5 years,FL,28.5,32,6,0
+APP_00188,33035,4918,Car Purchase,Mortgage,< 1 year,IL,19.3,32,170,0
+APP_00189,74931,17277,Vacation,Rent,1-3 years,WA,6.4,34,135,0
+APP_00190,87744,6272,Medical,Rent,< 1 year,OH,14.0,57,64,0
+APP_00191,51389,2026,Home Improvement,Mortgage,3-5 years,NJ,5.2,54,222,0
+APP_00192,14780,5083,Debt Consolidation,Mortgage,1-3 years,NJ,24.6,64,43,0
+APP_00193,95311,10417,Vacation,Mortgage,1-3 years,OH,31.9,52,107,0
+APP_00194,26266,11533,Car Purchase,Mortgage,5-10 years,OH,42.8,30,163,0
+APP_00195,207326,43576,Debt Consolidation,Own,10+ years,AZ,41.7,21,152,1
+APP_00196,47355,22336,Car Purchase,Mortgage,5-10 years,MI,18.9,22,197,1
+APP_00197,89597,35267,Medical,Mortgage,< 1 year,TX,21.2,66,137,0
+APP_00198,42132,14395,Car Purchase,Rent,10+ years,OH,22.4,31,134,0
+APP_00199,52696,1145,Vacation,Rent,3-5 years,MA,32.8,49,222,0
+APP_00200,26444,8290,Debt Consolidation,Mortgage,< 1 year,NJ,29.1,66,211,1
+APP_00201,32438,6779,Home Improvement,Rent,5-10 years,VA,6.0,46,158,1
+APP_00202,189370,19629,Home Improvement,Mortgage,1-3 years,FL,29.3,68,92,0
+APP_00203,70042,33507,Medical,Rent,3-5 years,MA,7.9,35,30,1
+APP_00204,81801,27122,Business,Own,10+ years,PA,12.8,34,130,0
+APP_00205,64667,21996,Medical,Rent,3-5 years,MI,29.4,38,7,1
+APP_00206,200431,14358,Education,Rent,3-5 years,OH,32.2,30,44,0
+APP_00207,148445,6236,Home Improvement,Mortgage,10+ years,FL,24.3,27,59,0
+APP_00208,56014,15859,Medical,Rent,10+ years,OH,30.5,41,219,1
+APP_00209,108571,32683,Home Improvement,Mortgage,10+ years,GA,19.1,46,96,0
+APP_00210,63146,24863,Home Improvement,Rent,10+ years,OH,31.7,38,152,1
+APP_00211,29696,9123,Vacation,Mortgage,10+ years,CA,13.7,37,155,1
+APP_00212,177564,2158,Vacation,Mortgage,1-3 years,NJ,14.3,34,82,0
+APP_00213,46491,22973,Business,Mortgage,5-10 years,MI,22.1,59,174,0
+APP_00214,230458,34929,Vacation,Mortgage,5-10 years,FL,34.0,62,37,0
+APP_00215,39047,2586,Debt Consolidation,Mortgage,3-5 years,CA,14.1,61,236,0
+APP_00216,43384,2436,Debt Consolidation,Rent,5-10 years,VA,14.3,41,13,0
+APP_00217,59786,16398,Medical,Mortgage,1-3 years,TX,44.8,22,107,0
+APP_00218,80831,22985,Home Improvement,Mortgage,1-3 years,PA,27.5,56,202,0
+APP_00219,67727,7603,Home Improvement,Own,3-5 years,VA,18.9,32,141,0
+APP_00220,28214,11425,Car Purchase,Mortgage,1-3 years,GA,5.8,40,109,0
+APP_00221,31195,10803,Education,Rent,< 1 year,OH,39.6,73,21,1
+APP_00222,78715,20441,Education,Rent,< 1 year,CA,14.1,65,71,0
+APP_00223,19499,3091,Debt Consolidation,Mortgage,1-3 years,OH,42.7,38,60,0
+APP_00224,23995,2779,Car Purchase,Mortgage,10+ years,IL,20.6,32,54,0
+APP_00225,51487,10417,Home Improvement,Rent,5-10 years,OH,17.2,29,148,0
+APP_00226,46196,9905,Home Improvement,Mortgage,1-3 years,AZ,44.0,30,30,0
+APP_00227,31783,5671,Vacation,Mortgage,3-5 years,PA,38.2,72,136,0
+APP_00228,237406,47687,Car Purchase,Own,1-3 years,GA,24.1,24,30,1
+APP_00229,45943,18065,Education,Mortgage,3-5 years,TX,16.1,26,165,1
+APP_00230,47038,5864,Car Purchase,Rent,1-3 years,MA,7.5,39,167,0
+APP_00231,32428,16135,Medical,Rent,1-3 years,OH,14.6,55,154,1
+APP_00232,47212,3744,Car Purchase,Mortgage,1-3 years,VA,29.7,24,108,0
+APP_00233,31577,4265,Medical,Rent,3-5 years,OH,34.0,57,121,1
+APP_00234,31383,6947,Medical,Mortgage,3-5 years,PA,38.1,57,91,0
+APP_00235,42633,17056,Medical,Rent,< 1 year,OH,29.8,33,218,1
+APP_00236,26163,11079,Medical,Rent,5-10 years,WA,6.7,37,232,0
+APP_00237,79991,20471,Vacation,Own,< 1 year,TX,18.0,38,237,0
+APP_00238,22363,9253,Medical,Mortgage,3-5 years,IL,43.2,69,110,1
+APP_00239,58388,27582,Home Improvement,Mortgage,1-3 years,MI,42.2,60,26,0
+APP_00240,31621,13220,Vacation,Rent,10+ years,GA,14.1,37,193,0
+APP_00241,89905,5645,Education,Mortgage,5-10 years,WA,6.5,43,48,0
+APP_00242,45328,15277,Business,Own,< 1 year,IL,25.3,60,63,1
+APP_00243,56469,27437,Business,Rent,1-3 years,NJ,21.5,25,99,0
+APP_00244,48486,20304,Home Improvement,Own,< 1 year,VA,41.0,28,109,1
+APP_00245,20887,2942,Debt Consolidation,Mortgage,1-3 years,NC,30.8,70,15,0
+APP_00246,120668,40136,Education,Mortgage,< 1 year,WA,28.3,51,149,0
+APP_00247,67709,5208,Vacation,Own,3-5 years,NC,19.9,34,129,0
+APP_00248,93293,18740,Home Improvement,Rent,1-3 years,IL,32.0,71,179,1
+APP_00249,23683,10532,Education,Rent,1-3 years,WA,13.8,28,51,0
+APP_00250,96886,35561,Vacation,Mortgage,< 1 year,PA,35.1,45,27,0
+APP_00251,138404,6289,Medical,Rent,5-10 years,MA,24.5,43,93,0
+APP_00252,58695,10705,Car Purchase,Mortgage,3-5 years,GA,29.5,74,24,0
+APP_00253,89426,19962,Home Improvement,Mortgage,5-10 years,VA,34.1,21,137,0
+APP_00254,55437,3649,Home Improvement,Rent,1-3 years,IL,34.3,59,224,0
+APP_00255,35997,14323,Education,Mortgage,5-10 years,MI,6.4,37,211,0
+APP_00256,25181,3346,Home Improvement,Rent,5-10 years,NY,38.7,26,61,0
+APP_00257,25777,5581,Education,Rent,10+ years,NY,10.5,58,218,0
+APP_00258,49193,1044,Vacation,Own,3-5 years,FL,12.3,65,25,0
+APP_00259,88281,23006,Business,Own,3-5 years,OH,33.1,44,167,1
+APP_00260,42043,13000,Business,Mortgage,5-10 years,CA,30.5,39,155,0
+APP_00261,93019,45688,Medical,Rent,3-5 years,WA,10.9,69,188,1
+APP_00262,81552,10381,Vacation,Mortgage,3-5 years,NJ,35.7,74,50,0
+APP_00263,64435,16489,Vacation,Own,3-5 years,AZ,34.9,59,142,0
+APP_00264,25616,12221,Medical,Mortgage,1-3 years,TX,11.6,63,118,1
+APP_00265,134887,35185,Business,Mortgage,10+ years,MI,39.1,46,74,1
+APP_00266,133835,42254,Medical,Mortgage,3-5 years,IL,33.2,46,9,0
+APP_00267,52049,1175,Debt Consolidation,Mortgage,3-5 years,VA,21.0,40,157,0
+APP_00268,53507,13157,Medical,Own,< 1 year,AZ,6.5,27,168,0
+APP_00269,83432,40691,Car Purchase,Mortgage,5-10 years,PA,7.6,65,233,1
+APP_00270,32351,1510,Education,Rent,3-5 years,IL,26.3,53,224,0
+APP_00271,76275,1810,Business,Rent,3-5 years,OH,20.7,46,125,0
+APP_00272,41406,6125,Debt Consolidation,Mortgage,10+ years,IL,31.2,46,170,1
+APP_00273,22028,10733,Education,Mortgage,< 1 year,TX,33.8,62,76,1
+APP_00274,208746,34503,Debt Consolidation,Mortgage,< 1 year,TX,21.2,63,174,0
+APP_00275,56589,17728,Car Purchase,Mortgage,3-5 years,IL,10.6,42,117,0
+APP_00276,115565,11588,Home Improvement,Mortgage,3-5 years,WA,35.0,32,93,1
+APP_00277,40890,7921,Business,Own,5-10 years,OH,39.9,46,132,1
+APP_00278,56056,21498,Education,Mortgage,1-3 years,IL,31.4,72,97,1
+APP_00279,126697,28341,Home Improvement,Own,3-5 years,GA,16.3,62,232,0
+APP_00280,61569,4141,Education,Mortgage,1-3 years,NJ,36.0,71,16,0
+APP_00281,52468,8245,Education,Rent,1-3 years,GA,36.9,67,148,0
+APP_00282,20682,9547,Home Improvement,Mortgage,5-10 years,VA,11.6,36,136,1
+APP_00283,78695,7475,Car Purchase,Own,1-3 years,GA,40.8,68,112,0
+APP_00284,41641,7207,Car Purchase,Rent,< 1 year,NC,37.1,66,124,1
+APP_00285,46733,23011,Medical,Rent,1-3 years,VA,40.3,51,64,1
+APP_00286,64306,6054,Business,Rent,< 1 year,FL,33.8,54,159,0
+APP_00287,55084,5974,Medical,Mortgage,10+ years,PA,33.4,64,126,0
+APP_00288,39660,9872,Vacation,Rent,1-3 years,GA,24.8,23,81,0
+APP_00289,26914,9869,Home Improvement,Own,1-3 years,FL,41.2,71,180,1
+APP_00290,36211,4271,Business,Rent,3-5 years,PA,34.5,64,144,0
+APP_00291,36820,1541,Medical,Rent,1-3 years,GA,5.2,67,172,0
+APP_00292,73120,6943,Education,Mortgage,5-10 years,OH,8.1,23,9,0
+APP_00293,40071,7859,Medical,Own,1-3 years,AZ,35.4,56,209,0
+APP_00294,63553,8163,Debt Consolidation,Rent,5-10 years,TX,31.0,26,224,1
+APP_00295,27452,6689,Car Purchase,Mortgage,1-3 years,AZ,20.2,50,83,0
+APP_00296,53641,13369,Debt Consolidation,Own,5-10 years,MI,43.6,42,181,0
+APP_00297,67813,28623,Medical,Rent,5-10 years,NJ,30.1,39,180,1
+APP_00298,83353,19298,Car Purchase,Own,< 1 year,CA,14.7,53,125,1
+APP_00299,80658,3919,Debt Consolidation,Mortgage,5-10 years,FL,7.6,48,13,0
+APP_00300,35182,15554,Medical,Mortgage,10+ years,MA,30.0,36,226,1
+APP_00301,36210,8341,Business,Rent,10+ years,MA,31.4,68,25,0
+APP_00302,78987,9477,Education,Own,< 1 year,WA,6.3,55,214,0
+APP_00303,25027,4923,Education,Mortgage,3-5 years,NY,22.8,49,184,0
+APP_00304,45891,6210,Vacation,Own,1-3 years,VA,24.5,42,199,0
+APP_00305,43278,21305,Vacation,Mortgage,10+ years,TX,19.5,32,11,0
+APP_00306,17154,1345,Business,Mortgage,10+ years,WA,23.9,55,173,0
+APP_00307,10824,3092,Debt Consolidation,Mortgage,< 1 year,AZ,7.0,28,48,0
+APP_00308,20538,8822,Debt Consolidation,Mortgage,5-10 years,CA,13.7,62,112,0
+APP_00309,34597,14335,Medical,Mortgage,3-5 years,NC,6.2,31,152,1
+APP_00310,81815,18982,Vacation,Mortgage,1-3 years,VA,34.2,28,205,1
+APP_00311,24120,8461,Debt Consolidation,Rent,10+ years,MI,33.9,45,96,1
+APP_00312,80926,1083,Car Purchase,Mortgage,< 1 year,MA,39.9,38,199,0
+APP_00313,93509,31319,Medical,Own,3-5 years,FL,41.0,32,127,1
+APP_00314,69941,11907,Debt Consolidation,Rent,5-10 years,NC,30.9,71,80,0
+APP_00315,50682,4380,Debt Consolidation,Rent,10+ years,FL,30.5,73,7,0
+APP_00316,225956,26969,Business,Mortgage,< 1 year,CA,32.8,32,168,0
+APP_00317,29685,6528,Medical,Own,3-5 years,MA,23.7,44,43,0
+APP_00318,46086,19639,Car Purchase,Rent,3-5 years,WA,16.0,73,235,0
+APP_00319,41795,16885,Business,Mortgage,3-5 years,NC,22.2,60,80,0
+APP_00320,115850,29527,Home Improvement,Mortgage,< 1 year,VA,32.5,59,39,0
+APP_00321,42110,3859,Debt Consolidation,Mortgage,1-3 years,WA,25.7,38,225,0
+APP_00322,23654,1072,Vacation,Own,3-5 years,CA,9.1,25,141,0
+APP_00323,23374,11559,Debt Consolidation,Own,1-3 years,TX,24.4,44,192,1
+APP_00324,34355,9605,Medical,Mortgage,< 1 year,PA,42.0,47,239,0
+APP_00325,18687,2227,Medical,Mortgage,10+ years,WA,19.8,57,40,0
+APP_00326,28570,12802,Education,Rent,3-5 years,WA,16.5,67,131,1
+APP_00327,19461,3971,Education,Rent,3-5 years,WA,26.7,42,58,0
+APP_00328,20095,8542,Business,Mortgage,5-10 years,WA,12.8,69,90,0
+APP_00329,22997,11145,Vacation,Mortgage,1-3 years,MA,10.6,55,146,1
+APP_00330,29172,9508,Business,Mortgage,5-10 years,NY,40.2,60,219,1
+APP_00331,158961,10864,Medical,Own,10+ years,IL,26.7,39,69,0
+APP_00332,96414,28994,Home Improvement,Rent,3-5 years,VA,6.5,74,144,1
+APP_00333,32626,11424,Debt Consolidation,Rent,10+ years,CA,43.0,46,53,1
+APP_00334,51297,3308,Education,Rent,3-5 years,MI,24.7,31,166,0
+APP_00335,16499,5391,Debt Consolidation,Mortgage,5-10 years,IL,44.2,38,97,0
+APP_00336,156660,41548,Vacation,Mortgage,5-10 years,NY,13.0,29,77,0
+APP_00337,43610,18621,Business,Mortgage,1-3 years,IL,25.4,66,194,1
+APP_00338,96786,44904,Home Improvement,Mortgage,5-10 years,NJ,39.9,30,47,0
+APP_00339,115331,41170,Debt Consolidation,Mortgage,1-3 years,NC,36.7,55,24,0
+APP_00340,107466,10831,Home Improvement,Rent,1-3 years,OH,6.8,56,30,0
+APP_00341,33918,1090,Medical,Rent,5-10 years,CA,38.8,22,196,0
+APP_00342,54916,3344,Debt Consolidation,Rent,1-3 years,FL,21.3,58,80,0
+APP_00343,30471,12505,Medical,Rent,< 1 year,NY,25.9,36,71,1
+APP_00344,40750,2489,Vacation,Rent,1-3 years,PA,7.0,22,223,0
+APP_00345,18684,2938,Vacation,Mortgage,1-3 years,GA,21.2,47,123,0
+APP_00346,31019,5664,Medical,Rent,3-5 years,AZ,44.2,41,152,1
+APP_00347,110901,7023,Debt Consolidation,Rent,10+ years,MI,28.4,28,59,0
+APP_00348,22352,1730,Home Improvement,Mortgage,5-10 years,FL,17.1,35,27,0
+APP_00349,26787,12362,Home Improvement,Mortgage,1-3 years,TX,10.4,54,132,0
+APP_00350,54210,2418,Education,Mortgage,< 1 year,CA,25.4,46,23,0
+APP_00351,86947,3662,Home Improvement,Mortgage,1-3 years,VA,34.6,49,161,0
+APP_00352,26377,2241,Debt Consolidation,Own,3-5 years,TX,17.5,56,87,0
+APP_00353,44544,20356,Education,Rent,< 1 year,OH,24.8,53,65,1
+APP_00354,86420,27706,Vacation,Own,1-3 years,IL,40.0,57,166,0
+APP_00355,33025,11488,Debt Consolidation,Mortgage,< 1 year,NY,30.4,57,47,1
+APP_00356,38705,2923,Car Purchase,Rent,3-5 years,NC,24.0,68,151,0
+APP_00357,105073,1141,Vacation,Rent,3-5 years,WA,21.6,22,21,0
+APP_00358,71574,13911,Car Purchase,Mortgage,10+ years,CA,36.8,43,178,0
+APP_00359,46209,21575,Education,Rent,1-3 years,VA,7.1,48,237,1
+APP_00360,37783,9375,Debt Consolidation,Rent,1-3 years,NY,31.7,69,123,0
+APP_00361,56270,3709,Home Improvement,Own,1-3 years,GA,38.5,37,105,0
+APP_00362,119125,47493,Business,Mortgage,3-5 years,CA,41.2,72,29,1
+APP_00363,70984,2436,Home Improvement,Rent,1-3 years,VA,15.7,37,109,0
+APP_00364,61110,4887,Education,Own,< 1 year,NJ,20.3,61,167,0
+APP_00365,41916,7628,Debt Consolidation,Rent,3-5 years,FL,30.7,32,21,0
+APP_00366,22636,6861,Medical,Rent,10+ years,MA,32.0,52,80,0
+APP_00367,61250,9625,Medical,Mortgage,1-3 years,NY,33.4,49,103,1
+APP_00368,97923,29934,Medical,Rent,3-5 years,MI,28.3,60,142,0
+APP_00369,54867,18207,Business,Rent,< 1 year,NC,13.2,46,204,0
+APP_00370,18840,2185,Home Improvement,Rent,1-3 years,NY,10.9,73,205,0
+APP_00371,22496,7908,Business,Rent,10+ years,PA,16.6,67,164,1
+APP_00372,126356,35678,Home Improvement,Rent,10+ years,FL,30.2,31,59,0
+APP_00373,17793,7009,Medical,Rent,10+ years,PA,16.0,42,195,0
+APP_00374,31837,7857,Home Improvement,Mortgage,3-5 years,NY,11.6,49,13,0
+APP_00375,64133,8517,Car Purchase,Own,3-5 years,VA,44.8,46,195,0
+APP_00376,61246,17871,Business,Mortgage,10+ years,OH,7.9,74,215,0
+APP_00377,63293,24208,Medical,Rent,5-10 years,FL,14.9,21,176,0
+APP_00378,49587,16860,Business,Rent,5-10 years,WA,25.0,29,170,0
+APP_00379,23150,4401,Home Improvement,Mortgage,5-10 years,PA,22.1,49,200,1
+APP_00380,70453,31620,Medical,Own,1-3 years,GA,44.6,54,134,0
+APP_00381,21884,8498,Business,Own,3-5 years,MI,19.3,38,178,0
+APP_00382,18733,3100,Education,Mortgage,3-5 years,CA,14.6,46,114,0
+APP_00383,65663,8279,Debt Consolidation,Mortgage,10+ years,WA,14.0,24,202,0
+APP_00384,72730,26433,Business,Mortgage,1-3 years,NY,16.3,27,52,0
+APP_00385,114938,41334,Education,Mortgage,1-3 years,WA,15.2,68,152,1
+APP_00386,35566,10965,Car Purchase,Mortgage,< 1 year,FL,16.8,55,170,0
+APP_00387,28509,11958,Vacation,Mortgage,5-10 years,GA,19.1,24,72,1
+APP_00388,46465,12464,Debt Consolidation,Mortgage,1-3 years,OH,42.2,51,186,1
+APP_00389,74172,2971,Home Improvement,Mortgage,1-3 years,IL,17.2,23,133,0
+APP_00390,10561,1006,Vacation,Mortgage,1-3 years,NY,31.5,67,174,0
+APP_00391,42148,7081,Car Purchase,Rent,1-3 years,NY,12.3,68,128,0
+APP_00392,96777,48366,Education,Rent,5-10 years,IL,26.7,28,21,1
+APP_00393,51595,18589,Business,Mortgage,3-5 years,CA,43.1,30,219,1
+APP_00394,30183,4738,Education,Rent,3-5 years,NJ,35.4,58,70,0
+APP_00395,29482,14362,Vacation,Rent,5-10 years,OH,23.5,21,156,1
+APP_00396,67729,5112,Medical,Rent,1-3 years,NJ,7.1,29,146,0
+APP_00397,72048,6510,Debt Consolidation,Rent,5-10 years,MA,22.4,21,86,0
+APP_00398,25126,5399,Vacation,Mortgage,1-3 years,FL,20.4,39,48,0
+APP_00399,19717,7244,Business,Rent,3-5 years,GA,7.1,21,202,1
+APP_00400,39568,14495,Car Purchase,Own,10+ years,AZ,27.1,32,85,0
+APP_00401,36779,6043,Car Purchase,Rent,5-10 years,OH,17.5,23,119,0
+APP_00402,29211,12331,Business,Rent,1-3 years,GA,7.1,69,17,0
+APP_00403,26863,5387,Debt Consolidation,Rent,3-5 years,VA,21.2,74,125,0
+APP_00404,25309,10134,Car Purchase,Own,1-3 years,PA,18.3,22,227,1
+APP_00405,67821,22119,Car Purchase,Rent,< 1 year,OH,21.7,74,226,0
+APP_00406,44708,3164,Medical,Mortgage,10+ years,NC,44.2,46,67,0
+APP_00407,22092,10751,Medical,Rent,3-5 years,TX,33.2,61,182,0
+APP_00408,51353,9551,Education,Own,3-5 years,TX,24.3,36,7,0
+APP_00409,86601,41969,Business,Mortgage,1-3 years,MA,43.1,47,46,1
+APP_00410,22661,1951,Education,Mortgage,< 1 year,TX,15.7,54,155,0
+APP_00411,100102,30890,Debt Consolidation,Mortgage,1-3 years,TX,39.6,21,88,0
+APP_00412,90057,5662,Home Improvement,Rent,1-3 years,NY,40.3,42,105,0
+APP_00413,91893,19344,Debt Consolidation,Mortgage,10+ years,NC,23.0,21,143,0
+APP_00414,98889,20331,Medical,Rent,5-10 years,PA,44.1,37,79,1
+APP_00415,48332,3145,Business,Own,5-10 years,MA,15.3,49,128,0
+APP_00416,44151,16247,Home Improvement,Rent,1-3 years,NJ,30.5,62,183,0
+APP_00417,36250,4412,Vacation,Own,10+ years,MA,19.2,66,74,0
+APP_00418,57416,3137,Home Improvement,Own,3-5 years,NY,13.6,53,80,0
+APP_00419,17478,3577,Home Improvement,Rent,5-10 years,NJ,16.3,66,136,0
+APP_00420,105344,31222,Debt Consolidation,Mortgage,10+ years,GA,7.7,62,214,1
+APP_00421,53760,14932,Debt Consolidation,Rent,10+ years,IL,31.7,41,7,1
+APP_00422,77643,24836,Business,Rent,5-10 years,GA,22.7,63,42,0
+APP_00423,38643,10162,Business,Mortgage,1-3 years,PA,25.1,63,59,1
+APP_00424,113320,2387,Education,Own,5-10 years,AZ,5.5,21,107,0
+APP_00425,41465,2390,Home Improvement,Rent,5-10 years,NY,37.6,40,88,0
+APP_00426,41445,3177,Medical,Own,10+ years,NJ,25.6,43,158,0
+APP_00427,21793,9199,Debt Consolidation,Rent,1-3 years,OH,43.1,56,115,0
+APP_00428,22170,4574,Home Improvement,Mortgage,1-3 years,CA,9.1,29,11,0
+APP_00429,54454,6084,Car Purchase,Rent,10+ years,VA,39.4,23,163,0
+APP_00430,293947,22521,Car Purchase,Mortgage,3-5 years,OH,12.2,66,121,0
+APP_00431,38161,3988,Medical,Rent,5-10 years,TX,16.9,74,38,0
+APP_00432,41066,7743,Car Purchase,Mortgage,10+ years,AZ,9.9,67,120,0
+APP_00433,52231,16264,Car Purchase,Mortgage,1-3 years,MA,14.4,35,131,0
+APP_00434,19607,9450,Business,Mortgage,3-5 years,AZ,39.9,23,79,1
+APP_00435,119832,10979,Home Improvement,Mortgage,10+ years,TX,5.9,67,210,0
+APP_00436,35930,12818,Medical,Own,1-3 years,GA,32.7,27,18,0
+APP_00437,82048,9177,Debt Consolidation,Rent,5-10 years,AZ,36.7,45,136,0
+APP_00438,42583,12377,Medical,Mortgage,5-10 years,NC,34.3,29,125,1
+APP_00439,42834,18847,Debt Consolidation,Mortgage,1-3 years,NC,26.3,49,88,1
+APP_00440,129998,41209,Debt Consolidation,Rent,3-5 years,IL,21.4,60,151,0
+APP_00441,47777,2532,Car Purchase,Mortgage,1-3 years,GA,43.7,48,121,0
+APP_00442,50757,16805,Medical,Mortgage,3-5 years,PA,22.3,49,128,0
+APP_00443,47089,2578,Car Purchase,Mortgage,< 1 year,AZ,20.0,72,80,0
+APP_00444,34793,11768,Business,Rent,1-3 years,TX,31.5,69,142,1
+APP_00445,57590,2847,Debt Consolidation,Mortgage,5-10 years,WA,19.0,52,63,0
+APP_00446,121516,38166,Business,Rent,3-5 years,WA,20.5,48,14,1
+APP_00447,24600,2793,Vacation,Rent,3-5 years,MI,40.6,57,219,0
+APP_00448,18659,7315,Education,Mortgage,5-10 years,PA,20.4,60,64,1
+APP_00449,61930,26815,Car Purchase,Rent,3-5 years,MA,27.3,46,7,0
+APP_00450,23455,2433,Business,Rent,5-10 years,CA,15.9,58,200,0
+APP_00451,54344,9493,Medical,Rent,3-5 years,AZ,13.7,56,140,0
+APP_00452,68319,9775,Vacation,Rent,5-10 years,OH,44.3,44,89,0
+APP_00453,76388,6601,Debt Consolidation,Mortgage,1-3 years,WA,40.2,55,84,0
+APP_00454,80001,22736,Car Purchase,Rent,1-3 years,GA,13.0,60,162,0
+APP_00455,152977,5622,Business,Rent,5-10 years,PA,8.8,40,145,0
+APP_00456,31765,5861,Vacation,Rent,5-10 years,NY,44.9,55,100,1
+APP_00457,46239,3877,Education,Rent,5-10 years,PA,27.6,68,40,0
+APP_00458,36233,1269,Vacation,Rent,3-5 years,FL,6.6,35,191,0
+APP_00459,163957,43357,Home Improvement,Mortgage,< 1 year,WA,35.3,63,199,0
+APP_00460,90601,32338,Business,Mortgage,3-5 years,OH,42.1,66,231,0
+APP_00461,61119,7255,Business,Mortgage,3-5 years,PA,37.2,40,171,0
+APP_00462,13904,4530,Business,Rent,5-10 years,NJ,32.1,38,125,1
+APP_00463,159142,35159,Debt Consolidation,Own,3-5 years,CA,30.4,24,198,0
+APP_00464,49129,5226,Education,Own,3-5 years,CA,38.5,34,183,0
+APP_00465,124554,42069,Car Purchase,Rent,10+ years,VA,24.5,50,18,0
+APP_00466,81828,7134,Medical,Rent,3-5 years,PA,28.3,28,113,0
+APP_00467,37068,1556,Home Improvement,Own,3-5 years,FL,14.9,66,67,0
+APP_00468,44779,13764,Medical,Rent,5-10 years,NJ,34.5,44,78,1
+APP_00469,57062,27798,Vacation,Rent,< 1 year,FL,18.9,73,124,1
+APP_00470,80194,16480,Debt Consolidation,Rent,10+ years,NY,27.1,54,183,1
+APP_00471,23951,6212,Home Improvement,Mortgage,< 1 year,FL,22.5,40,136,0
+APP_00472,40912,20170,Debt Consolidation,Rent,3-5 years,GA,11.2,31,115,1
+APP_00473,23062,1216,Home Improvement,Mortgage,1-3 years,WA,17.1,56,106,0
+APP_00474,69653,6754,Education,Own,1-3 years,MA,44.5,43,27,1
+APP_00475,15508,4805,Car Purchase,Own,3-5 years,GA,17.1,44,104,1
+APP_00476,44798,1067,Education,Mortgage,< 1 year,OH,44.4,62,62,0
+APP_00477,26962,5540,Car Purchase,Rent,3-5 years,NY,44.7,37,148,1
+APP_00478,88421,9609,Vacation,Mortgage,5-10 years,CA,35.6,60,153,0
+APP_00479,49509,12185,Debt Consolidation,Mortgage,3-5 years,NY,31.3,55,53,1
+APP_00480,39686,8665,Vacation,Rent,3-5 years,AZ,41.1,65,86,1
+APP_00481,50299,18779,Education,Mortgage,3-5 years,FL,43.8,28,30,1
+APP_00482,109842,37338,Business,Own,3-5 years,VA,11.6,23,161,1
+APP_00483,10463,4821,Medical,Mortgage,3-5 years,AZ,10.7,34,37,0
+APP_00484,42081,16986,Business,Rent,1-3 years,NJ,38.8,25,195,0
+APP_00485,53169,14353,Vacation,Mortgage,< 1 year,MA,29.0,69,25,1
+APP_00486,18014,4014,Debt Consolidation,Mortgage,3-5 years,MA,13.0,44,63,0
+APP_00487,53383,24752,Vacation,Rent,3-5 years,CA,35.9,36,124,1
+APP_00488,69204,17373,Home Improvement,Mortgage,5-10 years,WA,35.8,49,99,1
+APP_00489,165075,38381,Vacation,Rent,1-3 years,MA,41.4,30,113,0
+APP_00490,41387,10871,Vacation,Rent,1-3 years,NC,22.5,74,116,1
+APP_00491,19305,1429,Debt Consolidation,Rent,10+ years,GA,16.2,32,70,0
+APP_00492,40908,12881,Home Improvement,Mortgage,5-10 years,NJ,31.1,53,165,0
+APP_00493,96435,40429,Car Purchase,Mortgage,1-3 years,WA,38.1,74,205,1
+APP_00494,54565,21375,Business,Mortgage,1-3 years,IL,43.5,60,88,1
+APP_00495,101221,33015,Car Purchase,Mortgage,3-5 years,IL,40.4,24,219,0
+APP_00496,136175,14595,Business,Mortgage,3-5 years,MI,33.6,61,233,0
+APP_00497,25514,1928,Business,Rent,< 1 year,GA,26.6,32,205,0
+APP_00498,22751,10742,Home Improvement,Rent,< 1 year,NC,14.6,32,36,0
+APP_00499,51592,7116,Car Purchase,Own,10+ years,FL,35.2,30,216,1
+APP_00500,8146,3779,Medical,Own,10+ years,CA,5.3,32,110,1

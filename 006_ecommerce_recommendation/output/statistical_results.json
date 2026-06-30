@@ -1,0 +1,27 @@
+{
+  "chi2_segment": {
+    "chi2": 3.36,
+    "p": 0.3394,
+    "sig": false
+  },
+  "chi2_acquisition_channel": {
+    "chi2": 1.03,
+    "p": 0.9046,
+    "sig": false
+  },
+  "ttest_recency": {
+    "t": -20.42,
+    "p": 0.0,
+    "sig": true
+  },
+  "ttest_frequency": {
+    "t": 4.97,
+    "p": 0.0,
+    "sig": true
+  },
+  "ttest_monetary": {
+    "t": 3.79,
+    "p": 0.0002,
+    "sig": true
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "attrition_by_department": {
+    "Engineering": 0.2063,
+    "Finance": 0.2143,
+    "HR": 0.2241,
+    "IT": 0.2222,
+    "Marketing": 0.1429,
+    "Operations": 0.2615,
+    "Product": 0.2812,
+    "Sales": 0.2373
+  },
+  "attrition_by_job_role": {
+    "AE": 0.2353,
+    "Accountant": 0.2778,
+    "Admin": 0.1667,
+    "Analyst": 0.1875,
+    "Architect": 0.1875,
+    "Associate PM": 0.375,
+    "BP": 0.1538,
+    "CFO": 0.4,
+    "Coordinator": 0.2105,
+    "Director": 0.1744,
+    "Engineer": 0.2778,
+    "Generalist": 0.3333,
+    "Junior Dev": 0.1667,
+    "Manager": 0.1481,
+    "PM": 0.2308,
+    "SDR": 0.1818,
+    "Sales Manager": 0.3333,
+    "Senior Dev": 0.4286,
+    "Senior PM": 0.5455,
+    "Specialist": 0.1538,
+    "Supervisor": 0.1667,
+    "Support": 0.2857,
+    "Tech Lead": 0.0
+  },
+  "attrition_by_education": {
+    "Associate": 0.1975,
+    "Bachelor": 0.2233,
+    "High School": 0.1429,
+    "Master": 0.2465,
+    "PhD": 0.3636
+  },
+  "attrition_by_gender": {
+    "Female": 0.2339,
+    "Male": 0.2163
+  },
+  "attrition_by_location": {
+    "Austin": 0.2027,
+    "Chicago": 0.1895,
+    "New York": 0.2588,
+    "Remote": 0.2346,
+    "San Francisco": 0.1972,
+    "Seattle": 0.2553
+  },
+  "top_correlations": {
+    "commute_miles": 0.28910513339950245,
+    "high_commute_flag": 0.27151796874241335,
+    "risk_score": 0.23513483222232318,
+    "commute_stress": 0.2272435820602451,
+    "avg_engagement": -0.17909165818288583,
+    "tenure_days": -0.17685935506545006,
+    "tenure_years": -0.17685935506544997,
+    "engagement_composite": -0.16906360088425468
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "chi2_major": {
+    "chi2": 2.0,
+    "p": 0.8494,
+    "sig": false
+  },
+  "chi2_gender": {
+    "chi2": 0.0,
+    "p": 1.0,
+    "sig": false
+  },
+  "chi2_housing": {
+    "chi2": 0.09,
+    "p": 0.9549,
+    "sig": false
+  },
+  "chi2_scholarship": {
+    "chi2": 0.81,
+    "p": 0.3667,
+    "sig": false
+  },
+  "ttest_avg_score": {
+    "t": 3.39,
+    "p": 0.0008,
+    "sig": true
+  },
+  "ttest_avg_hours": {
+    "t": 2.48,
+    "p": 0.0136,
+    "sig": true
+  },
+  "ttest_total_logins": {
+    "t": 4.25,
+    "p": 0.0,
+    "sig": true
+  },
+  "ttest_gpa_cumulative": {
+    "t": 6.49,
+    "p": 0.0,
+    "sig": true
+  },
+  "ttest_risk_score": {
+    "t": -5.48,
+    "p": 0.0,
+    "sig": true
+  }
+}

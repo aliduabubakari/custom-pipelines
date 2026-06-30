@@ -1,0 +1,28 @@
+{
+  "top": [
+    "XGBoost",
+    "LightGBM"
+  ],
+  "all": {
+    "LogisticRegression": {
+      "test_roc_auc": 0.7627,
+      "test_pr_auc": 0.697,
+      "test_f2": 0.7893
+    },
+    "RandomForest": {
+      "test_roc_auc": 0.8254,
+      "test_pr_auc": 0.7641,
+      "test_f2": 0.8434
+    },
+    "XGBoost": {
+      "test_roc_auc": 0.8338,
+      "test_pr_auc": 0.7709,
+      "test_f2": 0.8636
+    },
+    "LightGBM": {
+      "test_roc_auc": 0.8272,
+      "test_pr_auc": 0.768,
+      "test_f2": 0.8529
+    }
+  }
+}

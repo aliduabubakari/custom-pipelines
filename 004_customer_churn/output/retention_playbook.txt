@@ -1,0 +1,130 @@
+======================================================================
+CUSTOMER CHURN PREDICTION — FINAL RETENTION PLAYBOOK
+======================================================================
+Report generated: 2026-06-26 13:32:54
+
+──────────────────────────────────────────────────────────────────────
+1. EXECUTIVE SUMMARY
+──────────────────────────────────────────────────────────────────────
+  Total Customers Analyzed: 500
+  Overall Churn Rate: 28.0%
+  Best Model ROC-AUC: 0.8157
+  Best Model F1 Score: 0.4286
+  Optimal Intervention Threshold: 0.2
+  Expected Net Profit at Optimal: $8,500
+
+──────────────────────────────────────────────────────────────────────
+2. CHURN DRIVER ANALYSIS
+──────────────────────────────────────────────────────────────────────
+  Churn Rate by Segment:
+    - Basic: 41.2%
+    - Enterprise: 9.8%
+    - Premium: 17.3%
+  Churn Rate by Channel:
+    - Direct: 23.3%
+    - Organic: 23.8%
+    - Paid Search: 39.1%
+    - Referral: 28.0%
+    - Social Media: 21.9%
+  Top Churn Correlations:
+    - days_since_last_purchase: 0.379
+    - recency_score: -0.368
+    - lapsed_flag: 0.330
+    - churn_risk_score: 0.304
+    - purchase_count: -0.304
+  Statistically Significant Features:
+    - chi2_segment: p=0.0
+    - chi2_acquisition_channel: p=0.0375
+    - chi2_payment_method: p=0.3692
+    - chi2_plan_type: p=0.6033
+    - anova_tenure_days: p=0.5234
+
+──────────────────────────────────────────────────────────────────────
+3. MODEL PERFORMANCE
+──────────────────────────────────────────────────────────────────────
+  ROC-AUC: 0.8157
+  Precision-Recall AUC: 0.6522
+  F1 Score: 0.4286
+  Model Comparison (CV ROC-AUC):
+    - LightGBM: 0.8609
+    - XGBoost: 0.8552
+    - RandomForest: 0.8515
+    - LogisticRegression: 0.7738
+
+──────────────────────────────────────────────────────────────────────
+4. CUSTOMER RISK SEGMENTS & RETENTION STRATEGIES
+──────────────────────────────────────────────────────────────────────
+  Cluster 0: 36 customers (39.6% of at-risk)
+    Avg Churn Probability: 0.65
+    Avg Tenure: 889 days
+    Dominant Segment: Basic
+    Strategy: Discount/Loyalty Upgrade: Offer 20% discount or free upgrade to annual plan. Target price-sensitive customers showing early churn signals.
+
+  Cluster 1: 28 customers (30.8% of at-risk)
+    Avg Churn Probability: 0.65
+    Avg Tenure: 1492 days
+    Dominant Segment: Basic
+    Strategy: Feature Education/Re-engagement: Send personalized tutorial emails, highlight unused features. Target disengaged customers with low activity.
+
+  Cluster 2: 2 customers (2.2% of at-risk)
+    Avg Churn Probability: 0.55
+    Avg Tenure: 518 days
+    Dominant Segment: Enterprise
+    Strategy: Account Review/Support Outreach: Schedule 1:1 account review call. Target high-value customers with recent support issues.
+
+  Cluster 3: 25 customers (27.5% of at-risk)
+    Avg Churn Probability: 0.87
+    Avg Tenure: 1669 days
+    Dominant Segment: Basic
+    Strategy: Win-Back Campaign: Offer reactivation discount. Target lapsed customers with >90 days since last purchase.
+
+──────────────────────────────────────────────────────────────────────
+5. EXPECTED ROI BY SEGMENT
+──────────────────────────────────────────────────────────────────────
+  Threshold    Targeted  True Churners       Cost    Revenue   Net Profit      ROI
+  --------------------------------------------------------------------------
+  0.1                48             18 $    2,400 $   10,800 $      8,400     350%
+  0.2                46             18 $    2,300 $   10,800 $      8,500     370%
+  0.3                46             18 $    2,300 $   10,800 $      8,500     370%
+  0.4                27             16 $    1,350 $    9,600 $      8,250     611%
+  0.5                 7              6 $      350 $    3,600 $      3,250     929%
+  0.6                 3              3 $      150 $    1,800 $      1,650    1100%
+  0.7                 2              2 $      100 $    1,200 $      1,100    1100%
+  0.8                 2              2 $      100 $    1,200 $      1,100    1100%
+
+──────────────────────────────────────────────────────────────────────
+6. A/B TEST DESIGN FOR RETENTION CAMPAIGNS
+──────────────────────────────────────────────────────────────────────
+  Objective: Validate that the model-driven retention campaign
+  outperforms the current baseline (no intervention).
+
+  Design:
+    - Control Group (50%): No intervention
+    - Treatment Group (50%): Targeted retention offer based on model
+    - Duration: 90 days
+    - Primary Metric: Churn rate reduction
+    - Secondary Metrics: Revenue uplift, Customer LTV increase
+
+  Success Criteria:
+    - 15%+ reduction in churn rate vs control
+    - Positive ROI within 6 months
+    - Statistical significance at p < 0.05
+
+──────────────────────────────────────────────────────────────────────
+7. MONITORING & MODEL MAINTENANCE
+──────────────────────────────────────────────────────────────────────
+  Model Drift Monitoring:
+    - Track PSI (Population Stability Index) monthly
+    - Alert if PSI > 0.25
+    - Monitor feature distributions for shift
+    - Re-train quarterly or when drift detected
+
+  Key Metrics Dashboard:
+    - Churn rate (overall and by segment)
+    - Model ROC-AUC on recent data
+    - Campaign ROI
+    - At-risk customer count and distribution
+
+======================================================================
+END OF RETENTION PLAYBOOK
+======================================================================

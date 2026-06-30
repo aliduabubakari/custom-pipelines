@@ -1,0 +1,354 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-4825-11967-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "N/A"
+    abilities: ""
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-loading-profiling-initial-data-inspection
+        template: step-01-data-loading-profiling-initial-data-inspection
+    - - name: step-02-data-merging-integration
+        template: step-02-data-merging-integration
+    - - name: step-03-data-visualization-error-diagnosis
+        template: step-03-data-visualization-error-diagnosis
+    - - name: step-04-data-visualization-key-findings-from-current-outpu
+        template: step-04-data-visualization-key-findings-from-current-outpu
+    - - name: step-05-data-preparation-feature-engineering-error-diagnos
+        template: step-05-data-preparation-feature-engineering-error-diagnos
+    - - name: step-06-statistical-analysis-hypothesis-testing
+        template: step-06-statistical-analysis-hypothesis-testing
+    - - name: step-07-error-recovery-robust-loading
+        template: step-07-error-recovery-robust-loading
+    - - name: step-08-key-findings-requiring-deeper-analysis
+        template: step-08-key-findings-requiring-deeper-analysis
+    - - name: step-09-error-recovery-robust-loading-phase-2
+        template: step-09-error-recovery-robust-loading-phase-2
+    - - name: step-10-error-recovery-robust-loading-phase-3
+        template: step-10-error-recovery-robust-loading-phase-3
+    - - name: step-11-error-recovery-robust-loading-phase-4
+        template: step-11-error-recovery-robust-loading-phase-4
+    - - name: step-12-error-recovery-robust-loading-phase-5
+        template: step-12-error-recovery-robust-loading-phase-5
+    - - name: step-13-error-recovery-robust-loading-phase-6
+        template: step-13-error-recovery-robust-loading-phase-6
+    - - name: step-14-error-recovery-robust-loading-phase-7
+        template: step-14-error-recovery-robust-loading-phase-7
+    - - name: step-15-error-recovery-robust-loading-phase-8
+        template: step-15-error-recovery-robust-loading-phase-8
+
+  - name: step-01-data-loading-profiling-initial-data-inspection
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-loading-profiling-initial-data-insp.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-data-merging-integration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-merging-integration.py", --processed_all_star_csv /mnt/output/processed_all_star.csv --processed_manager_csv /mnt/output/processed_manager.csv --team_all_stars_csv /mnt/output/team_all_stars.csv --team_manager_csv /mnt/output/team_manager.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-data-visualization-error-diagnosis
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_data-visualization-error-diagnosis.py", --processed_all_star_csv /mnt/output/processed_all_star.csv --processed_manager_csv /mnt/output/processed_manager.csv --all_star_csv /data/all_star.csv --manager_csv /data/manager.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-data-visualization-key-findings-from-current-outpu
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_data-visualization-key-findings-from-cur.py", --analysis_report_csv /mnt/output/analysis_report.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-data-preparation-feature-engineering-error-diagnos
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_data-preparation-feature-engineering-err.py", --team_all_stars_20250730_104054_csv /data/team_all_stars_20250730-104054.csv --team_manager_20250730_104054_csv /data/team_manager_20250730-104054.csv --processed_manager_20250730_104054_csv /data/processed_manager_20250730-104054.csv --all_star_csv /data/all_star.csv --manager_csv /data/manager.csv --processed_all_star_20250730_104054_csv /data/processed_all_star_20250730-104054.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-statistical-analysis-hypothesis-testing
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_statistical-analysis-hypothesis-testing.py", --advanced_analysis_report_csv /mnt/output/advanced_analysis_report.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-error-recovery-robust-loading
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_error-recovery-robust-loading.py", --all_star_csv /data/all_star.csv --manager_csv /data/manager.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-key-findings-requiring-deeper-analysis
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_key-findings-requiring-deeper-analysis.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-error-recovery-robust-loading-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_error-recovery-robust-loading-phase-2.py", --all_star_csv /data/all_star.csv --manager_csv /data/manager.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-10-error-recovery-robust-loading-phase-3
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_error-recovery-robust-loading-phase-3.py", --all_star_csv /data/all_star.csv --manager_csv /data/manager.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-11-error-recovery-robust-loading-phase-4
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_error-recovery-robust-loading-phase-4.py", --all_star_csv /data/all_star.csv --manager_csv /data/manager.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-12-error-recovery-robust-loading-phase-5
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_error-recovery-robust-loading-phase-5.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-13-error-recovery-robust-loading-phase-6
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_error-recovery-robust-loading-phase-6.py", --all_star_csv /data/all_star.csv --manager_csv /data/manager.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-14-error-recovery-robust-loading-phase-7
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_14_error-recovery-robust-loading-phase-7.py", --all_star_csv /data/all_star.csv --manager_csv /data/manager.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-15-error-recovery-robust-loading-phase-8
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_15_error-recovery-robust-loading-phase-8.py", --all_star_csv /data/all_star.csv --manager_csv /data/manager.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

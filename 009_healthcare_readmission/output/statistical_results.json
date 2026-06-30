@@ -1,0 +1,62 @@
+{
+  "chi2_gender": {
+    "chi2": 0.43,
+    "p": 0.5105,
+    "sig": false
+  },
+  "chi2_race": {
+    "chi2": 7.68,
+    "p": 0.1039,
+    "sig": false
+  },
+  "chi2_insurance_type": {
+    "chi2": 8.5,
+    "p": 0.0367,
+    "sig": true
+  },
+  "chi2_has_diabetes": {
+    "chi2": 9.37,
+    "p": 0.0022,
+    "sig": true
+  },
+  "chi2_has_heart_condition": {
+    "chi2": 4.0,
+    "p": 0.0455,
+    "sig": true
+  },
+  "chi2_smoker": {
+    "chi2": 15.27,
+    "p": 0.0001,
+    "sig": true
+  },
+  "ttest_age": {
+    "t": -5.89,
+    "p": 0.0,
+    "sig": true
+  },
+  "ttest_bmi": {
+    "t": -1.49,
+    "p": 0.1372,
+    "sig": false
+  },
+  "ttest_n_conditions": {
+    "t": 0.15,
+    "p": 0.8831,
+    "sig": false
+  },
+  "ttest_avg_los": {
+    "t": -2.21,
+    "p": 0.0272,
+    "sig": true
+  },
+  "ttest_icu_stays": {
+    "t": -2.56,
+    "p": 0.0107,
+    "sig": true
+  },
+  "ttest_n_admissions": {
+    "t": -3.6,
+    "p": 0.0003,
+    "sig": true
+  }
+}

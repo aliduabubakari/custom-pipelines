@@ -1,0 +1,39 @@
+{
+  "dropout_by_major": {
+    "Arts": 0.2778,
+    "Business": 0.2759,
+    "Education": 0.2703,
+    "Engineering": 0.3333,
+    "Science": 0.2989,
+    "Undeclared": 0.3457
+  },
+  "dropout_by_level": {
+    "Freshman": 0.3396,
+    "Junior": 0.2925,
+    "Senior": 0.2697,
+    "Sophomore": 0.2808
+  },
+  "dropout_by_gender": {
+    "F": 0.2984,
+    "M": 0.3016
+  },
+  "dropout_by_housing": {
+    "Commuter": 0.3091,
+    "Off-Campus": 0.3022,
+    "On-Campus": 0.2933
+  },
+  "dropout_by_scholarship": {
+    "0": 0.315,
+    "1": 0.2717
+  },
+  "top_correlations": {
+    "gpa_cumulative": -0.27918476594466674,
+    "final_grade": -0.26685989829236173,
+    "gpa_risk": 0.23958801283240785,
+    "risk_score": 0.2385424644591727,
+    "engagement_ratio": -0.1869201241439956,
+    "total_logins": -0.18692012414399548,
+    "avg_score": -0.15004169193181896,
+    "min_score": -0.11551359873394204
+  }
+}

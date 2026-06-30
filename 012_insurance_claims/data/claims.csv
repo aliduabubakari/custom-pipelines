@@ -1,0 +1,1001 @@
+claim_id,claim_type,claim_amount,policy_type,policy_age_months,claimant_age,claimant_gender,incident_date,report_date,incident_hour,report_delay_days,previous_claims,witness_present,police_report,injury_claimed,claim_status,is_fraudulent,claim_severity
+CLM_00001,Life,785,Basic,3,39,M,2023-04-18,2023-12-09,23,1.2,0,1,0,0,Approved,0,Medium
+CLM_00002,Property,159,Basic,3,68,M,2023-12-11,2023-12-24,18,1.4,2,0,1,1,Under Investigation,0,Medium
+CLM_00003,Travel,1213,Premium,2,23,F,2023-09-17,2023-12-29,16,0.9,2,0,1,1,Under Investigation,0,High
+CLM_00004,Property,1003,Standard,65,26,F,2023-08-25,2023-12-21,12,0.5,5,0,0,0,Denied,0,High
+CLM_00005,Health,2324,Basic,44,52,M,2023-05-19,2023-12-28,22,3.3,3,1,1,1,Approved,0,Low
+CLM_00006,Health,128,Basic,4,40,M,2023-05-09,2023-12-18,6,1.9,0,1,0,0,Approved,0,Low
+CLM_00007,Home,512,Basic,119,79,M,2023-03-24,2023-12-03,19,6.7,1,0,1,0,Approved,0,Medium
+CLM_00008,Property,1854,Standard,12,56,F,2023-09-10,2023-12-28,16,0.2,3,0,0,1,Pending,0,Low
+CLM_00009,Travel,13153,Premium,17,55,F,2023-02-10,2023-12-13,22,3.3,2,1,1,1,Denied,0,Low
+CLM_00010,Health,23107,Basic,39,18,M,2023-08-03,2023-12-03,6,0.6,1,1,0,0,Under Investigation,0,Medium
+CLM_00011,Auto,2019,Platinum,54,50,F,2023-09-07,2023-12-22,15,5.6,3,1,1,1,Pending,0,Medium
+CLM_00012,Auto,3676,Premium,8,24,M,2023-08-26,2024-01-01,0,2.0,2,1,1,1,Approved,0,Medium
+CLM_00013,Property,8556,Premium,4,52,F,2023-11-13,2023-12-16,4,0.8,3,1,1,0,Under Investigation,0,High
+CLM_00014,Travel,2568,Platinum,18,42,F,2023-05-23,2023-12-11,22,0.9,3,1,1,0,Pending,0,Critical
+CLM_00015,Home,1068,Standard,119,43,M,2023-03-01,2023-12-08,21,1.3,1,1,0,0,Pending,0,Low
+CLM_00016,Property,3939,Standard,58,80,F,2023-08-29,2023-12-11,22,3.3,1,1,0,0,Under Investigation,0,Medium
+CLM_00017,Life,9505,Standard,16,30,F,2023-08-30,2023-12-23,14,3.6,3,0,1,0,Approved,0,Low
+CLM_00018,Travel,25274,Basic,117,18,F,2023-06-26,2023-12-26,21,3.8,2,1,1,1,Approved,0,Medium
+CLM_00019,Health,2242,Basic,69,51,F,2023-05-23,2023-12-23,4,1.5,2,1,1,1,Denied,0,Low
+CLM_00020,Home,3241,Platinum,65,50,F,2023-02-05,2023-12-22,18,5.2,3,0,0,0,Approved,0,Low
+CLM_00021,Health,13046,Standard,109,46,F,2023-05-29,2023-12-12,6,0.4,2,1,1,0,Pending,0,Medium
+CLM_00022,Health,348,Premium,30,34,M,2023-10-31,2023-12-13,12,4.0,3,1,1,1,Approved,0,Low
+CLM_00023,Auto,1819,Platinum,85,70,M,2023-08-10,2023-12-08,4,1.0,3,0,1,1,Under Investigation,0,Low
+CLM_00024,Health,2057,Basic,46,30,F,2023-07-15,2023-12-24,11,6.0,1,1,1,0,Approved,0,Critical
+CLM_00025,Travel,11911,Platinum,90,36,M,2023-08-28,2023-12-30,11,2.5,3,0,1,1,Denied,0,High
+CLM_00026,Auto,8169,Basic,44,62,F,2023-07-12,2023-12-04,0,0.8,2,0,0,1,Under Investigation,0,Low
+CLM_00027,Health,3069,Premium,74,33,F,2023-01-08,2023-12-21,15,4.0,3,0,1,0,Pending,0,Medium
+CLM_00028,Life,1198,Platinum,13,63,M,2023-04-23,2023-12-27,19,2.8,3,1,1,1,Approved,0,Critical
+CLM_00029,Home,679,Standard,33,18,M,2023-02-24,2023-12-27,21,5.3,4,1,1,1,Under Investigation,0,Medium
+CLM_00030,Travel,2047,Basic,95,56,F,2023-04-26,2023-12-31,16,4.2,2,1,1,0,Under Investigation,0,Critical
+CLM_00031,Property,2211,Basic,75,68,M,2023-06-23,2023-12-05,14,4.6,0,1,1,1,Pending,0,Low
+CLM_00032,Home,3790,Premium,84,51,F,2023-11-09,2023-12-31,23,5.5,4,0,1,0,Approved,0,Low
+CLM_00033,Health,4628,Basic,21,22,F,2023-10-01,2023-12-23,17,2.8,3,0,0,0,Pending,0,Low
+CLM_00034,Home,1901,Standard,94,80,F,2023-11-01,2023-12-16,14,3.0,0,0,1,1,Approved,0,Low
+CLM_00035,Property,7498,Standard,23,35,F,2023-03-13,2023-12-30,23,0.4,1,0,0,1,Approved,0,Medium
+CLM_00036,Auto,1372,Basic,40,59,M,2023-09-22,2023-12-27,14,4.0,5,1,1,0,Pending,0,Medium
+CLM_00037,Auto,1931,Basic,24,72,M,2023-04-29,2023-12-30,10,0.3,1,1,1,1,Approved,0,Medium
+CLM_00038,Life,2949,Premium,19,37,M,2023-08-14,2023-12-18,4,0.6,4,1,1,0,Pending,0,Critical
+CLM_00039,Travel,1363,Standard,40,19,F,2023-02-14,2023-12-28,22,2.4,0,0,0,0,Pending,0,High
+CLM_00040,Auto,5124,Standard,64,28,M,2023-05-17,2023-12-19,0,4.1,3,1,1,0,Approved,0,Medium
+CLM_00041,Property,8479,Standard,63,32,M,2023-08-01,2023-12-16,18,2.9,2,1,1,1,Under Investigation,0,Medium
+CLM_00042,Health,317,Premium,103,44,F,2023-07-28,2023-12-27,14,2.9,1,1,1,1,Approved,0,Low
+CLM_00043,Home,5296,Standard,15,46,F,2023-04-15,2023-12-04,3,1.8,1,0,1,1,Pending,0,High
+CLM_00044,Life,7056,Premium,12,30,F,2023-06-05,2023-12-08,22,1.9,2,0,1,1,Approved,0,Critical
+CLM_00045,Travel,3866,Basic,1,63,M,2023-01-20,2023-12-19,7,5.5,3,0,1,0,Approved,0,Low
+CLM_00046,Travel,15940,Basic,2,24,F,2023-01-19,2023-12-16,19,2.3,2,1,0,1,Approved,0,Medium
+CLM_00047,Life,7826,Standard,105,66,F,2023-09-05,2023-12-11,20,2.2,2,0,1,1,Pending,0,Low
+CLM_00048,Health,3780,Basic,78,64,F,2023-06-21,2023-12-11,15,2.5,1,1,1,1,Approved,0,Low
+CLM_00049,Travel,3400,Standard,72,71,M,2023-05-07,2023-12-28,22,0.9,6,0,1,0,Approved,0,Low
+CLM_00050,Property,13356,Platinum,7,24,M,2023-08-03,2023-12-12,13,1.0,1,0,0,1,Approved,0,High
+CLM_00051,Travel,671,Standard,53,61,M,2023-01-24,2023-12-21,5,4.5,2,0,1,0,Under Investigation,0,High
+CLM_00052,Auto,45897,Premium,58,46,M,2023-09-25,2023-12-10,21,5.4,2,1,1,1,Under Investigation,0,Medium
+CLM_00053,Home,33080,Premium,91,57,F,2023-04-08,2023-12-20,20,0.9,1,1,0,1,Approved,0,Medium
+CLM_00054,Home,321,Platinum,40,28,F,2023-07-21,2023-12-16,18,0.8,1,1,1,1,Approved,0,Critical
+CLM_00055,Property,1064,Basic,66,57,M,2023-08-25,2023-12-08,12,0.5,2,1,1,0,Approved,0,Low
+CLM_00056,Life,808,Standard,55,64,F,2023-02-17,2023-12-17,16,0.4,1,1,1,1,Denied,0,High
+CLM_00057,Property,15150,Basic,85,24,F,2023-01-31,2023-12-12,15,7.8,1,1,0,0,Approved,1,High
+CLM_00058,Property,2751,Standard,40,72,M,2023-01-02,2023-12-26,12,0.2,3,0,1,1,Approved,0,Medium
+CLM_00059,Travel,590,Basic,96,56,F,2023-12-03,2023-12-03,22,0.6,1,0,0,0,Pending,0,Low
+CLM_00060,Auto,1746,Standard,18,79,M,2023-08-01,2023-12-17,13,1.1,2,0,1,0,Approved,0,High
+CLM_00061,Life,5858,Platinum,117,74,F,2023-05-05,2023-12-07,7,8.6,5,1,1,0,Under Investigation,0,High
+CLM_00062,Health,6359,Standard,73,31,M,2023-09-25,2023-12-22,12,0.8,4,1,0,0,Under Investigation,0,Critical
+CLM_00063,Life,2744,Platinum,90,35,F,2023-11-25,2023-12-05,5,0.9,2,0,1,1,Approved,0,High
+CLM_00064,Property,12666,Standard,92,76,M,2023-03-03,2023-12-24,5,2.2,2,0,0,1,Approved,0,High
+CLM_00065,Life,2439,Standard,12,56,F,2023-05-22,2023-12-20,3,2.4,1,1,1,1,Approved,0,Medium
+CLM_00066,Travel,2060,Premium,96,81,M,2023-12-20,2023-12-11,4,0.3,3,1,1,0,Approved,0,High
+CLM_00067,Property,1524,Premium,32,68,M,2023-11-04,2023-12-10,10,5.2,0,1,0,1,Approved,0,Medium
+CLM_00068,Travel,875,Basic,93,38,M,2023-01-09,2023-12-06,16,9.9,2,1,1,0,Approved,1,Medium
+CLM_00069,Property,1270,Basic,93,70,F,2023-10-14,2023-12-06,7,0.5,3,1,1,1,Approved,0,Low
+CLM_00070,Life,21284,Basic,88,28,F,2023-06-10,2023-12-16,21,2.6,1,0,0,0,Pending,1,Medium
+CLM_00071,Health,7653,Premium,76,63,F,2023-10-13,2023-12-11,21,4.1,0,1,1,1,Approved,0,Medium
+CLM_00072,Home,10175,Basic,114,32,F,2023-09-17,2023-12-10,5,2.5,2,1,1,0,Under Investigation,0,Medium
+CLM_00073,Auto,3202,Premium,22,43,M,2023-12-29,2023-12-24,19,2.4,5,0,1,1,Pending,0,High
+CLM_00074,Auto,2029,Platinum,44,35,M,2023-08-04,2023-12-28,22,1.7,1,1,1,1,Approved,1,High
+CLM_00075,Travel,593,Premium,108,37,F,2023-08-02,2023-12-15,23,1.7,2,1,1,0,Denied,0,Medium
+CLM_00076,Home,14477,Premium,15,43,F,2023-09-23,2023-12-17,2,2.9,2,1,1,0,Pending,0,Medium
+CLM_00077,Property,411,Platinum,89,45,F,2023-07-22,2023-12-28,1,0.3,2,0,1,1,Approved,0,Low
+CLM_00078,Health,2488,Standard,1,74,F,2023-03-23,2023-12-08,4,0.9,2,1,1,1,Denied,0,High
+CLM_00079,Life,3672,Standard,20,43,M,2023-12-31,2023-12-10,13,0.2,0,0,0,0,Approved,0,Medium
+CLM_00080,Life,3523,Platinum,45,69,F,2023-05-12,2023-12-05,11,2.3,2,1,1,0,Denied,0,Medium
+CLM_00081,Travel,2634,Basic,31,31,M,2023-03-03,2023-12-28,13,7.5,3,1,1,0,Pending,0,Medium
+CLM_00082,Auto,9958,Premium,13,40,M,2023-02-04,2024-01-01,5,1.7,4,0,1,0,Approved,0,Medium
+CLM_00083,Travel,8516,Standard,74,83,F,2023-04-11,2023-12-30,10,2.8,2,1,1,1,Under Investigation,0,High
+CLM_00084,Auto,562,Standard,117,32,M,2023-03-15,2023-12-22,22,1.7,6,0,0,0,Approved,0,Low
+CLM_00085,Life,1048,Standard,77,21,F,2023-01-21,2023-12-03,3,3.8,2,0,1,0,Pending,0,High
+CLM_00086,Auto,440,Platinum,22,38,F,2023-05-26,2023-12-24,9,0.4,3,1,1,0,Approved,1,Critical
+CLM_00087,Auto,7307,Standard,69,64,M,2023-09-15,2023-12-31,3,0.5,3,1,1,0,Approved,0,Low
+CLM_00088,Health,1526,Standard,39,58,M,2023-03-27,2023-12-05,20,3.4,2,1,1,0,Under Investigation,0,High
+CLM_00089,Life,1483,Basic,44,44,F,2023-08-05,2023-12-25,16,5.3,1,1,1,1,Approved,0,Medium
+CLM_00090,Property,2509,Standard,47,72,F,2023-09-17,2023-12-03,3,9.8,3,1,1,0,Approved,0,Critical
+CLM_00091,Health,803,Platinum,76,55,F,2023-05-20,2023-12-04,6,6.0,5,0,1,0,Approved,0,Low
+CLM_00092,Health,3203,Premium,101,29,M,2023-11-13,2023-12-23,21,2.1,3,1,1,1,Pending,0,High
+CLM_00093,Health,1337,Basic,82,27,M,2023-03-26,2023-12-04,1,0.8,1,1,1,0,Pending,0,High
+CLM_00094,Travel,4206,Premium,68,62,F,2023-12-20,2023-12-05,20,0.1,1,0,1,0,Approved,0,Medium
+CLM_00095,Travel,3161,Standard,31,73,M,2023-10-10,2023-12-24,1,2.0,2,0,0,0,Approved,0,High
+CLM_00096,Life,18497,Basic,50,80,M,2023-09-07,2023-12-03,19,3.2,1,1,1,1,Pending,0,Low
+CLM_00097,Travel,1492,Basic,90,70,F,2023-07-12,2023-12-29,6,2.9,2,0,0,1,Pending,0,Low
+CLM_00098,Travel,712,Standard,42,30,M,2023-09-18,2023-12-16,19,5.9,2,1,1,1,Approved,0,Low
+CLM_00099,Home,39686,Premium,44,82,M,2023-09-22,2023-12-25,23,6.4,3,0,0,1,Approved,1,Low
+CLM_00100,Auto,591,Standard,118,25,F,2023-08-16,2023-12-27,10,1.6,2,0,1,1,Denied,0,Low
+CLM_00101,Auto,663,Basic,91,19,F,2023-04-07,2023-12-12,17,1.2,4,1,1,1,Approved,0,Low
+CLM_00102,Auto,850,Standard,99,49,F,2023-09-04,2023-12-26,18,6.5,3,1,1,0,Denied,0,Medium
+CLM_00103,Property,8658,Premium,13,19,M,2023-06-02,2023-12-18,10,0.9,1,0,1,0,Approved,0,Medium
+CLM_00104,Property,47121,Standard,101,25,F,2023-06-29,2023-12-17,6,2.6,2,1,1,1,Approved,0,Low
+CLM_00105,Home,631,Premium,90,75,F,2023-12-20,2023-12-16,8,2.4,3,0,1,1,Denied,1,High
+CLM_00106,Property,1118,Premium,46,21,F,2023-11-05,2023-12-20,7,0.6,3,0,1,0,Pending,0,Low
+CLM_00107,Home,27821,Premium,24,47,F,2023-09-06,2023-12-29,16,3.0,3,1,1,0,Approved,1,Medium
+CLM_00108,Home,1481,Premium,91,32,F,2023-11-15,2023-12-19,5,3.0,3,1,1,1,Approved,0,Medium
+CLM_00109,Home,3530,Standard,84,66,M,2023-10-19,2023-12-28,18,1.4,2,1,1,0,Under Investigation,0,Critical
+CLM_00110,Auto,1707,Standard,92,24,M,2023-05-26,2023-12-19,23,0.2,2,0,0,1,Approved,0,High
+CLM_00111,Life,3672,Basic,15,49,F,2023-06-12,2023-12-13,17,1.6,2,0,1,0,Under Investigation,0,High
+CLM_00112,Property,7731,Basic,106,50,M,2023-08-02,2023-12-04,8,0.1,4,0,1,1,Denied,0,Medium
+CLM_00113,Home,2699,Standard,51,56,F,2023-10-17,2023-12-09,1,0.3,2,1,0,0,Under Investigation,0,High
+CLM_00114,Auto,1373,Basic,116,31,M,2023-07-17,2023-12-07,23,0.4,2,1,1,1,Approved,0,Medium
+CLM_00115,Life,2400,Basic,41,53,M,2023-10-08,2023-12-25,9,0.3,5,1,1,1,Pending,0,Low
+CLM_00116,Life,682,Premium,8,49,F,2023-07-09,2023-12-22,5,0.5,2,0,1,1,Under Investigation,0,Low
+CLM_00117,Health,5572,Standard,27,42,M,2023-01-13,2023-12-29,5,11.7,3,1,1,0,Denied,0,Low
+CLM_00118,Travel,5326,Basic,90,38,F,2023-04-28,2023-12-07,21,5.3,5,0,0,0,Approved,0,Medium
+CLM_00119,Home,757,Standard,66,57,F,2023-07-29,2023-12-18,0,0.4,3,0,1,0,Under Investigation,0,Low
+CLM_00120,Health,3469,Standard,100,34,M,2023-01-11,2023-12-05,20,1.6,1,1,0,1,Denied,0,Medium
+CLM_00121,Health,458,Basic,84,42,F,2023-01-22,2023-12-19,18,11.3,1,1,0,1,Approved,0,Critical
+CLM_00122,Home,8201,Platinum,38,70,M,2023-07-21,2023-12-25,18,6.2,3,0,0,1,Approved,0,High
+CLM_00123,Travel,841,Premium,110,58,F,2023-08-27,2023-12-10,3,6.3,0,1,1,0,Approved,0,Low
+CLM_00124,Property,3242,Basic,81,82,F,2023-03-06,2023-12-10,8,7.2,2,1,1,0,Denied,0,Medium
+CLM_00125,Home,1961,Platinum,86,83,F,2023-07-23,2023-12-06,3,1.5,4,1,1,1,Approved,0,Low
+CLM_00126,Auto,3386,Platinum,35,65,M,2023-01-26,2023-12-09,12,2.0,1,1,1,1,Approved,0,High
+CLM_00127,Life,2056,Premium,41,34,F,2023-03-30,2023-12-14,8,1.5,2,1,1,0,Denied,0,Low
+CLM_00128,Health,1846,Standard,90,25,M,2023-01-19,2023-12-19,11,3.4,3,0,0,0,Pending,0,High
+CLM_00129,Home,10847,Premium,97,32,M,2023-04-18,2023-12-04,14,1.6,0,1,1,1,Approved,0,Medium
+CLM_00130,Property,5125,Premium,90,79,M,2023-08-27,2023-12-08,10,2.0,5,1,1,1,Denied,0,Medium
+CLM_00131,Health,3285,Platinum,41,80,M,2023-01-06,2023-12-22,2,1.8,1,1,1,1,Denied,0,High
+CLM_00132,Home,2199,Basic,43,28,M,2023-03-13,2023-12-28,9,3.1,2,1,1,1,Pending,0,Low
+CLM_00133,Auto,2820,Basic,51,67,F,2023-02-20,2023-12-04,21,7.8,3,1,0,1,Approved,0,Critical
+CLM_00134,Travel,127,Platinum,96,39,F,2023-10-24,2023-12-28,14,0.5,1,1,1,0,Approved,0,High
+CLM_00135,Health,832,Basic,11,18,F,2023-03-27,2023-12-04,13,3.4,0,1,1,0,Approved,0,Critical
+CLM_00136,Life,847,Premium,19,81,M,2023-09-06,2023-12-31,4,1.9,2,1,1,1,Approved,0,High
+CLM_00137,Life,3617,Standard,48,69,F,2023-10-23,2023-12-10,5,0.5,0,0,0,0,Denied,0,Medium
+CLM_00138,Health,2284,Premium,48,62,M,2023-01-29,2023-12-16,14,2.6,3,0,0,0,Approved,0,Low
+CLM_00139,Property,7095,Premium,21,83,M,2023-08-02,2023-12-30,2,3.5,1,0,1,0,Under Investigation,0,High
+CLM_00140,Auto,2569,Premium,73,18,F,2023-11-27,2023-12-31,12,4.2,0,0,1,1,Approved,0,High
+CLM_00141,Property,5241,Premium,40,34,M,2023-07-23,2023-12-23,18,2.2,2,0,1,0,Denied,0,High
+CLM_00142,Life,2132,Standard,65,34,M,2023-07-27,2023-12-12,21,1.2,1,0,0,0,Denied,0,Low
+CLM_00143,Property,14198,Standard,63,21,M,2023-11-03,2023-12-10,20,4.9,3,1,1,0,Under Investigation,0,High
+CLM_00144,Health,1355,Basic,50,25,M,2023-02-10,2023-12-21,21,3.7,2,1,1,0,Approved,0,Low
+CLM_00145,Health,3824,Platinum,33,77,M,2023-05-29,2023-12-09,16,3.5,4,1,0,0,Under Investigation,0,Low
+CLM_00146,Life,4715,Platinum,101,65,M,2023-12-04,2023-12-24,18,3.1,1,1,0,1,Denied,0,Low
+CLM_00147,Auto,3881,Standard,34,26,F,2023-04-12,2023-12-26,3,3.4,4,0,1,1,Approved,0,High
+CLM_00148,Property,3754,Standard,47,70,F,2023-11-16,2023-12-20,21,4.6,1,0,1,0,Approved,0,Medium
+CLM_00149,Auto,1063,Platinum,16,64,M,2023-09-19,2023-12-05,5,4.3,3,1,0,0,Denied,0,High
+CLM_00150,Home,2179,Standard,100,24,F,2023-09-12,2023-12-14,11,0.0,2,0,1,1,Denied,0,Medium
+CLM_00151,Property,4335,Premium,9,22,F,2023-09-27,2023-12-13,11,0.2,1,1,1,0,Approved,0,Low
+CLM_00152,Life,8098,Premium,111,45,M,2023-02-14,2023-12-16,12,5.0,1,1,1,1,Pending,0,Low
+CLM_00153,Property,806,Platinum,62,79,F,2023-10-15,2023-12-23,20,9.8,1,0,1,1,Under Investigation,0,Medium
+CLM_00154,Travel,1780,Platinum,19,72,F,2023-07-31,2023-12-27,11,0.9,3,0,1,1,Under Investigation,0,Critical
+CLM_00155,Travel,10508,Premium,88,61,M,2023-10-19,2023-12-29,10,3.3,1,0,1,0,Pending,0,Low
+CLM_00156,Life,3204,Premium,100,26,F,2023-04-28,2023-12-10,2,6.8,1,1,1,0,Denied,1,Medium
+CLM_00157,Life,2693,Standard,109,37,F,2023-01-23,2023-12-23,0,0.8,4,1,1,0,Under Investigation,0,Low
+CLM_00158,Travel,1924,Premium,47,43,F,2023-08-21,2023-12-12,18,1.0,2,1,1,1,Pending,0,Low
+CLM_00159,Auto,7297,Basic,24,44,F,2023-06-26,2023-12-29,2,2.1,2,1,1,1,Approved,0,High
+CLM_00160,Travel,1498,Basic,54,74,F,2023-07-17,2023-12-26,8,0.0,0,0,0,0,Under Investigation,0,Low
+CLM_00161,Life,12846,Premium,78,74,F,2023-11-15,2023-12-11,4,3.7,1,1,0,1,Pending,0,Low
+CLM_00162,Health,17976,Basic,48,69,M,2023-08-01,2023-12-06,9,2.0,2,1,0,1,Pending,0,Medium
+CLM_00163,Auto,701,Basic,39,74,M,2023-04-25,2023-12-24,5,7.6,0,0,1,0,Under Investigation,0,High
+CLM_00164,Auto,5163,Platinum,116,52,F,2023-10-15,2023-12-07,3,1.5,2,1,1,0,Pending,1,Medium
+CLM_00165,Property,5436,Basic,43,37,M,2023-08-03,2023-12-31,2,9.1,3,1,1,1,Approved,0,Medium
+CLM_00166,Health,593,Basic,17,23,M,2023-12-27,2023-12-08,20,1.1,1,1,1,0,Approved,0,Low
+CLM_00167,Auto,780,Basic,93,37,M,2023-03-27,2023-12-15,13,4.6,4,1,1,0,Pending,0,Critical
+CLM_00168,Home,18330,Premium,80,19,F,2023-03-27,2023-12-23,2,0.7,2,1,0,1,Approved,0,Critical
+CLM_00169,Life,1546,Standard,27,27,M,2023-01-14,2023-12-17,1,3.7,2,1,1,0,Approved,0,Low
+CLM_00170,Health,2303,Standard,83,18,F,2023-10-20,2023-12-20,3,8.3,3,1,1,0,Denied,0,Medium
+CLM_00171,Health,1056,Premium,92,34,M,2023-11-21,2023-12-23,8,1.7,2,1,0,1,Under Investigation,0,Low
+CLM_00172,Life,1289,Basic,75,33,F,2023-09-29,2023-12-17,17,4.0,0,0,1,0,Pending,0,Low
+CLM_00173,Property,4430,Standard,60,45,M,2023-07-03,2023-12-28,5,4.8,3,1,1,0,Pending,0,Low
+CLM_00174,Life,2973,Standard,11,75,M,2023-06-10,2023-12-29,17,5.2,1,1,1,0,Approved,0,Low
+CLM_00175,Auto,1649,Premium,92,38,F,2023-09-14,2023-12-18,15,2.2,1,1,0,0,Approved,0,Low
+CLM_00176,Home,227,Standard,80,78,M,2023-12-26,2023-12-14,9,1.4,5,1,1,1,Denied,0,High
+CLM_00177,Life,4935,Standard,116,40,M,2023-04-29,2023-12-25,4,1.6,1,1,1,1,Approved,0,Medium
+CLM_00178,Property,2127,Standard,11,56,M,2023-11-15,2023-12-11,3,0.4,0,0,1,1,Pending,0,Critical
+CLM_00179,Auto,444,Standard,1,51,M,2023-05-07,2023-12-20,17,1.2,2,1,1,1,Approved,0,Critical
+CLM_00180,Auto,1690,Platinum,43,42,M,2023-04-23,2023-12-30,20,4.5,1,1,1,1,Approved,0,Low
+CLM_00181,Life,10522,Standard,83,36,F,2023-04-05,2023-12-30,21,4.7,2,0,1,1,Approved,0,Low
+CLM_00182,Home,8251,Platinum,45,37,F,2023-05-25,2023-12-06,16,0.2,0,0,1,0,Denied,0,Medium
+CLM_00183,Property,521,Basic,92,48,F,2023-02-18,2023-12-09,1,3.3,2,1,0,1,Pending,0,High
+CLM_00184,Travel,14854,Premium,71,26,M,2023-05-26,2023-12-27,18,2.9,0,1,1,1,Pending,0,High
+CLM_00185,Life,3514,Premium,59,74,F,2023-05-09,2023-12-06,10,0.9,1,1,1,1,Denied,0,Medium
+CLM_00186,Home,1002,Premium,61,18,F,2023-07-12,2023-12-05,14,3.0,3,1,0,1,Under Investigation,0,Low
+CLM_00187,Travel,5783,Premium,8,18,M,2023-10-30,2023-12-11,4,4.1,1,0,1,0,Pending,0,Low
+CLM_00188,Home,1945,Basic,54,55,F,2023-12-05,2023-12-13,17,5.6,3,1,1,1,Denied,0,Low
+CLM_00189,Health,880,Basic,31,41,F,2023-01-10,2023-12-10,15,1.1,3,1,1,1,Pending,1,High
+CLM_00190,Home,1340,Premium,11,72,F,2023-06-18,2023-12-06,19,2.5,2,1,1,0,Under Investigation,0,Medium
+CLM_00191,Property,1464,Standard,89,71,F,2023-01-27,2024-01-01,4,0.2,4,1,1,0,Denied,0,Medium
+CLM_00192,Auto,1993,Basic,66,54,M,2023-05-16,2023-12-31,23,9.2,6,1,1,1,Approved,0,Low
+CLM_00193,Travel,1131,Premium,27,70,M,2023-10-05,2023-12-24,12,11.2,3,1,0,1,Pending,0,Critical
+CLM_00194,Travel,2394,Basic,58,51,M,2023-03-31,2023-12-15,10,4.7,4,0,0,0,Approved,0,Critical
+CLM_00195,Property,5721,Basic,13,53,M,2023-03-25,2023-12-11,9,0.9,0,1,1,0,Under Investigation,0,Low
+CLM_00196,Property,298,Standard,24,61,F,2023-02-19,2023-12-03,5,4.5,1,1,1,1,Approved,0,High
+CLM_00197,Travel,718,Premium,9,57,F,2023-05-28,2023-12-06,22,5.5,4,1,1,1,Pending,0,High
+CLM_00198,Life,9336,Standard,101,23,M,2023-10-16,2023-12-08,7,0.7,2,1,1,0,Under Investigation,0,Critical
+CLM_00199,Travel,1021,Standard,22,55,F,2023-04-29,2023-12-25,2,0.6,1,0,1,0,Under Investigation,0,High
+CLM_00200,Life,12279,Premium,84,39,F,2023-12-19,2023-12-20,8,0.9,1,1,1,1,Denied,0,Low
+CLM_00201,Auto,567,Standard,113,45,M,2023-06-26,2023-12-17,14,7.2,3,1,1,1,Denied,0,Critical
+CLM_00202,Home,12161,Basic,83,32,M,2023-07-05,2023-12-23,20,0.1,0,1,0,1,Approved,0,High
+CLM_00203,Auto,2111,Basic,57,25,F,2023-07-30,2023-12-03,14,1.9,1,1,1,0,Approved,0,Medium
+CLM_00204,Auto,4164,Platinum,105,66,M,2023-08-15,2023-12-09,12,5.3,3,0,1,1,Under Investigation,0,Low
+CLM_00205,Auto,800,Standard,52,75,F,2023-09-18,2023-12-29,16,1.0,3,1,1,0,Approved,0,Low
+CLM_00206,Health,3050,Platinum,31,31,M,2023-12-07,2023-12-31,8,0.8,2,0,0,0,Under Investigation,0,Medium
+CLM_00207,Home,1530,Basic,84,29,M,2023-08-22,2023-12-10,14,1.5,4,0,0,0,Denied,0,Critical
+CLM_00208,Travel,12935,Basic,79,63,M,2023-03-30,2023-12-09,14,9.0,2,0,1,1,Approved,1,High
+CLM_00209,Life,997,Platinum,61,81,M,2023-05-09,2023-12-12,19,0.0,3,1,0,1,Approved,0,Low
+CLM_00210,Home,4954,Basic,103,75,M,2023-07-01,2023-12-18,21,1.7,1,0,0,0,Pending,0,Low
+CLM_00211,Travel,544,Standard,17,34,F,2023-10-03,2023-12-20,12,4.7,3,0,1,0,Under Investigation,0,Low
+CLM_00212,Travel,17909,Premium,23,51,F,2023-03-04,2023-12-28,5,3.4,1,0,0,1,Pending,1,Medium
+CLM_00213,Auto,1976,Standard,35,52,M,2023-09-23,2023-12-30,18,4.5,0,1,1,1,Pending,1,Medium
+CLM_00214,Health,2760,Premium,59,33,F,2023-01-20,2023-12-05,14,1.5,2,1,1,0,Approved,0,Critical
+CLM_00215,Auto,8715,Basic,18,56,F,2023-09-25,2023-12-22,15,1.5,2,1,1,0,Under Investigation,0,Low
+CLM_00216,Life,7177,Standard,63,84,F,2023-08-15,2023-12-22,19,0.7,3,1,1,0,Denied,0,Medium
+CLM_00217,Property,2238,Basic,87,31,M,2023-12-14,2023-12-16,9,0.1,2,0,0,0,Under Investigation,0,Medium
+CLM_00218,Life,200,Basic,58,58,M,2023-02-01,2023-12-30,9,6.8,1,1,0,0,Approved,1,High
+CLM_00219,Travel,817,Standard,113,35,M,2023-06-28,2023-12-07,17,0.2,1,1,1,0,Approved,0,High
+CLM_00220,Life,4506,Standard,63,29,M,2023-04-22,2023-12-22,6,0.4,2,1,0,0,Under Investigation,0,Critical
+CLM_00221,Life,275,Platinum,52,54,M,2023-06-20,2023-12-18,15,1.2,0,0,1,0,Pending,0,High
+CLM_00222,Health,3360,Premium,45,36,M,2023-11-28,2023-12-20,17,0.2,2,0,1,0,Approved,1,Medium
+CLM_00223,Auto,1697,Basic,22,75,F,2023-03-07,2023-12-31,19,3.2,4,0,1,1,Approved,0,Low
+CLM_00224,Health,10544,Standard,96,33,F,2023-03-05,2023-12-26,1,2.9,2,1,1,1,Pending,0,High
+CLM_00225,Home,402,Standard,2,41,F,2023-09-15,2023-12-14,14,0.7,1,0,1,1,Under Investigation,0,Medium
+CLM_00226,Home,6771,Standard,84,44,M,2023-01-30,2023-12-31,21,0.4,2,0,1,0,Approved,0,Low
+CLM_00227,Home,2385,Basic,29,32,F,2023-09-22,2023-12-05,1,3.3,3,0,0,0,Pending,0,High
+CLM_00228,Property,4682,Basic,67,40,F,2023-08-31,2023-12-17,12,3.4,6,0,1,1,Pending,0,Low
+CLM_00229,Property,6367,Premium,41,71,M,2023-11-18,2023-12-31,13,0.4,0,0,1,1,Approved,0,Low
+CLM_00230,Health,628,Basic,66,62,M,2023-05-27,2023-12-08,5,5.0,4,0,1,0,Approved,0,High
+CLM_00231,Property,16354,Platinum,8,46,F,2023-07-24,2023-12-30,16,2.0,4,1,1,0,Pending,0,Low
+CLM_00232,Life,3433,Premium,116,59,F,2023-05-06,2023-12-14,12,5.7,2,1,1,1,Approved,0,Low
+CLM_00233,Health,12290,Basic,116,59,F,2023-10-28,2023-12-30,10,1.0,2,1,1,1,Approved,1,Medium
+CLM_00234,Travel,1287,Platinum,49,24,F,2023-09-01,2023-12-22,19,3.4,5,0,1,1,Approved,0,Medium
+CLM_00235,Auto,1461,Standard,116,62,M,2023-09-13,2023-12-09,16,0.3,1,1,0,1,Pending,0,Medium
+CLM_00236,Home,3666,Platinum,91,69,M,2023-12-31,2023-12-21,6,2.2,1,0,0,1,Approved,0,Low
+CLM_00237,Auto,2577,Basic,43,44,F,2023-02-01,2023-12-08,23,4.9,0,0,0,0,Approved,0,Medium
+CLM_00238,Life,5357,Standard,94,53,F,2023-10-03,2023-12-12,21,1.9,2,0,1,0,Under Investigation,0,Medium
+CLM_00239,Property,5029,Standard,29,50,M,2023-06-25,2023-12-12,8,6.2,5,1,1,0,Approved,1,Medium
+CLM_00240,Health,20786,Platinum,88,39,F,2023-07-13,2023-12-27,17,0.9,2,1,1,0,Approved,0,High
+CLM_00241,Life,2252,Standard,42,70,F,2023-02-05,2023-12-06,21,0.2,0,1,0,0,Approved,0,Low
+CLM_00242,Life,5801,Standard,45,25,M,2023-12-16,2023-12-20,14,2.1,4,1,0,0,Approved,0,Critical
+CLM_00243,Property,124,Standard,26,58,F,2023-03-28,2023-12-22,17,0.6,2,1,1,0,Under Investigation,0,Low
+CLM_00244,Life,11900,Standard,112,84,F,2023-12-26,2023-12-17,0,0.1,2,1,0,0,Approved,0,Low
+CLM_00245,Home,6278,Standard,19,52,M,2023-02-26,2023-12-07,17,3.0,2,1,1,0,Approved,0,Medium
+CLM_00246,Property,5433,Standard,99,57,F,2023-03-13,2023-12-20,16,9.5,4,1,1,0,Pending,0,High
+CLM_00247,Travel,1483,Premium,21,74,M,2023-01-19,2023-12-20,10,1.3,2,0,0,1,Approved,0,Medium
+CLM_00248,Life,853,Premium,87,37,M,2023-04-30,2023-12-12,7,2.8,1,0,1,0,Approved,0,Medium
+CLM_00249,Health,9825,Basic,64,52,F,2023-12-31,2023-12-29,2,0.2,2,0,1,0,Pending,1,Medium
+CLM_00250,Travel,2086,Premium,18,51,M,2023-11-17,2023-12-27,1,0.6,2,1,0,1,Approved,0,High
+CLM_00251,Home,499,Standard,4,33,M,2023-09-24,2023-12-08,7,3.3,2,1,1,1,Denied,0,High
+CLM_00252,Travel,1850,Premium,42,30,F,2023-08-13,2023-12-21,20,0.0,1,0,1,0,Pending,0,High
+CLM_00253,Life,5835,Standard,92,84,F,2023-09-24,2023-12-15,1,10.1,5,0,1,1,Approved,0,Low
+CLM_00254,Property,6098,Platinum,49,33,M,2023-05-14,2023-12-14,5,3.1,4,0,1,1,Under Investigation,1,Medium
+CLM_00255,Travel,4337,Standard,81,63,F,2023-02-04,2023-12-07,5,3.4,1,0,1,0,Approved,0,Low
+CLM_00256,Health,2553,Premium,118,52,M,2023-04-30,2023-12-20,0,2.7,5,0,1,0,Under Investigation,1,Medium
+CLM_00257,Auto,5692,Premium,96,20,F,2023-07-10,2023-12-03,16,1.9,2,1,1,1,Under Investigation,0,Low
+CLM_00258,Life,1501,Standard,119,25,M,2023-06-25,2023-12-18,5,1.3,1,1,0,1,Pending,0,Critical
+CLM_00259,Life,4958,Standard,119,48,F,2023-04-23,2023-12-08,1,0.5,1,0,1,0,Approved,0,High
+CLM_00260,Property,417,Premium,119,19,F,2023-10-08,2023-12-26,16,0.4,2,0,1,1,Approved,0,Critical
+CLM_00261,Health,549,Basic,71,82,M,2023-09-26,2024-01-01,5,4.0,3,0,1,0,Approved,0,Medium
+CLM_00262,Life,7515,Platinum,56,30,F,2023-12-14,2023-12-11,1,0.2,0,0,1,1,Pending,0,High
+CLM_00263,Property,4158,Standard,29,38,F,2023-02-01,2023-12-24,13,1.5,3,0,1,0,Under Investigation,0,Medium
+CLM_00264,Health,1166,Basic,93,39,M,2023-06-03,2023-12-03,22,0.8,1,1,1,0,Under Investigation,0,Low
+CLM_00265,Home,853,Basic,98,52,F,2023-02-27,2023-12-12,23,1.0,1,1,0,1,Approved,0,High
+CLM_00266,Life,1149,Basic,59,40,M,2023-07-04,2023-12-26,3,8.2,0,1,1,1,Denied,0,Medium
+CLM_00267,Health,971,Standard,97,40,M,2023-01-31,2023-12-21,5,4.7,4,1,1,1,Under Investigation,0,Low
+CLM_00268,Travel,4837,Basic,97,58,M,2023-08-03,2023-12-26,14,3.0,3,1,1,1,Approved,0,Medium
+CLM_00269,Property,5695,Premium,42,68,F,2023-06-11,2023-12-09,0,0.7,3,1,1,1,Denied,0,Low
+CLM_00270,Health,1588,Basic,48,60,M,2023-07-19,2023-12-24,0,5.8,3,0,0,0,Approved,0,Critical
+CLM_00271,Home,531,Premium,75,38,F,2023-07-02,2023-12-04,17,10.1,1,1,1,0,Approved,0,Critical
+CLM_00272,Home,3828,Basic,108,26,M,2023-10-14,2023-12-06,19,2.6,0,1,0,1,Under Investigation,0,Medium
+CLM_00273,Home,7147,Premium,63,20,M,2023-11-13,2023-12-10,11,4.3,2,1,1,1,Pending,0,Medium
+CLM_00274,Life,4990,Standard,72,46,M,2023-01-18,2023-12-27,9,0.2,0,1,0,1,Pending,0,Low
+CLM_00275,Auto,2592,Basic,78,43,M,2023-03-03,2023-12-29,11,9.8,4,0,0,0,Approved,0,Medium
+CLM_00276,Life,6506,Platinum,6,81,F,2023-03-29,2023-12-15,18,1.3,3,0,1,1,Approved,0,Medium
+CLM_00277,Health,8300,Basic,37,26,M,2023-09-30,2023-12-27,2,0.5,2,0,0,0,Pending,0,High
+CLM_00278,Travel,6041,Premium,67,79,M,2023-04-19,2023-12-21,8,5.2,2,0,0,1,Denied,0,High
+CLM_00279,Home,4567,Premium,12,19,F,2023-04-26,2023-12-22,18,2.0,1,0,1,1,Approved,1,High
+CLM_00280,Home,29975,Standard,9,18,F,2023-03-13,2023-12-11,6,6.7,2,1,1,1,Approved,0,Low
+CLM_00281,Health,2624,Basic,92,74,F,2023-01-14,2023-12-21,23,1.9,3,0,0,1,Denied,0,Low
+CLM_00282,Home,16949,Standard,18,64,M,2023-05-17,2023-12-31,6,1.7,2,1,1,0,Denied,0,Medium
+CLM_00283,Travel,2109,Standard,94,36,F,2023-03-28,2023-12-06,3,5.7,4,0,1,1,Approved,0,Medium
+CLM_00284,Auto,676,Basic,76,19,M,2023-09-15,2023-12-05,7,2.5,1,1,1,1,Approved,0,Medium
+CLM_00285,Home,876,Standard,7,57,F,2023-01-11,2023-12-18,20,1.1,5,0,1,0,Approved,0,Medium
+CLM_00286,Travel,2936,Standard,104,48,M,2023-01-04,2023-12-08,15,1.3,2,0,1,0,Approved,0,Medium
+CLM_00287,Travel,2327,Premium,109,75,F,2023-10-18,2023-12-23,13,0.6,0,1,1,0,Pending,0,Critical
+CLM_00288,Health,6091,Premium,118,21,M,2023-01-30,2023-12-25,18,0.8,0,0,1,0,Pending,0,Medium
+CLM_00289,Travel,1324,Premium,116,18,M,2023-01-14,2023-12-07,14,1.0,2,0,1,1,Pending,0,High
+CLM_00290,Home,22498,Standard,111,48,M,2023-07-17,2023-12-17,23,0.4,3,1,1,1,Denied,0,Medium
+CLM_00291,Travel,2548,Standard,55,73,F,2023-01-15,2023-12-21,17,2.0,3,0,1,1,Approved,1,Critical
+CLM_00292,Travel,3247,Premium,109,61,M,2023-04-27,2023-12-21,3,1.1,2,0,1,1,Approved,0,Medium
+CLM_00293,Auto,26267,Platinum,78,47,M,2023-11-13,2023-12-24,7,0.4,0,0,0,0,Approved,0,Critical
+CLM_00294,Health,2460,Standard,110,37,F,2023-07-03,2023-12-08,20,8.7,4,1,0,1,Approved,1,Low
+CLM_00295,Auto,1149,Basic,56,72,F,2023-06-17,2023-12-14,19,0.4,2,0,1,1,Pending,0,Critical
+CLM_00296,Property,2029,Standard,45,21,F,2023-06-18,2023-12-03,6,2.3,4,1,1,0,Pending,0,High
+CLM_00297,Home,4097,Basic,15,45,F,2023-06-27,2023-12-04,0,1.3,2,1,1,0,Denied,0,Low
+CLM_00298,Travel,379,Basic,82,61,F,2023-02-25,2023-12-03,17,3.2,4,1,1,0,Approved,0,Medium
+CLM_00299,Auto,7416,Platinum,38,72,F,2023-10-05,2023-12-08,21,0.9,2,0,1,0,Approved,0,Low
+CLM_00300,Property,3301,Premium,119,51,F,2023-11-17,2023-12-07,8,3.8,3,0,1,1,Under Investigation,0,Medium
+CLM_00301,Health,3695,Basic,66,21,F,2023-05-15,2023-12-09,15,0.7,0,0,0,0,Denied,0,Low
+CLM_00302,Health,2277,Standard,68,63,F,2023-08-13,2023-12-06,23,2.1,2,1,0,0,Pending,0,Critical
+CLM_00303,Travel,377,Premium,39,30,M,2023-02-22,2023-12-12,11,3.9,3,1,1,0,Approved,0,Medium
+CLM_00304,Travel,25578,Basic,41,80,F,2023-12-12,2023-12-08,12,2.0,3,0,1,1,Approved,0,Medium
+CLM_00305,Property,1445,Premium,52,50,F,2023-09-09,2023-12-18,16,5.4,2,0,1,0,Under Investigation,0,Medium
+CLM_00306,Home,1695,Platinum,94,30,M,2023-02-20,2023-12-28,5,0.5,1,1,1,1,Pending,0,Low
+CLM_00307,Home,635,Standard,15,43,F,2023-01-15,2023-12-14,4,8.6,1,1,0,1,Approved,0,Critical
+CLM_00308,Health,5230,Premium,46,83,M,2023-07-21,2023-12-22,0,5.4,1,1,1,1,Pending,0,Low
+CLM_00309,Auto,2565,Basic,102,78,M,2023-12-22,2023-12-15,4,5.9,3,0,1,0,Under Investigation,0,Medium
+CLM_00310,Home,10370,Premium,1,33,M,2023-04-17,2023-12-13,4,0.4,2,1,1,1,Pending,0,High
+CLM_00311,Health,1535,Standard,63,81,F,2023-03-31,2023-12-25,5,0.3,3,1,1,0,Pending,0,Low
+CLM_00312,Home,8063,Platinum,80,45,F,2023-07-19,2023-12-19,6,2.7,1,1,1,0,Under Investigation,0,Critical
+CLM_00313,Travel,7306,Standard,66,42,M,2023-08-25,2023-12-10,3,1.0,2,1,0,0,Under Investigation,0,Medium
+CLM_00314,Property,10731,Premium,105,20,F,2023-02-24,2023-12-22,0,0.1,3,0,1,0,Pending,0,Low
+CLM_00315,Home,2994,Platinum,98,28,M,2023-01-31,2023-12-07,21,6.8,1,0,1,0,Under Investigation,0,Low
+CLM_00316,Auto,8452,Standard,32,21,F,2023-09-06,2023-12-29,14,0.7,3,0,1,0,Approved,0,High
+CLM_00317,Life,15218,Basic,100,53,F,2023-03-15,2023-12-13,10,4.0,0,1,1,1,Pending,0,High
+CLM_00318,Life,563,Basic,97,75,M,2023-12-30,2023-12-14,19,0.0,5,0,1,1,Approved,0,Medium
+CLM_00319,Property,335,Premium,18,26,F,2023-06-30,2023-12-04,8,2.9,3,1,1,0,Denied,0,Low
+CLM_00320,Travel,1867,Basic,20,75,F,2023-02-22,2023-12-27,5,0.1,4,0,1,1,Approved,0,Low
+CLM_00321,Home,1856,Platinum,57,47,M,2023-10-31,2023-12-30,17,1.0,2,1,1,0,Under Investigation,0,High
+CLM_00322,Auto,13565,Premium,56,60,M,2023-07-23,2023-12-28,4,1.8,1,1,0,1,Approved,0,Low
+CLM_00323,Auto,2136,Premium,100,69,F,2023-11-18,2023-12-11,6,7.2,3,0,1,0,Approved,0,Medium
+CLM_00324,Home,16820,Basic,83,67,F,2023-07-18,2023-12-05,7,3.0,0,1,1,1,Approved,0,High
+CLM_00325,Home,1655,Standard,13,45,M,2023-09-16,2023-12-10,16,1.6,0,0,1,0,Under Investigation,0,High
+CLM_00326,Auto,264,Standard,58,39,F,2023-04-14,2023-12-07,9,0.3,5,1,1,1,Approved,0,Medium
+CLM_00327,Home,2730,Basic,51,75,F,2023-03-16,2023-12-27,19,1.6,1,0,0,1,Approved,0,Medium
+CLM_00328,Health,5304,Basic,24,39,F,2023-08-15,2023-12-10,1,0.1,5,1,1,1,Approved,0,Low
+CLM_00329,Auto,2699,Standard,29,84,F,2023-02-01,2023-12-08,5,5.9,0,0,0,1,Under Investigation,0,Medium
+CLM_00330,Travel,1848,Platinum,103,83,F,2023-03-05,2023-12-11,7,1.3,4,1,0,1,Approved,0,Medium
+CLM_00331,Home,52367,Premium,105,44,M,2023-12-30,2023-12-26,10,0.5,0,1,1,1,Under Investigation,1,High
+CLM_00332,Travel,3838,Standard,19,29,F,2023-02-22,2023-12-14,0,2.3,2,1,1,1,Approved,0,Low
+CLM_00333,Property,72,Premium,116,56,M,2023-04-20,2023-12-03,17,3.3,0,0,1,0,Denied,0,Low
+CLM_00334,Travel,1466,Standard,16,46,M,2023-05-01,2023-12-19,3,2.7,3,1,0,0,Pending,0,Medium
+CLM_00335,Home,184,Premium,73,50,F,2023-06-26,2023-12-11,13,0.2,2,1,0,1,Pending,0,Medium
+CLM_00336,Life,3879,Basic,40,29,M,2023-05-05,2023-12-12,6,1.2,1,1,1,0,Approved,0,Medium
+CLM_00337,Life,1998,Premium,70,62,F,2023-05-09,2023-12-07,6,1.2,1,1,1,0,Under Investigation,0,Medium
+CLM_00338,Health,2879,Basic,26,26,F,2023-05-19,2023-12-25,19,2.4,3,0,1,0,Approved,0,Low
+CLM_00339,Health,6035,Standard,114,43,F,2023-08-24,2023-12-13,10,1.4,1,0,1,1,Pending,0,High
+CLM_00340,Health,4719,Premium,118,26,M,2023-06-24,2023-12-21,17,0.6,0,1,0,0,Approved,0,Low
+CLM_00341,Travel,2699,Platinum,78,26,M,2023-09-22,2023-12-12,22,1.4,0,0,0,1,Approved,0,High
+CLM_00342,Home,3719,Standard,110,23,M,2023-01-28,2023-12-09,13,0.1,3,1,1,1,Under Investigation,0,High
+CLM_00343,Property,3178,Standard,53,21,M,2023-09-23,2023-12-28,23,3.4,3,0,0,1,Pending,0,Low
+CLM_00344,Travel,6460,Basic,106,42,M,2023-05-16,2023-12-05,13,0.6,1,0,1,0,Under Investigation,0,Low
+CLM_00345,Life,8678,Platinum,115,58,F,2023-07-12,2023-12-23,9,3.9,1,0,0,1,Under Investigation,0,Low
+CLM_00346,Health,2803,Standard,101,65,F,2023-06-11,2023-12-11,9,1.9,3,1,1,1,Under Investigation,0,High
+CLM_00347,Home,13126,Platinum,107,50,F,2023-11-22,2023-12-28,12,2.5,4,0,1,0,Approved,0,High
+CLM_00348,Home,2570,Platinum,48,25,M,2023-05-11,2023-12-30,23,1.4,2,1,1,0,Approved,1,Medium
+CLM_00349,Life,24725,Standard,10,23,F,2023-09-08,2023-12-08,12,2.6,1,0,0,0,Approved,0,High
+CLM_00350,Auto,1040,Basic,53,73,F,2023-11-06,2023-12-11,10,1.5,0,1,0,0,Pending,0,High
+CLM_00351,Health,5371,Platinum,55,79,F,2023-10-03,2023-12-25,6,2.2,2,1,1,0,Approved,1,High
+CLM_00352,Life,2384,Standard,101,40,F,2023-05-22,2023-12-17,14,0.2,2,1,1,1,Pending,0,Critical
+CLM_00353,Home,3940,Standard,96,84,F,2023-09-14,2023-12-26,2,6.7,0,0,1,0,Approved,0,High
+CLM_00354,Property,2411,Standard,19,25,F,2023-11-24,2023-12-12,17,6.2,4,0,1,0,Approved,0,Low
+CLM_00355,Auto,6897,Premium,62,33,F,2023-01-21,2023-12-03,1,0.9,4,1,1,1,Under Investigation,0,Medium
+CLM_00356,Life,19052,Standard,50,51,M,2023-09-19,2024-01-01,19,0.1,4,0,1,1,Under Investigation,0,Medium
+CLM_00357,Property,62246,Basic,17,76,F,2023-01-11,2023-12-13,16,0.9,2,1,1,0,Approved,0,Critical
+CLM_00358,Home,16094,Standard,115,81,M,2023-03-04,2023-12-27,7,2.7,4,0,0,0,Under Investigation,0,Low
+CLM_00359,Auto,446,Standard,106,41,M,2023-02-06,2023-12-21,23,1.6,2,1,0,1,Approved,0,Medium
+CLM_00360,Travel,4775,Standard,16,56,M,2023-03-14,2023-12-16,6,3.0,4,1,1,0,Approved,0,High
+CLM_00361,Auto,7767,Platinum,30,42,M,2023-08-27,2024-01-01,16,2.5,2,1,0,0,Approved,0,Medium
+CLM_00362,Life,867,Basic,86,42,F,2023-01-24,2023-12-28,3,9.3,2,0,1,0,Denied,0,Medium
+CLM_00363,Home,2566,Basic,29,25,F,2023-04-01,2024-01-01,15,5.2,1,1,1,1,Approved,0,Medium
+CLM_00364,Travel,2267,Standard,43,34,F,2023-07-08,2023-12-12,13,0.1,3,1,1,1,Pending,0,Low
+CLM_00365,Health,1394,Basic,88,42,M,2023-10-14,2023-12-07,0,0.3,1,0,1,1,Denied,0,High
+CLM_00366,Auto,1781,Premium,41,75,F,2023-08-02,2023-12-24,19,2.4,3,1,1,0,Approved,0,High
+CLM_00367,Health,20336,Basic,114,32,F,2023-10-11,2023-12-13,9,0.6,1,1,1,1,Pending,0,Low
+CLM_00368,Property,1817,Standard,12,39,F,2023-10-11,2024-01-01,22,1.1,2,0,1,1,Approved,0,Low
+CLM_00369,Travel,5553,Platinum,51,52,M,2023-12-03,2023-12-28,5,3.2,0,1,1,0,Denied,0,Low
+CLM_00370,Home,1381,Premium,103,69,M,2023-12-10,2023-12-31,9,1.0,4,1,1,0,Approved,0,Low
+CLM_00371,Travel,2320,Premium,1,54,M,2023-06-04,2023-12-11,14,0.8,3,1,1,0,Approved,0,Low
+CLM_00372,Auto,2697,Basic,4,35,M,2023-01-22,2023-12-31,9,1.3,0,0,1,1,Pending,0,High
+CLM_00373,Home,432,Standard,6,51,M,2023-12-23,2023-12-05,22,9.9,1,0,1,1,Approved,0,Critical
+CLM_00374,Property,5024,Standard,80,68,F,2023-05-16,2023-12-23,3,3.0,0,0,1,1,Approved,0,Medium
+CLM_00375,Travel,270,Premium,15,45,M,2023-12-09,2023-12-17,0,0.3,6,0,0,0,Pending,0,Medium
+CLM_00376,Health,17239,Premium,20,65,M,2023-08-24,2023-12-28,5,0.2,3,0,1,1,Pending,1,High
+CLM_00377,Life,5092,Platinum,72,65,F,2023-12-17,2023-12-12,9,0.4,2,0,1,0,Approved,0,Low
+CLM_00378,Health,603,Standard,51,80,M,2023-02-04,2023-12-17,14,8.0,0,0,1,1,Approved,0,Critical
+CLM_00379,Health,1507,Basic,77,48,M,2023-07-03,2023-12-31,8,9.5,2,1,1,0,Approved,0,High
+CLM_00380,Life,3229,Platinum,80,52,F,2023-02-04,2023-12-04,13,0.7,0,1,1,1,Denied,0,Medium
+CLM_00381,Home,3728,Standard,17,31,M,2023-12-23,2023-12-03,11,0.2,4,1,0,0,Under Investigation,0,Medium
+CLM_00382,Property,1811,Platinum,11,21,F,2023-02-06,2023-12-20,20,5.7,3,1,1,1,Pending,0,Low
+CLM_00383,Health,1420,Standard,84,32,F,2023-11-29,2023-12-16,8,6.1,2,1,0,1,Under Investigation,0,High
+CLM_00384,Auto,128,Basic,30,76,F,2023-12-17,2023-12-15,10,2.1,3,0,0,1,Approved,0,High
+CLM_00385,Life,3515,Premium,66,39,F,2023-11-29,2023-12-25,19,4.4,2,0,1,0,Under Investigation,0,Low
+CLM_00386,Property,1159,Basic,75,22,M,2023-10-10,2023-12-08,14,0.8,4,0,1,1,Approved,0,High
+CLM_00387,Travel,7362,Standard,27,68,F,2023-11-10,2023-12-16,20,0.1,1,1,1,1,Denied,0,Medium
+CLM_00388,Travel,3686,Premium,20,29,F,2023-09-29,2023-12-21,18,3.3,0,0,1,0,Pending,0,Medium
+CLM_00389,Auto,17009,Basic,19,40,M,2023-09-05,2023-12-03,7,5.3,1,0,1,0,Under Investigation,0,Critical
+CLM_00390,Home,1631,Premium,113,40,F,2023-01-04,2023-12-04,1,0.5,2,0,1,1,Pending,0,High
+CLM_00391,Life,1375,Premium,10,58,M,2023-10-20,2023-12-13,23,2.2,0,1,1,0,Approved,0,Medium
+CLM_00392,Travel,527,Basic,28,47,M,2023-09-04,2023-12-30,9,2.3,0,1,0,1,Under Investigation,0,High
+CLM_00393,Auto,4121,Standard,62,47,M,2023-03-19,2023-12-11,0,0.2,2,1,1,1,Denied,0,Low
+CLM_00394,Health,1883,Standard,109,49,F,2023-10-10,2024-01-01,2,3.0,0,0,0,1,Pending,0,Medium
+CLM_00395,Property,294,Standard,59,75,F,2023-04-23,2023-12-20,8,2.8,3,1,1,1,Approved,0,Low
+CLM_00396,Travel,3007,Basic,49,43,F,2023-09-24,2023-12-06,2,2.7,3,1,1,0,Under Investigation,0,Medium
+CLM_00397,Auto,2371,Standard,119,48,F,2023-04-26,2023-12-26,16,8.2,3,1,0,0,Pending,0,Low
+CLM_00398,Life,5068,Standard,18,60,F,2023-01-17,2023-12-26,8,2.4,2,0,1,0,Pending,0,Medium
+CLM_00399,Property,1178,Premium,94,56,M,2023-06-08,2023-12-07,17,3.6,1,0,1,0,Under Investigation,0,Critical
+CLM_00400,Health,5808,Basic,75,18,F,2023-06-17,2023-12-20,15,7.8,0,0,1,0,Approved,0,Medium
+CLM_00401,Home,3508,Premium,21,77,M,2023-04-19,2024-01-01,15,0.2,0,1,1,0,Approved,0,Medium
+CLM_00402,Auto,121524,Standard,106,20,M,2023-08-07,2023-12-05,0,2.0,3,0,1,1,Pending,1,Low
+CLM_00403,Travel,9507,Basic,80,82,F,2023-10-05,2023-12-24,5,3.3,3,0,1,0,Denied,0,Low
+CLM_00404,Health,7911,Basic,61,63,M,2023-10-13,2023-12-26,8,0.6,0,1,0,1,Approved,1,Medium
+CLM_00405,Property,2621,Standard,27,54,F,2023-09-10,2023-12-30,21,3.4,1,1,1,0,Denied,0,Critical
+CLM_00406,Travel,9755,Basic,61,26,M,2023-06-26,2023-12-17,1,2.0,2,1,1,1,Approved,0,Medium
+CLM_00407,Auto,1253,Standard,87,19,F,2023-05-04,2023-12-22,21,0.6,2,0,1,0,Approved,0,High
+CLM_00408,Travel,4540,Standard,81,29,M,2023-11-08,2023-12-11,5,3.5,2,1,1,1,Pending,0,Medium
+CLM_00409,Auto,519,Standard,113,61,F,2023-04-10,2023-12-25,17,6.0,2,1,0,1,Approved,0,Medium
+CLM_00410,Auto,4472,Basic,83,46,M,2023-09-23,2023-12-04,11,5.6,1,1,1,0,Denied,0,Critical
+CLM_00411,Health,5236,Basic,111,77,M,2023-05-02,2023-12-04,5,2.8,3,0,1,1,Pending,0,Low
+CLM_00412,Life,556,Premium,89,63,M,2023-06-10,2023-12-13,4,0.1,2,1,0,1,Approved,0,Medium
+CLM_00413,Home,1861,Premium,18,73,M,2023-04-13,2024-01-01,12,1.2,6,1,0,1,Pending,0,High
+CLM_00414,Auto,8555,Basic,119,79,M,2023-11-20,2023-12-21,7,5.4,3,1,1,0,Denied,0,High
+CLM_00415,Home,12996,Standard,75,50,F,2023-10-08,2023-12-26,20,0.4,2,0,1,1,Approved,0,High
+CLM_00416,Health,3511,Basic,87,68,F,2023-07-31,2023-12-09,5,8.5,0,1,1,1,Approved,0,Low
+CLM_00417,Travel,4868,Premium,55,29,M,2023-01-22,2023-12-25,4,0.4,0,0,1,0,Approved,0,Medium
+CLM_00418,Property,861,Standard,22,26,M,2023-03-24,2023-12-16,19,4.0,2,1,1,0,Under Investigation,0,Medium
+CLM_00419,Life,5023,Premium,25,72,F,2023-01-28,2023-12-15,18,5.0,1,1,1,0,Denied,0,Low
+CLM_00420,Property,4940,Standard,91,30,F,2023-07-01,2023-12-28,15,0.2,3,0,1,0,Denied,0,Medium
+CLM_00421,Auto,8831,Premium,103,78,M,2023-11-08,2023-12-23,2,5.5,2,1,1,0,Approved,0,Low
+CLM_00422,Auto,537,Standard,8,76,M,2023-04-08,2023-12-29,20,6.6,1,0,1,0,Under Investigation,0,High
+CLM_00423,Travel,843,Premium,79,49,M,2023-11-15,2023-12-19,20,3.5,0,1,1,1,Under Investigation,0,Medium
+CLM_00424,Travel,3162,Premium,60,57,M,2023-02-05,2023-12-05,6,1.0,1,1,0,1,Under Investigation,0,High
+CLM_00425,Health,8822,Basic,116,64,F,2023-06-04,2023-12-24,22,1.3,0,0,1,0,Approved,0,Low
+CLM_00426,Travel,5058,Basic,112,83,F,2023-11-24,2023-12-17,18,0.6,1,1,1,0,Under Investigation,0,Low
+CLM_00427,Health,3942,Platinum,95,68,F,2023-03-26,2023-12-13,15,3.4,2,1,1,1,Approved,0,High
+CLM_00428,Auto,3164,Standard,60,74,M,2023-12-15,2023-12-15,15,0.3,4,0,1,0,Denied,0,Medium
+CLM_00429,Travel,1768,Platinum,66,42,F,2023-02-19,2023-12-18,13,6.8,2,1,1,0,Under Investigation,0,Low
+CLM_00430,Auto,509,Platinum,87,33,M,2023-12-08,2023-12-28,5,5.8,2,1,1,0,Approved,0,High
+CLM_00431,Property,12897,Basic,2,56,M,2023-05-11,2023-12-22,23,1.4,2,1,1,1,Denied,0,Medium
+CLM_00432,Health,6998,Basic,47,18,M,2023-05-17,2023-12-11,3,0.1,1,1,1,1,Pending,0,Medium
+CLM_00433,Health,4769,Premium,105,24,M,2023-11-02,2023-12-25,12,0.0,2,1,0,1,Approved,0,High
+CLM_00434,Health,507,Platinum,107,24,M,2023-03-11,2023-12-30,8,0.0,1,1,1,0,Approved,0,Low
+CLM_00435,Auto,39802,Platinum,18,79,F,2023-05-05,2023-12-24,21,3.9,0,0,0,1,Pending,0,High
+CLM_00436,Property,387,Platinum,65,42,M,2023-05-31,2023-12-05,22,4.3,1,1,1,0,Pending,0,Low
+CLM_00437,Auto,15373,Standard,20,68,M,2023-11-26,2023-12-30,6,3.7,2,1,1,1,Approved,1,High
+CLM_00438,Travel,2765,Basic,49,34,M,2023-05-10,2023-12-20,15,3.1,3,1,1,1,Approved,0,Critical
+CLM_00439,Home,1450,Platinum,39,61,M,2023-11-07,2023-12-04,6,2.6,3,1,1,1,Approved,0,Low
+CLM_00440,Travel,698,Platinum,84,81,F,2023-04-07,2023-12-04,2,3.5,3,1,1,1,Denied,0,Low
+CLM_00441,Life,11709,Platinum,106,28,M,2023-04-03,2023-12-07,17,0.3,2,0,1,0,Under Investigation,0,Low
+CLM_00442,Health,3616,Premium,10,38,F,2023-06-13,2023-12-10,7,1.9,2,1,1,0,Approved,0,Medium
+CLM_00443,Travel,459,Premium,114,43,M,2023-11-29,2023-12-03,11,0.2,4,1,0,0,Denied,0,Medium
+CLM_00444,Health,9585,Standard,52,21,F,2023-07-10,2023-12-06,21,2.4,1,1,0,0,Approved,0,High
+CLM_00445,Life,372,Standard,42,74,M,2023-12-15,2023-12-05,1,3.9,3,0,0,1,Denied,0,Critical
+CLM_00446,Property,2425,Standard,76,31,M,2023-10-21,2023-12-22,0,0.9,3,1,1,0,Pending,0,High
+CLM_00447,Travel,1196,Premium,39,36,F,2023-02-25,2023-12-08,13,1.6,0,1,1,1,Under Investigation,0,Low
+CLM_00448,Property,1922,Premium,27,27,F,2023-08-29,2023-12-23,3,2.9,4,1,0,1,Denied,0,Low
+CLM_00449,Health,2253,Standard,99,51,F,2023-10-23,2023-12-22,15,0.3,2,1,1,0,Pending,0,High
+CLM_00450,Auto,503,Basic,19,72,M,2023-08-20,2024-01-01,3,3.2,2,0,1,0,Approved,0,Low
+CLM_00451,Auto,527,Standard,62,46,F,2023-05-30,2023-12-17,5,1.5,1,0,0,0,Under Investigation,0,Medium
+CLM_00452,Travel,1945,Platinum,21,59,M,2023-11-04,2023-12-04,15,3.5,7,0,0,1,Approved,0,Medium
+CLM_00453,Home,4171,Standard,4,35,M,2023-10-12,2023-12-15,20,3.6,0,1,0,0,Approved,0,High
+CLM_00454,Travel,2132,Standard,40,34,F,2023-08-19,2023-12-08,3,1.6,3,0,0,0,Pending,0,Critical
+CLM_00455,Life,8719,Premium,93,65,F,2023-06-04,2023-12-09,13,2.0,2,1,1,0,Approved,0,Critical
+CLM_00456,Health,8730,Premium,20,67,F,2023-10-01,2023-12-09,12,6.8,1,0,1,1,Pending,0,Medium
+CLM_00457,Home,29917,Basic,19,48,M,2023-06-20,2023-12-10,0,0.7,0,1,0,0,Pending,0,Medium
+CLM_00458,Health,4766,Platinum,94,70,F,2023-08-02,2023-12-21,23,0.7,1,1,1,0,Approved,0,Medium
+CLM_00459,Travel,16351,Standard,31,64,F,2023-09-15,2023-12-25,15,1.9,5,1,1,1,Approved,0,High
+CLM_00460,Auto,1436,Standard,6,54,M,2023-01-18,2023-12-27,23,0.4,1,1,1,0,Approved,0,Medium
+CLM_00461,Property,7889,Standard,18,62,F,2023-01-23,2023-12-21,23,2.6,1,1,1,1,Denied,0,Low
+CLM_00462,Life,3809,Basic,54,59,M,2023-11-17,2023-12-04,23,4.9,5,1,1,0,Approved,0,Low
+CLM_00463,Life,995,Platinum,107,58,M,2023-05-22,2023-12-28,19,6.6,2,1,1,1,Approved,0,High
+CLM_00464,Health,2907,Standard,117,62,M,2023-01-18,2023-12-08,19,1.6,1,0,1,0,Under Investigation,0,Medium
+CLM_00465,Auto,6572,Basic,93,62,M,2023-11-22,2023-12-16,2,5.6,3,1,1,1,Approved,0,Medium
+CLM_00466,Health,1742,Basic,29,62,M,2023-12-23,2023-12-09,0,4.6,2,1,1,1,Approved,0,Medium
+CLM_00467,Property,3319,Platinum,105,20,F,2023-02-28,2023-12-18,23,2.4,2,1,1,1,Denied,0,High
+CLM_00468,Auto,7551,Standard,108,65,M,2023-11-05,2023-12-12,23,5.8,1,1,1,1,Pending,1,Medium
+CLM_00469,Travel,1211,Standard,43,58,M,2023-06-30,2023-12-23,6,0.3,3,0,0,1,Pending,0,High
+CLM_00470,Life,10310,Premium,93,66,M,2023-04-05,2023-12-19,11,0.4,3,1,1,0,Approved,0,Low
+CLM_00471,Auto,7895,Standard,2,84,F,2023-08-05,2023-12-27,15,1.8,4,1,0,0,Approved,0,Low
+CLM_00472,Health,1339,Basic,47,20,M,2023-04-17,2023-12-27,1,4.3,1,1,1,1,Pending,0,Medium
+CLM_00473,Auto,671,Basic,74,37,M,2023-11-15,2023-12-10,21,3.5,4,1,1,0,Approved,0,Critical
+CLM_00474,Life,3249,Premium,18,69,F,2023-11-28,2023-12-04,10,2.6,0,0,0,0,Pending,0,Low
+CLM_00475,Travel,2680,Standard,13,74,M,2023-09-25,2023-12-09,23,1.7,4,1,0,1,Approved,0,Low
+CLM_00476,Health,2978,Basic,6,36,M,2023-05-03,2023-12-25,9,6.4,3,1,0,0,Denied,0,Low
+CLM_00477,Health,495,Basic,20,30,M,2023-11-19,2023-12-22,16,2.3,1,1,1,1,Approved,0,Medium
+CLM_00478,Travel,5693,Basic,71,27,F,2023-09-21,2023-12-08,9,0.0,1,1,1,1,Under Investigation,0,High
+CLM_00479,Health,8268,Standard,88,38,F,2023-03-20,2023-12-21,4,6.9,4,0,1,1,Approved,0,Low
+CLM_00480,Home,1097,Premium,2,60,F,2023-12-19,2023-12-12,7,1.0,1,0,0,0,Approved,0,High
+CLM_00481,Life,713,Basic,64,45,M,2023-11-08,2023-12-23,14,3.7,0,0,1,1,Approved,0,High
+CLM_00482,Property,4151,Platinum,9,34,M,2023-06-02,2023-12-26,0,0.1,1,1,0,1,Denied,0,Medium
+CLM_00483,Travel,7186,Standard,8,40,M,2023-09-17,2023-12-30,20,3.2,1,0,0,0,Under Investigation,0,Medium
+CLM_00484,Home,1643,Standard,44,23,F,2023-09-20,2023-12-15,0,0.5,1,1,1,0,Approved,0,Medium
+CLM_00485,Home,2207,Standard,39,41,F,2023-10-23,2023-12-17,3,1.1,4,1,1,0,Approved,0,Medium
+CLM_00486,Travel,513,Standard,117,66,M,2023-09-07,2023-12-20,22,1.0,4,1,0,1,Approved,0,High
+CLM_00487,Health,4012,Premium,9,61,F,2023-11-16,2023-12-25,16,1.9,0,0,0,1,Pending,1,Medium
+CLM_00488,Home,5199,Premium,76,64,F,2023-02-04,2023-12-07,22,3.0,2,0,0,0,Approved,0,Low
+CLM_00489,Auto,3341,Standard,56,81,F,2023-09-28,2023-12-09,5,3.6,0,1,0,0,Approved,0,Medium
+CLM_00490,Travel,2458,Platinum,55,73,F,2023-08-20,2023-12-23,8,0.5,5,0,1,0,Under Investigation,0,Medium
+CLM_00491,Travel,9665,Basic,89,40,F,2023-02-19,2023-12-22,16,0.0,2,0,0,0,Denied,0,Medium
+CLM_00492,Property,868,Premium,55,68,F,2023-08-21,2023-12-20,13,7.9,1,0,1,0,Under Investigation,0,Low
+CLM_00493,Property,648,Premium,89,26,M,2023-07-19,2023-12-11,8,3.2,3,0,0,1,Approved,0,Low
+CLM_00494,Life,5548,Premium,11,48,F,2023-12-20,2023-12-05,8,3.1,2,1,1,1,Pending,0,Medium
+CLM_00495,Travel,1456,Standard,96,54,F,2023-10-14,2023-12-21,16,1.4,2,1,1,1,Approved,0,Medium
+CLM_00496,Life,34406,Platinum,110,40,F,2023-11-11,2023-12-14,5,0.3,0,1,1,0,Pending,0,Medium
+CLM_00497,Life,1639,Basic,9,78,F,2023-09-17,2023-12-20,19,3.7,0,0,1,1,Pending,0,Critical
+CLM_00498,Property,2084,Basic,54,57,M,2023-08-11,2023-12-16,9,1.1,3,0,1,1,Approved,0,Medium
+CLM_00499,Travel,6097,Premium,34,46,M,2023-01-24,2023-12-14,11,0.1,2,0,1,1,Denied,0,High
+CLM_00500,Auto,10181,Premium,18,38,F,2023-08-02,2023-12-25,18,2.8,4,1,1,0,Approved,0,Critical
+CLM_00501,Life,3483,Basic,17,82,F,2023-10-24,2023-12-08,22,0.4,0,1,1,1,Pending,0,Medium
+CLM_00502,Auto,10138,Standard,38,28,F,2023-01-20,2023-12-09,16,6.4,2,1,0,1,Denied,0,High
+CLM_00503,Home,4177,Premium,114,38,F,2023-09-21,2023-12-30,9,0.7,2,1,1,0,Under Investigation,0,High
+CLM_00504,Home,776,Standard,37,51,M,2023-04-01,2023-12-19,9,0.7,1,0,1,1,Under Investigation,0,Low
+CLM_00505,Auto,1851,Standard,37,32,M,2023-08-18,2023-12-20,10,2.9,0,0,1,0,Approved,0,High
+CLM_00506,Home,3923,Basic,6,44,F,2023-08-14,2023-12-03,19,5.6,3,1,1,1,Under Investigation,0,Medium
+CLM_00507,Property,3108,Standard,69,27,M,2023-01-11,2023-12-14,21,4.7,1,0,1,1,Under Investigation,0,High
+CLM_00508,Travel,5667,Standard,12,58,M,2023-01-04,2023-12-30,10,1.5,2,0,1,0,Denied,0,Medium
+CLM_00509,Property,495,Basic,21,35,M,2023-08-29,2023-12-19,21,3.6,1,0,1,1,Approved,0,High
+CLM_00510,Life,6282,Premium,3,27,M,2023-09-03,2023-12-17,19,1.8,2,1,1,1,Under Investigation,0,Medium
+CLM_00511,Home,3899,Premium,36,55,M,2023-05-06,2023-12-03,3,3.1,2,0,1,1,Pending,0,High
+CLM_00512,Home,12935,Platinum,102,84,F,2023-11-26,2024-01-01,21,7.0,2,1,1,1,Denied,0,Low
+CLM_00513,Home,10433,Standard,24,70,M,2023-02-16,2023-12-16,10,2.4,1,1,1,0,Pending,0,Medium
+CLM_00514,Travel,642,Platinum,33,60,M,2023-03-22,2023-12-08,7,1.2,2,0,1,0,Pending,0,High
+CLM_00515,Health,5242,Premium,57,70,F,2023-08-10,2023-12-14,10,2.8,1,0,1,1,Approved,0,Low
+CLM_00516,Home,68717,Basic,60,67,M,2023-10-27,2023-12-19,5,3.7,2,0,1,0,Pending,1,High
+CLM_00517,Travel,2846,Standard,39,82,M,2023-10-22,2023-12-13,16,0.6,2,1,1,1,Approved,0,Low
+CLM_00518,Property,1182,Basic,83,59,M,2023-10-02,2023-12-30,16,0.4,0,1,1,0,Approved,0,Low
+CLM_00519,Travel,3477,Basic,93,30,M,2023-04-18,2023-12-17,16,0.4,1,0,1,0,Approved,0,Medium
+CLM_00520,Auto,1316,Standard,118,71,F,2023-09-11,2023-12-19,21,3.9,4,0,1,0,Under Investigation,0,Low
+CLM_00521,Life,722,Standard,25,48,M,2023-05-27,2023-12-16,23,5.9,1,1,0,1,Approved,0,Medium
+CLM_00522,Home,201,Standard,7,68,M,2023-04-11,2023-12-15,5,2.7,2,0,0,0,Pending,0,High
+CLM_00523,Health,45460,Standard,107,56,F,2023-07-17,2023-12-28,4,2.6,1,0,1,1,Pending,1,Critical
+CLM_00524,Property,474,Basic,10,46,F,2023-09-07,2023-12-23,16,2.9,2,1,1,1,Approved,0,Medium
+CLM_00525,Travel,10088,Standard,71,61,F,2023-06-05,2023-12-05,2,0.2,3,0,0,0,Pending,0,Critical
+CLM_00526,Auto,15810,Premium,79,25,M,2023-07-26,2023-12-21,9,3.6,0,1,1,0,Pending,0,High
+CLM_00527,Auto,1936,Basic,18,64,M,2023-03-21,2023-12-23,11,1.4,0,0,1,0,Approved,0,Low
+CLM_00528,Travel,1938,Standard,87,47,F,2023-08-05,2023-12-03,15,3.9,2,0,0,1,Pending,0,High
+CLM_00529,Property,3462,Premium,28,44,M,2023-01-29,2023-12-28,7,3.6,2,1,1,1,Approved,0,Medium
+CLM_00530,Health,16921,Standard,66,83,M,2023-11-17,2023-12-10,12,9.4,3,0,1,1,Pending,0,High
+CLM_00531,Health,3954,Standard,35,46,M,2023-05-25,2023-12-12,5,0.5,0,1,1,1,Pending,0,High
+CLM_00532,Home,7673,Platinum,86,59,M,2023-11-18,2023-12-06,3,0.9,2,1,1,1,Pending,1,High
+CLM_00533,Health,1992,Standard,13,21,M,2023-03-31,2023-12-05,6,1.9,1,1,1,0,Approved,0,Medium
+CLM_00534,Home,1527,Premium,107,18,F,2023-09-07,2023-12-13,18,0.8,2,1,1,1,Under Investigation,0,Critical
+CLM_00535,Property,7329,Basic,51,53,M,2023-01-10,2023-12-08,12,2.0,2,1,1,0,Denied,1,High
+CLM_00536,Property,1699,Standard,108,81,F,2023-05-17,2023-12-27,3,0.4,1,1,1,1,Pending,0,Medium
+CLM_00537,Property,766,Premium,2,61,M,2023-06-19,2023-12-27,6,5.5,2,0,0,1,Approved,0,Medium
+CLM_00538,Auto,13520,Standard,114,51,M,2023-09-06,2023-12-06,20,12.8,1,1,1,1,Approved,1,Low
+CLM_00539,Life,466,Standard,9,62,F,2023-02-13,2023-12-20,7,2.1,4,1,1,1,Under Investigation,1,Medium
+CLM_00540,Health,1966,Premium,96,44,F,2023-09-17,2023-12-28,3,3.2,5,1,1,0,Approved,1,Medium
+CLM_00541,Travel,7838,Basic,79,45,M,2023-12-27,2023-12-23,15,1.4,3,1,0,0,Denied,1,Medium
+CLM_00542,Health,1777,Premium,71,43,M,2023-08-14,2023-12-26,22,2.7,3,1,1,1,Pending,0,Medium
+CLM_00543,Property,397,Standard,92,75,F,2023-02-22,2023-12-14,6,7.3,4,1,0,0,Pending,0,Medium
+CLM_00544,Health,4981,Standard,39,80,F,2023-10-06,2023-12-17,15,1.4,3,1,0,1,Denied,0,High
+CLM_00545,Travel,9461,Premium,76,74,F,2023-04-26,2023-12-08,3,1.6,0,0,0,0,Approved,0,Critical
+CLM_00546,Property,2395,Basic,85,57,M,2023-04-23,2023-12-08,14,1.7,2,1,0,0,Under Investigation,0,High
+CLM_00547,Life,1365,Standard,20,73,M,2023-10-25,2023-12-11,23,5.4,4,1,1,1,Under Investigation,0,Medium
+CLM_00548,Home,1307,Standard,74,83,F,2023-12-04,2023-12-05,12,4.6,3,1,1,0,Approved,0,Medium
+CLM_00549,Home,2679,Basic,17,36,F,2023-07-09,2023-12-30,19,3.3,4,0,0,0,Under Investigation,0,Medium
+CLM_00550,Property,2903,Platinum,39,72,F,2023-11-26,2023-12-15,17,1.7,1,0,1,0,Under Investigation,0,Low
+CLM_00551,Auto,1603,Premium,117,38,F,2023-09-29,2023-12-23,10,1.6,3,0,0,1,Approved,0,High
+CLM_00552,Auto,6037,Basic,92,47,M,2023-12-24,2023-12-27,1,6.8,2,1,0,0,Pending,0,High
+CLM_00553,Health,2083,Basic,112,71,F,2023-01-21,2023-12-15,3,1.9,5,0,1,0,Approved,0,High
+CLM_00554,Property,4568,Platinum,100,51,M,2023-04-13,2023-12-30,3,12.2,3,0,1,0,Approved,0,High
+CLM_00555,Property,2141,Premium,32,44,F,2023-07-05,2024-01-01,16,3.2,0,1,0,0,Approved,0,Medium
+CLM_00556,Home,135,Basic,81,62,M,2023-05-24,2023-12-10,2,1.2,2,0,1,0,Denied,0,High
+CLM_00557,Health,3884,Basic,56,45,F,2023-10-22,2023-12-15,12,0.5,3,0,1,0,Approved,0,Low
+CLM_00558,Property,5554,Basic,93,37,F,2023-07-07,2023-12-06,7,7.8,1,1,1,0,Approved,0,Medium
+CLM_00559,Life,119455,Standard,12,65,F,2023-04-28,2023-12-16,2,2.4,2,1,1,0,Pending,0,Medium
+CLM_00560,Health,2524,Standard,108,34,M,2023-05-14,2023-12-26,1,3.4,4,1,1,1,Approved,0,Low
+CLM_00561,Home,3043,Premium,85,44,M,2023-12-09,2023-12-14,20,7.9,0,1,1,0,Under Investigation,0,Medium
+CLM_00562,Life,6223,Basic,47,24,F,2023-05-24,2023-12-20,20,2.1,0,1,1,1,Approved,0,High
+CLM_00563,Home,26169,Premium,47,23,F,2023-03-06,2023-12-21,19,1.4,1,1,1,1,Approved,0,Medium
+CLM_00564,Travel,236,Premium,66,41,M,2023-03-07,2023-12-23,9,4.6,1,1,1,0,Under Investigation,0,Low
+CLM_00565,Health,982,Standard,12,79,F,2023-05-26,2023-12-06,11,1.9,2,1,1,0,Under Investigation,0,Medium
+CLM_00566,Life,3458,Premium,23,47,F,2023-02-25,2023-12-10,0,0.3,4,1,0,0,Denied,0,Medium
+CLM_00567,Health,3933,Basic,41,68,F,2023-01-15,2023-12-20,5,0.2,3,0,1,0,Under Investigation,0,Low
+CLM_00568,Health,19522,Basic,103,82,F,2023-05-02,2023-12-12,15,0.1,3,0,1,0,Approved,0,Low
+CLM_00569,Life,1304,Standard,64,33,F,2023-10-15,2023-12-07,8,0.5,2,0,1,1,Approved,0,Low
+CLM_00570,Property,2192,Basic,19,52,F,2023-07-24,2024-01-01,3,4.1,2,0,1,0,Approved,0,High
+CLM_00571,Travel,7394,Standard,17,52,F,2023-12-22,2023-12-17,3,5.0,3,1,1,0,Under Investigation,0,Low
+CLM_00572,Travel,3392,Premium,104,41,F,2023-05-22,2023-12-09,9,1.2,1,0,0,0,Approved,0,Critical
+CLM_00573,Home,6215,Premium,68,41,F,2023-11-26,2023-12-20,19,9.0,1,1,0,0,Pending,0,Low
+CLM_00574,Property,22273,Basic,68,62,F,2023-08-01,2023-12-19,10,5.6,1,1,1,0,Approved,0,Medium
+CLM_00575,Health,4114,Platinum,41,42,F,2023-08-08,2023-12-21,6,1.5,2,1,1,1,Under Investigation,0,Medium
+CLM_00576,Travel,4032,Basic,55,50,F,2023-02-08,2023-12-14,7,7.3,2,1,1,1,Under Investigation,0,Low
+CLM_00577,Health,8523,Standard,107,75,F,2023-07-15,2023-12-21,22,0.8,4,1,1,0,Approved,0,Low
+CLM_00578,Travel,885,Standard,60,72,M,2023-06-07,2023-12-09,21,4.0,4,0,1,0,Denied,0,High
+CLM_00579,Auto,52059,Standard,91,47,M,2023-11-24,2023-12-12,17,6.0,5,1,1,0,Approved,0,High
+CLM_00580,Travel,1381,Standard,73,18,F,2023-04-17,2023-12-12,10,0.2,1,1,0,0,Approved,0,Medium
+CLM_00581,Property,4529,Basic,58,48,F,2023-11-21,2023-12-24,17,0.4,2,1,1,0,Approved,0,Low
+CLM_00582,Home,1681,Standard,8,19,M,2023-11-10,2023-12-20,19,0.6,4,1,0,0,Approved,0,High
+CLM_00583,Property,6006,Standard,72,62,F,2023-06-22,2023-12-20,19,3.4,3,0,1,0,Under Investigation,1,Low
+CLM_00584,Property,3393,Premium,28,53,F,2023-02-15,2023-12-15,10,4.8,1,0,1,0,Pending,0,Critical
+CLM_00585,Home,10956,Basic,92,71,M,2023-03-20,2023-12-24,15,1.4,3,1,0,0,Pending,0,Low
+CLM_00586,Home,3946,Standard,117,19,F,2023-06-10,2023-12-06,13,1.9,3,0,0,0,Denied,1,Low
+CLM_00587,Auto,1383,Basic,44,56,F,2023-08-19,2023-12-27,6,1.7,0,1,1,0,Denied,0,Medium
+CLM_00588,Property,597,Premium,103,73,F,2023-05-22,2023-12-05,1,9.3,2,1,0,0,Approved,0,Low
+CLM_00589,Auto,24928,Standard,114,67,M,2023-11-06,2023-12-19,14,1.1,1,0,1,1,Approved,0,Critical
+CLM_00590,Home,3175,Platinum,71,26,F,2023-01-12,2023-12-05,7,2.2,2,0,1,1,Pending,0,High
+CLM_00591,Life,1352,Basic,103,58,M,2023-04-27,2023-12-11,7,2.6,2,1,1,1,Approved,0,High
+CLM_00592,Home,5915,Standard,49,36,F,2023-10-12,2024-01-01,20,11.3,1,0,1,0,Under Investigation,0,Medium
+CLM_00593,Travel,574,Basic,44,59,F,2023-09-28,2023-12-31,14,4.9,0,1,1,1,Denied,0,Low
+CLM_00594,Property,4491,Platinum,65,79,F,2023-09-20,2023-12-05,7,0.4,2,1,0,0,Under Investigation,0,Low
+CLM_00595,Home,23223,Basic,25,52,M,2023-03-29,2023-12-28,2,2.7,1,1,1,1,Denied,0,Low
+CLM_00596,Life,1071,Standard,68,58,M,2023-03-06,2023-12-24,8,3.6,0,0,1,0,Approved,0,Critical
+CLM_00597,Home,5610,Standard,20,24,M,2023-03-01,2023-12-15,16,1.0,4,1,0,1,Approved,0,Medium
+CLM_00598,Travel,5089,Premium,56,34,F,2023-12-15,2023-12-23,14,2.4,0,0,1,0,Denied,0,Medium
+CLM_00599,Home,3672,Standard,14,21,M,2023-12-14,2023-12-04,18,5.4,2,1,1,0,Pending,0,High
+CLM_00600,Life,7579,Standard,33,36,M,2023-02-22,2023-12-14,18,1.3,1,1,1,1,Denied,0,Medium
+CLM_00601,Travel,5034,Platinum,82,61,F,2023-01-28,2023-12-23,12,3.2,1,1,1,0,Denied,0,Medium
+CLM_00602,Home,2942,Standard,115,78,F,2023-11-07,2023-12-30,22,1.6,0,0,1,0,Approved,0,Critical
+CLM_00603,Life,2767,Basic,67,28,F,2023-09-01,2023-12-18,22,1.2,1,1,1,0,Pending,0,Low
+CLM_00604,Auto,20753,Standard,58,67,F,2023-07-19,2023-12-10,10,6.7,3,1,0,0,Approved,0,Low
+CLM_00605,Life,1944,Platinum,94,57,F,2023-04-16,2023-12-06,8,2.5,3,1,0,1,Approved,0,High
+CLM_00606,Life,11870,Premium,79,27,M,2023-10-06,2023-12-30,18,1.1,5,1,1,0,Approved,1,High
+CLM_00607,Auto,5769,Platinum,53,19,F,2023-06-22,2023-12-18,19,0.2,5,1,1,0,Approved,0,Low
+CLM_00608,Travel,1133,Basic,52,80,M,2023-09-03,2023-12-24,11,4.5,2,0,1,0,Approved,0,Medium
+CLM_00609,Auto,11262,Platinum,92,39,M,2023-01-09,2023-12-18,23,0.3,3,0,0,0,Pending,0,Medium
+CLM_00610,Travel,2254,Basic,63,52,M,2023-06-08,2023-12-19,8,4.1,2,1,1,0,Pending,0,High
+CLM_00611,Health,34943,Platinum,88,25,M,2023-06-25,2023-12-14,13,0.7,1,1,0,1,Denied,0,Medium
+CLM_00612,Property,1079,Premium,10,50,F,2023-08-14,2023-12-08,17,3.2,0,0,1,0,Under Investigation,0,Critical
+CLM_00613,Life,2565,Premium,65,75,F,2023-10-28,2023-12-11,10,3.8,0,1,1,1,Under Investigation,0,Medium
+CLM_00614,Travel,6343,Premium,105,61,M,2023-12-10,2023-12-26,4,2.9,4,1,0,1,Approved,0,Low
+CLM_00615,Travel,13459,Standard,51,75,M,2023-10-28,2023-12-09,21,2.6,3,0,1,1,Pending,1,Medium
+CLM_00616,Health,3123,Basic,62,65,F,2023-06-17,2023-12-18,21,3.5,6,1,1,0,Under Investigation,0,Low
+CLM_00617,Travel,5798,Platinum,28,33,F,2023-03-31,2023-12-15,5,4.5,0,1,0,1,Approved,0,Medium
+CLM_00618,Travel,7058,Standard,58,62,F,2023-09-21,2023-12-04,22,7.4,1,1,1,0,Denied,0,High
+CLM_00619,Travel,3144,Standard,83,55,M,2023-09-06,2023-12-12,2,2.1,2,0,1,1,Under Investigation,0,Critical
+CLM_00620,Auto,2108,Platinum,113,36,F,2023-02-20,2023-12-10,7,1.0,0,0,1,0,Approved,0,Medium
+CLM_00621,Property,20304,Premium,62,68,F,2023-03-31,2023-12-27,2,2.8,3,1,0,0,Pending,0,Low
+CLM_00622,Life,6878,Standard,54,82,F,2023-08-22,2023-12-19,8,5.4,2,0,1,0,Approved,0,Low
+CLM_00623,Home,16132,Premium,52,32,M,2023-11-09,2023-12-06,7,5.5,1,1,1,1,Approved,0,Low
+CLM_00624,Auto,8989,Basic,29,21,M,2023-01-13,2023-12-16,5,5.4,1,1,1,0,Pending,0,High
+CLM_00625,Home,3104,Premium,54,54,M,2023-03-02,2023-12-29,11,0.5,2,0,1,1,Approved,0,Low
+CLM_00626,Property,2624,Basic,26,25,F,2023-03-13,2023-12-23,13,12.0,3,1,1,1,Pending,0,High
+CLM_00627,Travel,7001,Standard,88,78,F,2023-04-22,2023-12-31,21,3.5,1,0,0,1,Pending,0,High
+CLM_00628,Life,4694,Standard,73,24,M,2023-12-22,2023-12-03,14,2.7,5,1,0,1,Denied,0,Low
+CLM_00629,Health,2360,Premium,29,57,M,2023-06-26,2023-12-29,13,1.8,2,1,1,0,Approved,0,High
+CLM_00630,Travel,14708,Standard,81,79,F,2023-08-02,2023-12-30,18,1.1,4,1,1,0,Under Investigation,0,Low
+CLM_00631,Auto,3656,Basic,39,45,F,2023-10-04,2023-12-24,1,2.5,1,0,1,1,Approved,0,Medium
+CLM_00632,Property,24376,Basic,117,73,M,2023-08-22,2023-12-30,14,1.6,3,1,0,1,Under Investigation,0,High
+CLM_00633,Travel,1318,Premium,21,18,M,2023-01-03,2023-12-13,0,0.4,2,1,1,1,Under Investigation,0,High
+CLM_00634,Auto,8835,Premium,116,84,M,2023-10-22,2023-12-29,1,5.8,0,1,1,0,Denied,0,Medium
+CLM_00635,Home,1038,Standard,34,68,F,2023-04-16,2023-12-21,9,0.3,3,1,1,1,Under Investigation,0,Low
+CLM_00636,Home,2743,Standard,55,56,M,2023-11-17,2023-12-13,3,2.4,1,1,1,1,Under Investigation,0,High
+CLM_00637,Travel,479,Platinum,47,63,F,2023-06-16,2023-12-16,2,2.7,2,0,0,1,Approved,0,Medium
+CLM_00638,Home,360,Standard,111,69,F,2023-10-30,2023-12-04,6,3.8,1,1,1,0,Under Investigation,0,Medium
+CLM_00639,Auto,6021,Standard,104,51,M,2023-04-07,2023-12-29,5,3.2,1,1,1,0,Approved,0,Medium
+CLM_00640,Property,3935,Premium,114,48,M,2023-11-22,2024-01-01,6,1.2,1,0,0,0,Approved,1,Low
+CLM_00641,Home,228,Standard,58,18,F,2023-09-05,2023-12-25,11,3.6,5,1,1,0,Approved,0,Medium
+CLM_00642,Life,727,Standard,15,77,F,2023-07-26,2023-12-12,16,20.1,4,1,1,0,Approved,0,Medium
+CLM_00643,Life,5490,Basic,98,31,F,2023-06-28,2023-12-16,0,14.6,1,1,1,0,Under Investigation,0,Low
+CLM_00644,Property,1293,Premium,20,26,M,2023-01-07,2023-12-04,15,1.0,2,1,1,1,Approved,0,Low
+CLM_00645,Auto,3115,Premium,98,51,F,2023-05-19,2023-12-16,3,17.2,1,1,1,0,Approved,0,High
+CLM_00646,Home,829,Standard,53,80,M,2023-03-24,2023-12-06,2,0.2,0,0,0,1,Approved,1,Medium
+CLM_00647,Travel,6191,Premium,86,32,F,2023-03-03,2023-12-26,19,5.0,4,0,1,1,Denied,0,Low
+CLM_00648,Auto,15632,Premium,25,52,M,2023-04-02,2023-12-05,12,6.1,3,1,1,1,Denied,0,Critical
+CLM_00649,Home,1225,Standard,101,41,F,2023-03-18,2023-12-13,19,3.7,3,1,1,1,Under Investigation,0,Low
+CLM_00650,Property,6032,Standard,81,57,M,2023-07-11,2023-12-09,1,0.4,1,1,1,1,Approved,0,High
+CLM_00651,Health,1664,Standard,52,55,M,2023-11-26,2023-12-17,19,2.5,1,1,1,0,Approved,0,Critical
+CLM_00652,Property,2782,Premium,13,42,F,2023-04-12,2023-12-23,6,3.0,3,1,1,1,Under Investigation,0,Low
+CLM_00653,Life,5568,Platinum,66,49,M,2023-07-24,2023-12-09,23,3.0,4,0,0,0,Pending,0,Medium
+CLM_00654,Life,504,Standard,15,69,F,2023-07-16,2023-12-21,22,8.3,0,0,1,0,Under Investigation,0,Critical
+CLM_00655,Life,5642,Standard,13,20,F,2023-12-28,2023-12-22,22,4.8,1,1,0,0,Under Investigation,0,High
+CLM_00656,Life,5466,Platinum,101,65,F,2023-11-04,2023-12-15,13,7.8,2,1,1,1,Approved,0,High
+CLM_00657,Travel,769,Basic,56,64,F,2023-02-24,2023-12-09,12,6.1,0,1,1,1,Denied,1,Medium
+CLM_00658,Health,5643,Standard,91,69,F,2023-09-20,2023-12-24,13,7.4,0,0,0,1,Denied,0,Critical
+CLM_00659,Travel,3910,Standard,27,50,F,2023-06-28,2023-12-12,1,0.1,0,1,1,0,Approved,0,High
+CLM_00660,Auto,7629,Standard,119,37,M,2023-04-12,2023-12-11,19,1.9,3,0,1,0,Approved,0,High
+CLM_00661,Life,5461,Standard,30,39,M,2023-07-29,2023-12-11,5,6.2,0,1,1,1,Approved,0,Low
+CLM_00662,Auto,10452,Standard,45,19,F,2023-03-13,2023-12-25,10,0.7,5,1,1,1,Approved,1,Medium
+CLM_00663,Property,4889,Standard,102,65,M,2023-12-20,2023-12-30,0,9.5,2,1,0,0,Pending,0,Medium
+CLM_00664,Health,23489,Basic,62,27,F,2023-03-05,2023-12-10,14,3.1,3,1,1,0,Approved,0,Medium
+CLM_00665,Property,4628,Premium,6,62,M,2023-01-24,2023-12-14,17,2.5,2,0,1,1,Denied,0,High
+CLM_00666,Auto,2579,Standard,21,70,F,2023-11-17,2023-12-24,2,1.0,2,1,1,0,Denied,0,High
+CLM_00667,Travel,3680,Premium,79,77,F,2023-03-15,2023-12-03,0,0.4,2,0,1,0,Approved,0,High
+CLM_00668,Property,2802,Premium,99,79,M,2023-10-10,2023-12-12,0,10.9,3,0,1,1,Approved,0,Low
+CLM_00669,Auto,2037,Premium,12,75,M,2023-08-23,2023-12-28,2,0.3,1,0,1,1,Denied,0,High
+CLM_00670,Travel,1473,Standard,61,53,M,2023-04-04,2023-12-17,6,2.4,4,0,1,0,Approved,0,Low
+CLM_00671,Property,11176,Basic,86,70,F,2023-03-14,2023-12-16,0,0.3,2,1,1,1,Under Investigation,0,Low
+CLM_00672,Travel,538,Platinum,90,25,F,2023-05-09,2023-12-04,4,0.5,2,1,1,1,Under Investigation,0,Critical
+CLM_00673,Health,6035,Standard,38,79,M,2023-01-21,2023-12-27,14,3.4,4,0,1,1,Pending,0,Medium
+CLM_00674,Auto,6552,Standard,60,63,F,2023-12-15,2023-12-31,20,0.7,1,1,0,0,Under Investigation,0,Critical
+CLM_00675,Life,3088,Basic,109,47,F,2023-03-18,2023-12-17,2,4.5,1,0,1,1,Approved,0,Critical
+CLM_00676,Auto,17018,Basic,22,43,F,2023-09-28,2023-12-13,17,4.7,2,0,0,1,Under Investigation,0,Medium
+CLM_00677,Health,6944,Premium,99,84,F,2023-05-28,2023-12-18,5,1.0,2,1,1,0,Approved,0,Critical
+CLM_00678,Property,12635,Platinum,22,24,F,2023-03-05,2023-12-03,3,3.3,2,0,1,0,Approved,1,Medium
+CLM_00679,Home,5144,Basic,87,70,M,2023-01-23,2024-01-01,3,1.0,1,1,1,1,Approved,0,Low
+CLM_00680,Home,1711,Premium,33,49,M,2023-05-26,2023-12-28,0,6.0,1,0,0,1,Under Investigation,1,Low
+CLM_00681,Home,2965,Standard,72,32,F,2023-01-13,2023-12-24,19,3.0,4,1,1,1,Under Investigation,1,Critical
+CLM_00682,Life,5304,Premium,111,56,F,2023-09-02,2023-12-05,2,3.5,0,0,1,0,Approved,0,High
+CLM_00683,Life,4817,Premium,35,82,M,2023-05-04,2023-12-15,13,0.8,4,1,0,0,Approved,0,Critical
+CLM_00684,Travel,3683,Standard,49,35,M,2023-06-26,2023-12-08,15,0.4,2,1,1,1,Approved,0,Medium
+CLM_00685,Home,47418,Standard,100,64,M,2023-05-14,2023-12-25,19,1.7,2,0,0,1,Pending,1,Critical
+CLM_00686,Auto,827,Standard,79,55,F,2023-09-15,2023-12-04,23,1.1,1,1,1,0,Approved,0,High
+CLM_00687,Property,1089,Premium,76,42,F,2023-06-28,2023-12-04,21,1.3,3,0,1,1,Approved,0,Low
+CLM_00688,Property,1777,Premium,66,43,M,2023-04-23,2023-12-28,15,0.1,2,0,1,1,Approved,0,Medium
+CLM_00689,Life,19289,Premium,16,72,F,2023-07-19,2023-12-20,15,3.3,1,0,1,0,Approved,0,Low
+CLM_00690,Health,722,Platinum,100,35,F,2023-03-20,2023-12-10,14,1.9,2,0,1,0,Approved,0,High
+CLM_00691,Home,270,Standard,55,76,M,2023-03-19,2023-12-27,12,0.9,1,0,0,1,Denied,0,Medium
+CLM_00692,Life,1527,Standard,11,54,M,2023-12-21,2023-12-06,19,2.8,0,1,1,0,Denied,0,Critical
+CLM_00693,Life,6891,Standard,72,36,F,2023-09-28,2023-12-04,13,10.3,1,0,0,1,Approved,0,Low
+CLM_00694,Travel,2311,Premium,24,30,M,2023-10-21,2023-12-14,4,0.7,1,1,1,0,Approved,0,Low
+CLM_00695,Property,24249,Standard,9,68,M,2023-09-26,2023-12-13,5,1.5,1,1,1,0,Approved,0,Low
+CLM_00696,Auto,14179,Standard,1,54,F,2023-06-04,2023-12-25,3,0.8,5,0,1,0,Approved,1,Low
+CLM_00697,Home,8220,Standard,64,81,F,2023-07-25,2023-12-21,20,0.5,5,0,0,0,Approved,0,Low
+CLM_00698,Health,3017,Basic,61,60,M,2023-12-03,2023-12-23,10,1.8,3,1,0,1,Pending,0,Medium
+CLM_00699,Life,12539,Standard,6,39,F,2023-08-31,2023-12-11,15,1.7,3,1,0,1,Approved,0,Critical
+CLM_00700,Life,6063,Premium,106,25,M,2023-10-19,2023-12-03,18,4.0,1,0,1,0,Denied,0,Medium
+CLM_00701,Property,397,Premium,113,32,F,2023-01-20,2023-12-21,21,0.4,1,1,0,1,Under Investigation,0,High
+CLM_00702,Health,1492,Basic,98,36,F,2023-11-02,2023-12-14,23,1.2,1,0,1,1,Denied,0,High
+CLM_00703,Property,18573,Standard,95,69,M,2023-09-04,2023-12-28,6,0.6,2,1,1,0,Under Investigation,0,Low
+CLM_00704,Auto,4585,Standard,3,46,F,2023-07-19,2023-12-11,1,5.2,5,1,1,0,Under Investigation,0,High
+CLM_00705,Travel,2812,Premium,69,24,M,2023-08-25,2023-12-20,12,0.6,3,1,1,0,Pending,0,Low
+CLM_00706,Travel,8183,Basic,87,48,F,2023-06-26,2023-12-28,5,4.2,2,1,0,1,Approved,0,Low
+CLM_00707,Home,3638,Basic,63,75,M,2023-09-14,2023-12-14,21,0.1,2,0,1,0,Denied,0,Critical
+CLM_00708,Home,2804,Standard,18,29,F,2023-12-02,2024-01-01,20,8.6,4,1,1,0,Approved,0,Medium
+CLM_00709,Property,5448,Standard,91,57,F,2023-09-07,2023-12-25,23,10.8,1,0,0,1,Denied,0,High
+CLM_00710,Auto,662,Platinum,89,45,M,2023-04-03,2023-12-07,15,4.2,4,0,0,1,Approved,0,Low
+CLM_00711,Auto,647,Platinum,52,27,M,2023-03-14,2023-12-18,17,6.2,1,0,0,1,Under Investigation,0,Medium
+CLM_00712,Home,5746,Platinum,107,55,F,2023-05-25,2023-12-18,2,5.5,3,1,1,1,Approved,0,Medium
+CLM_00713,Property,8741,Premium,44,59,F,2023-05-26,2023-12-08,21,1.4,4,1,0,1,Approved,0,Medium
+CLM_00714,Travel,6650,Basic,7,73,M,2023-03-09,2023-12-10,20,1.1,1,0,1,0,Approved,0,High
+CLM_00715,Home,997,Standard,96,23,F,2023-10-28,2023-12-12,13,0.4,4,0,0,1,Approved,0,Medium
+CLM_00716,Property,11921,Basic,91,31,M,2023-11-29,2023-12-13,19,0.1,2,1,0,0,Under Investigation,0,Medium
+CLM_00717,Auto,2495,Basic,67,21,F,2023-04-07,2023-12-21,7,4.0,3,1,1,1,Pending,0,Medium
+CLM_00718,Travel,10411,Platinum,87,82,M,2023-10-19,2023-12-12,11,0.9,2,0,1,0,Approved,0,High
+CLM_00719,Travel,34957,Premium,42,63,M,2023-12-06,2023-12-04,0,0.6,4,1,1,1,Approved,0,Medium
+CLM_00720,Life,8449,Standard,31,45,F,2023-05-05,2023-12-09,17,4.5,2,1,0,0,Under Investigation,0,Low
+CLM_00721,Health,1176,Standard,6,66,M,2023-05-26,2023-12-19,2,0.3,2,0,0,0,Under Investigation,0,Critical
+CLM_00722,Auto,2485,Standard,71,62,M,2023-02-14,2023-12-19,0,1.5,3,1,0,0,Pending,0,Medium
+CLM_00723,Auto,5855,Premium,103,69,F,2023-06-08,2023-12-15,14,2.4,2,0,1,1,Approved,0,Medium
+CLM_00724,Home,24867,Platinum,65,23,M,2023-07-30,2023-12-18,10,0.2,1,1,1,0,Approved,0,High
+CLM_00725,Health,670,Basic,118,73,F,2023-12-25,2023-12-14,19,3.1,1,0,1,0,Approved,0,Low
+CLM_00726,Life,16379,Premium,44,55,F,2023-12-10,2023-12-24,2,1.6,4,0,0,1,Under Investigation,1,Low
+CLM_00727,Health,3479,Standard,25,33,F,2023-12-17,2023-12-31,14,2.5,1,0,1,0,Pending,0,Low
+CLM_00728,Auto,448,Standard,41,65,F,2023-08-16,2023-12-27,19,3.4,2,1,0,0,Under Investigation,0,High
+CLM_00729,Life,1711,Platinum,67,59,F,2023-08-03,2023-12-13,23,0.8,0,0,1,1,Approved,0,High
+CLM_00730,Auto,1224,Premium,103,71,M,2023-09-11,2023-12-17,16,1.5,2,1,1,1,Approved,0,Medium
+CLM_00731,Home,1307,Basic,51,74,F,2023-12-01,2023-12-27,19,0.1,1,1,0,1,Under Investigation,0,High
+CLM_00732,Life,4108,Basic,90,22,F,2023-10-15,2023-12-20,5,4.4,4,1,1,0,Approved,1,Low
+CLM_00733,Home,1524,Premium,86,78,F,2023-07-10,2023-12-11,9,2.2,3,1,1,1,Under Investigation,0,Medium
+CLM_00734,Travel,11685,Basic,45,35,F,2023-07-09,2023-12-08,18,0.7,1,0,1,1,Approved,0,Medium
+CLM_00735,Property,307,Standard,93,73,F,2023-01-17,2023-12-24,7,0.1,2,0,1,1,Approved,0,Medium
+CLM_00736,Life,336,Standard,91,76,M,2023-02-27,2023-12-16,17,3.3,1,0,1,0,Under Investigation,0,High
+CLM_00737,Home,1303,Standard,104,65,M,2023-05-25,2023-12-07,12,3.2,1,0,0,1,Pending,0,Medium
+CLM_00738,Auto,5190,Platinum,59,30,F,2023-02-15,2023-12-12,9,1.7,2,1,1,0,Pending,0,Critical
+CLM_00739,Life,3762,Standard,28,21,F,2023-02-14,2023-12-07,9,1.6,0,1,1,1,Under Investigation,0,Medium
+CLM_00740,Life,2131,Basic,69,58,M,2023-07-10,2023-12-20,1,3.9,1,0,1,1,Under Investigation,0,High
+CLM_00741,Travel,1954,Premium,22,62,M,2023-06-25,2023-12-24,14,1.0,1,0,1,0,Approved,0,Low
+CLM_00742,Travel,2389,Premium,18,28,F,2023-05-14,2023-12-13,6,2.0,1,0,1,0,Approved,0,High
+CLM_00743,Travel,9109,Standard,25,41,M,2023-09-06,2023-12-08,13,1.9,2,1,1,0,Denied,0,Low
+CLM_00744,Health,1158,Premium,50,80,M,2023-05-01,2023-12-26,18,8.7,3,1,1,1,Approved,0,Medium
+CLM_00745,Health,6682,Basic,27,77,F,2023-11-18,2023-12-27,1,2.4,0,1,1,1,Denied,0,Low
+CLM_00746,Health,7597,Standard,109,56,F,2023-05-18,2023-12-14,18,17.9,1,0,1,1,Approved,0,Low
+CLM_00747,Home,2079,Standard,1,74,F,2023-01-03,2023-12-13,5,6.2,1,1,1,1,Approved,1,Medium
+CLM_00748,Auto,10430,Platinum,28,45,F,2023-06-13,2023-12-13,4,0.6,0,1,1,0,Pending,0,High
+CLM_00749,Auto,2221,Platinum,16,77,M,2023-02-03,2023-12-06,18,2.8,1,0,1,0,Pending,0,High
+CLM_00750,Property,6417,Standard,91,40,F,2023-07-13,2023-12-30,1,7.1,0,1,1,1,Pending,0,Medium
+CLM_00751,Health,420,Basic,15,48,M,2023-03-16,2023-12-24,5,2.0,2,1,0,1,Under Investigation,1,Critical
+CLM_00752,Travel,1680,Standard,106,81,F,2023-06-01,2023-12-07,21,0.4,0,1,1,0,Approved,0,High
+CLM_00753,Property,1883,Platinum,70,65,M,2023-05-11,2023-12-13,4,3.4,4,1,1,1,Pending,0,Medium
+CLM_00754,Property,1875,Standard,49,71,M,2023-02-11,2023-12-19,22,0.2,3,0,1,1,Approved,0,Low
+CLM_00755,Travel,2474,Basic,90,75,F,2023-12-23,2023-12-14,16,4.8,0,0,1,1,Under Investigation,0,Medium
+CLM_00756,Travel,1171,Basic,106,76,M,2023-06-17,2023-12-03,16,4.3,3,0,0,0,Under Investigation,0,High
+CLM_00757,Auto,28566,Premium,30,26,M,2023-11-03,2023-12-27,15,0.0,3,0,0,1,Under Investigation,0,Low
+CLM_00758,Auto,1129,Basic,62,52,M,2023-07-15,2023-12-20,23,7.8,5,1,0,0,Approved,0,High
+CLM_00759,Travel,29628,Platinum,82,18,M,2023-05-04,2023-12-23,12,3.9,2,1,1,1,Approved,1,Medium
+CLM_00760,Travel,1971,Standard,4,67,F,2023-04-17,2023-12-21,11,0.6,2,0,0,0,Approved,0,High
+CLM_00761,Auto,928,Basic,95,42,F,2023-11-05,2023-12-31,0,4.2,1,0,1,0,Approved,0,High
+CLM_00762,Home,16517,Basic,48,84,F,2023-10-10,2023-12-03,10,2.3,1,1,1,1,Approved,0,Low
+CLM_00763,Home,2752,Basic,100,48,M,2023-05-31,2023-12-05,13,0.6,3,1,1,0,Approved,0,Low
+CLM_00764,Health,2137,Premium,71,54,M,2023-02-04,2023-12-23,15,2.3,1,1,1,0,Approved,0,Low
+CLM_00765,Home,149,Standard,93,22,F,2023-11-04,2023-12-06,23,0.9,1,1,1,1,Approved,0,Medium
+CLM_00766,Property,463,Basic,28,48,M,2023-12-24,2023-12-28,2,2.0,2,1,0,0,Approved,0,Low
+CLM_00767,Property,6199,Standard,59,67,M,2023-05-30,2023-12-04,17,0.4,4,1,1,1,Pending,0,High
+CLM_00768,Home,5860,Basic,22,28,F,2023-09-10,2023-12-18,20,8.2,5,0,1,0,Approved,0,Low
+CLM_00769,Life,741,Premium,59,28,M,2023-04-07,2023-12-03,3,1.7,2,0,1,0,Approved,0,Medium
+CLM_00770,Auto,5172,Basic,85,58,M,2023-10-04,2023-12-23,7,3.7,0,1,1,1,Under Investigation,0,Medium
+CLM_00771,Auto,6535,Premium,68,35,M,2023-05-12,2023-12-11,2,2.4,1,1,0,1,Approved,0,Medium
+CLM_00772,Travel,1039,Platinum,77,20,M,2023-10-01,2023-12-27,14,0.4,1,0,1,1,Approved,0,Critical
+CLM_00773,Home,1310,Platinum,78,35,M,2023-09-12,2023-12-23,17,2.0,1,0,1,0,Approved,0,Critical
+CLM_00774,Home,4317,Standard,67,50,F,2023-01-27,2023-12-23,9,3.2,1,0,1,0,Pending,1,High
+CLM_00775,Property,781,Basic,109,55,F,2023-09-10,2023-12-10,8,0.6,1,1,1,0,Approved,0,Medium
+CLM_00776,Property,2882,Premium,75,72,F,2023-07-03,2023-12-25,7,6.8,5,0,1,1,Approved,0,High
+CLM_00777,Life,935,Standard,90,61,F,2023-05-16,2023-12-04,23,0.5,1,1,0,0,Approved,0,High
+CLM_00778,Auto,5057,Premium,68,23,M,2023-04-15,2023-12-15,3,0.5,6,0,1,0,Under Investigation,0,Medium
+CLM_00779,Life,2776,Basic,23,53,F,2023-05-28,2023-12-08,2,3.1,1,0,1,0,Approved,0,Medium
+CLM_00780,Property,7960,Basic,6,23,F,2023-09-22,2023-12-06,5,3.5,1,1,1,1,Approved,0,Critical
+CLM_00781,Auto,1796,Premium,34,34,F,2023-10-12,2023-12-31,16,0.3,4,1,1,1,Approved,0,Medium
+CLM_00782,Life,1917,Standard,102,47,F,2023-09-20,2023-12-26,22,0.3,0,1,0,1,Under Investigation,0,Low
+CLM_00783,Auto,66,Premium,110,62,M,2023-10-05,2023-12-18,11,0.5,0,0,1,1,Approved,0,Medium
+CLM_00784,Home,11219,Platinum,105,61,M,2023-09-12,2023-12-22,22,9.4,0,0,1,1,Under Investigation,1,Medium
+CLM_00785,Travel,2861,Standard,21,58,M,2023-07-30,2023-12-28,8,3.7,3,1,1,1,Under Investigation,0,Low
+CLM_00786,Property,5196,Platinum,25,61,F,2023-05-19,2023-12-07,12,4.2,3,1,1,1,Under Investigation,0,Low
+CLM_00787,Life,7663,Basic,48,24,M,2023-10-16,2023-12-14,15,1.9,0,1,0,0,Denied,0,High
+CLM_00788,Auto,1534,Basic,98,30,M,2023-08-17,2023-12-21,0,0.5,4,1,0,0,Approved,0,Low
+CLM_00789,Health,3729,Premium,16,19,M,2023-04-07,2023-12-20,18,3.1,1,1,1,1,Under Investigation,0,High
+CLM_00790,Auto,21401,Standard,13,63,M,2023-05-20,2023-12-04,3,3.8,2,1,1,1,Approved,1,Medium
+CLM_00791,Property,9605,Premium,78,37,M,2023-03-03,2023-12-06,19,1.4,5,1,1,0,Approved,0,Medium
+CLM_00792,Travel,998,Standard,50,29,F,2023-01-25,2023-12-06,7,4.8,1,1,1,1,Denied,0,High
+CLM_00793,Property,1557,Premium,32,83,M,2023-04-09,2023-12-06,4,2.2,4,0,0,1,Pending,0,Low
+CLM_00794,Home,4533,Premium,71,37,M,2023-09-14,2023-12-30,18,5.0,2,0,1,1,Approved,0,Medium
+CLM_00795,Auto,1302,Premium,110,80,F,2023-04-21,2023-12-21,17,0.4,1,0,1,0,Approved,0,Medium
+CLM_00796,Travel,4499,Basic,61,68,F,2023-12-20,2023-12-09,20,0.6,3,0,1,1,Approved,1,High
+CLM_00797,Property,290,Standard,104,73,M,2023-04-01,2023-12-19,21,1.5,4,0,1,1,Approved,0,High
+CLM_00798,Life,719,Basic,119,46,M,2023-01-09,2023-12-22,17,12.7,4,0,1,1,Approved,0,Medium
+CLM_00799,Life,5598,Platinum,52,40,M,2023-11-25,2023-12-22,16,2.5,2,1,1,0,Approved,1,Low
+CLM_00800,Life,1125,Basic,18,73,M,2023-03-20,2024-01-01,15,4.2,3,1,0,0,Under Investigation,0,Medium
+CLM_00801,Health,1968,Basic,116,39,F,2023-07-20,2023-12-05,10,1.9,2,1,0,0,Approved,0,Medium
+CLM_00802,Travel,27919,Premium,77,82,F,2023-08-17,2023-12-20,13,2.0,1,1,1,1,Denied,0,Low
+CLM_00803,Property,1390,Standard,9,80,F,2023-04-10,2023-12-23,3,7.3,3,1,1,1,Denied,0,Low
+CLM_00804,Travel,5103,Premium,104,23,M,2023-06-27,2023-12-17,17,12.6,1,1,1,0,Approved,0,Critical
+CLM_00805,Auto,1901,Standard,100,34,M,2023-05-22,2023-12-19,10,3.1,0,0,1,0,Denied,0,Critical
+CLM_00806,Home,4626,Premium,99,74,F,2023-10-20,2023-12-16,0,1.5,1,1,1,1,Pending,0,Medium
+CLM_00807,Home,5253,Premium,29,52,F,2023-12-01,2023-12-20,11,0.2,2,1,1,1,Approved,0,Low
+CLM_00808,Travel,1393,Premium,92,31,M,2023-03-27,2023-12-12,6,6.0,1,1,1,1,Denied,0,Medium
+CLM_00809,Travel,44258,Standard,78,33,M,2023-02-16,2023-12-21,22,6.9,2,1,1,0,Under Investigation,0,Low
+CLM_00810,Property,724,Basic,45,75,M,2023-06-21,2023-12-13,0,0.3,4,1,1,1,Approved,0,High
+CLM_00811,Home,1564,Standard,5,78,F,2023-10-22,2023-12-26,6,5.6,4,0,1,1,Approved,0,Medium
+CLM_00812,Property,15043,Standard,45,28,F,2023-06-13,2023-12-31,11,0.2,1,1,1,0,Under Investigation,0,High
+CLM_00813,Travel,1135,Standard,114,51,F,2023-03-22,2023-12-24,9,0.3,3,1,1,0,Approved,0,High
+CLM_00814,Home,2462,Standard,111,81,F,2023-05-14,2023-12-14,14,1.8,3,1,1,1,Approved,0,Low
+CLM_00815,Property,5605,Standard,99,30,F,2023-09-28,2023-12-20,19,1.5,2,1,0,1,Under Investigation,0,Medium
+CLM_00816,Life,5496,Standard,115,54,M,2023-09-18,2023-12-09,19,5.9,0,0,1,1,Under Investigation,0,Medium
+CLM_00817,Health,2703,Standard,16,40,F,2023-10-06,2023-12-08,3,0.8,2,0,1,1,Pending,0,Low
+CLM_00818,Auto,8195,Premium,13,56,F,2023-12-04,2023-12-25,18,0.2,2,0,0,1,Approved,0,Low
+CLM_00819,Travel,1239,Basic,100,37,F,2023-10-18,2023-12-07,1,3.3,4,1,1,1,Denied,0,Medium
+CLM_00820,Travel,6151,Standard,5,34,M,2023-10-15,2023-12-26,8,6.7,5,1,1,0,Pending,0,Low
+CLM_00821,Travel,924,Platinum,39,50,F,2023-06-04,2023-12-04,16,1.6,3,0,1,1,Approved,0,High
+CLM_00822,Auto,1915,Platinum,32,26,F,2023-12-19,2023-12-09,6,0.2,1,0,1,0,Approved,0,Medium
+CLM_00823,Home,7530,Standard,40,81,F,2023-11-28,2023-12-17,21,0.2,0,1,0,1,Approved,0,Critical
+CLM_00824,Home,452,Basic,7,25,M,2023-10-15,2023-12-29,23,2.7,3,0,1,0,Approved,0,Medium
+CLM_00825,Property,8117,Standard,65,33,F,2023-12-12,2024-01-01,3,2.0,5,0,1,0,Approved,0,Medium
+CLM_00826,Auto,27772,Standard,12,73,F,2023-04-05,2023-12-14,5,2.8,2,0,1,1,Approved,0,Medium
+CLM_00827,Health,1677,Platinum,111,79,M,2023-10-07,2023-12-12,11,0.7,4,1,1,1,Under Investigation,0,Low
+CLM_00828,Health,7024,Platinum,102,52,F,2023-06-11,2023-12-23,13,2.4,2,1,0,0,Denied,0,Medium
+CLM_00829,Life,20846,Standard,15,41,M,2023-10-18,2023-12-16,18,0.6,3,0,1,0,Under Investigation,0,Low
+CLM_00830,Home,3371,Standard,99,25,M,2023-07-24,2023-12-24,4,3.1,2,1,1,0,Approved,0,Medium
+CLM_00831,Property,1785,Standard,114,33,M,2023-06-16,2023-12-31,18,6.6,4,1,0,0,Approved,0,Low
+CLM_00832,Home,6325,Premium,110,72,F,2023-04-06,2023-12-26,22,0.2,2,0,1,0,Approved,0,High
+CLM_00833,Property,2715,Platinum,104,35,F,2023-11-27,2023-12-27,3,0.4,1,1,1,1,Pending,0,Medium
+CLM_00834,Travel,1302,Basic,38,51,M,2023-02-12,2023-12-21,22,2.6,3,0,0,1,Denied,0,High
+CLM_00835,Travel,948,Standard,52,51,F,2023-11-27,2023-12-26,13,1.3,0,1,1,0,Under Investigation,0,Critical
+CLM_00836,Health,1898,Basic,111,34,F,2023-03-03,2023-12-06,10,4.7,1,1,0,0,Approved,0,Medium
+CLM_00837,Travel,7667,Platinum,55,70,F,2023-07-26,2023-12-03,14,1.7,1,1,1,0,Approved,0,Low
+CLM_00838,Travel,9338,Standard,5,53,F,2023-10-05,2023-12-08,22,0.3,4,0,1,1,Approved,0,High
+CLM_00839,Travel,7456,Basic,89,20,F,2023-05-30,2023-12-20,10,0.8,1,0,1,1,Pending,0,Medium
+CLM_00840,Travel,144,Premium,11,43,M,2023-08-12,2023-12-17,11,7.2,1,1,0,0,Approved,0,High
+CLM_00841,Property,4747,Standard,119,70,F,2023-05-14,2023-12-13,18,1.7,3,1,1,1,Denied,0,Critical
+CLM_00842,Travel,3038,Standard,107,69,F,2023-01-11,2023-12-27,19,5.0,2,1,1,1,Under Investigation,0,High
+CLM_00843,Health,3384,Basic,19,59,F,2023-06-01,2023-12-18,13,2.9,4,1,0,1,Pending,0,Low
+CLM_00844,Life,4412,Platinum,21,39,F,2023-12-28,2024-01-01,22,11.0,5,1,1,1,Under Investigation,0,Low
+CLM_00845,Travel,10174,Standard,48,19,F,2023-07-28,2024-01-01,3,2.8,3,1,0,0,Approved,0,High
+CLM_00846,Health,2692,Standard,6,24,F,2023-08-14,2023-12-24,3,6.7,2,0,1,1,Approved,0,Critical
+CLM_00847,Property,13502,Basic,35,76,F,2023-08-12,2023-12-12,11,1.2,1,1,1,1,Approved,0,Medium
+CLM_00848,Auto,3936,Basic,23,53,M,2023-04-21,2023-12-03,22,1.5,3,1,1,0,Denied,0,Low
+CLM_00849,Health,675,Premium,67,53,F,2023-10-18,2023-12-24,0,5.5,2,1,1,1,Pending,0,Critical
+CLM_00850,Auto,1198,Standard,18,64,F,2023-04-07,2023-12-06,23,1.2,1,0,1,1,Denied,0,Medium
+CLM_00851,Auto,17100,Premium,27,24,M,2023-06-13,2023-12-12,14,1.0,1,1,0,0,Approved,0,Low
+CLM_00852,Property,210,Standard,44,21,F,2023-03-03,2023-12-19,19,2.9,2,1,1,1,Denied,0,Medium
+CLM_00853,Auto,6752,Platinum,118,76,M,2023-10-26,2023-12-23,12,1.8,4,0,0,1,Pending,0,Medium
+CLM_00854,Auto,2629,Platinum,40,82,F,2023-04-29,2023-12-21,9,7.6,0,0,1,1,Under Investigation,0,Medium
+CLM_00855,Auto,1173,Premium,59,30,M,2023-12-20,2023-12-15,18,4.0,1,0,1,0,Approved,0,Low
+CLM_00856,Auto,5128,Platinum,45,70,M,2023-02-16,2023-12-16,22,1.8,3,0,0,1,Under Investigation,0,Medium
+CLM_00857,Home,4424,Premium,11,55,F,2023-12-24,2023-12-23,22,6.7,1,0,1,1,Approved,0,Critical
+CLM_00858,Health,1356,Standard,36,22,F,2023-04-13,2023-12-27,10,0.9,5,1,0,1,Pending,0,Medium
+CLM_00859,Health,5662,Premium,33,82,F,2023-11-19,2023-12-04,22,1.1,2,0,1,1,Approved,0,Medium
+CLM_00860,Home,1442,Standard,32,40,M,2023-11-25,2023-12-30,22,0.5,1,0,0,1,Pending,0,High
+CLM_00861,Property,398,Platinum,87,61,M,2023-05-19,2023-12-19,1,1.5,4,1,1,0,Approved,0,Low
+CLM_00862,Auto,28813,Standard,56,73,F,2023-09-28,2023-12-20,15,4.8,1,1,1,1,Denied,0,Low
+CLM_00863,Auto,205,Standard,37,37,M,2023-06-12,2023-12-07,9,4.9,2,1,1,0,Approved,0,Medium
+CLM_00864,Travel,555,Platinum,112,21,M,2023-06-27,2023-12-15,0,4.2,2,1,1,1,Pending,0,Medium
+CLM_00865,Travel,7389,Basic,56,62,M,2023-12-29,2023-12-11,3,4.9,2,1,1,1,Under Investigation,0,Medium
+CLM_00866,Home,1304,Platinum,75,25,M,2023-09-13,2023-12-31,8,7.3,2,1,0,0,Pending,0,Low
+CLM_00867,Property,7248,Platinum,81,84,F,2023-10-17,2023-12-09,8,2.9,0,0,0,1,Under Investigation,0,High
+CLM_00868,Auto,30117,Basic,8,69,M,2023-03-04,2023-12-12,5,0.1,3,1,1,1,Approved,0,High
+CLM_00869,Life,14802,Standard,47,20,M,2023-03-05,2023-12-25,13,7.7,0,1,0,0,Approved,1,Medium
+CLM_00870,Home,603,Premium,15,31,M,2023-07-28,2023-12-06,9,2.3,2,1,0,0,Approved,0,Medium
+CLM_00871,Life,19039,Platinum,54,34,F,2023-07-15,2023-12-09,10,0.4,2,1,1,1,Approved,1,High
+CLM_00872,Travel,431,Standard,87,20,F,2023-01-10,2023-12-17,0,3.8,0,1,1,1,Approved,0,Medium
+CLM_00873,Auto,18427,Standard,52,75,M,2023-09-27,2023-12-04,22,4.8,2,0,1,1,Approved,0,Low
+CLM_00874,Travel,11910,Basic,25,39,M,2023-10-05,2023-12-21,22,0.5,1,1,1,1,Under Investigation,0,High
+CLM_00875,Home,7401,Standard,5,53,F,2023-05-30,2023-12-29,23,4.7,1,1,0,0,Under Investigation,0,Medium
+CLM_00876,Travel,4054,Standard,3,27,M,2023-11-13,2023-12-05,23,1.2,6,1,0,1,Approved,0,Critical
+CLM_00877,Life,5207,Standard,39,22,F,2023-05-22,2023-12-27,3,0.2,2,1,1,0,Approved,0,High
+CLM_00878,Life,274,Basic,83,63,F,2023-08-12,2023-12-18,13,0.5,2,1,0,0,Denied,0,High
+CLM_00879,Auto,16000,Standard,33,67,F,2023-09-04,2023-12-13,15,0.5,1,0,1,1,Approved,0,Low
+CLM_00880,Travel,17527,Basic,96,42,F,2023-03-16,2023-12-10,12,0.0,1,1,0,0,Pending,0,Low
+CLM_00881,Auto,1806,Standard,21,59,F,2023-03-19,2023-12-15,18,4.1,1,1,0,1,Pending,0,High
+CLM_00882,Travel,1996,Standard,92,64,F,2023-03-09,2023-12-31,21,0.7,1,0,1,0,Pending,0,Medium
+CLM_00883,Health,542,Standard,6,54,F,2023-08-04,2023-12-27,11,3.6,1,1,1,0,Approved,0,Critical
+CLM_00884,Travel,254,Platinum,94,59,F,2023-05-22,2023-12-10,2,0.2,2,1,1,1,Under Investigation,0,Low
+CLM_00885,Life,1668,Platinum,94,63,M,2023-06-29,2023-12-10,14,4.8,1,1,0,1,Under Investigation,0,High
+CLM_00886,Travel,2296,Standard,38,20,F,2023-11-08,2023-12-31,2,2.1,0,0,1,0,Denied,0,Medium
+CLM_00887,Life,4536,Standard,69,25,M,2023-01-27,2023-12-06,8,2.5,0,0,1,1,Denied,0,Medium
+CLM_00888,Home,6367,Premium,26,59,F,2023-11-01,2023-12-24,16,1.4,3,1,0,0,Approved,0,Low
+CLM_00889,Life,8749,Standard,110,22,M,2023-10-24,2023-12-17,3,2.4,3,0,0,0,Denied,0,Medium
+CLM_00890,Life,6802,Premium,93,47,F,2023-09-04,2023-12-16,19,2.3,4,0,1,0,Under Investigation,0,High
+CLM_00891,Health,1998,Basic,57,69,F,2023-06-24,2023-12-29,22,1.1,5,1,1,1,Approved,0,Low
+CLM_00892,Health,917,Premium,17,38,F,2023-06-20,2023-12-07,0,0.4,1,0,0,1,Under Investigation,0,Low
+CLM_00893,Health,32142,Standard,89,61,M,2023-01-20,2023-12-23,5,1.7,2,1,1,0,Approved,0,High
+CLM_00894,Travel,834,Basic,76,69,M,2023-09-06,2023-12-30,11,5.8,5,0,1,1,Approved,0,Low
+CLM_00895,Property,3715,Platinum,7,83,M,2023-02-07,2023-12-11,0,1.3,2,1,0,1,Approved,0,Low
+CLM_00896,Property,3743,Basic,94,22,M,2023-09-03,2023-12-27,22,0.4,2,1,0,0,Approved,0,Critical
+CLM_00897,Home,1993,Basic,74,35,M,2023-06-30,2023-12-04,3,1.8,3,1,1,1,Approved,0,Low
+CLM_00898,Health,2267,Standard,7,57,F,2023-11-19,2023-12-24,4,1.3,1,1,1,1,Under Investigation,0,Medium
+CLM_00899,Home,24550,Standard,11,61,M,2023-10-24,2023-12-27,1,0.3,4,0,1,1,Pending,0,Low
+CLM_00900,Auto,3992,Premium,98,68,F,2023-08-29,2023-12-13,0,7.2,3,0,0,1,Approved,0,Low
+CLM_00901,Home,26213,Platinum,88,43,M,2023-09-02,2023-12-15,16,2.1,0,0,1,1,Approved,0,Low
+CLM_00902,Home,13527,Standard,63,39,F,2023-10-27,2023-12-17,0,7.8,2,1,1,0,Approved,1,Medium
+CLM_00903,Life,21331,Basic,29,52,M,2023-02-03,2023-12-09,0,0.3,0,0,1,0,Approved,0,Low
+CLM_00904,Property,603,Platinum,80,71,M,2023-11-10,2024-01-01,1,1.4,1,1,1,0,Approved,0,Low
+CLM_00905,Property,2508,Standard,106,69,F,2023-02-11,2023-12-21,11,2.2,0,0,1,1,Pending,0,Low
+CLM_00906,Property,763,Standard,116,77,F,2023-08-15,2023-12-18,21,3.6,3,1,0,0,Pending,1,Critical
+CLM_00907,Travel,7879,Standard,113,69,F,2023-08-04,2023-12-29,14,3.3,4,1,0,1,Approved,0,Medium
+CLM_00908,Auto,5759,Standard,74,70,F,2023-07-29,2023-12-20,4,1.5,5,0,1,0,Approved,0,High
+CLM_00909,Auto,1120,Premium,108,28,F,2023-01-09,2023-12-25,2,2.7,0,0,1,0,Approved,0,Medium
+CLM_00910,Property,1416,Basic,10,43,F,2023-01-19,2023-12-15,5,0.1,5,0,1,0,Approved,0,Medium
+CLM_00911,Home,431,Basic,95,37,M,2023-07-11,2023-12-12,13,2.0,2,0,1,1,Approved,0,Low
+CLM_00912,Life,2462,Premium,13,72,F,2023-10-08,2023-12-20,7,0.8,3,1,1,1,Pending,0,Medium
+CLM_00913,Property,11927,Premium,103,56,F,2023-04-27,2023-12-09,22,1.4,1,1,1,1,Under Investigation,0,Low
+CLM_00914,Travel,4137,Basic,51,25,F,2023-06-14,2023-12-22,9,9.9,0,1,1,0,Denied,0,High
+CLM_00915,Health,713,Premium,38,63,F,2023-08-20,2023-12-24,13,1.1,1,0,1,1,Under Investigation,0,Low
+CLM_00916,Health,7462,Basic,73,72,F,2023-01-29,2023-12-12,1,5.7,1,0,1,1,Approved,0,High
+CLM_00917,Life,851,Basic,80,76,M,2023-12-15,2023-12-26,5,3.5,0,1,0,1,Approved,0,Medium
+CLM_00918,Auto,457,Standard,45,84,F,2023-05-03,2023-12-25,10,9.0,1,1,0,1,Under Investigation,0,Low
+CLM_00919,Life,4349,Standard,82,21,M,2023-02-25,2023-12-18,19,2.2,0,1,1,0,Pending,0,Medium
+CLM_00920,Health,958,Standard,66,25,F,2023-06-16,2023-12-23,14,1.5,0,1,1,1,Approved,0,High
+CLM_00921,Home,4535,Basic,76,34,F,2023-12-18,2023-12-16,1,4.7,1,1,1,0,Pending,0,Medium
+CLM_00922,Home,4692,Standard,46,81,M,2023-05-20,2023-12-15,10,5.5,2,0,1,0,Denied,0,High
+CLM_00923,Auto,881,Basic,76,27,F,2023-01-06,2023-12-19,18,0.2,2,1,1,0,Under Investigation,0,Critical
+CLM_00924,Home,391,Standard,98,29,F,2023-04-24,2023-12-13,4,4.9,3,0,0,1,Under Investigation,0,Critical
+CLM_00925,Travel,1351,Premium,75,67,F,2023-04-08,2023-12-20,3,7.2,2,1,0,1,Pending,0,Low
+CLM_00926,Home,696,Basic,110,34,F,2023-03-12,2023-12-24,14,0.2,2,0,1,0,Denied,0,Medium
+CLM_00927,Home,6576,Basic,100,20,M,2023-08-09,2023-12-26,18,7.2,2,0,1,0,Pending,0,Low
+CLM_00928,Property,1577,Platinum,18,58,F,2023-06-06,2023-12-22,9,1.0,2,0,1,0,Pending,0,High
+CLM_00929,Auto,3800,Platinum,32,52,F,2023-03-02,2023-12-11,18,1.2,4,0,1,1,Under Investigation,0,Medium
+CLM_00930,Life,41646,Basic,9,19,M,2023-09-06,2023-12-21,22,0.3,3,1,0,0,Approved,1,High
+CLM_00931,Property,659,Standard,89,31,M,2023-05-03,2024-01-01,23,3.6,1,1,1,0,Approved,0,High
+CLM_00932,Property,281,Premium,108,64,M,2023-01-03,2023-12-31,18,0.2,2,1,1,0,Approved,0,Low
+CLM_00933,Life,18526,Standard,22,34,F,2023-08-06,2023-12-22,14,2.2,4,1,1,1,Under Investigation,1,Low
+CLM_00934,Travel,2408,Standard,36,41,F,2023-01-19,2023-12-06,20,5.2,3,1,0,0,Under Investigation,0,High
+CLM_00935,Health,5508,Basic,38,19,M,2023-06-14,2023-12-29,2,0.8,4,1,1,0,Approved,0,Low
+CLM_00936,Home,3138,Premium,65,78,M,2023-07-02,2023-12-18,1,8.9,0,1,1,1,Pending,0,Low
+CLM_00937,Home,1779,Platinum,95,68,M,2023-12-29,2023-12-27,23,0.8,6,1,1,0,Pending,0,Low
+CLM_00938,Property,4183,Premium,98,62,M,2023-03-16,2023-12-13,17,1.1,3,1,0,0,Approved,0,Medium
+CLM_00939,Life,4310,Standard,53,51,M,2023-04-10,2023-12-13,11,6.0,2,1,1,0,Under Investigation,0,Medium
+CLM_00940,Property,4140,Premium,97,25,F,2023-07-04,2023-12-29,1,0.6,1,1,0,1,Under Investigation,0,Medium
+CLM_00941,Life,2784,Premium,105,39,M,2023-04-30,2023-12-29,7,3.8,0,1,0,0,Approved,0,Low
+CLM_00942,Home,1075,Basic,106,57,M,2023-08-28,2023-12-04,1,2.5,0,0,1,1,Approved,1,High
+CLM_00943,Life,5933,Premium,5,52,F,2023-03-14,2023-12-05,2,2.5,3,1,0,1,Pending,0,High
+CLM_00944,Life,6572,Standard,82,57,F,2023-02-06,2023-12-04,15,1.7,2,1,1,0,Approved,0,Low
+CLM_00945,Life,1408,Premium,106,80,F,2023-04-21,2023-12-30,10,3.2,6,0,1,0,Under Investigation,0,Low
+CLM_00946,Property,776,Standard,97,39,M,2023-06-26,2023-12-12,6,0.8,3,1,1,1,Pending,0,Medium
+CLM_00947,Life,12566,Basic,19,19,F,2023-07-18,2023-12-06,21,2.5,1,0,1,1,Denied,0,Low
+CLM_00948,Home,1592,Platinum,101,44,F,2023-01-13,2023-12-22,1,2.5,1,0,0,0,Denied,0,Medium
+CLM_00949,Travel,971,Standard,35,25,M,2023-07-08,2023-12-14,22,1.1,1,0,0,1,Approved,0,Medium
+CLM_00950,Home,2246,Standard,81,52,F,2023-07-18,2024-01-01,17,2.5,0,1,1,1,Under Investigation,0,High
+CLM_00951,Auto,1280,Premium,55,45,F,2023-10-12,2023-12-27,3,1.8,1,1,1,1,Approved,0,Medium
+CLM_00952,Health,8069,Standard,23,53,M,2023-09-09,2023-12-23,15,3.3,3,0,1,0,Approved,0,Medium
+CLM_00953,Home,8294,Standard,2,60,M,2023-07-16,2023-12-25,5,1.7,2,1,1,0,Under Investigation,0,Medium
+CLM_00954,Home,8102,Basic,52,50,F,2023-08-24,2023-12-26,23,0.7,2,0,1,0,Under Investigation,0,High
+CLM_00955,Auto,484,Standard,94,19,F,2023-03-01,2023-12-15,19,0.8,2,1,0,1,Approved,0,Low
+CLM_00956,Home,16878,Standard,107,52,F,2023-08-26,2023-12-23,11,2.7,1,0,0,1,Pending,0,High
+CLM_00957,Home,25329,Standard,78,72,F,2023-11-06,2024-01-01,10,0.4,3,1,0,1,Pending,0,Low
+CLM_00958,Life,8682,Basic,69,80,M,2023-11-12,2023-12-21,13,4.0,1,1,1,0,Pending,0,Medium
+CLM_00959,Home,7038,Premium,32,28,M,2023-04-15,2023-12-27,5,1.0,1,1,1,0,Approved,0,Low
+CLM_00960,Travel,726,Basic,1,70,F,2023-06-26,2023-12-11,6,5.4,1,0,0,0,Approved,0,Medium
+CLM_00961,Home,12723,Premium,68,77,M,2023-01-24,2023-12-16,8,2.6,2,0,1,0,Under Investigation,1,High
+CLM_00962,Home,6891,Standard,42,58,F,2023-08-07,2023-12-17,15,0.8,1,1,1,0,Pending,0,Low
+CLM_00963,Home,4737,Standard,39,59,M,2023-10-03,2023-12-19,11,0.2,1,1,0,1,Denied,0,High
+CLM_00964,Health,3200,Premium,80,40,F,2023-11-29,2023-12-09,23,1.2,1,1,0,1,Approved,0,Medium
+CLM_00965,Home,3087,Standard,111,36,F,2023-08-11,2023-12-27,7,1.4,1,1,1,0,Approved,0,Medium
+CLM_00966,Life,7958,Premium,50,50,M,2023-04-17,2023-12-31,0,6.2,1,1,1,1,Under Investigation,0,Critical
+CLM_00967,Life,106,Premium,57,24,M,2023-02-01,2023-12-07,17,5.7,2,1,1,0,Under Investigation,0,Low
+CLM_00968,Travel,3297,Premium,47,77,F,2023-01-29,2023-12-22,17,1.6,5,1,1,1,Pending,0,Medium
+CLM_00969,Auto,16258,Standard,96,39,M,2023-07-25,2023-12-20,4,2.2,3,1,1,0,Approved,0,Medium
+CLM_00970,Travel,998,Standard,20,74,F,2023-12-27,2023-12-19,1,5.3,3,0,1,1,Denied,0,High
+CLM_00971,Auto,3078,Basic,79,33,M,2023-08-11,2023-12-03,9,3.9,2,1,1,0,Under Investigation,0,Critical
+CLM_00972,Travel,6163,Standard,102,75,M,2023-12-07,2023-12-25,3,0.4,2,0,1,0,Approved,0,Low
+CLM_00973,Life,27608,Standard,91,59,F,2023-03-03,2023-12-15,2,5.3,2,0,1,1,Under Investigation,1,Medium
+CLM_00974,Auto,7554,Premium,2,75,F,2023-06-11,2023-12-19,22,0.4,4,1,0,1,Approved,0,Low
+CLM_00975,Home,9693,Basic,82,27,M,2023-01-11,2023-12-25,5,7.5,2,0,1,0,Under Investigation,0,Medium
+CLM_00976,Auto,17341,Standard,52,38,F,2023-08-31,2023-12-30,12,5.0,0,0,1,1,Pending,0,Low
+CLM_00977,Home,3927,Platinum,89,46,F,2023-06-03,2023-12-11,7,4.5,1,1,0,1,Pending,0,High
+CLM_00978,Life,682,Standard,54,67,M,2023-08-19,2023-12-18,14,0.0,2,1,1,0,Approved,0,Medium
+CLM_00979,Auto,1965,Basic,103,55,F,2023-03-18,2023-12-04,17,5.5,1,0,0,0,Approved,0,High
+CLM_00980,Auto,1128,Premium,30,71,M,2023-11-16,2023-12-05,5,4.7,2,1,0,1,Under Investigation,0,High
+CLM_00981,Property,935,Standard,83,29,F,2023-04-10,2023-12-17,15,4.3,2,0,1,0,Denied,0,Medium
+CLM_00982,Health,1714,Standard,50,54,M,2023-12-07,2023-12-06,23,5.4,2,1,1,0,Approved,1,Low
+CLM_00983,Health,1126,Platinum,109,70,M,2023-06-12,2023-12-17,21,0.6,2,1,0,1,Approved,0,Medium
+CLM_00984,Auto,529,Premium,78,22,M,2023-10-24,2023-12-18,11,7.2,1,0,1,1,Under Investigation,0,Low
+CLM_00985,Auto,37606,Standard,5,65,F,2023-01-19,2023-12-05,3,0.6,2,0,1,0,Approved,0,Low
+CLM_00986,Property,1355,Standard,88,73,F,2023-05-02,2023-12-07,10,1.9,4,1,1,0,Under Investigation,0,Medium
+CLM_00987,Property,1022,Platinum,61,52,F,2023-12-27,2023-12-21,18,0.2,3,0,1,1,Approved,0,High
+CLM_00988,Health,2364,Basic,113,45,F,2023-05-26,2023-12-22,13,4.9,1,1,1,0,Denied,0,Critical
+CLM_00989,Home,5068,Basic,34,38,M,2023-08-13,2023-12-11,12,7.0,3,1,1,0,Approved,1,Critical
+CLM_00990,Travel,7096,Basic,56,52,M,2023-03-26,2023-12-16,10,0.9,1,0,1,0,Pending,0,Low
+CLM_00991,Auto,5010,Standard,24,64,F,2023-05-24,2023-12-28,7,0.2,1,0,1,0,Approved,0,High
+CLM_00992,Health,1144,Standard,68,33,F,2023-11-05,2023-12-24,3,2.8,1,1,1,1,Approved,0,Critical
+CLM_00993,Travel,1037,Basic,85,44,M,2023-09-08,2023-12-18,8,1.5,2,0,1,1,Approved,0,Medium
+CLM_00994,Auto,1262,Basic,95,42,M,2023-03-19,2023-12-22,18,3.9,0,0,0,0,Pending,0,Medium
+CLM_00995,Health,23416,Premium,8,59,M,2023-03-10,2023-12-23,18,3.8,5,0,1,1,Pending,0,Medium
+CLM_00996,Life,1087,Platinum,93,28,M,2023-12-13,2023-12-05,23,0.9,2,1,1,1,Denied,0,Medium
+CLM_00997,Life,1448,Standard,58,82,F,2023-11-04,2023-12-03,6,3.6,0,1,0,1,Denied,0,High
+CLM_00998,Life,4450,Premium,8,46,M,2023-02-04,2023-12-29,7,0.2,1,1,1,1,Pending,0,High
+CLM_00999,Property,1501,Premium,27,62,M,2023-09-10,2023-12-15,3,2.8,5,0,1,1,Approved,0,Medium
+CLM_01000,Health,12805,Standard,41,46,M,2023-02-28,2023-12-15,20,9.0,6,0,0,0,Pending,0,Low

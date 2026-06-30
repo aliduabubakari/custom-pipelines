@@ -1,0 +1,332 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-8445-20662-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "4"
+    abilities: "Data Preparation, Data Analysis, Data Visualization"
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-loading-profiling
+        template: step-01-data-loading-profiling
+    - - name: step-02-file-format
+        template: step-02-file-format
+    - - name: step-03-data-structure
+        template: step-03-data-structure
+    - - name: step-04-data-visualization-error-cause
+        template: step-04-data-visualization-error-cause
+    - - name: step-05-data-cleaning-standardization-scope-issue
+        template: step-05-data-cleaning-standardization-scope-issue
+    - - name: step-06-data-visualization-success-confirmation
+        template: step-06-data-visualization-success-confirmation
+    - - name: step-07-error-recovery-robust-loading
+        template: step-07-error-recovery-robust-loading
+    - - name: step-08-data-visualization-verification-results
+        template: step-08-data-visualization-verification-results
+    - - name: step-09-data-visualization-project-completion-status
+        template: step-09-data-visualization-project-completion-status
+    - - name: step-10-error-recovery-robust-loading-phase-2
+        template: step-10-error-recovery-robust-loading-phase-2
+    - - name: step-11-data-validation-quality-report
+        template: step-11-data-validation-quality-report
+    - - name: step-12-error-recovery-robust-loading-phase-3
+        template: step-12-error-recovery-robust-loading-phase-3
+    - - name: step-13-error-recovery-robust-loading-phase-4
+        template: step-13-error-recovery-robust-loading-phase-4
+    - - name: step-14-data-visualization-success-confirmation-phase-2
+        template: step-14-data-visualization-success-confirmation-phase-2
+
+  - name: step-01-data-loading-profiling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-loading-profiling.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-file-format
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_file-format.py", --AREA_CODE_STATE_xlsx /data/AREA_CODE_STATE.xlsx --excel_data_temp_csv /mnt/output/excel_data_temp.csv --json_data_temp_csv /mnt/output/json_data_temp.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-data-structure
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_data-structure.py", --validation_report_txt /mnt/output/validation_report.txt --excel_data_temp_csv /mnt/output/excel_data_temp.csv --json_data_temp_csv /mnt/output/json_data_temp.csv --validation_report_txt /mnt/output/validation_report.txt --state_frequency_csv /mnt/output/state_frequency.csv --cleaned_area_codes_csv /mnt/output/cleaned_area_codes.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-data-visualization-error-cause
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_data-visualization-error-cause.py", --state_frequency_csv /mnt/output/state_frequency.csv --cleaned_area_codes_csv /mnt/output/cleaned_area_codes.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-data-cleaning-standardization-scope-issue
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_data-cleaning-standardization-scope-issu.py", --state_frequency_csv /mnt/output/state_frequency.csv --cleaned_area_codes_csv /mnt/output/cleaned_area_codes.csv --FINAL_REPORT_md /mnt/output/FINAL_REPORT.md --FINAL_REPORT_md /mnt/output/FINAL_REPORT.md]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-data-visualization-success-confirmation
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_data-visualization-success-confirmation.py", --state_frequency_csv /mnt/output/state_frequency.csv --cleaned_area_codes_csv /mnt/output/cleaned_area_codes.csv --README_md /mnt/output/README.md --README_md /mnt/output/README.md]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-error-recovery-robust-loading
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_error-recovery-robust-loading.py", --state_frequency_csv /mnt/output/state_frequency.csv --cleaned_area_codes_csv /mnt/output/cleaned_area_codes.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-data-visualization-verification-results
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_data-visualization-verification-results.py", --COMPLETION_REPORT_md /mnt/output/COMPLETION_REPORT.md --COMPLETION_REPORT_md /mnt/output/COMPLETION_REPORT.md]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-data-visualization-project-completion-status
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_data-visualization-project-completion-st.py", --cleaned_area_codes_csv /mnt/output/cleaned_area_codes.csv --README_md /mnt/output/README.md --README_md /mnt/output/README.md]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-10-error-recovery-robust-loading-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_error-recovery-robust-loading-phase-2.py", --README_md /mnt/output/README.md --README_md /mnt/output/README.md]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-11-data-validation-quality-report
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_data-validation-quality-report.py", --cleaned_area_codes_csv /mnt/output/cleaned_area_codes.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-12-error-recovery-robust-loading-phase-3
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_error-recovery-robust-loading-phase-3.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-13-error-recovery-robust-loading-phase-4
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_error-recovery-robust-loading-phase-4.py", --CHECKSUMS_txt /mnt/output/CHECKSUMS.txt --CHECKSUMS_txt /mnt/output/CHECKSUMS.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-14-data-visualization-success-confirmation-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_14_data-visualization-success-confirmation-.py", --date /data/date --PROJECT_CLOSED_txt /mnt/output/PROJECT_CLOSED.txt --CHECKSUMS_txt /mnt/output/CHECKSUMS.txt --PROJECT_CLOSED_txt /mnt/output/PROJECT_CLOSED.txt --CHECKSUMS_txt /mnt/output/CHECKSUMS.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

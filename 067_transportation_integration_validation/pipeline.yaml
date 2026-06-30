@@ -1,0 +1,420 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-8818-20960-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "4"
+    abilities: "Data Preparation, Data Analysis, Code Generation"
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-merging-integration
+        template: step-01-data-merging-integration
+    - - name: step-02-data-merging-integration-phase-2
+        template: step-02-data-merging-integration-phase-2
+    - - name: step-03-data-validation-quality-report
+        template: step-03-data-validation-quality-report
+    - - name: step-04-error-recovery-robust-loading
+        template: step-04-error-recovery-robust-loading
+    - - name: step-05-problem-diagnosis
+        template: step-05-problem-diagnosis
+    - - name: step-06-data-visualization-enhance-the-solution
+        template: step-06-data-visualization-enhance-the-solution
+    - - name: step-07-root-cause-analysis
+        template: step-07-root-cause-analysis
+    - - name: step-08-model-training-prediction
+        template: step-08-model-training-prediction
+    - - name: step-09-data-validation-quality-report-phase-2
+        template: step-09-data-validation-quality-report-phase-2
+    - - name: step-10-data-validation-quality-report-phase-3
+        template: step-10-data-validation-quality-report-phase-3
+    - - name: step-11-data-validation-quality-report-phase-4
+        template: step-11-data-validation-quality-report-phase-4
+    - - name: step-12-data-validation-quality-report-phase-5
+        template: step-12-data-validation-quality-report-phase-5
+    - - name: step-13-data-validation-quality-report-phase-6
+        template: step-13-data-validation-quality-report-phase-6
+    - - name: step-14-data-validation-quality-report-phase-7
+        template: step-14-data-validation-quality-report-phase-7
+    - - name: step-15-data-validation-quality-report-phase-8
+        template: step-15-data-validation-quality-report-phase-8
+    - - name: step-16-data-validation-quality-report-phase-9
+        template: step-16-data-validation-quality-report-phase-9
+    - - name: step-17-data-validation-quality-report-phase-10
+        template: step-17-data-validation-quality-report-phase-10
+    - - name: step-18-model-training-prediction-phase-2
+        template: step-18-model-training-prediction-phase-2
+
+  - name: step-01-data-merging-integration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-merging-integration.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-data-merging-integration-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-merging-integration-phase-2.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-data-validation-quality-report
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_data-validation-quality-report.py", --airport_total_weights_enhanced_xlsx /data/airport_total_weights_enhanced.xlsx]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-error-recovery-robust-loading
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_error-recovery-robust-loading.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-problem-diagnosis
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_problem-diagnosis.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-data-visualization-enhance-the-solution
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_data-visualization-enhance-the-solution.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-root-cause-analysis
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_root-cause-analysis.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-model-training-prediction
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_model-training-prediction.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-data-validation-quality-report-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_data-validation-quality-report-phase-2.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-10-data-validation-quality-report-phase-3
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_data-validation-quality-report-phase-3.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-11-data-validation-quality-report-phase-4
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_data-validation-quality-report-phase-4.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-12-data-validation-quality-report-phase-5
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_data-validation-quality-report-phase-5.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-13-data-validation-quality-report-phase-6
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_data-validation-quality-report-phase-6.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-14-data-validation-quality-report-phase-7
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_14_data-validation-quality-report-phase-7.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-15-data-validation-quality-report-phase-8
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_15_data-validation-quality-report-phase-8.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-16-data-validation-quality-report-phase-9
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_16_data-validation-quality-report-phase-9.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-17-data-validation-quality-report-phase-10
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_17_data-validation-quality-report-phase-10.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-18-model-training-prediction-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_18_model-training-prediction-phase-2.py", ]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

@@ -1,0 +1,332 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-4917-12190-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "N/A"
+    abilities: ""
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-loading-profiling
+        template: step-01-data-loading-profiling
+    - - name: step-02-statistical-analysis-hypothesis-testing
+        template: step-02-statistical-analysis-hypothesis-testing
+    - - name: step-03-geospatial-normalization-entity-resolution
+        template: step-03-geospatial-normalization-entity-resolution
+    - - name: step-04-data-validation-quality-report
+        template: step-04-data-validation-quality-report
+    - - name: step-05-resolve-this-issue-and-proceed-with-the-analysis
+        template: step-05-resolve-this-issue-and-proceed-with-the-analysis
+    - - name: step-06-geospatial-normalization-entity-resolution-phase-2
+        template: step-06-geospatial-normalization-entity-resolution-phase-2
+    - - name: step-07-regression-modeling
+        template: step-07-regression-modeling
+    - - name: step-08-data-preparation-feature-engineering
+        template: step-08-data-preparation-feature-engineering
+    - - name: step-09-data-validation-quality-report-phase-2
+        template: step-09-data-validation-quality-report-phase-2
+    - - name: step-10-data-cleaning-standardization
+        template: step-10-data-cleaning-standardization
+    - - name: step-11-data-visualization
+        template: step-11-data-visualization
+    - - name: step-12-data-merging-integration
+        template: step-12-data-merging-integration
+    - - name: step-13-model-training-prediction
+        template: step-13-model-training-prediction
+    - - name: step-14-data-validation-quality-report-phase-3
+        template: step-14-data-validation-quality-report-phase-3
+
+  - name: step-01-data-loading-profiling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-loading-profiling.py", --home_game_inspection_txt /mnt/output/home_game_inspection.txt --player_award_inspection_txt /mnt/output/player_award_inspection.txt --home_game_csv /data/home_game.csv --player_award_vote_csv /data/player_award_vote.csv --home_game_inspection_txt /mnt/output/home_game_inspection.txt --player_award_inspection_txt /mnt/output/player_award_inspection.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-statistical-analysis-hypothesis-testing
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_statistical-analysis-hypothesis-testing.py", --home_game_csv /data/home_game.csv --player_award_vote_csv /data/player_award_vote.csv --team_attendance_by_year_csv /mnt/output/team_attendance_by_year.csv --team_awards_by_year_csv /mnt/output/team_awards_by_year.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-geospatial-normalization-entity-resolution
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_geospatial-normalization-entity-resoluti.py", --team_attendance_by_year_csv /mnt/output/team_attendance_by_year.csv --combined_attendance_awards_csv /mnt/output/combined_attendance_awards.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-data-validation-quality-report
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_data-validation-quality-report.py", --team_attendance_by_year_csv /mnt/output/team_attendance_by_year.csv --player_award_vote_csv /data/player_award_vote.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-resolve-this-issue-and-proceed-with-the-analysis
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_resolve-this-issue-and-proceed-with-the-.py", --team_attendance_by_year_csv /mnt/output/team_attendance_by_year.csv --player_award_vote_csv /data/player_award_vote.csv --combined_attendance_awards_csv /mnt/output/combined_attendance_awards.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-geospatial-normalization-entity-resolution-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_geospatial-normalization-entity-resoluti.py", --team_attendance_by_year_csv /mnt/output/team_attendance_by_year.csv --player_award_vote_csv /data/player_award_vote.csv --combined_attendance_awards_csv /mnt/output/combined_attendance_awards.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-regression-modeling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_regression-modeling.py", --team_attendance_by_year_csv /mnt/output/team_attendance_by_year.csv --combined_attendance_awards_csv /mnt/output/combined_attendance_awards.csv --player_award_vote_csv /data/player_award_vote.csv --enhanced_attendance_awards_analysis_csv /mnt/output/enhanced_attendance_awards_analysis.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-data-preparation-feature-engineering
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_data-preparation-feature-engineering.py", --team_attendance_by_year_csv /mnt/output/team_attendance_by_year.csv --combined_attendance_awards_csv /mnt/output/combined_attendance_awards.csv --player_award_vote_csv /data/player_award_vote.csv --enhanced_attendance_awards_analysis_csv /mnt/output/enhanced_attendance_awards_analysis.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-data-validation-quality-report-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_data-validation-quality-report-phase-2.py", --final_analysis_data_csv /mnt/output/final_analysis_data.csv --regression_results_csv /mnt/output/regression_results.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-10-data-cleaning-standardization
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_data-cleaning-standardization.py", --analysis_results_json /mnt/output/analysis_results.json --analysis_results_json /mnt/output/analysis_results.json --final_analysis_dataset_csv /mnt/output/final_analysis_dataset.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-11-data-visualization
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_data-visualization.py", --analysis_report_md /mnt/output/analysis_report.md --analysis_results_json /mnt/output/analysis_results.json --enhanced_analysis_results_json /mnt/output/enhanced_analysis_results.json --final_analysis_dataset_csv /mnt/output/final_analysis_dataset.csv --analysis_report_md /mnt/output/analysis_report.md --analysis_results_json /mnt/output/analysis_results.json --enhanced_analysis_results_json /mnt/output/enhanced_analysis_results.json]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-12-data-merging-integration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_data-merging-integration.py", --data_diagnostics_json /mnt/output/data_diagnostics.json --final_analysis_dataset_csv /mnt/output/final_analysis_dataset.csv --data_diagnostics_json /mnt/output/data_diagnostics.json]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-13-model-training-prediction
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_model-training-prediction.py", --enhanced_diagnostics_json /mnt/output/enhanced_diagnostics.json --final_analysis_dataset_csv /mnt/output/final_analysis_dataset.csv --enhanced_diagnostics_json /mnt/output/enhanced_diagnostics.json]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-14-data-validation-quality-report-phase-3
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_14_data-validation-quality-report-phase-3.py", --final_validation_results_json /mnt/output/final_validation_results.json --final_analysis_dataset_csv /mnt/output/final_analysis_dataset.csv --final_validation_results_json /mnt/output/final_validation_results.json]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

@@ -1,0 +1,354 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-11742-22756-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "4"
+    abilities: "Data Preparation, Data Analysis, Data Visualization"
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-data-loading-profiling-initial-data-inspection
+        template: step-01-data-loading-profiling-initial-data-inspection
+    - - name: step-02-data-merging-integration
+        template: step-02-data-merging-integration
+    - - name: step-03-data-loading-profiling
+        template: step-03-data-loading-profiling
+    - - name: step-04-data-loading-profiling-requirements
+        template: step-04-data-loading-profiling-requirements
+    - - name: step-05-requirements
+        template: step-05-requirements
+    - - name: step-06-requirements-phase-2
+        template: step-06-requirements-phase-2
+    - - name: step-07-error-recovery-robust-loading
+        template: step-07-error-recovery-robust-loading
+    - - name: step-08-data-cleaning-standardization-requirements
+        template: step-08-data-cleaning-standardization-requirements
+    - - name: step-09-error-recovery-robust-loading-phase-2
+        template: step-09-error-recovery-robust-loading-phase-2
+    - - name: step-10-data-merging-integration-phase-2
+        template: step-10-data-merging-integration-phase-2
+    - - name: step-11-data-merging-integration-phase-3
+        template: step-11-data-merging-integration-phase-3
+    - - name: step-12-data-merging-integration-phase-4
+        template: step-12-data-merging-integration-phase-4
+    - - name: step-13-data-merging-integration-phase-5
+        template: step-13-data-merging-integration-phase-5
+    - - name: step-14-data-merging-integration-phase-6
+        template: step-14-data-merging-integration-phase-6
+    - - name: step-15-data-merging-integration-phase-7
+        template: step-15-data-merging-integration-phase-7
+
+  - name: step-01-data-loading-profiling-initial-data-inspection
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_data-loading-profiling-initial-data-insp.py", --Documents_xlsx /data/Documents.xlsx --Documents_Mailed_csv /data/Documents_Mailed.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-data-merging-integration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-merging-integration.py", --Documents_xlsx /data/Documents.xlsx --Documents_Mailed_csv /data/Documents_Mailed.csv --output_mailed_indexed_csv /mnt/output/output_mailed_indexed.csv --output_documents_indexed_csv /mnt/output/output_documents_indexed.csv --output_combined_docs_csv /mnt/output/output_combined_docs.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-data-loading-profiling
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_data-loading-profiling.py", --output_overdue_hd_al_csv /mnt/output/output_overdue_hd_al.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-data-loading-profiling-requirements
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_data-loading-profiling-requirements.py", --output_receipt_ym_added_csv /mnt/output/output_receipt_ym_added.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-requirements
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_requirements.py", --output_multiple_mailed_docs_csv /mnt/output/output_multiple_mailed_docs.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-requirements-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_requirements-phase-2.py", --output_days_to_mail_added_csv /mnt/output/output_days_to_mail_added.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-error-recovery-robust-loading
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_error-recovery-robust-loading.py", --output_mailing_before_receipt_errors_csv /mnt/output/output_mailing_before_receipt_errors.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-data-cleaning-standardization-requirements
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_data-cleaning-standardization-requiremen.py", --Documents_xlsx /data/Documents.xlsx --output_type_agent_status_counts_csv /mnt/output/output_type_agent_status_counts.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-error-recovery-robust-loading-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_error-recovery-robust-loading-phase-2.py", --output_mailing_timeliness_added_csv /mnt/output/output_mailing_timeliness_added.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-10-data-merging-integration-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_data-merging-integration-phase-2.py", --Documents_xlsx /data/Documents.xlsx --output_avg_days_by_status_csv /mnt/output/output_avg_days_by_status.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-11-data-merging-integration-phase-3
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_data-merging-integration-phase-3.py", --Documents_xlsx /data/Documents.xlsx --output_avg_days_by_status_csv /mnt/output/output_avg_days_by_status.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-12-data-merging-integration-phase-4
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_data-merging-integration-phase-4.py", --Documents_xlsx /data/Documents.xlsx --Documents_Mailed_csv /data/Documents_Mailed.csv --output_agent_address_ratio_csv /mnt/output/output_agent_address_ratio.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-13-data-merging-integration-phase-5
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_data-merging-integration-phase-5.py", --Documents_xlsx /data/Documents.xlsx]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-14-data-merging-integration-phase-6
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_14_data-merging-integration-phase-6.py", --Documents_xlsx /data/Documents.xlsx]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-15-data-merging-integration-phase-7
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_15_data-merging-integration-phase-7.py", --Documents_xlsx /data/Documents.xlsx]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}

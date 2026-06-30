@@ -1,0 +1,310 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: case-4686-11638-
+  labels:
+    pipeline: data-cleaning-validation
+    difficulty: "N/A"
+    abilities: ""
+spec:
+  entrypoint: pipeline
+  templates:
+  - name: pipeline
+    steps:
+    - - name: step-01-this-task-requires-a-comprehensive-analysis-of-the
+        template: step-01-this-task-requires-a-comprehensive-analysis-of-the
+    - - name: step-02-data-merging-integration
+        template: step-02-data-merging-integration
+    - - name: step-03-data-visualization
+        template: step-03-data-visualization
+    - - name: step-04-next-phase-requirements
+        template: step-04-next-phase-requirements
+    - - name: step-05-data-validation-quality-report
+        template: step-05-data-validation-quality-report
+    - - name: step-06-data-validation-quality-report-phase-2
+        template: step-06-data-validation-quality-report-phase-2
+    - - name: step-07-error-recovery-robust-loading
+        template: step-07-error-recovery-robust-loading
+    - - name: step-08-error-recovery-robust-loading-phase-2
+        template: step-08-error-recovery-robust-loading-phase-2
+    - - name: step-09-model-training-prediction
+        template: step-09-model-training-prediction
+    - - name: step-10-data-visualization-phase-2
+        template: step-10-data-visualization-phase-2
+    - - name: step-11-statistical-analysis-hypothesis-testing
+        template: step-11-statistical-analysis-hypothesis-testing
+    - - name: step-12-model-training-prediction-phase-2
+        template: step-12-model-training-prediction-phase-2
+    - - name: step-13-model-training-prediction-phase-3
+        template: step-13-model-training-prediction-phase-3
+
+  - name: step-01-this-task-requires-a-comprehensive-analysis-of-the
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_01_this-task-requires-a-comprehensive-analy.py", --data_inspection_report_txt /mnt/output/data_inspection_report.txt --home_game_csv /data/home_game.csv --manager_award_csv /data/manager_award.csv --data_inspection_report_txt /mnt/output/data_inspection_report.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-02-data-merging-integration
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_02_data-merging-integration.py", --team_attendance_avg_csv /mnt/output/team_attendance_avg.csv --cleaned_awards_csv /mnt/output/cleaned_awards.csv --league_attendance_avg_csv /mnt/output/league_attendance_avg.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-03-data-visualization
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_03_data-visualization.py", --home_game_csv /data/home_game.csv --manager_award_csv /data/manager_award.csv --team_attendance_avg_csv /mnt/output/team_attendance_avg.csv --cleaned_home_games_csv /mnt/output/cleaned_home_games.csv --cleaned_awards_csv /mnt/output/cleaned_awards.csv --league_attendance_avg_csv /mnt/output/league_attendance_avg.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-04-next-phase-requirements
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_04_next-phase-requirements.py", --cleaned_home_games_csv /mnt/output/cleaned_home_games.csv --cleaned_awards_csv /mnt/output/cleaned_awards.csv --statistical_results_txt /mnt/output/statistical_results.txt --league_attendance_avg_csv /mnt/output/league_attendance_avg.csv --statistical_results_txt /mnt/output/statistical_results.txt --award_comparison_analysis_csv /mnt/output/award_comparison_analysis.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-05-data-validation-quality-report
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_05_data-validation-quality-report.py", --team_attendance_avg_csv /mnt/output/team_attendance_avg.csv --cleaned_home_games_csv /mnt/output/cleaned_home_games.csv --cleaned_awards_csv /mnt/output/cleaned_awards.csv --league_attendance_avg_csv /mnt/output/league_attendance_avg.csv --award_comparison_analysis_csv /mnt/output/award_comparison_analysis.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-06-data-validation-quality-report-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_06_data-validation-quality-report-phase-2.py", --award_comparison_analysis_csv /mnt/output/award_comparison_analysis.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-07-error-recovery-robust-loading
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_07_error-recovery-robust-loading.py", --analysis_summary_txt /mnt/output/analysis_summary.txt --award_comparison_analysis_csv /mnt/output/award_comparison_analysis.csv --analysis_summary_txt /mnt/output/analysis_summary.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-08-error-recovery-robust-loading-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_08_error-recovery-robust-loading-phase-2.py", --advanced_analysis_report_txt /mnt/output/advanced_analysis_report.txt --award_comparison_analysis_csv /mnt/output/award_comparison_analysis.csv --advanced_analysis_report_txt /mnt/output/advanced_analysis_report.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-09-model-training-prediction
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_09_model-training-prediction.py", --advanced_analysis_report_txt /mnt/output/advanced_analysis_report.txt --award_comparison_analysis_csv /mnt/output/award_comparison_analysis.csv --advanced_analysis_report_txt /mnt/output/advanced_analysis_report.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-10-data-visualization-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_10_data-visualization-phase-2.py", --award_comparison_analysis_csv /mnt/output/award_comparison_analysis.csv]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-11-statistical-analysis-hypothesis-testing
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_11_statistical-analysis-hypothesis-testing.py", --advanced_modeling_results_txt /mnt/output/advanced_modeling_results.txt --award_comparison_analysis_csv /mnt/output/award_comparison_analysis.csv --advanced_modeling_results_txt /mnt/output/advanced_modeling_results.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-12-model-training-prediction-phase-2
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_12_model-training-prediction-phase-2.py", --advanced_modeling_results_refined_txt /mnt/output/advanced_modeling_results_refined.txt --award_comparison_analysis_csv /mnt/output/award_comparison_analysis.csv --advanced_modeling_results_refined_txt /mnt/output/advanced_modeling_results_refined.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  - name: step-13-model-training-prediction-phase-3
+    container:
+      image: python:3.10-slim
+      command: [python]
+      args: ["/scripts/step_13_model-training-prediction-phase-3.py", --final_analysis_results_txt /mnt/output/final_analysis_results.txt --award_comparison_analysis_csv /mnt/output/award_comparison_analysis.csv --final_analysis_results_txt /mnt/output/final_analysis_results.txt]
+      volumeMounts:
+      - name: scripts
+        mountPath: /scripts
+      - name: input-data
+        mountPath: /data
+      - name: pipeline-output
+        mountPath: /mnt/output
+      resources:
+        requests:
+          memory: "512Mi"
+          cpu: "500m"
+        limits:
+          memory: "1Gi"
+          cpu: "1000m"
+
+  # ── Volume definitions ──
+  volumes:
+  - name: scripts
+    configMap:
+      name: pipeline-scripts
+  - name: input-data
+    configMap:
+      name: pipeline-input-data
+  - name: pipeline-output
+    emptyDir: {}
