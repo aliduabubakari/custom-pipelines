@@ -36,6 +36,6 @@ def main():
         Xp2=pp.fit_transform(X2);Xt,Xv,yt,yv=train_test_split(Xp2,y,test_size=0.2,stratify=y,random_state=42)
         rf=RandomForestClassifier(n_estimators=100,max_depth=8,random_state=42,n_jobs=-1)
         rf.fit(Xt,yt);pred=rf.predict_proba(Xv)[:,1]
-        print(f"\n   High Performer Prediction: ROC-AUC={roc_auc_score(yv,pred):.3f}, Acc={accuracy_score(yv,(pred>=0.5).astype(int)):.2%}")
+        print(f"\n   High Performer Prediction: ROC-AUC={roc_auc_score(yv, pred, multi_class="ovr", average="weighted"):.3f}, Acc={accuracy_score(yv,(pred>=0.5).astype(int)):.2%}")
         with open(os.path.join(a.output_dir,"model.pkl"),"wb") as f:pickle.dump(rf,f)
 if __name__=="__main__":main()

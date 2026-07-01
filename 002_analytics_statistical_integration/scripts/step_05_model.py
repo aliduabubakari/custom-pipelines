@@ -32,7 +32,7 @@ def main():
     else:
         lr.fit(Xt,yt);pred=lr.predict_proba(Xv)[:,1];best="LogisticRegression"
     print(f"   Best: {best} (LR CV={lr_cv:.3f}, RF CV={rf_cv:.3f})")
-    print(f"   Test ROC-AUC: {roc_auc_score(yv,pred):.3f}, Acc: {accuracy_score(yv,(pred>=0.5).astype(int)):.2%}")
+    print(f"   Test ROC-AUC: {roc_auc_score(yv, pred, multi_class="ovr", average="weighted"):.3f}, Acc: {accuracy_score(yv,(pred>=0.5).astype(int)):.2%}")
     with open(os.path.join(a.output_dir,"model.pkl"),"wb") as f:pickle.dump(rf if rf_cv>=lr_cv else lr,f)
     # Group analysis
     print(f"\n   Outcome by group:")

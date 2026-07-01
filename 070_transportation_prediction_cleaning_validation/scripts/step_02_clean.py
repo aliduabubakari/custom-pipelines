@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
-"""Clean & Validate"""
-import argparse,os,json
-import pandas as pd,numpy as np
-import matplotlib;matplotlib.use('Agg');import matplotlib.pyplot as plt
-from scipy import stats
+"""Step 2: Data Cleaning & Standardization"""
+import argparse, os
+import pandas as pd, numpy as np
 def main():
     p=argparse.ArgumentParser();p.add_argument("--data_dir",default="../data");p.add_argument("--output_dir",default=".")
-    args=p.parse_args();os.makedirs(args.output_dir,exist_ok=True)
-    print("STEP 2: Clean & Validate")
-    df=pd.read_csv(os.path.join(args.data_dir,"data.csv"))
-    for c in df.select_dtypes(include=[np.number]).columns:df[c]=df[c].fillna(df[c].median())
-    df.to_parquet(os.path.join(args.output_dir,"data.parquet"),index=False)
-    print(f"  Records: {len(df)}")
-    fig,axes=plt.subplots(1,2,figsize=(10,4))
-    df["feature_a"].hist(bins=25,ax=axes[0],color="#3498db");axes[0].set_title("Feature A")
-    df["feature_b"].hist(bins=25,ax=axes[1],color="#e74c3c");axes[1].set_title("Feature B")
-    plt.tight_layout();fig.savefig(os.path.join(args.output_dir,f"step02.png"),dpi=100);plt.close()
-    print("Done")
+    a=p.parse_args();os.makedirs(a.output_dir,exist_ok=True)
+    print("STEP 2: Clean & Standardize")
+    df=pd.read_parquet(os.path.join(a.output_dir,"raw_data.parquet"))
+    before=df.isnull().sum().sum()
+    for c in df.columns:
+        if df[c].dtype in ['float64','int64']:df[c]=df[c].fillna(df[c].median())
+        elif df[c].dtype=='object':df[c]=df[c].fillna("Unknown")
+    for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+    for c in df.select_dtypes(include=['float64','int64']).columns:
+        if df[c].nunique()>5:p99=df[c].quantile(0.99);df[c]=df[c].clip(upper=p99)
+    print(f"   Nulls: {before} → {df.isnull().sum().sum()}")
+    df.to_parquet(os.path.join(a.output_dir,"cleaned.parquet"),index=False);print("OK")
 if __name__=="__main__":main()

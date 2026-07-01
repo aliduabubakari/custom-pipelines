@@ -1,6 +1,0 @@
-player_id,year,round,team_id,league_id,w,l,g,gs,cg,sho,sv,ipouts,h,er,hr,bb,so,baopp,era,ibb,wp,hbp,bk,bfp,gf,r,sh,sf,g_idp
-player_id_1,1,round_1,team_id_1,league_id_1,1,1,1,1,1,1,1,1,1,1,1,1,1,baopp_1,1,1,1,1,1,1,1,1,1,1,1
-player_id_2,2,round_2,team_id_2,league_id_2,2,2,2,2,2,2,2,2,2,2,2,2,2,baopp_2,2,2,2,2,2,2,2,2,2,2,2
-player_id_3,3,round_3,team_id_3,league_id_3,3,3,3,3,3,3,3,3,3,3,3,3,3,baopp_3,3,3,3,3,3,3,3,3,3,3,3
-player_id_4,4,round_4,team_id_4,league_id_4,4,4,4,4,4,4,4,4,4,4,4,4,4,baopp_4,4,4,4,4,4,4,4,4,4,4,4
-player_id_5,5,round_5,team_id_5,league_id_5,5,5,5,5,5,5,5,5,5,5,5,5,5,baopp_5,5,5,5,5,5,5,5,5,5,5,5
