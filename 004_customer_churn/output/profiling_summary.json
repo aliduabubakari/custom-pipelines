@@ -1,9 +1,0 @@
-{
-  "n_customers": 500,
-  "n_transactions": 15843,
-  "churn_rate": 0.28,
-  "date_range": {
-    "min": "2019-01-20",
-    "max": "2024-12-31"
-  }
-}
