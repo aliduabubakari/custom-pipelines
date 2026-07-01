@@ -1,18 +1,23 @@
 #!/usr/bin/env python3
-import argparse,os,json
-import pandas as pd,numpy as np
-import matplotlib;matplotlib.use('Agg');import matplotlib.pyplot as plt
+import argparse, os, json
+import pandas as pd, numpy as np
+import matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
 def main():
     p=argparse.ArgumentParser();p.add_argument("--data_dir",default="../data");p.add_argument("--output_dir",default=".")
     a=p.parse_args();os.makedirs(a.output_dir,exist_ok=True)
-    print("STEP 1: Load")
-    df=pd.read_csv(os.path.join(a.data_dir,"data.csv"))
-    for c in df.select_dtypes(include=[np.number]).columns:df[c]=df[c].fillna(df[c].median())
-    df.to_parquet(os.path.join(a.output_dir,"data.parquet"),index=False)
-    print(f"OK {len(df)} rows")
-    fig,ax=plt.subplots(1,2,figsize=(10,4))
-    df["a"].hist(bins=25,ax=ax[0],color="#3498db");ax[0].set_title("A")
-    df["b"].hist(bins=25,ax=ax[1],color="#e74c3c");ax[1].set_title("B")
-    plt.tight_layout();fig.savefig(os.path.join(a.output_dir,f"s1.png"),dpi=100);plt.close()
-    print("Done")
+    print("STEP 1: Data Loading & Profiling — Stock Market Statistical Cleaning & Integration")
+    stocks=pd.read_csv(os.path.join(a.data_dir,"stocks.csv"))
+    indices=pd.read_csv(os.path.join(a.data_dir,"market_indices.csv"))
+    stocks['date']=pd.to_datetime(stocks['date']);indices['date']=pd.to_datetime(indices['date'])
+    print(f"   Stocks: {len(stocks)} rows, {stocks['ticker'].nunique()} tickers, {stocks['sector'].nunique()} sectors")
+    print(f"   Indices: {len(indices)} days, S&P range: {indices['sp500'].min():.1f}-{indices['sp500'].max():.1f}")
+    merged=stocks.merge(indices,on='date',how='left')
+    merged.to_parquet(os.path.join(a.output_dir,"raw_merged.parquet"),index=False)
+    dfs=[("stocks",stocks),("indices",indices)]
+    for name,df in dfs:
+        print(f"   [name]: {len(df)} rows x {len(df.columns)} cols")
+        df.to_parquet(os.path.join(a.output_dir,f"raw_{name}.parquet"),index=False)
+    prof={n:{"rows":len(d),"cols":len(d.columns)} for n,d in dfs}
+    with open(os.path.join(a.output_dir,"profiling.json"),"w") as f:json.dump(prof,f,indent=2,default=str)
+    print("OK")
 if __name__=="__main__":main()
