@@ -5,7 +5,7 @@
 |---|---|
 | **Pipeline ID** | `demand_forecasting` |
 | **Domain** | Supply Chain / Retail |
-| **Total Steps** | 16 |
+| **Total Steps** | 10 |
 | **Input Files** | 3 |
 | **Pipeline Type** | ML Pipeline (End-to-End) |
 

@@ -1,61 +1,103 @@
 # E-Commerce: Product Recommendation & Customer Analytics
+
 ## Metadata
 | Field | Value |
 |---|---|
 | **Pipeline ID** | `ecommerce_recommendation` |
-| **Domain** | Retail / E-Commerce |
-| **Steps** | 15 |
-| **Type** | ML Pipeline (End-to-End) |
+| **Domain** | E-Commerce / Retail |
+| **Total Steps** | 6 |
+| **Input Files** | 3 |
+| **Pipeline Type** | ML Pipeline (End-to-End) |
+
+---
 
 ## Executive Summary
-Builds a collaborative filtering recommendation engine using customer purchase history, product metadata, and browsing patterns. Includes RFM segmentation and churn prediction.
 
-## Business Context
+Builds a product recommendation engine using customer segments, order history, and product catalog attributes. Applies K-Means clustering to identify customer segments and uses RandomForest classification to predict purchase patterns.
+
+---
+
+## Business Context & Need
+
 E-commerce platforms lose 35% of potential revenue from poor product discovery. Personalized recommendations drive 20-30% of Amazon's revenue. An ML recommendation system increases average order value by 15-25%, conversion rates by 10%, and customer retention by 20%.
 
-## Steps
+---
+
+## Data Sources
+
+- **`customers.csv`** — Customer profiles (500 customers, 7 columns)
+- **`products.csv`** — Product catalog (200 products, 8 columns)
+- **`orders.json`** — Order history (11,436 transactions, 7 columns)
+
+---
+
+## Pipeline Architecture
+
+```
+  Input Data ──▶ [Step 1: Data Loading & Profiling]
+                  │
+                  ▼
+               [Step 2: Data Cleaning & Standardizatio]
+                  │
+                  ▼
+               [Step 3: Feature Engineering]
+                  │
+                  ▼
+               [Step 4: Exploratory Data Analysis & Vis]
+                  │
+                  ▼
+               [Step 5: Model Training: Clustering]
+                  │
+                  ▼
+               [Step 6: Final Synthesis & Report] ──▶ Final Output
+```
+
+---
+
+## Step Details
+
 ### Step 1: Data Loading & Profiling
-Load products CSV, customers CSV, orders JSON. Profile: product catalog composition, customer segment distribution, order volume trends. Identify data quality issues.
+**Description:** Load customers CSV, products CSV, and orders JSON. Profile each dataset for row counts, column types, null percentages, and basic statistics.
+**Script:** `scripts/step_01_load.py`
 
-### Step 2: Data Merging & Integration
-Merge orders with customers on customer_id, with products on product_id. Create unified order_line_items table. Verify referential integrity across all joins.
+### Step 2: Data Cleaning & Standardization
+**Description:** Handle missing values (median for numerical, 'Unknown' for categorical). Cap outliers at 99th percentile. Standardize categorical values.
+**Script:** `scripts/step_02_clean.py`
 
-### Step 3: Data Cleaning & Standardization
-Handle missing values in customer demographics. Standardize status and channel categories. Remove duplicate orders. Normalize product category names. Cap outliers at 99th percentile.
+### Step 3: Feature Engineering
+**Description:** Create derived features: price tiers (Budget/Standard/Premium/Luxury/Ultra) and rating tiers (Low/Medium/High) for product categorization.
+**Script:** `scripts/step_03_features.py`
 
-### Step 4: RFM Analysis
-Compute Recency (days since last order), Frequency (orders/month), Monetary (avg spend) scores per customer. Assign RFM segments (Champions, Loyal, At-Risk, Lost). Create RFM score matrix.
+### Step 4: Exploratory Data Analysis & Visualization
+**Description:** Generate multi-panel EDA dashboard with distribution histograms, correlation analysis, and segment patterns.
+**Script:** `scripts/step_04_eda.py`
 
-### Step 5: Feature Engineering
-Create behavioral features: purchase_velocity, category_affinity_score, brand_loyalty_index, return_rate, discount_dependency, channel_preference, day_of_week_pattern, seasonal_buying_flag.
+### Step 5: Model Training
+**Description:** Apply K-Means clustering to segment customers into 3 groups. Train RandomForest classifier on cluster labels for recommendation patterns.
+**Script:** `scripts/step_05_model.py`
 
-### Step 6: Exploratory Data Analysis
-Analyze sales by category, brand, and channel. Identify top products and categories. Seasonal trend decomposition. Customer cohort analysis by signup month.
+### Step 6: Final Report
+**Description:** Compile final synthesis with key findings, cluster profiles, and business recommendations for recommendation strategies.
+**Script:** `scripts/step_06_report.py`
 
-### Step 7: Data Visualization: Sales Dashboard
-Create 3x2 dashboard: (1) Monthly revenue trend, (2) Category revenue treemap, (3) Top 10 products bar chart, (4) Channel mix pie chart, (5) Hourly order volume heatmap, (6) Geographic sales choropleth.
+---
 
-### Step 8: Data Visualization: Customer Insights
-Visualize: (1) RFM segment distribution, (2) Customer LTV histogram, (3) Repeat purchase rate by segment, (4) Churn risk by RFM quadrant, (5) Product affinity network graph.
 
-### Step 9: Statistical Analysis
-Correlation analysis: price vs purchase frequency, category vs LTV. Chi-square: channel vs segment, segment vs return rate. ANOVA: LTV by segment. Time series: revenue seasonality and trend tests.
+## How to Run
 
-### Step 10: Collaborative Filtering Model
-Build user-item matrix. Implement item-based collaborative filtering with cosine similarity. Train matrix factorization (SVD) using Surprise library. Evaluate with RMSE, precision@k, recall@k. Cross-validate with 5 folds.
+### Local Execution
+```bash
+cd 006_ecommerce_recommendation
+pip install pandas numpy matplotlib seaborn scikit-learn
 
-### Step 11: Content-Based Recommendation
-Build product feature vectors from category, brand, price tier. Compute TF-IDF on product names. Implement content-based recommender. Hybrid: combine CF + content scores with weighted blending.
+for script in scripts/step_*.py; do
+  python "$script" --data_dir data/ --output_dir output/
+done
+```
 
-### Step 12: Customer Churn Prediction
-Define churn (no purchase > 90 days). Train XGBoost classifier with RFM+behavioral features. Hyperparameter tune with Optuna. Evaluate: ROC-AUC, lift curve. Identify top churn predictors with SHAP.
-
-### Step 13: Customer Lifetime Value Prediction
-Train Gamma-Gamma and BG/NBD models for LTV prediction. Calculate expected future value per customer. Compare predicted vs actual LTV. Segment customers by predicted value.
-
-### Step 14: Model Evaluation & A/B Test Design
-Evaluate all models on holdout set. Design A/B test for recommendations: control vs personalized group. Calculate required sample size, test duration, success metrics (conversion lift, AOV increase).
-
-### Step 15: Final Synthesis & Strategy Playbook
-Compile: Executive Summary, Recommendation Engine Performance, RFM Segment Profiles with marketing strategies, Churn Intervention Playbook, Expected Revenue Impact, Implementation Roadmap, Monitoring KPIs.
-
+### Argo Workflow
+```bash
+argo submit 006_ecommerce_recommendation/pipeline.yaml
+argo watch @latest
+argo logs @latest
+```
