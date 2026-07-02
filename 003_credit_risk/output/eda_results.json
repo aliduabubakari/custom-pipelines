@@ -1,0 +1,132 @@
+{
+  "default_rate_by_FICO_band": {
+    "default_rate": {
+      "Poor": 0.4091,
+      "Fair": 0.4046,
+      "Good": 0.3185,
+      "Very Good": 0.1951,
+      "Exceptional": 0.25
+    },
+    "count": {
+      "Poor": 66,
+      "Fair": 173,
+      "Good": 135,
+      "Very Good": 82,
+      "Exceptional": 44
+    }
+  },
+  "default_rate_by_DTI_category": {
+    "default_rate": {
+      "Low": 0.3011,
+      "Medium": 0.291,
+      "High": 0.4327,
+      "Very High": 0.4516
+    },
+    "count": {
+      "Low": 176,
+      "Medium": 189,
+      "High": 104,
+      "Very High": 31
+    }
+  },
+  "default_rate_by_loan_purpose": {
+    "default_rate": {
+      "Business": 0.4,
+      "Car Purchase": 0.3099,
+      "Debt Consolidation": 0.3889,
+      "Education": 0.3611,
+      "Home Improvement": 0.2055,
+      "Medical": 0.4342,
+      "Vacation": 0.2273
+    },
+    "count": {
+      "Business": 70,
+      "Car Purchase": 71,
+      "Debt Consolidation": 72,
+      "Education": 72,
+      "Home Improvement": 73,
+      "Medical": 76,
+      "Vacation": 66
+    }
+  },
+  "default_rate_by_home_ownership": {
+    "default_rate": {
+      "Mortgage": 0.3036,
+      "Own": 0.3659,
+      "Rent": 0.3557
+    },
+    "count": {
+      "Mortgage": 224,
+      "Own": 82,
+      "Rent": 194
+    }
+  },
+  "default_rate_by_loan_size": {
+    "default_rate": {
+      "Micro": 0.1991,
+      "Small": 0.4652,
+      "Medium": 0.4023,
+      "Large": NaN
+    },
+    "count": {
+      "Micro": 226,
+      "Small": 187,
+      "Medium": 87,
+      "Large": 0
+    }
+  },
+  "default_rate_by_age_group": {
+    "default_rate": {
+      "18-25": 0.3673,
+      "26-35": 0.2809,
+      "36-50": 0.3803,
+      "51-65": 0.2857,
+      "65+": 0.3617
+    },
+    "count": {
+      "18-25": 49,
+      "26-35": 89,
+      "36-50": 142,
+      "51-65": 126,
+      "65+": 94
+    }
+  },
+  "top_correlations_with_default": {
+    "income_loan_ratio": -0.32210209167720405,
+    "loan_amount": 0.22112012400790923,
+    "public_records": 0.196752550719678,
+    "fico_score": -0.1689485613376008,
+    "dti_ratio": 0.12927037784366405,
+    "annual_income": -0.10486566981120328,
+    "avg_balance": 0.09931442641704186,
+    "max_balance": 0.09715436964204514,
+    "delinquencies_2yrs": 0.09443806310333575,
+    "n_accounts": 0.08512435640300818,
+    "credit_age_months": 0.08298832490228705,
+    "inquiries_6mo": 0.07259725987977271,
+    "inquiry_velocity": 0.07259725987977259,
+    "total_accounts": 0.0545163545092817,
+    "avg_utilization": -0.05300536389133318,
+    "address_stability": 0.04845265650987354,
+    "months_at_address": 0.03102275766387112,
+    "revolving_balance": -0.026512886095814578,
+    "utilization_normalized": -0.018158142307177536,
+    "revolving_utilization": -0.01815814230717742,
+    "age": -0.01549899960415189,
+    "account_age_ratio": -0.013009046868301039,
+    "oldest_account_months": -0.011204937232947718,
+    "max_utilization": -0.008349689194259971
+  },
+  "high_correlation_pairs": [
+    [
+      "inquiries_6mo",
+      "inquiry_velocity",
+      1.0
+    ],
+    [
+      "revolving_utilization",
+      "utilization_normalized",
+      1.0
+    ]
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "models": [
+    {
+      "model": "LogisticRegression",
+      "cv_roc_auc_mean": 0.8159,
+      "cv_roc_auc_std": 0.0245,
+      "val_roc_auc": 0.7504,
+      "val_pr_auc": 0.5933,
+      "val_brier": 0.2137
+    },
+    {
+      "model": "RandomForest",
+      "cv_roc_auc_mean": 0.8142,
+      "cv_roc_auc_std": 0.0378,
+      "val_roc_auc": 0.6944,
+      "val_pr_auc": 0.5511,
+      "val_brier": 0.2,
+      "feature_importances_top5": [
+        {
+          "feature": "income_loan_ratio",
+          "importance": 0.145
+        },
+        {
+          "feature": "loan_amount",
+          "importance": 0.0744
+        },
+        {
+          "feature": "fico_score",
+          "importance": 0.0482
+        },
+        {
+          "feature": "annual_income",
+          "importance": 0.0376
+        },
+        {
+          "feature": "dti_ratio",
+          "importance": 0.035
+        }
+      ]
+    },
+    {
+      "model": "LightGBM",
+      "cv_roc_auc_mean": 0.7905,
+      "cv_roc_auc_std": 0.0463,
+      "val_roc_auc": 0.7136,
+      "val_pr_auc": 0.5593,
+      "val_brier": 0.2801,
+      "feature_importances_top5": [
+        {
+          "feature": "income_loan_ratio",
+          "importance": 273.0
+        },
+        {
+          "feature": "max_utilization",
+          "importance": 149.0
+        },
+        {
+          "feature": "fico_score",
+          "importance": 139.0
+        },
+        {
+          "feature": "annual_income",
+          "importance": 138.0
+        },
+        {
+          "feature": "revolving_utilization",
+          "importance": 137.0
+        }
+      ]
+    }
+  ],
+  "best": "LogisticRegression",
+  "best_roc_auc": 0.7504
+}

@@ -103,7 +103,7 @@ def main():
     plt.close()
 
     with open(os.path.join(args.output_dir, "model_registry.json"), "w") as f:
-        json.dump({"models": models_registry, "best": best["model"], "best_roc_auc": best["val_roc_auc"]}, f, indent=2)
+        json.dump({"models": models_registry, "best": best["model"], "best_roc_auc": best["val_roc_auc"]}, f, default=str, indent=2)
     print(f"\n✅ Step 12 complete")
 
 def model_eval(name, cv_scores, val_pred, y_val):

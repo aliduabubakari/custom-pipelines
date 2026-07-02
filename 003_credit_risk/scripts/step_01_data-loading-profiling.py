@@ -54,7 +54,7 @@ def main():
 
     # Save profiling summary
     with open(os.path.join(args.output_dir, "profiling_summary.json"), "w") as f:
-        json.dump(profiling, f, indent=2, default=str)
+        json.dump(profiling, f, default=str, indent=2)
 
     # Save raw parquet for downstream
     apps.to_parquet(os.path.join(args.output_dir, "raw_applications.parquet"), index=False)

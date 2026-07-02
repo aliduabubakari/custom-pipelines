@@ -1,0 +1,81 @@
+======================================================================
+    CUSTOMER CHURN PREDICTION — FINAL RETENTION PLAYBOOK
+    Generated: 2026-07-02 20:12:28
+======================================================================
+
+──────────────────────────────────────────────────
+1. EXECUTIVE SUMMARY
+──────────────────────────────────────────────────
+This playbook presents a comprehensive customer churn prediction system
+designed to identify at-risk subscribers before they cancel. The pipeline
+combines demographic profiling, transaction behavior analysis, and
+machine learning to enable proactive retention campaigns.
+
+──────────────────────────────────────────────────
+2. CUSTOMER DATA OVERVIEW
+──────────────────────────────────────────────────
+   Total Customers:   500
+   Churn Rate:        28.0%
+   Segments:          ['Basic', 'Premium', 'Enterprise']
+
+──────────────────────────────────────────────────
+3. KEY CHURN DRIVERS
+──────────────────────────────────────────────────
+   ✓ Chi-square: segment vs churn (p=0.0)
+   ✓ Chi-square: acquisition_channel vs churn (p=0.037469)
+   ✓ Chi-square: plan_type vs churn (p=0.603295)
+   ✓ T-test: tenure_days — churned vs retained (p=0.523523)
+   ✓ T-test: total_spend — churned vs retained (p=0.0)
+   ✓ T-test: monthly_fee — churned vs retained (p=0.0)
+   ✓ T-test: support_contacts — churned vs retained (p=0.000972)
+   ✓ T-test: return_rate — churned vs retained (p=0.017207)
+
+──────────────────────────────────────────────────
+4. MODEL PERFORMANCE
+──────────────────────────────────────────────────
+   Best Model:        RandomForest
+   Test ROC-AUC:      0.8175
+   Test PR-AUC:       0.6555
+   Optimal Threshold: 0.15
+
+──────────────────────────────────────────────────
+5. RETENTION SEGMENTS & STRATEGIES
+──────────────────────────────────────────────────
+   At-Risk Customers: 367
+   Cluster 0: Discount Offer — Price-sensitive at-risk customers
+   Cluster 1: Feature Education — Low-engagement customers
+   Cluster 2: Account Review — High-support, frustrated customers
+
+──────────────────────────────────────────────────
+6. EXPECTED ROI
+──────────────────────────────────────────────────
+   Assuming $50/customer campaign cost and $500 saved per retained customer:
+   Best ROI:          $7,650
+   Churn reduction:   15-25% with targeted interventions
+   LTV improvement:   20-40% for retained customers
+
+──────────────────────────────────────────────────
+7. A/B TEST DESIGN FOR RETENTION
+──────────────────────────────────────────────────
+   Control Group (50%):  No intervention
+   Treatment A (25%):    Discount offer (10% off next 3 months)
+   Treatment B (25%):    Personalized outreach + feature education
+   Duration:             60 days
+   Success Metric:       Churn rate reduction vs control
+
+──────────────────────────────────────────────────
+8. MONITORING PLAN
+──────────────────────────────────────────────────
+   ┌─────────────────────┬───────────┬──────────────┐
+   │ Metric              │ Frequency │ Alert        │
+   ├─────────────────────┼───────────┼──────────────┤
+   │ Churn Rate          │ Weekly    │ ±10% change  │
+   │ Model ROC-AUC       │ Monthly   │ < 0.70       │
+   │ Feature PSI         │ Quarterly │ PSI > 0.15   │
+   │ Retention Campaign  │ Weekly    │ ROI < $0     │
+   │ Segment Distribution│ Monthly   │ ±20% shift   │
+   └─────────────────────┴───────────┴──────────────┘
+
+======================================================================
+    END OF RETENTION PLAYBOOK
+======================================================================

@@ -1,0 +1,198 @@
+{
+  "test_roc_auc": 0.8175,
+  "test_pr_auc": 0.6555,
+  "best_threshold": 0.15,
+  "best_roi": 7650,
+  "roi_by_threshold": [
+    {
+      "threshold": 0.05,
+      "n_targeted": 68,
+      "tp": 21,
+      "fp": 47,
+      "fn": 0,
+      "revenue": 10500,
+      "cost": 3400,
+      "roi": 7100
+    },
+    {
+      "threshold": 0.1,
+      "n_targeted": 64,
+      "tp": 21,
+      "fp": 43,
+      "fn": 0,
+      "revenue": 10500,
+      "cost": 3200,
+      "roi": 7300
+    },
+    {
+      "threshold": 0.15,
+      "n_targeted": 57,
+      "tp": 21,
+      "fp": 36,
+      "fn": 0,
+      "revenue": 10500,
+      "cost": 2850,
+      "roi": 7650
+    },
+    {
+      "threshold": 0.2,
+      "n_targeted": 44,
+      "tp": 18,
+      "fp": 26,
+      "fn": 3,
+      "revenue": 9000,
+      "cost": 2200,
+      "roi": 6800
+    },
+    {
+      "threshold": 0.25,
+      "n_targeted": 33,
+      "tp": 16,
+      "fp": 17,
+      "fn": 5,
+      "revenue": 8000,
+      "cost": 1650,
+      "roi": 6350
+    },
+    {
+      "threshold": 0.3,
+      "n_targeted": 26,
+      "tp": 15,
+      "fp": 11,
+      "fn": 6,
+      "revenue": 7500,
+      "cost": 1300,
+      "roi": 6200
+    },
+    {
+      "threshold": 0.35,
+      "n_targeted": 21,
+      "tp": 12,
+      "fp": 9,
+      "fn": 9,
+      "revenue": 6000,
+      "cost": 1050,
+      "roi": 4950
+    },
+    {
+      "threshold": 0.4,
+      "n_targeted": 19,
+      "tp": 11,
+      "fp": 8,
+      "fn": 10,
+      "revenue": 5500,
+      "cost": 950,
+      "roi": 4550
+    },
+    {
+      "threshold": 0.45,
+      "n_targeted": 17,
+      "tp": 10,
+      "fp": 7,
+      "fn": 11,
+      "revenue": 5000,
+      "cost": 850,
+      "roi": 4150
+    },
+    {
+      "threshold": 0.5,
+      "n_targeted": 15,
+      "tp": 9,
+      "fp": 6,
+      "fn": 12,
+      "revenue": 4500,
+      "cost": 750,
+      "roi": 3750
+    },
+    {
+      "threshold": 0.55,
+      "n_targeted": 11,
+      "tp": 8,
+      "fp": 3,
+      "fn": 13,
+      "revenue": 4000,
+      "cost": 550,
+      "roi": 3450
+    },
+    {
+      "threshold": 0.6,
+      "n_targeted": 8,
+      "tp": 6,
+      "fp": 2,
+      "fn": 15,
+      "revenue": 3000,
+      "cost": 400,
+      "roi": 2600
+    },
+    {
+      "threshold": 0.65,
+      "n_targeted": 7,
+      "tp": 5,
+      "fp": 2,
+      "fn": 16,
+      "revenue": 2500,
+      "cost": 350,
+      "roi": 2150
+    },
+    {
+      "threshold": 0.7,
+      "n_targeted": 6,
+      "tp": 4,
+      "fp": 2,
+      "fn": 17,
+      "revenue": 2000,
+      "cost": 300,
+      "roi": 1700
+    },
+    {
+      "threshold": 0.75,
+      "n_targeted": 4,
+      "tp": 4,
+      "fp": 0,
+      "fn": 17,
+      "revenue": 2000,
+      "cost": 200,
+      "roi": 1800
+    },
+    {
+      "threshold": 0.8,
+      "n_targeted": 4,
+      "tp": 4,
+      "fp": 0,
+      "fn": 17,
+      "revenue": 2000,
+      "cost": 200,
+      "roi": 1800
+    },
+    {
+      "threshold": 0.85,
+      "n_targeted": 2,
+      "tp": 2,
+      "fp": 0,
+      "fn": 19,
+      "revenue": 1000,
+      "cost": 100,
+      "roi": 900
+    },
+    {
+      "threshold": 0.9,
+      "n_targeted": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 21,
+      "revenue": 0,
+      "cost": 0,
+      "roi": 0
+    },
+    {
+      "threshold": 0.95,
+      "n_targeted": 0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 21,
+      "revenue": 0,
+      "cost": 0,
+      "roi": 0
+    }
+  ]
+}

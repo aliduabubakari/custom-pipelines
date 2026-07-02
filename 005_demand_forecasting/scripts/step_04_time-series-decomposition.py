@@ -38,7 +38,7 @@ def main():
     print(f"   Peak month: {seasonal_idx.idxmax()} ({seasonal_idx.max():.2f})")
     print(f"   Trough month: {seasonal_idx.idxmin()} ({seasonal_idx.min():.2f})")
 
-    with open(os.path.join(args.output_dir, "seasonal_indices.json"), "w") as f: json.dump(seasonal_idx.to_dict(), f, indent=2)
+    with open(os.path.join(args.output_dir, "seasonal_indices.json"), "w") as f: json.dump(seasonal_idx.to_dict(), f, default=str, indent=2)
     monthly.to_parquet(os.path.join(args.output_dir, "monthly_demand.parquet"), index=False)
     print("✅ Step 4 complete")
 if __name__ == "__main__": main()

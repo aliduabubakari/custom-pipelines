@@ -199,7 +199,7 @@ def main():
         ]
     }
     with open(os.path.join(args.output_dir, "final_summary.json"), "w") as f:
-        json.dump(final_summary, f, indent=2)
+        json.dump(final_summary, f, default=str, indent=2)
 
     print(f"\n✅ Step 16 complete — Final report and summary generated")
 

@@ -134,7 +134,7 @@ def main():
 
     with open(os.path.join(args.output_dir, "retention_segmentation.json"), "w") as f:
         json.dump({"n_at_risk": len(at_risk), "n_clusters": k_optimal,
-                    "recommended_strategies": strategies}, f, indent=2)
+                    "recommended_strategies": strategies}, f, default=str, indent=2)
     print("\n✅ Step 15 complete")
 
 if __name__ == "__main__":

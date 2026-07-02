@@ -71,7 +71,7 @@ def main():
     df.to_parquet(os.path.join(args.output_dir, "cleaned_data.parquet"), index=False)
 
     with open(os.path.join(args.output_dir, "cleaning_log.json"), "w") as f:
-        json.dump(cleaning_log, f, indent=2, default=str)
+        json.dump(cleaning_log, f, default=str, indent=2)
 
     # Report
     print(f"\n🧹 Nulls resolved: {sum(cleaning_log['before_nulls'].values())} → {sum(cleaning_log['after_nulls'].values())}")

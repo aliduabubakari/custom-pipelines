@@ -70,7 +70,7 @@ def main():
         "columns_with_nulls": {c: int(cnt) for c, cnt in merged.isnull().sum().items() if cnt > 0}
     }
     with open(os.path.join(args.output_dir, "merge_summary.json"), "w") as f:
-        json.dump(summary, f, indent=2, default=str)
+        json.dump(summary, f, default=str, indent=2)
 
     print(f"\n✅ Step 2 complete — merged dataset: {len(merged)} rows × {len(merged.columns)} cols")
 

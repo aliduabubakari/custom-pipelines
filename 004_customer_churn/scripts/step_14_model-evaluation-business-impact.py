@@ -108,7 +108,7 @@ def main():
     with open(os.path.join(args.output_dir, "evaluation_results.json"), "w") as f:
         json.dump({"test_roc_auc": round(roc, 4), "test_pr_auc": round(pr, 4),
                     "best_threshold": best_roi["threshold"], "best_roi": best_roi["roi"],
-                    "roi_by_threshold": roi_results}, f, indent=2)
+                    "roi_by_threshold": roi_results}, f, default=str, indent=2)
     print("\n✅ Step 14 complete")
 
 if __name__ == "__main__":

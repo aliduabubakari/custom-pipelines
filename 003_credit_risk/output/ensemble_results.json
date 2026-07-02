@@ -1,0 +1,32 @@
+{
+  "models": [
+    {
+      "model": "XGBoost",
+      "params": {
+        "n_estimators": 200,
+        "max_depth": 4,
+        "learning_rate": 0.1
+      },
+      "cv_roc_auc": 0.8058,
+      "val_roc_auc": 0.7024,
+      "val_pr_auc": 0.4966,
+      "val_brier": 0.2507
+    },
+    {
+      "model": "StackingClassifier",
+      "base_models": [
+        "rf",
+        "lr",
+        "xgb"
+      ],
+      "meta_learner": "LogisticRegression",
+      "cv_roc_auc_mean": 0.8136,
+      "cv_roc_auc_std": 0.0214,
+      "val_roc_auc": 0.74,
+      "val_pr_auc": 0.6259,
+      "val_brier": 0.2129
+    }
+  ],
+  "best": "StackingClassifier",
+  "best_roc_auc": 0.74
+}

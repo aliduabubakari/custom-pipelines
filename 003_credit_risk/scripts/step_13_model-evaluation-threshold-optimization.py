@@ -154,7 +154,7 @@ def main():
             "optimal_threshold": round(best_thresh, 4),
             "optimal_f2": round(best_f2, 4),
             "threshold_analysis": threshold_results,
-        }, f, indent=2)
+        }, f, default=str, indent=2)
 
     print(f"\n✅ Step 13 complete — model evaluation complete")
 

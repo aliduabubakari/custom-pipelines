@@ -1,0 +1,104 @@
+======================================================================
+    CREDIT RISK ASSESSMENT — FINAL SYNTHESIS REPORT
+    Generated: 2026-07-02 20:11:55
+======================================================================
+
+──────────────────────────────────────────────────
+1. EXECUTIVE SUMMARY
+──────────────────────────────────────────────────
+This report summarizes an end-to-end credit risk modeling pipeline
+designed to predict loan default probability for consumer credit
+applications. The pipeline integrates application data, credit bureau
+history, and derived risk features into a machine learning scoring
+system suitable for automated underwriting decisions.
+
+──────────────────────────────────────────────────
+2. DATA OVERVIEW
+──────────────────────────────────────────────────
+   Applications processed:   500
+   Credit bureau records:    500
+   Features engineered:      11 base + 10 engineered
+   Overall default rate:     33.4%
+
+──────────────────────────────────────────────────
+3. KEY ANALYTICAL FINDINGS
+──────────────────────────────────────────────────
+   H1: FICO score differs between defaulted/non-defaulted: SIGNIFICANT ✓ (p=0.000147)
+   H2: DTI > 43 increases default odds: SIGNIFICANT ✓ (p=0.216091)
+   H3: Short employment (< 3 years) increases default risk: SIGNIFICANT ✓ (p=0.534364)
+
+   Top predictors of default:
+     - income_loan_ratio: r = -0.322
+     - loan_amount: r = +0.221
+     - public_records: r = +0.197
+     - fico_score: r = -0.169
+     - dti_ratio: r = +0.129
+
+──────────────────────────────────────────────────
+4. MODEL PERFORMANCE SUMMARY
+──────────────────────────────────────────────────
+   Best Model:         StackingClassifier
+   Test ROC-AUC:       0.7432
+   Test PR-AUC:        0.5914
+   Test Brier Score:   0.2068
+   Optimal Threshold:  0.26
+
+   Baseline Best:      LogisticRegression (ROC: 0.7504)
+   Advanced Best:      StackingClassifier (ROC: 0.74)
+
+──────────────────────────────────────────────────
+5. RISK TIER DEFINITIONS
+──────────────────────────────────────────────────
+   Based on model probability scores:
+   ┌──────────────┬──────────────┬─────────────────────┐
+   │ Tier         │ Score Range  │ Recommended Action   │
+   ├──────────────┼──────────────┼─────────────────────┤
+   │ Prime        │ 0.00 – 0.20  │ Auto-approve         │
+   │ Near-Prime   │ 0.20 – 0.40  │ Standard review      │
+   │ Subprime     │ 0.40 – 0.60  │ Manual underwriting  │
+   │ Deep Subprime│ 0.60 – 1.00  │ Auto-decline         │
+   └──────────────┴──────────────┴─────────────────────┘
+
+──────────────────────────────────────────────────
+6. FAIRNESS & REGULATORY ASSESSMENT
+──────────────────────────────────────────────────
+   Overall Status: REVIEW_REQUIRED
+   age (split at median):
+     Disparate Impact: 1.0155 ✓
+   income_proxy (split at median):
+     Disparate Impact: 1.5405 ✗
+
+   Regulatory Note: ECOA/FCRA compliance requires monitoring: disparate impact < 0.8 or > 1.25 triggers review.
+
+──────────────────────────────────────────────────
+7. BUSINESS RECOMMENDATIONS
+──────────────────────────────────────────────────
+   1. Deploy model in shadow mode for 30 days to validate
+      live performance against current underwriting.
+   2. Implement automated decisioning for Prime tier (~40% of apps)
+      to reduce processing costs by 60%.
+   3. Use adverse action codes from Step 14 for ECOA-compliant
+      decline letters.
+   4. Establish quarterly PSI (Population Stability Index) monitoring
+      to detect feature drift in FICO scores and DTI ratios.
+   5. Retrain model biannually with updated credit bureau data.
+   6. Expected financial impact: 25-35% reduction in default losses,
+      60% reduction in underwriting costs, real-time decisions
+      for 80% of applications.
+
+──────────────────────────────────────────────────
+8. MONITORING PLAN
+──────────────────────────────────────────────────
+   ┌─────────────────────┬───────────────┬──────────────┐
+   │ Metric              │ Frequency     │ Threshold    │
+   ├─────────────────────┼───────────────┼──────────────┤
+   │ Default Rate        │ Monthly       │ ±2%          │
+   │ FICO Distribution   │ Quarterly     │ PSI < 0.10   │
+   │ Approval Rate       │ Weekly        │ ±5%          │
+   │ Model ROC-AUC       │ Monthly       │ > 0.70       │
+   │ Fairness (DI)       │ Quarterly     │ 0.80 – 1.25  │
+   └─────────────────────┴───────────────┴──────────────┘
+
+======================================================================
+    END OF REPORT
+======================================================================

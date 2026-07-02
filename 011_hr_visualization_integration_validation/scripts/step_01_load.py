@@ -18,7 +18,7 @@ def main():
     if (hr['age']<18).sum()>0:checks.append(f"INVALID: {(hr['age']<18).sum()} employees under 18")
     print(f"\n   Validation: {len(checks)} issues found")
     for c in checks:print(f"     ⚠️ {c}")
-    with open(os.path.join(a.output_dir,"validation_report.json"),"w") as f:json.dump({"checks":checks,"total_issues":len(checks)},f,indent=2)
+    with open(os.path.join(a.output_dir,"validation_report.json"),"w") as f:json.dump({"checks":checks,"total_issues":len(checks)},f,default=str,indent=2)
     dfs=[("hr_data",hr)]
     for name,df in dfs:
         print(f"   {name}: {len(df)} rows x {len(df.columns)} cols")

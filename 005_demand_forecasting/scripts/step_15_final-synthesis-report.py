@@ -49,6 +49,6 @@ def main():
     with open(os.path.join(args.output_dir, "final_report.txt"), "w") as f: f.write(report_text)
     print(report_text)
 
-    with open(os.path.join(args.output_dir, "final_summary.json"), "w") as f: json.dump({"pipeline": "demand_forecasting", "skus": len(inv), "scenarios_analyzed": len(scenarios)}, f, indent=2)
+    with open(os.path.join(args.output_dir, "final_summary.json"), "w") as f: json.dump({"pipeline": "demand_forecasting", "skus": len(inv), "scenarios_analyzed": len(scenarios)}, f, default=str, indent=2)
     print("✅ Steps 15-16 complete")
 if __name__ == "__main__": main()

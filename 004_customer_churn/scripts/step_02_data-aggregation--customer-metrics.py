@@ -46,7 +46,7 @@ def main():
 
     agg.to_parquet(os.path.join(args.output_dir, "customer_metrics.parquet"), index=False)
     with open(os.path.join(args.output_dir, "aggregation_summary.json"), "w") as f:
-        json.dump({"n_customers_aggregated": len(agg), "metrics_columns": len(agg.columns)}, f)
+        json.dump({"n_customers_aggregated": len(agg), "metrics_columns": len(agg.columns)}, f, default=str)
     print("\n✅ Step 2 complete")
 
 if __name__ == "__main__":

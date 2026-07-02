@@ -55,6 +55,6 @@ def main():
     plt.tight_layout(); fig.savefig(os.path.join(args.output_dir, "step14_inventory_optimization.png"), dpi=100); plt.close()
 
     opt.to_csv(os.path.join(args.output_dir, "inventory_optimization.csv"), index=False)
-    with open(os.path.join(args.output_dir, "optimization_summary.json"), "w") as f: json.dump({"daily_savings": round(savings, 0), "skus_reorder": int((opt["action"] == "⚠️ Reorder Now").sum()), "skus_overstocked": int((opt["action"] == "📦 Overstocked").sum())}, f)
+    with open(os.path.join(args.output_dir, "optimization_summary.json"), "w") as f: json.dump({"daily_savings": round(savings, 0), "skus_reorder": int((opt["action"] == "⚠️ Reorder Now").sum()), "skus_overstocked": int((opt["action"] == "📦 Overstocked").sum())}, f, default=str)
     print("✅ Step 14 complete")
 if __name__ == "__main__": main()

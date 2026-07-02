@@ -28,6 +28,6 @@ def main():
     print(f"   Supplier match rate: {merged['supplier'].notna().mean()*100:.0f}%")
 
     merged.to_parquet(os.path.join(args.output_dir, "merged_data.parquet"), index=False)
-    with open(os.path.join(args.output_dir, "merge_summary.json"), "w") as f: json.dump({"rows": len(merged), "cols": len(merged.columns)}, f)
+    with open(os.path.join(args.output_dir, "merge_summary.json"), "w") as f: json.dump({"rows": len(merged), "cols": len(merged.columns)}, f, default=str)
     print("✅ Step 2 complete")
 if __name__ == "__main__": main()

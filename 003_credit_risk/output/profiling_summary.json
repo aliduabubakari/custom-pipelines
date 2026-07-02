@@ -1,0 +1,154 @@
+{
+  "applications": {
+    "rows": 500,
+    "columns": 11,
+    "column_names": [
+      "application_id",
+      "annual_income",
+      "loan_amount",
+      "loan_purpose",
+      "home_ownership",
+      "employment_length",
+      "state",
+      "dti_ratio",
+      "age",
+      "months_at_address",
+      "default_flag"
+    ],
+    "dtypes": {
+      "application_id": "object",
+      "annual_income": "int64",
+      "loan_amount": "int64",
+      "loan_purpose": "object",
+      "home_ownership": "object",
+      "employment_length": "object",
+      "state": "object",
+      "dti_ratio": "float64",
+      "age": "int64",
+      "months_at_address": "int64",
+      "default_flag": "int64"
+    },
+    "null_counts": {
+      "application_id": 0,
+      "annual_income": 0,
+      "loan_amount": 0,
+      "loan_purpose": 0,
+      "home_ownership": 0,
+      "employment_length": 0,
+      "state": 0,
+      "dti_ratio": 0,
+      "age": 0,
+      "months_at_address": 0,
+      "default_flag": 0
+    },
+    "null_pct": {
+      "application_id": 0.0,
+      "annual_income": 0.0,
+      "loan_amount": 0.0,
+      "loan_purpose": 0.0,
+      "home_ownership": 0.0,
+      "employment_length": 0.0,
+      "state": 0.0,
+      "dti_ratio": 0.0,
+      "age": 0.0,
+      "months_at_address": 0.0,
+      "default_flag": 0.0
+    },
+    "default_rate": 33.4
+  },
+  "credit_history": {
+    "rows": 5564,
+    "columns": 6,
+    "column_names": [
+      "application_id",
+      "report_date",
+      "account_status",
+      "balance",
+      "credit_limit",
+      "utilization_pct"
+    ],
+    "dtypes": {
+      "application_id": "object",
+      "report_date": "object",
+      "account_status": "object",
+      "balance": "float64",
+      "credit_limit": "float64",
+      "utilization_pct": "float64"
+    },
+    "null_counts": {
+      "application_id": 0,
+      "report_date": 0,
+      "account_status": 0,
+      "balance": 0,
+      "credit_limit": 0,
+      "utilization_pct": 0
+    },
+    "null_pct": {
+      "application_id": 0.0,
+      "report_date": 0.0,
+      "account_status": 0.0,
+      "balance": 0.0,
+      "credit_limit": 0.0,
+      "utilization_pct": 0.0
+    }
+  },
+  "bureau_data": {
+    "rows": 500,
+    "columns": 10,
+    "column_names": [
+      "application_id",
+      "fico_score",
+      "total_accounts",
+      "delinquencies_2yrs",
+      "inquiries_6mo",
+      "public_records",
+      "revolving_balance",
+      "revolving_utilization",
+      "oldest_account_months",
+      "credit_age_months"
+    ],
+    "dtypes": {
+      "application_id": "object",
+      "fico_score": "int64",
+      "total_accounts": "int64",
+      "delinquencies_2yrs": "int64",
+      "inquiries_6mo": "int64",
+      "public_records": "int64",
+      "revolving_balance": "float64",
+      "revolving_utilization": "float64",
+      "oldest_account_months": "int64",
+      "credit_age_months": "int64"
+    },
+    "null_counts": {
+      "application_id": 0,
+      "fico_score": 0,
+      "total_accounts": 0,
+      "delinquencies_2yrs": 0,
+      "inquiries_6mo": 0,
+      "public_records": 0,
+      "revolving_balance": 0,
+      "revolving_utilization": 0,
+      "oldest_account_months": 0,
+      "credit_age_months": 0
+    },
+    "null_pct": {
+      "application_id": 0.0,
+      "fico_score": 0.0,
+      "total_accounts": 0.0,
+      "delinquencies_2yrs": 0.0,
+      "inquiries_6mo": 0.0,
+      "public_records": 0.0,
+      "revolving_balance": 0.0,
+      "revolving_utilization": 0.0,
+      "oldest_account_months": 0.0,
+      "credit_age_months": 0.0
+    },
+    "fico_stats": {
+      "mean": 675.5,
+      "median": 676.5,
+      "min": 437,
+      "max": 850,
+      "std": 90.8
+    }
+  }
+}

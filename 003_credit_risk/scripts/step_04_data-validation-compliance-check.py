@@ -84,7 +84,7 @@ def main():
     }
 
     with open(os.path.join(args.output_dir, "compliance_report.json"), "w") as f:
-        json.dump(compliance, f, indent=2, default=str)
+        json.dump(compliance, f, default=str, indent=2)
 
     status = compliance["summary"]["overall_status"]
     print(f"\n📋 {len(compliance['checks'])} checks run: {passed} ✅ passed, {failed} ❌ failed")

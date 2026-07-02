@@ -161,7 +161,7 @@ def main():
     fairness_results = convert_bools(fairness_results)
 
     with open(os.path.join(args.output_dir, "fairness_report.json"), "w") as f:
-        json.dump(fairness_results, f, indent=2)
+        json.dump(fairness_results, f, default=str, indent=2)
 
     print(f"\n✅ Step 15 complete — fairness report saved")
 

@@ -24,7 +24,7 @@ def main():
 
     profiling = {name: {"rows": len(df), "columns": len(df.columns)} for name, df in
                  [("inventory", inv), ("sales_orders", orders), ("suppliers", supp)]}
-    with open(os.path.join(args.output_dir, "profiling_summary.json"), "w") as f: json.dump(profiling, f, indent=2, default=str)
+    with open(os.path.join(args.output_dir, "profiling_summary.json"), "w") as f: json.dump(profiling, f, default=str, indent=2)
     inv.to_parquet(os.path.join(args.output_dir, "raw_inventory.parquet"), index=False)
     orders.to_parquet(os.path.join(args.output_dir, "raw_orders.parquet"), index=False)
     supp.to_parquet(os.path.join(args.output_dir, "raw_suppliers.parquet"), index=False)

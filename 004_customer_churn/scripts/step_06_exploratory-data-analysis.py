@@ -76,7 +76,7 @@ def main():
     plt.close()
 
     with open(os.path.join(args.output_dir, "eda_results.json"), "w") as f:
-        json.dump(eda, f, indent=2, default=str)
+        json.dump(eda, f, default=str, indent=2)
     print("\n✅ Step 6 complete")
 
 if __name__ == "__main__":

@@ -1,0 +1,44 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis": "H1: FICO score differs between defaulted/non-defaulted",
+      "test": "Independent t-test",
+      "statistic": -3.8252,
+      "p_value": 0.000147,
+      "significant": "True",
+      "effect_size_cohens_d": -0.363,
+      "default_mean": 653.8,
+      "non_default_mean": 686.3
+    },
+    {
+      "hypothesis": "H2: DTI > 43 increases default odds",
+      "test": "Chi-square test",
+      "statistic": 1.5301,
+      "p_value": 0.216091,
+      "significant": "False",
+      "odds_ratio": 1.701,
+      "contingency": {
+        "0": {
+          "0": 316,
+          "1": 17
+        },
+        "1": {
+          "0": 153,
+          "1": 14
+        }
+      }
+    },
+    {
+      "hypothesis": "H3: Short employment (< 3 years) increases default risk",
+      "test": "Two-proportion z-test",
+      "statistic": 0.6214,
+      "p_value": 0.534364,
+      "significant": "False",
+      "short_emp_default_rate": 35.03,
+      "long_emp_default_rate": 32.34,
+      "rate_difference_pct": 2.68
+    }
+  ],
+  "significant_count": 1,
+  "total_tests": 3
+}

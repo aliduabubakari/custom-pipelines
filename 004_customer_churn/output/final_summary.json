@@ -1,0 +1,13 @@
+{
+  "pipeline": "customer_churn",
+  "generated_at": "2026-07-02T20:12:28.267857",
+  "churn_rate_pct": 28.0,
+  "best_model": "RandomForest",
+  "test_roc_auc": 0.8175,
+  "optimal_threshold": 0.15,
+  "retention_strategies": {
+    "0": "Discount Offer \u2014 Price-sensitive at-risk customers",
+    "1": "Feature Education \u2014 Low-engagement customers",
+    "2": "Account Review \u2014 High-support, frustrated customers"
+  }
+}

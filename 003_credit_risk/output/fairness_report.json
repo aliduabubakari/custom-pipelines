@@ -1,0 +1,48 @@
+{
+  "fairness_metrics": [
+    {
+      "protected_attribute": "age (split at median)",
+      "group_1": {
+        "name": "Younger",
+        "n": 34,
+        "default_rate": 0.3529,
+        "approval_rate": 0.4706
+      },
+      "group_2": {
+        "name": "Older",
+        "n": 41,
+        "default_rate": 0.3171,
+        "approval_rate": 0.4634
+      },
+      "statistical_parity_difference": 0.0072,
+      "equal_opportunity_difference": 0.2179,
+      "disparate_impact": 1.0155,
+      "spd_pass": true,
+      "di_pass": true
+    },
+    {
+      "protected_attribute": "income_proxy (split at median)",
+      "group_1": {
+        "name": "Lower Income",
+        "n": 37,
+        "approval_rate": 0.5676
+      },
+      "group_2": {
+        "name": "Higher Income",
+        "n": 38,
+        "approval_rate": 0.3684
+      },
+      "statistical_parity_difference": 0.1991,
+      "disparate_impact": 1.5405,
+      "di_pass": false
+    }
+  ],
+  "overall_assessment": {
+    "total_metrics": 2,
+    "disparate_impact_pass": false,
+    "statistical_parity_pass": true,
+    "overall_fairness": "REVIEW_REQUIRED",
+    "regulatory_note": "ECOA/FCRA compliance requires monitoring: disparate impact < 0.8 or > 1.25 triggers review.",
+    "recommendation": "Further investigation required for flagged groups"
+  }
+}

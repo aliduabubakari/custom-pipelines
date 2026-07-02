@@ -1,0 +1,18 @@
+{
+  "customers": {
+    "rows": 500,
+    "churn_rate": 0.28,
+    "segments": {
+      "Basic": 250,
+      "Premium": 168,
+      "Enterprise": 82
+    }
+  },
+  "transactions": {
+    "rows": 15843,
+    "unique_customers": 500,
+    "avg_amount": 45.53,
+    "return_rate": 0.0793
+  },
+  "target": "is_churned"
+}

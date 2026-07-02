@@ -69,7 +69,7 @@ def main():
 
     with open(os.path.join(args.output_dir, "modeling_metadata.json"), "w") as f:
         json.dump({"n_features": X_processed.shape[1], "feature_names": all_features,
-                    "train_size": len(X_train), "test_size": len(X_test)}, f, indent=2)
+                    "train_size": len(X_train), "test_size": len(X_test)}, f, default=str, indent=2)
 
     print(f"\n✅ Step 11 complete — {X_processed.shape[1]} features ready for modeling")
 

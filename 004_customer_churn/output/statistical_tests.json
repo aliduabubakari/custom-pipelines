@@ -1,0 +1,87 @@
+{
+  "tests": [
+    {
+      "test": "Chi-square: segment vs churn",
+      "statistic": 44.754,
+      "p_value": 0.0,
+      "significant": "True"
+    },
+    {
+      "test": "Chi-square: acquisition_channel vs churn",
+      "statistic": 10.182,
+      "p_value": 0.037469,
+      "significant": "True"
+    },
+    {
+      "test": "Chi-square: plan_type vs churn",
+      "statistic": 0.27,
+      "p_value": 0.603295,
+      "significant": "False"
+    },
+    {
+      "test": "T-test: tenure_days \u2014 churned vs retained",
+      "statistic": -0.638,
+      "p_value": 0.523523,
+      "significant": "False",
+      "cohens_d": -0.065,
+      "churned_mean": 1186.25,
+      "retained_mean": 1221.99
+    },
+    {
+      "test": "T-test: total_spend \u2014 churned vs retained",
+      "statistic": -6.415,
+      "p_value": 0.0,
+      "significant": "True",
+      "cohens_d": -0.686,
+      "churned_mean": 988.47,
+      "retained_mean": 1615.96
+    },
+    {
+      "test": "T-test: monthly_fee \u2014 churned vs retained",
+      "statistic": -5.498,
+      "p_value": 0.0,
+      "significant": "True",
+      "cohens_d": -0.591,
+      "churned_mean": 33.83,
+      "retained_mean": 58.0
+    },
+    {
+      "test": "T-test: support_contacts \u2014 churned vs retained",
+      "statistic": 3.318,
+      "p_value": 0.000972,
+      "significant": "True",
+      "cohens_d": 0.332,
+      "churned_mean": 1.84,
+      "retained_mean": 1.45
+    },
+    {
+      "test": "T-test: return_rate \u2014 churned vs retained",
+      "statistic": 2.39,
+      "p_value": 0.017207,
+      "significant": "True",
+      "cohens_d": 0.224,
+      "churned_mean": 0.09,
+      "retained_mean": 0.07
+    },
+    {
+      "test": "T-test: purchase_frequency \u2014 churned vs retained",
+      "statistic": -4.38,
+      "p_value": 1.4e-05,
+      "significant": "True",
+      "cohens_d": -0.486,
+      "churned_mean": 0.8,
+      "retained_mean": 1.33
+    },
+    {
+      "test": "T-test: days_since_last_purchase \u2014 churned vs retained",
+      "statistic": 9.326,
+      "p_value": 0.0,
+      "significant": "True",
+      "cohens_d": 0.756,
+      "churned_mean": 101.41,
+      "retained_mean": 35.29
+    }
+  ],
+  "significant": 8,
+  "total": 10
+}

@@ -1,0 +1,22 @@
+{
+  "before_nulls": {},
+  "after_nulls": {},
+  "outlier_cols_capped": [
+    "annual_income: 5 values capped at 225974.0 (99th pctl)",
+    "loan_amount: 5 values capped at 47494.9 (99th pctl)",
+    "dti_ratio: 5 values capped at 44.6 (99th pctl)",
+    "months_at_address: 5 values capped at 236.0 (99th pctl)",
+    "avg_balance: 5 values capped at 23605.4 (99th pctl)",
+    "max_balance: 5 values capped at 29964.8 (99th pctl)",
+    "avg_utilization: 5 values capped at 73.1 (99th pctl)",
+    "max_utilization: 2 values capped at 99.9 (99th pctl)",
+    "revolving_balance: 5 values capped at 49464.1 (99th pctl)",
+    "revolving_utilization: 5 values capped at 89.5 (99th pctl)",
+    "oldest_account_months: 4 values capped at 357.0 (99th pctl)",
+    "credit_age_months: 1 values capped at 238.0 (99th pctl)"
+  ],
+  "standardizations": [
+    "employment_length: normalized 2 categories",
+    "all string columns: whitespace trimmed"
+  ]
+}

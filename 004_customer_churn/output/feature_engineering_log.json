@@ -1,0 +1,15 @@
+{
+  "features_created": 8,
+  "feature_list": [
+    "recency_score (5 bins)",
+    "frequency_score (5 bins)",
+    "monetary_score (5 bins)",
+    "engagement_score",
+    "tenure_group",
+    "support_intensity",
+    "spend_fee_ratio",
+    "is_recent_customer"
+  ],
+  "initial_cols": 23,
+  "final_cols": 32
+}

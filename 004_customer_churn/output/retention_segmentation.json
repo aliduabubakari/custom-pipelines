@@ -1,0 +1,9 @@
+{
+  "n_at_risk": 367,
+  "n_clusters": 3,
+  "recommended_strategies": {
+    "0": "Discount Offer \u2014 Price-sensitive at-risk customers",
+    "1": "Feature Education \u2014 Low-engagement customers",
+    "2": "Account Review \u2014 High-support, frustrated customers"
+  }
+}

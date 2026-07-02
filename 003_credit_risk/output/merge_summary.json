@@ -1,0 +1,10 @@
+{
+  "applications": 500,
+  "credit_history_records": 5564,
+  "unique_apps_in_history": 500,
+  "bureau_records": 500,
+  "final_rows": 500,
+  "final_columns": 30,
+  "merged_successfully": true,
+  "columns_with_nulls": {}
+}

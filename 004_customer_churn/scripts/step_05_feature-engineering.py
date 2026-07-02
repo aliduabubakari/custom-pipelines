@@ -62,7 +62,7 @@ def main():
 
     with open(os.path.join(args.output_dir, "feature_engineering_log.json"), "w") as f:
         json.dump({"features_created": len(features), "feature_list": features,
-                    "initial_cols": initial_cols, "final_cols": len(df.columns)}, f, indent=2)
+                    "initial_cols": initial_cols, "final_cols": len(df.columns)}, f, default=str, indent=2)
 
     print(f"\n🔧 Created {len(features)} new features: " + ", ".join(features[:4]) + f" +{len(features)-4} more")
     print(f"   Final: {len(df.columns)} columns")

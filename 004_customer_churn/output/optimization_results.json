@@ -1,0 +1,5 @@
+{
+  "calibrated_roc_auc": 0.7623,
+  "calibrated_brier": 0.1691,
+  "n_estimators_in_ensemble": 3
+}

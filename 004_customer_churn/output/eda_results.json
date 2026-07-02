@@ -1,0 +1,70 @@
+{
+  "churn_by_segment": {
+    "mean": {
+      "Basic": 0.412,
+      "Enterprise": 0.0975609756097561,
+      "Premium": 0.17261904761904762
+    },
+    "count": {
+      "Basic": 250,
+      "Enterprise": 82,
+      "Premium": 168
+    }
+  },
+  "churn_by_acquisition_channel": {
+    "mean": {
+      "Direct": 0.23255813953488372,
+      "Organic": 0.23841059602649006,
+      "Paid Search": 0.391304347826087,
+      "Referral": 0.2796610169491525,
+      "Social Media": 0.2191780821917808
+    },
+    "count": {
+      "Direct": 43,
+      "Organic": 151,
+      "Paid Search": 115,
+      "Referral": 118,
+      "Social Media": 73
+    }
+  },
+  "churn_by_plan_type": {
+    "mean": {
+      "Annual": 0.26424870466321243,
+      "Monthly": 0.2899022801302932
+    },
+    "count": {
+      "Annual": 193,
+      "Monthly": 307
+    }
+  },
+  "churn_by_tenure_group": {
+    "mean": {
+      "<1mo": NaN,
+      "1-3mo": NaN,
+      "3-6mo": NaN,
+      "6-12mo": 0.08333333333333333,
+      "1-2yr": 0.3488372093023256,
+      "2yr+": 0.2830687830687831
+    },
+    "count": {
+      "<1mo": 0,
+      "1-3mo": 0,
+      "3-6mo": 0,
+      "6-12mo": 36,
+      "1-2yr": 86,
+      "2yr+": 378
+    }
+  },
+  "top_correlations": {
+    "days_since_last_purchase": 0.38560614206681054,
+    "recency_score": -0.35360392092310095,
+    "purchase_count": -0.30626571708187217,
+    "category_diversity": -0.28417772283565707,
+    "total_spend": -0.2762908936868922,
+    "monthly_fee": -0.2392233623113623,
+    "engagement_score": -0.21410521021632592,
+    "frequency_score": -0.2039170328574961,
+    "purchase_frequency": -0.19261099411181323,
+    "monetary_score": -0.1851715631129763
+  }
+}

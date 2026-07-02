@@ -1,0 +1,43 @@
+{
+  "pipeline": "credit_risk",
+  "generated_at": "2026-07-02T20:11:55.344838",
+  "data_summary": {
+    "n_applications": 500,
+    "default_rate_pct": 33.4
+  },
+  "model": {
+    "best_model": "StackingClassifier",
+    "test_roc_auc": 0.7432,
+    "test_pr_auc": 0.5914,
+    "optimal_threshold": 0.26
+  },
+  "risk_tiers": [
+    {
+      "tier": "Prime",
+      "range": "0.00-0.20",
+      "action": "Auto-approve"
+    },
+    {
+      "tier": "Near-Prime",
+      "range": "0.20-0.40",
+      "action": "Standard review"
+    },
+    {
+      "tier": "Subprime",
+      "range": "0.40-0.60",
+      "action": "Manual underwriting"
+    },
+    {
+      "tier": "Deep Subprime",
+      "range": "0.60-1.00",
+      "action": "Auto-decline"
+    }
+  ],
+  "fairness_status": "REVIEW_REQUIRED",
+  "recommendations": [
+    "Deploy in shadow mode 30 days",
+    "Automate Prime-tier decisions",
+    "Quarterly PSI monitoring",
+    "Biannual model retraining"
+  ]
+}

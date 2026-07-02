@@ -103,7 +103,7 @@ def main():
 
     with open(os.path.join(args.output_dir, "optimization_results.json"), "w") as f:
         json.dump({"calibrated_roc_auc": round(cal_auc, 4), "calibrated_brier": round(cal_brier, 4),
-                    "n_estimators_in_ensemble": len(estimators)}, f, indent=2)
+                    "n_estimators_in_ensemble": len(estimators)}, f, default=str, indent=2)
     print("\n✅ Step 13 complete")
 
 if __name__ == "__main__":

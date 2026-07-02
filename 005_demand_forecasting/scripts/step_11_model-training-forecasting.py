@@ -80,7 +80,7 @@ def main():
 
     plt.tight_layout(); fig.savefig(os.path.join(args.output_dir, "step11_forecast.png"), dpi=120); plt.close()
 
-    with open(os.path.join(args.output_dir, "forecast_models.json"), "w") as f: json.dump(models_registry, f, indent=2)
+    with open(os.path.join(args.output_dir, "forecast_models.json"), "w") as f: json.dump(models_registry, f, default=str, indent=2)
     with open(os.path.join(args.output_dir, "best_forecast_model.pkl"), "wb") as f: pickle.dump(rf, f)
     print("✅ Steps 11-13 complete")
 if __name__ == "__main__":

@@ -106,7 +106,7 @@ def main():
             "train_default_rate": round(y_train.mean(), 4),
             "val_default_rate": round(y_val.mean(), 4),
             "test_default_rate": round(y_test.mean(), 4),
-        }, f, indent=2)
+        }, f, default=str, indent=2)
 
     print(f"\n✅ Step 10 complete — processed data & preprocessor saved")
 

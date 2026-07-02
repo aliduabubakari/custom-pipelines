@@ -118,7 +118,7 @@ def main():
     # Save ensemble results
     with open(os.path.join(args.output_dir, "ensemble_results.json"), "w") as f:
         json.dump({"models": ensemble_models, "best": best_advanced["model"],
-                    "best_roc_auc": best_advanced["val_roc_auc"]}, f, indent=2)
+                    "best_roc_auc": best_advanced["val_roc_auc"]}, f, default=str, indent=2)
 
     # Calibration comparison plot
     fig, axes = plt.subplots(1, 2, figsize=(12, 5))

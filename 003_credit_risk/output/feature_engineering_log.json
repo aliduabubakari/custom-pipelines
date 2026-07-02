@@ -1,0 +1,17 @@
+{
+  "initial_columns": 30,
+  "new_features": 10,
+  "features_created": [
+    "DTI_category (4 bands)",
+    "FICO_band (5 tiers)",
+    "address_stability (months_at_address / age)",
+    "utilization_normalized (0\u20131.5 scale)",
+    "inquiry_velocity (inquiries/month)",
+    "account_age_ratio",
+    "payment_consistency (100 - delinquency%)",
+    "income_loan_ratio",
+    "loan_size (4 tiers)",
+    "age_group (5 tiers)"
+  ],
+  "final_columns": 40
+}

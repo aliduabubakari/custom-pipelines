@@ -96,7 +96,7 @@ def main():
 
     # Save EDA results
     with open(os.path.join(args.output_dir, "eda_results.json"), "w") as f:
-        json.dump(eda_results, f, indent=2, default=str)
+        json.dump(eda_results, f, default=str, indent=2)
 
     print(f"\n✅ Step 6 complete — EDA results saved")
 

@@ -133,7 +133,7 @@ def main():
             "test_roc_auc": evaluation.get("test_roc_auc"),
             "optimal_threshold": evaluation.get("best_threshold"),
             "retention_strategies": strategies,
-        }, f, indent=2)
+        }, f, default=str, indent=2)
 
     print("\n✅ Step 16 complete — Retention Playbook generated")
 

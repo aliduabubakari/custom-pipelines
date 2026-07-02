@@ -65,7 +65,7 @@ def main():
     plt.close()
 
     with open(os.path.join(args.output_dir, "cohort_analysis.json"), "w") as f:
-        json.dump({"retention_matrix": retention_matrix, "n_cohorts": len(cohorts)}, f, indent=2)
+        json.dump({"retention_matrix": retention_matrix, "n_cohorts": len(cohorts)}, f, default=str, indent=2)
     print("\n✅ Step 10 complete")
 
 if __name__ == "__main__":

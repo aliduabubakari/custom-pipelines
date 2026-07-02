@@ -1,0 +1,16 @@
+{
+  "before_nulls": 0,
+  "actions": [
+    "Capped tenure_days at 99th pctl (2173.1), 5 values",
+    "Capped monthly_fee at 99th pctl (193.7), 5 values",
+    "Capped total_spend at 99th pctl (4744.4), 5 values",
+    "Capped avg_order_value at 99th pctl (76.8), 5 values",
+    "Capped purchase_count at 99th pctl (94.0), 5 values",
+    "Capped days_since_last_purchase at 99th pctl (464.4), 5 values",
+    "Capped items_per_order_avg at 99th pctl (3.9), 5 values",
+    "Capped return_rate at 99th pctl (0.2), 5 values",
+    "Capped discount_usage_rate at 99th pctl (0.7), 5 values",
+    "Capped purchase_frequency at 99th pctl (6.8), 5 values"
+  ],
+  "after_nulls": 0
+}

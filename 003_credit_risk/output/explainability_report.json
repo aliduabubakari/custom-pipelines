@@ -1,0 +1,183 @@
+{
+  "top_features": [
+    {
+      "feature": "income_loan_ratio",
+      "importance": 0.145
+    },
+    {
+      "feature": "loan_amount",
+      "importance": 0.0744
+    },
+    {
+      "feature": "fico_score",
+      "importance": 0.0482
+    },
+    {
+      "feature": "annual_income",
+      "importance": 0.0376
+    },
+    {
+      "feature": "dti_ratio",
+      "importance": 0.035
+    },
+    {
+      "feature": "avg_utilization",
+      "importance": 0.0318
+    },
+    {
+      "feature": "utilization_normalized",
+      "importance": 0.0304
+    },
+    {
+      "feature": "max_balance",
+      "importance": 0.03
+    },
+    {
+      "feature": "loan_size_Micro",
+      "importance": 0.0298
+    },
+    {
+      "feature": "account_age_ratio",
+      "importance": 0.0296
+    },
+    {
+      "feature": "revolving_utilization",
+      "importance": 0.0263
+    },
+    {
+      "feature": "oldest_account_months",
+      "importance": 0.0254
+    },
+    {
+      "feature": "address_stability",
+      "importance": 0.0253
+    },
+    {
+      "feature": "earliest_report_date",
+      "importance": 0.0248
+    },
+    {
+      "feature": "credit_age_months",
+      "importance": 0.0247
+    }
+  ],
+  "individual_explanations": [
+    {
+      "sample": 1,
+      "actual": 1,
+      "predicted_prob": 0.625,
+      "top_features": [
+        "max_utilization",
+        "avg_utilization",
+        "loan_amount",
+        "total_accounts",
+        "public_records"
+      ],
+      "contributions": [
+        -0.1007,
+        -0.0912,
+        -0.0647,
+        0.0368,
+        0.0365
+      ]
+    },
+    {
+      "sample": 2,
+      "actual": 0,
+      "predicted_prob": 0.168,
+      "top_features": [
+        "max_balance",
+        "loan_amount",
+        "account_age_ratio",
+        "income_loan_ratio",
+        "address_stability"
+      ],
+      "contributions": [
+        -0.107,
+        -0.0672,
+        0.0593,
+        0.0586,
+        0.0391
+      ]
+    },
+    {
+      "sample": 3,
+      "actual": 0,
+      "predicted_prob": 0.49,
+      "top_features": [
+        "loan_amount",
+        "annual_income",
+        "address_stability",
+        "fico_score",
+        "avg_utilization"
+      ],
+      "contributions": [
+        0.1336,
+        0.0881,
+        0.066,
+        0.0551,
+        0.0493
+      ]
+    },
+    {
+      "sample": 4,
+      "actual": 0,
+      "predicted_prob": 0.173,
+      "top_features": [
+        "income_loan_ratio",
+        "loan_amount",
+        "earliest_report_date",
+        "avg_utilization",
+        "annual_income"
+      ],
+      "contributions": [
+        0.1945,
+        -0.0853,
+        0.0483,
+        -0.0361,
+        -0.0355
+      ]
+    },
+    {
+      "sample": 5,
+      "actual": 1,
+      "predicted_prob": 0.572,
+      "top_features": [
+        "address_stability",
+        "income_loan_ratio",
+        "avg_balance",
+        "fico_score",
+        "age"
+      ],
+      "contributions": [
+        0.0919,
+        -0.0819,
+        0.0721,
+        0.0673,
+        -0.0382
+      ]
+    }
+  ],
+  "adverse_action_codes": {
+    "income_loan_ratio": {
+      "importance": 0.145,
+      "adverse_action_code": "RC-INCO"
+    },
+    "loan_amount": {
+      "importance": 0.0744,
+      "adverse_action_code": "RC-LOAN"
+    },
+    "fico_score": {
+      "importance": 0.0482,
+      "adverse_action_code": "RC-FICO"
+    },
+    "annual_income": {
+      "importance": 0.0376,
+      "adverse_action_code": "RC-ANNU"
+    },
+    "dti_ratio": {
+      "importance": 0.035,
+      "adverse_action_code": "RC-DTI_"
+    }
+  }
+}

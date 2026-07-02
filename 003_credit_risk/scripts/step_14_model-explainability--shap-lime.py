@@ -147,7 +147,7 @@ def main():
                             for i in top_idx[:15]],
             "individual_explanations": lime_data,
             "adverse_action_codes": adverse_reasons,
-        }, f, indent=2)
+        }, f, default=str, indent=2)
 
     print(f"\n✅ Step 14 complete — explainability report generated")
 

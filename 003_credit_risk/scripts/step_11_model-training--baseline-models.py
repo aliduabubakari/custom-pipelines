@@ -108,7 +108,7 @@ def main():
     # Save model registry
     with open(os.path.join(args.output_dir, "model_registry.json"), "w") as f:
         json.dump({"models": model_registry, "best": best["model"],
-                    "best_roc_auc": best["val_roc_auc"]}, f, indent=2)
+                    "best_roc_auc": best["val_roc_auc"]}, f, default=str, indent=2)
 
     # Save best baseline model for next step
     import pickle

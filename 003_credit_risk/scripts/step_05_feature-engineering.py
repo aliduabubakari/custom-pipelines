@@ -91,7 +91,7 @@ def main():
             "new_features": new_cols,
             "features_created": features_created,
             "final_columns": len(df.columns)
-        }, f, indent=2)
+        }, f, default=str, indent=2)
 
     print(f"\n✅ Step 5 complete — {len(df.columns)} total columns ({len(df)} rows)")
 

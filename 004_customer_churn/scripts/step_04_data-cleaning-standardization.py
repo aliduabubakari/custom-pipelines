@@ -47,7 +47,7 @@ def main():
     df.to_parquet(os.path.join(args.output_dir, "cleaned_data.parquet"), index=False)
 
     with open(os.path.join(args.output_dir, "cleaning_log.json"), "w") as f:
-        json.dump(cleaning_log, f, indent=2)
+        json.dump(cleaning_log, f, default=str, indent=2)
     print(f"   Nulls: {cleaning_log['before_nulls']} → {cleaning_log['after_nulls']}")
     print("\n✅ Step 4 complete")
 

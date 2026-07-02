@@ -38,7 +38,7 @@ def main():
     merged.to_parquet(os.path.join(args.output_dir, "merged_data.parquet"), index=False)
 
     with open(os.path.join(args.output_dir, "merge_summary.json"), "w") as f:
-        json.dump({"total_rows": len(merged), "customers_without_transactions": int(no_txn)}, f)
+        json.dump({"total_rows": len(merged), "customers_without_transactions": int(no_txn)}, f, default=str)
     print("\n✅ Step 3 complete")
 
 if __name__ == "__main__":

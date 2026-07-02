@@ -52,6 +52,6 @@ def main():
 
     clean = []; 
     for r in results: clean.append({k: (bool(v) if isinstance(v, (np.bool_,)) else float(v) if isinstance(v, (np.floating, np.integer)) else v) for k, v in r.items()})
-    with open(os.path.join(args.output_dir, "statistical_tests.json"), "w") as f: json.dump(clean, f, indent=2)
+    with open(os.path.join(args.output_dir, "statistical_tests.json"), "w") as f: json.dump(clean, f, default=str, indent=2)
     print(f"\n📋 {sum(1 for r in results if r['significant'])}/{len(results)} tests significant"); print("✅ Steps 9-10 complete")
 if __name__ == "__main__": main()

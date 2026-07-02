@@ -1,0 +1,10 @@
+{
+  "stocks": {
+    "rows": 5000,
+    "cols": 8
+  },
+  "indices": {
+    "rows": 500,
+    "cols": 3
+  }
+}

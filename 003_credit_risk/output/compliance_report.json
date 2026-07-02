@@ -1,0 +1,95 @@
+{
+  "checks": [
+    {
+      "check": "Required field: application_id",
+      "present": true,
+      "null_count": 0,
+      "pass": true
+    },
+    {
+      "check": "Required field: annual_income",
+      "present": true,
+      "null_count": 0,
+      "pass": true
+    },
+    {
+      "check": "Required field: loan_amount",
+      "present": true,
+      "null_count": 0,
+      "pass": true
+    },
+    {
+      "check": "Required field: fico_score",
+      "present": true,
+      "null_count": 0,
+      "pass": true
+    },
+    {
+      "check": "Required field: dti_ratio",
+      "present": true,
+      "null_count": 0,
+      "pass": true
+    },
+    {
+      "check": "Required field: age",
+      "present": true,
+      "null_count": 0,
+      "pass": true
+    },
+    {
+      "check": "Range validation: annual_income in [0, 5000000]",
+      "outliers": 0,
+      "outlier_pct": 0.0,
+      "pass": "True"
+    },
+    {
+      "check": "Range validation: loan_amount in [0, 2000000]",
+      "outliers": 0,
+      "outlier_pct": 0.0,
+      "pass": "True"
+    },
+    {
+      "check": "Range validation: fico_score in [300, 850]",
+      "outliers": 0,
+      "outlier_pct": 0.0,
+      "pass": "True"
+    },
+    {
+      "check": "Range validation: dti_ratio in [0, 100]",
+      "outliers": 0,
+      "outlier_pct": 0.0,
+      "pass": "True"
+    },
+    {
+      "check": "Range validation: age in [18, 120]",
+      "outliers": 0,
+      "outlier_pct": 0.0,
+      "pass": "True"
+    },
+    {
+      "check": "Range validation: revolving_utilization in [0, 150]",
+      "outliers": 0,
+      "outlier_pct": 0.0,
+      "pass": "True"
+    },
+    {
+      "check": "Default rate reasonableness (2%\u201340%)",
+      "actual_rate": 33.4,
+      "pass": "True"
+    },
+    {
+      "check": "No duplicate application IDs",
+      "duplicates": 0,
+      "pass": "True"
+    }
+  ],
+  "flags": [],
+  "summary": {
+    "total_checks": 14,
+    "passed": "14",
+    "failed": "0",
+    "overall_status": "PASS",
+    "records_reviewed": 500,
+    "flags_raised": 0
+  }
+}
