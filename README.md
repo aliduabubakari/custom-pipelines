@@ -19,13 +19,13 @@
 | Metric | Count |
 |---|---|
 | **Total Pipelines** | 100 |
-| **Total Python Scripts** | 600+ |
+| **Total Python Scripts** | 624 |
 | **Pipeline Documentation (`.md`)** | 100 |
 | **Argo Workflow Definitions (`.yaml`)** | 100 |
-| **Synthetic Datasets (CSV)** | 100 |
+| **Input Data Files** | 115 (CSV, JSON, XLSX) |
 | **Domains Covered** | 10 |
 | **ML Techniques** | 12 |
-| **Lines of Python** | ~65,000+ |
+| **Lines of Python** | ~19,000+ |
 | **Pipeline Steps per Pipeline** | 6–16 |
 
 ---
@@ -399,11 +399,11 @@ Each pipeline exercises a subset of these core **data engineering & ML abilities
 ## 📈 Dataset Statistics
 
 ```
-Total Python Scripts .............. 600+
-Lines of Python Code .............. ~65,000+
+Total Python Scripts .............. 624
+Lines of Python Code .............. ~19,000+
 Pipeline Documentation (MD) ....... 100 files (~200K words)
 Argo Workflow Definitions ......... 100 YAML files
-Synthetic Datasets ................ 100 (domain-specific schemas)
+Input Data Files .................. 115 (CSV + JSON + XLSX)
 Pipeline Steps (avg) .............. 6.4 per pipeline
 Max Steps (credit_risk) ........... 16
 Domain Coverage ................... 10 industries
@@ -458,6 +458,6 @@ Repository: [custom-pipelines](https://github.com/aliduabubakari/custom-pipeline
 ---
 
 <p align="center">
-  <strong>100 pipelines. 10 domains. 12 techniques. 600+ scripts.</strong><br>
+  <strong>100 pipelines. 10 domains. 12 techniques. 624 scripts.</strong><br>
   <em>Every single one runs. Every single one tells a story. 🔬</em>
 </p>
