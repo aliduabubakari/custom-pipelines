@@ -1,310 +1,77 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: case-40-15558-
+  generateName: sports_visualization_cleaning_integration-
   labels:
-    pipeline: data-cleaning-validation
-    difficulty: "N/A"
-    abilities: ""
+    pipeline: sports_visualization_cleaning_integration
+    domain: Sports
+    type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling
-        template: step-01-data-loading-profiling
-    - - name: step-02-data-visualization
-        template: step-02-data-visualization
-    - - name: step-03-data-cleaning-standardization
-        template: step-03-data-cleaning-standardization
-    - - name: step-04-data-loading-profiling-phase-2
-        template: step-04-data-loading-profiling-phase-2
-    - - name: step-05-data-loading-profiling-phase-3
-        template: step-05-data-loading-profiling-phase-3
-    - - name: step-06-data-merging-integration
-        template: step-06-data-merging-integration
-    - - name: step-07-data-merging-integration-phase-2
-        template: step-07-data-merging-integration-phase-2
-    - - name: step-08-data-merging-integration-phase-3
-        template: step-08-data-merging-integration-phase-3
-    - - name: step-09-data-merging-integration-phase-4
-        template: step-09-data-merging-integration-phase-4
-    - - name: step-10-data-validation-quality-report
-        template: step-10-data-validation-quality-report
-    - - name: step-11-data-merging-integration-phase-5
-        template: step-11-data-merging-integration-phase-5
-    - - name: step-12-data-merging-integration-phase-6
-        template: step-12-data-merging-integration-phase-6
-    - - name: step-13-data-merging-integration-phase-7
-        template: step-13-data-merging-integration-phase-7
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-data-loading-profiling
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/sports_visualization_cleaning_integration:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling.py", ]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
           memory: "512Mi"
           cpu: "500m"
         limits:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "2Gi"
+          cpu: "2000m"
 
-  - name: step-02-data-visualization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_data-visualization.py", --games_city_csv /data/games_city.csv --noc_region_csv /data/noc_region.csv --medal_csv /data/medal.csv --competitor_event_csv /data/competitor_event.csv --city_csv /data/city.csv --person_csv /data/person.csv --sport_csv /data/sport.csv --games_csv /data/games.csv --event_csv /data/event.csv --games_competitor_csv /data/games_competitor.csv --person_region_csv /data/person_region.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-03-data-cleaning-standardization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-cleaning-standardization.py", --eda_outputs/merged_results_csv /data/eda_outputs/merged_results.csv --eda_outputs/merged_athlete_region_csv /data/eda_outputs/merged_athlete_region.csv --eda_outputs/merged_games_full_csv /data/eda_outputs/merged_games_full.csv --eda_outputs/error_log_txt /mnt/output/eda_outputs/error_log.txt --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv --eda_outputs/participation_stats_csv /mnt/output/eda_outputs/participation_stats.csv --eda_outputs/error_log_txt /mnt/output/eda_outputs/error_log.txt --eda_outputs/medal_stats_csv /mnt/output/eda_outputs/medal_stats.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-04-data-loading-profiling-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_data-loading-profiling-phase-2.py", --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-05-data-loading-profiling-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_data-loading-profiling-phase-3.py", --eda_outputs/merged_games_full_csv /data/eda_outputs/merged_games_full.csv --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-06-data-merging-integration
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_data-merging-integration.py", --eda_outputs/cleaned_person_csv /data/eda_outputs/cleaned_person.csv --eda_outputs/merged_athlete_region_csv /data/eda_outputs/merged_athlete_region.csv --eda_outputs/merged_games_full_csv /data/eda_outputs/merged_games_full.csv --eda_outputs/merged_results_csv /data/eda_outputs/merged_results.csv --eda_outputs/cleaned_competitor_csv /data/eda_outputs/cleaned_competitor.csv --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-07-data-merging-integration-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_data-merging-integration-phase-2.py", --eda_outputs/cleaned_person_csv /data/eda_outputs/cleaned_person.csv --eda_outputs/merged_athlete_region_csv /data/eda_outputs/merged_athlete_region.csv --eda_outputs/merged_games_full_csv /data/eda_outputs/merged_games_full.csv --eda_outputs/merged_results_csv /data/eda_outputs/merged_results.csv --eda_outputs/cleaned_competitor_csv /data/eda_outputs/cleaned_competitor.csv --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-08-data-merging-integration-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_data-merging-integration-phase-3.py", --eda_outputs/cleaned_person_csv /data/eda_outputs/cleaned_person.csv --eda_outputs/merged_athlete_region_csv /data/eda_outputs/merged_athlete_region.csv --eda_outputs/merged_games_full_csv /data/eda_outputs/merged_games_full.csv --eda_outputs/merged_results_csv /data/eda_outputs/merged_results.csv --eda_outputs/cleaned_competitor_csv /data/eda_outputs/cleaned_competitor.csv --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-09-data-merging-integration-phase-4
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_data-merging-integration-phase-4.py", --eda_outputs/cleaned_person_csv /data/eda_outputs/cleaned_person.csv --eda_outputs/merged_athlete_region_csv /data/eda_outputs/merged_athlete_region.csv --eda_outputs/merged_games_full_csv /data/eda_outputs/merged_games_full.csv --eda_outputs/merged_results_csv /data/eda_outputs/merged_results.csv --eda_outputs/cleaned_competitor_csv /data/eda_outputs/cleaned_competitor.csv --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-10-data-validation-quality-report
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_data-validation-quality-report.py", --eda_outputs/cleaned_person_csv /data/eda_outputs/cleaned_person.csv --eda_outputs/merged_athlete_region_csv /data/eda_outputs/merged_athlete_region.csv --eda_outputs/merged_games_full_csv /data/eda_outputs/merged_games_full.csv --eda_outputs/merged_results_csv /data/eda_outputs/merged_results.csv --eda_outputs/cleaned_competitor_csv /data/eda_outputs/cleaned_competitor.csv --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-11-data-merging-integration-phase-5
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_data-merging-integration-phase-5.py", --eda_outputs/cleaned_person_csv /data/eda_outputs/cleaned_person.csv --eda_outputs/merged_athlete_region_csv /data/eda_outputs/merged_athlete_region.csv --eda_outputs/merged_games_full_csv /data/eda_outputs/merged_games_full.csv --eda_outputs/merged_results_csv /data/eda_outputs/merged_results.csv --eda_outputs/cleaned_competitor_csv /data/eda_outputs/cleaned_competitor.csv --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-12-data-merging-integration-phase-6
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_data-merging-integration-phase-6.py", --eda_outputs/cleaned_person_csv /data/eda_outputs/cleaned_person.csv --eda_outputs/merged_athlete_region_csv /data/eda_outputs/merged_athlete_region.csv --eda_outputs/merged_games_full_csv /data/eda_outputs/merged_games_full.csv --eda_outputs/merged_results_csv /data/eda_outputs/merged_results.csv --eda_outputs/cleaned_competitor_csv /data/eda_outputs/cleaned_competitor.csv --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-13-data-merging-integration-phase-7
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_data-merging-integration-phase-7.py", --eda_outputs/cleaned_person_csv /data/eda_outputs/cleaned_person.csv --eda_outputs/merged_athlete_region_csv /data/eda_outputs/merged_athlete_region.csv --eda_outputs/merged_games_full_csv /data/eda_outputs/merged_games_full.csv --eda_outputs/merged_results_csv /data/eda_outputs/merged_results.csv --eda_outputs/cleaned_competitor_csv /data/eda_outputs/cleaned_competitor.csv --eda_outputs/full_olympic_data_csv /mnt/output/eda_outputs/full_olympic_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  # ── Volume definitions ──
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

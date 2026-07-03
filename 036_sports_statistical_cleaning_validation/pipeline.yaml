@@ -1,266 +1,77 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: case-5192-12801-
+  generateName: sports_statistical_cleaning_validation-
   labels:
-    pipeline: data-cleaning-validation
-    difficulty: "N/A"
-    abilities: ""
+    pipeline: sports_statistical_cleaning_validation
+    domain: Sports
+    type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling-data-inspection-phase
-        template: step-01-data-loading-profiling-data-inspection-phase
-    - - name: step-02-error-recovery-robust-loading
-        template: step-02-error-recovery-robust-loading
-    - - name: step-03-data-cleaning-standardization-error-pattern-analys
-        template: step-03-data-cleaning-standardization-error-pattern-analys
-    - - name: step-04-revised-analysis-refinement
-        template: step-04-revised-analysis-refinement
-    - - name: step-05-data-cleaning-standardization-schema-understanding
-        template: step-05-data-cleaning-standardization-schema-understanding
-    - - name: step-06-key-findings-from-output
-        template: step-06-key-findings-from-output
-    - - name: step-07-data-loading-profiling-execution-context-analysis
-        template: step-07-data-loading-profiling-execution-context-analysis
-    - - name: step-08-data-cleaning-standardization-error-root-cause
-        template: step-08-data-cleaning-standardization-error-root-cause
-    - - name: step-09-data-validation-quality-report
-        template: step-09-data-validation-quality-report
-    - - name: step-10-key-findings-from-output-phase-2
-        template: step-10-key-findings-from-output-phase-2
-    - - name: step-11-statistical-analysis-hypothesis-testing
-        template: step-11-statistical-analysis-hypothesis-testing
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-data-loading-profiling-data-inspection-phase
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/sports_statistical_cleaning_validation:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling-data-inspection-p.py", --all_star_csv /mnt/output/all_star.csv --appearances_csv /mnt/output/appearances.csv --appearances_sample_csv /mnt/output/appearances_sample.csv --all_star_sample_csv /mnt/output/all_star_sample.csv]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
           memory: "512Mi"
           cpu: "500m"
         limits:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "2Gi"
+          cpu: "2000m"
 
-  - name: step-02-error-recovery-robust-loading
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_error-recovery-robust-loading.py", --column_analysis_txt /mnt/output/column_analysis.txt --all_star_csv /mnt/output/all_star.csv --appearances_csv /mnt/output/appearances.csv --column_analysis_txt /mnt/output/column_analysis.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-03-data-cleaning-standardization-error-pattern-analys
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-cleaning-standardization-error-patt.py", --appearances_sample_txt /mnt/output/appearances_sample.txt --all_star_csv /mnt/output/all_star.csv --appearances_csv /mnt/output/appearances.csv --all_star_sample_txt /mnt/output/all_star_sample.txt --appearances_sample_txt /mnt/output/appearances_sample.txt --all_star_csv /mnt/output/all_star.csv --appearances_csv /mnt/output/appearances.csv --all_star_sample_txt /mnt/output/all_star_sample.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-04-revised-analysis-refinement
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_revised-analysis-refinement.py", --validated_samples_txt /mnt/output/validated_samples.txt --validated_samples_txt /mnt/output/validated_samples.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-05-data-cleaning-standardization-schema-understanding
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_data-cleaning-standardization-schema-und.py", --all_star_csv /mnt/output/all_star.csv --appearances_csv /mnt/output/appearances.csv --processed_all_star_csv /mnt/output/processed_all_star.csv --processed_appearances_csv /mnt/output/processed_appearances.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-06-key-findings-from-output
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_key-findings-from-output.py", --player_versatility_stats_csv /mnt/output/player_versatility_stats.csv --decadal_position_distribution_csv /mnt/output/decadal_position_distribution.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-07-data-loading-profiling-execution-context-analysis
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_data-loading-profiling-execution-context.py", --all_star_csv /mnt/output/all_star.csv --appearances_csv /mnt/output/appearances.csv --decadal_position_distribution_csv /mnt/output/decadal_position_distribution.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-08-data-cleaning-standardization-error-root-cause
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_data-cleaning-standardization-error-root.py", --all_star_csv /mnt/output/all_star.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-09-data-validation-quality-report
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_data-validation-quality-report.py", --all_star_csv /mnt/output/all_star.csv --appearances_csv /mnt/output/appearances.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-10-key-findings-from-output-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_key-findings-from-output-phase-2.py", --all_star_csv /mnt/output/all_star.csv --appearances_csv /mnt/output/appearances.csv --shortstop_analysis_csv /mnt/output/shortstop_analysis.csv --1950s_position_trends_csv /mnt/output/1950s_position_trends.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-11-statistical-analysis-hypothesis-testing
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_statistical-analysis-hypothesis-testing.py", --all_star_csv /mnt/output/all_star.csv --appearances_csv /mnt/output/appearances.csv --appearances_with_versatility_csv /mnt/output/appearances_with_versatility.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  # ── Volume definitions ──
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

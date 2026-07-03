@@ -6,395 +6,72 @@ metadata:
     pipeline: healthcare_readmission
     domain: Healthcare
     type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
   podGC:
     strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling
-        template: step-01-data-loading-profiling
-    - - name: step-02-data-merging-integration
-        template: step-02-data-merging-integration
-    - - name: step-03-data-cleaning-standardization
-        template: step-03-data-cleaning-standardization
-    - - name: step-04-data-validation-quality-report
-        template: step-04-data-validation-quality-report
-    - - name: step-05-feature-engineering
-        template: step-05-feature-engineering
-    - - name: step-06-exploratory-data-analysis
-        template: step-06-exploratory-data-analysis
-    - - name: step-07-data-visualization--demographics
-        template: step-07-data-visualization--demographics
-    - - name: step-08-data-visualization--clinical-factors
-        template: step-08-data-visualization--clinical-factors
-    - - name: step-09-statistical-analysis-hypothesis-testing
-        template: step-09-statistical-analysis-hypothesis-testing
-    - - name: step-10-data-preparation-for-modeling
-        template: step-10-data-preparation-for-modeling
-    - - name: step-11-model-training--baseline
-        template: step-11-model-training--baseline
-    - - name: step-12-model-training--advanced-tuning
-        template: step-12-model-training--advanced-tuning
-    - - name: step-13-model-evaluation-interpretation
-        template: step-13-model-evaluation-interpretation
-    - - name: step-14-fairness-bias-assessment
-        template: step-14-fairness-bias-assessment
-    - - name: step-15-final-synthesis-reporting
-        template: step-15-final-synthesis-reporting
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-data-loading-profiling
-    metadata:
-      annotations:
-        step-description: "Load all four data sources (patients CSV, admissions JSON, lab results JSON, medications Excel). Pro"
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/healthcare_readmission:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling.py", --data_dir /data, --output_dir /mnt/output]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-02-data-merging-integration
-    metadata:
-      annotations:
-        step-description: "Merge patients with admissions on patient_id (left join). Merge lab results with patients on patient"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_data-merging-integration.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-03-data-cleaning-standardization
-    metadata:
-      annotations:
-        step-description: "Standardize categorical fields: gender (M/F → Male/Female), insurance_provider (normalize variants)."
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-cleaning-standardization.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-04-data-validation-quality-report
-    metadata:
-      annotations:
-        step-description: "Validate referential integrity (all admission patient_ids exist in patients table). Check for imposs"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_data-validation-quality-report.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-05-feature-engineering
-    metadata:
-      annotations:
-        step-description: "Create derived features: age_group (18-30, 31-50, 51-70, 71+), comorbidity_index, admission_frequenc"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_feature-engineering.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-06-exploratory-data-analysis
-    metadata:
-      annotations:
-        step-description: "Compute univariate statistics for all features. Analyze readmission rate by demographics, department"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_exploratory-data-analysis.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-07-data-visualization--demographics
-    metadata:
-      annotations:
-        step-description: "Create a 2x2 dashboard: (1) Readmission rate by age group bar chart, (2) Readmission by gender pie c"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_data-visualization--demographics.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-08-data-visualization--clinical-factors
-    metadata:
-      annotations:
-        step-description: "Create visualizations: (1) Top 10 admission reasons by readmission rate horizontal bar, (2) Lab abno"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_data-visualization--clinical-factors.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-09-statistical-analysis-hypothesis-testing
-    metadata:
-      annotations:
-        step-description: "Perform chi-square tests for categorical predictors (gender, department, insurance) vs readmission. "
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_statistical-analysis-hypothesis-testing.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-10-data-preparation-for-modeling
-    metadata:
-      annotations:
-        step-description: "Encode categorical variables: one-hot for department, admission_reason, insurance; label encode for "
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_data-preparation-for-modeling.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-11-model-training--baseline
-    metadata:
-      annotations:
-        step-description: "Train baseline models: Logistic Regression, Decision Tree, Random Forest with default params. Use 5-"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_model-training--baseline.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-12-model-training--advanced-tuning
-    metadata:
-      annotations:
-        step-description: "Train XGBoost and GradientBoosting classifiers. Perform hyperparameter tuning with RandomizedSearchC"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_model-training--advanced-tuning.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-13-model-evaluation-interpretation
-    metadata:
-      annotations:
-        step-description: "Evaluate on holdout test set: confusion matrix, classification report, ROC curve, Precision-Recall c"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_model-evaluation-interpretation.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-14-fairness-bias-assessment
-    metadata:
-      annotations:
-        step-description: "Compute model performance across demographic subgroups (gender, age_group, insurance). Calculate dis"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_14_fairness-bias-assessment.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-15-final-synthesis-reporting
-    metadata:
-      annotations:
-        step-description: "Compile comprehensive analysis report: Executive Summary, Data Overview, Methodology, Key Findings ("
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_15_final-synthesis-reporting.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "512Mi"
+          cpu: "500m"
         limits:
           memory: "2Gi"
           cpu: "2000m"
 
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

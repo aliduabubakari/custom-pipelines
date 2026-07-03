@@ -4,374 +4,74 @@ metadata:
   generateName: student_performance-
   labels:
     pipeline: student_performance
-    domain: Education / EdTech
+    domain: Education
     type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
   podGC:
     strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling
-        template: step-01-data-loading-profiling
-    - - name: step-02-data-aggregation--assessment-metrics
-        template: step-02-data-aggregation--assessment-metrics
-    - - name: step-03-data-aggregation--engagement-metrics
-        template: step-03-data-aggregation--engagement-metrics
-    - - name: step-04-data-merging-integration
-        template: step-04-data-merging-integration
-    - - name: step-05-data-cleaning-standardization
-        template: step-05-data-cleaning-standardization
-    - - name: step-06-feature-engineering
-        template: step-06-feature-engineering
-    - - name: step-07-exploratory-data-analysis
-        template: step-07-exploratory-data-analysis
-    - - name: step-08-data-visualization--performance-patterns
-        template: step-08-data-visualization--performance-patterns
-    - - name: step-09-data-visualization--risk-indicators
-        template: step-09-data-visualization--risk-indicators
-    - - name: step-10-statistical-analysis
-        template: step-10-statistical-analysis
-    - - name: step-11-data-preparation-for-modeling
-        template: step-11-data-preparation-for-modeling
-    - - name: step-12-model-training--dropout-prediction
-        template: step-12-model-training--dropout-prediction
-    - - name: step-13-early-warning-system-design
-        template: step-13-early-warning-system-design
-    - - name: step-14-intervention-recommendation
-        template: step-14-intervention-recommendation
-    - - name: step-15-model-explainability-fairness
-        template: step-15-model-explainability-fairness
-    - - name: step-16-final-synthesis-intervention-playbook
-        template: step-16-final-synthesis-intervention-playbook
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-data-loading-profiling
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/student_performance:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling.py", --data_dir /data, --output_dir /mnt/output]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-02-data-aggregation--assessment-metrics
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_data-aggregation--assessment-metrics.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-03-data-aggregation--engagement-metrics
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-aggregation--engagement-metrics.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-04-data-merging-integration
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_data-merging-integration.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-05-data-cleaning-standardization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_data-cleaning-standardization.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-06-feature-engineering
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_feature-engineering.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-07-exploratory-data-analysis
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_exploratory-data-analysis.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-08-data-visualization--performance-patterns
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_data-visualization--performance-patterns.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-09-data-visualization--risk-indicators
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_data-visualization--risk-indicators.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-10-statistical-analysis
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_statistical-analysis.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-11-data-preparation-for-modeling
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_data-preparation-for-modeling.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-12-model-training--dropout-prediction
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_model-training--dropout-prediction.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-13-early-warning-system-design
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_early-warning-system-design.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-14-intervention-recommendation
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_14_intervention-recommendation.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-15-model-explainability-fairness
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_15_model-explainability-fairness.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-16-final-synthesis-intervention-playbook
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_16_final-synthesis-intervention-playbook.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "512Mi"
+          cpu: "500m"
         limits:
           memory: "2Gi"
           cpu: "2000m"
 
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

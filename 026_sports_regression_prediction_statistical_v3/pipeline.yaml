@@ -1,332 +1,77 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: case-5236-12853-
+  generateName: sports_regression_prediction_statistical_v3-
   labels:
-    pipeline: data-cleaning-validation
-    difficulty: "N/A"
-    abilities: ""
+    pipeline: sports_regression_prediction_statistical_v3
+    domain: Sports
+    type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling
-        template: step-01-data-loading-profiling
-    - - name: step-02-data-merging-integration
-        template: step-02-data-merging-integration
-    - - name: step-03-data-merging-integration-phase-2
-        template: step-03-data-merging-integration-phase-2
-    - - name: step-04-data-visualization
-        template: step-04-data-visualization
-    - - name: step-05-statistical-analysis-hypothesis-testing
-        template: step-05-statistical-analysis-hypothesis-testing
-    - - name: step-06-data-cleaning-standardization
-        template: step-06-data-cleaning-standardization
-    - - name: step-07-regression-modeling
-        template: step-07-regression-modeling
-    - - name: step-08-statistical-analysis-hypothesis-testing-phase-2
-        template: step-08-statistical-analysis-hypothesis-testing-phase-2
-    - - name: step-09-statistical-analysis-hypothesis-testing-phase-3
-        template: step-09-statistical-analysis-hypothesis-testing-phase-3
-    - - name: step-10-statistical-analysis-hypothesis-testing-phase-4
-        template: step-10-statistical-analysis-hypothesis-testing-phase-4
-    - - name: step-11-model-training-prediction
-        template: step-11-model-training-prediction
-    - - name: step-12-error-recovery-robust-loading
-        template: step-12-error-recovery-robust-loading
-    - - name: step-13-error-recovery-robust-loading-phase-2
-        template: step-13-error-recovery-robust-loading-phase-2
-    - - name: step-14-error-recovery-robust-loading-phase-3
-        template: step-14-error-recovery-robust-loading-phase-3
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-data-loading-profiling
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/sports_regression_prediction_statistical_v3:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling.py", ]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
           memory: "512Mi"
           cpu: "500m"
         limits:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "2Gi"
+          cpu: "2000m"
 
-  - name: step-02-data-merging-integration
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_data-merging-integration.py", --airport_aircraft_csv /data/airport_aircraft.csv --aircraft_csv /data/aircraft.csv --cleaned_aircraft_csv /mnt/output/cleaned_aircraft.csv --merged_aircraft_data_csv /mnt/output/merged_aircraft_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-03-data-merging-integration-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-merging-integration-phase-2.py", --aircraft_correlations_csv /mnt/output/aircraft_correlations.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-04-data-visualization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_data-visualization.py", --airport_aircraft_csv /data/airport_aircraft.csv --aircraft_csv /data/aircraft.csv --analysis_output/correlation_matrix_csv /mnt/output/analysis_output/correlation_matrix.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-05-statistical-analysis-hypothesis-testing
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_statistical-analysis-hypothesis-testing.py", --analysis_output/cleaned_aircraft_csv /mnt/output/analysis_output/cleaned_aircraft.csv --analysis_output/merged_aircraft_data_csv /mnt/output/analysis_output/merged_aircraft_data.csv --analysis_output/enhanced_correlation_matrix_csv /mnt/output/analysis_output/enhanced_correlation_matrix.csv --analysis_output/advanced_statistics_csv /mnt/output/analysis_output/advanced_statistics.csv --analysis_output/correlation_pvalues_csv /mnt/output/analysis_output/correlation_pvalues.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-06-data-cleaning-standardization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_data-cleaning-standardization.py", --airport_aircraft_csv /data/airport_aircraft.csv --aircraft_csv /data/aircraft.csv --analysis_output/enhanced_correlation_matrix_csv /mnt/output/analysis_output/enhanced_correlation_matrix.csv --analysis_output/cleaned_aircraft_csv /mnt/output/analysis_output/cleaned_aircraft.csv --analysis_output/advanced_statistics_csv /mnt/output/analysis_output/advanced_statistics.csv --analysis_output/merged_aircraft_data_csv /mnt/output/analysis_output/merged_aircraft_data.csv --analysis_output/correlation_pvalues_csv /mnt/output/analysis_output/correlation_pvalues.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-07-regression-modeling
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_regression-modeling.py", --analysis_output/enhanced_correlation_matrix_csv /mnt/output/analysis_output/enhanced_correlation_matrix.csv --analysis_output/cleaned_aircraft_csv /mnt/output/analysis_output/cleaned_aircraft.csv --analysis_output/merged_aircraft_data_csv /mnt/output/analysis_output/merged_aircraft_data.csv --analysis_output/regression_results_txt /mnt/output/analysis_output/regression_results.txt --analysis_output/regression_results_txt /mnt/output/analysis_output/regression_results.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-08-statistical-analysis-hypothesis-testing-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_statistical-analysis-hypothesis-testing-.py", --analysis_output/cleaned_aircraft_csv /mnt/output/analysis_output/cleaned_aircraft.csv --analysis_output/vif_results_csv /mnt/output/analysis_output/vif_results.csv --analysis_output/spearman_correlations_csv /mnt/output/analysis_output/spearman_correlations.csv --analysis_output/enhanced_aircraft_data_csv /mnt/output/analysis_output/enhanced_aircraft_data.csv --analysis_output/bootstrap_cis_csv /mnt/output/analysis_output/bootstrap_cis.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-09-statistical-analysis-hypothesis-testing-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_statistical-analysis-hypothesis-testing-.py", --analysis_output/cleaned_aircraft_csv /mnt/output/analysis_output/cleaned_aircraft.csv --analysis_output/vif_results_csv /mnt/output/analysis_output/vif_results.csv --analysis_output/spearman_correlations_csv /mnt/output/analysis_output/spearman_correlations.csv --analysis_output/enhanced_aircraft_data_csv /mnt/output/analysis_output/enhanced_aircraft_data.csv --analysis_output/bootstrap_cis_csv /mnt/output/analysis_output/bootstrap_cis.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-10-statistical-analysis-hypothesis-testing-phase-4
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_statistical-analysis-hypothesis-testing-.py", --analysis_output/enhanced_aircraft_data_csv /mnt/output/analysis_output/enhanced_aircraft_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-11-model-training-prediction
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_model-training-prediction.py", --analysis_output/final_report_md /mnt/output/analysis_output/final_report.md --analysis_output/descriptive_stats_csv /data/analysis_output/descriptive_stats.csv --analysis_output/spearman_correlations_csv /mnt/output/analysis_output/spearman_correlations.csv --analysis_output/effect_sizes_csv /mnt/output/analysis_output/effect_sizes.csv --analysis_output/enhanced_aircraft_data_csv /mnt/output/analysis_output/enhanced_aircraft_data.csv --analysis_output/final_report_md /mnt/output/analysis_output/final_report.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-12-error-recovery-robust-loading
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_error-recovery-robust-loading.py", --analysis_output/final_report_md /mnt/output/analysis_output/final_report.md --analysis_output/descriptive_stats_csv /data/analysis_output/descriptive_stats.csv --analysis_output/spearman_correlations_csv /mnt/output/analysis_output/spearman_correlations.csv --analysis_output/effect_sizes_csv /mnt/output/analysis_output/effect_sizes.csv --analysis_output/enhanced_aircraft_data_csv /mnt/output/analysis_output/enhanced_aircraft_data.csv --analysis_output/final_report_md /mnt/output/analysis_output/final_report.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-13-error-recovery-robust-loading-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_error-recovery-robust-loading-phase-2.py", --airport_aircraft_csv /data/airport_aircraft.csv --aircraft_csv /data/aircraft.csv --analysis_output/comprehensive_aircraft_report_md /mnt/output/analysis_output/comprehensive_aircraft_report.md --analysis_output/spearman_correlations_csv /mnt/output/analysis_output/spearman_correlations.csv --analysis_output/effect_sizes_csv /mnt/output/analysis_output/effect_sizes.csv --analysis_output/descriptive_statistics_csv /mnt/output/analysis_output/descriptive_statistics.csv --analysis_output/comprehensive_aircraft_report_md /mnt/output/analysis_output/comprehensive_aircraft_report.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-14-error-recovery-robust-loading-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_14_error-recovery-robust-loading-phase-3.py", --airport_aircraft_csv /data/airport_aircraft.csv --aircraft_csv /data/aircraft.csv --analysis_output/comprehensive_aircraft_report_md /mnt/output/analysis_output/comprehensive_aircraft_report.md --analysis_output/spearman_correlations_csv /mnt/output/analysis_output/spearman_correlations.csv --analysis_output/effect_sizes_csv /mnt/output/analysis_output/effect_sizes.csv --analysis_output/descriptive_statistics_csv /mnt/output/analysis_output/descriptive_statistics.csv --analysis_output/comprehensive_aircraft_report_md /mnt/output/analysis_output/comprehensive_aircraft_report.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  # ── Volume definitions ──
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

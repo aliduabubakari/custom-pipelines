@@ -1,310 +1,77 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: case-5144-12648-
+  generateName: transportation_statistical_geospatial-
   labels:
-    pipeline: data-cleaning-validation
-    difficulty: "N/A"
-    abilities: ""
+    pipeline: transportation_statistical_geospatial
+    domain: Transportation
+    type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-begin-this-comprehensive-analysis-of-baseball-play
-        template: step-01-begin-this-comprehensive-analysis-of-baseball-play
-    - - name: step-02-statistical-analysis-hypothesis-testing
-        template: step-02-statistical-analysis-hypothesis-testing
-    - - name: step-03-data-loading-profiling
-        template: step-03-data-loading-profiling
-    - - name: step-04-geospatial-normalization-entity-resolution
-        template: step-04-geospatial-normalization-entity-resolution
-    - - name: step-05-geospatial-normalization-entity-resolution-phase-2
-        template: step-05-geospatial-normalization-entity-resolution-phase-2
-    - - name: step-06-data-merging-integration
-        template: step-06-data-merging-integration
-    - - name: step-07-cluster-analysis
-        template: step-07-cluster-analysis
-    - - name: step-08-statistical-analysis-hypothesis-testing-phase-2
-        template: step-08-statistical-analysis-hypothesis-testing-phase-2
-    - - name: step-09-data-visualization
-        template: step-09-data-visualization
-    - - name: step-10-statistical-analysis-hypothesis-testing-phase-3
-        template: step-10-statistical-analysis-hypothesis-testing-phase-3
-    - - name: step-11-data-visualization-phase-2
-        template: step-11-data-visualization-phase-2
-    - - name: step-12-data-visualization-phase-3
-        template: step-12-data-visualization-phase-3
-    - - name: step-13-data-visualization-phase-4
-        template: step-13-data-visualization-phase-4
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-begin-this-comprehensive-analysis-of-baseball-play
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/transportation_statistical_geospatial:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_begin-this-comprehensive-analysis-of-bas.py", --all_star_csv /data/all_star.csv]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
           memory: "512Mi"
           cpu: "500m"
         limits:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "2Gi"
+          cpu: "2000m"
 
-  - name: step-02-statistical-analysis-hypothesis-testing
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_statistical-analysis-hypothesis-testing.py", --fielding_postseason_csv /data/fielding_postseason.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-03-data-loading-profiling
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-loading-profiling.py", --fielding_postseason_csv /data/fielding_postseason.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-04-geospatial-normalization-entity-resolution
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_geospatial-normalization-entity-resoluti.py", --all_star_csv /data/all_star.csv --fielding_postseason_csv /data/fielding_postseason.csv --merged_fielding_allstar_csv /mnt/output/merged_fielding_allstar.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-05-geospatial-normalization-entity-resolution-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_geospatial-normalization-entity-resoluti.py", --enhanced_fielding_analysis_csv /mnt/output/enhanced_fielding_analysis.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-06-data-merging-integration
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_data-merging-integration.py", --all_star_csv /data/all_star.csv --fielding_postseason_csv /data/fielding_postseason.csv --enhanced_fielding_analysis_csv /mnt/output/enhanced_fielding_analysis.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-07-cluster-analysis
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_cluster-analysis.py", --enhanced_fielding_analysis_csv /mnt/output/enhanced_fielding_analysis.csv --position_specific_results_csv /mnt/output/position_specific_results.csv --statistical_test_results_csv /mnt/output/statistical_test_results.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-08-statistical-analysis-hypothesis-testing-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_statistical-analysis-hypothesis-testing-.py", --enhanced_fielding_analysis_csv /mnt/output/enhanced_fielding_analysis.csv --position_effect_sizes_csv /mnt/output/position_effect_sizes.csv --enhanced_statistical_results_csv /mnt/output/enhanced_statistical_results.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-09-data-visualization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_data-visualization.py", --enhanced_fielding_analysis_csv /mnt/output/enhanced_fielding_analysis.csv --position_effect_sizes_csv /mnt/output/position_effect_sizes.csv --enhanced_statistical_results_csv /mnt/output/enhanced_statistical_results.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-10-statistical-analysis-hypothesis-testing-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_statistical-analysis-hypothesis-testing-.py", --enhanced_fielding_analysis_csv /mnt/output/enhanced_fielding_analysis.csv --enhanced_statistical_results_csv /mnt/output/enhanced_statistical_results.csv --final_defensive_analysis_csv /mnt/output/final_defensive_analysis.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-11-data-visualization-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_data-visualization-phase-2.py", --enhanced_fielding_analysis_csv /mnt/output/enhanced_fielding_analysis.csv --enhanced_statistical_results_csv /mnt/output/enhanced_statistical_results.csv --final_defensive_analysis_csv /mnt/output/final_defensive_analysis.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-12-data-visualization-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_data-visualization-phase-3.py", --enhanced_fielding_analysis_csv /mnt/output/enhanced_fielding_analysis.csv --enhanced_statistical_results_csv /mnt/output/enhanced_statistical_results.csv --final_defensive_analysis_csv /mnt/output/final_defensive_analysis.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-13-data-visualization-phase-4
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_data-visualization-phase-4.py", --enhanced_fielding_analysis_csv /mnt/output/enhanced_fielding_analysis.csv --enhanced_statistical_results_csv /mnt/output/enhanced_statistical_results.csv --final_defensive_analysis_csv /mnt/output/final_defensive_analysis.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  # ── Volume definitions ──
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

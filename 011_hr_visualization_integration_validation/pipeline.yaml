@@ -1,376 +1,77 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: case-5058-12524-
+  generateName: hr_visualization_integration_validation-
   labels:
-    pipeline: data-cleaning-validation
-    difficulty: "N/A"
-    abilities: ""
+    pipeline: hr_visualization_integration_validation
+    domain: HR Analytics
+    type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling
-        template: step-01-data-loading-profiling
-    - - name: step-02-data-merging-integration
-        template: step-02-data-merging-integration
-    - - name: step-03-data-merging-integration-phase-2
-        template: step-03-data-merging-integration-phase-2
-    - - name: step-04-data-merging-integration-phase-3
-        template: step-04-data-merging-integration-phase-3
-    - - name: step-05-data-visualization
-        template: step-05-data-visualization
-    - - name: step-06-data-validation-quality-report
-        template: step-06-data-validation-quality-report
-    - - name: step-07-final-synthesis-reporting
-        template: step-07-final-synthesis-reporting
-    - - name: step-08-revised-analysis-refinement
-        template: step-08-revised-analysis-refinement
-    - - name: step-09-data-visualization-phase-2
-        template: step-09-data-visualization-phase-2
-    - - name: step-10-data-visualization-phase-3
-        template: step-10-data-visualization-phase-3
-    - - name: step-11-data-visualization-phase-4
-        template: step-11-data-visualization-phase-4
-    - - name: step-12-data-validation-quality-report-phase-2
-        template: step-12-data-validation-quality-report-phase-2
-    - - name: step-13-data-validation-quality-report-phase-3
-        template: step-13-data-validation-quality-report-phase-3
-    - - name: step-14-data-loading-profiling-phase-2
-        template: step-14-data-loading-profiling-phase-2
-    - - name: step-15-data-visualization-phase-5
-        template: step-15-data-visualization-phase-5
-    - - name: step-16-data-merging-integration-phase-4
-        template: step-16-data-merging-integration-phase-4
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-data-loading-profiling
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/hr_visualization_integration_validation:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling.py", --hiring_csv /data/hiring.csv --evaluation_csv /data/evaluation.csv]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
           memory: "512Mi"
           cpu: "500m"
         limits:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "2Gi"
+          cpu: "2000m"
 
-  - name: step-02-data-merging-integration
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_data-merging-integration.py", --hiring_csv /data/hiring.csv --evaluation_csv /data/evaluation.csv --merged_bonus_data_csv /mnt/output/merged_bonus_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-03-data-merging-integration-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-merging-integration-phase-2.py", --hiring_csv /data/hiring.csv --evaluation_csv /data/evaluation.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-04-data-merging-integration-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_data-merging-integration-phase-3.py", --hiring_csv /data/hiring.csv --evaluation_csv /data/evaluation.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-05-data-visualization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_data-visualization.py", --hiring_csv /data/hiring.csv --evaluation_csv /data/evaluation.csv --enhanced_shop_analysis_csv /mnt/output/enhanced_shop_analysis.csv --statistical_results_csv /mnt/output/statistical_results.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-06-data-validation-quality-report
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_data-validation-quality-report.py", --analysis_documentation_txt /mnt/output/analysis_documentation.txt --enhanced_shop_analysis_csv /mnt/output/enhanced_shop_analysis.csv --statistical_results_csv /mnt/output/statistical_results.csv --analysis_documentation_txt /mnt/output/analysis_documentation.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-07-final-synthesis-reporting
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_final-synthesis-reporting.py", --enhanced_shop_analysis_csv /mnt/output/enhanced_shop_analysis.csv --final_results_summary_txt /mnt/output/final_results_summary.txt --evaluation_csv /data/evaluation.csv --statistical_results_csv /mnt/output/statistical_results.csv --hiring_csv /data/hiring.csv --final_results_summary_txt /mnt/output/final_results_summary.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-08-revised-analysis-refinement
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_revised-analysis-refinement.py", --enhanced_shop_analysis_csv /mnt/output/enhanced_shop_analysis.csv --final_results_summary_txt /mnt/output/final_results_summary.txt --evaluation_csv /data/evaluation.csv --statistical_results_csv /mnt/output/statistical_results.csv --hiring_csv /data/hiring.csv --final_results_summary_txt /mnt/output/final_results_summary.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-09-data-visualization-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_data-visualization-phase-2.py", --enhanced_shop_analysis_csv /mnt/output/enhanced_shop_analysis.csv --statistical_results_csv /mnt/output/statistical_results.csv --report_structure_json /mnt/output/report_structure.json --report_structure_json /mnt/output/report_structure.json]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-10-data-visualization-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_data-visualization-phase-3.py", --hiring_csv /data/hiring.csv --report_structure_json /mnt/output/report_structure.json --evaluation_csv /data/evaluation.csv --report_structure_json /mnt/output/report_structure.json]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-11-data-visualization-phase-4
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_data-visualization-phase-4.py", --enhanced_shop_analysis_csv /mnt/output/enhanced_shop_analysis.csv --evaluation_csv /data/evaluation.csv --statistical_results_csv /mnt/output/statistical_results.csv --hiring_csv /data/hiring.csv --employee_bonus_analysis_report_md /mnt/output/employee_bonus_analysis_report.md --employee_bonus_analysis_report_md /mnt/output/employee_bonus_analysis_report.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-12-data-validation-quality-report-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_data-validation-quality-report-phase-2.py", --enhanced_shop_analysis_csv /mnt/output/enhanced_shop_analysis.csv --evaluation_csv /data/evaluation.csv --statistical_results_csv /mnt/output/statistical_results.csv --hiring_csv /data/hiring.csv --employee_bonus_analysis_report_md /mnt/output/employee_bonus_analysis_report.md --employee_bonus_analysis_report_md /mnt/output/employee_bonus_analysis_report.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-13-data-validation-quality-report-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_data-validation-quality-report-phase-3.py", --enhanced_shop_analysis_csv /mnt/output/enhanced_shop_analysis.csv --evaluation_csv /data/evaluation.csv --statistical_results_csv /mnt/output/statistical_results.csv --hiring_csv /data/hiring.csv --employee_bonus_analysis_report_md /mnt/output/employee_bonus_analysis_report.md --employee_bonus_analysis_report_md /mnt/output/employee_bonus_analysis_report.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-14-data-loading-profiling-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_14_data-loading-profiling-phase-2.py", --statistical_results_csv /mnt/output/statistical_results.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-15-data-visualization-phase-5
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_15_data-visualization-phase-5.py", --enhanced_shop_analysis_csv /mnt/output/enhanced_shop_analysis.csv --evaluation_csv /data/evaluation.csv --statistical_results_csv /mnt/output/statistical_results.csv --hiring_csv /data/hiring.csv --employee_bonus_analysis_report_md /mnt/output/employee_bonus_analysis_report.md --employee_bonus_analysis_report_md /mnt/output/employee_bonus_analysis_report.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-16-data-merging-integration-phase-4
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_16_data-merging-integration-phase-4.py", --enhanced_shop_analysis_csv /mnt/output/enhanced_shop_analysis.csv --evaluation_csv /data/evaluation.csv --statistical_results_csv /mnt/output/statistical_results.csv --hiring_csv /data/hiring.csv --employee_bonus_analysis_report_md /mnt/output/employee_bonus_analysis_report.md --employee_bonus_analysis_report_md /mnt/output/employee_bonus_analysis_report.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  # ── Volume definitions ──
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

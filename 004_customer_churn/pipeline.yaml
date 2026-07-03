@@ -4,422 +4,134 @@ metadata:
   generateName: customer_churn-
   labels:
     pipeline: customer_churn
-    domain: Marketing / SaaS
+    domain: SaaS
     type: ml-pipeline
+    steps: "16"
 spec:
   entrypoint: pipeline
   podGC:
     strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling
-        template: step-01-data-loading-profiling
-    - - name: step-02-data-aggregation--customer-metrics
-        template: step-02-data-aggregation--customer-metrics
-    - - name: step-03-data-merging-integration
-        template: step-03-data-merging-integration
-    - - name: step-04-data-cleaning-standardization
-        template: step-04-data-cleaning-standardization
-    - - name: step-05-feature-engineering
-        template: step-05-feature-engineering
-    - - name: step-06-exploratory-data-analysis
-        template: step-06-exploratory-data-analysis
-    - - name: step-07-data-visualization--churn-patterns
-        template: step-07-data-visualization--churn-patterns
-    - - name: step-08-data-visualization--behavioral-analysis
-        template: step-08-data-visualization--behavioral-analysis
-    - - name: step-09-statistical-analysis
-        template: step-09-statistical-analysis
-    - - name: step-10-cohort-analysis
-        template: step-10-cohort-analysis
-    - - name: step-11-data-preparation-for-modeling
-        template: step-11-data-preparation-for-modeling
-    - - name: step-12-model-training--multi-model-comparison
-        template: step-12-model-training--multi-model-comparison
-    - - name: step-13-model-optimization-ensembling
-        template: step-13-model-optimization-ensembling
-    - - name: step-14-model-evaluation-business-impact
-        template: step-14-model-evaluation-business-impact
-    - - name: step-15-customer-segmentation-for-retention
-        template: step-15-customer-segmentation-for-retention
-    - - name: step-16-final-synthesis-retention-playbook
-        template: step-16-final-synthesis-retention-playbook
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_data-loading-profiling.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_data-aggregation--customer-metrics.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_data-merging-integration.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_data-cleaning-standardization.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_feature-engineering.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_exploratory-data-analysis.py
+    - - name: step-07
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_07_data-visualization--churn-patterns.py
+    - - name: step-08
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_08_data-visualization--behavioral-analysis.py
+    - - name: step-09
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_09_statistical-analysis.py
+    - - name: step-10
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_10_cohort-analysis.py
+    - - name: step-11
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_11_data-preparation-for-modeling.py
+    - - name: step-12
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_12_model-training--multi-model-comparison.py
+    - - name: step-13
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_13_model-optimization-ensembling.py
+    - - name: step-14
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_14_model-evaluation-business-impact.py
+    - - name: step-15
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_15_customer-segmentation-for-retention.py
+    - - name: step-16
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_16_final-synthesis-retention-playbook.py
 
-  - name: step-01-data-loading-profiling
-    metadata:
-      annotations:
-        step-description: "Load customer profiles CSV and transactions JSON. Profile: customer count by segment, transaction vo"
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/customer_churn:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling.py", --data_dir /data, --output_dir /mnt/output]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-02-data-aggregation--customer-metrics
-    metadata:
-      annotations:
-        step-description: "Aggregate transactions to customer level: total_spend, avg_order_value, purchase_frequency, days_sin"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_data-aggregation--customer-metrics.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-03-data-merging-integration
-    metadata:
-      annotations:
-        step-description: "Merge aggregated transaction metrics with customer profiles on customer_id. Create unified customer "
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-merging-integration.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-04-data-cleaning-standardization
-    metadata:
-      annotations:
-        step-description: "Handle missing values: zero for numerical aggregates of customers without transactions, 'Unknown' fo"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_data-cleaning-standardization.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-05-feature-engineering
-    metadata:
-      annotations:
-        step-description: "Create behavioral features: recency_score (days since last purchase, binned), frequency_score (purch"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_feature-engineering.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-06-exploratory-data-analysis
-    metadata:
-      annotations:
-        step-description: "Analyze churn rate by segment, acquisition channel, tenure, city/state. Identify patterns: do premiu"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_exploratory-data-analysis.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-07-data-visualization--churn-patterns
-    metadata:
-      annotations:
-        step-description: "Create 3x2 dashboard: (1) Churn rate by customer segment bar chart, (2) Tenure vs churn probability "
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_data-visualization--churn-patterns.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-08-data-visualization--behavioral-analysis
-    metadata:
-      annotations:
-        step-description: "Visualize behavioral indicators: (1) Recency-Frequency-Monetary 3D scatter colored by churn, (2) Ret"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_data-visualization--behavioral-analysis.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-09-statistical-analysis
-    metadata:
-      annotations:
-        step-description: "Chi-square tests for categorical features (segment, channel, city vs churn). ANOVA for numerical fea"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_statistical-analysis.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-10-cohort-analysis
-    metadata:
-      annotations:
-        step-description: "Create monthly retention cohorts by signup month. Calculate retention rates at 1, 3, 6, 12 months. I"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_cohort-analysis.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-11-data-preparation-for-modeling
-    metadata:
-      annotations:
-        step-description: "Encode categoricals: one-hot for segment, channel, city; target encode for high-cardinality features"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_data-preparation-for-modeling.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-12-model-training--multi-model-comparison
-    metadata:
-      annotations:
-        step-description: "Train 5 models: LogisticRegression, RandomForest, XGBoost, LightGBM, CatBoost. 5-fold stratified CV."
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_model-training--multi-model-comparison.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-13-model-optimization-ensembling
-    metadata:
-      annotations:
-        step-description: "Hyperparameter tune top 2 models with Bayesian optimization (Optuna, 50 trials). Create weighted ens"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_model-optimization-ensembling.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-14-model-evaluation-business-impact
-    metadata:
-      annotations:
-        step-description: "Evaluate ensemble on test set. Generate lift curve, cumulative gains chart. Calculate expected ROI: "
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_14_model-evaluation-business-impact.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-15-customer-segmentation-for-retention
-    metadata:
-      annotations:
-        step-description: "Cluster at-risk customers (churn prob > threshold) using K-Means on behavioral features. Profile eac"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_15_customer-segmentation-for-retention.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-16-final-synthesis-retention-playbook
-    metadata:
-      annotations:
-        step-description: "Compile comprehensive report: Executive Summary, Churn Driver Analysis, Model Performance, Customer "
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_16_final-synthesis-retention-playbook.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "512Mi"
+          cpu: "500m"
         limits:
           memory: "2Gi"
           cpu: "2000m"
 
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

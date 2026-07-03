@@ -1,376 +1,77 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: case-11556-22714-
+  generateName: transportation_visualization_cleaning_validation-
   labels:
-    pipeline: data-cleaning-validation
-    difficulty: "4"
-    abilities: "Data Preparation, Data Analysis, Code Generation"
+    pipeline: transportation_visualization_cleaning_validation
+    domain: Transportation
+    type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling
-        template: step-01-data-loading-profiling
-    - - name: step-02-file-format
-        template: step-02-file-format
-    - - name: step-03-data-validation-quality-report
-        template: step-03-data-validation-quality-report
-    - - name: step-04-error-recovery-robust-loading
-        template: step-04-error-recovery-robust-loading
-    - - name: step-05-data-validation-quality-report-phase-2
-        template: step-05-data-validation-quality-report-phase-2
-    - - name: step-06-data-validation-quality-report-phase-3
-        template: step-06-data-validation-quality-report-phase-3
-    - - name: step-07-data-visualization
-        template: step-07-data-visualization
-    - - name: step-08-error-recovery-robust-loading-phase-2
-        template: step-08-error-recovery-robust-loading-phase-2
-    - - name: step-09-since-were-not-seeing-any-execution-output-likely-
-        template: step-09-since-were-not-seeing-any-execution-output-likely-
-    - - name: step-10-data-validation-quality-report-phase-4
-        template: step-10-data-validation-quality-report-phase-4
-    - - name: step-11-data-validation-quality-report-phase-5
-        template: step-11-data-validation-quality-report-phase-5
-    - - name: step-12-data-cleaning-standardization
-        template: step-12-data-cleaning-standardization
-    - - name: step-13-data-validation-quality-report-phase-6
-        template: step-13-data-validation-quality-report-phase-6
-    - - name: step-14-data-validation-quality-report-phase-7
-        template: step-14-data-validation-quality-report-phase-7
-    - - name: step-15-given-that-were-still-not-seeing-any-execution-out
-        template: step-15-given-that-were-still-not-seeing-any-execution-out
-    - - name: step-16-given-that-were-still-not-seeing-any-output-from-e
-        template: step-16-given-that-were-still-not-seeing-any-output-from-e
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-data-loading-profiling
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/transportation_visualization_cleaning_validation:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling.py", --Ref_Shipping_Agents_json /mnt/output/Ref_Shipping_Agents.json --Ref_Shipping_Agents_json /mnt/output/Ref_Shipping_Agents.json]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
           memory: "512Mi"
           cpu: "500m"
         limits:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "2Gi"
+          cpu: "2000m"
 
-  - name: step-02-file-format
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_file-format.py", --Ref_Shipping_Agents_xlsx /data/Ref_Shipping_Agents.xlsx --validation_result_txt /mnt/output/validation_result.txt --Ref_Shipping_Agents_json /mnt/output/Ref_Shipping_Agents.json --validation_result_txt /mnt/output/validation_result.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-03-data-validation-quality-report
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-validation-quality-report.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-04-error-recovery-robust-loading
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_error-recovery-robust-loading.py", --validation_log /mnt/output/validation.log --test_diff_structure_xlsx /mnt/output/test_diff_structure.xlsx --test_non_matching_xlsx /mnt/output/test_non_matching.xlsx --test_matching_json /mnt/output/test_matching.json --test_non_matching_json /mnt/output/test_non_matching.json --validation_log /mnt/output/validation.log --test_matching_xlsx /mnt/output/test_matching.xlsx]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-05-data-validation-quality-report-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_data-validation-quality-report-phase-2.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-06-data-validation-quality-report-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_data-validation-quality-report-phase-3.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-07-data-visualization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_data-visualization.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-08-error-recovery-robust-loading-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_error-recovery-robust-loading-phase-2.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-09-since-were-not-seeing-any-execution-output-likely-
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_since-were-not-seeing-any-execution-outp.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-10-data-validation-quality-report-phase-4
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_data-validation-quality-report-phase-4.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-11-data-validation-quality-report-phase-5
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_data-validation-quality-report-phase-5.py", --test_excel_xlsx /mnt/output/test_excel.xlsx --test_json_json /mnt/output/test_json.json --test_excel_xlsx /mnt/output/test_excel.xlsx --test_json_json /mnt/output/test_json.json]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-12-data-cleaning-standardization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_data-cleaning-standardization.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-13-data-validation-quality-report-phase-6
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_data-validation-quality-report-phase-6.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-14-data-validation-quality-report-phase-7
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_14_data-validation-quality-report-phase-7.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-15-given-that-were-still-not-seeing-any-execution-out
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_15_given-that-were-still-not-seeing-any-exe.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-16-given-that-were-still-not-seeing-any-output-from-e
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_16_given-that-were-still-not-seeing-any-out.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  # ── Volume definitions ──
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

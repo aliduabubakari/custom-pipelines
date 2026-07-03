@@ -1,266 +1,77 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: case-11846-22824-
+  generateName: transportation_visualization_recovery_reporting-
   labels:
-    pipeline: data-cleaning-validation
-    difficulty: "4"
-    abilities: "Data Preparation, Data Analysis, Data Modeling"
+    pipeline: transportation_visualization_recovery_reporting
+    domain: Transportation
+    type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-error-recovery-robust-loading
-        template: step-01-error-recovery-robust-loading
-    - - name: step-02-data-loading-profiling
-        template: step-02-data-loading-profiling
-    - - name: step-03-data-loading-profiling-phase-2
-        template: step-03-data-loading-profiling-phase-2
-    - - name: step-04-data-visualization
-        template: step-04-data-visualization
-    - - name: step-05-data-visualization-phase-2
-        template: step-05-data-visualization-phase-2
-    - - name: step-06-data-visualization-phase-3
-        template: step-06-data-visualization-phase-3
-    - - name: step-07-final-synthesis-reporting
-        template: step-07-final-synthesis-reporting
-    - - name: step-08-error-recovery-robust-loading-phase-2
-        template: step-08-error-recovery-robust-loading-phase-2
-    - - name: step-09-the-persistent-empty-execution-output-suggests-a-f
-        template: step-09-the-persistent-empty-execution-output-suggests-a-f
-    - - name: step-10-the-verification-results-show-that-all-files-were-
-        template: step-10-the-verification-results-show-that-all-files-were-
-    - - name: step-11-final-synthesis-reporting-phase-2
-        template: step-11-final-synthesis-reporting-phase-2
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-error-recovery-robust-loading
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/transportation_visualization_recovery_reporting:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_error-recovery-robust-loading.py", ]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
           memory: "512Mi"
           cpu: "500m"
         limits:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "2Gi"
+          cpu: "2000m"
 
-  - name: step-02-data-loading-profiling
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_data-loading-profiling.py", --airport_aircraft_json /mnt/output/airport_aircraft.json --aircraft_json /mnt/output/aircraft.json --airport_aircraft_json /mnt/output/airport_aircraft.json --cleaned_aircraft_data_csv /mnt/output/cleaned_aircraft_data.csv --aircraft_json /mnt/output/aircraft.json]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-03-data-loading-profiling-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-loading-profiling-phase-2.py", --airport_aircraft_json /mnt/output/airport_aircraft.json --aircraft_json /mnt/output/aircraft.json --aircraft_classification_csv /mnt/output/aircraft_classification.csv --airport_aircraft_json /mnt/output/airport_aircraft.json --aircraft_json /mnt/output/aircraft.json]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-04-data-visualization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_data-visualization.py", --classification_report_txt /mnt/output/classification_report.txt --aircraft_classification_csv /mnt/output/aircraft_classification.csv --cleaned_aircraft_data_csv /mnt/output/cleaned_aircraft_data.csv --classification_report_txt /mnt/output/classification_report.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-05-data-visualization-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_data-visualization-phase-2.py", --aircraft_classification_csv /mnt/output/aircraft_classification.csv --cleaned_aircraft_data_csv /mnt/output/cleaned_aircraft_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-06-data-visualization-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_data-visualization-phase-3.py", --aircraft_classification_csv /mnt/output/aircraft_classification.csv --cleaned_aircraft_data_csv /mnt/output/cleaned_aircraft_data.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-07-final-synthesis-reporting
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_final-synthesis-reporting.py", --README_md /mnt/output/README.md --README_md /mnt/output/README.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-08-error-recovery-robust-loading-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_error-recovery-robust-loading-phase-2.py", --README_md /mnt/output/README.md --README_md /mnt/output/README.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-09-the-persistent-empty-execution-output-suggests-a-f
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_the-persistent-empty-execution-output-su.py", --file_verification_report_txt /mnt/output/file_verification_report.txt --file_verification_report_txt /mnt/output/file_verification_report.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-10-the-verification-results-show-that-all-files-were-
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_the-verification-results-show-that-all-f.py", --classification_report_txt /mnt/output/classification_report.txt --README_md /mnt/output/README.md --classification_report_txt /mnt/output/classification_report.txt --README_md /mnt/output/README.md]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-11-final-synthesis-reporting-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_final-synthesis-reporting-phase-2.py", --ANALYSIS_COMPLETE_txt /mnt/output/ANALYSIS_COMPLETE.txt --ANALYSIS_COMPLETE_txt /mnt/output/ANALYSIS_COMPLETE.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  # ── Volume definitions ──
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

@@ -4,423 +4,98 @@ metadata:
   generateName: demand_forecasting-
   labels:
     pipeline: demand_forecasting
-    domain: Supply Chain / Retail
+    domain: Supply Chain
     type: ml-pipeline
+    steps: "10"
 spec:
   entrypoint: pipeline
   podGC:
     strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling
-        template: step-01-data-loading-profiling
-    - - name: step-02-data-merging-integration
-        template: step-02-data-merging-integration
-    - - name: step-03-data-cleaning-standardization
-        template: step-03-data-cleaning-standardization
-    - - name: step-04-time-series-decomposition
-        template: step-04-time-series-decomposition
-    - - name: step-05-feature-engineering--temporal
-        template: step-05-feature-engineering--temporal
-    - - name: step-06-feature-engineering--cross-domain
-        template: step-06-feature-engineering--cross-domain
-    - - name: step-07-exploratory-data-analysis
-        template: step-07-exploratory-data-analysis
-    - - name: step-08-data-visualization--demand-patterns
-        template: step-08-data-visualization--demand-patterns
-    - - name: step-09-data-visualization--inventory-health
-        template: step-09-data-visualization--inventory-health
-    - - name: step-10-statistical-analysis
-        template: step-10-statistical-analysis
-    - - name: step-11-model-training--statistical-baselines
-        template: step-11-model-training--statistical-baselines
-    - - name: step-12-model-training--ml-approaches
-        template: step-12-model-training--ml-approaches
-    - - name: step-13-model-training--deep-learning
-        template: step-13-model-training--deep-learning
-    - - name: step-14-inventory-optimization
-        template: step-14-inventory-optimization
-    - - name: step-15-scenario-simulation-risk-analysis
-        template: step-15-scenario-simulation-risk-analysis
-    - - name: step-16-final-synthesis-operations-playbook
-        template: step-16-final-synthesis-operations-playbook
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_data-loading-profiling.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_data-merging-integration.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_data-cleaning-standardization.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_time-series-decomposition.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_feature-engineering.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_07_exploratory-data-analysis.py
+    - - name: step-07
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_09_statistical-analysis.py
+    - - name: step-08
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_11_model-training-forecasting.py
+    - - name: step-09
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_14_inventory-optimization.py
+    - - name: step-10
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_15_final-synthesis-report.py
 
-  - name: step-01-data-loading-profiling
-    metadata:
-      annotations:
-        step-description: "Load inventory CSV, sales_orders JSON, suppliers Excel. Profile: SKU count, order volume by month/re"
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/demand_forecasting:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling.py", --data_dir /data, --output_dir /mnt/output]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-02-data-merging-integration
-    metadata:
-      annotations:
-        step-description: "Merge sales with inventory on SKU to get product details. Merge inventory with suppliers on supplier"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_data-merging-integration.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-03-data-cleaning-standardization
-    metadata:
-      annotations:
-        step-description: "Standardize regions and shipping methods. Handle missing fulfillment_days with median by shipping me"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-cleaning-standardization.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-04-time-series-decomposition
-    metadata:
-      annotations:
-        step-description: "Aggregate daily order quantities by SKU. Decompose time series into trend, seasonal, and residual co"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_time-series-decomposition.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-05-feature-engineering--temporal
-    metadata:
-      annotations:
-        step-description: "Create temporal features: day_of_week, month, quarter, is_weekend, is_holiday, days_since_restock, r"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_feature-engineering--temporal.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-06-feature-engineering--cross-domain
-    metadata:
-      annotations:
-        step-description: "Create supply-side features: supplier_lead_time, supplier_reliability, current_stock_level, days_of_"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_feature-engineering--cross-domain.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-07-exploratory-data-analysis
-    metadata:
-      annotations:
-        step-description: "Analyze demand patterns: top/bottom 10 SKUs by volume and volatility, ABC classification (A=top 80%,"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_exploratory-data-analysis.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-08-data-visualization--demand-patterns
-    metadata:
-      annotations:
-        step-description: "Create dashboard: (1) Total demand time series with trend line, (2) Seasonal heatmap (month × catego"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_data-visualization--demand-patterns.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-09-data-visualization--inventory-health
-    metadata:
-      annotations:
-        step-description: "Visualize inventory metrics: (1) Inventory turnover by category gauge chart, (2) Stockout risk distr"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_data-visualization--inventory-health.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-10-statistical-analysis
-    metadata:
-      annotations:
-        step-description: "Correlation analysis: demand vs price, demand vs day_of_week, demand vs season. ANOVA: demand by reg"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_statistical-analysis.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-11-model-training--statistical-baselines
-    metadata:
-      annotations:
-        step-description: "Train statistical forecasting models per SKU: Simple Moving Average, Exponential Smoothing (Holt-Win"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_model-training--statistical-baselines.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-12-model-training--ml-approaches
-    metadata:
-      annotations:
-        step-description: "Train ML models: RandomForestRegressor, XGBoost, LightGBM with temporal features. Use TimeSeriesSpli"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_model-training--ml-approaches.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-13-model-training--deep-learning
-    metadata:
-      annotations:
-        step-description: "Train LSTM neural network with lookback=30 days. Architecture: 2 LSTM layers (64, 32 units) + Dropou"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_model-training--deep-learning.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-14-inventory-optimization
-    metadata:
-      annotations:
-        step-description: "Using demand forecasts, calculate optimal reorder points with safety stock: ROP = d̄L + zσ√L. Apply "
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_14_inventory-optimization.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-15-scenario-simulation-risk-analysis
-    metadata:
-      annotations:
-        step-description: "Run Monte Carlo simulation (1000 iterations) for demand uncertainty. Simulate supply disruption scen"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_15_scenario-simulation-risk-analysis.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
-        limits:
-          memory: "2Gi"
-          cpu: "2000m"
-
-  - name: step-16-final-synthesis-operations-playbook
-    metadata:
-      annotations:
-        step-description: "Compile final report: Forecast Accuracy Summary by horizon and category, 
-Inventory Optimization Res"
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_16_final-synthesis-operations-playbook.py", --data_dir /data, --output_dir /mnt/output]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "512Mi"
+          cpu: "500m"
         limits:
           memory: "2Gi"
           cpu: "2000m"
 
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

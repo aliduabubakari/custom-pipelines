@@ -1,332 +1,77 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: case-5145-12658-
+  generateName: sports_clustering_prediction_visualization-
   labels:
-    pipeline: data-cleaning-validation
-    difficulty: "N/A"
-    abilities: ""
+    pipeline: sports_clustering_prediction_visualization
+    domain: Sports
+    type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-visualization
-        template: step-01-data-visualization
-    - - name: step-02-based-on-the-initial-data-exploration-results-i-ca
-        template: step-02-based-on-the-initial-data-exploration-results-i-ca
-    - - name: step-03-data-loading-profiling
-        template: step-03-data-loading-profiling
-    - - name: step-04-geospatial-normalization-entity-resolution
-        template: step-04-geospatial-normalization-entity-resolution
-    - - name: step-05-data-visualization-phase-2
-        template: step-05-data-visualization-phase-2
-    - - name: step-06-cluster-analysis
-        template: step-06-cluster-analysis
-    - - name: step-07-cluster-analysis-phase-2
-        template: step-07-cluster-analysis-phase-2
-    - - name: step-08-cluster-analysis-phase-3
-        template: step-08-cluster-analysis-phase-3
-    - - name: step-09-model-training-prediction
-        template: step-09-model-training-prediction
-    - - name: step-10-model-training-prediction-phase-2
-        template: step-10-model-training-prediction-phase-2
-    - - name: step-11-error-recovery-robust-loading
-        template: step-11-error-recovery-robust-loading
-    - - name: step-12-error-recovery-robust-loading-phase-2
-        template: step-12-error-recovery-robust-loading-phase-2
-    - - name: step-13-model-training-prediction-phase-3
-        template: step-13-model-training-prediction-phase-3
-    - - name: step-14-error-recovery-robust-loading-phase-3
-        template: step-14-error-recovery-robust-loading-phase-3
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-data-visualization
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/sports_clustering_prediction_visualization:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-visualization.py", --batting_postseason_csv /data/batting_postseason.csv --manager_award_vote_csv /data/manager_award_vote.csv]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
           memory: "512Mi"
           cpu: "500m"
         limits:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "2Gi"
+          cpu: "2000m"
 
-  - name: step-02-based-on-the-initial-data-exploration-results-i-ca
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_based-on-the-initial-data-exploration-re.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-03-data-loading-profiling
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-loading-profiling.py", --batting_postseason_csv /data/batting_postseason.csv --manager_award_vote_csv /data/manager_award_vote.csv --enhanced_batting_postseason_csv /mnt/output/enhanced_batting_postseason.csv --enhanced_manager_award_csv /mnt/output/enhanced_manager_award.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-04-geospatial-normalization-entity-resolution
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_geospatial-normalization-entity-resoluti.py", --batting_postseason_csv /data/batting_postseason.csv --manager_award_vote_csv /data/manager_award_vote.csv --enhanced_batting_postseason_csv /mnt/output/enhanced_batting_postseason.csv --enhanced_manager_award_csv /mnt/output/enhanced_manager_award.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-05-data-visualization-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_data-visualization-phase-2.py", --enhanced_batting_postseason_csv /mnt/output/enhanced_batting_postseason.csv --enhanced_manager_award_csv /mnt/output/enhanced_manager_award.csv --analyzed_manager_csv /mnt/output/analyzed_manager.csv --analyzed_batting_csv /mnt/output/analyzed_batting.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-06-cluster-analysis
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_cluster-analysis.py", --enhanced_batting_postseason_csv /mnt/output/enhanced_batting_postseason.csv --enhanced_manager_award_csv /mnt/output/enhanced_manager_award.csv --analyzed_manager_csv /mnt/output/analyzed_manager.csv --analyzed_batting_csv /mnt/output/analyzed_batting.csv --cluster_interpretation_csv /mnt/output/cluster_interpretation.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-07-cluster-analysis-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_cluster-analysis-phase-2.py", --award_feature_importance_csv /mnt/output/award_feature_importance.csv --analyzed_manager_csv /mnt/output/analyzed_manager.csv --analyzed_batting_csv /mnt/output/analyzed_batting.csv --cluster_interpretation_csv /mnt/output/cluster_interpretation.csv --award_feature_importance_csv /mnt/output/award_feature_importance.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-08-cluster-analysis-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_cluster-analysis-phase-3.py", --analyzed_manager_csv /mnt/output/analyzed_manager.csv --analyzed_batting_csv /mnt/output/analyzed_batting.csv --model_interpretation_csv /mnt/output/model_interpretation.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-09-model-training-prediction
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_model-training-prediction.py", --analyzed_manager_csv /mnt/output/analyzed_manager.csv --analyzed_batting_csv /mnt/output/analyzed_batting.csv --model_interpretation_csv /mnt/output/model_interpretation.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-10-model-training-prediction-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_model-training-prediction-phase-2.py", --analyzed_manager_csv /mnt/output/analyzed_manager.csv --enhanced_features_csv /mnt/output/enhanced_features.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-11-error-recovery-robust-loading
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_error-recovery-robust-loading.py", --analyzed_manager_csv /mnt/output/analyzed_manager.csv --enhanced_features_csv /mnt/output/enhanced_features.csv --league_performance_csv /mnt/output/league_performance.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-12-error-recovery-robust-loading-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_error-recovery-robust-loading-phase-2.py", --analyzed_manager_csv /mnt/output/analyzed_manager.csv --enhanced_features_csv /mnt/output/enhanced_features.csv --league_performance_csv /mnt/output/league_performance.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-13-model-training-prediction-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_model-training-prediction-phase-3.py", --analyzed_manager_csv /mnt/output/analyzed_manager.csv --league_performance_csv /mnt/output/league_performance.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-14-error-recovery-robust-loading-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_14_error-recovery-robust-loading-phase-3.py", --analyzed_manager_csv /mnt/output/analyzed_manager.csv --league_performance_csv /mnt/output/league_performance.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  # ── Volume definitions ──
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

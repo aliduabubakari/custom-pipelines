@@ -1,376 +1,77 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: case-4595-11447-
+  generateName: sports_statistical_cleaning_integration-
   labels:
-    pipeline: data-cleaning-validation
-    difficulty: "N/A"
-    abilities: ""
+    pipeline: sports_statistical_cleaning_integration
+    domain: Sports
+    type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling
-        template: step-01-data-loading-profiling
-    - - name: step-02-data-loading-profiling-phase-2
-        template: step-02-data-loading-profiling-phase-2
-    - - name: step-03-the-execution-results-provide-crucial-insights-int
-        template: step-03-the-execution-results-provide-crucial-insights-int
-    - - name: step-04-error-recovery-robust-loading
-        template: step-04-error-recovery-robust-loading
-    - - name: step-05-data-merging-integration
-        template: step-05-data-merging-integration
-    - - name: step-06-statistical-analysis-hypothesis-testing
-        template: step-06-statistical-analysis-hypothesis-testing
-    - - name: step-07-data-cleaning-standardization
-        template: step-07-data-cleaning-standardization
-    - - name: step-08-error-recovery-robust-loading-phase-2
-        template: step-08-error-recovery-robust-loading-phase-2
-    - - name: step-09-the-execution-results-provide-valuable-insights-in
-        template: step-09-the-execution-results-provide-valuable-insights-in
-    - - name: step-10-error-recovery-robust-loading-phase-3
-        template: step-10-error-recovery-robust-loading-phase-3
-    - - name: step-11-the-successful-execution-provides-a-solid-foundati
-        template: step-11-the-successful-execution-provides-a-solid-foundati
-    - - name: step-12-error-recovery-robust-loading-phase-4
-        template: step-12-error-recovery-robust-loading-phase-4
-    - - name: step-13-data-loading-profiling-phase-3
-        template: step-13-data-loading-profiling-phase-3
-    - - name: step-14-error-recovery-robust-loading-phase-5
-        template: step-14-error-recovery-robust-loading-phase-5
-    - - name: step-15-data-loading-profiling-phase-4
-        template: step-15-data-loading-profiling-phase-4
-    - - name: step-16-error-recovery-robust-loading-phase-6
-        template: step-16-error-recovery-robust-loading-phase-6
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-data-loading-profiling
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/sports_statistical_cleaning_integration:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling.py", --all_star_csv /data/all_star.csv --fielding_csv /data/fielding.csv]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
           memory: "512Mi"
           cpu: "500m"
         limits:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "2Gi"
+          cpu: "2000m"
 
-  - name: step-02-data-loading-profiling-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_data-loading-profiling-phase-2.py", --all_star_csv /data/all_star.csv --fielding_columns_txt /mnt/output/fielding_columns.txt --all_star_columns_txt /mnt/output/all_star_columns.txt --fielding_csv /data/fielding.csv --fielding_columns_txt /mnt/output/fielding_columns.txt --all_star_columns_txt /mnt/output/all_star_columns.txt]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-03-the-execution-results-provide-crucial-insights-int
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_the-execution-results-provide-crucial-in.py", --all_star_csv /data/all_star.csv --fielding_csv /data/fielding.csv --fielding_comparison_stats_txt /mnt/output/fielding_comparison_stats.txt --fielding_comparison_stats_txt /mnt/output/fielding_comparison_stats.txt --merged_fielding_allstar_csv /mnt/output/merged_fielding_allstar.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-04-error-recovery-robust-loading
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_error-recovery-robust-loading.py", --merged_fielding_allstar_csv /mnt/output/merged_fielding_allstar.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-05-data-merging-integration
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_data-merging-integration.py", --merged_fielding_allstar_csv /mnt/output/merged_fielding_allstar.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-06-statistical-analysis-hypothesis-testing
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_statistical-analysis-hypothesis-testing.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-07-data-cleaning-standardization
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_data-cleaning-standardization.py", --team_defensive_contributions_csv /mnt/output/team_defensive_contributions.csv --era_specific_stats_csv /mnt/output/era_specific_stats.csv --final_analysis_dataset_csv /mnt/output/final_analysis_dataset.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-08-error-recovery-robust-loading-phase-2
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_error-recovery-robust-loading-phase-2.py", --league_comparison_stats_csv /mnt/output/league_comparison_stats.csv --team_defensive_analysis_csv /mnt/output/team_defensive_analysis.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-09-the-execution-results-provide-valuable-insights-in
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_the-execution-results-provide-valuable-i.py", --team_defensive_analysis_csv /mnt/output/team_defensive_analysis.csv --final_analysis_dataset_csv /mnt/output/final_analysis_dataset.csv --franchise_defensive_stats_csv /mnt/output/franchise_defensive_stats.csv --team_eras_csv /mnt/output/team_eras.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-10-error-recovery-robust-loading-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_10_error-recovery-robust-loading-phase-3.py", --processed_fielding_data_csv /mnt/output/processed_fielding_data.csv --final_processed_data_csv /mnt/output/final_processed_data.csv --franchise_defensive_stats_csv /mnt/output/franchise_defensive_stats.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-11-the-successful-execution-provides-a-solid-foundati
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_11_the-successful-execution-provides-a-soli.py", --final_processed_data_csv /mnt/output/final_processed_data.csv --franchise_defensive_stats_csv /mnt/output/franchise_defensive_stats.csv --franchise_advantages_cleaned_csv /mnt/output/franchise_advantages_cleaned.csv --franchise_decade_stats_csv /mnt/output/franchise_decade_stats.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-12-error-recovery-robust-loading-phase-4
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_12_error-recovery-robust-loading-phase-4.py", --franchise_defensive_stats_csv /mnt/output/franchise_defensive_stats.csv --franchise_advantages_cleaned_csv /mnt/output/franchise_advantages_cleaned.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-13-data-loading-profiling-phase-3
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_13_data-loading-profiling-phase-3.py", --franchise_defensive_stats_csv /mnt/output/franchise_defensive_stats.csv --franchise_advantages_cleaned_csv /mnt/output/franchise_advantages_cleaned.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-14-error-recovery-robust-loading-phase-5
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_14_error-recovery-robust-loading-phase-5.py", --franchise_defensive_stats_csv /mnt/output/franchise_defensive_stats.csv --franchise_advantages_cleaned_csv /mnt/output/franchise_advantages_cleaned.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-15-data-loading-profiling-phase-4
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_15_data-loading-profiling-phase-4.py", --franchise_defensive_stats_csv /mnt/output/franchise_defensive_stats.csv --franchise_advantages_final_csv /mnt/output/franchise_advantages_final.csv --franchise_defensive_stats_csv /mnt/output/franchise_defensive_stats.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-16-error-recovery-robust-loading-phase-6
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_16_error-recovery-robust-loading-phase-6.py", ]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  # ── Volume definitions ──
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}

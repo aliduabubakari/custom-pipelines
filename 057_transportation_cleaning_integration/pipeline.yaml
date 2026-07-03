@@ -1,222 +1,77 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Workflow
 metadata:
-  generateName: case-51-15742-
+  generateName: transportation_cleaning_integration-
   labels:
-    pipeline: data-cleaning-validation
-    difficulty: "N/A"
-    abilities: ""
+    pipeline: transportation_cleaning_integration
+    domain: Transportation
+    type: ml-pipeline
+    steps: "6"
 spec:
   entrypoint: pipeline
+  podGC:
+    strategy: OnWorkflowCompletion
+
   templates:
   - name: pipeline
     steps:
-    - - name: step-01-data-loading-profiling-data-inspection-phase
-        template: step-01-data-loading-profiling-data-inspection-phase
-    - - name: step-02-data-loading-profiling-data-cleaning
-        template: step-02-data-loading-profiling-data-cleaning
-    - - name: step-03-data-cleaning-standardization-code-structure-impro
-        template: step-03-data-cleaning-standardization-code-structure-impro
-    - - name: step-04-data-cleaning-standardization-code-structure-requi
-        template: step-04-data-cleaning-standardization-code-structure-requi
-    - - name: step-05-data-merging-integration
-        template: step-05-data-merging-integration
-    - - name: step-06-cluster-analysis
-        template: step-06-cluster-analysis
-    - - name: step-07-data-visualization-statistical-validation
-        template: step-07-data-visualization-statistical-validation
-    - - name: step-08-final-synthesis-reporting
-        template: step-08-final-synthesis-reporting
-    - - name: step-09-data-validation-quality-report
-        template: step-09-data-validation-quality-report
+    - - name: step-01
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_01_load.py
+    - - name: step-02
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_02_clean.py
+    - - name: step-03
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_03_features.py
+    - - name: step-04
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_04_eda.py
+    - - name: step-05
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_05_model.py
+    - - name: step-06
+        template: run-step
+        arguments:
+          parameters:
+          - name: script
+            value: step_06_report.py
 
-  - name: step-01-data-loading-profiling-data-inspection-phase
+  - name: run-step
+    inputs:
+      parameters:
+      - name: script
     container:
-      image: python:3.10-slim
+      image: custom-pipelines/transportation_cleaning_integration:latest
+      imagePullPolicy: IfNotPresent
       command: [python]
-      args: ["/scripts/step_01_data-loading-profiling-data-inspection-p.py", --population_csv /data/population.csv --population_sample_csv /mnt/output/population_sample.csv]
+      args: ["/pipeline/scripts/{{inputs.parameters.script}}", "--data_dir", "/pipeline/data", "--output_dir", "/pipeline/output"]
       volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
       - name: pipeline-output
-        mountPath: /mnt/output
+        mountPath: /pipeline/output
       resources:
         requests:
           memory: "512Mi"
           cpu: "500m"
         limits:
-          memory: "1Gi"
-          cpu: "1000m"
+          memory: "2Gi"
+          cpu: "2000m"
 
-  - name: step-02-data-loading-profiling-data-cleaning
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_02_data-loading-profiling-data-cleaning.py", --population_csv /data/population.csv --cleaned_population_csv /mnt/output/cleaned_population.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-03-data-cleaning-standardization-code-structure-impro
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_03_data-cleaning-standardization-code-struc.py", --cleaned_population_csv /mnt/output/cleaned_population.csv --economy_csv /data/economy.csv --economy_sample_csv /mnt/output/economy_sample.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-04-data-cleaning-standardization-code-structure-requi
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_04_data-cleaning-standardization-code-struc.py", --cleaned_population_csv /mnt/output/cleaned_population.csv --economy_csv /data/economy.csv --cleaned_economy_csv /mnt/output/cleaned_economy.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-05-data-merging-integration
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_05_data-merging-integration.py", --cleaned_population_csv /mnt/output/cleaned_population.csv --cleaned_economy_csv /mnt/output/cleaned_economy.csv --merged_population_economy_csv /mnt/output/merged_population_economy.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-06-cluster-analysis
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_06_cluster-analysis.py", --encompasses_csv /data/encompasses.csv --merged_population_economy_csv /mnt/output/merged_population_economy.csv --full_analysis_dataset_csv /mnt/output/full_analysis_dataset.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-07-data-visualization-statistical-validation
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_07_data-visualization-statistical-validatio.py", --full_analysis_dataset_csv /mnt/output/full_analysis_dataset.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-08-final-synthesis-reporting
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_08_final-synthesis-reporting.py", --full_analysis_dataset_csv /mnt/output/full_analysis_dataset.csv --anova_results_csv /mnt/output/anova_results.csv --effect_size_results_csv /mnt/output/effect_size_results.csv --final_analysis_dataset_csv /mnt/output/final_analysis_dataset.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  - name: step-09-data-validation-quality-report
-    container:
-      image: python:3.10-slim
-      command: [python]
-      args: ["/scripts/step_09_data-validation-quality-report.py", --full_analysis_dataset_csv /mnt/output/full_analysis_dataset.csv --final_cleaned_dataset_csv /mnt/output/final_cleaned_dataset.csv --professional_statistical_summary_csv /mnt/output/professional_statistical_summary.csv]
-      volumeMounts:
-      - name: scripts
-        mountPath: /scripts
-      - name: input-data
-        mountPath: /data
-      - name: pipeline-output
-        mountPath: /mnt/output
-      resources:
-        requests:
-          memory: "512Mi"
-          cpu: "500m"
-        limits:
-          memory: "1Gi"
-          cpu: "1000m"
-
-  # ── Volume definitions ──
   volumes:
-  - name: scripts
-    configMap:
-      name: pipeline-scripts
-  - name: input-data
-    configMap:
-      name: pipeline-input-data
   - name: pipeline-output
     emptyDir: {}
