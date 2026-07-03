@@ -443,6 +443,14 @@ This is a curated research dataset. To suggest additions or improvements:
 
 ---
 
+## 📚 Documentation
+
+- **[Dataset Creation Methodology](docs/DATASET_CREATION.md)** — Complete documentation on how the 100 pipelines were created, from source datasets through LLM generation to post-processing refinement.
+- **[Paper Reference](https://arxiv.org/abs/2510.16872)** — DeepAnalyze: Agentic Large Language Models for Autonomous Data Science (Zhang et al., 2025)
+- **[Source Dataset](https://huggingface.co/datasets/RUC-DataLab/DataScience-Instruct-500K)** — DataScience-Instruct-500K on HuggingFace
+
+---
+
 ## 📄 License
 
 This dataset is released for research and educational purposes. See individual pipeline `pipeline.md` files for specific details.
