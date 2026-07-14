@@ -1,0 +1,156 @@
+====================================================================================================
+ARGO WORKFLOW EXECUTABILITY REPORT
+Generated: 2026-07-14 18:20:14
+Total pipelines evaluated: 100
+Argo CLI: v4.0.6 (argo lint --offline --strict)
+====================================================================================================
+
+## OVERALL STATISTICS
+  Gates passed:      100/100 (100%)
+  Argo lint passed:  100/100 (100%)
+  Avg Combined Score: 8.38/10
+  Avg SAT Score:      8.15/10
+  Avg PCT Score:      8.60/10
+  Total issues:       500
+
+## SAT DIMENSION AVERAGES
+  correctness         : 10.00/10
+  code_quality        : 10.00/10
+  best_practices      : 4.25/10
+  maintainability     : 9.50/10
+  robustness          : 7.00/10
+
+## PCT DIMENSION AVERAGES
+  loadability         : 10.00/10
+  structure           : 10.00/10
+  config              : 5.75/10
+  task                : 8.75/10
+  executability       : 8.50/10
+
+## BY DOMAIN
+  analytics           :   2 pipelines, avg 8.38/10
+  general_ml          :  10 pipelines, avg 8.38/10
+  hr                  :   2 pipelines, avg 8.38/10
+  sports              :  40 pipelines, avg 8.38/10
+  transportation      :  46 pipelines, avg 8.38/10
+
+## TOP 5 PIPELINES (by Combined Score)
+  001_analytics_statistical_cleaning_integration                   Combined: 8.38  SAT: 8.15  PCT: 8.60
+  002_analytics_statistical_integration                            Combined: 8.38  SAT: 8.15  PCT: 8.60
+  003_credit_risk                                                  Combined: 8.38  SAT: 8.15  PCT: 8.60
+  004_customer_churn                                               Combined: 8.38  SAT: 8.15  PCT: 8.60
+  005_demand_forecasting                                           Combined: 8.38  SAT: 8.15  PCT: 8.60
+
+## BOTTOM 5 PIPELINES (by Combined Score)
+  001_analytics_statistical_cleaning_integration                   Combined: 8.38  SAT: 8.15  PCT: 8.60
+  002_analytics_statistical_integration                            Combined: 8.38  SAT: 8.15  PCT: 8.60
+  003_credit_risk                                                  Combined: 8.38  SAT: 8.15  PCT: 8.60
+  004_customer_churn                                               Combined: 8.38  SAT: 8.15  PCT: 8.60
+  005_demand_forecasting                                           Combined: 8.38  SAT: 8.15  PCT: 8.60
+
+## FULL TABLE
+   # Pipeline                                                 Comb   SAT   PCT Gates   Lint Tasks Issues
+----------------------------------------------------------------------------------------------------
+ 001 analytics_statistical_cleaning_integration              8.38  8.15  8.60  PASS   PASS     6      5
+ 002 analytics_statistical_integration                       8.38  8.15  8.60  PASS   PASS     6      5
+ 003 credit_risk                                             8.38  8.15  8.60  PASS   PASS    16      5
+ 004 customer_churn                                          8.38  8.15  8.60  PASS   PASS    16      5
+ 005 demand_forecasting                                      8.38  8.15  8.60  PASS   PASS    10      5
+ 006 ecommerce_recommendation                                8.38  8.15  8.60  PASS   PASS     6      5
+ 007 employee_attrition                                      8.38  8.15  8.60  PASS   PASS     6      5
+ 008 energy_forecasting                                      8.38  8.15  8.60  PASS   PASS     6      5
+ 009 healthcare_readmission                                  8.38  8.15  8.60  PASS   PASS     6      5
+ 010 hr_regression_visualization_integration                 8.38  8.15  8.60  PASS   PASS     6      5
+ 011 hr_visualization_integration_validation                 8.38  8.15  8.60  PASS   PASS     6      5
+ 012 insurance_claims                                        8.38  8.15  8.60  PASS   PASS     6      5
+ 013 predictive_maintenance                                  8.38  8.15  8.60  PASS   PASS     6      5
+ 014 sports_clustering_integration_validation                8.38  8.15  8.60  PASS   PASS     6      5
+ 015 sports_clustering_prediction_statistical                8.38  8.15  8.60  PASS   PASS     6      5
+ 016 sports_clustering_prediction_visualization              8.38  8.15  8.60  PASS   PASS     6      5
+ 017 sports_clustering_statistical_visualization             8.38  8.15  8.60  PASS   PASS     6      5
+ 018 sports_clustering_visualization_integration             8.38  8.15  8.60  PASS   PASS     6      5
+ 019 sports_prediction_cleaning_integration                  8.38  8.15  8.60  PASS   PASS     6      5
+ 020 sports_prediction_statistical_visualization             8.38  8.15  8.60  PASS   PASS     6      5
+ 021 sports_prediction_statistical_visualization_v2          8.38  8.15  8.60  PASS   PASS     6      5
+ 022 sports_prediction_visualization_cleaning                8.38  8.15  8.60  PASS   PASS     6      5
+ 023 sports_regression_clustering_visualization              8.38  8.15  8.60  PASS   PASS     6      5
+ 024 sports_regression_prediction_statistical                8.38  8.15  8.60  PASS   PASS     6      5
+ 025 sports_regression_prediction_statistical_v2             8.38  8.15  8.60  PASS   PASS     6      5
+ 026 sports_regression_prediction_statistical_v3             8.38  8.15  8.60  PASS   PASS     6      5
+ 027 sports_regression_prediction_visualization              8.38  8.15  8.60  PASS   PASS     6      5
+ 028 sports_regression_prediction_visualization_v2           8.38  8.15  8.60  PASS   PASS     6      5
+ 029 sports_regression_statistical_visualization             8.38  8.15  8.60  PASS   PASS     6      5
+ 030 sports_statistical_cleaning                             8.38  8.15  8.60  PASS   PASS     6      5
+ 031 sports_statistical_cleaning_integration                 8.38  8.15  8.60  PASS   PASS     6      5
+ 032 sports_statistical_cleaning_integration_v2              8.38  8.15  8.60  PASS   PASS     6      5
+ 033 sports_statistical_cleaning_integration_v3              8.38  8.15  8.60  PASS   PASS     6      5
+ 034 sports_statistical_cleaning_integration_v4              8.38  8.15  8.60  PASS   PASS     6      5
+ 035 sports_statistical_cleaning_integration_v5              8.38  8.15  8.60  PASS   PASS     6      5
+ 036 sports_statistical_cleaning_validation                  8.38  8.15  8.60  PASS   PASS     6      5
+ 037 sports_statistical_integration                          8.38  8.15  8.60  PASS   PASS     6      5
+ 038 sports_statistical_integration_v2                       8.38  8.15  8.60  PASS   PASS     6      5
+ 039 sports_statistical_visualization_cleaning               8.38  8.15  8.60  PASS   PASS     6      5
+ 040 sports_statistical_visualization_cleaning_v2            8.38  8.15  8.60  PASS   PASS     6      5
+ 041 sports_statistical_visualization_integration            8.38  8.15  8.60  PASS   PASS     6      5
+ 042 sports_validation_recovery                              8.38  8.15  8.60  PASS   PASS     6      5
+ 043 sports_visualization                                    8.38  8.15  8.60  PASS   PASS     6      5
+ 044 sports_visualization_cleaning_integration               8.38  8.15  8.60  PASS   PASS     6      5
+ 045 sports_visualization_cleaning_recovery                  8.38  8.15  8.60  PASS   PASS     6      5
+ 046 sports_visualization_cleaning_recovery_v2               8.38  8.15  8.60  PASS   PASS     6      5
+ 047 sports_visualization_integration_features               8.38  8.15  8.60  PASS   PASS     6      5
+ 048 sports_visualization_integration_geospatial             8.38  8.15  8.60  PASS   PASS     6      5
+ 049 sports_visualization_integration_recovery               8.38  8.15  8.60  PASS   PASS     6      5
+ 050 sports_visualization_integration_recovery_v2            8.38  8.15  8.60  PASS   PASS     6      5
+ 051 sports_visualization_integration_validation             8.38  8.15  8.60  PASS   PASS     6      5
+ 052 sports_visualization_integration_validation_v2          8.38  8.15  8.60  PASS   PASS     6      5
+ 053 sports_visualization_validation_recovery                8.38  8.15  8.60  PASS   PASS     6      5
+ 054 student_performance                                     8.38  8.15  8.60  PASS   PASS     6      5
+ 055 transportation_analysis                                 8.38  8.15  8.60  PASS   PASS     6      5
+ 056 transportation_cleaning                                 8.38  8.15  8.60  PASS   PASS     6      5
+ 057 transportation_cleaning_integration                     8.38  8.15  8.60  PASS   PASS     6      5
+ 058 transportation_cleaning_integration_geospatial          8.38  8.15  8.60  PASS   PASS     6      5
+ 059 transportation_cleaning_integration_recovery            8.38  8.15  8.60  PASS   PASS     6      5
+ 060 transportation_cleaning_integration_validation          8.38  8.15  8.60  PASS   PASS     6      5
+ 061 transportation_cleaning_v2                              8.38  8.15  8.60  PASS   PASS     6      5
+ 062 transportation_cleaning_validation_features             8.38  8.15  8.60  PASS   PASS     6      5
+ 063 transportation_clustering_validation                    8.38  8.15  8.60  PASS   PASS     6      5
+ 064 transportation_integration                              8.38  8.15  8.60  PASS   PASS     6      5
+ 065 transportation_integration_extra                        8.38  8.15  8.60  PASS   PASS     6      5
+ 066 transportation_integration_geospatial                   8.38  8.15  8.60  PASS   PASS     6      5
+ 067 transportation_integration_validation                   8.38  8.15  8.60  PASS   PASS     6      5
+ 068 transportation_prediction_cleaning                      8.38  8.15  8.60  PASS   PASS     6      5
+ 069 transportation_prediction_cleaning_integration          8.38  8.15  8.60  PASS   PASS     6      5
+ 070 transportation_prediction_cleaning_validation           8.38  8.15  8.60  PASS   PASS     6      5
+ 071 transportation_prediction_statistical_cleaning          8.38  8.15  8.60  PASS   PASS     6      5
+ 072 transportation_prediction_statistical_integration       8.38  8.15  8.60  PASS   PASS     6      5
+ 073 transportation_prediction_validation                    8.38  8.15  8.60  PASS   PASS     6      5
+ 074 transportation_prediction_validation_recovery           8.38  8.15  8.60  PASS   PASS     6      5
+ 075 transportation_prediction_validation_v2                 8.38  8.15  8.60  PASS   PASS     6      5
+ 076 transportation_prediction_visualization_geospatial      8.38  8.15  8.60  PASS   PASS     6      5
+ 077 transportation_prediction_visualization_integration     8.38  8.15  8.60  PASS   PASS     6      5
+ 078 transportation_prediction_visualization_integration_v2  8.38  8.15  8.60  PASS   PASS     6      5
+ 079 transportation_regression                               8.38  8.15  8.60  PASS   PASS     6      5
+ 080 transportation_regression_cleaning_integration          8.38  8.15  8.60  PASS   PASS     6      5
+ 081 transportation_regression_statistical_cleaning          8.38  8.15  8.60  PASS   PASS     6      5
+ 082 transportation_regression_statistical_integration       8.38  8.15  8.60  PASS   PASS     6      5
+ 083 transportation_regression_visualization_integration     8.38  8.15  8.60  PASS   PASS     6      5
+ 084 transportation_statistical_cleaning_integration         8.38  8.15  8.60  PASS   PASS     6      5
+ 085 transportation_statistical_geospatial                   8.38  8.15  8.60  PASS   PASS     6      5
+ 086 transportation_statistical_geospatial_validation        8.38  8.15  8.60  PASS   PASS     6      5
+ 087 transportation_statistical_integration                  8.38  8.15  8.60  PASS   PASS     6      5
+ 088 transportation_statistical_integration_v2               8.38  8.15  8.60  PASS   PASS     6      5
+ 089 transportation_statistical_visualization_integration    8.38  8.15  8.60  PASS   PASS     6      5
+ 090 transportation_statistical_visualization_integration_v  8.38  8.15  8.60  PASS   PASS     6      5
+ 091 transportation_visualization                            8.38  8.15  8.60  PASS   PASS     6      5
+ 092 transportation_visualization_cleaning_integration       8.38  8.15  8.60  PASS   PASS     6      5
+ 093 transportation_visualization_cleaning_validation        8.38  8.15  8.60  PASS   PASS     6      5
+ 094 transportation_visualization_cleaning_validation_v2     8.38  8.15  8.60  PASS   PASS     6      5
+ 095 transportation_visualization_geospatial                 8.38  8.15  8.60  PASS   PASS     6      5
+ 096 transportation_visualization_integration                8.38  8.15  8.60  PASS   PASS     6      5
+ 097 transportation_visualization_integration_v2             8.38  8.15  8.60  PASS   PASS     6      5
+ 098 transportation_visualization_integration_validation     8.38  8.15  8.60  PASS   PASS     6      5
+ 099 transportation_visualization_recovery_reporting         8.38  8.15  8.60  PASS   PASS     6      5
+ 100 transportation_visualization_v2                         8.38  8.15  8.60  PASS   PASS     6      5
+
+====================================================================================================
+END OF REPORT

@@ -1,0 +1,752 @@
+{
+  "evaluation_type": "argo_unified",
+  "file_path": "/Users/abubakarialidu/Downloads/custom_pipelines/058_transportation_cleaning_integration_geospatial/pipeline.yaml",
+  "orchestrator": "argo_workflows",
+  "timestamp": "2026-07-14T18:18:59.807681",
+  "summary": {
+    "static_score": 8.15,
+    "compliance_score": 8.6,
+    "combined_score": 8.375,
+    "platform_gate_passed": true,
+    "passed": true
+  },
+  "static_analysis": {
+    "evaluation_type": "argo_static_analysis",
+    "file_path": "/Users/abubakarialidu/Downloads/custom_pipelines/058_transportation_cleaning_integration_geospatial/pipeline.yaml",
+    "orchestrator": "argo_workflows",
+    "timestamp": "2026-07-14T18:18:59.807466",
+    "metadata": {
+      "file_size_bytes": 1929,
+      "line_count": 77,
+      "document_count": 1,
+      "supported_resource_count": 1,
+      "template_count": 2,
+      "SAT": 8.15,
+      "SAT_dimensions": {
+        "correctness": 10.0,
+        "code_quality": 10.0,
+        "best_practices": 4.25,
+        "maintainability": 9.5,
+        "robustness": 7.0
+      }
+    },
+    "gates_passed": true,
+    "gate_checks": [],
+    "scores": {
+      "correctness": {
+        "name": "correctness",
+        "raw_score": 10.0,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "supported_resource_count": 1,
+          "unresolved_entrypoints": [],
+          "unresolved_local_refs": [],
+          "dag_dependency_errors": [],
+          "cycles": [],
+          "parameter_errors": []
+        },
+        "issues": []
+      },
+      "code_quality": {
+        "name": "code_quality",
+        "raw_score": 10.0,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "duplicate_templates": {},
+          "line_count": 77,
+          "template_types": {
+            "Workflow/transportation_cleaning_integration_geospatial-": {
+              "pipeline": "steps",
+              "run-step": "container"
+            }
+          }
+        },
+        "issues": []
+      },
+      "best_practices": {
+        "name": "best_practices",
+        "raw_score": 4.25,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "container_count": 1,
+          "service_accounts": {
+            "Workflow/transportation_cleaning_integration_geospatial-": null
+          },
+          "unpinned_images": [
+            {
+              "template": "Workflow/transportation_cleaning_integration_geospatial-:run-step",
+              "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest"
+            }
+          ],
+          "missing_resources": [],
+          "missing_security_context": [
+            "Workflow/transportation_cleaning_integration_geospatial-:run-step"
+          ]
+        },
+        "issues": [
+          {
+            "severity": "minor",
+            "category": "best_practices",
+            "message": "One or more images are unpinned or templated",
+            "line": null,
+            "tool": null,
+            "details": {
+              "images": [
+                {
+                  "template": "Workflow/transportation_cleaning_integration_geospatial-:run-step",
+                  "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "maintainability": {
+        "name": "maintainability",
+        "raw_score": 9.5,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "template_count": 2,
+          "orphan_templates": {
+            "Workflow/transportation_cleaning_integration_geospatial-": []
+          },
+          "uses_parameters": true,
+          "uses_outputs_or_artifacts": false
+        },
+        "issues": []
+      },
+      "robustness": {
+        "name": "robustness",
+        "raw_score": 7.0,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "has_retry_or_timeout": false,
+          "volume_mount_errors": [],
+          "unresolved_external_refs": [],
+          "hardcoded_secret": false
+        },
+        "issues": [
+          {
+            "severity": "minor",
+            "category": "robustness",
+            "message": "No retry/timeout guardrails found",
+            "line": null,
+            "tool": null,
+            "details": {}
+          }
+        ]
+      },
+      "SAT": {
+        "name": "SAT",
+        "raw_score": 8.15,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "aggregation": "unweighted_mean",
+          "dimensions": [
+            "correctness",
+            "code_quality",
+            "best_practices",
+            "maintainability",
+            "robustness"
+          ]
+        },
+        "issues": []
+      }
+    },
+    "issues": [
+      {
+        "severity": "minor",
+        "category": "best_practices",
+        "message": "One or more images are unpinned or templated",
+        "line": null,
+        "tool": null,
+        "details": {
+          "images": [
+            {
+              "template": "Workflow/transportation_cleaning_integration_geospatial-:run-step",
+              "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest"
+            }
+          ]
+        }
+      },
+      {
+        "severity": "minor",
+        "category": "robustness",
+        "message": "No retry/timeout guardrails found",
+        "line": null,
+        "tool": null,
+        "details": {}
+      }
+    ]
+  },
+  "platform_compliance": {
+    "evaluation_type": "platform_compliance",
+    "file_path": "/Users/abubakarialidu/Downloads/custom_pipelines/058_transportation_cleaning_integration_geospatial/pipeline.yaml",
+    "orchestrator": "argo_workflows",
+    "timestamp": "2026-07-14T18:18:59.803231",
+    "metadata": {
+      "file_size_bytes": 1929,
+      "line_count": 77,
+      "document_count": 1,
+      "supported_resource_count": 1,
+      "template_count": 2,
+      "argo_lint": {
+        "status": "passed",
+        "command": [
+          "/opt/homebrew/bin/argo",
+          "lint",
+          "--offline",
+          "--strict",
+          "-o",
+          "simple",
+          "/Users/abubakarialidu/Downloads/custom_pipelines/058_transportation_cleaning_integration_geospatial/pipeline.yaml"
+        ],
+        "returncode": 0,
+        "stdout": "no linting errors found!",
+        "stderr": ""
+      },
+      "conformance_stack": {
+        "manifest_compile": "passed",
+        "hydration": {
+          "ok": true,
+          "task_count": 6
+        },
+        "script_compile": {
+          "ok": true,
+          "check_count": 0
+        },
+        "argo_submit_dry_run": "skipped",
+        "container_smoke": "skipped"
+      },
+      "PCT": 8.6,
+      "platform_gate_passed": true,
+      "Passed": true,
+      "PCT_dimensions": {
+        "loadability": 10.0,
+        "structure_validity": 10.0,
+        "configuration_validity": 5.75,
+        "task_validity": 8.75,
+        "executability": 8.5
+      }
+    },
+    "gates_passed": true,
+    "gate_checks": [
+      {
+        "name": "yaml_valid",
+        "passed": true,
+        "message": "Manifest YAML parsed successfully",
+        "is_critical": true,
+        "details": {}
+      },
+      {
+        "name": "supported_kind",
+        "passed": true,
+        "message": "Found 1 supported Argo resources",
+        "is_critical": true,
+        "details": {}
+      },
+      {
+        "name": "api_version",
+        "passed": true,
+        "message": "All Argo resources use apiVersion argoproj.io/v1alpha1",
+        "is_critical": true,
+        "details": {
+          "api_versions": [
+            "argoproj.io/v1alpha1"
+          ]
+        }
+      },
+      {
+        "name": "spec_present",
+        "passed": true,
+        "message": "All supported resources have a workflow spec",
+        "is_critical": true,
+        "details": {}
+      },
+      {
+        "name": "minimum_structure",
+        "passed": true,
+        "message": "Manifest has runnable Argo template structure",
+        "is_critical": true,
+        "details": {
+          "template_count": 2,
+          "executable_templates": {
+            "Workflow/transportation_cleaning_integration_geospatial-": [
+              "run-step"
+            ]
+          }
+        }
+      },
+      {
+        "name": "entrypoint_resolves",
+        "passed": true,
+        "message": "Runnable resources define entrypoints that resolve to local templates",
+        "is_critical": true,
+        "details": {
+          "unresolved_entrypoints": [],
+          "missing_entrypoints": []
+        }
+      },
+      {
+        "name": "local_graph_resolves",
+        "passed": true,
+        "message": "Local template graph resolves without cycles",
+        "is_critical": true,
+        "details": {
+          "unresolved_local_refs": [],
+          "dag_dependency_errors": [],
+          "cycles": []
+        }
+      },
+      {
+        "name": "hydrated_plan_resolves",
+        "passed": true,
+        "message": "Hydrated dry-run plan resolved required parameters and executable placeholders",
+        "is_critical": true,
+        "details": {
+          "errors": [],
+          "task_count": 6,
+          "external_refs": []
+        }
+      },
+      {
+        "name": "script_compile_checks",
+        "passed": true,
+        "message": "Hydrated script templates passed deterministic syntax checks",
+        "is_critical": true,
+        "details": {
+          "checks": [],
+          "failures": []
+        }
+      },
+      {
+        "name": "external_template_refs_resolve_in_file",
+        "passed": true,
+        "message": "External templateRefs resolve within this manifest bundle",
+        "is_critical": false,
+        "details": {
+          "unresolved_external_refs": []
+        }
+      }
+    ],
+    "scores": {
+      "loadability": {
+        "name": "loadability",
+        "raw_score": 10.0,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "resources": [
+            "Workflow/transportation_cleaning_integration_geospatial-"
+          ],
+          "template_count": 2,
+          "argo_lint": {
+            "status": "passed",
+            "command": [
+              "/opt/homebrew/bin/argo",
+              "lint",
+              "--offline",
+              "--strict",
+              "-o",
+              "simple",
+              "/Users/abubakarialidu/Downloads/custom_pipelines/058_transportation_cleaning_integration_geospatial/pipeline.yaml"
+            ],
+            "returncode": 0,
+            "stdout": "no linting errors found!",
+            "stderr": ""
+          }
+        },
+        "issues": []
+      },
+      "structure_validity": {
+        "name": "structure_validity",
+        "raw_score": 10.0,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "template_types": {
+            "Workflow/transportation_cleaning_integration_geospatial-": {
+              "pipeline": "steps",
+              "run-step": "container"
+            }
+          },
+          "local_edges": {
+            "Workflow/transportation_cleaning_integration_geospatial-": [
+              [
+                "pipeline",
+                "run-step"
+              ],
+              [
+                "pipeline",
+                "run-step"
+              ],
+              [
+                "pipeline",
+                "run-step"
+              ],
+              [
+                "pipeline",
+                "run-step"
+              ],
+              [
+                "pipeline",
+                "run-step"
+              ],
+              [
+                "pipeline",
+                "run-step"
+              ]
+            ]
+          },
+          "reachable_templates": {
+            "Workflow/transportation_cleaning_integration_geospatial-": [
+              "pipeline",
+              "run-step"
+            ]
+          },
+          "orphan_templates": {
+            "Workflow/transportation_cleaning_integration_geospatial-": []
+          }
+        },
+        "issues": []
+      },
+      "configuration_validity": {
+        "name": "configuration_validity",
+        "raw_score": 5.75,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "service_accounts": {
+            "Workflow/transportation_cleaning_integration_geospatial-": null
+          },
+          "resource_coverage": {
+            "Workflow/transportation_cleaning_integration_geospatial-:run-step": true
+          },
+          "security_context_coverage": {
+            "Workflow/transportation_cleaning_integration_geospatial-:run-step": false
+          },
+          "retry_timeout_coverage": {
+            "signals": 0,
+            "template_count": 2
+          },
+          "cron": {},
+          "volume_mount_errors": []
+        },
+        "issues": [
+          {
+            "severity": "minor",
+            "category": "configuration",
+            "message": "Workflow/transportation_cleaning_integration_geospatial- does not set spec.serviceAccountName",
+            "line": null,
+            "tool": null,
+            "details": {}
+          }
+        ]
+      },
+      "task_validity": {
+        "name": "task_validity",
+        "raw_score": 8.75,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "images": {
+            "Workflow/transportation_cleaning_integration_geospatial-:run-step": "custom-pipelines/transportation_cleaning_integration_geospatial:latest"
+          },
+          "task_name_duplicates": [],
+          "parameter_errors": [],
+          "template_types": {
+            "Workflow/transportation_cleaning_integration_geospatial-": {
+              "pipeline": "steps",
+              "run-step": "container"
+            }
+          }
+        },
+        "issues": [
+          {
+            "severity": "minor",
+            "category": "task",
+            "message": "Workflow/transportation_cleaning_integration_geospatial-:run-step uses an unpinned image tag",
+            "line": null,
+            "tool": null,
+            "details": {
+              "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest"
+            }
+          }
+        ]
+      },
+      "executability": {
+        "name": "executability",
+        "raw_score": 8.5,
+        "weight": 1.0,
+        "penalties_applied": 0.0,
+        "error": null,
+        "details": {
+          "dry_run": {
+            "unresolved_entrypoints": [],
+            "unresolved_local_refs": [],
+            "dag_dependency_errors": [],
+            "cycles": [],
+            "unresolved_external_refs": []
+          },
+          "argo_lint": {
+            "status": "passed",
+            "command": [
+              "/opt/homebrew/bin/argo",
+              "lint",
+              "--offline",
+              "--strict",
+              "-o",
+              "simple",
+              "/Users/abubakarialidu/Downloads/custom_pipelines/058_transportation_cleaning_integration_geospatial/pipeline.yaml"
+            ],
+            "returncode": 0,
+            "stdout": "no linting errors found!",
+            "stderr": ""
+          },
+          "hydrated_plan": {
+            "ok": true,
+            "scripts_ok": true,
+            "task_count": 6,
+            "tasks": [
+              {
+                "unit_id": "Workflow/transportation_cleaning_integration_geospatial-",
+                "node_id": "Workflow/transportation_cleaning_integration_geospatial-:pipeline/step-01->run-step",
+                "parent_template": "pipeline",
+                "template_name": "run-step",
+                "invocation_name": "step-01",
+                "source": "steps[0]",
+                "template_type": "container",
+                "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest",
+                "command": [
+                  "python"
+                ],
+                "args": [
+                  "/pipeline/scripts/step_01_load.py",
+                  "--data_dir",
+                  "/pipeline/data",
+                  "--output_dir",
+                  "/pipeline/output"
+                ],
+                "script_source": null,
+                "inputs": {
+                  "script": "step_01_load.py"
+                },
+                "unresolved_placeholders": [],
+                "runtime_placeholders": [],
+                "outputs": []
+              },
+              {
+                "unit_id": "Workflow/transportation_cleaning_integration_geospatial-",
+                "node_id": "Workflow/transportation_cleaning_integration_geospatial-:pipeline/step-02->run-step",
+                "parent_template": "pipeline",
+                "template_name": "run-step",
+                "invocation_name": "step-02",
+                "source": "steps[1]",
+                "template_type": "container",
+                "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest",
+                "command": [
+                  "python"
+                ],
+                "args": [
+                  "/pipeline/scripts/step_02_clean.py",
+                  "--data_dir",
+                  "/pipeline/data",
+                  "--output_dir",
+                  "/pipeline/output"
+                ],
+                "script_source": null,
+                "inputs": {
+                  "script": "step_02_clean.py"
+                },
+                "unresolved_placeholders": [],
+                "runtime_placeholders": [],
+                "outputs": []
+              },
+              {
+                "unit_id": "Workflow/transportation_cleaning_integration_geospatial-",
+                "node_id": "Workflow/transportation_cleaning_integration_geospatial-:pipeline/step-03->run-step",
+                "parent_template": "pipeline",
+                "template_name": "run-step",
+                "invocation_name": "step-03",
+                "source": "steps[2]",
+                "template_type": "container",
+                "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest",
+                "command": [
+                  "python"
+                ],
+                "args": [
+                  "/pipeline/scripts/step_03_features.py",
+                  "--data_dir",
+                  "/pipeline/data",
+                  "--output_dir",
+                  "/pipeline/output"
+                ],
+                "script_source": null,
+                "inputs": {
+                  "script": "step_03_features.py"
+                },
+                "unresolved_placeholders": [],
+                "runtime_placeholders": [],
+                "outputs": []
+              },
+              {
+                "unit_id": "Workflow/transportation_cleaning_integration_geospatial-",
+                "node_id": "Workflow/transportation_cleaning_integration_geospatial-:pipeline/step-04->run-step",
+                "parent_template": "pipeline",
+                "template_name": "run-step",
+                "invocation_name": "step-04",
+                "source": "steps[3]",
+                "template_type": "container",
+                "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest",
+                "command": [
+                  "python"
+                ],
+                "args": [
+                  "/pipeline/scripts/step_04_eda.py",
+                  "--data_dir",
+                  "/pipeline/data",
+                  "--output_dir",
+                  "/pipeline/output"
+                ],
+                "script_source": null,
+                "inputs": {
+                  "script": "step_04_eda.py"
+                },
+                "unresolved_placeholders": [],
+                "runtime_placeholders": [],
+                "outputs": []
+              },
+              {
+                "unit_id": "Workflow/transportation_cleaning_integration_geospatial-",
+                "node_id": "Workflow/transportation_cleaning_integration_geospatial-:pipeline/step-05->run-step",
+                "parent_template": "pipeline",
+                "template_name": "run-step",
+                "invocation_name": "step-05",
+                "source": "steps[4]",
+                "template_type": "container",
+                "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest",
+                "command": [
+                  "python"
+                ],
+                "args": [
+                  "/pipeline/scripts/step_05_model.py",
+                  "--data_dir",
+                  "/pipeline/data",
+                  "--output_dir",
+                  "/pipeline/output"
+                ],
+                "script_source": null,
+                "inputs": {
+                  "script": "step_05_model.py"
+                },
+                "unresolved_placeholders": [],
+                "runtime_placeholders": [],
+                "outputs": []
+              },
+              {
+                "unit_id": "Workflow/transportation_cleaning_integration_geospatial-",
+                "node_id": "Workflow/transportation_cleaning_integration_geospatial-:pipeline/step-06->run-step",
+                "parent_template": "pipeline",
+                "template_name": "run-step",
+                "invocation_name": "step-06",
+                "source": "steps[5]",
+                "template_type": "container",
+                "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest",
+                "command": [
+                  "python"
+                ],
+                "args": [
+                  "/pipeline/scripts/step_06_report.py",
+                  "--data_dir",
+                  "/pipeline/data",
+                  "--output_dir",
+                  "/pipeline/output"
+                ],
+                "script_source": null,
+                "inputs": {
+                  "script": "step_06_report.py"
+                },
+                "unresolved_placeholders": [],
+                "runtime_placeholders": [],
+                "outputs": []
+              }
+            ],
+            "errors": [],
+            "runtime_placeholders": [],
+            "external_refs": [],
+            "visited_templates": {
+              "Workflow/transportation_cleaning_integration_geospatial-": [
+                "pipeline",
+                "run-step"
+              ]
+            },
+            "script_checks": []
+          },
+          "argo_submit_dry_run": {
+            "status": "skipped",
+            "reason": "enable_argo_submit_dry_run=false"
+          },
+          "container_smoke": {
+            "status": "skipped",
+            "reason": "enable_container_smoke=false",
+            "checks": []
+          }
+        },
+        "issues": [
+          {
+            "severity": "minor",
+            "category": "executability",
+            "message": "No retryStrategy, timeout, or activeDeadlineSeconds found",
+            "line": null,
+            "tool": null,
+            "details": {}
+          }
+        ]
+      }
+    },
+    "issues": [
+      {
+        "severity": "minor",
+        "category": "configuration",
+        "message": "Workflow/transportation_cleaning_integration_geospatial- does not set spec.serviceAccountName",
+        "line": null,
+        "tool": null,
+        "details": {}
+      },
+      {
+        "severity": "minor",
+        "category": "task",
+        "message": "Workflow/transportation_cleaning_integration_geospatial-:run-step uses an unpinned image tag",
+        "line": null,
+        "tool": null,
+        "details": {
+          "image": "custom-pipelines/transportation_cleaning_integration_geospatial:latest"
+        }
+      },
+      {
+        "severity": "minor",
+        "category": "executability",
+        "message": "No retryStrategy, timeout, or activeDeadlineSeconds found",
+        "line": null,
+        "tool": null,
+        "details": {}
+      }
+    ]
+  }
+}
