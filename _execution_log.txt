@@ -1,0 +1,4929 @@
+=== PIPELINE EXECUTION LOG - Tue Jul 14 14:33:28 CEST 2026 ===
+
+SKIP: 001_analytics_statistical_cleaning_integration (output exists)
+===== RUNNING: 002_analytics_statistical_integration =====
+STEP 1: Data Loading & Profiling — Statistical Integration & Analysis Benchmark
+   Data: 500 rows, columns=['subject_id', 'group', 'baseline_score', 'post_score', 'age', 'region', 'sessions_attended', 'outcome']
+   Groups: {'Control': 207, 'Treatment_B': 154, 'Treatment_A': 139}
+   Outcome rate: 32.4%
+   data: 500 rows x 8 cols
+OK
+  ✓ step_01_load.py
+STEP 2: Data Cleaning & Standardization — Statistical Integration & Analysis Benchmark
+   [len(df)] rows saved
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering — Statistical Integration & Analysis Benchmark
+   Created: improvement, age_group, attendance_rate
+   [len(df.columns)] columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization — Statistical Integration & Analysis Benchmark
+   [len(num)] numerical features found
+OK
+  ✓ step_04_eda.py
+STEP 5: Statistical Analysis & Model Training — Statistical Integration & Analysis Benchmark
+   Best: RandomForest (LR CV=0.437, RF CV=0.464)
+   Test ROC-AUC: 0.458, Acc: 64.00%
+
+   Outcome by group:
+     Control: 36.7%
+     Treatment_B: 28.6%
+     Treatment_A: 30.2%
+  ✓ step_05_model.py
+STEP 6: Final Report — Statistical Integration & Analysis Benchmark
+======================================================================
+    Statistical Integration & Analysis Benchmark — FINAL SYNTHESIS REPORT
+    2026-07-14 14:33:39
+======================================================================
+
+Domain: Analytics
+
+This pipeline executed a complete analysis workflow:
+  1. Data Loading & Profiling — Ingested and profiled all data sources
+  2. Data Cleaning & Standardization — Handled missing values and outliers
+  3. Feature Engineering — Created domain-specific derived features
+  4. Exploratory Data Analysis — Generated visualizations and correlation analysis
+  5. Model Training — Trained and evaluated multiple ML models
+  6. Final Report — Synthesized findings and recommendations
+
+Key findings and model metrics are available in the output/ directory.
+
+Monitoring Recommendations:
+  • Track model performance monthly
+  • Monitor feature drift quarterly
+  • Retrain with new data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 002_analytics_statistical_integration COMPLETE
+
+SKIP: 003_credit_risk (output exists)
+SKIP: 004_customer_churn (output exists)
+SKIP: 005_demand_forecasting (output exists)
+===== RUNNING: 006_ecommerce_recommendation =====
+STEP 1: Load & Profile
+   customers: 500 rows x 7 cols
+   products: 200 rows x 8 cols
+   orders: 11436 rows x 7 cols
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   500 rows saved
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: price_tier, rating_tier
+   7 cols
+OK
+  ✓ step_03_features.py
+STEP 4: EDA
+   2 numerical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training
+   Clusters: 3, Accuracy: 100.00%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+============================================================
+    ECOMMERCE RECOMMENDATION — FINAL REPORT
+    2026-07-14 14:33:48
+============================================================
+
+Domain: E-Commerce / Retail
+Product recommendation engine using customer segments, order history, and product catalog attributes.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================
+OK
+  ✓ step_06_report.py
+  ✓ 006_ecommerce_recommendation COMPLETE
+
+===== RUNNING: 007_employee_attrition =====
+STEP 1: Load & Profile
+   employees: 500 rows x 19 cols
+   engagement: 970 rows x 7 cols
+   reviews: 2099 rows x 7 cols
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   500 rows saved
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: tenure_years, tenure_group
+   21 cols
+OK
+  ✓ step_03_features.py
+STEP 4: EDA
+   12 numerical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training
+   Target: is_attrited
+   ROC-AUC: 0.646, Acc: 79.00%
+  ✓ step_05_model.py
+STEP 6: Final Report
+============================================================
+    EMPLOYEE ATTRITION PREDICTION — FINAL REPORT
+    2026-07-14 14:33:57
+============================================================
+
+Domain: HR Analytics
+Predicting employee attrition using demographics, engagement surveys, and performance reviews.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================
+OK
+  ✓ step_06_report.py
+  ✓ 007_employee_attrition COMPLETE
+
+===== RUNNING: 008_energy_forecasting =====
+STEP 1: Load & Profile
+   energy: 8760 rows x 7 cols
+   weather: 365 rows x 8 cols
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   8760 rows saved
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   7 cols
+OK
+  ✓ step_03_features.py
+STEP 4: EDA
+   6 numerical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training
+   Target: consumption_kwh
+   MAE: 23.9, R2: 0.474
+  ✓ step_05_model.py
+STEP 6: Final Report
+============================================================
+    ENERGY CONSUMPTION FORECASTING — FINAL REPORT
+    2026-07-14 14:34:09
+============================================================
+
+Domain: Energy / Utilities
+Forecasting energy consumption using historical patterns and weather covariates.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================
+OK
+  ✓ step_06_report.py
+  ✓ 008_energy_forecasting COMPLETE
+
+===== RUNNING: 009_healthcare_readmission =====
+STEP 1: Load & Profile
+   patients: 500 rows x 12 cols
+   admissions: 1289 rows x 10 cols
+   lab_results: 7660 rows x 6 cols
+   medications: 5850 rows x 5 cols
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   500 rows saved
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: age_group
+   13 cols
+OK
+  ✓ step_03_features.py
+STEP 4: EDA
+   7 numerical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training
+   Target: has_diabetes
+   ROC-AUC: 0.584, Acc: 69.00%
+  ✓ step_05_model.py
+STEP 6: Final Report
+============================================================
+    HEALTHCARE READMISSION PREDICTION — FINAL REPORT
+    2026-07-14 14:34:20
+============================================================
+
+Domain: Healthcare / Clinical
+Predicting patient readmission risk from clinical records, lab results, and medication history.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================
+OK
+  ✓ step_06_report.py
+  ✓ 009_healthcare_readmission COMPLETE
+
+===== RUNNING: 010_hr_regression_visualization_integration =====
+STEP 1: Data Loading & Profiling — HR Salary Regression & Workforce Visualization
+   Employees: 400, Departments: 6
+   Salary range: $38,759 - $228,518
+   [name]: 400 rows x 9 cols
+   [name]: 6 rows x 4 cols
+OK
+  ✓ step_01_load.py
+STEP 2: Data Cleaning & Standardization — HR Salary Regression & Workforce Visualization
+   [len(df)] rows saved
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering — HR Salary Regression & Workforce Visualization
+   Created: exp_level, salary_budget_ratio, age_group
+   [len(df.columns)] columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization — HR Salary Regression & Workforce Visualization
+   [len(num)] numerical features found
+OK
+  ✓ step_04_eda.py
+STEP 5: Statistical Analysis & Model Training — HR Salary Regression & Workforce Visualization
+   LinearRegression: MAE=$14374, R2=0.752
+   RandomForest:     MAE=$5830, R2=0.930
+
+   Avg Salary by Department:
+     HR: $113,811
+     Marketing: $123,315
+     Sales: $149,101
+     Finance: $120,582
+     Operations: $122,129
+  ✓ step_05_model.py
+STEP 6: Final Report — HR Salary Regression & Workforce Visualization
+======================================================================
+    HR Salary Regression & Workforce Visualization — FINAL SYNTHESIS REPORT
+    2026-07-14 14:34:31
+======================================================================
+
+Domain: HR Analytics
+
+This pipeline executed a complete analysis workflow:
+  1. Data Loading & Profiling — Ingested and profiled all data sources
+  2. Data Cleaning & Standardization — Handled missing values and outliers
+  3. Feature Engineering — Created domain-specific derived features
+  4. Exploratory Data Analysis — Generated visualizations and correlation analysis
+  5. Model Training — Trained and evaluated multiple ML models
+  6. Final Report — Synthesized findings and recommendations
+
+Key findings and model metrics are available in the output/ directory.
+
+Monitoring Recommendations:
+  • Track model performance monthly
+  • Monitor feature drift quarterly
+  • Retrain with new data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 010_hr_regression_visualization_integration COMPLETE
+
+===== RUNNING: 011_hr_visualization_integration_validation =====
+STEP 1: Data Loading & Profiling — HR Workforce Visualization & Data Validation
+   HR data: 500 employees, 9 columns
+   Departments: 6, Status: {'Full-time': 355, 'Contract': 74, 'Part-time': 71}
+   Avg salary: $74,338, Avg tenure: 12.4 yrs
+
+   Validation: 0 issues found
+   hr_data: 500 rows x 9 cols
+OK
+  ✓ step_01_load.py
+STEP 2: Data Cleaning & Standardization — HR Workforce Visualization & Data Validation
+   [len(df)] rows saved
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering — HR Workforce Visualization & Data Validation
+   Created: tenure_group, age_group, bonus_pct
+   [len(df.columns)] columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization — HR Workforce Visualization & Data Validation
+   [len(num)] numerical features found
+OK
+  ✓ step_04_eda.py
+STEP 5: Statistical Analysis & Model Training — HR Workforce Visualization & Data Validation
+
+   Workforce Clusters:
+     Cluster 0 (n=133): salary=$60,587, tenure=7.3yr, perf=3.0
+     Cluster 1 (n=166): salary=$64,840, tenure=7.7yr, perf=2.8
+     Cluster 2 (n=201): salary=$91,114, tenure=19.6yr, perf=3.0
+
+   High Performer Prediction: ROC-AUC=0.535, Acc=62.00%
+  ✓ step_05_model.py
+STEP 6: Final Report — HR Workforce Visualization & Data Validation
+======================================================================
+    HR Workforce Visualization & Data Validation — FINAL SYNTHESIS REPORT
+    2026-07-14 14:34:42
+======================================================================
+
+Domain: HR Analytics
+
+This pipeline executed a complete analysis workflow:
+  1. Data Loading & Profiling — Ingested and profiled all data sources
+  2. Data Cleaning & Standardization — Handled missing values and outliers
+  3. Feature Engineering — Created domain-specific derived features
+  4. Exploratory Data Analysis — Generated visualizations and correlation analysis
+  5. Model Training — Trained and evaluated multiple ML models
+  6. Final Report — Synthesized findings and recommendations
+
+Key findings and model metrics are available in the output/ directory.
+
+Monitoring Recommendations:
+  • Track model performance monthly
+  • Monitor feature drift quarterly
+  • Retrain with new data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 011_hr_visualization_integration_validation COMPLETE
+
+===== RUNNING: 012_insurance_claims =====
+STEP 1: Load & Profile
+   claims: 1000 rows x 18 cols
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   1000 rows saved
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: claim_size, age_group
+   19 cols
+OK
+  ✓ step_03_features.py
+STEP 4: EDA
+   10 numerical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training
+   Target: is_fraudulent (rate: 7.5%)
+   ROC-AUC: 0.648, Acc: 92.50%
+  ✓ step_05_model.py
+STEP 6: Final Report
+============================================================
+    INSURANCE CLAIMS FRAUD DETECTION — FINAL REPORT
+    2026-07-14 14:34:51
+============================================================
+
+Domain: Insurance / Risk
+Detecting fraudulent insurance claims using policyholder characteristics and claim patterns.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================
+OK
+  ✓ step_06_report.py
+  ✓ 012_insurance_claims COMPLETE
+
+===== RUNNING: 013_predictive_maintenance =====
+STEP 1: Load & Profile
+   sensor_readings: 21600 rows x 13 cols
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   21600 rows saved
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created features
+   13 cols
+OK
+  ✓ step_03_features.py
+STEP 4: EDA
+   10 numerical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training
+   Target: is_failure (rate: 0.1%)
+   ROC-AUC: 0.573, Acc: 99.91%
+  ✓ step_05_model.py
+STEP 6: Final Report
+============================================================
+    PREDICTIVE MAINTENANCE — FINAL REPORT
+    2026-07-14 14:35:01
+============================================================
+
+Domain: Manufacturing / IoT
+Predicting equipment failure from sensor data (temperature, vibration, pressure) for preventive maintenance.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================
+OK
+  ✓ step_06_report.py
+  ✓ 013_predictive_maintenance COMPLETE
+
+===== RUNNING: 014_sports_clustering_integration_validation =====
+STEP 1: Load & Profile — Sports | Techniques: clustering, integration, validation
+   Data: 511 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=44.58, std=20.79
+   points_per_game: mean=12.45, std=7.66
+   assists_per_game: mean=3.93, std=2.82
+   rebounds_per_game: mean=6.19, std=3.83
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — clustering, integration, validation
+   Clusters (n=3):
+     Cluster 0 (n=219): mean usage_rate=0.249
+     Cluster 1 (n=210): mean usage_rate=0.247
+     Cluster 2 (n=82): mean usage_rate=0.257
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLUSTERING, INTEGRATION, VALIDATION
+    2026-07-14 14:35:07
+======================================================================
+
+Domain: Sports
+Techniques Applied: clustering, integration, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 014_sports_clustering_integration_validation COMPLETE
+
+===== RUNNING: 015_sports_clustering_prediction_statistical =====
+STEP 1: Load & Profile — Sports | Techniques: clustering, prediction, statistical
+   Data: 518 rows x 20 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=44.28, std=20.98
+   points_per_game: mean=12.26, std=7.53
+   assists_per_game: mean=4.10, std=2.77
+   rebounds_per_game: mean=6.33, std=3.79
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   23 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   19 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — clustering, prediction, statistical
+   Clusters (n=3):
+     Cluster 0 (n=75): mean all_star=0.200
+     Cluster 1 (n=243): mean all_star=0.210
+     Cluster 2 (n=200): mean all_star=0.185
+   ROC-AUC: 0.524, Acc: 79.81%
+   Pearson r: -0.063, p=0.1519
+   ANOVA by team: F=0.94, p=0.4404
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLUSTERING, PREDICTION, STATISTICAL
+    2026-07-14 14:35:14
+======================================================================
+
+Domain: Sports
+Techniques Applied: clustering, prediction, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 015_sports_clustering_prediction_statistical COMPLETE
+
+===== RUNNING: 016_sports_clustering_prediction_visualization =====
+STEP 1: Load & Profile — Sports | Techniques: clustering, prediction, visualization
+   Data: 525 rows x 17 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.54, std=20.53
+   points_per_game: mean=11.65, std=7.33
+   assists_per_game: mean=4.35, std=2.90
+   rebounds_per_game: mean=6.53, std=3.75
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   20 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   16 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — clustering, prediction, visualization
+   Clusters (n=3):
+     Cluster 0 (n=80): mean all_star=0.300
+     Cluster 1 (n=232): mean all_star=0.284
+     Cluster 2 (n=213): mean all_star=0.268
+   ROC-AUC: 0.601, Acc: 70.48%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLUSTERING, PREDICTION, VISUALIZATION
+    2026-07-14 14:35:22
+======================================================================
+
+Domain: Sports
+Techniques Applied: clustering, prediction, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 016_sports_clustering_prediction_visualization COMPLETE
+
+===== RUNNING: 017_sports_clustering_statistical_visualization =====
+STEP 1: Load & Profile — Sports | Techniques: clustering, statistical, visualization
+   Data: 532 rows x 17 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.79, std=21.29
+   points_per_game: mean=11.71, std=7.51
+   assists_per_game: mean=4.03, std=2.80
+   rebounds_per_game: mean=6.00, std=3.78
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   20 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   16 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — clustering, statistical, visualization
+   Clusters (n=3):
+     Cluster 0 (n=219): mean free_throw_pct=0.734
+     Cluster 1 (n=88): mean free_throw_pct=0.764
+     Cluster 2 (n=225): mean free_throw_pct=0.745
+   Pearson r: -0.071, p=0.1008
+   ANOVA by team: F=1.81, p=0.1267
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLUSTERING, STATISTICAL, VISUALIZATION
+    2026-07-14 14:35:30
+======================================================================
+
+Domain: Sports
+Techniques Applied: clustering, statistical, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 017_sports_clustering_statistical_visualization COMPLETE
+
+===== RUNNING: 018_sports_clustering_visualization_integration =====
+STEP 1: Load & Profile — Sports | Techniques: clustering, integration, visualization
+   Data: 539 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.98, std=20.31
+   points_per_game: mean=12.18, std=7.39
+   assists_per_game: mean=4.04, std=2.79
+   rebounds_per_game: mean=6.20, std=3.87
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — clustering, integration, visualization
+   Clusters (n=3):
+     Cluster 0 (n=248): mean usage_rate=0.256
+     Cluster 1 (n=91): mean usage_rate=0.254
+     Cluster 2 (n=200): mean usage_rate=0.255
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLUSTERING, INTEGRATION, VISUALIZATION
+    2026-07-14 14:35:36
+======================================================================
+
+Domain: Sports
+Techniques Applied: clustering, integration, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 018_sports_clustering_visualization_integration COMPLETE
+
+===== RUNNING: 019_sports_prediction_cleaning_integration =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, integration, prediction
+   Data: 546 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=44.40, std=21.25
+   points_per_game: mean=12.40, std=7.48
+   assists_per_game: mean=4.30, std=2.86
+   rebounds_per_game: mean=5.87, std=3.39
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, prediction
+   ROC-AUC: 0.552, Acc: 76.36%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, INTEGRATION, PREDICTION
+    2026-07-14 14:35:42
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, integration, prediction
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 019_sports_prediction_cleaning_integration COMPLETE
+
+===== RUNNING: 020_sports_prediction_statistical_visualization =====
+STEP 1: Load & Profile — Sports | Techniques: prediction, statistical, visualization
+   Data: 553 rows x 17 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.95, std=21.32
+   points_per_game: mean=12.56, std=7.68
+   assists_per_game: mean=4.02, std=2.82
+   rebounds_per_game: mean=6.19, std=3.64
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   20 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   16 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — prediction, statistical, visualization
+   ROC-AUC: 0.513, Acc: 73.87%
+   Pearson r: 0.011, p=0.7922
+   ANOVA by team: F=0.67, p=0.6168
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: PREDICTION, STATISTICAL, VISUALIZATION
+    2026-07-14 14:35:50
+======================================================================
+
+Domain: Sports
+Techniques Applied: prediction, statistical, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 020_sports_prediction_statistical_visualization COMPLETE
+
+===== RUNNING: 021_sports_prediction_statistical_visualization_v2 =====
+STEP 1: Load & Profile — Sports | Techniques: prediction, statistical, visualization
+   Data: 560 rows x 17 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.43, std=20.35
+   points_per_game: mean=12.34, std=7.31
+   assists_per_game: mean=3.78, std=2.79
+   rebounds_per_game: mean=5.98, std=3.60
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   20 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   16 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — prediction, statistical, visualization
+   ROC-AUC: 0.528, Acc: 71.43%
+   Pearson r: 0.016, p=0.7047
+   ANOVA by team: F=0.37, p=0.8272
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: PREDICTION, STATISTICAL, VISUALIZATION
+    2026-07-14 14:35:57
+======================================================================
+
+Domain: Sports
+Techniques Applied: prediction, statistical, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 021_sports_prediction_statistical_visualization_v2 COMPLETE
+
+===== RUNNING: 022_sports_prediction_visualization_cleaning =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, prediction, visualization
+   Data: 567 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.44, std=20.02
+   points_per_game: mean=12.32, std=7.51
+   assists_per_game: mean=4.03, std=2.78
+   rebounds_per_game: mean=5.99, std=3.97
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, prediction, visualization
+   ROC-AUC: 0.515, Acc: 76.32%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, PREDICTION, VISUALIZATION
+    2026-07-14 14:36:04
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, prediction, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 022_sports_prediction_visualization_cleaning COMPLETE
+
+===== RUNNING: 023_sports_regression_clustering_visualization =====
+STEP 1: Load & Profile — Sports | Techniques: clustering, regression, visualization
+   Data: 574 rows x 16 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.11, std=20.04
+   points_per_game: mean=12.11, std=7.46
+   assists_per_game: mean=3.99, std=2.69
+   rebounds_per_game: mean=6.15, std=3.74
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   19 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   15 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — clustering, regression, visualization
+   Clusters (n=3):
+     Cluster 0 (n=198): mean win_shares=5.027
+     Cluster 1 (n=192): mean win_shares=5.005
+     Cluster 2 (n=184): mean win_shares=4.821
+   MAE: 2.94, R2: -0.083
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLUSTERING, REGRESSION, VISUALIZATION
+    2026-07-14 14:36:13
+======================================================================
+
+Domain: Sports
+Techniques Applied: clustering, regression, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 023_sports_regression_clustering_visualization COMPLETE
+
+===== RUNNING: 024_sports_regression_prediction_statistical =====
+STEP 1: Load & Profile — Sports | Techniques: prediction, regression, statistical
+   Data: 581 rows x 19 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.24, std=20.78
+   points_per_game: mean=12.63, std=7.53
+   assists_per_game: mean=4.35, std=2.81
+   rebounds_per_game: mean=5.84, std=3.69
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   22 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   18 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — prediction, regression, statistical
+   ROC-AUC: 0.595, Acc: 76.07%
+   MAE: 0.36, R2: -0.005
+   Pearson r: -0.044, p=0.2946
+   ANOVA by team: F=1.83, p=0.1240
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: PREDICTION, REGRESSION, STATISTICAL
+    2026-07-14 14:36:19
+======================================================================
+
+Domain: Sports
+Techniques Applied: prediction, regression, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 024_sports_regression_prediction_statistical COMPLETE
+
+===== RUNNING: 025_sports_regression_prediction_statistical_v2 =====
+STEP 1: Load & Profile — Sports | Techniques: prediction, regression, statistical
+   Data: 588 rows x 19 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.57, std=19.83
+   points_per_game: mean=12.82, std=7.18
+   assists_per_game: mean=4.19, std=2.78
+   rebounds_per_game: mean=6.07, std=3.66
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   22 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   18 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — prediction, regression, statistical
+   ROC-AUC: 0.510, Acc: 74.58%
+   MAE: 0.40, R2: -0.067
+   Pearson r: 0.015, p=0.7195
+   ANOVA by team: F=0.25, p=0.9068
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: PREDICTION, REGRESSION, STATISTICAL
+    2026-07-14 14:36:27
+======================================================================
+
+Domain: Sports
+Techniques Applied: prediction, regression, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 025_sports_regression_prediction_statistical_v2 COMPLETE
+
+SKIP: 026_sports_regression_prediction_statistical_v3 (output exists)
+===== RUNNING: 027_sports_regression_prediction_visualization =====
+STEP 1: Load & Profile — Sports | Techniques: prediction, regression, visualization
+   Data: 402 rows x 16 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.50, std=21.25
+   points_per_game: mean=11.61, std=7.22
+   assists_per_game: mean=4.20, std=2.73
+   rebounds_per_game: mean=6.26, std=3.75
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   19 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   15 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — prediction, regression, visualization
+   ROC-AUC: 0.524, Acc: 77.78%
+   MAE: 0.37, R2: -0.188
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: PREDICTION, REGRESSION, VISUALIZATION
+    2026-07-14 14:36:36
+======================================================================
+
+Domain: Sports
+Techniques Applied: prediction, regression, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 027_sports_regression_prediction_visualization COMPLETE
+
+===== RUNNING: 028_sports_regression_prediction_visualization_v2 =====
+STEP 1: Load & Profile — Sports | Techniques: prediction, regression, visualization
+   Data: 409 rows x 16 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.49, std=21.13
+   points_per_game: mean=12.38, std=7.59
+   assists_per_game: mean=4.07, std=2.84
+   rebounds_per_game: mean=6.25, std=3.94
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   19 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   15 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — prediction, regression, visualization
+   ROC-AUC: 0.544, Acc: 64.63%
+   MAE: 0.42, R2: -0.061
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: PREDICTION, REGRESSION, VISUALIZATION
+    2026-07-14 14:36:43
+======================================================================
+
+Domain: Sports
+Techniques Applied: prediction, regression, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 028_sports_regression_prediction_visualization_v2 COMPLETE
+
+===== RUNNING: 029_sports_regression_statistical_visualization =====
+STEP 1: Load & Profile — Sports | Techniques: regression, statistical, visualization
+   Data: 416 rows x 16 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=44.99, std=20.65
+   points_per_game: mean=12.09, std=7.34
+   assists_per_game: mean=4.04, std=2.68
+   rebounds_per_game: mean=6.33, std=4.05
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   19 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   15 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — regression, statistical, visualization
+   MAE: 0.09, R2: -0.139
+   Pearson r: -0.043, p=0.3804
+   ANOVA by team: F=1.38, p=0.2423
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: REGRESSION, STATISTICAL, VISUALIZATION
+    2026-07-14 14:36:51
+======================================================================
+
+Domain: Sports
+Techniques Applied: regression, statistical, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 029_sports_regression_statistical_visualization COMPLETE
+
+===== RUNNING: 030_sports_statistical_cleaning =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, statistical
+   Data: 423 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.35, std=20.46
+   points_per_game: mean=12.22, std=7.55
+   assists_per_game: mean=4.08, std=2.65
+   rebounds_per_game: mean=6.05, std=3.75
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, statistical
+   Pearson r: -0.074, p=0.1299
+   ANOVA by team: F=2.43, p=0.0491
+   MAE: 0.08, R2: -0.001
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, STATISTICAL
+    2026-07-14 14:36:57
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 030_sports_statistical_cleaning COMPLETE
+
+===== RUNNING: 031_sports_statistical_cleaning_integration =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, integration, statistical
+   Data: 430 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.47, std=21.07
+   points_per_game: mean=12.14, std=7.78
+   assists_per_game: mean=3.75, std=2.65
+   rebounds_per_game: mean=6.45, std=3.75
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, statistical
+   Pearson r: -0.009, p=0.8523
+   ANOVA by team: F=1.18, p=0.3192
+   MAE: 0.08, R2: -0.118
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, INTEGRATION, STATISTICAL
+    2026-07-14 14:37:03
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, integration, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 031_sports_statistical_cleaning_integration COMPLETE
+
+===== RUNNING: 032_sports_statistical_cleaning_integration_v2 =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, integration, statistical
+   Data: 437 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.05, std=20.32
+   points_per_game: mean=12.37, std=7.68
+   assists_per_game: mean=4.19, std=2.67
+   rebounds_per_game: mean=6.14, std=3.91
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, statistical
+   Pearson r: 0.058, p=0.2245
+   ANOVA by team: F=1.02, p=0.3988
+   MAE: 0.07, R2: -0.080
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, INTEGRATION, STATISTICAL
+    2026-07-14 14:37:10
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, integration, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 032_sports_statistical_cleaning_integration_v2 COMPLETE
+
+===== RUNNING: 033_sports_statistical_cleaning_integration_v3 =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, integration, statistical
+   Data: 444 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=43.96, std=20.61
+   points_per_game: mean=11.44, std=7.21
+   assists_per_game: mean=4.00, std=2.66
+   rebounds_per_game: mean=6.22, std=3.77
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, statistical
+   Pearson r: -0.059, p=0.2128
+   ANOVA by team: F=0.83, p=0.5100
+   MAE: 0.07, R2: -0.076
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, INTEGRATION, STATISTICAL
+    2026-07-14 14:37:15
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, integration, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 033_sports_statistical_cleaning_integration_v3 COMPLETE
+
+===== RUNNING: 034_sports_statistical_cleaning_integration_v4 =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, integration, statistical
+   Data: 451 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.74, std=20.71
+   points_per_game: mean=12.63, std=7.65
+   assists_per_game: mean=4.07, std=2.70
+   rebounds_per_game: mean=6.15, std=3.82
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, statistical
+   Pearson r: -0.001, p=0.9850
+   ANOVA by team: F=1.86, p=0.1191
+   MAE: 0.08, R2: -0.059
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, INTEGRATION, STATISTICAL
+    2026-07-14 14:37:20
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, integration, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 034_sports_statistical_cleaning_integration_v4 COMPLETE
+
+===== RUNNING: 035_sports_statistical_cleaning_integration_v5 =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, integration, statistical
+   Data: 458 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.57, std=21.75
+   points_per_game: mean=12.24, std=7.70
+   assists_per_game: mean=4.18, std=2.77
+   rebounds_per_game: mean=5.86, std=3.91
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, statistical
+   Pearson r: 0.061, p=0.1906
+   ANOVA by team: F=0.20, p=0.9405
+   MAE: 0.08, R2: -0.151
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, INTEGRATION, STATISTICAL
+    2026-07-14 14:37:26
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, integration, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 035_sports_statistical_cleaning_integration_v5 COMPLETE
+
+===== RUNNING: 036_sports_statistical_cleaning_validation =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, statistical, validation
+   Data: 465 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.57, std=21.57
+   points_per_game: mean=12.42, std=7.74
+   assists_per_game: mean=4.02, std=2.77
+   rebounds_per_game: mean=6.26, std=3.79
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, statistical, validation
+   Pearson r: -0.021, p=0.6578
+   ANOVA by team: F=0.34, p=0.8532
+   MAE: 0.08, R2: -0.111
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, STATISTICAL, VALIDATION
+    2026-07-14 14:37:31
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, statistical, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 036_sports_statistical_cleaning_validation COMPLETE
+
+===== RUNNING: 037_sports_statistical_integration =====
+STEP 1: Load & Profile — Sports | Techniques: integration, statistical
+   Data: 472 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.11, std=20.83
+   points_per_game: mean=12.27, std=7.49
+   assists_per_game: mean=3.81, std=2.80
+   rebounds_per_game: mean=6.10, std=3.82
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, statistical
+   Pearson r: -0.079, p=0.0856
+   ANOVA by team: F=1.24, p=0.2935
+   MAE: 0.09, R2: -0.221
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: INTEGRATION, STATISTICAL
+    2026-07-14 14:37:36
+======================================================================
+
+Domain: Sports
+Techniques Applied: integration, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 037_sports_statistical_integration COMPLETE
+
+===== RUNNING: 038_sports_statistical_integration_v2 =====
+STEP 1: Load & Profile — Sports | Techniques: integration, statistical
+   Data: 479 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.97, std=20.77
+   points_per_game: mean=12.16, std=7.97
+   assists_per_game: mean=4.12, std=2.69
+   rebounds_per_game: mean=5.87, std=3.80
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, statistical
+   Pearson r: 0.051, p=0.2641
+   ANOVA by team: F=1.23, p=0.2973
+   MAE: 0.08, R2: -0.050
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: INTEGRATION, STATISTICAL
+    2026-07-14 14:37:41
+======================================================================
+
+Domain: Sports
+Techniques Applied: integration, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 038_sports_statistical_integration_v2 COMPLETE
+
+===== RUNNING: 039_sports_statistical_visualization_cleaning =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, statistical, visualization
+   Data: 486 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=44.85, std=20.47
+   points_per_game: mean=12.93, std=7.75
+   assists_per_game: mean=4.30, std=2.73
+   rebounds_per_game: mean=6.00, std=3.61
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, statistical, visualization
+   Pearson r: 0.032, p=0.4855
+   ANOVA by team: F=0.58, p=0.6783
+   MAE: 0.08, R2: -0.097
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, STATISTICAL, VISUALIZATION
+    2026-07-14 14:37:47
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, statistical, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 039_sports_statistical_visualization_cleaning COMPLETE
+
+===== RUNNING: 040_sports_statistical_visualization_cleaning_v2 =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, statistical, visualization
+   Data: 493 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.56, std=21.32
+   points_per_game: mean=11.65, std=7.26
+   assists_per_game: mean=4.18, std=2.79
+   rebounds_per_game: mean=5.95, std=3.64
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, statistical, visualization
+   Pearson r: 0.015, p=0.7361
+   ANOVA by team: F=0.82, p=0.5159
+   MAE: 0.08, R2: -0.002
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, STATISTICAL, VISUALIZATION
+    2026-07-14 14:37:53
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, statistical, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 040_sports_statistical_visualization_cleaning_v2 COMPLETE
+
+===== RUNNING: 041_sports_statistical_visualization_integration =====
+STEP 1: Load & Profile — Sports | Techniques: integration, statistical, visualization
+   Data: 500 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=44.80, std=21.19
+   points_per_game: mean=12.22, std=7.68
+   assists_per_game: mean=4.18, std=2.73
+   rebounds_per_game: mean=6.18, std=3.93
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, statistical, visualization
+   Pearson r: -0.033, p=0.4597
+   ANOVA by team: F=0.91, p=0.4580
+   MAE: 0.07, R2: -0.065
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: INTEGRATION, STATISTICAL, VISUALIZATION
+    2026-07-14 14:37:59
+======================================================================
+
+Domain: Sports
+Techniques Applied: integration, statistical, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 041_sports_statistical_visualization_integration COMPLETE
+
+===== RUNNING: 042_sports_validation_recovery =====
+STEP 1: Load & Profile — Sports | Techniques: recovery, validation
+   Data: 507 rows x 11 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=44.70, std=20.41
+   points_per_game: mean=12.17, std=7.50
+   assists_per_game: mean=4.16, std=2.70
+   rebounds_per_game: mean=6.24, std=4.02
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   10 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — recovery, validation
+   MAE: 0.94, R2: 0.800
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: RECOVERY, VALIDATION
+    2026-07-14 14:38:08
+======================================================================
+
+Domain: Sports
+Techniques Applied: recovery, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 042_sports_validation_recovery COMPLETE
+
+===== RUNNING: 043_sports_visualization =====
+STEP 1: Load & Profile — Sports | Techniques: visualization
+   Data: 514 rows x 11 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=47.46, std=20.12
+   points_per_game: mean=12.18, std=7.68
+   assists_per_game: mean=4.36, std=2.80
+   rebounds_per_game: mean=6.10, std=3.90
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   10 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — visualization
+   MAE: 1.03, R2: 0.843
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: VISUALIZATION
+    2026-07-14 14:38:14
+======================================================================
+
+Domain: Sports
+Techniques Applied: visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 043_sports_visualization COMPLETE
+
+===== RUNNING: 044_sports_visualization_cleaning_integration =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, integration, visualization
+   Data: 521 rows x 11 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.01, std=20.72
+   points_per_game: mean=12.37, std=7.41
+   assists_per_game: mean=3.99, std=2.82
+   rebounds_per_game: mean=5.95, std=3.64
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   10 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, visualization
+   MAE: 0.94, R2: 0.796
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, INTEGRATION, VISUALIZATION
+    2026-07-14 14:38:20
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, integration, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 044_sports_visualization_cleaning_integration COMPLETE
+
+===== RUNNING: 045_sports_visualization_cleaning_recovery =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, recovery, visualization
+   Data: 528 rows x 11 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=44.55, std=20.93
+   points_per_game: mean=12.27, std=7.75
+   assists_per_game: mean=4.03, std=2.82
+   rebounds_per_game: mean=6.66, std=3.84
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   10 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, recovery, visualization
+   MAE: 1.01, R2: 0.747
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, RECOVERY, VISUALIZATION
+    2026-07-14 14:38:28
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, recovery, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 045_sports_visualization_cleaning_recovery COMPLETE
+
+===== RUNNING: 046_sports_visualization_cleaning_recovery_v2 =====
+STEP 1: Load & Profile — Sports | Techniques: cleaning, recovery, visualization
+   Data: 535 rows x 11 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.53, std=21.06
+   points_per_game: mean=12.42, std=7.64
+   assists_per_game: mean=4.07, std=2.79
+   rebounds_per_game: mean=5.66, std=3.58
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   10 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, recovery, visualization
+   MAE: 1.03, R2: 0.805
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: CLEANING, RECOVERY, VISUALIZATION
+    2026-07-14 14:38:34
+======================================================================
+
+Domain: Sports
+Techniques Applied: cleaning, recovery, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 046_sports_visualization_cleaning_recovery_v2 COMPLETE
+
+===== RUNNING: 047_sports_visualization_integration_features =====
+STEP 1: Load & Profile — Sports | Techniques: features, integration, visualization
+   Data: 542 rows x 11 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.22, std=20.58
+   points_per_game: mean=11.90, std=7.46
+   assists_per_game: mean=4.16, std=2.80
+   rebounds_per_game: mean=6.02, std=3.62
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   10 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — features, integration, visualization
+   MAE: 0.94, R2: 0.772
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: FEATURES, INTEGRATION, VISUALIZATION
+    2026-07-14 14:38:41
+======================================================================
+
+Domain: Sports
+Techniques Applied: features, integration, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 047_sports_visualization_integration_features COMPLETE
+
+===== RUNNING: 048_sports_visualization_integration_geospatial =====
+STEP 1: Load & Profile — Sports | Techniques: geospatial, integration, visualization
+   Data: 549 rows x 14 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.68, std=19.79
+   points_per_game: mean=12.58, std=7.20
+   assists_per_game: mean=4.10, std=2.73
+   rebounds_per_game: mean=6.28, std=3.89
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   17 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   12 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — geospatial, integration, visualization
+   Accuracy: 0.236
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: GEOSPATIAL, INTEGRATION, VISUALIZATION
+    2026-07-14 14:38:48
+======================================================================
+
+Domain: Sports
+Techniques Applied: geospatial, integration, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 048_sports_visualization_integration_geospatial COMPLETE
+
+===== RUNNING: 049_sports_visualization_integration_recovery =====
+STEP 1: Load & Profile — Sports | Techniques: integration, recovery, visualization
+   Data: 556 rows x 11 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=45.34, std=20.55
+   points_per_game: mean=12.45, std=7.48
+   assists_per_game: mean=4.24, std=2.89
+   rebounds_per_game: mean=6.18, std=3.62
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   10 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, recovery, visualization
+   MAE: 1.09, R2: 0.748
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: INTEGRATION, RECOVERY, VISUALIZATION
+    2026-07-14 14:38:56
+======================================================================
+
+Domain: Sports
+Techniques Applied: integration, recovery, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 049_sports_visualization_integration_recovery COMPLETE
+
+SKIP: 050_sports_visualization_integration_recovery_v2 (output exists)
+===== RUNNING: 051_sports_visualization_integration_validation =====
+STEP 1: Load & Profile — Sports | Techniques: integration, validation, visualization
+   Data: 570 rows x 11 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.60, std=20.87
+   points_per_game: mean=12.50, std=7.40
+   assists_per_game: mean=4.23, std=2.83
+   rebounds_per_game: mean=6.27, std=3.68
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   10 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, validation, visualization
+   MAE: 1.02, R2: 0.709
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: INTEGRATION, VALIDATION, VISUALIZATION
+    2026-07-14 14:39:01
+======================================================================
+
+Domain: Sports
+Techniques Applied: integration, validation, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 051_sports_visualization_integration_validation COMPLETE
+
+===== RUNNING: 052_sports_visualization_integration_validation_v2 =====
+STEP 1: Load & Profile — Sports | Techniques: integration, validation, visualization
+   Data: 577 rows x 11 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=44.16, std=21.39
+   points_per_game: mean=12.30, std=7.41
+   assists_per_game: mean=4.14, std=2.74
+   rebounds_per_game: mean=6.30, std=3.54
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   10 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, validation, visualization
+   MAE: 1.02, R2: 0.747
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: INTEGRATION, VALIDATION, VISUALIZATION
+    2026-07-14 14:39:08
+======================================================================
+
+Domain: Sports
+Techniques Applied: integration, validation, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 052_sports_visualization_integration_validation_v2 COMPLETE
+
+===== RUNNING: 053_sports_visualization_validation_recovery =====
+STEP 1: Load & Profile — Sports | Techniques: recovery, validation, visualization
+   Data: 584 rows x 11 cols
+   Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+   games_played: mean=46.12, std=20.52
+   points_per_game: mean=12.40, std=7.36
+   assists_per_game: mean=4.30, std=2.79
+   rebounds_per_game: mean=6.11, std=3.68
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   10 numerical, 3 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — recovery, validation, visualization
+   MAE: 1.04, R2: 0.774
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    SPORTS PIPELINE: RECOVERY, VALIDATION, VISUALIZATION
+    2026-07-14 14:39:15
+======================================================================
+
+Domain: Sports
+Techniques Applied: recovery, validation, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 053_sports_visualization_validation_recovery COMPLETE
+
+===== RUNNING: 054_student_performance =====
+STEP 1: Load & Profile — Education | Techniques: analysis
+   Data: 300 rows x 10 cols
+   Columns: ['student_id', 'major', 'year', 'age', 'study_hours_per_week', 'attendance_pct', 'previous_gpa', 'current_gpa']...
+   year: mean=2.57, std=1.10
+   age: mean=20.83, std=1.93
+   study_hours_per_week: mean=15.36, std=7.71
+   attendance_pct: mean=0.82, std=0.11
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 2 features
+   12 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 2 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — analysis
+   MAE: 3.55, R2: -0.237
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    EDUCATION PIPELINE: ANALYSIS
+    2026-07-14 14:39:20
+======================================================================
+
+Domain: Education
+Techniques Applied: analysis
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 054_student_performance COMPLETE
+
+===== RUNNING: 055_transportation_analysis =====
+STEP 1: Load & Profile — Transportation | Techniques: analysis
+   Data: 598 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.13, std=6.77
+   distance_km: mean=22.39, std=12.89
+   passengers: mean=29.99, std=5.35
+   fare_amount: mean=8.09, std=3.93
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — analysis
+   Accuracy: 0.583
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: ANALYSIS
+    2026-07-14 14:39:27
+======================================================================
+
+Domain: Transportation
+Techniques Applied: analysis
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 055_transportation_analysis COMPLETE
+
+===== RUNNING: 056_transportation_cleaning =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning
+   Data: 605 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.93, std=6.50
+   distance_km: mean=22.71, std=13.01
+   passengers: mean=30.58, std=5.52
+   fare_amount: mean=8.40, std=3.80
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning
+   Accuracy: 0.537
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING
+    2026-07-14 14:39:32
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 056_transportation_cleaning COMPLETE
+
+===== RUNNING: 057_transportation_cleaning_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, integration
+   Data: 612 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.22, std=6.64
+   distance_km: mean=22.56, std=13.13
+   passengers: mean=29.78, std=5.40
+   fare_amount: mean=7.67, std=3.89
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration
+   Accuracy: 0.642
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, INTEGRATION
+    2026-07-14 14:39:37
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, integration
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 057_transportation_cleaning_integration COMPLETE
+
+===== RUNNING: 058_transportation_cleaning_integration_geospatial =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, geospatial, integration
+   Data: 619 rows x 15 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.95, std=6.70
+   distance_km: mean=23.00, std=12.84
+   passengers: mean=29.94, std=5.58
+   fare_amount: mean=8.44, std=3.83
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   18 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   11 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, geospatial, integration
+   MAE: 0.11, R2: -0.034
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, GEOSPATIAL, INTEGRATION
+    2026-07-14 14:39:44
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, geospatial, integration
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 058_transportation_cleaning_integration_geospatial COMPLETE
+
+===== RUNNING: 059_transportation_cleaning_integration_recovery =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, integration, recovery
+   Data: 626 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.79, std=6.78
+   distance_km: mean=22.02, std=13.01
+   passengers: mean=30.11, std=5.48
+   fare_amount: mean=8.09, std=3.90
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, recovery
+   Accuracy: 0.556
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, INTEGRATION, RECOVERY
+    2026-07-14 14:39:50
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, integration, recovery
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 059_transportation_cleaning_integration_recovery COMPLETE
+
+===== RUNNING: 060_transportation_cleaning_integration_validation =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, integration, validation
+   Data: 633 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.29, std=6.74
+   distance_km: mean=23.30, std=12.48
+   passengers: mean=30.21, std=5.38
+   fare_amount: mean=8.50, std=3.95
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, validation
+   Accuracy: 0.551
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, INTEGRATION, VALIDATION
+    2026-07-14 14:39:56
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, integration, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 060_transportation_cleaning_integration_validation COMPLETE
+
+===== RUNNING: 061_transportation_cleaning_v2 =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning
+   Data: 640 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.07, std=6.63
+   distance_km: mean=22.75, std=12.83
+   passengers: mean=29.82, std=5.54
+   fare_amount: mean=8.09, std=3.97
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning
+   Accuracy: 0.578
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING
+    2026-07-14 14:40:02
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 061_transportation_cleaning_v2 COMPLETE
+
+===== RUNNING: 062_transportation_cleaning_validation_features =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, features, validation
+   Data: 647 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.95, std=6.82
+   distance_km: mean=23.68, std=12.61
+   passengers: mean=29.97, std=5.59
+   fare_amount: mean=8.00, std=3.79
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, features, validation
+   Accuracy: 0.500
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, FEATURES, VALIDATION
+    2026-07-14 14:40:09
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, features, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 062_transportation_cleaning_validation_features COMPLETE
+
+===== RUNNING: 063_transportation_clustering_validation =====
+STEP 1: Load & Profile — Transportation | Techniques: clustering, validation
+   Data: 654 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.65, std=6.67
+   distance_km: mean=22.64, std=12.96
+   passengers: mean=29.69, std=5.46
+   fare_amount: mean=8.17, std=3.83
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — clustering, validation
+   Clusters (n=3):
+     Cluster 0 (n=270): mean avg_load_factor=0.602
+     Cluster 1 (n=167): mean avg_load_factor=0.642
+     Cluster 2 (n=217): mean avg_load_factor=0.607
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLUSTERING, VALIDATION
+    2026-07-14 14:40:15
+======================================================================
+
+Domain: Transportation
+Techniques Applied: clustering, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 063_transportation_clustering_validation COMPLETE
+
+===== RUNNING: 064_transportation_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: integration
+   Data: 661 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.98, std=6.69
+   distance_km: mean=22.57, std=12.75
+   passengers: mean=29.94, std=5.22
+   fare_amount: mean=8.37, std=3.80
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration
+   Accuracy: 0.579
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION
+    2026-07-14 14:40:22
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 064_transportation_integration COMPLETE
+
+===== RUNNING: 065_transportation_integration_extra =====
+STEP 1: Load & Profile — Transportation | Techniques: integration
+   Data: 668 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.61, std=6.82
+   distance_km: mean=22.34, std=13.02
+   passengers: mean=30.62, std=5.35
+   fare_amount: mean=8.35, std=3.94
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration
+   Accuracy: 0.604
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION
+    2026-07-14 14:40:30
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 065_transportation_integration_extra COMPLETE
+
+===== RUNNING: 066_transportation_integration_geospatial =====
+STEP 1: Load & Profile — Transportation | Techniques: geospatial, integration
+   Data: 675 rows x 15 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.57, std=6.93
+   distance_km: mean=22.76, std=12.94
+   passengers: mean=29.96, std=5.62
+   fare_amount: mean=8.21, std=3.85
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   18 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   11 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — geospatial, integration
+   MAE: 0.10, R2: -0.044
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: GEOSPATIAL, INTEGRATION
+    2026-07-14 14:40:37
+======================================================================
+
+Domain: Transportation
+Techniques Applied: geospatial, integration
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 066_transportation_integration_geospatial COMPLETE
+
+===== RUNNING: 067_transportation_integration_validation =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, validation
+   Data: 682 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.42, std=6.52
+   distance_km: mean=22.18, std=12.28
+   passengers: mean=29.85, std=5.32
+   fare_amount: mean=8.36, std=3.95
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, validation
+   Accuracy: 0.540
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION, VALIDATION
+    2026-07-14 14:40:44
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 067_transportation_integration_validation COMPLETE
+
+===== RUNNING: 068_transportation_prediction_cleaning =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, prediction
+   Data: 689 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.99, std=6.54
+   distance_km: mean=21.60, std=12.95
+   passengers: mean=30.00, std=5.35
+   fare_amount: mean=8.11, std=3.83
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, prediction
+   ROC-AUC: 0.800, Acc: 84.06%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, PREDICTION
+    2026-07-14 14:40:49
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, prediction
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 068_transportation_prediction_cleaning COMPLETE
+
+===== RUNNING: 069_transportation_prediction_cleaning_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, integration, prediction
+   Data: 696 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.85, std=6.64
+   distance_km: mean=22.49, std=13.34
+   passengers: mean=30.13, std=5.34
+   fare_amount: mean=8.21, std=3.99
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, prediction
+   ROC-AUC: 0.676, Acc: 80.00%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, INTEGRATION, PREDICTION
+    2026-07-14 14:40:54
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, integration, prediction
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 069_transportation_prediction_cleaning_integration COMPLETE
+
+===== RUNNING: 070_transportation_prediction_cleaning_validation =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, prediction, validation
+   Data: 703 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.19, std=6.59
+   distance_km: mean=23.00, std=12.88
+   passengers: mean=30.10, std=5.67
+   fare_amount: mean=8.52, std=3.92
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, prediction, validation
+   ROC-AUC: 0.715, Acc: 81.56%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, PREDICTION, VALIDATION
+    2026-07-14 14:40:59
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, prediction, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 070_transportation_prediction_cleaning_validation COMPLETE
+
+===== RUNNING: 071_transportation_prediction_statistical_cleaning =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, prediction, statistical
+   Data: 710 rows x 15 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.06, std=6.50
+   distance_km: mean=22.23, std=12.84
+   passengers: mean=30.31, std=5.32
+   fare_amount: mean=8.38, std=3.97
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   18 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   11 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, prediction, statistical
+   ROC-AUC: 0.772, Acc: 83.10%
+   Pearson r: -0.078, p=0.0375
+   ANOVA by route: F=2.02, p=0.0936
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, PREDICTION, STATISTICAL
+    2026-07-14 14:41:04
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, prediction, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 071_transportation_prediction_statistical_cleaning COMPLETE
+
+===== RUNNING: 072_transportation_prediction_statistical_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, prediction, statistical
+   Data: 717 rows x 15 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.04, std=6.41
+   distance_km: mean=23.62, std=12.83
+   passengers: mean=29.95, std=5.49
+   fare_amount: mean=8.24, std=3.86
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   18 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   11 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, prediction, statistical
+   ROC-AUC: 0.704, Acc: 80.56%
+   Pearson r: -0.013, p=0.7193
+   ANOVA by route: F=3.77, p=0.0057
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION, PREDICTION, STATISTICAL
+    2026-07-14 14:41:10
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration, prediction, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 072_transportation_prediction_statistical_integration COMPLETE
+
+===== RUNNING: 073_transportation_prediction_validation =====
+STEP 1: Load & Profile — Transportation | Techniques: prediction, validation
+   Data: 724 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.82, std=6.65
+   distance_km: mean=22.27, std=12.56
+   passengers: mean=30.18, std=5.17
+   fare_amount: mean=8.38, std=3.96
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — prediction, validation
+   ROC-AUC: 0.742, Acc: 81.38%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: PREDICTION, VALIDATION
+    2026-07-14 14:41:15
+======================================================================
+
+Domain: Transportation
+Techniques Applied: prediction, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 073_transportation_prediction_validation COMPLETE
+
+===== RUNNING: 074_transportation_prediction_validation_recovery =====
+STEP 1: Load & Profile — Transportation | Techniques: prediction, recovery, validation
+   Data: 731 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.12, std=6.65
+   distance_km: mean=22.72, std=12.78
+   passengers: mean=29.91, std=5.52
+   fare_amount: mean=8.15, std=3.82
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — prediction, recovery, validation
+   ROC-AUC: 0.747, Acc: 82.31%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: PREDICTION, RECOVERY, VALIDATION
+    2026-07-14 14:41:20
+======================================================================
+
+Domain: Transportation
+Techniques Applied: prediction, recovery, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 074_transportation_prediction_validation_recovery COMPLETE
+
+===== RUNNING: 075_transportation_prediction_validation_v2 =====
+STEP 1: Load & Profile — Transportation | Techniques: prediction, validation
+   Data: 738 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.98, std=6.60
+   distance_km: mean=22.97, std=12.61
+   passengers: mean=29.76, std=5.39
+   fare_amount: mean=8.11, std=3.84
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — prediction, validation
+   ROC-AUC: 0.642, Acc: 81.08%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: PREDICTION, VALIDATION
+    2026-07-14 14:41:26
+======================================================================
+
+Domain: Transportation
+Techniques Applied: prediction, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 075_transportation_prediction_validation_v2 COMPLETE
+
+===== RUNNING: 076_transportation_prediction_visualization_geospatial =====
+STEP 1: Load & Profile — Transportation | Techniques: geospatial, prediction, visualization
+   Data: 745 rows x 17 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.63, std=6.60
+   distance_km: mean=22.43, std=12.77
+   passengers: mean=30.04, std=5.27
+   fare_amount: mean=8.26, std=3.96
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   20 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — geospatial, prediction, visualization
+   ROC-AUC: 0.801, Acc: 86.58%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: GEOSPATIAL, PREDICTION, VISUALIZATION
+    2026-07-14 14:41:31
+======================================================================
+
+Domain: Transportation
+Techniques Applied: geospatial, prediction, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 076_transportation_prediction_visualization_geospatial COMPLETE
+
+===== RUNNING: 077_transportation_prediction_visualization_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, prediction, visualization
+   Data: 752 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.78, std=6.59
+   distance_km: mean=23.87, std=12.84
+   passengers: mean=29.94, std=5.36
+   fare_amount: mean=8.18, std=3.86
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, prediction, visualization
+   ROC-AUC: 0.793, Acc: 82.78%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION, PREDICTION, VISUALIZATION
+    2026-07-14 14:41:37
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration, prediction, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 077_transportation_prediction_visualization_integration COMPLETE
+
+===== RUNNING: 078_transportation_prediction_visualization_integration_v2 =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, prediction, visualization
+   Data: 759 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.72, std=6.72
+   distance_km: mean=22.65, std=13.13
+   passengers: mean=30.07, std=5.47
+   fare_amount: mean=8.16, std=3.90
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, prediction, visualization
+   ROC-AUC: 0.594, Acc: 79.61%
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION, PREDICTION, VISUALIZATION
+    2026-07-14 14:41:43
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration, prediction, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 078_transportation_prediction_visualization_integration_v2 COMPLETE
+
+===== RUNNING: 079_transportation_regression =====
+STEP 1: Load & Profile — Transportation | Techniques: regression
+   Data: 766 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.21, std=6.62
+   distance_km: mean=22.30, std=13.16
+   passengers: mean=29.71, std=5.54
+   fare_amount: mean=8.29, std=3.96
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — regression
+   MAE: 8.00, R2: 0.915
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: REGRESSION
+    2026-07-14 14:41:48
+======================================================================
+
+Domain: Transportation
+Techniques Applied: regression
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 079_transportation_regression COMPLETE
+
+===== RUNNING: 080_transportation_regression_cleaning_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, integration, regression
+   Data: 773 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.87, std=6.47
+   distance_km: mean=22.99, std=13.07
+   passengers: mean=30.38, std=5.47
+   fare_amount: mean=8.16, std=3.96
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, regression
+   MAE: 7.83, R2: 0.922
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, INTEGRATION, REGRESSION
+    2026-07-14 14:41:53
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, integration, regression
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 080_transportation_regression_cleaning_integration COMPLETE
+
+===== RUNNING: 081_transportation_regression_statistical_cleaning =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, regression, statistical
+   Data: 780 rows x 15 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.85, std=6.65
+   distance_km: mean=23.13, std=13.03
+   passengers: mean=30.04, std=5.52
+   fare_amount: mean=8.18, std=3.88
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   18 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   11 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, regression, statistical
+   MAE: 0.62, R2: -0.011
+   Pearson r: 0.036, p=0.3092
+   ANOVA by route: F=0.79, p=0.5306
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, REGRESSION, STATISTICAL
+    2026-07-14 14:41:59
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, regression, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 081_transportation_regression_statistical_cleaning COMPLETE
+
+===== RUNNING: 082_transportation_regression_statistical_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, regression, statistical
+   Data: 787 rows x 15 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.07, std=6.58
+   distance_km: mean=22.87, std=12.62
+   passengers: mean=29.96, std=5.58
+   fare_amount: mean=8.12, std=3.93
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   18 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   11 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, regression, statistical
+   MAE: 0.68, R2: -0.053
+   Pearson r: 0.019, p=0.5852
+   ANOVA by route: F=0.88, p=0.4752
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION, REGRESSION, STATISTICAL
+    2026-07-14 14:42:05
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration, regression, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 082_transportation_regression_statistical_integration COMPLETE
+
+===== RUNNING: 083_transportation_regression_visualization_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, regression, visualization
+   Data: 794 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.94, std=6.76
+   distance_km: mean=22.78, std=12.86
+   passengers: mean=30.25, std=5.46
+   fare_amount: mean=8.09, std=3.84
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, regression, visualization
+   MAE: 8.22, R2: 0.890
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION, REGRESSION, VISUALIZATION
+    2026-07-14 14:42:11
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration, regression, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 083_transportation_regression_visualization_integration COMPLETE
+
+===== RUNNING: 084_transportation_statistical_cleaning_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, integration, statistical
+   Data: 501 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.22, std=6.64
+   distance_km: mean=22.19, std=12.90
+   passengers: mean=29.66, std=5.42
+   fare_amount: mean=8.24, std=3.90
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, statistical
+   Pearson r: 0.034, p=0.4521
+   ANOVA by route: F=0.61, p=0.6545
+   MAE: 0.65, R2: -0.141
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, INTEGRATION, STATISTICAL
+    2026-07-14 14:42:17
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, integration, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 084_transportation_statistical_cleaning_integration COMPLETE
+
+===== RUNNING: 085_transportation_statistical_geospatial =====
+STEP 1: Load & Profile — Transportation | Techniques: geospatial, statistical
+   Data: 508 rows x 17 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.32, std=6.50
+   distance_km: mean=22.39, std=12.82
+   passengers: mean=29.60, std=5.39
+   fare_amount: mean=8.40, std=4.05
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   20 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — geospatial, statistical
+   Pearson r: 0.014, p=0.7494
+   ANOVA by route: F=0.37, p=0.8306
+   MAE: 0.10, R2: -0.030
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: GEOSPATIAL, STATISTICAL
+    2026-07-14 14:42:23
+======================================================================
+
+Domain: Transportation
+Techniques Applied: geospatial, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 085_transportation_statistical_geospatial COMPLETE
+
+===== RUNNING: 086_transportation_statistical_geospatial_validation =====
+STEP 1: Load & Profile — Transportation | Techniques: geospatial, statistical, validation
+   Data: 515 rows x 17 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.59, std=6.51
+   distance_km: mean=21.54, std=12.50
+   passengers: mean=30.09, std=5.50
+   fare_amount: mean=8.10, std=3.98
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   20 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   13 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — geospatial, statistical, validation
+   Pearson r: 0.042, p=0.3363
+   ANOVA by route: F=1.78, p=0.1369
+   MAE: 0.10, R2: -0.043
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: GEOSPATIAL, STATISTICAL, VALIDATION
+    2026-07-14 14:42:29
+======================================================================
+
+Domain: Transportation
+Techniques Applied: geospatial, statistical, validation
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 086_transportation_statistical_geospatial_validation COMPLETE
+
+===== RUNNING: 087_transportation_statistical_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, statistical
+   Data: 522 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.06, std=6.58
+   distance_km: mean=22.64, std=12.93
+   passengers: mean=29.94, std=5.59
+   fare_amount: mean=8.09, std=3.84
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, statistical
+   Pearson r: -0.002, p=0.9551
+   ANOVA by route: F=1.78, p=0.1369
+   MAE: 0.68, R2: -0.023
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION, STATISTICAL
+    2026-07-14 14:42:35
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 087_transportation_statistical_integration COMPLETE
+
+===== RUNNING: 088_transportation_statistical_integration_v2 =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, statistical
+   Data: 529 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.88, std=6.65
+   distance_km: mean=23.54, std=13.18
+   passengers: mean=30.35, std=5.65
+   fare_amount: mean=8.42, std=3.97
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, statistical
+   Pearson r: 0.036, p=0.4126
+   ANOVA by route: F=0.43, p=0.7857
+   MAE: 0.64, R2: -0.075
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION, STATISTICAL
+    2026-07-14 14:42:40
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration, statistical
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 088_transportation_statistical_integration_v2 COMPLETE
+
+===== RUNNING: 089_transportation_statistical_visualization_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, statistical, visualization
+   Data: 536 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.86, std=6.64
+   distance_km: mean=23.21, std=12.96
+   passengers: mean=30.29, std=5.59
+   fare_amount: mean=7.99, std=3.84
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, statistical, visualization
+   Pearson r: -0.068, p=0.1156
+   ANOVA by route: F=0.46, p=0.7617
+   MAE: 0.61, R2: -0.113
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION, STATISTICAL, VISUALIZATION
+    2026-07-14 14:42:46
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration, statistical, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 089_transportation_statistical_visualization_integration COMPLETE
+
+===== RUNNING: 090_transportation_statistical_visualization_integration_v2 =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, statistical, visualization
+   Data: 543 rows x 13 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.56, std=6.57
+   distance_km: mean=23.94, std=12.46
+   passengers: mean=30.31, std=5.46
+   fare_amount: mean=7.84, std=3.92
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   16 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   9 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — integration, statistical, visualization
+   Pearson r: 0.003, p=0.9466
+   ANOVA by route: F=0.76, p=0.5509
+   MAE: 0.69, R2: -0.035
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: INTEGRATION, STATISTICAL, VISUALIZATION
+    2026-07-14 14:42:52
+======================================================================
+
+Domain: Transportation
+Techniques Applied: integration, statistical, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 090_transportation_statistical_visualization_integration_v2 COMPLETE
+
+===== RUNNING: 091_transportation_visualization =====
+STEP 1: Load & Profile — Transportation | Techniques: visualization
+   Data: 550 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.22, std=6.54
+   distance_km: mean=22.41, std=12.57
+   passengers: mean=29.96, std=5.41
+   fare_amount: mean=8.34, std=3.90
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — visualization
+   Accuracy: 0.591
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: VISUALIZATION
+    2026-07-14 14:42:58
+======================================================================
+
+Domain: Transportation
+Techniques Applied: visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 091_transportation_visualization COMPLETE
+
+===== RUNNING: 092_transportation_visualization_cleaning_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, integration, visualization
+   Data: 557 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.17, std=6.91
+   distance_km: mean=22.17, std=12.83
+   passengers: mean=30.36, std=5.47
+   fare_amount: mean=8.28, std=4.04
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, integration, visualization
+   Accuracy: 0.607
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, INTEGRATION, VISUALIZATION
+    2026-07-14 14:43:03
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, integration, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 092_transportation_visualization_cleaning_integration COMPLETE
+
+===== RUNNING: 093_transportation_visualization_cleaning_validation =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, validation, visualization
+   Data: 564 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.34, std=6.54
+   distance_km: mean=23.00, std=12.71
+   passengers: mean=29.84, std=5.44
+   fare_amount: mean=8.06, std=4.11
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, validation, visualization
+   Accuracy: 0.540
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, VALIDATION, VISUALIZATION
+    2026-07-14 14:43:09
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, validation, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 093_transportation_visualization_cleaning_validation COMPLETE
+
+===== RUNNING: 094_transportation_visualization_cleaning_validation_v2 =====
+STEP 1: Load & Profile — Transportation | Techniques: cleaning, validation, visualization
+   Data: 571 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=10.94, std=6.78
+   distance_km: mean=22.45, std=12.74
+   passengers: mean=30.29, std=5.44
+   fare_amount: mean=8.41, std=3.80
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — cleaning, validation, visualization
+   Accuracy: 0.626
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: CLEANING, VALIDATION, VISUALIZATION
+    2026-07-14 14:43:15
+======================================================================
+
+Domain: Transportation
+Techniques Applied: cleaning, validation, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 094_transportation_visualization_cleaning_validation_v2 COMPLETE
+
+===== RUNNING: 095_transportation_visualization_geospatial =====
+STEP 1: Load & Profile — Transportation | Techniques: geospatial, visualization
+   Data: 578 rows x 15 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.11, std=6.76
+   distance_km: mean=22.33, std=13.20
+   passengers: mean=30.18, std=5.56
+   fare_amount: mean=8.13, std=3.84
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   18 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   11 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
+STEP 5: Model Training — geospatial, visualization
+   MAE: 0.11, R2: -0.050
+   Model saved
+  ✓ step_05_model.py
+STEP 6: Final Report
+======================================================================
+    TRANSPORTATION PIPELINE: GEOSPATIAL, VISUALIZATION
+    2026-07-14 14:43:20
+======================================================================
+
+Domain: Transportation
+Techniques Applied: geospatial, visualization
+
+Pipeline Steps:
+  1. Data Loading & Profiling
+  2. Data Cleaning & Standardization
+  3. Feature Engineering
+  4. Exploratory Data Analysis & Visualization
+  5. Model Training & Evaluation
+  6. Final Synthesis & Business Recommendations
+
+Key outputs are available in the output/ directory.
+
+Recommendations:
+  • Monitor model performance monthly
+  • Reassess feature importance quarterly
+  • Retrain models with fresh data biannually
+======================================================================
+OK
+  ✓ step_06_report.py
+  ✓ 095_transportation_visualization_geospatial COMPLETE
+
+===== RUNNING: 096_transportation_visualization_integration =====
+STEP 1: Load & Profile — Transportation | Techniques: integration, visualization
+   Data: 585 rows x 11 cols
+   Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+   departure_hour: mean=11.10, std=6.64
+   distance_km: mean=22.58, std=12.56
+   passengers: mean=29.97, std=5.30
+   fare_amount: mean=8.31, std=3.93
+OK
+  ✓ step_01_load.py
+STEP 2: Clean & Standardize
+   Nulls: 0 → 0
+OK
+  ✓ step_02_clean.py
+STEP 3: Feature Engineering
+   Created: 3 features
+   14 columns
+OK
+  ✓ step_03_features.py
+STEP 4: EDA & Visualization
+   7 numerical, 4 categorical features
+OK
+  ✓ step_04_eda.py
