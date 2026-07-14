@@ -1,0 +1,11 @@
+============================================================
+    ECOMMERCE RECOMMENDATION — FINAL REPORT
+    2026-07-14 14:33:48
+============================================================
+
+Domain: E-Commerce / Retail
+Product recommendation engine using customer segments, order history, and product catalog attributes.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================

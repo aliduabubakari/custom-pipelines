@@ -1,0 +1,18 @@
+{
+  "patients": {
+    "rows": 500,
+    "cols": 12
+  },
+  "admissions": {
+    "rows": 1289,
+    "cols": 10
+  },
+  "lab_results": {
+    "rows": 7660,
+    "cols": 6
+  },
+  "medications": {
+    "rows": 5850,
+    "cols": 5
+  }
+}

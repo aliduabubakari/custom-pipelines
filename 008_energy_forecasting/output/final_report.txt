@@ -1,0 +1,11 @@
+============================================================
+    ENERGY CONSUMPTION FORECASTING — FINAL REPORT
+    2026-07-14 14:34:09
+============================================================
+
+Domain: Energy / Utilities
+Forecasting energy consumption using historical patterns and weather covariates.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================

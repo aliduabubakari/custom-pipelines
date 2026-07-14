@@ -1,0 +1,14 @@
+{
+  "customers": {
+    "rows": 500,
+    "cols": 7
+  },
+  "products": {
+    "rows": 200,
+    "cols": 8
+  },
+  "orders": {
+    "rows": 11436,
+    "cols": 7
+  }
+}

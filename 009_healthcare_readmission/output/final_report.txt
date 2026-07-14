@@ -1,0 +1,11 @@
+============================================================
+    HEALTHCARE READMISSION PREDICTION — FINAL REPORT
+    2026-07-14 14:34:20
+============================================================
+
+Domain: Healthcare / Clinical
+Predicting patient readmission risk from clinical records, lab results, and medication history.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================

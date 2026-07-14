@@ -1,0 +1,11 @@
+============================================================
+    INSURANCE CLAIMS FRAUD DETECTION — FINAL REPORT
+    2026-07-14 14:34:51
+============================================================
+
+Domain: Insurance / Risk
+Detecting fraudulent insurance claims using policyholder characteristics and claim patterns.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================

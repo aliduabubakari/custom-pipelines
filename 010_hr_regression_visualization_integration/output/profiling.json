@@ -1,0 +1,10 @@
+{
+  "employees": {
+    "rows": 400,
+    "cols": 9
+  },
+  "departments": {
+    "rows": 6,
+    "cols": 4
+  }
+}

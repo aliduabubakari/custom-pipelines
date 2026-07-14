@@ -1,0 +1,14 @@
+{
+  "employees": {
+    "rows": 500,
+    "cols": 19
+  },
+  "engagement": {
+    "rows": 970,
+    "cols": 7
+  },
+  "reviews": {
+    "rows": 2099,
+    "cols": 7
+  }
+}

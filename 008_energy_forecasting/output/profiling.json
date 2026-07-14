@@ -1,0 +1,10 @@
+{
+  "energy": {
+    "rows": 8760,
+    "cols": 7
+  },
+  "weather": {
+    "rows": 365,
+    "cols": 8
+  }
+}

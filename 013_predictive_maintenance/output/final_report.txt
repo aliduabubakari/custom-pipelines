@@ -1,0 +1,11 @@
+============================================================
+    PREDICTIVE MAINTENANCE — FINAL REPORT
+    2026-07-14 14:35:01
+============================================================
+
+Domain: Manufacturing / IoT
+Predicting equipment failure from sensor data (temperature, vibration, pressure) for preventive maintenance.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================

@@ -1,0 +1,11 @@
+============================================================
+    EMPLOYEE ATTRITION PREDICTION — FINAL REPORT
+    2026-07-14 14:33:57
+============================================================
+
+Domain: HR Analytics
+Predicting employee attrition using demographics, engagement surveys, and performance reviews.
+
+This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+Key outputs are in the output/ directory.
+============================================================
