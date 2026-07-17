@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-1-002-analytics-statistical-integration",
+        "generateName": "analytics-statistical-integration",
+        "namespace": "default",
+        "uid": "963a2441-3151-48ca-a608-3a69ca1cf66a",
+        "resourceVersion": "5582",
+        "generation": 10,
+        "creationTimestamp": "2026-07-15T14:16:09Z",
+        "labels": {
+            "domain": "Analytics",
+            "pipeline": "analytics_statistical_integration",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:16:09Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:17:30Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-1-002-analytics-statistical-integration": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-1412161952": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-2118656704": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-2511904448": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-3196723704": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-3329380872": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-4035187431": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-4036320264": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-4102445002": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-4274892824": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-814429036": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-881392417": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-002-analytics-statistical-integration-881980797": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/analytics_statistical_integration:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:16:09Z",
+        "finishedAt": "2026-07-15T14:17:30Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-1-002-analytics-statistical-integration": {
+                "id": "p-1-002-analytics-statistical-integration",
+                "name": "p-1-002-analytics-statistical-integration",
+                "displayName": "p-1-002-analytics-statistical-integration",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:16:09Z",
+                "finishedAt": "2026-07-15T14:17:30Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 5,
+                    "memory": 99
+                },
+                "children": [
+                    "p-1-002-analytics-statistical-integration-814429036"
+                ],
+                "outboundNodes": [
+                    "p-1-002-analytics-statistical-integration-4274892824"
+                ]
+            },
+            "p-1-002-analytics-statistical-integration-1412161952": {
+                "id": "p-1-002-analytics-statistical-integration-1412161952",
+                "name": "p-1-002-analytics-statistical-integration[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:16:50Z",
+                "finishedAt": "2026-07-15T14:16:57Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-002-analytics-statistical-integration-4036320264"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-002-analytics-statistical-integration-2118656704": {
+                "id": "p-1-002-analytics-statistical-integration-2118656704",
+                "name": "p-1-002-analytics-statistical-integration[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:16:09Z",
+                "finishedAt": "2026-07-15T14:16:20Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 20
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-002-analytics-statistical-integration-881392417"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-002-analytics-statistical-integration-2511904448": {
+                "id": "p-1-002-analytics-statistical-integration-2511904448",
+                "name": "p-1-002-analytics-statistical-integration[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:17:00Z",
+                "finishedAt": "2026-07-15T14:17:08Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 37
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-002-analytics-statistical-integration-881980797"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-002-analytics-statistical-integration-3196723704": {
+                "id": "p-1-002-analytics-statistical-integration-3196723704",
+                "name": "p-1-002-analytics-statistical-integration[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:16:39Z",
+                "finishedAt": "2026-07-15T14:16:44Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-002-analytics-statistical-integration-4035187431"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-002-analytics-statistical-integration-3329380872": {
+                "id": "p-1-002-analytics-statistical-integration-3329380872",
+                "name": "p-1-002-analytics-statistical-integration[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:16:29Z",
+                "finishedAt": "2026-07-15T14:16:34Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-002-analytics-statistical-integration-4102445002"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-002-analytics-statistical-integration-4035187431": {
+                "id": "p-1-002-analytics-statistical-integration-4035187431",
+                "name": "p-1-002-analytics-statistical-integration[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:16:50Z",
+                "finishedAt": "2026-07-15T14:17:00Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 64
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-002-analytics-statistical-integration-1412161952"
+                ]
+            },
+            "p-1-002-analytics-statistical-integration-4036320264": {
+                "id": "p-1-002-analytics-statistical-integration-4036320264",
+                "name": "p-1-002-analytics-statistical-integration[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:17:00Z",
+                "finishedAt": "2026-07-15T14:17:20Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 45
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-002-analytics-statistical-integration-2511904448"
+                ]
+            },
+            "p-1-002-analytics-statistical-integration-4102445002": {
+                "id": "p-1-002-analytics-statistical-integration-4102445002",
+                "name": "p-1-002-analytics-statistical-integration[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:16:39Z",
+                "finishedAt": "2026-07-15T14:16:50Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 72
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-002-analytics-statistical-integration-3196723704"
+                ]
+            },
+            "p-1-002-analytics-statistical-integration-4274892824": {
+                "id": "p-1-002-analytics-statistical-integration-4274892824",
+                "name": "p-1-002-analytics-statistical-integration[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:17:20Z",
+                "finishedAt": "2026-07-15T14:17:24Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-002-analytics-statistical-integration-814429036": {
+                "id": "p-1-002-analytics-statistical-integration-814429036",
+                "name": "p-1-002-analytics-statistical-integration[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:16:09Z",
+                "finishedAt": "2026-07-15T14:16:29Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 5,
+                    "memory": 99
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-002-analytics-statistical-integration-2118656704"
+                ]
+            },
+            "p-1-002-analytics-statistical-integration-881392417": {
+                "id": "p-1-002-analytics-statistical-integration-881392417",
+                "name": "p-1-002-analytics-statistical-integration[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:16:29Z",
+                "finishedAt": "2026-07-15T14:16:39Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 79
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-002-analytics-statistical-integration-3329380872"
+                ]
+            },
+            "p-1-002-analytics-statistical-integration-881980797": {
+                "id": "p-1-002-analytics-statistical-integration-881980797",
+                "name": "p-1-002-analytics-statistical-integration[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-002-analytics-statistical-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-002-analytics-statistical-integration",
+                "startedAt": "2026-07-15T14:17:20Z",
+                "finishedAt": "2026-07-15T14:17:30Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-002-analytics-statistical-integration-4274892824"
+                ]
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 5,
+            "memory": 99
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

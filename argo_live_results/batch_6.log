@@ -1,0 +1,478 @@
+[14:31:26] B6: Building 5 images...
+[14:31:26] B6:   Building custom-pipelines/sports_regression_prediction_statistical_v3:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.8s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 61.21kB done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#5 resolve docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28 0.0s done
+#5 sha256:cab2dbf575e971934a81e4622f5aba17aa7929719bd7e31033a3a83b97fd0464 1.75kB / 1.75kB done
+#5 sha256:25c5b8011a3425a140bf5fa73be0feabd3c0d5b323eecb19dc02437a368ae075 5.66kB / 5.66kB done
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0B / 29.78MB 0.1s
+#5 sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 0B / 1.29MB 0.1s
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0B / 12.11MB 0.1s
+#5 sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28 10.37kB / 10.37kB done
+#5 sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 1.29MB / 1.29MB 0.2s done
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 12.11MB / 12.11MB 0.2s done
+#5 sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e 0B / 250B 0.3s
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 18.87MB / 29.78MB 0.5s
+#5 sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e 250B / 250B 0.3s done
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 29.78MB / 29.78MB 0.6s
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 29.78MB / 29.78MB 0.6s done
+#5 extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0.1s
+#5 extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0.6s done
+#5 extracting sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 0.1s done
+#5 extracting sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0.1s
+#5 extracting sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0.3s done
+#5 extracting sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e done
+#5 DONE 1.8s
+
+#6 [2/6] WORKDIR /pipeline
+#6 DONE 0.1s
+
+#7 [3/6] COPY requirements.txt .
+#7 DONE 0.0s
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 1.469 Collecting matplotlib (from -r requirements.txt (line 1))
+#8 1.507   Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+#8 1.706 Collecting numpy (from -r requirements.txt (line 2))
+#8 1.715   Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 1.816 Collecting pandas (from -r requirements.txt (line 3))
+#8 1.827   Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+#8 1.948 Collecting pyarrow (from -r requirements.txt (line 4))
+#8 1.957   Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#8 2.029 Collecting scikit-learn (from -r requirements.txt (line 5))
+#8 2.038   Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#8 2.149 Collecting scipy (from -r requirements.txt (line 6))
+#8 2.159   Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 2.192 Collecting seaborn (from -r requirements.txt (line 7))
+#8 2.202   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#8 2.257 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.267   Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 2.283 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 1))
+#8 2.292   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 2.437 Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.446   Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+#8 2.511 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.521   Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+#8 2.547 Collecting packaging>=20.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.557   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+#8 2.696 Collecting pillow>=9 (from matplotlib->-r requirements.txt (line 1))
+#8 2.705   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+#8 2.733 Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 1))
+#8 2.745   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#8 2.761 Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 1))
+#8 2.772   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 2.819 Collecting joblib>=1.4.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.829   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#8 2.872 Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.881   Downloading narwhals-2.24.0-py3-none-any.whl.metadata (15 kB)
+#8 2.898 Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.907   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 2.972 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 1))
+#8 2.981   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.997 Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+#8 3.093    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 114.2 MB/s eta 0:00:00
+#8 3.108 Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 3.252    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 119.1 MB/s eta 0:00:00
+#8 3.261 Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.9 MB)
+#8 3.356    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 117.0 MB/s eta 0:00:00
+#8 3.366 Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (50.1 MB)
+#8 3.804    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 114.9 MB/s eta 0:00:00
+#8 3.815 Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+#8 3.894    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 118.8 MB/s eta 0:00:00
+#8 3.903 Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 4.205    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 117.4 MB/s eta 0:00:00
+#8 4.217 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#8 4.228 Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
+#8 4.243 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 4.253 Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 4.297    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 119.0 MB/s eta 0:00:00
+#8 4.307 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#8 4.318 Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+#8 4.335    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 122.8 MB/s eta 0:00:00
+#8 4.345 Downloading narwhals-2.24.0-py3-none-any.whl (461 kB)
+#8 4.358 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#8 4.370 Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+#8 4.429    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 118.6 MB/s eta 0:00:00
+#8 4.439 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#8 4.449 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 4.460 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 4.470 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 4.703 Installing collected packages: threadpoolctl, six, pyparsing, pyarrow, pillow, packaging, numpy, narwhals, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, contourpy, scikit-learn, pandas, matplotlib, seaborn
+#8 19.59 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.63.0 joblib-1.5.3 kiwisolver-1.5.0 matplotlib-3.11.0 narwhals-2.24.0 numpy-2.5.1 packaging-26.2 pandas-3.0.3 pillow-12.3.0 pyarrow-25.0.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 scikit-learn-1.9.0 scipy-1.18.0 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0
+#8 19.59 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 19.67 
+#8 19.67 [notice] A new release of pip is available: 25.0.1 -> 26.1.2
+#8 19.67 [notice] To update, run: pip install --upgrade pip
+#8 DONE 20.1s
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.4s done
+#11 writing image sha256:3a2d31da5057b52c24bcd8085c06990286d3e59fbb81ae0c68164cb1b6bcd80c done
+#11 naming to docker.io/custom-pipelines/sports_regression_prediction_statistical_v3:latest done
+#11 DONE 1.4s
+docker.io/custom pipelines/sports_regres	saved	
+application/vnd.oci.image.manifest.v1+json sha256:97809b84e0c3d7db94ff31ed66ce6eb2b8ab4e231f661c05d6b1e46ff8375959
+Importing	elapsed: 9.7 s	total:   0.0 B	(0.0 B/s)	
+[14:32:05] B6:   ✓ 026_sports_regression_prediction_statistical_v3 built & imported
+[14:32:05] B6:   Building custom-pipelines/sports_regression_prediction_visualization:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 37.01kB done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /pipeline
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 DONE 0.6s
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 1.459 Collecting matplotlib (from -r requirements.txt (line 1))
+#8 1.494   Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+#8 1.686 Collecting numpy (from -r requirements.txt (line 2))
+#8 1.695   Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 1.786 Collecting pandas (from -r requirements.txt (line 3))
+#8 1.795   Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+#8 1.898 Collecting pyarrow (from -r requirements.txt (line 4))
+#8 1.908   Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#8 1.980 Collecting scikit-learn (from -r requirements.txt (line 5))
+#8 1.989   Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#8 2.015 Collecting seaborn (from -r requirements.txt (line 6))
+#8 2.024   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#8 2.077 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.087   Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 2.105 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 1))
+#8 2.114   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 2.247 Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.257   Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+#8 2.328 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.337   Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+#8 2.364 Collecting packaging>=20.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.373   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+#8 2.532 Collecting pillow>=9 (from matplotlib->-r requirements.txt (line 1))
+#8 2.542   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+#8 2.573 Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 1))
+#8 2.582   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#8 2.600 Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 1))
+#8 2.609   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 2.742 Collecting scipy>=1.10.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.751   Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 2.788 Collecting joblib>=1.4.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.798   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#8 2.842 Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.851   Downloading narwhals-2.24.0-py3-none-any.whl.metadata (15 kB)
+#8 2.870 Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.880   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 2.932 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 1))
+#8 2.941   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.972 Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+#8 3.067    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 114.2 MB/s eta 0:00:00
+#8 3.077 Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 3.221    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 116.5 MB/s eta 0:00:00
+#8 3.230 Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.9 MB)
+#8 3.325    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 118.0 MB/s eta 0:00:00
+#8 3.335 Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (50.1 MB)
+#8 3.765    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 116.9 MB/s eta 0:00:00
+#8 3.781 Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+#8 3.859    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 120.8 MB/s eta 0:00:00
+#8 3.869 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#8 3.883 Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
+#8 3.894 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 3.904 Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 3.947    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 118.0 MB/s eta 0:00:00
+#8 3.957 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#8 3.968 Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+#8 3.982    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 123.2 MB/s eta 0:00:00
+#8 3.991 Downloading narwhals-2.24.0-py3-none-any.whl (461 kB)
+#8 4.003 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#8 4.013 Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+#8 4.074    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 117.8 MB/s eta 0:00:00
+#8 4.084 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#8 4.094 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 4.104 Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 4.406    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 117.3 MB/s eta 0:00:00
+#8 4.415 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 4.425 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 4.659 Installing collected packages: threadpoolctl, six, pyparsing, pyarrow, pillow, packaging, numpy, narwhals, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, contourpy, scikit-learn, pandas, matplotlib, seaborn
+#8 19.64 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.63.0 joblib-1.5.3 kiwisolver-1.5.0 matplotlib-3.11.0 narwhals-2.24.0 numpy-2.5.1 packaging-26.2 pandas-3.0.3 pillow-12.3.0 pyarrow-25.0.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 scikit-learn-1.9.0 scipy-1.18.0 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0
+#8 19.64 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 19.72 
+#8 19.72 [notice] A new release of pip is available: 25.0.1 -> 26.1.2
+#8 19.72 [notice] To update, run: pip install --upgrade pip
+#8 DONE 20.0s
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.5s done
+#11 writing image sha256:12494229b226bfef97a31a3e43d16af5e7cbe9cfe8dca2df2251c13099759a4a done
+#11 naming to docker.io/custom-pipelines/sports_regression_prediction_visualization:latest done
+#11 DONE 1.5s
+docker.io/custom pipelines/sports_regres	saved	
+application/vnd.oci.image.manifest.v1+json sha256:5076d9053ee7444440ec95c9351198ae3a7e275d3ec6e70401794cb312f0d9d1
+Importing	elapsed: 9.0 s	total:   0.0 B	(0.0 B/s)	
+[14:32:41] B6:   ✓ 027_sports_regression_prediction_visualization built & imported
+[14:32:41] B6:   Building custom-pipelines/sports_regression_prediction_visualization_v2:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 37.51kB done
+#5 DONE 0.0s
+
+#6 [3/6] COPY requirements.txt .
+#6 CACHED
+
+#7 [2/6] WORKDIR /pipeline
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.8s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:c71bed9f0e7dc778fd8152ca6f7177e6436d5bfc783d3445dcf9a7362f5a8c71 done
+#11 naming to docker.io/custom-pipelines/sports_regression_prediction_visualization_v2:latest done
+#11 DONE 0.0s
+docker.io/custom pipelines/sports_regres	saved	
+application/vnd.oci.image.manifest.v1+json sha256:741ca77c1ab0bf2e9bcf185fc67b9ee2e6ba3c9151758bc67d53339d8bd42598
+Importing	elapsed: 7.0 s	total:   0.0 B	(0.0 B/s)	
+[14:32:55] B6:   ✓ 028_sports_regression_prediction_visualization_v2 built & imported
+[14:32:55] B6:   Building custom-pipelines/sports_regression_statistical_visualization:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 42.95kB 0.0s done
+#5 DONE 0.1s
+
+#6 [2/6] WORKDIR /pipeline
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.1s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.1s
+
+#11 exporting to image
+#11 exporting layers 0.1s done
+#11 writing image sha256:ff08cce1e8c0960da54dddd01c30bbf31c7ad92bc70d4dfda7fe99ab958da641 done
+#11 naming to docker.io/custom-pipelines/sports_regression_statistical_visualization:latest done
+#11 DONE 0.1s
+docker.io/custom pipelines/sports_regres	saved	
+application/vnd.oci.image.manifest.v1+json sha256:aaa97584d320fee5899ae4315565d41acda19a2e931487074c7a2ba3551a9085
+Importing	elapsed: 7.3 s	total:   0.0 B	(0.0 B/s)	
+[14:33:07] B6:   ✓ 029_sports_regression_statistical_visualization built & imported
+[14:33:07] B6:   Building custom-pipelines/sports_statistical_cleaning:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 39.77kB done
+#5 DONE 0.0s
+
+#6 [3/6] COPY requirements.txt .
+#6 CACHED
+
+#7 [2/6] WORKDIR /pipeline
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:e53b05492f3bfc928f00b40a69391c7940d3dfdffaf2f14d5d79f0ab29132421 done
+#11 naming to docker.io/custom-pipelines/sports_statistical_cleaning:latest done
+#11 DONE 0.0s
+docker.io/custom pipelines/sports_statis	saved	
+application/vnd.oci.image.manifest.v1+json sha256:6745fa60d242c2e6ada8688e3566d616abec83e738036b3596f68fb3bbcdcc20
+Importing	elapsed: 7.0 s	total:   0.0 B	(0.0 B/s)	
+[14:33:19] B6:   ✓ 030_sports_statistical_cleaning built & imported
+[14:33:19] B6: Submitting workflows...
+I0715 14:33:20.044857  634989 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-6-026-sports-regression-prediction-statistical-v3
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:33:20 +0000 (now)
+Progress:            
+[14:33:20] B6:   Submitted: 026_sports_regression_prediction_statistical_v3 → p-6-026-sports-regression-prediction-statistical-v3
+I0715 14:33:20.102488  635011 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-6-027-sports-regression-prediction-visualization
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:33:20 +0000 (now)
+Progress:            
+[14:33:20] B6:   Submitted: 027_sports_regression_prediction_visualization → p-6-027-sports-regression-prediction-visualization
+I0715 14:33:20.160785  635037 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-6-028-sports-regression-prediction-visualization-v2
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:33:20 +0000 (now)
+Progress:            
+[14:33:20] B6:   Submitted: 028_sports_regression_prediction_visualization_v2 → p-6-028-sports-regression-prediction-visualization-v2
+I0715 14:33:20.228153  635061 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-6-029-sports-regression-statistical-visualization
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:33:20 +0000 (now)
+Progress:            
+[14:33:20] B6:   Submitted: 029_sports_regression_statistical_visualization → p-6-029-sports-regression-statistical-visualization
+I0715 14:33:20.279802  635109 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-6-030-sports-statistical-cleaning
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:33:20 +0000 (now)
+Progress:            
+[14:33:20] B6:   Submitted: 030_sports_statistical_cleaning → p-6-030-sports-statistical-cleaning
+[14:33:20] B6: Waiting for completion (timeout=600s)...
+[14:34:31] B6:   026_sports_regression_prediction_statistical_v3: Succeeded (70s)
+[14:34:31] B6:   027_sports_regression_prediction_visualization: Succeeded (0s)
+[14:34:32] B6:   028_sports_regression_prediction_visualization_v2: Succeeded (0s)
+[14:34:32] B6:   029_sports_regression_statistical_visualization: Succeeded (0s)
+[14:34:32] B6:   030_sports_statistical_cleaning: Succeeded (0s)
+[14:34:32] B6: Cleaning up...
+Total reclaimed space: 0B
+ID						RECLAIMABLE	SIZE		LAST ACCESSED
+gxjr22mg23pwc6pkwsyb2jajr*              	true 		0B        	About a minute ago
+oqx1wlbxk2s7jruuxfzhvw2vq               	true 	9.292kB   	About a minute ago
+f0g5nh8d4gv1egddrch4phlxf*              	true 	0B        	About a minute ago
+t3rt6lzk6bspwyvw7teh7zpll*              	true 	0B        	About a minute ago
+6fhrwyhuq983rrx82nfzi2vzg               	true 	9.143kB   	About a minute ago
+miowi4h5cwljg99fu8amk7fc3*              	true 	39.3kB    	About a minute ago
+609olr61e52iwjphdsh87qx3g*              	true 	201B      	2 minutes ago
+cxic3w3rfk25zrujndbqeognt*              	true 	36.54kB   	2 minutes ago
+sq8xvart5qsa9vkmwenhjp3ae*              	true 	42.47kB   	About a minute ago
+zpv5vcelebolb365plv8yhlr6               	true 	9.711kB   	2 minutes ago
+n2grqlg145fkaqmsyq9kdqpm5               	true 	27.84kB   	About a minute ago
+wo7v1w9cb7v5t8vdw164d17sc*              	true 	0B        	2 minutes ago
+dhpsh247wwsfn6zhosaepgfhb               	true 	9.143kB   	2 minutes ago
+uqipdx9rlpom6jgfopcbai2cz               	true 	9.617kB   	About a minute ago
+m03iwrjvrd6588cgkprwfvtvg*              	true 	201B      	2 minutes ago
+1rqgugxva50n10thw5efxf20p*              	true 	60.73kB   	2 minutes ago
+y5oedgbr0ug4g6je4ywz22lcg*              	true 	0B        	2 minutes ago
+8neitao4c2v8npj07755u2o6d*              	true 	201B      	About a minute ago
+nqiy5xv2luc263ffy6ipnz884*              	true 	37.04kB   	About a minute ago
+upgptycc1p4lvu6cnp6gu7t01*              	true 	201B      	About a minute ago
+wo0kdok3lx4oyhz621jo4dq2b               	true 	29.62kB   	About a minute ago
+setssee43tyz12g7tx8f8iish               	true 	50.96kB   	2 minutes ago
+m7sfqc3iaynko6e374fcs0n8c               	true 	33.12kB   	About a minute ago
+ko6qo0wea9631me1yu66uk8ml*              	true 	201B      	About a minute ago
+vakmj7va39ob4wovpmharr8ot               	true 	27.34kB   	2 minutes ago
+x2pw9mxiwtf2xg5xvdgrthypc               	true 	593.1MB   	About a minute ago
+cisl3km3wnl3ttpeiu7j125i6               	true 	593.1MB   	About a minute ago
+o2w96rbhpmi14nya12ma3zzmj               	true 	53B       	2 minutes ago
+zdu1nxyog8znbs3l5tbpv078g               	true 	59B       	2 minutes ago
+w8p8f2hop8ujki8avx38glu7d               	true 	0B        	2 minutes ago
+p4ofyn0o5u0x28o4n0cb6u351               	true 	0B        	2 minutes ago
+l5codcp3gv9we7e6hwfdre5yg               	true 	0B        	3 minutes ago
+srnafupojgry17in58mmwjpfb               	true 	0B        	3 minutes ago
+zlyns21ccw18vb9m98169zst4               	true 	0B        	3 minutes ago
+Total:	1.187GB
+[14:34:34] B6: BATCH 6 COMPLETE

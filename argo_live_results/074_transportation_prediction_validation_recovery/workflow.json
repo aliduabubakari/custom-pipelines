@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-15-074-transportation-prediction-validation-recovery",
+        "generateName": "transportation-prediction-validation-recovery",
+        "namespace": "default",
+        "uid": "f5b96be6-67f0-47da-b456-dda50d896af2",
+        "resourceVersion": "24487",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T14:59:50Z",
+        "labels": {
+            "domain": "Transportation",
+            "pipeline": "transportation_prediction_validation_recovery",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:59:50Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T15:01:01Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-15-074-transportation-prediction-validation-recovery": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-1222795351": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-1611945787": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-1678614978": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-1678762073": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-1679203358": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-2084178551": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-2396923555": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-314950963": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-3991204323": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-537589791": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-538031076": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-15-074-transportation-prediction-validation-recovery-984317583": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/transportation_prediction_validation_recovery:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:59:50Z",
+        "finishedAt": "2026-07-15T15:01:01Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-15-074-transportation-prediction-validation-recovery": {
+                "id": "p-15-074-transportation-prediction-validation-recovery",
+                "name": "p-15-074-transportation-prediction-validation-recovery",
+                "displayName": "p-15-074-transportation-prediction-validation-recovery",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:59:50Z",
+                "finishedAt": "2026-07-15T15:01:01Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 72
+                },
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-537589791"
+                ],
+                "outboundNodes": [
+                    "p-15-074-transportation-prediction-validation-recovery-3991204323"
+                ]
+            },
+            "p-15-074-transportation-prediction-validation-recovery-1222795351": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-1222795351",
+                "name": "p-15-074-transportation-prediction-validation-recovery[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T15:00:30Z",
+                "finishedAt": "2026-07-15T15:00:36Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-1611945787"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-15-074-transportation-prediction-validation-recovery-1611945787": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-1611945787",
+                "name": "p-15-074-transportation-prediction-validation-recovery[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T15:00:40Z",
+                "finishedAt": "2026-07-15T15:00:50Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 32
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-984317583"
+                ]
+            },
+            "p-15-074-transportation-prediction-validation-recovery-1678614978": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-1678614978",
+                "name": "p-15-074-transportation-prediction-validation-recovery[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T15:00:10Z",
+                "finishedAt": "2026-07-15T15:00:20Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 65
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-2396923555"
+                ]
+            },
+            "p-15-074-transportation-prediction-validation-recovery-1678762073": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-1678762073",
+                "name": "p-15-074-transportation-prediction-validation-recovery[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T15:00:20Z",
+                "finishedAt": "2026-07-15T15:00:30Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 58
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-314950963"
+                ]
+            },
+            "p-15-074-transportation-prediction-validation-recovery-1679203358": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-1679203358",
+                "name": "p-15-074-transportation-prediction-validation-recovery[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T15:00:50Z",
+                "finishedAt": "2026-07-15T15:01:01Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-3991204323"
+                ]
+            },
+            "p-15-074-transportation-prediction-validation-recovery-2084178551": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-2084178551",
+                "name": "p-15-074-transportation-prediction-validation-recovery[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T14:59:50Z",
+                "finishedAt": "2026-07-15T15:00:01Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-1678614978"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-15-074-transportation-prediction-validation-recovery-2396923555": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-2396923555",
+                "name": "p-15-074-transportation-prediction-validation-recovery[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T15:00:10Z",
+                "finishedAt": "2026-07-15T15:00:14Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-1678762073"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-15-074-transportation-prediction-validation-recovery-314950963": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-314950963",
+                "name": "p-15-074-transportation-prediction-validation-recovery[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T15:00:20Z",
+                "finishedAt": "2026-07-15T15:00:24Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-538031076"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-15-074-transportation-prediction-validation-recovery-3991204323": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-3991204323",
+                "name": "p-15-074-transportation-prediction-validation-recovery[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T15:00:50Z",
+                "finishedAt": "2026-07-15T15:00:54Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-15-074-transportation-prediction-validation-recovery-537589791": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-537589791",
+                "name": "p-15-074-transportation-prediction-validation-recovery[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T14:59:50Z",
+                "finishedAt": "2026-07-15T15:00:10Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 72
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-2084178551"
+                ]
+            },
+            "p-15-074-transportation-prediction-validation-recovery-538031076": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-538031076",
+                "name": "p-15-074-transportation-prediction-validation-recovery[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T15:00:30Z",
+                "finishedAt": "2026-07-15T15:00:40Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 51
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-1222795351"
+                ]
+            },
+            "p-15-074-transportation-prediction-validation-recovery-984317583": {
+                "id": "p-15-074-transportation-prediction-validation-recovery-984317583",
+                "name": "p-15-074-transportation-prediction-validation-recovery[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-15-074-transportation-prediction-validation-recovery",
+                "phase": "Succeeded",
+                "boundaryID": "p-15-074-transportation-prediction-validation-recovery",
+                "startedAt": "2026-07-15T15:00:40Z",
+                "finishedAt": "2026-07-15T15:00:46Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 24
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-15-074-transportation-prediction-validation-recovery-1679203358"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 3,
+            "memory": 72
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

@@ -1,0 +1,73 @@
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551: time=2026-07-15T14:59:59.572Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551: STEP 1: Load & Profile — Transportation | Techniques: prediction, recovery, validation
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551:    Data: 731 rows x 13 cols
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551:    Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551:    departure_hour: mean=11.12, std=6.65
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551:    distance_km: mean=22.72, std=12.78
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551:    passengers: mean=29.91, std=5.52
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551:    fare_amount: mean=8.15, std=3.82
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551: OK
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551: time=2026-07-15T15:00:00.573Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-15-074-transportation-prediction-validation-recovery-run-step-2084178551: time=2026-07-15T15:00:00.573Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-15-074-transportation-prediction-validation-recovery-run-step-2396923555: time=2026-07-15T15:00:12.738Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-074-transportation-prediction-validation-recovery-run-step-2396923555: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-15-074-transportation-prediction-validation-recovery-run-step-2396923555: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-15-074-transportation-prediction-validation-recovery-run-step-2396923555:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-15-074-transportation-prediction-validation-recovery-run-step-2396923555: STEP 2: Clean & Standardize
+p-15-074-transportation-prediction-validation-recovery-run-step-2396923555:    Nulls: 0 → 0
+p-15-074-transportation-prediction-validation-recovery-run-step-2396923555: OK
+p-15-074-transportation-prediction-validation-recovery-run-step-2396923555: time=2026-07-15T15:00:13.738Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-15-074-transportation-prediction-validation-recovery-run-step-2396923555: time=2026-07-15T15:00:13.738Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-15-074-transportation-prediction-validation-recovery-run-step-314950963: time=2026-07-15T15:00:22.708Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-074-transportation-prediction-validation-recovery-run-step-314950963: STEP 3: Feature Engineering
+p-15-074-transportation-prediction-validation-recovery-run-step-314950963:    Created: 3 features
+p-15-074-transportation-prediction-validation-recovery-run-step-314950963:    16 columns
+p-15-074-transportation-prediction-validation-recovery-run-step-314950963: OK
+p-15-074-transportation-prediction-validation-recovery-run-step-314950963: time=2026-07-15T15:00:23.708Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-15-074-transportation-prediction-validation-recovery-run-step-314950963: time=2026-07-15T15:00:23.708Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-15-074-transportation-prediction-validation-recovery-run-step-1222795351: time=2026-07-15T15:00:32.839Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-074-transportation-prediction-validation-recovery-run-step-1222795351: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-15-074-transportation-prediction-validation-recovery-run-step-1222795351: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-15-074-transportation-prediction-validation-recovery-run-step-1222795351:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-15-074-transportation-prediction-validation-recovery-run-step-1222795351: STEP 4: EDA & Visualization
+p-15-074-transportation-prediction-validation-recovery-run-step-1222795351:    9 numerical, 4 categorical features
+p-15-074-transportation-prediction-validation-recovery-run-step-1222795351: OK
+p-15-074-transportation-prediction-validation-recovery-run-step-1222795351: time=2026-07-15T15:00:35.842Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-15-074-transportation-prediction-validation-recovery-run-step-1222795351: time=2026-07-15T15:00:35.842Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-15-074-transportation-prediction-validation-recovery-run-step-984317583: time=2026-07-15T15:00:43.054Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-074-transportation-prediction-validation-recovery-run-step-984317583: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-15-074-transportation-prediction-validation-recovery-run-step-984317583: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-15-074-transportation-prediction-validation-recovery-run-step-984317583:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-15-074-transportation-prediction-validation-recovery-run-step-984317583: STEP 5: Model Training — prediction, recovery, validation
+p-15-074-transportation-prediction-validation-recovery-run-step-984317583:    ROC-AUC: 0.722, Acc: 82.99%
+p-15-074-transportation-prediction-validation-recovery-run-step-984317583:    Model saved
+p-15-074-transportation-prediction-validation-recovery-run-step-984317583: time=2026-07-15T15:00:46.056Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-15-074-transportation-prediction-validation-recovery-run-step-984317583: time=2026-07-15T15:00:46.056Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: time=2026-07-15T15:00:52.889Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: STEP 6: Final Report
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: ======================================================================
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:     TRANSPORTATION PIPELINE: PREDICTION, RECOVERY, VALIDATION
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:     2026-07-15 15:00:52
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: ======================================================================
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: 
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: Domain: Transportation
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: Techniques Applied: prediction, recovery, validation
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: 
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: Pipeline Steps:
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:   1. Data Loading & Profiling
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:   2. Data Cleaning & Standardization
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:   3. Feature Engineering
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:   4. Exploratory Data Analysis & Visualization
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:   5. Model Training & Evaluation
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:   6. Final Synthesis & Business Recommendations
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: 
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: Key outputs are available in the output/ directory.
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: 
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: Recommendations:
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:   • Monitor model performance monthly
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:   • Reassess feature importance quarterly
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323:   • Retrain models with fresh data biannually
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: ======================================================================
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: OK
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: time=2026-07-15T15:00:53.890Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-15-074-transportation-prediction-validation-recovery-run-step-3991204323: time=2026-07-15T15:00:53.890Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

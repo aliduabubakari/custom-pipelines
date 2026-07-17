@@ -1,0 +1,56 @@
+p-2-009-healthcare-readmission-run-step-1412234485: time=2026-07-15T14:20:34.402Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-009-healthcare-readmission-run-step-1412234485: STEP 1: Load & Profile
+p-2-009-healthcare-readmission-run-step-1412234485:    patients: 500 rows x 12 cols
+p-2-009-healthcare-readmission-run-step-1412234485:    admissions: 1289 rows x 10 cols
+p-2-009-healthcare-readmission-run-step-1412234485:    lab_results: 7660 rows x 6 cols
+p-2-009-healthcare-readmission-run-step-1412234485:    medications: 5850 rows x 5 cols
+p-2-009-healthcare-readmission-run-step-1412234485: OK
+p-2-009-healthcare-readmission-run-step-1412234485: time=2026-07-15T14:20:36.403Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-009-healthcare-readmission-run-step-1412234485: time=2026-07-15T14:20:36.403Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-009-healthcare-readmission-run-step-3635814941: time=2026-07-15T14:20:49.122Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-009-healthcare-readmission-run-step-3635814941: /pipeline/scripts/step_02_clean.py:12: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-2-009-healthcare-readmission-run-step-3635814941: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-2-009-healthcare-readmission-run-step-3635814941:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-2-009-healthcare-readmission-run-step-3635814941: STEP 2: Clean & Standardize
+p-2-009-healthcare-readmission-run-step-3635814941:    500 rows saved
+p-2-009-healthcare-readmission-run-step-3635814941: OK
+p-2-009-healthcare-readmission-run-step-3635814941: time=2026-07-15T14:20:50.122Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-009-healthcare-readmission-run-step-3635814941: time=2026-07-15T14:20:50.122Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-009-healthcare-readmission-run-step-424779433: time=2026-07-15T14:20:59.018Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-009-healthcare-readmission-run-step-424779433: STEP 3: Feature Engineering
+p-2-009-healthcare-readmission-run-step-424779433:    Created: age_group
+p-2-009-healthcare-readmission-run-step-424779433:    13 cols
+p-2-009-healthcare-readmission-run-step-424779433: OK
+p-2-009-healthcare-readmission-run-step-424779433: time=2026-07-15T14:21:00.019Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-009-healthcare-readmission-run-step-424779433: time=2026-07-15T14:21:00.019Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-009-healthcare-readmission-run-step-646123849: time=2026-07-15T14:21:08.013Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-009-healthcare-readmission-run-step-646123849: STEP 4: EDA
+p-2-009-healthcare-readmission-run-step-646123849:    7 numerical features
+p-2-009-healthcare-readmission-run-step-646123849: OK
+p-2-009-healthcare-readmission-run-step-646123849: time=2026-07-15T14:21:11.015Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-009-healthcare-readmission-run-step-646123849: time=2026-07-15T14:21:11.015Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-009-healthcare-readmission-run-step-1543500517: time=2026-07-15T14:21:19.056Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-009-healthcare-readmission-run-step-1543500517: /pipeline/scripts/step_05_model.py:27: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-2-009-healthcare-readmission-run-step-1543500517: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-2-009-healthcare-readmission-run-step-1543500517:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-2-009-healthcare-readmission-run-step-1543500517: STEP 5: Model Training
+p-2-009-healthcare-readmission-run-step-1543500517:    Target: has_diabetes
+p-2-009-healthcare-readmission-run-step-1543500517:    ROC-AUC: 0.572, Acc: 60.00%
+p-2-009-healthcare-readmission-run-step-1543500517: time=2026-07-15T14:21:22.059Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-009-healthcare-readmission-run-step-1543500517: time=2026-07-15T14:21:22.059Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-009-healthcare-readmission-run-step-1540671677: time=2026-07-15T14:21:28.167Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-009-healthcare-readmission-run-step-1540671677: STEP 6: Final Report
+p-2-009-healthcare-readmission-run-step-1540671677: ============================================================
+p-2-009-healthcare-readmission-run-step-1540671677:     HEALTHCARE READMISSION PREDICTION — FINAL REPORT
+p-2-009-healthcare-readmission-run-step-1540671677:     2026-07-15 14:21:28
+p-2-009-healthcare-readmission-run-step-1540671677: ============================================================
+p-2-009-healthcare-readmission-run-step-1540671677: 
+p-2-009-healthcare-readmission-run-step-1540671677: Domain: Healthcare / Clinical
+p-2-009-healthcare-readmission-run-step-1540671677: Predicting patient readmission risk from clinical records, lab results, and medication history.
+p-2-009-healthcare-readmission-run-step-1540671677: 
+p-2-009-healthcare-readmission-run-step-1540671677: This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+p-2-009-healthcare-readmission-run-step-1540671677: Key outputs are in the output/ directory.
+p-2-009-healthcare-readmission-run-step-1540671677: ============================================================
+p-2-009-healthcare-readmission-run-step-1540671677: OK
+p-2-009-healthcare-readmission-run-step-1540671677: time=2026-07-15T14:21:29.167Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-009-healthcare-readmission-run-step-1540671677: time=2026-07-15T14:21:29.167Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

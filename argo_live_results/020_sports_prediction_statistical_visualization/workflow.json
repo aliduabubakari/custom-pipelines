@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-4-020-sports-prediction-statistical-visualization",
+        "generateName": "sports-prediction-statistical-visualization",
+        "namespace": "default",
+        "uid": "630d1229-cfcb-4f91-94a9-7764257e39bb",
+        "resourceVersion": "10063",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T14:26:56Z",
+        "labels": {
+            "domain": "Sports",
+            "pipeline": "sports_prediction_statistical_visualization",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:26:56Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:28:07Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-4-020-sports-prediction-statistical-visualization": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-1688647866": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-2399791223": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-2400335676": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-2400482771": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-2958457646": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-3540816410": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-3540963505": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-3541507958": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-4104050326": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-4241355790": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-499219842": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-4-020-sports-prediction-statistical-visualization-984281834": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/sports_prediction_statistical_visualization:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:26:56Z",
+        "finishedAt": "2026-07-15T14:28:07Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-4-020-sports-prediction-statistical-visualization": {
+                "id": "p-4-020-sports-prediction-statistical-visualization",
+                "name": "p-4-020-sports-prediction-statistical-visualization",
+                "displayName": "p-4-020-sports-prediction-statistical-visualization",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:26:56Z",
+                "finishedAt": "2026-07-15T14:28:07Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 69
+                },
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-3540816410"
+                ],
+                "outboundNodes": [
+                    "p-4-020-sports-prediction-statistical-visualization-1688647866"
+                ]
+            },
+            "p-4-020-sports-prediction-statistical-visualization-1688647866": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-1688647866",
+                "name": "p-4-020-sports-prediction-statistical-visualization[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:27:57Z",
+                "finishedAt": "2026-07-15T14:28:01Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-4-020-sports-prediction-statistical-visualization-2399791223": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-2399791223",
+                "name": "p-4-020-sports-prediction-statistical-visualization[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:27:17Z",
+                "finishedAt": "2026-07-15T14:27:27Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 62
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-499219842"
+                ]
+            },
+            "p-4-020-sports-prediction-statistical-visualization-2400335676": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-2400335676",
+                "name": "p-4-020-sports-prediction-statistical-visualization[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:27:27Z",
+                "finishedAt": "2026-07-15T14:27:37Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 53
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-4104050326"
+                ]
+            },
+            "p-4-020-sports-prediction-statistical-visualization-2400482771": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-2400482771",
+                "name": "p-4-020-sports-prediction-statistical-visualization[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:27:57Z",
+                "finishedAt": "2026-07-15T14:28:07Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-1688647866"
+                ]
+            },
+            "p-4-020-sports-prediction-statistical-visualization-2958457646": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-2958457646",
+                "name": "p-4-020-sports-prediction-statistical-visualization[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:27:47Z",
+                "finishedAt": "2026-07-15T14:27:53Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-2400482771"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-4-020-sports-prediction-statistical-visualization-3540816410": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-3540816410",
+                "name": "p-4-020-sports-prediction-statistical-visualization[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:26:56Z",
+                "finishedAt": "2026-07-15T14:27:17Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 69
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-4241355790"
+                ]
+            },
+            "p-4-020-sports-prediction-statistical-visualization-3540963505": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-3540963505",
+                "name": "p-4-020-sports-prediction-statistical-visualization[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:27:37Z",
+                "finishedAt": "2026-07-15T14:27:47Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 45
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-984281834"
+                ]
+            },
+            "p-4-020-sports-prediction-statistical-visualization-3541507958": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-3541507958",
+                "name": "p-4-020-sports-prediction-statistical-visualization[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:27:47Z",
+                "finishedAt": "2026-07-15T14:27:57Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 26
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-2958457646"
+                ]
+            },
+            "p-4-020-sports-prediction-statistical-visualization-4104050326": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-4104050326",
+                "name": "p-4-020-sports-prediction-statistical-visualization[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:27:27Z",
+                "finishedAt": "2026-07-15T14:27:31Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-3540963505"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-4-020-sports-prediction-statistical-visualization-4241355790": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-4241355790",
+                "name": "p-4-020-sports-prediction-statistical-visualization[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:26:56Z",
+                "finishedAt": "2026-07-15T14:27:09Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-2399791223"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-4-020-sports-prediction-statistical-visualization-499219842": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-499219842",
+                "name": "p-4-020-sports-prediction-statistical-visualization[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:27:17Z",
+                "finishedAt": "2026-07-15T14:27:21Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 9
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-2400335676"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-4-020-sports-prediction-statistical-visualization-984281834": {
+                "id": "p-4-020-sports-prediction-statistical-visualization-984281834",
+                "name": "p-4-020-sports-prediction-statistical-visualization[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-4-020-sports-prediction-statistical-visualization",
+                "phase": "Succeeded",
+                "boundaryID": "p-4-020-sports-prediction-statistical-visualization",
+                "startedAt": "2026-07-15T14:27:37Z",
+                "finishedAt": "2026-07-15T14:27:43Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-4-020-sports-prediction-statistical-visualization-3541507958"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 2,
+            "memory": 69
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

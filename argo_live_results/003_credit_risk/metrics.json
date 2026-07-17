@@ -1,0 +1,96 @@
+{
+  "pipeline": "003_credit_risk",
+  "batch": 1,
+  "workflow": "p-1-003-credit-risk",
+  "phase": "Failed",
+  "elapsed_s": 40,
+  "pod_duration_s": 66.0,
+  "node_count": 11,
+  "step_count": 11,
+  "steps_succeeded": 10,
+  "steps_failed": 1,
+  "steps": [
+    {
+      "name": "step-11",
+      "phase": "Failed",
+      "duration_s": 7.0,
+      "exit_code": "1",
+      "message": "main: Error (exit code 1)"
+    },
+    {
+      "name": "step-02",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-09",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-08",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-06",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-04",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-05",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-10",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-07",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 13.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-03",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    }
+  ],
+  "image_tag": "custom-pipelines/credit_risk:latest",
+  "started_at": "2026-07-15T14:16:09Z",
+  "finished_at": "2026-07-15T14:18:10Z",
+  "cpu_seconds": 8,
+  "memory_mb_seconds": 151
+}

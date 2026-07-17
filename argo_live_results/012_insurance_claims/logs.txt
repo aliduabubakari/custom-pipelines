@@ -1,0 +1,53 @@
+p-3-012-insurance-claims-run-step-2671793036: time=2026-07-15T14:23:50.475Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-012-insurance-claims-run-step-2671793036: STEP 1: Load & Profile
+p-3-012-insurance-claims-run-step-2671793036:    claims: 1000 rows x 18 cols
+p-3-012-insurance-claims-run-step-2671793036: OK
+p-3-012-insurance-claims-run-step-2671793036: time=2026-07-15T14:23:51.476Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-012-insurance-claims-run-step-2671793036: time=2026-07-15T14:23:51.476Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-012-insurance-claims-run-step-139814116: time=2026-07-15T14:24:03.868Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-012-insurance-claims-run-step-139814116: /pipeline/scripts/step_02_clean.py:12: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-3-012-insurance-claims-run-step-139814116: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-3-012-insurance-claims-run-step-139814116:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-3-012-insurance-claims-run-step-139814116: STEP 2: Clean & Standardize
+p-3-012-insurance-claims-run-step-139814116:    1000 rows saved
+p-3-012-insurance-claims-run-step-139814116: OK
+p-3-012-insurance-claims-run-step-139814116: time=2026-07-15T14:24:04.869Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-012-insurance-claims-run-step-139814116: time=2026-07-15T14:24:04.869Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-012-insurance-claims-run-step-1346049892: time=2026-07-15T14:24:14.241Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-012-insurance-claims-run-step-1346049892: STEP 3: Feature Engineering
+p-3-012-insurance-claims-run-step-1346049892:    Created: claim_size, age_group
+p-3-012-insurance-claims-run-step-1346049892:    19 cols
+p-3-012-insurance-claims-run-step-1346049892: OK
+p-3-012-insurance-claims-run-step-1346049892: time=2026-07-15T14:24:15.241Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-012-insurance-claims-run-step-1346049892: time=2026-07-15T14:24:15.241Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-012-insurance-claims-run-step-2559255396: time=2026-07-15T14:24:24.121Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-012-insurance-claims-run-step-2559255396: STEP 4: EDA
+p-3-012-insurance-claims-run-step-2559255396:    10 numerical features
+p-3-012-insurance-claims-run-step-2559255396: OK
+p-3-012-insurance-claims-run-step-2559255396: time=2026-07-15T14:24:27.126Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-012-insurance-claims-run-step-2559255396: time=2026-07-15T14:24:27.126Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-012-insurance-claims-run-step-2278545292: time=2026-07-15T14:24:33.251Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-012-insurance-claims-run-step-2278545292: /pipeline/scripts/step_05_model.py:27: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-3-012-insurance-claims-run-step-2278545292: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-3-012-insurance-claims-run-step-2278545292:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-3-012-insurance-claims-run-step-2278545292: STEP 5: Model Training
+p-3-012-insurance-claims-run-step-2278545292:    Target: is_fraudulent (rate: 7.5%)
+p-3-012-insurance-claims-run-step-2278545292:    ROC-AUC: 0.587, Acc: 92.00%
+p-3-012-insurance-claims-run-step-2278545292: time=2026-07-15T14:24:36.255Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-012-insurance-claims-run-step-2278545292: time=2026-07-15T14:24:36.255Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-012-insurance-claims-run-step-3489269460: time=2026-07-15T14:24:44.276Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-3-012-insurance-claims-run-step-3489269460: STEP 6: Final Report
+p-3-012-insurance-claims-run-step-3489269460: ============================================================
+p-3-012-insurance-claims-run-step-3489269460:     INSURANCE CLAIMS FRAUD DETECTION — FINAL REPORT
+p-3-012-insurance-claims-run-step-3489269460:     2026-07-15 14:24:44
+p-3-012-insurance-claims-run-step-3489269460: ============================================================
+p-3-012-insurance-claims-run-step-3489269460: 
+p-3-012-insurance-claims-run-step-3489269460: Domain: Insurance / Risk
+p-3-012-insurance-claims-run-step-3489269460: Detecting fraudulent insurance claims using policyholder characteristics and claim patterns.
+p-3-012-insurance-claims-run-step-3489269460: 
+p-3-012-insurance-claims-run-step-3489269460: This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+p-3-012-insurance-claims-run-step-3489269460: Key outputs are in the output/ directory.
+p-3-012-insurance-claims-run-step-3489269460: ============================================================
+p-3-012-insurance-claims-run-step-3489269460: OK
+p-3-012-insurance-claims-run-step-3489269460: time=2026-07-15T14:24:45.276Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-012-insurance-claims-run-step-3489269460: time=2026-07-15T14:24:45.276Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

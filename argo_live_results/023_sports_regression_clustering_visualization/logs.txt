@@ -1,0 +1,77 @@
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255: time=2026-07-15T14:30:16.922Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255: STEP 1: Load & Profile — Sports | Techniques: clustering, regression, visualization
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255:    Data: 574 rows x 16 cols
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255:    Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255:    games_played: mean=46.11, std=20.04
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255:    points_per_game: mean=12.11, std=7.46
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255:    assists_per_game: mean=3.99, std=2.69
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255:    rebounds_per_game: mean=6.15, std=3.74
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255: OK
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255: time=2026-07-15T14:30:17.922Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-023-sports-regression-clustering-visualization-run-step-2794138255: time=2026-07-15T14:30:17.922Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-5-023-sports-regression-clustering-visualization-run-step-2256506907: time=2026-07-15T14:30:31.426Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-023-sports-regression-clustering-visualization-run-step-2256506907: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-5-023-sports-regression-clustering-visualization-run-step-2256506907: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-5-023-sports-regression-clustering-visualization-run-step-2256506907:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-5-023-sports-regression-clustering-visualization-run-step-2256506907: STEP 2: Clean & Standardize
+p-5-023-sports-regression-clustering-visualization-run-step-2256506907:    Nulls: 0 → 0
+p-5-023-sports-regression-clustering-visualization-run-step-2256506907: OK
+p-5-023-sports-regression-clustering-visualization-run-step-2256506907: time=2026-07-15T14:30:32.427Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-023-sports-regression-clustering-visualization-run-step-2256506907: time=2026-07-15T14:30:32.427Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-5-023-sports-regression-clustering-visualization-run-step-454303787: time=2026-07-15T14:30:41.598Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-023-sports-regression-clustering-visualization-run-step-454303787: STEP 3: Feature Engineering
+p-5-023-sports-regression-clustering-visualization-run-step-454303787:    Created: 3 features
+p-5-023-sports-regression-clustering-visualization-run-step-454303787:    19 columns
+p-5-023-sports-regression-clustering-visualization-run-step-454303787: OK
+p-5-023-sports-regression-clustering-visualization-run-step-454303787: time=2026-07-15T14:30:42.599Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-023-sports-regression-clustering-visualization-run-step-454303787: time=2026-07-15T14:30:42.599Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-5-023-sports-regression-clustering-visualization-run-step-3098042479: time=2026-07-15T14:30:51.491Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-023-sports-regression-clustering-visualization-run-step-3098042479: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-5-023-sports-regression-clustering-visualization-run-step-3098042479: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-5-023-sports-regression-clustering-visualization-run-step-3098042479:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-5-023-sports-regression-clustering-visualization-run-step-3098042479: STEP 4: EDA & Visualization
+p-5-023-sports-regression-clustering-visualization-run-step-3098042479:    15 numerical, 3 categorical features
+p-5-023-sports-regression-clustering-visualization-run-step-3098042479: OK
+p-5-023-sports-regression-clustering-visualization-run-step-3098042479: time=2026-07-15T14:30:54.491Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-5-023-sports-regression-clustering-visualization-run-step-3098042479: time=2026-07-15T14:30:54.491Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695: time=2026-07-15T14:31:01.461Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695: STEP 5: Model Training — clustering, regression, visualization
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695:    Clusters (n=3):
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695:      Cluster 0 (n=198): mean win_shares=5.027
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695:      Cluster 1 (n=192): mean win_shares=5.005
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695:      Cluster 2 (n=184): mean win_shares=4.821
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695:    MAE: 2.94, R2: -0.083
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695:    Model saved
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695: time=2026-07-15T14:31:04.467Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-023-sports-regression-clustering-visualization-run-step-2392986695: time=2026-07-15T14:31:04.467Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: time=2026-07-15T14:31:11.552Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: STEP 6: Final Report
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: ======================================================================
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:     SPORTS PIPELINE: CLUSTERING, REGRESSION, VISUALIZATION
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:     2026-07-15 14:31:11
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: ======================================================================
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: 
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: Domain: Sports
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: Techniques Applied: clustering, regression, visualization
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: 
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: Pipeline Steps:
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:   1. Data Loading & Profiling
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:   2. Data Cleaning & Standardization
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:   3. Feature Engineering
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:   4. Exploratory Data Analysis & Visualization
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:   5. Model Training & Evaluation
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:   6. Final Synthesis & Business Recommendations
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: 
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: Key outputs are available in the output/ directory.
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: 
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: Recommendations:
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:   • Monitor model performance monthly
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:   • Reassess feature importance quarterly
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923:   • Retrain models with fresh data biannually
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: ======================================================================
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: OK
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: time=2026-07-15T14:31:12.552Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-023-sports-regression-clustering-visualization-run-step-2283412923: time=2026-07-15T14:31:12.552Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

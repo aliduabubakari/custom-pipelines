@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-8-036-sports-statistical-cleaning-validation",
+        "generateName": "sports-statistical-cleaning-validation",
+        "namespace": "default",
+        "uid": "1561d999-7a11-49da-847f-25638a7ce267",
+        "resourceVersion": "15296",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T14:39:12Z",
+        "labels": {
+            "domain": "Sports",
+            "pipeline": "sports_statistical_cleaning_validation",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:39:12Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:40:23Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-8-036-sports-statistical-cleaning-validation": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-1100161222": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-1997537890": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-223686089": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-224230542": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-2860467162": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-3377481103": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-3378025556": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-3378172651": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-3444738674": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-3892443634": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-4014169478": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-036-sports-statistical-cleaning-validation-404242414": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/sports_statistical_cleaning_validation:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:39:12Z",
+        "finishedAt": "2026-07-15T14:40:23Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-8-036-sports-statistical-cleaning-validation": {
+                "id": "p-8-036-sports-statistical-cleaning-validation",
+                "name": "p-8-036-sports-statistical-cleaning-validation",
+                "displayName": "p-8-036-sports-statistical-cleaning-validation",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:39:12Z",
+                "finishedAt": "2026-07-15T14:40:23Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 70
+                },
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-3444738674"
+                ],
+                "outboundNodes": [
+                    "p-8-036-sports-statistical-cleaning-validation-3892443634"
+                ]
+            },
+            "p-8-036-sports-statistical-cleaning-validation-1100161222": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-1100161222",
+                "name": "p-8-036-sports-statistical-cleaning-validation[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:40:03Z",
+                "finishedAt": "2026-07-15T14:40:10Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 20
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-3378172651"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-8-036-sports-statistical-cleaning-validation-1997537890": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-1997537890",
+                "name": "p-8-036-sports-statistical-cleaning-validation[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:39:53Z",
+                "finishedAt": "2026-07-15T14:39:59Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 20
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-224230542"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-8-036-sports-statistical-cleaning-validation-223686089": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-223686089",
+                "name": "p-8-036-sports-statistical-cleaning-validation[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:39:53Z",
+                "finishedAt": "2026-07-15T14:40:03Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 48
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-1997537890"
+                ]
+            },
+            "p-8-036-sports-statistical-cleaning-validation-224230542": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-224230542",
+                "name": "p-8-036-sports-statistical-cleaning-validation[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:40:03Z",
+                "finishedAt": "2026-07-15T14:40:13Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 28
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-1100161222"
+                ]
+            },
+            "p-8-036-sports-statistical-cleaning-validation-2860467162": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-2860467162",
+                "name": "p-8-036-sports-statistical-cleaning-validation[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:39:32Z",
+                "finishedAt": "2026-07-15T14:39:37Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-3378025556"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-8-036-sports-statistical-cleaning-validation-3377481103": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-3377481103",
+                "name": "p-8-036-sports-statistical-cleaning-validation[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:39:32Z",
+                "finishedAt": "2026-07-15T14:39:42Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 63
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-2860467162"
+                ]
+            },
+            "p-8-036-sports-statistical-cleaning-validation-3378025556": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-3378025556",
+                "name": "p-8-036-sports-statistical-cleaning-validation[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:39:42Z",
+                "finishedAt": "2026-07-15T14:39:53Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 56
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-404242414"
+                ]
+            },
+            "p-8-036-sports-statistical-cleaning-validation-3378172651": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-3378172651",
+                "name": "p-8-036-sports-statistical-cleaning-validation[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:40:13Z",
+                "finishedAt": "2026-07-15T14:40:23Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-3892443634"
+                ]
+            },
+            "p-8-036-sports-statistical-cleaning-validation-3444738674": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-3444738674",
+                "name": "p-8-036-sports-statistical-cleaning-validation[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:39:12Z",
+                "finishedAt": "2026-07-15T14:39:32Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 70
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-4014169478"
+                ]
+            },
+            "p-8-036-sports-statistical-cleaning-validation-3892443634": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-3892443634",
+                "name": "p-8-036-sports-statistical-cleaning-validation[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:40:13Z",
+                "finishedAt": "2026-07-15T14:40:17Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-8-036-sports-statistical-cleaning-validation-4014169478": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-4014169478",
+                "name": "p-8-036-sports-statistical-cleaning-validation[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:39:12Z",
+                "finishedAt": "2026-07-15T14:39:23Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-3377481103"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-8-036-sports-statistical-cleaning-validation-404242414": {
+                "id": "p-8-036-sports-statistical-cleaning-validation-404242414",
+                "name": "p-8-036-sports-statistical-cleaning-validation[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-036-sports-statistical-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-036-sports-statistical-cleaning-validation",
+                "startedAt": "2026-07-15T14:39:42Z",
+                "finishedAt": "2026-07-15T14:39:47Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-8-036-sports-statistical-cleaning-validation-223686089"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 2,
+            "memory": 70
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

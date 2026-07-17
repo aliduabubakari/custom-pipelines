@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-3-013-predictive-maintenance",
+        "generateName": "predictive-maintenance",
+        "namespace": "default",
+        "uid": "ab5500e0-0d81-41bb-9385-653ccf47abd3",
+        "resourceVersion": "8664",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T14:23:41Z",
+        "labels": {
+            "domain": "Manufacturing",
+            "pipeline": "predictive_maintenance",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:23:41Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:24:51Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-3-013-predictive-maintenance": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-1051396866": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-1051543961": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-1455092208": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-1583529400": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-1586358240": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-1856318424": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-2236173904": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-3678672664": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-4205338975": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-4205883428": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-4206471808": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-3-013-predictive-maintenance-4273435189": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/predictive_maintenance:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:23:41Z",
+        "finishedAt": "2026-07-15T14:24:51Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-3-013-predictive-maintenance": {
+                "id": "p-3-013-predictive-maintenance",
+                "name": "p-3-013-predictive-maintenance",
+                "displayName": "p-3-013-predictive-maintenance",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:23:41Z",
+                "finishedAt": "2026-07-15T14:24:51Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 78
+                },
+                "children": [
+                    "p-3-013-predictive-maintenance-4205883428"
+                ],
+                "outboundNodes": [
+                    "p-3-013-predictive-maintenance-1455092208"
+                ]
+            },
+            "p-3-013-predictive-maintenance-1051396866": {
+                "id": "p-3-013-predictive-maintenance-1051396866",
+                "name": "p-3-013-predictive-maintenance[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:24:11Z",
+                "finishedAt": "2026-07-15T14:24:21Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 59
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-3-013-predictive-maintenance-2236173904"
+                ]
+            },
+            "p-3-013-predictive-maintenance-1051543961": {
+                "id": "p-3-013-predictive-maintenance-1051543961",
+                "name": "p-3-013-predictive-maintenance[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:24:01Z",
+                "finishedAt": "2026-07-15T14:24:11Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 71
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-3-013-predictive-maintenance-1586358240"
+                ]
+            },
+            "p-3-013-predictive-maintenance-1455092208": {
+                "id": "p-3-013-predictive-maintenance-1455092208",
+                "name": "p-3-013-predictive-maintenance[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:24:41Z",
+                "finishedAt": "2026-07-15T14:24:46Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-3-013-predictive-maintenance-1583529400": {
+                "id": "p-3-013-predictive-maintenance-1583529400",
+                "name": "p-3-013-predictive-maintenance[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:23:41Z",
+                "finishedAt": "2026-07-15T14:23:52Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-3-013-predictive-maintenance-1051543961"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-3-013-predictive-maintenance-1586358240": {
+                "id": "p-3-013-predictive-maintenance-1586358240",
+                "name": "p-3-013-predictive-maintenance[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:24:01Z",
+                "finishedAt": "2026-07-15T14:24:05Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 12
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-3-013-predictive-maintenance-1051396866"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-3-013-predictive-maintenance-1856318424": {
+                "id": "p-3-013-predictive-maintenance-1856318424",
+                "name": "p-3-013-predictive-maintenance[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:24:21Z",
+                "finishedAt": "2026-07-15T14:24:28Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 20
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-3-013-predictive-maintenance-4206471808"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-3-013-predictive-maintenance-2236173904": {
+                "id": "p-3-013-predictive-maintenance-2236173904",
+                "name": "p-3-013-predictive-maintenance[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:24:11Z",
+                "finishedAt": "2026-07-15T14:24:15Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-3-013-predictive-maintenance-4205338975"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-3-013-predictive-maintenance-3678672664": {
+                "id": "p-3-013-predictive-maintenance-3678672664",
+                "name": "p-3-013-predictive-maintenance[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:24:31Z",
+                "finishedAt": "2026-07-15T14:24:38Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 25
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-3-013-predictive-maintenance-4273435189"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-3-013-predictive-maintenance-4205338975": {
+                "id": "p-3-013-predictive-maintenance-4205338975",
+                "name": "p-3-013-predictive-maintenance[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:24:21Z",
+                "finishedAt": "2026-07-15T14:24:31Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 52
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-3-013-predictive-maintenance-1856318424"
+                ]
+            },
+            "p-3-013-predictive-maintenance-4205883428": {
+                "id": "p-3-013-predictive-maintenance-4205883428",
+                "name": "p-3-013-predictive-maintenance[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:23:41Z",
+                "finishedAt": "2026-07-15T14:24:01Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 78
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-3-013-predictive-maintenance-1583529400"
+                ]
+            },
+            "p-3-013-predictive-maintenance-4206471808": {
+                "id": "p-3-013-predictive-maintenance-4206471808",
+                "name": "p-3-013-predictive-maintenance[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:24:31Z",
+                "finishedAt": "2026-07-15T14:24:41Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 32
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-3-013-predictive-maintenance-3678672664"
+                ]
+            },
+            "p-3-013-predictive-maintenance-4273435189": {
+                "id": "p-3-013-predictive-maintenance-4273435189",
+                "name": "p-3-013-predictive-maintenance[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-3-013-predictive-maintenance",
+                "phase": "Succeeded",
+                "boundaryID": "p-3-013-predictive-maintenance",
+                "startedAt": "2026-07-15T14:24:41Z",
+                "finishedAt": "2026-07-15T14:24:51Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-3-013-predictive-maintenance-1455092208"
+                ]
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 4,
+            "memory": 78
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

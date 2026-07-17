@@ -1,0 +1,75 @@
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249: time=2026-07-15T14:33:28.934Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249: STEP 1: Load & Profile — Sports | Techniques: regression, statistical, visualization
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249:    Data: 416 rows x 16 cols
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249:    Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249:    games_played: mean=44.99, std=20.65
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249:    points_per_game: mean=12.09, std=7.34
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249:    assists_per_game: mean=4.04, std=2.68
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249:    rebounds_per_game: mean=6.33, std=4.05
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249: OK
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249: time=2026-07-15T14:33:29.935Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-6-029-sports-regression-statistical-visualization-run-step-3744865249: time=2026-07-15T14:33:29.935Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-6-029-sports-regression-statistical-visualization-run-step-3095054873: time=2026-07-15T14:33:42.165Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-6-029-sports-regression-statistical-visualization-run-step-3095054873: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-6-029-sports-regression-statistical-visualization-run-step-3095054873: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-6-029-sports-regression-statistical-visualization-run-step-3095054873:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-6-029-sports-regression-statistical-visualization-run-step-3095054873: STEP 2: Clean & Standardize
+p-6-029-sports-regression-statistical-visualization-run-step-3095054873:    Nulls: 0 → 0
+p-6-029-sports-regression-statistical-visualization-run-step-3095054873: OK
+p-6-029-sports-regression-statistical-visualization-run-step-3095054873: time=2026-07-15T14:33:43.166Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-6-029-sports-regression-statistical-visualization-run-step-3095054873: time=2026-07-15T14:33:43.166Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-6-029-sports-regression-statistical-visualization-run-step-2737348165: time=2026-07-15T14:33:52.278Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-6-029-sports-regression-statistical-visualization-run-step-2737348165: STEP 3: Feature Engineering
+p-6-029-sports-regression-statistical-visualization-run-step-2737348165:    Created: 3 features
+p-6-029-sports-regression-statistical-visualization-run-step-2737348165:    19 columns
+p-6-029-sports-regression-statistical-visualization-run-step-2737348165: OK
+p-6-029-sports-regression-statistical-visualization-run-step-2737348165: time=2026-07-15T14:33:53.279Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-6-029-sports-regression-statistical-visualization-run-step-2737348165: time=2026-07-15T14:33:53.279Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-6-029-sports-regression-statistical-visualization-run-step-1428701597: time=2026-07-15T14:34:02.283Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-6-029-sports-regression-statistical-visualization-run-step-1428701597: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-6-029-sports-regression-statistical-visualization-run-step-1428701597: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-6-029-sports-regression-statistical-visualization-run-step-1428701597:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-6-029-sports-regression-statistical-visualization-run-step-1428701597: STEP 4: EDA & Visualization
+p-6-029-sports-regression-statistical-visualization-run-step-1428701597:    15 numerical, 3 categorical features
+p-6-029-sports-regression-statistical-visualization-run-step-1428701597: OK
+p-6-029-sports-regression-statistical-visualization-run-step-1428701597: time=2026-07-15T14:34:05.284Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-6-029-sports-regression-statistical-visualization-run-step-1428701597: time=2026-07-15T14:34:05.284Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417: time=2026-07-15T14:34:12.401Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417: STEP 5: Model Training — regression, statistical, visualization
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417:    MAE: 0.09, R2: -0.139
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417:    Pearson r: -0.043, p=0.3804
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417:    ANOVA by team: F=1.38, p=0.2423
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417:    Model saved
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417: time=2026-07-15T14:34:15.402Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-6-029-sports-regression-statistical-visualization-run-step-3839922417: time=2026-07-15T14:34:15.402Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: time=2026-07-15T14:34:22.479Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: STEP 6: Final Report
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: ======================================================================
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:     SPORTS PIPELINE: REGRESSION, STATISTICAL, VISUALIZATION
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:     2026-07-15 14:34:22
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: ======================================================================
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: 
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: Domain: Sports
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: Techniques Applied: regression, statistical, visualization
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: 
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: Pipeline Steps:
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:   1. Data Loading & Profiling
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:   2. Data Cleaning & Standardization
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:   3. Feature Engineering
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:   4. Exploratory Data Analysis & Visualization
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:   5. Model Training & Evaluation
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:   6. Final Synthesis & Business Recommendations
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: 
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: Key outputs are available in the output/ directory.
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: 
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: Recommendations:
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:   • Monitor model performance monthly
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:   • Reassess feature importance quarterly
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041:   • Retrain models with fresh data biannually
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: ======================================================================
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: OK
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: time=2026-07-15T14:34:23.480Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-6-029-sports-regression-statistical-visualization-run-step-2092134041: time=2026-07-15T14:34:23.480Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

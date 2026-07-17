@@ -1,0 +1,406 @@
+[14:49:30] B12: Building 5 images...
+[14:49:30] B12:   Building custom-pipelines/transportation_cleaning:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.8s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 41.90kB done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#5 resolve docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28 0.0s done
+#5 sha256:25c5b8011a3425a140bf5fa73be0feabd3c0d5b323eecb19dc02437a368ae075 5.66kB / 5.66kB done
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0B / 29.78MB 0.1s
+#5 sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 0B / 1.29MB 0.1s
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0B / 12.11MB 0.1s
+#5 sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28 10.37kB / 10.37kB done
+#5 sha256:cab2dbf575e971934a81e4622f5aba17aa7929719bd7e31033a3a83b97fd0464 1.75kB / 1.75kB done
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 18.87MB / 29.78MB 0.3s
+#5 sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 1.29MB / 1.29MB 0.3s done
+#5 sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e 0B / 250B 0.3s
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 26.21MB / 29.78MB 0.4s
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 3.15MB / 12.11MB 0.4s
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 29.78MB / 29.78MB 0.5s done
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 9.44MB / 12.11MB 0.5s
+#5 sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e 250B / 250B 0.4s done
+#5 extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 12.11MB / 12.11MB 0.6s done
+#5 extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0.7s done
+#5 extracting sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 0.1s done
+#5 extracting sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0.1s
+#5 extracting sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0.3s done
+#5 extracting sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e done
+#5 DONE 1.8s
+
+#6 [2/6] WORKDIR /pipeline
+#6 DONE 0.2s
+
+#7 [3/6] COPY requirements.txt .
+#7 DONE 0.0s
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 1.498 Collecting matplotlib (from -r requirements.txt (line 1))
+#8 1.535   Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+#8 1.735 Collecting numpy (from -r requirements.txt (line 2))
+#8 1.744   Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 1.840 Collecting pandas (from -r requirements.txt (line 3))
+#8 1.849   Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+#8 1.952 Collecting pyarrow (from -r requirements.txt (line 4))
+#8 1.961   Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#8 2.031 Collecting scikit-learn (from -r requirements.txt (line 5))
+#8 2.040   Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#8 2.073 Collecting seaborn (from -r requirements.txt (line 6))
+#8 2.083   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#8 2.139 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.153   Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 2.174 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 1))
+#8 2.190   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 2.389 Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.399   Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+#8 2.469 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.484   Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+#8 2.513 Collecting packaging>=20.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.522   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+#8 2.695 Collecting pillow>=9 (from matplotlib->-r requirements.txt (line 1))
+#8 2.704   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+#8 2.735 Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 1))
+#8 2.743   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#8 2.761 Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 1))
+#8 2.769   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 2.897 Collecting scipy>=1.10.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.906   Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 2.944 Collecting joblib>=1.4.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.953   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#8 2.996 Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements.txt (line 5))
+#8 3.005   Downloading narwhals-2.24.0-py3-none-any.whl.metadata (15 kB)
+#8 3.021 Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 3.030   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 3.076 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 1))
+#8 3.091   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 3.122 Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+#8 3.216    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 114.4 MB/s eta 0:00:00
+#8 3.225 Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 3.370    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 117.5 MB/s eta 0:00:00
+#8 3.380 Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.9 MB)
+#8 3.473    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 120.9 MB/s eta 0:00:00
+#8 3.483 Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (50.1 MB)
+#8 3.912    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 117.6 MB/s eta 0:00:00
+#8 3.923 Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+#8 4.001    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 118.5 MB/s eta 0:00:00
+#8 4.011 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#8 4.023 Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
+#8 4.035 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 4.046 Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 4.090    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 116.4 MB/s eta 0:00:00
+#8 4.100 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#8 4.115 Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+#8 4.136    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 90.9 MB/s eta 0:00:00
+#8 4.143 Downloading narwhals-2.24.0-py3-none-any.whl (461 kB)
+#8 4.156 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#8 4.166 Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+#8 4.226    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 118.6 MB/s eta 0:00:00
+#8 4.236 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#8 4.246 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 4.256 Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 4.560    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 116.8 MB/s eta 0:00:00
+#8 4.570 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 4.579 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 4.884 Installing collected packages: threadpoolctl, six, pyparsing, pyarrow, pillow, packaging, numpy, narwhals, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, contourpy, scikit-learn, pandas, matplotlib, seaborn
+#8 20.00 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.63.0 joblib-1.5.3 kiwisolver-1.5.0 matplotlib-3.11.0 narwhals-2.24.0 numpy-2.5.1 packaging-26.2 pandas-3.0.3 pillow-12.3.0 pyarrow-25.0.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 scikit-learn-1.9.0 scipy-1.18.0 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0
+#8 20.00 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 20.07 
+#8 20.07 [notice] A new release of pip is available: 25.0.1 -> 26.1.2
+#8 20.07 [notice] To update, run: pip install --upgrade pip
+#8 DONE 20.6s
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.1s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.5s done
+#11 writing image sha256:d8cd323f59998b60275b672aea478714affb5f07b93e42256ce96d0fe73e7a87 done
+#11 naming to docker.io/custom-pipelines/transportation_cleaning:latest done
+#11 DONE 1.5s
+docker.io/custom pipelines/transportatio	saved	
+application/vnd.oci.image.manifest.v1+json sha256:404b3992f062fd1d36e673dfdb79ae6aa34d29aeb060f25ad17ee838cfa4ed2f
+Importing	elapsed: 9.3 s	total:   0.0 B	(0.0 B/s)	
+[14:50:09] B12:   ✓ 056_transportation_cleaning built & imported
+[14:50:09] B12:   Building custom-pipelines/transportation_cleaning_integration:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.3s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 42.41kB done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /pipeline
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.5s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:339760c44a2bea454ba2bbf545809ae46faf011174f4d8f7de525bedab065ddd done
+#11 naming to docker.io/custom-pipelines/transportation_cleaning_integration:latest done
+#11 DONE 0.0s
+docker.io/custom pipelines/transportatio	saved	
+application/vnd.oci.image.manifest.v1+json sha256:23a9c89b87df6e737b38d76dd179c015ba7cbcebcb73807cb4fb436adead2f4e
+Importing	elapsed: 7.2 s	total:   0.0 B	(0.0 B/s)	
+[14:50:22] B12:   ✓ 057_transportation_cleaning_integration built & imported
+[14:50:22] B12:   Building custom-pipelines/transportation_cleaning_integration_geospatial:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 66.22kB done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /pipeline
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:22ca500cfaf2fb1d82486cd3908e3d59a3f9d82bd3954090289bbd21a224ff9b done
+#11 naming to docker.io/custom-pipelines/transportation_cleaning_integration_geospatial:latest
+#11 naming to docker.io/custom-pipelines/transportation_cleaning_integration_geospatial:latest done
+#11 DONE 0.0s
+docker.io/custom pipelines/transportatio	saved	
+application/vnd.oci.image.manifest.v1+json sha256:3a87ee5ee94ed6b1007c117d24d439cdfcbf1ab0ba6a22922288cdc3a8795e43
+Importing	elapsed: 7.1 s	total:   0.0 B	(0.0 B/s)	
+[14:50:35] B12:   ✓ 058_transportation_cleaning_integration_geospatial built & imported
+[14:50:35] B12:   Building custom-pipelines/transportation_cleaning_integration_recovery:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 43.23kB done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /pipeline
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:525a02595fda9ba246443032a974d91f1150e7fa2bc4cad844312b9a3abc4fd3 done
+#11 naming to docker.io/custom-pipelines/transportation_cleaning_integration_recovery:latest done
+#11 DONE 0.0s
+docker.io/custom pipelines/transportatio	saved	
+application/vnd.oci.image.manifest.v1+json sha256:ee6af10332f2244fcbe759b202c56d62ebe810932e5428c407bd489ef2d6d153
+Importing	elapsed: 7.1 s	total:   0.0 B	(0.0 B/s)	
+[14:50:47] B12:   ✓ 059_transportation_cleaning_integration_recovery built & imported
+[14:50:47] B12:   Building custom-pipelines/transportation_cleaning_integration_validation:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 43.69kB done
+#5 DONE 0.0s
+
+#6 [3/6] COPY requirements.txt .
+#6 CACHED
+
+#7 [2/6] WORKDIR /pipeline
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:84c809f38d65f85f7f971dced4479daf56faf61054b508746bf4b8e886d3673e done
+#11 naming to docker.io/custom-pipelines/transportation_cleaning_integration_validation:latest done
+#11 DONE 0.0s
+docker.io/custom pipelines/transportatio	saved	
+application/vnd.oci.image.manifest.v1+json sha256:d222b30ed0a5a2609c99ba97ec146530ab37934ab0c19d3c99cff03aea1fc2e7
+Importing	elapsed: 7.2 s	total:   0.0 B	(0.0 B/s)	
+[14:50:59] B12:   ✓ 060_transportation_cleaning_integration_validation built & imported
+[14:50:59] B12: Submitting workflows...
+I0715 14:50:59.923017  792764 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-12-056-transportation-cleaning
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:50:59 +0000 (now)
+Progress:            
+[14:50:59] B12:   Submitted: 056_transportation_cleaning → p-12-056-transportation-cleaning
+I0715 14:50:59.971431  792789 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-12-057-transportation-cleaning-integration
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:50:59 +0000 (now)
+Progress:            
+[14:50:59] B12:   Submitted: 057_transportation_cleaning_integration → p-12-057-transportation-cleaning-integration
+I0715 14:51:00.025036  792814 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-12-058-transportation-cleaning-integration-geospatial
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:51:00 +0000 (now)
+Progress:            
+[14:51:00] B12:   Submitted: 058_transportation_cleaning_integration_geospatial → p-12-058-transportation-cleaning-integration-geospatial
+I0715 14:51:00.085670  792835 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-12-059-transportation-cleaning-integration-recovery
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:51:00 +0000 (now)
+Progress:            
+[14:51:00] B12:   Submitted: 059_transportation_cleaning_integration_recovery → p-12-059-transportation-cleaning-integration-recovery
+I0715 14:51:00.139003  792875 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-12-060-transportation-cleaning-integration-validation
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:51:00 +0000 (now)
+Progress:            
+[14:51:00] B12:   Submitted: 060_transportation_cleaning_integration_validation → p-12-060-transportation-cleaning-integration-validation
+[14:51:00] B12: Waiting for completion (timeout=600s)...
+[14:52:11] B12:   056_transportation_cleaning: Succeeded (70s)
+[14:52:11] B12:   057_transportation_cleaning_integration: Succeeded (0s)
+[14:52:11] B12:   058_transportation_cleaning_integration_geospatial: Succeeded (0s)
+[14:52:11] B12:   059_transportation_cleaning_integration_recovery: Succeeded (0s)
+[14:52:12] B12:   060_transportation_cleaning_integration_validation: Failed (0s)
+[14:52:12] B12: Cleaning up...
+Total reclaimed space: 0B
+ID						RECLAIMABLE	SIZE		LAST ACCESSED
+bipeblhpp5ufk2mir73680vgf*              	true 		201B      	2 minutes ago
+c5331i662f9gg650rmvlccg4a*              	true 	201B      	About a minute ago
+89c6lsxzby60wu2stlh5ztoud*              	true 	41.42kB   	2 minutes ago
+xkmfxqx907sqovmv80cnrgsz3*              	true 	42.75kB   	About a minute ago
+yw0q0iq7om19etwejislbgak7               	true 	9.158kB   	About a minute ago
+dq9gren3f6672drwq8560u7ql*              	true 	0B        	About a minute ago
+ssuw3f4ospj3escq6ssdqf7sk*              	true 	0B        	2 minutes ago
+psydj2oyeuyy6n7l1l07fz7jh*              	true 	0B        	About a minute ago
+ugrgf0gqpckk5l3kwag6rhkk0*              	true 	201B      	2 minutes ago
+8l1rc8v3vk6o5eozd055qvhfb*              	true 	201B      	About a minute ago
+xgmb4ea9ucto03j5elkw2f65y*              	true 	0B        	About a minute ago
+m83513czg1ej2etp2vsik37fw*              	true 	0B        	2 minutes ago
+bev7o2ww311fg32zx3rbkmvlz*              	true 	201B      	About a minute ago
+m32xyqbhhsideg989wnchxl65*              	true 	41.93kB   	2 minutes ago
+ybr4o2edwr3nopg88jaz80hkb*              	true 	43.21kB   	About a minute ago
+4p91eect9l4l71qxqfqcurc2j               	true 	9.059kB   	2 minutes ago
+miwnxfesxepzvrrlb96xbp7fc*              	true 	65.74kB   	About a minute ago
+ptw4uke7uf5r7ela9uaqrmq4c               	true 	56.53kB   	About a minute ago
+utqcrv0ajvsdmykxdas6xal8n               	true 	9.149kB   	About a minute ago
+y4qlftpclcff6d4i1fhzho5nz               	true 	8.942kB   	2 minutes ago
+qrw3t6ktvidbm4cksff728hmv               	true 	32.82kB   	2 minutes ago
+wr2o2kj5k1tea3klzqc8q9ptc               	true 	33.55kB   	About a minute ago
+q527136hyrhhvy5vz3uftypwc               	true 	9.167kB   	About a minute ago
+ob9ifl0xpgm1uflw7tx8jhehp               	true 	32.43kB   	2 minutes ago
+mkgqt4k49i2irr9ioy35530m0               	true 	33.99kB   	About a minute ago
+pivk5pf54m4bzblknmqbvzakf               	true 	593.1MB   	About a minute ago
+ilcictw6niagn02vd7ifzz3w2               	true 	53B       	2 minutes ago
+sgncbikeosyz7q1zrtfzvf2n2               	true 	0B        	2 minutes ago
+g3iudgkkmsk3qyq4mb14whsbf               	true 	0B        	2 minutes ago
+g8zs3lbrljqxy9jj2o7fomfb2               	true 	0B        	2 minutes ago
+ugyxona1h1jenjsmp8uxvoits               	true 	0B        	2 minutes ago
+v1gf5klbh9u7i5urhcs7rutnt               	true 	0B        	2 minutes ago
+Total:	593.5MB
+[14:52:13] B12: BATCH 12 COMPLETE

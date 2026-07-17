@@ -1,0 +1,72 @@
+p-1-002-analytics-statistical-integration-run-step-2118656704: time=2026-07-15T14:16:16.102Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-002-analytics-statistical-integration-run-step-2118656704: STEP 1: Data Loading & Profiling — Statistical Integration & Analysis Benchmark
+p-1-002-analytics-statistical-integration-run-step-2118656704:    Data: 500 rows, columns=['subject_id', 'group', 'baseline_score', 'post_score', 'age', 'region', 'sessions_attended', 'outcome']
+p-1-002-analytics-statistical-integration-run-step-2118656704:    Groups: {'Control': 207, 'Treatment_B': 154, 'Treatment_A': 139}
+p-1-002-analytics-statistical-integration-run-step-2118656704:    Outcome rate: 32.4%
+p-1-002-analytics-statistical-integration-run-step-2118656704:    data: 500 rows x 8 cols
+p-1-002-analytics-statistical-integration-run-step-2118656704: OK
+p-1-002-analytics-statistical-integration-run-step-2118656704: time=2026-07-15T14:16:19.105Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-002-analytics-statistical-integration-run-step-2118656704: time=2026-07-15T14:16:19.105Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-002-analytics-statistical-integration-run-step-3329380872: time=2026-07-15T14:16:32.220Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-002-analytics-statistical-integration-run-step-3329380872: /pipeline/scripts/step_02_clean.py:12: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-1-002-analytics-statistical-integration-run-step-3329380872: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-1-002-analytics-statistical-integration-run-step-3329380872:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-1-002-analytics-statistical-integration-run-step-3329380872: STEP 2: Data Cleaning & Standardization — Statistical Integration & Analysis Benchmark
+p-1-002-analytics-statistical-integration-run-step-3329380872:    [len(df)] rows saved
+p-1-002-analytics-statistical-integration-run-step-3329380872: OK
+p-1-002-analytics-statistical-integration-run-step-3329380872: time=2026-07-15T14:16:33.221Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-002-analytics-statistical-integration-run-step-3329380872: time=2026-07-15T14:16:33.221Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-002-analytics-statistical-integration-run-step-3196723704: time=2026-07-15T14:16:42.468Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-002-analytics-statistical-integration-run-step-3196723704: STEP 3: Feature Engineering — Statistical Integration & Analysis Benchmark
+p-1-002-analytics-statistical-integration-run-step-3196723704:    Created: improvement, age_group, attendance_rate
+p-1-002-analytics-statistical-integration-run-step-3196723704:    [len(df.columns)] columns
+p-1-002-analytics-statistical-integration-run-step-3196723704: OK
+p-1-002-analytics-statistical-integration-run-step-3196723704: time=2026-07-15T14:16:43.468Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-002-analytics-statistical-integration-run-step-3196723704: time=2026-07-15T14:16:43.468Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-002-analytics-statistical-integration-run-step-1412161952: time=2026-07-15T14:16:53.550Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-002-analytics-statistical-integration-run-step-1412161952: STEP 4: EDA & Visualization — Statistical Integration & Analysis Benchmark
+p-1-002-analytics-statistical-integration-run-step-1412161952:    [len(num)] numerical features found
+p-1-002-analytics-statistical-integration-run-step-1412161952: OK
+p-1-002-analytics-statistical-integration-run-step-1412161952: time=2026-07-15T14:16:56.555Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-002-analytics-statistical-integration-run-step-1412161952: time=2026-07-15T14:16:56.555Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-002-analytics-statistical-integration-run-step-2511904448: time=2026-07-15T14:17:02.994Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-002-analytics-statistical-integration-run-step-2511904448: /pipeline/scripts/step_05_model.py:20: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-1-002-analytics-statistical-integration-run-step-2511904448: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-1-002-analytics-statistical-integration-run-step-2511904448:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-1-002-analytics-statistical-integration-run-step-2511904448: STEP 5: Statistical Analysis & Model Training — Statistical Integration & Analysis Benchmark
+p-1-002-analytics-statistical-integration-run-step-2511904448:    Best: RandomForest (LR CV=0.437, RF CV=0.450)
+p-1-002-analytics-statistical-integration-run-step-2511904448:    Test ROC-AUC: 0.441, Acc: 52.00%
+p-1-002-analytics-statistical-integration-run-step-2511904448: 
+p-1-002-analytics-statistical-integration-run-step-2511904448:    Outcome by group:
+p-1-002-analytics-statistical-integration-run-step-2511904448:      Control: 36.7%
+p-1-002-analytics-statistical-integration-run-step-2511904448:      Treatment_B: 28.6%
+p-1-002-analytics-statistical-integration-run-step-2511904448:      Treatment_A: 30.2%
+p-1-002-analytics-statistical-integration-run-step-2511904448: time=2026-07-15T14:17:08.035Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-002-analytics-statistical-integration-run-step-2511904448: time=2026-07-15T14:17:08.035Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-002-analytics-statistical-integration-run-step-4274892824: time=2026-07-15T14:17:22.606Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-002-analytics-statistical-integration-run-step-4274892824: STEP 6: Final Report — Statistical Integration & Analysis Benchmark
+p-1-002-analytics-statistical-integration-run-step-4274892824: ======================================================================
+p-1-002-analytics-statistical-integration-run-step-4274892824:     Statistical Integration & Analysis Benchmark — FINAL SYNTHESIS REPORT
+p-1-002-analytics-statistical-integration-run-step-4274892824:     2026-07-15 14:17:22
+p-1-002-analytics-statistical-integration-run-step-4274892824: ======================================================================
+p-1-002-analytics-statistical-integration-run-step-4274892824: 
+p-1-002-analytics-statistical-integration-run-step-4274892824: Domain: Analytics
+p-1-002-analytics-statistical-integration-run-step-4274892824: 
+p-1-002-analytics-statistical-integration-run-step-4274892824: This pipeline executed a complete analysis workflow:
+p-1-002-analytics-statistical-integration-run-step-4274892824:   1. Data Loading & Profiling — Ingested and profiled all data sources
+p-1-002-analytics-statistical-integration-run-step-4274892824:   2. Data Cleaning & Standardization — Handled missing values and outliers
+p-1-002-analytics-statistical-integration-run-step-4274892824:   3. Feature Engineering — Created domain-specific derived features
+p-1-002-analytics-statistical-integration-run-step-4274892824:   4. Exploratory Data Analysis — Generated visualizations and correlation analysis
+p-1-002-analytics-statistical-integration-run-step-4274892824:   5. Model Training — Trained and evaluated multiple ML models
+p-1-002-analytics-statistical-integration-run-step-4274892824:   6. Final Report — Synthesized findings and recommendations
+p-1-002-analytics-statistical-integration-run-step-4274892824: 
+p-1-002-analytics-statistical-integration-run-step-4274892824: Key findings and model metrics are available in the output/ directory.
+p-1-002-analytics-statistical-integration-run-step-4274892824: 
+p-1-002-analytics-statistical-integration-run-step-4274892824: Monitoring Recommendations:
+p-1-002-analytics-statistical-integration-run-step-4274892824:   • Track model performance monthly
+p-1-002-analytics-statistical-integration-run-step-4274892824:   • Monitor feature drift quarterly
+p-1-002-analytics-statistical-integration-run-step-4274892824:   • Retrain with new data biannually
+p-1-002-analytics-statistical-integration-run-step-4274892824: ======================================================================
+p-1-002-analytics-statistical-integration-run-step-4274892824: OK
+p-1-002-analytics-statistical-integration-run-step-4274892824: time=2026-07-15T14:17:23.606Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-002-analytics-statistical-integration-run-step-4274892824: time=2026-07-15T14:17:23.606Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

@@ -1,0 +1,61 @@
+{
+  "pipeline": "091_transportation_visualization",
+  "batch": 19,
+  "workflow": "p-19-091-transportation-visualization",
+  "phase": "Succeeded",
+  "elapsed_s": 70,
+  "pod_duration_s": 34.0,
+  "node_count": 6,
+  "step_count": 6,
+  "steps_succeeded": 6,
+  "steps_failed": 0,
+  "steps": [
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 10.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-02",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-03",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-05",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-06",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-04",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    }
+  ],
+  "image_tag": "custom-pipelines/transportation_visualization:latest",
+  "started_at": "2026-07-15T15:11:24Z",
+  "finished_at": "2026-07-15T15:12:34Z",
+  "cpu_seconds": 4,
+  "memory_mb_seconds": 80
+}

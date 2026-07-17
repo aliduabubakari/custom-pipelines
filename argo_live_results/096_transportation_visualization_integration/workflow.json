@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-20-096-transportation-visualization-integration",
+        "generateName": "transportation-visualization-integration",
+        "namespace": "default",
+        "uid": "5e975125-3cea-4e6c-af88-1fc077d0070b",
+        "resourceVersion": "31097",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T15:14:10Z",
+        "labels": {
+            "domain": "Transportation",
+            "pipeline": "transportation_visualization_integration",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T15:14:10Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T15:15:20Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-20-096-transportation-visualization-integration": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-1202080212": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-1202227307": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-1202668592": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-1222695609": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-2163682637": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-2342708041": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-2343252494": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-2343399589": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-2376711877": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-2792490969": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-3442065325": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-20-096-transportation-visualization-integration-3689867637": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/transportation_visualization_integration:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T15:14:10Z",
+        "finishedAt": "2026-07-15T15:15:20Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-20-096-transportation-visualization-integration": {
+                "id": "p-20-096-transportation-visualization-integration",
+                "name": "p-20-096-transportation-visualization-integration",
+                "displayName": "p-20-096-transportation-visualization-integration",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T15:14:10Z",
+                "finishedAt": "2026-07-15T15:15:20Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 66
+                },
+                "children": [
+                    "p-20-096-transportation-visualization-integration-2343399589"
+                ],
+                "outboundNodes": [
+                    "p-20-096-transportation-visualization-integration-2163682637"
+                ]
+            },
+            "p-20-096-transportation-visualization-integration-1202080212": {
+                "id": "p-20-096-transportation-visualization-integration-1202080212",
+                "name": "p-20-096-transportation-visualization-integration[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:15:10Z",
+                "finishedAt": "2026-07-15T15:15:20Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-20-096-transportation-visualization-integration-2163682637"
+                ]
+            },
+            "p-20-096-transportation-visualization-integration-1202227307": {
+                "id": "p-20-096-transportation-visualization-integration-1202227307",
+                "name": "p-20-096-transportation-visualization-integration[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:14:40Z",
+                "finishedAt": "2026-07-15T15:14:50Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 52
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-20-096-transportation-visualization-integration-1222695609"
+                ]
+            },
+            "p-20-096-transportation-visualization-integration-1202668592": {
+                "id": "p-20-096-transportation-visualization-integration-1202668592",
+                "name": "p-20-096-transportation-visualization-integration[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:14:30Z",
+                "finishedAt": "2026-07-15T15:14:40Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 59
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-20-096-transportation-visualization-integration-3442065325"
+                ]
+            },
+            "p-20-096-transportation-visualization-integration-1222695609": {
+                "id": "p-20-096-transportation-visualization-integration-1222695609",
+                "name": "p-20-096-transportation-visualization-integration[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:14:40Z",
+                "finishedAt": "2026-07-15T15:14:45Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-20-096-transportation-visualization-integration-2343252494"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-20-096-transportation-visualization-integration-2163682637": {
+                "id": "p-20-096-transportation-visualization-integration-2163682637",
+                "name": "p-20-096-transportation-visualization-integration[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:15:10Z",
+                "finishedAt": "2026-07-15T15:15:14Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-20-096-transportation-visualization-integration-2342708041": {
+                "id": "p-20-096-transportation-visualization-integration-2342708041",
+                "name": "p-20-096-transportation-visualization-integration[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:15:00Z",
+                "finishedAt": "2026-07-15T15:15:10Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 26
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-20-096-transportation-visualization-integration-3689867637"
+                ]
+            },
+            "p-20-096-transportation-visualization-integration-2343252494": {
+                "id": "p-20-096-transportation-visualization-integration-2343252494",
+                "name": "p-20-096-transportation-visualization-integration[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:14:50Z",
+                "finishedAt": "2026-07-15T15:15:00Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 45
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-20-096-transportation-visualization-integration-2792490969"
+                ]
+            },
+            "p-20-096-transportation-visualization-integration-2343399589": {
+                "id": "p-20-096-transportation-visualization-integration-2343399589",
+                "name": "p-20-096-transportation-visualization-integration[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:14:10Z",
+                "finishedAt": "2026-07-15T15:14:30Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 66
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-20-096-transportation-visualization-integration-2376711877"
+                ]
+            },
+            "p-20-096-transportation-visualization-integration-2376711877": {
+                "id": "p-20-096-transportation-visualization-integration-2376711877",
+                "name": "p-20-096-transportation-visualization-integration[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:14:10Z",
+                "finishedAt": "2026-07-15T15:14:21Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-20-096-transportation-visualization-integration-1202668592"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-20-096-transportation-visualization-integration-2792490969": {
+                "id": "p-20-096-transportation-visualization-integration-2792490969",
+                "name": "p-20-096-transportation-visualization-integration[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:14:50Z",
+                "finishedAt": "2026-07-15T15:14:56Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-20-096-transportation-visualization-integration-2342708041"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-20-096-transportation-visualization-integration-3442065325": {
+                "id": "p-20-096-transportation-visualization-integration-3442065325",
+                "name": "p-20-096-transportation-visualization-integration[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:14:30Z",
+                "finishedAt": "2026-07-15T15:14:34Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-20-096-transportation-visualization-integration-1202227307"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-20-096-transportation-visualization-integration-3689867637": {
+                "id": "p-20-096-transportation-visualization-integration-3689867637",
+                "name": "p-20-096-transportation-visualization-integration[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-20-096-transportation-visualization-integration",
+                "phase": "Succeeded",
+                "boundaryID": "p-20-096-transportation-visualization-integration",
+                "startedAt": "2026-07-15T15:15:00Z",
+                "finishedAt": "2026-07-15T15:15:06Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-20-096-transportation-visualization-integration-1202080212"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 2,
+            "memory": 66
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

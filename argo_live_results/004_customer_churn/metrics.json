@@ -1,0 +1,103 @@
+{
+  "pipeline": "004_customer_churn",
+  "batch": 1,
+  "workflow": "p-1-004-customer-churn",
+  "phase": "Failed",
+  "elapsed_s": 10,
+  "pod_duration_s": 71.0,
+  "node_count": 12,
+  "step_count": 12,
+  "steps_succeeded": 11,
+  "steps_failed": 1,
+  "steps": [
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 12.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-11",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-10",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-07",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-12",
+      "phase": "Failed",
+      "duration_s": 8.0,
+      "exit_code": "1",
+      "message": "main: Error (exit code 1)"
+    },
+    {
+      "name": "step-06",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-05",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-03",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-04",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-08",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-09",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-02",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    }
+  ],
+  "image_tag": "custom-pipelines/customer_churn:latest",
+  "started_at": "2026-07-15T14:16:09Z",
+  "finished_at": "2026-07-15T14:18:21Z",
+  "cpu_seconds": 9,
+  "memory_mb_seconds": 164
+}

@@ -1,0 +1,73 @@
+p-9-042-sports-validation-recovery-run-step-1535811180: time=2026-07-15T14:42:37.528Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-9-042-sports-validation-recovery-run-step-1535811180: STEP 1: Load & Profile — Sports | Techniques: recovery, validation
+p-9-042-sports-validation-recovery-run-step-1535811180:    Data: 507 rows x 11 cols
+p-9-042-sports-validation-recovery-run-step-1535811180:    Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+p-9-042-sports-validation-recovery-run-step-1535811180:    games_played: mean=44.70, std=20.41
+p-9-042-sports-validation-recovery-run-step-1535811180:    points_per_game: mean=12.17, std=7.50
+p-9-042-sports-validation-recovery-run-step-1535811180:    assists_per_game: mean=4.16, std=2.70
+p-9-042-sports-validation-recovery-run-step-1535811180:    rebounds_per_game: mean=6.24, std=4.02
+p-9-042-sports-validation-recovery-run-step-1535811180: OK
+p-9-042-sports-validation-recovery-run-step-1535811180: time=2026-07-15T14:42:38.528Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-9-042-sports-validation-recovery-run-step-1535811180: time=2026-07-15T14:42:38.528Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-9-042-sports-validation-recovery-run-step-2495114180: time=2026-07-15T14:42:51.715Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-9-042-sports-validation-recovery-run-step-2495114180: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-9-042-sports-validation-recovery-run-step-2495114180: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-9-042-sports-validation-recovery-run-step-2495114180:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-9-042-sports-validation-recovery-run-step-2495114180: STEP 2: Clean & Standardize
+p-9-042-sports-validation-recovery-run-step-2495114180:    Nulls: 0 → 0
+p-9-042-sports-validation-recovery-run-step-2495114180: OK
+p-9-042-sports-validation-recovery-run-step-2495114180: time=2026-07-15T14:42:52.716Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-9-042-sports-validation-recovery-run-step-2495114180: time=2026-07-15T14:42:52.716Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-9-042-sports-validation-recovery-run-step-2592661700: time=2026-07-15T14:43:01.905Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-9-042-sports-validation-recovery-run-step-2592661700: STEP 3: Feature Engineering
+p-9-042-sports-validation-recovery-run-step-2592661700:    Created: 3 features
+p-9-042-sports-validation-recovery-run-step-2592661700:    14 columns
+p-9-042-sports-validation-recovery-run-step-2592661700: OK
+p-9-042-sports-validation-recovery-run-step-2592661700: time=2026-07-15T14:43:02.906Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-9-042-sports-validation-recovery-run-step-2592661700: time=2026-07-15T14:43:02.906Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-9-042-sports-validation-recovery-run-step-2776826308: time=2026-07-15T14:43:11.064Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-9-042-sports-validation-recovery-run-step-2776826308: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-9-042-sports-validation-recovery-run-step-2776826308: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-9-042-sports-validation-recovery-run-step-2776826308:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-9-042-sports-validation-recovery-run-step-2776826308: STEP 4: EDA & Visualization
+p-9-042-sports-validation-recovery-run-step-2776826308:    10 numerical, 3 categorical features
+p-9-042-sports-validation-recovery-run-step-2776826308: OK
+p-9-042-sports-validation-recovery-run-step-2776826308: time=2026-07-15T14:43:14.065Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-9-042-sports-validation-recovery-run-step-2776826308: time=2026-07-15T14:43:14.065Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-9-042-sports-validation-recovery-run-step-1950137836: time=2026-07-15T14:43:21.891Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-9-042-sports-validation-recovery-run-step-1950137836: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-9-042-sports-validation-recovery-run-step-1950137836: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-9-042-sports-validation-recovery-run-step-1950137836:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-9-042-sports-validation-recovery-run-step-1950137836: STEP 5: Model Training — recovery, validation
+p-9-042-sports-validation-recovery-run-step-1950137836:    MAE: 0.94, R2: 0.799
+p-9-042-sports-validation-recovery-run-step-1950137836:    Model saved
+p-9-042-sports-validation-recovery-run-step-1950137836: time=2026-07-15T14:43:24.893Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-9-042-sports-validation-recovery-run-step-1950137836: time=2026-07-15T14:43:24.893Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-9-042-sports-validation-recovery-run-step-1978095284: time=2026-07-15T14:43:32.027Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-9-042-sports-validation-recovery-run-step-1978095284: STEP 6: Final Report
+p-9-042-sports-validation-recovery-run-step-1978095284: ======================================================================
+p-9-042-sports-validation-recovery-run-step-1978095284:     SPORTS PIPELINE: RECOVERY, VALIDATION
+p-9-042-sports-validation-recovery-run-step-1978095284:     2026-07-15 14:43:32
+p-9-042-sports-validation-recovery-run-step-1978095284: ======================================================================
+p-9-042-sports-validation-recovery-run-step-1978095284: 
+p-9-042-sports-validation-recovery-run-step-1978095284: Domain: Sports
+p-9-042-sports-validation-recovery-run-step-1978095284: Techniques Applied: recovery, validation
+p-9-042-sports-validation-recovery-run-step-1978095284: 
+p-9-042-sports-validation-recovery-run-step-1978095284: Pipeline Steps:
+p-9-042-sports-validation-recovery-run-step-1978095284:   1. Data Loading & Profiling
+p-9-042-sports-validation-recovery-run-step-1978095284:   2. Data Cleaning & Standardization
+p-9-042-sports-validation-recovery-run-step-1978095284:   3. Feature Engineering
+p-9-042-sports-validation-recovery-run-step-1978095284:   4. Exploratory Data Analysis & Visualization
+p-9-042-sports-validation-recovery-run-step-1978095284:   5. Model Training & Evaluation
+p-9-042-sports-validation-recovery-run-step-1978095284:   6. Final Synthesis & Business Recommendations
+p-9-042-sports-validation-recovery-run-step-1978095284: 
+p-9-042-sports-validation-recovery-run-step-1978095284: Key outputs are available in the output/ directory.
+p-9-042-sports-validation-recovery-run-step-1978095284: 
+p-9-042-sports-validation-recovery-run-step-1978095284: Recommendations:
+p-9-042-sports-validation-recovery-run-step-1978095284:   • Monitor model performance monthly
+p-9-042-sports-validation-recovery-run-step-1978095284:   • Reassess feature importance quarterly
+p-9-042-sports-validation-recovery-run-step-1978095284:   • Retrain models with fresh data biannually
+p-9-042-sports-validation-recovery-run-step-1978095284: ======================================================================
+p-9-042-sports-validation-recovery-run-step-1978095284: OK
+p-9-042-sports-validation-recovery-run-step-1978095284: time=2026-07-15T14:43:33.027Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-9-042-sports-validation-recovery-run-step-1978095284: time=2026-07-15T14:43:33.027Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

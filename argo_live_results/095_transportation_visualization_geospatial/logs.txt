@@ -1,0 +1,73 @@
+p-19-095-transportation-visualization-geospatial-run-step-986255707: time=2026-07-15T15:11:34.584Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-095-transportation-visualization-geospatial-run-step-986255707: STEP 1: Load & Profile — Transportation | Techniques: geospatial, visualization
+p-19-095-transportation-visualization-geospatial-run-step-986255707:    Data: 578 rows x 15 cols
+p-19-095-transportation-visualization-geospatial-run-step-986255707:    Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+p-19-095-transportation-visualization-geospatial-run-step-986255707:    departure_hour: mean=11.11, std=6.76
+p-19-095-transportation-visualization-geospatial-run-step-986255707:    distance_km: mean=22.33, std=13.20
+p-19-095-transportation-visualization-geospatial-run-step-986255707:    passengers: mean=30.18, std=5.56
+p-19-095-transportation-visualization-geospatial-run-step-986255707:    fare_amount: mean=8.13, std=3.84
+p-19-095-transportation-visualization-geospatial-run-step-986255707: OK
+p-19-095-transportation-visualization-geospatial-run-step-986255707: time=2026-07-15T15:11:35.584Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-095-transportation-visualization-geospatial-run-step-986255707: time=2026-07-15T15:11:35.584Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-19-095-transportation-visualization-geospatial-run-step-2390286439: time=2026-07-15T15:11:46.827Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-095-transportation-visualization-geospatial-run-step-2390286439: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-19-095-transportation-visualization-geospatial-run-step-2390286439: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-19-095-transportation-visualization-geospatial-run-step-2390286439:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-19-095-transportation-visualization-geospatial-run-step-2390286439: STEP 2: Clean & Standardize
+p-19-095-transportation-visualization-geospatial-run-step-2390286439:    Nulls: 0 → 0
+p-19-095-transportation-visualization-geospatial-run-step-2390286439: OK
+p-19-095-transportation-visualization-geospatial-run-step-2390286439: time=2026-07-15T15:11:47.828Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-095-transportation-visualization-geospatial-run-step-2390286439: time=2026-07-15T15:11:47.828Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-19-095-transportation-visualization-geospatial-run-step-1109960295: time=2026-07-15T15:11:56.832Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-19-095-transportation-visualization-geospatial-run-step-1109960295: STEP 3: Feature Engineering
+p-19-095-transportation-visualization-geospatial-run-step-1109960295:    Created: 3 features
+p-19-095-transportation-visualization-geospatial-run-step-1109960295:    18 columns
+p-19-095-transportation-visualization-geospatial-run-step-1109960295: OK
+p-19-095-transportation-visualization-geospatial-run-step-1109960295: time=2026-07-15T15:11:57.833Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-095-transportation-visualization-geospatial-run-step-1109960295: time=2026-07-15T15:11:57.833Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-19-095-transportation-visualization-geospatial-run-step-3683126083: time=2026-07-15T15:12:06.818Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-095-transportation-visualization-geospatial-run-step-3683126083: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-19-095-transportation-visualization-geospatial-run-step-3683126083: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-19-095-transportation-visualization-geospatial-run-step-3683126083:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-19-095-transportation-visualization-geospatial-run-step-3683126083: STEP 4: EDA & Visualization
+p-19-095-transportation-visualization-geospatial-run-step-3683126083:    11 numerical, 4 categorical features
+p-19-095-transportation-visualization-geospatial-run-step-3683126083: OK
+p-19-095-transportation-visualization-geospatial-run-step-3683126083: time=2026-07-15T15:12:09.854Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-095-transportation-visualization-geospatial-run-step-3683126083: time=2026-07-15T15:12:09.854Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-19-095-transportation-visualization-geospatial-run-step-4091794979: time=2026-07-15T15:12:17.014Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-095-transportation-visualization-geospatial-run-step-4091794979: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-19-095-transportation-visualization-geospatial-run-step-4091794979: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-19-095-transportation-visualization-geospatial-run-step-4091794979:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-19-095-transportation-visualization-geospatial-run-step-4091794979: STEP 5: Model Training — geospatial, visualization
+p-19-095-transportation-visualization-geospatial-run-step-4091794979:    MAE: 0.11, R2: -0.052
+p-19-095-transportation-visualization-geospatial-run-step-4091794979:    Model saved
+p-19-095-transportation-visualization-geospatial-run-step-4091794979: time=2026-07-15T15:12:20.019Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-095-transportation-visualization-geospatial-run-step-4091794979: time=2026-07-15T15:12:20.019Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: time=2026-07-15T15:12:27.133Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: STEP 6: Final Report
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: ======================================================================
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:     TRANSPORTATION PIPELINE: GEOSPATIAL, VISUALIZATION
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:     2026-07-15 15:12:27
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: ======================================================================
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: 
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: Domain: Transportation
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: Techniques Applied: geospatial, visualization
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: 
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: Pipeline Steps:
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:   1. Data Loading & Profiling
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:   2. Data Cleaning & Standardization
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:   3. Feature Engineering
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:   4. Exploratory Data Analysis & Visualization
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:   5. Model Training & Evaluation
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:   6. Final Synthesis & Business Recommendations
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: 
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: Key outputs are available in the output/ directory.
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: 
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: Recommendations:
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:   • Monitor model performance monthly
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:   • Reassess feature importance quarterly
+p-19-095-transportation-visualization-geospatial-run-step-3673184583:   • Retrain models with fresh data biannually
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: ======================================================================
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: OK
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: time=2026-07-15T15:12:28.133Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-19-095-transportation-visualization-geospatial-run-step-3673184583: time=2026-07-15T15:12:28.133Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

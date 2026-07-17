@@ -1,0 +1,72 @@
+p-19-091-transportation-visualization-run-step-2083846009: time=2026-07-15T15:11:31.510Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-091-transportation-visualization-run-step-2083846009: STEP 1: Load & Profile — Transportation | Techniques: visualization
+p-19-091-transportation-visualization-run-step-2083846009:    Data: 550 rows x 11 cols
+p-19-091-transportation-visualization-run-step-2083846009:    Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+p-19-091-transportation-visualization-run-step-2083846009:    departure_hour: mean=11.22, std=6.54
+p-19-091-transportation-visualization-run-step-2083846009:    distance_km: mean=22.41, std=12.57
+p-19-091-transportation-visualization-run-step-2083846009:    passengers: mean=29.96, std=5.41
+p-19-091-transportation-visualization-run-step-2083846009:    fare_amount: mean=8.34, std=3.90
+p-19-091-transportation-visualization-run-step-2083846009: OK
+p-19-091-transportation-visualization-run-step-2083846009: time=2026-07-15T15:11:33.514Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-091-transportation-visualization-run-step-2931198545: time=2026-07-15T15:11:46.926Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-091-transportation-visualization-run-step-2931198545: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-19-091-transportation-visualization-run-step-2931198545: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-19-091-transportation-visualization-run-step-2931198545:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-19-091-transportation-visualization-run-step-2931198545: STEP 2: Clean & Standardize
+p-19-091-transportation-visualization-run-step-2931198545:    Nulls: 0 → 0
+p-19-091-transportation-visualization-run-step-2931198545: OK
+p-19-091-transportation-visualization-run-step-2931198545: time=2026-07-15T15:11:47.927Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-091-transportation-visualization-run-step-2931198545: time=2026-07-15T15:11:47.927Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-19-091-transportation-visualization-run-step-410958397: time=2026-07-15T15:11:56.926Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-091-transportation-visualization-run-step-410958397: STEP 3: Feature Engineering
+p-19-091-transportation-visualization-run-step-410958397:    Created: 3 features
+p-19-091-transportation-visualization-run-step-410958397:    14 columns
+p-19-091-transportation-visualization-run-step-410958397: OK
+p-19-091-transportation-visualization-run-step-410958397: time=2026-07-15T15:11:57.926Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-091-transportation-visualization-run-step-410958397: time=2026-07-15T15:11:57.926Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-19-091-transportation-visualization-run-step-829993269: time=2026-07-15T15:12:06.986Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-091-transportation-visualization-run-step-829993269: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-19-091-transportation-visualization-run-step-829993269: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-19-091-transportation-visualization-run-step-829993269:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-19-091-transportation-visualization-run-step-829993269: STEP 4: EDA & Visualization
+p-19-091-transportation-visualization-run-step-829993269:    7 numerical, 4 categorical features
+p-19-091-transportation-visualization-run-step-829993269: OK
+p-19-091-transportation-visualization-run-step-829993269: time=2026-07-15T15:12:09.991Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-091-transportation-visualization-run-step-829993269: time=2026-07-15T15:12:09.991Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-19-091-transportation-visualization-run-step-4281258633: time=2026-07-15T15:12:16.850Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-091-transportation-visualization-run-step-4281258633: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-19-091-transportation-visualization-run-step-4281258633: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-19-091-transportation-visualization-run-step-4281258633:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-19-091-transportation-visualization-run-step-4281258633: STEP 5: Model Training — visualization
+p-19-091-transportation-visualization-run-step-4281258633:    Accuracy: 0.591
+p-19-091-transportation-visualization-run-step-4281258633:    Model saved
+p-19-091-transportation-visualization-run-step-4281258633: time=2026-07-15T15:12:19.852Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-091-transportation-visualization-run-step-4281258633: time=2026-07-15T15:12:19.853Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-19-091-transportation-visualization-run-step-656944561: time=2026-07-15T15:12:27.003Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-19-091-transportation-visualization-run-step-656944561: STEP 6: Final Report
+p-19-091-transportation-visualization-run-step-656944561: ======================================================================
+p-19-091-transportation-visualization-run-step-656944561:     TRANSPORTATION PIPELINE: VISUALIZATION
+p-19-091-transportation-visualization-run-step-656944561:     2026-07-15 15:12:27
+p-19-091-transportation-visualization-run-step-656944561: ======================================================================
+p-19-091-transportation-visualization-run-step-656944561: 
+p-19-091-transportation-visualization-run-step-656944561: Domain: Transportation
+p-19-091-transportation-visualization-run-step-656944561: Techniques Applied: visualization
+p-19-091-transportation-visualization-run-step-656944561: 
+p-19-091-transportation-visualization-run-step-656944561: Pipeline Steps:
+p-19-091-transportation-visualization-run-step-656944561:   1. Data Loading & Profiling
+p-19-091-transportation-visualization-run-step-656944561:   2. Data Cleaning & Standardization
+p-19-091-transportation-visualization-run-step-656944561:   3. Feature Engineering
+p-19-091-transportation-visualization-run-step-656944561:   4. Exploratory Data Analysis & Visualization
+p-19-091-transportation-visualization-run-step-656944561:   5. Model Training & Evaluation
+p-19-091-transportation-visualization-run-step-656944561:   6. Final Synthesis & Business Recommendations
+p-19-091-transportation-visualization-run-step-656944561: 
+p-19-091-transportation-visualization-run-step-656944561: Key outputs are available in the output/ directory.
+p-19-091-transportation-visualization-run-step-656944561: 
+p-19-091-transportation-visualization-run-step-656944561: Recommendations:
+p-19-091-transportation-visualization-run-step-656944561:   • Monitor model performance monthly
+p-19-091-transportation-visualization-run-step-656944561:   • Reassess feature importance quarterly
+p-19-091-transportation-visualization-run-step-656944561:   • Retrain models with fresh data biannually
+p-19-091-transportation-visualization-run-step-656944561: ======================================================================
+p-19-091-transportation-visualization-run-step-656944561: OK
+p-19-091-transportation-visualization-run-step-656944561: time=2026-07-15T15:12:28.003Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-19-091-transportation-visualization-run-step-656944561: time=2026-07-15T15:12:28.004Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

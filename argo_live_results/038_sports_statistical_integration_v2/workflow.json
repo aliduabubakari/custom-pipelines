@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-8-038-sports-statistical-integration-v2",
+        "generateName": "sports-statistical-integration-v2",
+        "namespace": "default",
+        "uid": "fed1a546-544d-46aa-a832-75d328d76d8d",
+        "resourceVersion": "15295",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T14:39:12Z",
+        "labels": {
+            "domain": "Sports",
+            "pipeline": "sports_statistical_integration_v2",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:39:12Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:40:23Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-8-038-sports-statistical-integration-v2": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-1376939791": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-1377484244": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-1377631339": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-1444197362": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-1593695202": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-2456624474": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-2518112073": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-2518656526": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-3488600946": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-3610326790": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-399726": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-8-038-sports-statistical-integration-v2-696318534": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/sports_statistical_integration_v2:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:39:12Z",
+        "finishedAt": "2026-07-15T14:40:23Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-8-038-sports-statistical-integration-v2": {
+                "id": "p-8-038-sports-statistical-integration-v2",
+                "name": "p-8-038-sports-statistical-integration-v2",
+                "displayName": "p-8-038-sports-statistical-integration-v2",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:39:12Z",
+                "finishedAt": "2026-07-15T14:40:23Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 68
+                },
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-1444197362"
+                ],
+                "outboundNodes": [
+                    "p-8-038-sports-statistical-integration-v2-3488600946"
+                ]
+            },
+            "p-8-038-sports-statistical-integration-v2-1376939791": {
+                "id": "p-8-038-sports-statistical-integration-v2-1376939791",
+                "name": "p-8-038-sports-statistical-integration-v2[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:39:32Z",
+                "finishedAt": "2026-07-15T14:39:42Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 61
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-2456624474"
+                ]
+            },
+            "p-8-038-sports-statistical-integration-v2-1377484244": {
+                "id": "p-8-038-sports-statistical-integration-v2-1377484244",
+                "name": "p-8-038-sports-statistical-integration-v2[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:39:42Z",
+                "finishedAt": "2026-07-15T14:39:53Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 54
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-399726"
+                ]
+            },
+            "p-8-038-sports-statistical-integration-v2-1377631339": {
+                "id": "p-8-038-sports-statistical-integration-v2-1377631339",
+                "name": "p-8-038-sports-statistical-integration-v2[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:40:13Z",
+                "finishedAt": "2026-07-15T14:40:23Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-3488600946"
+                ]
+            },
+            "p-8-038-sports-statistical-integration-v2-1444197362": {
+                "id": "p-8-038-sports-statistical-integration-v2-1444197362",
+                "name": "p-8-038-sports-statistical-integration-v2[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:39:12Z",
+                "finishedAt": "2026-07-15T14:39:32Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 68
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-3610326790"
+                ]
+            },
+            "p-8-038-sports-statistical-integration-v2-1593695202": {
+                "id": "p-8-038-sports-statistical-integration-v2-1593695202",
+                "name": "p-8-038-sports-statistical-integration-v2[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:39:53Z",
+                "finishedAt": "2026-07-15T14:39:59Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-2518656526"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-8-038-sports-statistical-integration-v2-2456624474": {
+                "id": "p-8-038-sports-statistical-integration-v2-2456624474",
+                "name": "p-8-038-sports-statistical-integration-v2[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:39:32Z",
+                "finishedAt": "2026-07-15T14:39:37Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-1377484244"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-8-038-sports-statistical-integration-v2-2518112073": {
+                "id": "p-8-038-sports-statistical-integration-v2-2518112073",
+                "name": "p-8-038-sports-statistical-integration-v2[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:39:53Z",
+                "finishedAt": "2026-07-15T14:40:03Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 47
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-1593695202"
+                ]
+            },
+            "p-8-038-sports-statistical-integration-v2-2518656526": {
+                "id": "p-8-038-sports-statistical-integration-v2-2518656526",
+                "name": "p-8-038-sports-statistical-integration-v2[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:40:03Z",
+                "finishedAt": "2026-07-15T14:40:13Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 28
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-696318534"
+                ]
+            },
+            "p-8-038-sports-statistical-integration-v2-3488600946": {
+                "id": "p-8-038-sports-statistical-integration-v2-3488600946",
+                "name": "p-8-038-sports-statistical-integration-v2[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:40:13Z",
+                "finishedAt": "2026-07-15T14:40:17Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-8-038-sports-statistical-integration-v2-3610326790": {
+                "id": "p-8-038-sports-statistical-integration-v2-3610326790",
+                "name": "p-8-038-sports-statistical-integration-v2[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:39:12Z",
+                "finishedAt": "2026-07-15T14:39:23Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-1376939791"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-8-038-sports-statistical-integration-v2-399726": {
+                "id": "p-8-038-sports-statistical-integration-v2-399726",
+                "name": "p-8-038-sports-statistical-integration-v2[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:39:42Z",
+                "finishedAt": "2026-07-15T14:39:47Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-2518112073"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-8-038-sports-statistical-integration-v2-696318534": {
+                "id": "p-8-038-sports-statistical-integration-v2-696318534",
+                "name": "p-8-038-sports-statistical-integration-v2[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-8-038-sports-statistical-integration-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-8-038-sports-statistical-integration-v2",
+                "startedAt": "2026-07-15T14:40:03Z",
+                "finishedAt": "2026-07-15T14:40:08Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 20
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-8-038-sports-statistical-integration-v2-1377631339"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 2,
+            "memory": 68
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

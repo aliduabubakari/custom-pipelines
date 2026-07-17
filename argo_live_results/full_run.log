@@ -1,0 +1,959 @@
+============================================================
+ ARGO LIVE PIPELINE EVALUATOR
+ Batch size: 5 | Start at batch: 1
+ VM: aliduabubakari@roberto-vm.vpn.sintef
+ Results: /Users/abubakarialidu/Downloads/custom_pipelines/argo_live_results
+ Wed Jul 15 16:12:22 CEST 2026
+============================================================
+
+=== Syncing pipeline code to VM ===
+
+sent 121564 bytes  received 26 bytes  547456 bytes/sec
+total size is 20765064  speedup is 170.78
+
+=== Copying batch runner ===
+
+Total pipelines: 100
+
+============================================================
+  BATCH 1 (pipelines 1-5/100)
+  001_analytics_statistical_cleaning_integration 002_analytics_statistical_integration 003_credit_risk 004_customer_churn 005_demand_forecasting
+============================================================
+[14:12:32] B1: Building 5 images...
+[14:12:32] B1:   Building custom-pipelines/analytics_statistical_cleaning_integration:latest...
+[14:13:10] B1:   ✓ 001_analytics_statistical_cleaning_integration built & imported
+[14:13:10] B1:   Building custom-pipelines/analytics_statistical_integration:latest...
+[14:13:23] B1:   ✓ 002_analytics_statistical_integration built & imported
+[14:13:23] B1:   Building custom-pipelines/credit_risk:latest...
+[14:14:17] B1:   ✓ 003_credit_risk built & imported
+[14:14:17] B1:   Building custom-pipelines/customer_churn:latest...
+[14:15:13] B1:   ✓ 004_customer_churn built & imported
+[14:15:13] B1:   Building custom-pipelines/demand_forecasting:latest...
+[14:16:09] B1:   ✓ 005_demand_forecasting built & imported
+[14:16:09] B1: Submitting workflows...
+[14:16:09] B1:   Submitted: 001_analytics_statistical_cleaning_integration → p-1-001-analytics-statistical-cleaning-integration
+[14:16:09] B1:   Submitted: 002_analytics_statistical_integration → p-1-002-analytics-statistical-integration
+[14:16:09] B1:   Submitted: 003_credit_risk → p-1-003-credit-risk
+[14:16:09] B1:   Submitted: 004_customer_churn → p-1-004-customer-churn
+[14:16:09] B1:   Submitted: 005_demand_forecasting → p-1-005-demand-forecasting
+[14:16:09] B1: Waiting for completion (timeout=600s)...
+[14:17:20] B1:   001_analytics_statistical_cleaning_integration: Succeeded (70s)
+[14:17:31] B1:   002_analytics_statistical_integration: Succeeded (10s)
+[14:18:12] B1:   003_credit_risk: Failed (40s)
+[14:18:22] B1:   004_customer_churn: Failed (10s)
+[14:18:23] B1:   005_demand_forecasting: Succeeded (0s)
+[14:18:24] B1: Cleaning up...
+[14:18:27] B1: BATCH 1 COMPLETE
+
+--- Batch 1 complete. Pulling results... ---
+
+sent 437 bytes  received 40976 bytes  414130000 bytes/sec
+total size is 425543  speedup is 10.28
+  ✅ 001_analytics_statistical_cleaning_integration          Succeeded    70s  steps=6/6
+  ✅ 002_analytics_statistical_integration                   Succeeded    10s  steps=6/6
+  ❌ 003_credit_risk                                         Failed       40s  steps=10/11
+  ❌ 004_customer_churn                                      Failed       10s  steps=11/12
+  ✅ 005_demand_forecasting                                  Succeeded     0s  steps=10/10
+
+============================================================
+  BATCH 2 (pipelines 6-10/100)
+  006_ecommerce_recommendation 007_employee_attrition 008_energy_forecasting 009_healthcare_readmission 010_hr_regression_visualization_integration
+============================================================
+[14:18:32] B2: Building 5 images...
+[14:18:32] B2:   Building custom-pipelines/ecommerce_recommendation:latest...
+[14:19:10] B2:   ✓ 006_ecommerce_recommendation built & imported
+[14:19:10] B2:   Building custom-pipelines/employee_attrition:latest...
+[14:19:48] B2:   ✓ 007_employee_attrition built & imported
+[14:19:48] B2:   Building custom-pipelines/energy_forecasting:latest...
+[14:20:01] B2:   ✓ 008_energy_forecasting built & imported
+[14:20:01] B2:   Building custom-pipelines/healthcare_readmission:latest...
+[14:20:13] B2:   ✓ 009_healthcare_readmission built & imported
+[14:20:13] B2:   Building custom-pipelines/hr_regression_visualization_integration:latest...
+[14:20:26] B2:   ✓ 010_hr_regression_visualization_integration built & imported
+[14:20:26] B2: Submitting workflows...
+[14:20:26] B2:   Submitted: 006_ecommerce_recommendation → p-2-006-ecommerce-recommendation
+[14:20:26] B2:   Submitted: 007_employee_attrition → p-2-007-employee-attrition
+[14:20:26] B2:   Submitted: 008_energy_forecasting → p-2-008-energy-forecasting
+[14:20:26] B2:   Submitted: 009_healthcare_readmission → p-2-009-healthcare-readmission
+[14:20:26] B2:   Submitted: 010_hr_regression_visualization_integration → p-2-010-hr-regression-visualization-integration
+[14:20:26] B2: Waiting for completion (timeout=600s)...
+[14:21:37] B2:   006_ecommerce_recommendation: Succeeded (70s)
+[14:21:38] B2:   007_employee_attrition: Succeeded (0s)
+[14:21:38] B2:   008_energy_forecasting: Succeeded (0s)
+[14:21:38] B2:   009_healthcare_readmission: Succeeded (0s)
+[14:21:38] B2:   010_hr_regression_visualization_integration: Succeeded (0s)
+[14:21:38] B2: Cleaning up...
+[14:21:40] B2: BATCH 2 COMPLETE
+
+--- Batch 2 complete. Pulling results... ---
+
+sent 437 bytes  received 30156 bytes  305930000 bytes/sec
+total size is 702241  speedup is 22.95
+  ✅ 006_ecommerce_recommendation                            Succeeded    70s  steps=6/6
+  ✅ 007_employee_attrition                                  Succeeded     0s  steps=6/6
+  ✅ 008_energy_forecasting                                  Succeeded     0s  steps=6/6
+  ✅ 009_healthcare_readmission                              Succeeded     0s  steps=6/6
+  ✅ 010_hr_regression_visualization_integration             Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 3 (pipelines 11-15/100)
+  011_hr_visualization_integration_validation 012_insurance_claims 013_predictive_maintenance 014_sports_clustering_integration_validation 015_sports_clustering_prediction_statistical
+============================================================
+[14:21:49] B3: Building 5 images...
+[14:21:49] B3:   Building custom-pipelines/hr_visualization_integration_validation:latest...
+[14:22:27] B3:   ✓ 011_hr_visualization_integration_validation built & imported
+[14:22:27] B3:   Building custom-pipelines/insurance_claims:latest...
+[14:22:40] B3:   ✓ 012_insurance_claims built & imported
+[14:22:40] B3:   Building custom-pipelines/predictive_maintenance:latest...
+[14:22:53] B3:   ✓ 013_predictive_maintenance built & imported
+[14:22:53] B3:   Building custom-pipelines/sports_clustering_integration_validation:latest...
+[14:23:05] B3:   ✓ 014_sports_clustering_integration_validation built & imported
+[14:23:05] B3:   Building custom-pipelines/sports_clustering_prediction_statistical:latest...
+[14:23:41] B3:   ✓ 015_sports_clustering_prediction_statistical built & imported
+[14:23:41] B3: Submitting workflows...
+[14:23:41] B3:   Submitted: 011_hr_visualization_integration_validation → p-3-011-hr-visualization-integration-validation
+[14:23:41] B3:   Submitted: 012_insurance_claims → p-3-012-insurance-claims
+[14:23:41] B3:   Submitted: 013_predictive_maintenance → p-3-013-predictive-maintenance
+[14:23:41] B3:   Submitted: 014_sports_clustering_integration_validation → p-3-014-sports-clustering-integration-validation
+[14:23:41] B3:   Submitted: 015_sports_clustering_prediction_statistical → p-3-015-sports-clustering-prediction-statistical
+[14:23:41] B3: Waiting for completion (timeout=600s)...
+[14:24:52] B3:   011_hr_visualization_integration_validation: Succeeded (70s)
+[14:24:53] B3:   012_insurance_claims: Succeeded (0s)
+[14:24:53] B3:   013_predictive_maintenance: Succeeded (0s)
+[14:24:54] B3:   014_sports_clustering_integration_validation: Succeeded (0s)
+[14:24:54] B3:   015_sports_clustering_prediction_statistical: Succeeded (0s)
+[14:24:54] B3: Cleaning up...
+[14:24:57] B3: BATCH 3 COMPLETE
+
+--- Batch 3 complete. Pulling results... ---
+
+sent 437 bytes  received 31972 bytes  324090000 bytes/sec
+total size is 991117  speedup is 30.58
+  ✅ 011_hr_visualization_integration_validation             Succeeded    70s  steps=6/6
+  ✅ 012_insurance_claims                                    Succeeded     0s  steps=6/6
+  ✅ 013_predictive_maintenance                              Succeeded     0s  steps=6/6
+  ✅ 014_sports_clustering_integration_validation            Succeeded     0s  steps=6/6
+  ✅ 015_sports_clustering_prediction_statistical            Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 4 (pipelines 16-20/100)
+  016_sports_clustering_prediction_visualization 017_sports_clustering_statistical_visualization 018_sports_clustering_visualization_integration 019_sports_prediction_cleaning_integration 020_sports_prediction_statistical_visualization
+============================================================
+[14:25:02] B4: Building 5 images...
+[14:25:02] B4:   Building custom-pipelines/sports_clustering_prediction_visualization:latest...
+[14:25:42] B4:   ✓ 016_sports_clustering_prediction_visualization built & imported
+[14:25:42] B4:   Building custom-pipelines/sports_clustering_statistical_visualization:latest...
+[14:26:18] B4:   ✓ 017_sports_clustering_statistical_visualization built & imported
+[14:26:18] B4:   Building custom-pipelines/sports_clustering_visualization_integration:latest...
+[14:26:32] B4:   ✓ 018_sports_clustering_visualization_integration built & imported
+[14:26:32] B4:   Building custom-pipelines/sports_prediction_cleaning_integration:latest...
+[14:26:44] B4:   ✓ 019_sports_prediction_cleaning_integration built & imported
+[14:26:44] B4:   Building custom-pipelines/sports_prediction_statistical_visualization:latest...
+[14:26:56] B4:   ✓ 020_sports_prediction_statistical_visualization built & imported
+[14:26:56] B4: Submitting workflows...
+[14:26:56] B4:   Submitted: 016_sports_clustering_prediction_visualization → p-4-016-sports-clustering-prediction-visualization
+[14:26:56] B4:   Submitted: 017_sports_clustering_statistical_visualization → p-4-017-sports-clustering-statistical-visualization
+[14:26:56] B4:   Submitted: 018_sports_clustering_visualization_integration → p-4-018-sports-clustering-visualization-integration
+[14:26:56] B4:   Submitted: 019_sports_prediction_cleaning_integration → p-4-019-sports-prediction-cleaning-integration
+[14:26:56] B4:   Submitted: 020_sports_prediction_statistical_visualization → p-4-020-sports-prediction-statistical-visualization
+[14:26:56] B4: Waiting for completion (timeout=600s)...
+[14:28:07] B4:   016_sports_clustering_prediction_visualization: Succeeded (70s)
+[14:28:08] B4:   017_sports_clustering_statistical_visualization: Succeeded (0s)
+[14:28:08] B4:   018_sports_clustering_visualization_integration: Succeeded (0s)
+[14:28:08] B4:   019_sports_prediction_cleaning_integration: Succeeded (0s)
+[14:28:08] B4:   020_sports_prediction_statistical_visualization: Succeeded (0s)
+[14:28:08] B4: Cleaning up...
+[14:28:11] B4: BATCH 4 COMPLETE
+
+--- Batch 4 complete. Pulling results... ---
+
+sent 437 bytes  received 31843 bytes  322800000 bytes/sec
+total size is 1284846  speedup is 39.80
+  ✅ 016_sports_clustering_prediction_visualization          Succeeded    70s  steps=6/6
+  ✅ 017_sports_clustering_statistical_visualization         Succeeded     0s  steps=6/6
+  ✅ 018_sports_clustering_visualization_integration         Succeeded     0s  steps=6/6
+  ✅ 019_sports_prediction_cleaning_integration              Succeeded     0s  steps=6/6
+  ✅ 020_sports_prediction_statistical_visualization         Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 5 (pipelines 21-25/100)
+  021_sports_prediction_statistical_visualization_v2 022_sports_prediction_visualization_cleaning 023_sports_regression_clustering_visualization 024_sports_regression_prediction_statistical 025_sports_regression_prediction_statistical_v2
+============================================================
+[14:28:16] B5: Building 5 images...
+[14:28:16] B5:   Building custom-pipelines/sports_prediction_statistical_visualization_v2:latest...
+[14:28:54] B5:   ✓ 021_sports_prediction_statistical_visualization_v2 built & imported
+[14:28:54] B5:   Building custom-pipelines/sports_prediction_visualization_cleaning:latest...
+[14:29:30] B5:   ✓ 022_sports_prediction_visualization_cleaning built & imported
+[14:29:30] B5:   Building custom-pipelines/sports_regression_clustering_visualization:latest...
+[14:29:44] B5:   ✓ 023_sports_regression_clustering_visualization built & imported
+[14:29:44] B5:   Building custom-pipelines/sports_regression_prediction_statistical:latest...
+[14:29:56] B5:   ✓ 024_sports_regression_prediction_statistical built & imported
+[14:29:56] B5:   Building custom-pipelines/sports_regression_prediction_statistical_v2:latest...
+[14:30:08] B5:   ✓ 025_sports_regression_prediction_statistical_v2 built & imported
+[14:30:08] B5: Submitting workflows...
+[14:30:08] B5:   Submitted: 021_sports_prediction_statistical_visualization_v2 → p-5-021-sports-prediction-statistical-visualization-v2
+[14:30:08] B5:   Submitted: 022_sports_prediction_visualization_cleaning → p-5-022-sports-prediction-visualization-cleaning
+[14:30:08] B5:   Submitted: 023_sports_regression_clustering_visualization → p-5-023-sports-regression-clustering-visualization
+[14:30:08] B5:   Submitted: 024_sports_regression_prediction_statistical → p-5-024-sports-regression-prediction-statistical
+[14:30:09] B5:   Submitted: 025_sports_regression_prediction_statistical_v2 → p-5-025-sports-regression-prediction-statistical-v2
+[14:30:09] B5: Waiting for completion (timeout=600s)...
+[14:31:19] B5:   021_sports_prediction_statistical_visualization_v2: Succeeded (70s)
+[14:31:20] B5:   022_sports_prediction_visualization_cleaning: Succeeded (0s)
+[14:31:20] B5:   023_sports_regression_clustering_visualization: Succeeded (0s)
+[14:31:20] B5:   024_sports_regression_prediction_statistical: Succeeded (0s)
+[14:31:20] B5:   025_sports_regression_prediction_statistical_v2: Failed (0s)
+[14:31:20] B5: Cleaning up...
+[14:31:22] B5: BATCH 5 COMPLETE
+
+--- Batch 5 complete. Pulling results... ---
+
+sent 437 bytes  received 30776 bytes  312130000 bytes/sec
+total size is 1553348  speedup is 49.77
+  ✅ 021_sports_prediction_statistical_visualization_v2      Succeeded    70s  steps=6/6
+  ✅ 022_sports_prediction_visualization_cleaning            Succeeded     0s  steps=6/6
+  ✅ 023_sports_regression_clustering_visualization          Succeeded     0s  steps=6/6
+  ✅ 024_sports_regression_prediction_statistical            Succeeded     0s  steps=6/6
+  ❌ 025_sports_regression_prediction_statistical_v2         Failed        0s  steps=2/3
+
+============================================================
+  BATCH 6 (pipelines 26-30/100)
+  026_sports_regression_prediction_statistical_v3 027_sports_regression_prediction_visualization 028_sports_regression_prediction_visualization_v2 029_sports_regression_statistical_visualization 030_sports_statistical_cleaning
+============================================================
+[14:31:26] B6: Building 5 images...
+[14:31:26] B6:   Building custom-pipelines/sports_regression_prediction_statistical_v3:latest...
+[14:32:05] B6:   ✓ 026_sports_regression_prediction_statistical_v3 built & imported
+[14:32:05] B6:   Building custom-pipelines/sports_regression_prediction_visualization:latest...
+[14:32:41] B6:   ✓ 027_sports_regression_prediction_visualization built & imported
+[14:32:41] B6:   Building custom-pipelines/sports_regression_prediction_visualization_v2:latest...
+[14:32:55] B6:   ✓ 028_sports_regression_prediction_visualization_v2 built & imported
+[14:32:55] B6:   Building custom-pipelines/sports_regression_statistical_visualization:latest...
+[14:33:07] B6:   ✓ 029_sports_regression_statistical_visualization built & imported
+[14:33:07] B6:   Building custom-pipelines/sports_statistical_cleaning:latest...
+[14:33:19] B6:   ✓ 030_sports_statistical_cleaning built & imported
+[14:33:19] B6: Submitting workflows...
+[14:33:20] B6:   Submitted: 026_sports_regression_prediction_statistical_v3 → p-6-026-sports-regression-prediction-statistical-v3
+[14:33:20] B6:   Submitted: 027_sports_regression_prediction_visualization → p-6-027-sports-regression-prediction-visualization
+[14:33:20] B6:   Submitted: 028_sports_regression_prediction_visualization_v2 → p-6-028-sports-regression-prediction-visualization-v2
+[14:33:20] B6:   Submitted: 029_sports_regression_statistical_visualization → p-6-029-sports-regression-statistical-visualization
+[14:33:20] B6:   Submitted: 030_sports_statistical_cleaning → p-6-030-sports-statistical-cleaning
+[14:33:20] B6: Waiting for completion (timeout=600s)...
+[14:34:31] B6:   026_sports_regression_prediction_statistical_v3: Succeeded (70s)
+[14:34:31] B6:   027_sports_regression_prediction_visualization: Succeeded (0s)
+[14:34:32] B6:   028_sports_regression_prediction_visualization_v2: Succeeded (0s)
+[14:34:32] B6:   029_sports_regression_statistical_visualization: Succeeded (0s)
+[14:34:32] B6:   030_sports_statistical_cleaning: Succeeded (0s)
+[14:34:32] B6: Cleaning up...
+[14:34:34] B6: BATCH 6 COMPLETE
+
+--- Batch 6 complete. Pulling results... ---
+
+sent 437 bytes  received 33477 bytes  339140000 bytes/sec
+total size is 1843931  speedup is 54.37
+  ✅ 026_sports_regression_prediction_statistical_v3         Succeeded    70s  steps=6/6
+  ✅ 027_sports_regression_prediction_visualization          Succeeded     0s  steps=6/6
+  ✅ 028_sports_regression_prediction_visualization_v2       Succeeded     0s  steps=6/6
+  ✅ 029_sports_regression_statistical_visualization         Succeeded     0s  steps=6/6
+  ✅ 030_sports_statistical_cleaning                         Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 7 (pipelines 31-35/100)
+  031_sports_statistical_cleaning_integration 032_sports_statistical_cleaning_integration_v2 033_sports_statistical_cleaning_integration_v3 034_sports_statistical_cleaning_integration_v4 035_sports_statistical_cleaning_integration_v5
+============================================================
+[14:34:44] B7: Building 5 images...
+[14:34:44] B7:   Building custom-pipelines/sports_statistical_cleaning_integration:latest...
+[14:35:23] B7:   ✓ 031_sports_statistical_cleaning_integration built & imported
+[14:35:23] B7:   Building custom-pipelines/sports_statistical_cleaning_integration_v2:latest...
+[14:35:36] B7:   ✓ 032_sports_statistical_cleaning_integration_v2 built & imported
+[14:35:36] B7:   Building custom-pipelines/sports_statistical_cleaning_integration_v3:latest...
+[14:35:48] B7:   ✓ 033_sports_statistical_cleaning_integration_v3 built & imported
+[14:35:48] B7:   Building custom-pipelines/sports_statistical_cleaning_integration_v4:latest...
+[14:36:01] B7:   ✓ 034_sports_statistical_cleaning_integration_v4 built & imported
+[14:36:01] B7:   Building custom-pipelines/sports_statistical_cleaning_integration_v5:latest...
+[14:36:13] B7:   ✓ 035_sports_statistical_cleaning_integration_v5 built & imported
+[14:36:13] B7: Submitting workflows...
+[14:36:13] B7:   Submitted: 031_sports_statistical_cleaning_integration → p-7-031-sports-statistical-cleaning-integration
+[14:36:13] B7:   Submitted: 032_sports_statistical_cleaning_integration_v2 → p-7-032-sports-statistical-cleaning-integration-v2
+[14:36:13] B7:   Submitted: 033_sports_statistical_cleaning_integration_v3 → p-7-033-sports-statistical-cleaning-integration-v3
+[14:36:13] B7:   Submitted: 034_sports_statistical_cleaning_integration_v4 → p-7-034-sports-statistical-cleaning-integration-v4
+[14:36:13] B7:   Submitted: 035_sports_statistical_cleaning_integration_v5 → p-7-035-sports-statistical-cleaning-integration-v5
+[14:36:13] B7: Waiting for completion (timeout=600s)...
+[14:37:24] B7:   031_sports_statistical_cleaning_integration: Succeeded (70s)
+[14:37:25] B7:   032_sports_statistical_cleaning_integration_v2: Succeeded (0s)
+[14:37:25] B7:   033_sports_statistical_cleaning_integration_v3: Succeeded (0s)
+[14:37:25] B7:   034_sports_statistical_cleaning_integration_v4: Succeeded (0s)
+[14:37:26] B7:   035_sports_statistical_cleaning_integration_v5: Succeeded (0s)
+[14:37:26] B7: Cleaning up...
+[14:37:28] B7: BATCH 7 COMPLETE
+
+--- Batch 7 complete. Pulling results... ---
+
+sent 437 bytes  received 33721 bytes  341580000 bytes/sec
+total size is 2128445  speedup is 62.31
+  ✅ 031_sports_statistical_cleaning_integration             Succeeded    70s  steps=6/6
+  ✅ 032_sports_statistical_cleaning_integration_v2          Succeeded     0s  steps=6/6
+  ✅ 033_sports_statistical_cleaning_integration_v3          Succeeded     0s  steps=6/6
+  ✅ 034_sports_statistical_cleaning_integration_v4          Succeeded     0s  steps=6/6
+  ✅ 035_sports_statistical_cleaning_integration_v5          Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 8 (pipelines 36-40/100)
+  036_sports_statistical_cleaning_validation 037_sports_statistical_integration 038_sports_statistical_integration_v2 039_sports_statistical_visualization_cleaning 040_sports_statistical_visualization_cleaning_v2
+============================================================
+[14:37:45] B8: Building 5 images...
+[14:37:45] B8:   Building custom-pipelines/sports_statistical_cleaning_validation:latest...
+[14:38:23] B8:   ✓ 036_sports_statistical_cleaning_validation built & imported
+[14:38:23] B8:   Building custom-pipelines/sports_statistical_integration:latest...
+[14:38:36] B8:   ✓ 037_sports_statistical_integration built & imported
+[14:38:36] B8:   Building custom-pipelines/sports_statistical_integration_v2:latest...
+[14:38:48] B8:   ✓ 038_sports_statistical_integration_v2 built & imported
+[14:38:48] B8:   Building custom-pipelines/sports_statistical_visualization_cleaning:latest...
+[14:39:00] B8:   ✓ 039_sports_statistical_visualization_cleaning built & imported
+[14:39:00] B8:   Building custom-pipelines/sports_statistical_visualization_cleaning_v2:latest...
+[14:39:12] B8:   ✓ 040_sports_statistical_visualization_cleaning_v2 built & imported
+[14:39:12] B8: Submitting workflows...
+[14:39:12] B8:   Submitted: 036_sports_statistical_cleaning_validation → p-8-036-sports-statistical-cleaning-validation
+[14:39:12] B8:   Submitted: 037_sports_statistical_integration → p-8-037-sports-statistical-integration
+[14:39:12] B8:   Submitted: 038_sports_statistical_integration_v2 → p-8-038-sports-statistical-integration-v2
+[14:39:12] B8:   Submitted: 039_sports_statistical_visualization_cleaning → p-8-039-sports-statistical-visualization-cleaning
+[14:39:12] B8:   Submitted: 040_sports_statistical_visualization_cleaning_v2 → p-8-040-sports-statistical-visualization-cleaning-v2
+[14:39:12] B8: Waiting for completion (timeout=600s)...
+[14:40:23] B8:   036_sports_statistical_cleaning_validation: Succeeded (70s)
+[14:40:24] B8:   037_sports_statistical_integration: Succeeded (0s)
+[14:40:24] B8:   038_sports_statistical_integration_v2: Succeeded (0s)
+[14:40:24] B8:   039_sports_statistical_visualization_cleaning: Succeeded (0s)
+[14:40:25] B8:   040_sports_statistical_visualization_cleaning_v2: Succeeded (0s)
+[14:40:25] B8: Cleaning up...
+[14:40:27] B8: BATCH 8 COMPLETE
+
+--- Batch 8 complete. Pulling results... ---
+
+sent 437 bytes  received 34567 bytes  350040000 bytes/sec
+total size is 2410066  speedup is 68.85
+  ✅ 036_sports_statistical_cleaning_validation              Succeeded    70s  steps=6/6
+  ✅ 037_sports_statistical_integration                      Succeeded     0s  steps=6/6
+  ✅ 038_sports_statistical_integration_v2                   Succeeded     0s  steps=6/6
+  ✅ 039_sports_statistical_visualization_cleaning           Succeeded     0s  steps=6/6
+  ✅ 040_sports_statistical_visualization_cleaning_v2        Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 9 (pipelines 41-45/100)
+  041_sports_statistical_visualization_integration 042_sports_validation_recovery 043_sports_visualization 044_sports_visualization_cleaning_integration 045_sports_visualization_cleaning_recovery
+============================================================
+[14:40:34] B9: Building 5 images...
+[14:40:34] B9:   Building custom-pipelines/sports_statistical_visualization_integration:latest...
+[14:41:13] B9:   ✓ 041_sports_statistical_visualization_integration built & imported
+[14:41:14] B9:   Building custom-pipelines/sports_validation_recovery:latest...
+[14:41:50] B9:   ✓ 042_sports_validation_recovery built & imported
+[14:41:50] B9:   Building custom-pipelines/sports_visualization:latest...
+[14:42:04] B9:   ✓ 043_sports_visualization built & imported
+[14:42:04] B9:   Building custom-pipelines/sports_visualization_cleaning_integration:latest...
+[14:42:17] B9:   ✓ 044_sports_visualization_cleaning_integration built & imported
+[14:42:17] B9:   Building custom-pipelines/sports_visualization_cleaning_recovery:latest...
+[14:42:29] B9:   ✓ 045_sports_visualization_cleaning_recovery built & imported
+[14:42:29] B9: Submitting workflows...
+[14:42:29] B9:   Submitted: 041_sports_statistical_visualization_integration → p-9-041-sports-statistical-visualization-integration
+[14:42:29] B9:   Submitted: 042_sports_validation_recovery → p-9-042-sports-validation-recovery
+[14:42:29] B9:   Submitted: 043_sports_visualization → p-9-043-sports-visualization
+[14:42:29] B9:   Submitted: 044_sports_visualization_cleaning_integration → p-9-044-sports-visualization-cleaning-integration
+[14:42:29] B9:   Submitted: 045_sports_visualization_cleaning_recovery → p-9-045-sports-visualization-cleaning-recovery
+[14:42:29] B9: Waiting for completion (timeout=600s)...
+[14:43:30] B9:   041_sports_statistical_visualization_integration: Succeeded (60s)
+[14:43:41] B9:   042_sports_validation_recovery: Succeeded (10s)
+[14:43:41] B9:   043_sports_visualization: Succeeded (0s)
+[14:43:41] B9:   044_sports_visualization_cleaning_integration: Succeeded (0s)
+[14:43:42] B9:   045_sports_visualization_cleaning_recovery: Succeeded (0s)
+[14:43:42] B9: Cleaning up...
+[14:43:44] B9: BATCH 9 COMPLETE
+
+--- Batch 9 complete. Pulling results... ---
+
+sent 437 bytes  received 37313 bytes  377500000 bytes/sec
+total size is 2705476  speedup is 71.67
+  ✅ 041_sports_statistical_visualization_integration        Succeeded    60s  steps=6/6
+  ✅ 042_sports_validation_recovery                          Succeeded    10s  steps=6/6
+  ✅ 043_sports_visualization                                Succeeded     0s  steps=6/6
+  ✅ 044_sports_visualization_cleaning_integration           Succeeded     0s  steps=6/6
+  ✅ 045_sports_visualization_cleaning_recovery              Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 10 (pipelines 46-50/100)
+  046_sports_visualization_cleaning_recovery_v2 047_sports_visualization_integration_features 048_sports_visualization_integration_geospatial 049_sports_visualization_integration_recovery 050_sports_visualization_integration_recovery_v2
+============================================================
+[14:43:50] B10: Building 5 images...
+[14:43:50] B10:   Building custom-pipelines/sports_visualization_cleaning_recovery_v2:latest...
+[14:44:28] B10:   ✓ 046_sports_visualization_cleaning_recovery_v2 built & imported
+[14:44:28] B10:   Building custom-pipelines/sports_visualization_integration_features:latest...
+[14:44:41] B10:   ✓ 047_sports_visualization_integration_features built & imported
+[14:44:41] B10:   Building custom-pipelines/sports_visualization_integration_geospatial:latest...
+[14:44:54] B10:   ✓ 048_sports_visualization_integration_geospatial built & imported
+[14:44:54] B10:   Building custom-pipelines/sports_visualization_integration_recovery:latest...
+[14:45:06] B10:   ✓ 049_sports_visualization_integration_recovery built & imported
+[14:45:06] B10:   Building custom-pipelines/sports_visualization_integration_recovery_v2:latest...
+[14:45:18] B10:   ✓ 050_sports_visualization_integration_recovery_v2 built & imported
+[14:45:18] B10: Submitting workflows...
+[14:45:18] B10:   Submitted: 046_sports_visualization_cleaning_recovery_v2 → p-10-046-sports-visualization-cleaning-recovery-v2
+[14:45:18] B10:   Submitted: 047_sports_visualization_integration_features → p-10-047-sports-visualization-integration-features
+[14:45:18] B10:   Submitted: 048_sports_visualization_integration_geospatial → p-10-048-sports-visualization-integration-geospatial
+[14:45:18] B10:   Submitted: 049_sports_visualization_integration_recovery → p-10-049-sports-visualization-integration-recovery
+[14:45:18] B10:   Submitted: 050_sports_visualization_integration_recovery_v2 → p-10-050-sports-visualization-integration-recovery-v2
+[14:45:18] B10: Waiting for completion (timeout=600s)...
+[14:46:29] B10:   046_sports_visualization_cleaning_recovery_v2: Succeeded (70s)
+[14:46:30] B10:   047_sports_visualization_integration_features: Succeeded (0s)
+[14:46:30] B10:   048_sports_visualization_integration_geospatial: Succeeded (0s)
+[14:46:30] B10:   049_sports_visualization_integration_recovery: Succeeded (0s)
+[14:46:31] B10:   050_sports_visualization_integration_recovery_v2: Succeeded (0s)
+[14:46:31] B10: Cleaning up...
+[14:46:33] B10: BATCH 10 COMPLETE
+
+--- Batch 10 complete. Pulling results... ---
+
+sent 437 bytes  received 36019 bytes  364560000 bytes/sec
+total size is 2990555  speedup is 82.03
+  ✅ 046_sports_visualization_cleaning_recovery_v2           Succeeded    70s  steps=6/6
+  ✅ 047_sports_visualization_integration_features           Succeeded     0s  steps=6/6
+  ✅ 048_sports_visualization_integration_geospatial         Succeeded     0s  steps=6/6
+  ✅ 049_sports_visualization_integration_recovery           Succeeded     0s  steps=6/6
+  ✅ 050_sports_visualization_integration_recovery_v2        Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 11 (pipelines 51-55/100)
+  051_sports_visualization_integration_validation 052_sports_visualization_integration_validation_v2 053_sports_visualization_validation_recovery 054_student_performance 055_transportation_analysis
+============================================================
+[14:46:41] B11: Building 5 images...
+[14:46:41] B11:   Building custom-pipelines/sports_visualization_integration_validation:latest...
+[14:47:19] B11:   ✓ 051_sports_visualization_integration_validation built & imported
+[14:47:19] B11:   Building custom-pipelines/sports_visualization_integration_validation_v2:latest...
+[14:47:32] B11:   ✓ 052_sports_visualization_integration_validation_v2 built & imported
+[14:47:32] B11:   Building custom-pipelines/sports_visualization_validation_recovery:latest...
+[14:47:44] B11:   ✓ 053_sports_visualization_validation_recovery built & imported
+[14:47:44] B11:   Building custom-pipelines/student_performance:latest...
+[14:47:57] B11:   ✓ 054_student_performance built & imported
+[14:47:57] B11:   Building custom-pipelines/transportation_analysis:latest...
+[14:48:10] B11:   ✓ 055_transportation_analysis built & imported
+[14:48:10] B11: Submitting workflows...
+[14:48:10] B11:   Submitted: 051_sports_visualization_integration_validation → p-11-051-sports-visualization-integration-validation
+[14:48:10] B11:   Submitted: 052_sports_visualization_integration_validation_v2 → p-11-052-sports-visualization-integration-validation-v2
+[14:48:10] B11:   Submitted: 053_sports_visualization_validation_recovery → p-11-053-sports-visualization-validation-recovery
+[14:48:10] B11:   Submitted: 054_student_performance → p-11-054-student-performance
+[14:48:10] B11:   Submitted: 055_transportation_analysis → p-11-055-transportation-analysis
+[14:48:10] B11: Waiting for completion (timeout=600s)...
+[14:49:21] B11:   051_sports_visualization_integration_validation: Succeeded (70s)
+[14:49:22] B11:   052_sports_visualization_integration_validation_v2: Succeeded (0s)
+[14:49:22] B11:   053_sports_visualization_validation_recovery: Succeeded (0s)
+[14:49:22] B11:   054_student_performance: Succeeded (0s)
+[14:49:22] B11:   055_transportation_analysis: Succeeded (0s)
+[14:49:23] B11: Cleaning up...
+[14:49:24] B11: BATCH 11 COMPLETE
+
+--- Batch 11 complete. Pulling results... ---
+
+sent 437 bytes  received 36758 bytes  371950000 bytes/sec
+total size is 3268438  speedup is 87.87
+  ✅ 051_sports_visualization_integration_validation         Succeeded    70s  steps=6/6
+  ✅ 052_sports_visualization_integration_validation_v2      Succeeded     0s  steps=6/6
+  ✅ 053_sports_visualization_validation_recovery            Succeeded     0s  steps=6/6
+  ✅ 054_student_performance                                 Succeeded     0s  steps=6/6
+  ✅ 055_transportation_analysis                             Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 12 (pipelines 56-60/100)
+  056_transportation_cleaning 057_transportation_cleaning_integration 058_transportation_cleaning_integration_geospatial 059_transportation_cleaning_integration_recovery 060_transportation_cleaning_integration_validation
+============================================================
+[14:49:30] B12: Building 5 images...
+[14:49:30] B12:   Building custom-pipelines/transportation_cleaning:latest...
+[14:50:09] B12:   ✓ 056_transportation_cleaning built & imported
+[14:50:09] B12:   Building custom-pipelines/transportation_cleaning_integration:latest...
+[14:50:22] B12:   ✓ 057_transportation_cleaning_integration built & imported
+[14:50:22] B12:   Building custom-pipelines/transportation_cleaning_integration_geospatial:latest...
+[14:50:35] B12:   ✓ 058_transportation_cleaning_integration_geospatial built & imported
+[14:50:35] B12:   Building custom-pipelines/transportation_cleaning_integration_recovery:latest...
+[14:50:47] B12:   ✓ 059_transportation_cleaning_integration_recovery built & imported
+[14:50:47] B12:   Building custom-pipelines/transportation_cleaning_integration_validation:latest...
+[14:50:59] B12:   ✓ 060_transportation_cleaning_integration_validation built & imported
+[14:50:59] B12: Submitting workflows...
+[14:50:59] B12:   Submitted: 056_transportation_cleaning → p-12-056-transportation-cleaning
+[14:50:59] B12:   Submitted: 057_transportation_cleaning_integration → p-12-057-transportation-cleaning-integration
+[14:51:00] B12:   Submitted: 058_transportation_cleaning_integration_geospatial → p-12-058-transportation-cleaning-integration-geospatial
+[14:51:00] B12:   Submitted: 059_transportation_cleaning_integration_recovery → p-12-059-transportation-cleaning-integration-recovery
+[14:51:00] B12:   Submitted: 060_transportation_cleaning_integration_validation → p-12-060-transportation-cleaning-integration-validation
+[14:51:00] B12: Waiting for completion (timeout=600s)...
+[14:52:11] B12:   056_transportation_cleaning: Succeeded (70s)
+[14:52:11] B12:   057_transportation_cleaning_integration: Succeeded (0s)
+[14:52:11] B12:   058_transportation_cleaning_integration_geospatial: Succeeded (0s)
+[14:52:11] B12:   059_transportation_cleaning_integration_recovery: Succeeded (0s)
+[14:52:12] B12:   060_transportation_cleaning_integration_validation: Failed (0s)
+[14:52:12] B12: Cleaning up...
+[14:52:13] B12: BATCH 12 COMPLETE
+
+--- Batch 12 complete. Pulling results... ---
+
+sent 437 bytes  received 37228 bytes  376650000 bytes/sec
+total size is 3530476  speedup is 93.73
+  ✅ 056_transportation_cleaning                             Succeeded    70s  steps=6/6
+  ✅ 057_transportation_cleaning_integration                 Succeeded     0s  steps=6/6
+  ✅ 058_transportation_cleaning_integration_geospatial      Succeeded     0s  steps=6/6
+  ✅ 059_transportation_cleaning_integration_recovery        Succeeded     0s  steps=6/6
+  ❌ 060_transportation_cleaning_integration_validation      Failed        0s  steps=1/2
+
+============================================================
+  BATCH 13 (pipelines 61-65/100)
+  061_transportation_cleaning_v2 062_transportation_cleaning_validation_features 063_transportation_clustering_validation 064_transportation_integration 065_transportation_integration_extra
+============================================================
+[14:52:20] B13: Building 5 images...
+[14:52:20] B13:   Building custom-pipelines/transportation_cleaning_v2:latest...
+[14:52:58] B13:   ✓ 061_transportation_cleaning_v2 built & imported
+[14:52:58] B13:   Building custom-pipelines/transportation_cleaning_validation_features:latest...
+[14:53:11] B13:   ✓ 062_transportation_cleaning_validation_features built & imported
+[14:53:11] B13:   Building custom-pipelines/transportation_clustering_validation:latest...
+[14:53:23] B13:   ✓ 063_transportation_clustering_validation built & imported
+[14:53:23] B13:   Building custom-pipelines/transportation_integration:latest...
+[14:53:35] B13:   ✓ 064_transportation_integration built & imported
+[14:53:35] B13:   Building custom-pipelines/transportation_integration_extra:latest...
+[14:53:48] B13:   ✓ 065_transportation_integration_extra built & imported
+[14:53:48] B13: Submitting workflows...
+[14:53:48] B13:   Submitted: 061_transportation_cleaning_v2 → p-13-061-transportation-cleaning-v2
+[14:53:48] B13:   Submitted: 062_transportation_cleaning_validation_features → p-13-062-transportation-cleaning-validation-features
+[14:53:48] B13:   Submitted: 063_transportation_clustering_validation → p-13-063-transportation-clustering-validation
+[14:53:48] B13:   Submitted: 064_transportation_integration → p-13-064-transportation-integration
+[14:53:48] B13:   Submitted: 065_transportation_integration_extra → p-13-065-transportation-integration-extra
+[14:53:48] B13: Waiting for completion (timeout=600s)...
+[14:54:59] B13:   061_transportation_cleaning_v2: Succeeded (70s)
+[14:55:00] B13:   062_transportation_cleaning_validation_features: Succeeded (0s)
+[14:55:00] B13:   063_transportation_clustering_validation: Succeeded (0s)
+[14:55:00] B13:   064_transportation_integration: Succeeded (0s)
+[14:55:00] B13:   065_transportation_integration_extra: Succeeded (0s)
+[14:55:01] B13: Cleaning up...
+[14:55:03] B13: BATCH 13 COMPLETE
+
+--- Batch 13 complete. Pulling results... ---
+
+sent 437 bytes  received 39946 bytes  403830000 bytes/sec
+total size is 3817841  speedup is 94.54
+  ✅ 061_transportation_cleaning_v2                          Succeeded    70s  steps=6/6
+  ✅ 062_transportation_cleaning_validation_features         Succeeded     0s  steps=6/6
+  ✅ 063_transportation_clustering_validation                Succeeded     0s  steps=6/6
+  ✅ 064_transportation_integration                          Succeeded     0s  steps=6/6
+  ✅ 065_transportation_integration_extra                    Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 14 (pipelines 66-70/100)
+  066_transportation_integration_geospatial 067_transportation_integration_validation 068_transportation_prediction_cleaning 069_transportation_prediction_cleaning_integration 070_transportation_prediction_cleaning_validation
+============================================================
+[14:55:08] B14: Building 5 images...
+[14:55:08] B14:   Building custom-pipelines/transportation_integration_geospatial:latest...
+[14:55:47] B14:   ✓ 066_transportation_integration_geospatial built & imported
+[14:55:47] B14:   Building custom-pipelines/transportation_integration_validation:latest...
+[14:55:59] B14:   ✓ 067_transportation_integration_validation built & imported
+[14:55:59] B14:   Building custom-pipelines/transportation_prediction_cleaning:latest...
+[14:56:12] B14:   ✓ 068_transportation_prediction_cleaning built & imported
+[14:56:12] B14:   Building custom-pipelines/transportation_prediction_cleaning_integration:latest...
+[14:56:24] B14:   ✓ 069_transportation_prediction_cleaning_integration built & imported
+[14:56:24] B14:   Building custom-pipelines/transportation_prediction_cleaning_validation:latest...
+[14:56:36] B14:   ✓ 070_transportation_prediction_cleaning_validation built & imported
+[14:56:36] B14: Submitting workflows...
+[14:56:36] B14:   Submitted: 066_transportation_integration_geospatial → p-14-066-transportation-integration-geospatial
+[14:56:36] B14:   Submitted: 067_transportation_integration_validation → p-14-067-transportation-integration-validation
+[14:56:36] B14:   Submitted: 068_transportation_prediction_cleaning → p-14-068-transportation-prediction-cleaning
+[14:56:36] B14:   Submitted: 069_transportation_prediction_cleaning_integration → p-14-069-transportation-prediction-cleaning-integration
+[14:56:37] B14:   Submitted: 070_transportation_prediction_cleaning_validation → p-14-070-transportation-prediction-cleaning-validation
+[14:56:37] B14: Waiting for completion (timeout=600s)...
+[14:57:48] B14:   066_transportation_integration_geospatial: Succeeded (70s)
+[14:57:48] B14:   067_transportation_integration_validation: Succeeded (0s)
+[14:57:49] B14:   068_transportation_prediction_cleaning: Succeeded (0s)
+[14:57:50] B14:   069_transportation_prediction_cleaning_integration: Succeeded (0s)
+[14:57:50] B14:   070_transportation_prediction_cleaning_validation: Succeeded (0s)
+[14:57:50] B14: Cleaning up...
+[14:57:52] B14: BATCH 14 COMPLETE
+
+--- Batch 14 complete. Pulling results... ---
+
+sent 437 bytes  received 40995 bytes  414320000 bytes/sec
+total size is 4111502  speedup is 99.23
+  ✅ 066_transportation_integration_geospatial               Succeeded    70s  steps=6/6
+  ✅ 067_transportation_integration_validation               Succeeded     0s  steps=6/6
+  ✅ 068_transportation_prediction_cleaning                  Succeeded     0s  steps=6/6
+  ✅ 069_transportation_prediction_cleaning_integration      Succeeded     0s  steps=6/6
+  ✅ 070_transportation_prediction_cleaning_validation       Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 15 (pipelines 71-75/100)
+  071_transportation_prediction_statistical_cleaning 072_transportation_prediction_statistical_integration 073_transportation_prediction_validation 074_transportation_prediction_validation_recovery 075_transportation_prediction_validation_v2
+============================================================
+[14:57:57] B15: Building 5 images...
+[14:57:57] B15:   Building custom-pipelines/transportation_prediction_statistical_cleaning:latest...
+[14:58:35] B15:   ✓ 071_transportation_prediction_statistical_cleaning built & imported
+[14:58:35] B15:   Building custom-pipelines/transportation_prediction_statistical_integration:latest...
+[14:58:48] B15:   ✓ 072_transportation_prediction_statistical_integration built & imported
+[14:58:48] B15:   Building custom-pipelines/transportation_prediction_validation:latest...
+[14:59:24] B15:   ✓ 073_transportation_prediction_validation built & imported
+[14:59:24] B15:   Building custom-pipelines/transportation_prediction_validation_recovery:latest...
+[14:59:37] B15:   ✓ 074_transportation_prediction_validation_recovery built & imported
+[14:59:37] B15:   Building custom-pipelines/transportation_prediction_validation_v2:latest...
+[14:59:50] B15:   ✓ 075_transportation_prediction_validation_v2 built & imported
+[14:59:50] B15: Submitting workflows...
+[14:59:50] B15:   Submitted: 071_transportation_prediction_statistical_cleaning → p-15-071-transportation-prediction-statistical-cleaning
+[14:59:50] B15:   Submitted: 072_transportation_prediction_statistical_integration → p-15-072-transportation-prediction-statistical-integration
+[14:59:50] B15:   Submitted: 073_transportation_prediction_validation → p-15-073-transportation-prediction-validation
+[14:59:50] B15:   Submitted: 074_transportation_prediction_validation_recovery → p-15-074-transportation-prediction-validation-recovery
+[14:59:50] B15:   Submitted: 075_transportation_prediction_validation_v2 → p-15-075-transportation-prediction-validation-v2
+[14:59:50] B15: Waiting for completion (timeout=600s)...
+[15:01:01] B15:   071_transportation_prediction_statistical_cleaning: Succeeded (70s)
+[15:01:01] B15:   072_transportation_prediction_statistical_integration: Succeeded (0s)
+[15:01:02] B15:   073_transportation_prediction_validation: Succeeded (0s)
+[15:01:02] B15:   074_transportation_prediction_validation_recovery: Succeeded (0s)
+[15:01:02] B15:   075_transportation_prediction_validation_v2: Succeeded (0s)
+[15:01:02] B15: Cleaning up...
+[15:01:05] B15: BATCH 15 COMPLETE
+
+--- Batch 15 complete. Pulling results... ---
+
+sent 437 bytes  received 40941 bytes  413780000 bytes/sec
+total size is 4405222  speedup is 106.46
+  ✅ 071_transportation_prediction_statistical_cleaning      Succeeded    70s  steps=6/6
+  ✅ 072_transportation_prediction_statistical_integration   Succeeded     0s  steps=6/6
+  ✅ 073_transportation_prediction_validation                Succeeded     0s  steps=6/6
+  ✅ 074_transportation_prediction_validation_recovery       Succeeded     0s  steps=6/6
+  ✅ 075_transportation_prediction_validation_v2             Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 16 (pipelines 76-80/100)
+  076_transportation_prediction_visualization_geospatial 077_transportation_prediction_visualization_integration 078_transportation_prediction_visualization_integration_v2 079_transportation_regression 080_transportation_regression_cleaning_integration
+============================================================
+[15:01:09] B16: Building 5 images...
+[15:01:09] B16:   Building custom-pipelines/transportation_prediction_visualization_geospatial:latest...
+[15:01:47] B16:   ✓ 076_transportation_prediction_visualization_geospatial built & imported
+[15:01:47] B16:   Building custom-pipelines/transportation_prediction_visualization_integration:latest...
+[15:02:00] B16:   ✓ 077_transportation_prediction_visualization_integration built & imported
+[15:02:00] B16:   Building custom-pipelines/transportation_prediction_visualization_integration_v2:latest...
+[15:02:13] B16:   ✓ 078_transportation_prediction_visualization_integration_v2 built & imported
+[15:02:13] B16:   Building custom-pipelines/transportation_regression:latest...
+[15:02:25] B16:   ✓ 079_transportation_regression built & imported
+[15:02:25] B16:   Building custom-pipelines/transportation_regression_cleaning_integration:latest...
+[15:02:37] B16:   ✓ 080_transportation_regression_cleaning_integration built & imported
+[15:02:37] B16: Submitting workflows...
+[15:02:37] B16:   Submitted: 076_transportation_prediction_visualization_geospatial → p-16-076-transportation-prediction-visualization-geospatial
+[15:02:37] B16:   Submitted: 077_transportation_prediction_visualization_integration → p-16-077-transportation-prediction-visualization-integration
+[15:02:37] B16:   Submitted: 078_transportation_prediction_visualization_integration_v2 → p-16-078-transportation-prediction-visualization-integration-v2
+[15:02:37] B16:   Submitted: 079_transportation_regression → p-16-079-transportation-regression
+[15:02:37] B16:   Submitted: 080_transportation_regression_cleaning_integration → p-16-080-transportation-regression-cleaning-integration
+[15:02:37] B16: Waiting for completion (timeout=600s)...
+[15:03:48] B16:   076_transportation_prediction_visualization_geospatial: Succeeded (70s)
+[15:03:48] B16:   077_transportation_prediction_visualization_integration: Succeeded (0s)
+[15:03:49] B16:   078_transportation_prediction_visualization_integration_v2: Succeeded (0s)
+[15:03:49] B16:   079_transportation_regression: Succeeded (0s)
+[15:03:49] B16:   080_transportation_regression_cleaning_integration: Succeeded (0s)
+[15:03:49] B16: Cleaning up...
+[15:03:51] B16: BATCH 16 COMPLETE
+
+--- Batch 16 complete. Pulling results... ---
+
+sent 437 bytes  received 41085 bytes  415220000 bytes/sec
+total size is 4692304  speedup is 113.01
+  ✅ 076_transportation_prediction_visualization_geospatial  Succeeded    70s  steps=6/6
+  ✅ 077_transportation_prediction_visualization_integration Succeeded     0s  steps=6/6
+  ✅ 078_transportation_prediction_visualization_integration Succeeded     0s  steps=6/6
+  ✅ 079_transportation_regression                           Succeeded     0s  steps=6/6
+  ✅ 080_transportation_regression_cleaning_integration      Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 17 (pipelines 81-85/100)
+  081_transportation_regression_statistical_cleaning 082_transportation_regression_statistical_integration 083_transportation_regression_visualization_integration 084_transportation_statistical_cleaning_integration 085_transportation_statistical_geospatial
+============================================================
+[15:03:56] B17: Building 5 images...
+[15:03:56] B17:   Building custom-pipelines/transportation_regression_statistical_cleaning:latest...
+[15:04:35] B17:   ✓ 081_transportation_regression_statistical_cleaning built & imported
+[15:04:35] B17:   Building custom-pipelines/transportation_regression_statistical_integration:latest...
+[15:04:48] B17:   ✓ 082_transportation_regression_statistical_integration built & imported
+[15:04:48] B17:   Building custom-pipelines/transportation_regression_visualization_integration:latest...
+[15:05:25] B17:   ✓ 083_transportation_regression_visualization_integration built & imported
+[15:05:25] B17:   Building custom-pipelines/transportation_statistical_cleaning_integration:latest...
+[15:05:37] B17:   ✓ 084_transportation_statistical_cleaning_integration built & imported
+[15:05:37] B17:   Building custom-pipelines/transportation_statistical_geospatial:latest...
+[15:05:50] B17:   ✓ 085_transportation_statistical_geospatial built & imported
+[15:05:50] B17: Submitting workflows...
+[15:05:50] B17:   Submitted: 081_transportation_regression_statistical_cleaning → p-17-081-transportation-regression-statistical-cleaning
+[15:05:50] B17:   Submitted: 082_transportation_regression_statistical_integration → p-17-082-transportation-regression-statistical-integration
+[15:05:50] B17:   Submitted: 083_transportation_regression_visualization_integration → p-17-083-transportation-regression-visualization-integration
+[15:05:50] B17:   Submitted: 084_transportation_statistical_cleaning_integration → p-17-084-transportation-statistical-cleaning-integration
+[15:05:50] B17:   Submitted: 085_transportation_statistical_geospatial → p-17-085-transportation-statistical-geospatial
+[15:05:50] B17: Waiting for completion (timeout=600s)...
+[15:07:01] B17:   081_transportation_regression_statistical_cleaning: Succeeded (70s)
+[15:07:01] B17:   082_transportation_regression_statistical_integration: Succeeded (0s)
+[15:07:01] B17:   083_transportation_regression_visualization_integration: Succeeded (0s)
+[15:07:02] B17:   084_transportation_statistical_cleaning_integration: Succeeded (0s)
+[15:07:02] B17:   085_transportation_statistical_geospatial: Succeeded (0s)
+[15:07:03] B17: Cleaning up...
+[15:07:05] B17: BATCH 17 COMPLETE
+
+--- Batch 17 complete. Pulling results... ---
+
+sent 437 bytes  received 42900 bytes  433370000 bytes/sec
+total size is 4989172  speedup is 115.12
+  ✅ 081_transportation_regression_statistical_cleaning      Succeeded    70s  steps=6/6
+  ✅ 082_transportation_regression_statistical_integration   Succeeded     0s  steps=6/6
+  ✅ 083_transportation_regression_visualization_integration Succeeded     0s  steps=6/6
+  ✅ 084_transportation_statistical_cleaning_integration     Succeeded     0s  steps=6/6
+  ✅ 085_transportation_statistical_geospatial               Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 18 (pipelines 86-90/100)
+  086_transportation_statistical_geospatial_validation 087_transportation_statistical_integration 088_transportation_statistical_integration_v2 089_transportation_statistical_visualization_integration 090_transportation_statistical_visualization_integration_v2
+============================================================
+[15:07:09] B18: Building 5 images...
+[15:07:09] B18:   Building custom-pipelines/transportation_statistical_geospatial_validation:latest...
+[15:07:49] B18:   ✓ 086_transportation_statistical_geospatial_validation built & imported
+[15:07:49] B18:   Building custom-pipelines/transportation_statistical_integration:latest...
+[15:08:01] B18:   ✓ 087_transportation_statistical_integration built & imported
+[15:08:01] B18:   Building custom-pipelines/transportation_statistical_integration_v2:latest...
+[15:08:14] B18:   ✓ 088_transportation_statistical_integration_v2 built & imported
+[15:08:14] B18:   Building custom-pipelines/transportation_statistical_visualization_integration:latest...
+[15:08:26] B18:   ✓ 089_transportation_statistical_visualization_integration built & imported
+[15:08:26] B18:   Building custom-pipelines/transportation_statistical_visualization_integration_v2:latest...
+[15:08:38] B18:   ✓ 090_transportation_statistical_visualization_integration_v2 built & imported
+[15:08:38] B18: Submitting workflows...
+[15:08:38] B18:   Submitted: 086_transportation_statistical_geospatial_validation → p-18-086-transportation-statistical-geospatial-validation
+[15:08:38] B18:   Submitted: 087_transportation_statistical_integration → p-18-087-transportation-statistical-integration
+[15:08:38] B18:   Submitted: 088_transportation_statistical_integration_v2 → p-18-088-transportation-statistical-integration-v2
+[15:08:38] B18:   Submitted: 089_transportation_statistical_visualization_integration → p-18-089-transportation-statistical-visualization-integration
+[15:08:38] B18:   ✗ 090_transportation_statistical_visualization_integration_v2: SUBMIT FAILED
+[15:08:38] B18: Waiting for completion (timeout=600s)...
+[15:09:49] B18:   086_transportation_statistical_geospatial_validation: Succeeded (70s)
+[15:09:49] B18:   087_transportation_statistical_integration: Succeeded (0s)
+[15:09:50] B18:   088_transportation_statistical_integration_v2: Succeeded (0s)
+[15:09:50] B18:   089_transportation_statistical_visualization_integration: Succeeded (0s)
+[15:09:51] B18: Cleaning up...
+[15:09:52] B18: BATCH 18 COMPLETE
+
+--- Batch 18 complete. Pulling results... ---
+
+sent 365 bytes  received 38145 bytes  385100000 bytes/sec
+total size is 5222175  speedup is 135.61
+  ✅ 086_transportation_statistical_geospatial_validation    Succeeded    70s  steps=6/6
+  ✅ 087_transportation_statistical_integration              Succeeded     0s  steps=6/6
+  ✅ 088_transportation_statistical_integration_v2           Succeeded     0s  steps=6/6
+  ✅ 089_transportation_statistical_visualization_integratio Succeeded     0s  steps=6/6
+  ⚠️  090_transportation_statistical_visualization_integratio (no metrics yet)
+
+============================================================
+  BATCH 19 (pipelines 91-95/100)
+  091_transportation_visualization 092_transportation_visualization_cleaning_integration 093_transportation_visualization_cleaning_validation 094_transportation_visualization_cleaning_validation_v2 095_transportation_visualization_geospatial
+============================================================
+[15:09:56] B19: Building 5 images...
+[15:09:56] B19:   Building custom-pipelines/transportation_visualization:latest...
+[15:10:34] B19:   ✓ 091_transportation_visualization built & imported
+[15:10:34] B19:   Building custom-pipelines/transportation_visualization_cleaning_integration:latest...
+[15:10:47] B19:   ✓ 092_transportation_visualization_cleaning_integration built & imported
+[15:10:47] B19:   Building custom-pipelines/transportation_visualization_cleaning_validation:latest...
+[15:11:00] B19:   ✓ 093_transportation_visualization_cleaning_validation built & imported
+[15:11:00] B19:   Building custom-pipelines/transportation_visualization_cleaning_validation_v2:latest...
+[15:11:12] B19:   ✓ 094_transportation_visualization_cleaning_validation_v2 built & imported
+[15:11:12] B19:   Building custom-pipelines/transportation_visualization_geospatial:latest...
+[15:11:24] B19:   ✓ 095_transportation_visualization_geospatial built & imported
+[15:11:24] B19: Submitting workflows...
+[15:11:24] B19:   Submitted: 091_transportation_visualization → p-19-091-transportation-visualization
+[15:11:24] B19:   Submitted: 092_transportation_visualization_cleaning_integration → p-19-092-transportation-visualization-cleaning-integration
+[15:11:24] B19:   Submitted: 093_transportation_visualization_cleaning_validation → p-19-093-transportation-visualization-cleaning-validation
+[15:11:24] B19:   Submitted: 094_transportation_visualization_cleaning_validation_v2 → p-19-094-transportation-visualization-cleaning-validation-v2
+[15:11:24] B19:   Submitted: 095_transportation_visualization_geospatial → p-19-095-transportation-visualization-geospatial
+[15:11:24] B19: Waiting for completion (timeout=600s)...
+[15:12:35] B19:   091_transportation_visualization: Succeeded (70s)
+[15:12:35] B19:   092_transportation_visualization_cleaning_integration: Succeeded (0s)
+[15:12:35] B19:   093_transportation_visualization_cleaning_validation: Succeeded (0s)
+[15:12:36] B19:   094_transportation_visualization_cleaning_validation_v2: Succeeded (0s)
+[15:12:36] B19:   095_transportation_visualization_geospatial: Succeeded (0s)
+[15:12:36] B19: Cleaning up...
+[15:12:38] B19: BATCH 19 COMPLETE
+
+--- Batch 19 complete. Pulling results... ---
+
+sent 437 bytes  received 43621 bytes  440580000 bytes/sec
+total size is 5507600  speedup is 125.01
+  ✅ 091_transportation_visualization                        Succeeded    70s  steps=6/6
+  ✅ 092_transportation_visualization_cleaning_integration   Succeeded     0s  steps=6/6
+  ✅ 093_transportation_visualization_cleaning_validation    Succeeded     0s  steps=6/6
+  ✅ 094_transportation_visualization_cleaning_validation_v2 Succeeded     0s  steps=6/6
+  ✅ 095_transportation_visualization_geospatial             Succeeded     0s  steps=6/6
+
+============================================================
+  BATCH 20 (pipelines 96-100/100)
+  096_transportation_visualization_integration 097_transportation_visualization_integration_v2 098_transportation_visualization_integration_validation 099_transportation_visualization_recovery_reporting 100_transportation_visualization_v2
+============================================================
+[15:12:42] B20: Building 5 images...
+[15:12:42] B20:   Building custom-pipelines/transportation_visualization_integration:latest...
+[15:13:20] B20:   ✓ 096_transportation_visualization_integration built & imported
+[15:13:21] B20:   Building custom-pipelines/transportation_visualization_integration_v2:latest...
+[15:13:33] B20:   ✓ 097_transportation_visualization_integration_v2 built & imported
+[15:13:33] B20:   Building custom-pipelines/transportation_visualization_integration_validation:latest...
+[15:13:46] B20:   ✓ 098_transportation_visualization_integration_validation built & imported
+[15:13:46] B20:   Building custom-pipelines/transportation_visualization_recovery_reporting:latest...
+[15:13:58] B20:   ✓ 099_transportation_visualization_recovery_reporting built & imported
+[15:13:58] B20:   Building custom-pipelines/transportation_visualization_v2:latest...
+[15:14:10] B20:   ✓ 100_transportation_visualization_v2 built & imported
+[15:14:10] B20: Submitting workflows...
+[15:14:10] B20:   Submitted: 096_transportation_visualization_integration → p-20-096-transportation-visualization-integration
+[15:14:10] B20:   Submitted: 097_transportation_visualization_integration_v2 → p-20-097-transportation-visualization-integration-v2
+[15:14:10] B20:   Submitted: 098_transportation_visualization_integration_validation → p-20-098-transportation-visualization-integration-validation
+[15:14:10] B20:   Submitted: 099_transportation_visualization_recovery_reporting → p-20-099-transportation-visualization-recovery-reporting
+[15:14:10] B20:   Submitted: 100_transportation_visualization_v2 → p-20-100-transportation-visualization-v2
+[15:14:10] B20: Waiting for completion (timeout=600s)...
+[15:15:22] B20:   096_transportation_visualization_integration: Succeeded (70s)
+[15:15:22] B20:   097_transportation_visualization_integration_v2: Succeeded (0s)
+[15:15:22] B20:   098_transportation_visualization_integration_validation: Succeeded (0s)
+[15:15:22] B20:   099_transportation_visualization_recovery_reporting: Succeeded (0s)
+[15:15:22] B20:   100_transportation_visualization_v2: Succeeded (0s)
+[15:15:23] B20: Cleaning up...
+[15:15:24] B20: BATCH 20 COMPLETE
+
+--- Batch 20 complete. Pulling results... ---
+
+sent 437 bytes  received 44406 bytes  448430000 bytes/sec
+total size is 5792550  speedup is 129.17
+  ✅ 096_transportation_visualization_integration            Succeeded    70s  steps=6/6
+  ✅ 097_transportation_visualization_integration_v2         Succeeded     0s  steps=6/6
+  ✅ 098_transportation_visualization_integration_validation Succeeded     0s  steps=6/6
+  ✅ 099_transportation_visualization_recovery_reporting     Succeeded     0s  steps=6/6
+  ✅ 100_transportation_visualization_v2                     Succeeded     0s  steps=6/6
+
+=== Final pull of results ===
+
+sent 27 bytes  received 16503 bytes  165300000 bytes/sec
+total size is 5792550  speedup is 350.43
+
+=== Generating master summary ===
+==========================================================================================
+ARGO LIVE EXECUTION REPORT
+Generated: 2026-07-15 17:15:30
+Pipelines tested: 99
+==========================================================================================
+
+## Results Summary
+  ✅ Succeeded:    95 (96%)
+  ❌ Failed:        4 (4%)
+
+
+
+
+## Durations (successful pipelines)
+  Average: 15s
+  Min:     0s
+  Max:     70s
+
+## Steps: 598/602 passed (99%)
+
+## By Domain
+  analytics           : 2/2 succeeded (100%)
+  general-ml          : 8/10 succeeded (80%)
+  hr                  : 2/2 succeeded (100%)
+  sports              : 39/40 succeeded (98%)
+  transportation      : 44/45 succeeded (98%)
+
+    # Pipeline                                              Phase   Dur   Steps  CPU·s   MB·s
+------------------------------------------------------------------------------------------
+ ✅ 001_analytics_statistical_cleaning_integration   Succeeded   70s     6/6     2    67
+ ✅ 002_analytics_statistical_integration            Succeeded   10s     6/6     5    99
+ ❌ 003_credit_risk                                     Failed   40s   10/11     8   151
+ ❌ 004_customer_churn                                  Failed   10s   11/12     9   164
+ ✅ 005_demand_forecasting                           Succeeded    0s   10/10     6   120
+ ✅ 006_ecommerce_recommendation                     Succeeded   70s     6/6     3    72
+ ✅ 007_employee_attrition                           Succeeded    0s     6/6     4    82
+ ✅ 008_energy_forecasting                           Succeeded    0s     6/6     4    83
+ ✅ 009_healthcare_readmission                       Succeeded    0s     6/6     5    88
+ ✅ 010_hr_regression_visualization_integration      Succeeded    0s     6/6     5    83
+ ✅ 011_hr_visualization_integration_validation      Succeeded   70s     6/6     4    80
+ ✅ 012_insurance_claims                             Succeeded    0s     6/6     2    68
+ ✅ 013_predictive_maintenance                       Succeeded    0s     6/6     4    78
+ ✅ 014_sports_clustering_integration_validation     Succeeded    0s     6/6     2    68
+ ✅ 015_sports_clustering_prediction_statistical     Succeeded    0s     6/6     3    71
+ ✅ 016_sports_clustering_prediction_visualization   Succeeded   70s     6/6     2    66
+ ✅ 017_sports_clustering_statistical_visualization  Succeeded    0s     6/6     2    61
+ ✅ 018_sports_clustering_visualization_integration  Succeeded    0s     6/6     2    67
+ ✅ 019_sports_prediction_cleaning_integration       Succeeded    0s     6/6     2    67
+ ✅ 020_sports_prediction_statistical_visualization  Succeeded    0s     6/6     2    69
+ ✅ 021_sports_prediction_statistical_visualization  Succeeded   70s     6/6     2    67
+ ✅ 022_sports_prediction_visualization_cleaning     Succeeded    0s     6/6     2    67
+ ✅ 023_sports_regression_clustering_visualization   Succeeded    0s     6/6     2    67
+ ✅ 024_sports_regression_prediction_statistical     Succeeded    0s     6/6     2    66
+ ❌ 025_sports_regression_prediction_statistical_v2     Failed    0s     2/3     0    22
+ ✅ 026_sports_regression_prediction_statistical_v3  Succeeded   70s     6/6     3    74
+ ✅ 027_sports_regression_prediction_visualization   Succeeded    0s     6/6     3    74
+ ✅ 028_sports_regression_prediction_visualization_  Succeeded    0s     6/6     2    72
+ ✅ 029_sports_regression_statistical_visualization  Succeeded    0s     6/6     3    78
+ ✅ 030_sports_statistical_cleaning                  Succeeded    0s     6/6     2    71
+ ✅ 031_sports_statistical_cleaning_integration      Succeeded   70s     6/6     3    75
+ ✅ 032_sports_statistical_cleaning_integration_v2   Succeeded    0s     6/6     2    72
+ ✅ 033_sports_statistical_cleaning_integration_v3   Succeeded    0s     6/6     2    67
+ ✅ 034_sports_statistical_cleaning_integration_v4   Succeeded    0s     6/6     3    71
+ ✅ 035_sports_statistical_cleaning_integration_v5   Succeeded    0s     6/6     3    72
+ ✅ 036_sports_statistical_cleaning_validation       Succeeded   70s     6/6     2    70
+ ✅ 037_sports_statistical_integration               Succeeded    0s     6/6     3    73
+ ✅ 038_sports_statistical_integration_v2            Succeeded    0s     6/6     2    68
+ ✅ 039_sports_statistical_visualization_cleaning    Succeeded    0s     6/6     3    75
+ ✅ 040_sports_statistical_visualization_cleaning_v  Succeeded    0s     6/6     3    75
+ ✅ 041_sports_statistical_visualization_integratio  Succeeded   60s     6/6     2    70
+ ✅ 042_sports_validation_recovery                   Succeeded   10s     6/6     3    74
+ ✅ 043_sports_visualization                         Succeeded    0s     6/6     3    75
+ ✅ 044_sports_visualization_cleaning_integration    Succeeded    0s     6/6     2    67
+ ✅ 045_sports_visualization_cleaning_recovery       Succeeded    0s     6/6     3    72
+ ✅ 046_sports_visualization_cleaning_recovery_v2    Succeeded   70s     6/6     2    66
+ ✅ 047_sports_visualization_integration_features    Succeeded    0s     6/6     2    65
+ ✅ 048_sports_visualization_integration_geospatial  Succeeded    0s     6/6     2    66
+ ✅ 049_sports_visualization_integration_recovery    Succeeded    0s     6/6     2    66
+ ✅ 050_sports_visualization_integration_recovery_v  Succeeded    0s     6/6     2    66
+ ✅ 051_sports_visualization_integration_validation  Succeeded   70s     6/6     2    67
+ ✅ 052_sports_visualization_integration_validation  Succeeded    0s     6/6     2    67
+ ✅ 053_sports_visualization_validation_recovery     Succeeded    0s     6/6     3    71
+ ✅ 054_student_performance                          Succeeded    0s     6/6     2    66
+ ✅ 055_transportation_analysis                      Succeeded    0s     6/6     2    66
+ ✅ 056_transportation_cleaning                      Succeeded   70s     6/6     3    78
+ ✅ 057_transportation_cleaning_integration          Succeeded    0s     6/6     3    73
+ ✅ 058_transportation_cleaning_integration_geospat  Succeeded    0s     6/6     2    68
+ ✅ 059_transportation_cleaning_integration_recover  Succeeded    0s     6/6     2    69
+ ❌ 060_transportation_cleaning_integration_validat     Failed    0s     1/2     0    15
+ ✅ 061_transportation_cleaning_v2                   Succeeded   70s     6/6     4    80
+ ✅ 062_transportation_cleaning_validation_features  Succeeded    0s     6/6     2    72
+ ✅ 063_transportation_clustering_validation         Succeeded    0s     6/6     4    79
+ ✅ 064_transportation_integration                   Succeeded    0s     6/6     3    74
+ ✅ 065_transportation_integration_extra             Succeeded    0s     6/6     3    72
+ ✅ 066_transportation_integration_geospatial        Succeeded   70s     6/6     4    77
+ ✅ 067_transportation_integration_validation        Succeeded    0s     6/6     4    79
+ ✅ 068_transportation_prediction_cleaning           Succeeded    0s     6/6     4    80
+ ✅ 069_transportation_prediction_cleaning_integrat  Succeeded    0s     6/6     3    71
+ ✅ 070_transportation_prediction_cleaning_validati  Succeeded    0s     6/6     3    75
+ ✅ 071_transportation_prediction_statistical_clean  Succeeded   70s     6/6     2    69
+ ✅ 072_transportation_prediction_statistical_integ  Succeeded    0s     6/6     2    69
+ ✅ 073_transportation_prediction_validation         Succeeded    0s     6/6     4    78
+ ✅ 074_transportation_prediction_validation_recove  Succeeded    0s     6/6     3    72
+ ✅ 075_transportation_prediction_validation_v2      Succeeded    0s     6/6     2    67
+ ✅ 076_transportation_prediction_visualization_geo  Succeeded   70s     6/6     2    67
+ ✅ 077_transportation_prediction_visualization_int  Succeeded    0s     6/6     2    66
+ ✅ 078_transportation_prediction_visualization_int  Succeeded    0s     6/6     2    66
+ ✅ 079_transportation_regression                    Succeeded    0s     6/6     2    66
+ ✅ 080_transportation_regression_cleaning_integrat  Succeeded    0s     6/6     2    66
+ ✅ 081_transportation_regression_statistical_clean  Succeeded   70s     6/6     2    70
+ ✅ 082_transportation_regression_statistical_integ  Succeeded    0s     6/6     2    70
+ ✅ 083_transportation_regression_visualization_int  Succeeded    0s     6/6     2    70
+ ✅ 084_transportation_statistical_cleaning_integra  Succeeded    0s     6/6     2    71
+ ✅ 085_transportation_statistical_geospatial        Succeeded    0s     6/6     2    68
+ ✅ 086_transportation_statistical_geospatial_valid  Succeeded   70s     6/6     3    74
+ ✅ 087_transportation_statistical_integration       Succeeded    0s     6/6     3    76
+ ✅ 088_transportation_statistical_integration_v2    Succeeded    0s     6/6     3    72
+ ✅ 089_transportation_statistical_visualization_in  Succeeded    0s     6/6     3    73
+ ✅ 091_transportation_visualization                 Succeeded   70s     6/6     4    80
+ ✅ 092_transportation_visualization_cleaning_integ  Succeeded    0s     6/6     3    76
+ ✅ 093_transportation_visualization_cleaning_valid  Succeeded    0s     6/6     2    70
+ ✅ 094_transportation_visualization_cleaning_valid  Succeeded    0s     6/6     3    72
+ ✅ 095_transportation_visualization_geospatial      Succeeded    0s     6/6     3    72
+ ✅ 096_transportation_visualization_integration     Succeeded   70s     6/6     2    66
+ ✅ 097_transportation_visualization_integration_v2  Succeeded    0s     6/6     2    66
+ ✅ 098_transportation_visualization_integration_va  Succeeded    0s     6/6     2    66
+ ✅ 099_transportation_visualization_recovery_repor  Succeeded    0s     6/6     2    66
+ ✅ 100_transportation_visualization_v2              Succeeded    0s     6/6     2    67
+
+==========================================================================================
+
+Report saved to: /Users/abubakarialidu/Downloads/custom_pipelines/argo_live_results/SUMMARY.txt
+
+============================================================
+ EVALUATION COMPLETE
+ Results: /Users/abubakarialidu/Downloads/custom_pipelines/argo_live_results
+============================================================

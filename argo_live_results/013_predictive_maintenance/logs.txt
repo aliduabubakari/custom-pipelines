@@ -1,0 +1,53 @@
+p-3-013-predictive-maintenance-run-step-1583529400: time=2026-07-15T14:23:50.473Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-013-predictive-maintenance-run-step-1583529400: STEP 1: Load & Profile
+p-3-013-predictive-maintenance-run-step-1583529400:    sensor_readings: 21600 rows x 13 cols
+p-3-013-predictive-maintenance-run-step-1583529400: OK
+p-3-013-predictive-maintenance-run-step-1583529400: time=2026-07-15T14:23:51.474Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-3-013-predictive-maintenance-run-step-1583529400: time=2026-07-15T14:23:51.474Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-013-predictive-maintenance-run-step-1586358240: time=2026-07-15T14:24:03.930Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-013-predictive-maintenance-run-step-1586358240: /pipeline/scripts/step_02_clean.py:12: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-3-013-predictive-maintenance-run-step-1586358240: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-3-013-predictive-maintenance-run-step-1586358240:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-3-013-predictive-maintenance-run-step-1586358240: STEP 2: Clean & Standardize
+p-3-013-predictive-maintenance-run-step-1586358240:    21600 rows saved
+p-3-013-predictive-maintenance-run-step-1586358240: OK
+p-3-013-predictive-maintenance-run-step-1586358240: time=2026-07-15T14:24:04.931Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-013-predictive-maintenance-run-step-1586358240: time=2026-07-15T14:24:04.931Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-013-predictive-maintenance-run-step-2236173904: time=2026-07-15T14:24:14.218Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-013-predictive-maintenance-run-step-2236173904: STEP 3: Feature Engineering
+p-3-013-predictive-maintenance-run-step-2236173904:    Created features
+p-3-013-predictive-maintenance-run-step-2236173904:    13 cols
+p-3-013-predictive-maintenance-run-step-2236173904: OK
+p-3-013-predictive-maintenance-run-step-2236173904: time=2026-07-15T14:24:15.218Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-013-predictive-maintenance-run-step-2236173904: time=2026-07-15T14:24:15.218Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-013-predictive-maintenance-run-step-1856318424: time=2026-07-15T14:24:24.245Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-013-predictive-maintenance-run-step-1856318424: STEP 4: EDA
+p-3-013-predictive-maintenance-run-step-1856318424:    10 numerical features
+p-3-013-predictive-maintenance-run-step-1856318424: OK
+p-3-013-predictive-maintenance-run-step-1856318424: time=2026-07-15T14:24:27.247Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-3-013-predictive-maintenance-run-step-1856318424: time=2026-07-15T14:24:27.247Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-013-predictive-maintenance-run-step-3678672664: time=2026-07-15T14:24:33.257Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-3-013-predictive-maintenance-run-step-3678672664: /pipeline/scripts/step_05_model.py:27: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-3-013-predictive-maintenance-run-step-3678672664: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-3-013-predictive-maintenance-run-step-3678672664:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-3-013-predictive-maintenance-run-step-3678672664: STEP 5: Model Training
+p-3-013-predictive-maintenance-run-step-3678672664:    Target: is_failure (rate: 0.1%)
+p-3-013-predictive-maintenance-run-step-3678672664:    ROC-AUC: 0.682, Acc: 99.77%
+p-3-013-predictive-maintenance-run-step-3678672664: time=2026-07-15T14:24:37.268Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-3-013-predictive-maintenance-run-step-3678672664: time=2026-07-15T14:24:37.268Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-013-predictive-maintenance-run-step-1455092208: time=2026-07-15T14:24:44.299Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-013-predictive-maintenance-run-step-1455092208: STEP 6: Final Report
+p-3-013-predictive-maintenance-run-step-1455092208: ============================================================
+p-3-013-predictive-maintenance-run-step-1455092208:     PREDICTIVE MAINTENANCE — FINAL REPORT
+p-3-013-predictive-maintenance-run-step-1455092208:     2026-07-15 14:24:44
+p-3-013-predictive-maintenance-run-step-1455092208: ============================================================
+p-3-013-predictive-maintenance-run-step-1455092208: 
+p-3-013-predictive-maintenance-run-step-1455092208: Domain: Manufacturing / IoT
+p-3-013-predictive-maintenance-run-step-1455092208: Predicting equipment failure from sensor data (temperature, vibration, pressure) for preventive maintenance.
+p-3-013-predictive-maintenance-run-step-1455092208: 
+p-3-013-predictive-maintenance-run-step-1455092208: This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+p-3-013-predictive-maintenance-run-step-1455092208: Key outputs are in the output/ directory.
+p-3-013-predictive-maintenance-run-step-1455092208: ============================================================
+p-3-013-predictive-maintenance-run-step-1455092208: OK
+p-3-013-predictive-maintenance-run-step-1455092208: time=2026-07-15T14:24:45.300Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-013-predictive-maintenance-run-step-1455092208: time=2026-07-15T14:24:45.300Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

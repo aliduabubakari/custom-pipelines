@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-17-081-transportation-regression-statistical-cleaning",
+        "generateName": "transportation-regression-statistical-cleaning",
+        "namespace": "default",
+        "uid": "ccd366f0-3c27-407d-a54b-b56b377b9f07",
+        "resourceVersion": "27329",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T15:05:50Z",
+        "labels": {
+            "domain": "Transportation",
+            "pipeline": "transportation_regression_statistical_cleaning",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T15:05:50Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T15:07:01Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-17-081-transportation-regression-statistical-cleaning": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-1074832421": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-1609978089": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-1643993444": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-1644684992": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-1711648373": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-1915566333": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-2385880885": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-258181725": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-2717908155": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-2784724441": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-2785165726": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-17-081-transportation-regression-statistical-cleaning-389008009": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/transportation_regression_statistical_cleaning:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T15:05:50Z",
+        "finishedAt": "2026-07-15T15:07:01Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-17-081-transportation-regression-statistical-cleaning": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning",
+                "name": "p-17-081-transportation-regression-statistical-cleaning",
+                "displayName": "p-17-081-transportation-regression-statistical-cleaning",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T15:05:50Z",
+                "finishedAt": "2026-07-15T15:07:01Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 70
+                },
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-1711648373"
+                ],
+                "outboundNodes": [
+                    "p-17-081-transportation-regression-statistical-cleaning-1915566333"
+                ]
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-1074832421": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-1074832421",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:06:40Z",
+                "finishedAt": "2026-07-15T15:06:46Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 20
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-1643993444"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-1609978089": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-1609978089",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:06:20Z",
+                "finishedAt": "2026-07-15T15:06:24Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-2785165726"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-1643993444": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-1643993444",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:06:50Z",
+                "finishedAt": "2026-07-15T15:07:01Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-1915566333"
+                ]
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-1644684992": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-1644684992",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:06:10Z",
+                "finishedAt": "2026-07-15T15:06:20Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 63
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-258181725"
+                ]
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-1711648373": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-1711648373",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:05:50Z",
+                "finishedAt": "2026-07-15T15:06:10Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 70
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-2385880885"
+                ]
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-1915566333": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-1915566333",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:06:50Z",
+                "finishedAt": "2026-07-15T15:06:55Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-2385880885": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-2385880885",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:05:50Z",
+                "finishedAt": "2026-07-15T15:06:00Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-1644684992"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-258181725": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-258181725",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:06:10Z",
+                "finishedAt": "2026-07-15T15:06:14Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-2717908155"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-2717908155": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-2717908155",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:06:20Z",
+                "finishedAt": "2026-07-15T15:06:30Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 55
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-1609978089"
+                ]
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-2784724441": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-2784724441",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:06:40Z",
+                "finishedAt": "2026-07-15T15:06:50Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 28
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-1074832421"
+                ]
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-2785165726": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-2785165726",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:06:30Z",
+                "finishedAt": "2026-07-15T15:06:40Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 47
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-389008009"
+                ]
+            },
+            "p-17-081-transportation-regression-statistical-cleaning-389008009": {
+                "id": "p-17-081-transportation-regression-statistical-cleaning-389008009",
+                "name": "p-17-081-transportation-regression-statistical-cleaning[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-17-081-transportation-regression-statistical-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-17-081-transportation-regression-statistical-cleaning",
+                "startedAt": "2026-07-15T15:06:30Z",
+                "finishedAt": "2026-07-15T15:06:36Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-17-081-transportation-regression-statistical-cleaning-2784724441"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 2,
+            "memory": 70
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

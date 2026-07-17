@@ -1,0 +1,73 @@
+p-12-057-transportation-cleaning-integration-run-step-2825561162: time=2026-07-15T14:51:08.176Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-12-057-transportation-cleaning-integration-run-step-2825561162: STEP 1: Load & Profile — Transportation | Techniques: cleaning, integration
+p-12-057-transportation-cleaning-integration-run-step-2825561162:    Data: 612 rows x 11 cols
+p-12-057-transportation-cleaning-integration-run-step-2825561162:    Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+p-12-057-transportation-cleaning-integration-run-step-2825561162:    departure_hour: mean=11.22, std=6.64
+p-12-057-transportation-cleaning-integration-run-step-2825561162:    distance_km: mean=22.56, std=13.13
+p-12-057-transportation-cleaning-integration-run-step-2825561162:    passengers: mean=29.78, std=5.40
+p-12-057-transportation-cleaning-integration-run-step-2825561162:    fare_amount: mean=7.67, std=3.89
+p-12-057-transportation-cleaning-integration-run-step-2825561162: OK
+p-12-057-transportation-cleaning-integration-run-step-2825561162: time=2026-07-15T14:51:10.178Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-057-transportation-cleaning-integration-run-step-2825561162: time=2026-07-15T14:51:10.178Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-12-057-transportation-cleaning-integration-run-step-3971656190: time=2026-07-15T14:51:22.394Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-12-057-transportation-cleaning-integration-run-step-3971656190: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-12-057-transportation-cleaning-integration-run-step-3971656190: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-12-057-transportation-cleaning-integration-run-step-3971656190:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-12-057-transportation-cleaning-integration-run-step-3971656190: STEP 2: Clean & Standardize
+p-12-057-transportation-cleaning-integration-run-step-3971656190:    Nulls: 0 → 0
+p-12-057-transportation-cleaning-integration-run-step-3971656190: OK
+p-12-057-transportation-cleaning-integration-run-step-3971656190: time=2026-07-15T14:51:23.395Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-057-transportation-cleaning-integration-run-step-3971656190: time=2026-07-15T14:51:23.395Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-12-057-transportation-cleaning-integration-run-step-814027890: time=2026-07-15T14:51:32.371Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-12-057-transportation-cleaning-integration-run-step-814027890: STEP 3: Feature Engineering
+p-12-057-transportation-cleaning-integration-run-step-814027890:    Created: 3 features
+p-12-057-transportation-cleaning-integration-run-step-814027890:    14 columns
+p-12-057-transportation-cleaning-integration-run-step-814027890: OK
+p-12-057-transportation-cleaning-integration-run-step-814027890: time=2026-07-15T14:51:33.371Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-057-transportation-cleaning-integration-run-step-814027890: time=2026-07-15T14:51:33.371Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-12-057-transportation-cleaning-integration-run-step-856039038: time=2026-07-15T14:51:42.643Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-12-057-transportation-cleaning-integration-run-step-856039038: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-12-057-transportation-cleaning-integration-run-step-856039038: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-12-057-transportation-cleaning-integration-run-step-856039038:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-12-057-transportation-cleaning-integration-run-step-856039038: STEP 4: EDA & Visualization
+p-12-057-transportation-cleaning-integration-run-step-856039038:    7 numerical, 4 categorical features
+p-12-057-transportation-cleaning-integration-run-step-856039038: OK
+p-12-057-transportation-cleaning-integration-run-step-856039038: time=2026-07-15T14:51:45.644Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-057-transportation-cleaning-integration-run-step-856039038: time=2026-07-15T14:51:45.644Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-12-057-transportation-cleaning-integration-run-step-2241177770: time=2026-07-15T14:51:52.711Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-12-057-transportation-cleaning-integration-run-step-2241177770: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-12-057-transportation-cleaning-integration-run-step-2241177770: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-12-057-transportation-cleaning-integration-run-step-2241177770:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-12-057-transportation-cleaning-integration-run-step-2241177770: STEP 5: Model Training — cleaning, integration
+p-12-057-transportation-cleaning-integration-run-step-2241177770:    Accuracy: 0.642
+p-12-057-transportation-cleaning-integration-run-step-2241177770:    Model saved
+p-12-057-transportation-cleaning-integration-run-step-2241177770: time=2026-07-15T14:51:55.713Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-057-transportation-cleaning-integration-run-step-2241177770: time=2026-07-15T14:51:55.713Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-12-057-transportation-cleaning-integration-run-step-3196003590: time=2026-07-15T14:52:01.568Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-12-057-transportation-cleaning-integration-run-step-3196003590: STEP 6: Final Report
+p-12-057-transportation-cleaning-integration-run-step-3196003590: ======================================================================
+p-12-057-transportation-cleaning-integration-run-step-3196003590:     TRANSPORTATION PIPELINE: CLEANING, INTEGRATION
+p-12-057-transportation-cleaning-integration-run-step-3196003590:     2026-07-15 14:52:01
+p-12-057-transportation-cleaning-integration-run-step-3196003590: ======================================================================
+p-12-057-transportation-cleaning-integration-run-step-3196003590: 
+p-12-057-transportation-cleaning-integration-run-step-3196003590: Domain: Transportation
+p-12-057-transportation-cleaning-integration-run-step-3196003590: Techniques Applied: cleaning, integration
+p-12-057-transportation-cleaning-integration-run-step-3196003590: 
+p-12-057-transportation-cleaning-integration-run-step-3196003590: Pipeline Steps:
+p-12-057-transportation-cleaning-integration-run-step-3196003590:   1. Data Loading & Profiling
+p-12-057-transportation-cleaning-integration-run-step-3196003590:   2. Data Cleaning & Standardization
+p-12-057-transportation-cleaning-integration-run-step-3196003590:   3. Feature Engineering
+p-12-057-transportation-cleaning-integration-run-step-3196003590:   4. Exploratory Data Analysis & Visualization
+p-12-057-transportation-cleaning-integration-run-step-3196003590:   5. Model Training & Evaluation
+p-12-057-transportation-cleaning-integration-run-step-3196003590:   6. Final Synthesis & Business Recommendations
+p-12-057-transportation-cleaning-integration-run-step-3196003590: 
+p-12-057-transportation-cleaning-integration-run-step-3196003590: Key outputs are available in the output/ directory.
+p-12-057-transportation-cleaning-integration-run-step-3196003590: 
+p-12-057-transportation-cleaning-integration-run-step-3196003590: Recommendations:
+p-12-057-transportation-cleaning-integration-run-step-3196003590:   • Monitor model performance monthly
+p-12-057-transportation-cleaning-integration-run-step-3196003590:   • Reassess feature importance quarterly
+p-12-057-transportation-cleaning-integration-run-step-3196003590:   • Retrain models with fresh data biannually
+p-12-057-transportation-cleaning-integration-run-step-3196003590: ======================================================================
+p-12-057-transportation-cleaning-integration-run-step-3196003590: OK
+p-12-057-transportation-cleaning-integration-run-step-3196003590: time=2026-07-15T14:52:02.569Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-057-transportation-cleaning-integration-run-step-3196003590: time=2026-07-15T14:52:02.569Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

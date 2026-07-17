@@ -1,0 +1,73 @@
+p-16-079-transportation-regression-run-step-997766309: time=2026-07-15T15:02:46.364Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-16-079-transportation-regression-run-step-997766309: STEP 1: Load & Profile — Transportation | Techniques: regression
+p-16-079-transportation-regression-run-step-997766309:    Data: 766 rows x 13 cols
+p-16-079-transportation-regression-run-step-997766309:    Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+p-16-079-transportation-regression-run-step-997766309:    departure_hour: mean=11.21, std=6.62
+p-16-079-transportation-regression-run-step-997766309:    distance_km: mean=22.30, std=13.16
+p-16-079-transportation-regression-run-step-997766309:    passengers: mean=29.71, std=5.54
+p-16-079-transportation-regression-run-step-997766309:    fare_amount: mean=8.29, std=3.96
+p-16-079-transportation-regression-run-step-997766309: OK
+p-16-079-transportation-regression-run-step-997766309: time=2026-07-15T15:02:47.365Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-16-079-transportation-regression-run-step-997766309: time=2026-07-15T15:02:47.365Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-16-079-transportation-regression-run-step-4136473357: time=2026-07-15T15:03:00.305Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-16-079-transportation-regression-run-step-4136473357: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-16-079-transportation-regression-run-step-4136473357: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-16-079-transportation-regression-run-step-4136473357:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-16-079-transportation-regression-run-step-4136473357: STEP 2: Clean & Standardize
+p-16-079-transportation-regression-run-step-4136473357:    Nulls: 0 → 0
+p-16-079-transportation-regression-run-step-4136473357: OK
+p-16-079-transportation-regression-run-step-4136473357: time=2026-07-15T15:03:01.306Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-16-079-transportation-regression-run-step-4136473357: time=2026-07-15T15:03:01.306Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-16-079-transportation-regression-run-step-1190167449: time=2026-07-15T15:03:09.484Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-16-079-transportation-regression-run-step-1190167449: STEP 3: Feature Engineering
+p-16-079-transportation-regression-run-step-1190167449:    Created: 3 features
+p-16-079-transportation-regression-run-step-1190167449:    16 columns
+p-16-079-transportation-regression-run-step-1190167449: OK
+p-16-079-transportation-regression-run-step-1190167449: time=2026-07-15T15:03:10.485Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-16-079-transportation-regression-run-step-1190167449: time=2026-07-15T15:03:10.485Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-16-079-transportation-regression-run-step-3974251065: time=2026-07-15T15:03:19.483Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-16-079-transportation-regression-run-step-3974251065: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-16-079-transportation-regression-run-step-3974251065: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-16-079-transportation-regression-run-step-3974251065:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-16-079-transportation-regression-run-step-3974251065: STEP 4: EDA & Visualization
+p-16-079-transportation-regression-run-step-3974251065:    9 numerical, 4 categorical features
+p-16-079-transportation-regression-run-step-3974251065: OK
+p-16-079-transportation-regression-run-step-3974251065: time=2026-07-15T15:03:22.496Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-16-079-transportation-regression-run-step-3974251065: time=2026-07-15T15:03:22.496Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-16-079-transportation-regression-run-step-3965588693: time=2026-07-15T15:03:29.642Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-16-079-transportation-regression-run-step-3965588693: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-16-079-transportation-regression-run-step-3965588693: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-16-079-transportation-regression-run-step-3965588693:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-16-079-transportation-regression-run-step-3965588693: STEP 5: Model Training — regression
+p-16-079-transportation-regression-run-step-3965588693:    MAE: 8.00, R2: 0.916
+p-16-079-transportation-regression-run-step-3965588693:    Model saved
+p-16-079-transportation-regression-run-step-3965588693: time=2026-07-15T15:03:32.644Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-16-079-transportation-regression-run-step-3965588693: time=2026-07-15T15:03:32.644Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-16-079-transportation-regression-run-step-609173165: time=2026-07-15T15:03:39.692Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-16-079-transportation-regression-run-step-609173165: STEP 6: Final Report
+p-16-079-transportation-regression-run-step-609173165: ======================================================================
+p-16-079-transportation-regression-run-step-609173165:     TRANSPORTATION PIPELINE: REGRESSION
+p-16-079-transportation-regression-run-step-609173165:     2026-07-15 15:03:39
+p-16-079-transportation-regression-run-step-609173165: ======================================================================
+p-16-079-transportation-regression-run-step-609173165: 
+p-16-079-transportation-regression-run-step-609173165: Domain: Transportation
+p-16-079-transportation-regression-run-step-609173165: Techniques Applied: regression
+p-16-079-transportation-regression-run-step-609173165: 
+p-16-079-transportation-regression-run-step-609173165: Pipeline Steps:
+p-16-079-transportation-regression-run-step-609173165:   1. Data Loading & Profiling
+p-16-079-transportation-regression-run-step-609173165:   2. Data Cleaning & Standardization
+p-16-079-transportation-regression-run-step-609173165:   3. Feature Engineering
+p-16-079-transportation-regression-run-step-609173165:   4. Exploratory Data Analysis & Visualization
+p-16-079-transportation-regression-run-step-609173165:   5. Model Training & Evaluation
+p-16-079-transportation-regression-run-step-609173165:   6. Final Synthesis & Business Recommendations
+p-16-079-transportation-regression-run-step-609173165: 
+p-16-079-transportation-regression-run-step-609173165: Key outputs are available in the output/ directory.
+p-16-079-transportation-regression-run-step-609173165: 
+p-16-079-transportation-regression-run-step-609173165: Recommendations:
+p-16-079-transportation-regression-run-step-609173165:   • Monitor model performance monthly
+p-16-079-transportation-regression-run-step-609173165:   • Reassess feature importance quarterly
+p-16-079-transportation-regression-run-step-609173165:   • Retrain models with fresh data biannually
+p-16-079-transportation-regression-run-step-609173165: ======================================================================
+p-16-079-transportation-regression-run-step-609173165: OK
+p-16-079-transportation-regression-run-step-609173165: time=2026-07-15T15:03:40.693Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-16-079-transportation-regression-run-step-609173165: time=2026-07-15T15:03:40.693Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

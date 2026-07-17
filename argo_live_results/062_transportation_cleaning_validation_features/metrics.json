@@ -1,0 +1,61 @@
+{
+  "pipeline": "062_transportation_cleaning_validation_features",
+  "batch": 13,
+  "workflow": "p-13-062-transportation-cleaning-validation-features",
+  "phase": "Succeeded",
+  "elapsed_s": 0,
+  "pod_duration_s": 34.0,
+  "node_count": 6,
+  "step_count": 6,
+  "steps_succeeded": 6,
+  "steps_failed": 0,
+  "steps": [
+    {
+      "name": "step-03",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-05",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-04",
+      "phase": "Succeeded",
+      "duration_s": 7.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-02",
+      "phase": "Succeeded",
+      "duration_s": 3.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-06",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 10.0,
+      "exit_code": "0",
+      "message": ""
+    }
+  ],
+  "image_tag": "custom-pipelines/transportation_cleaning_validation_features:latest",
+  "started_at": "2026-07-15T14:53:48Z",
+  "finished_at": "2026-07-15T14:54:58Z",
+  "cpu_seconds": 2,
+  "memory_mb_seconds": 72
+}

@@ -1,0 +1,61 @@
+{
+  "pipeline": "024_sports_regression_prediction_statistical",
+  "batch": 5,
+  "workflow": "p-5-024-sports-regression-prediction-statistical",
+  "phase": "Succeeded",
+  "elapsed_s": 0,
+  "pod_duration_s": 38.0,
+  "node_count": 6,
+  "step_count": 6,
+  "steps_succeeded": 6,
+  "steps_failed": 0,
+  "steps": [
+    {
+      "name": "step-03",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-04",
+      "phase": "Succeeded",
+      "duration_s": 7.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-02",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-05",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-06",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 11.0,
+      "exit_code": "0",
+      "message": ""
+    }
+  ],
+  "image_tag": "custom-pipelines/sports_regression_prediction_statistical:latest",
+  "started_at": "2026-07-15T14:30:08Z",
+  "finished_at": "2026-07-15T14:31:19Z",
+  "cpu_seconds": 2,
+  "memory_mb_seconds": 66
+}

@@ -1,0 +1,71 @@
+p-3-011-hr-visualization-integration-validation-run-step-2950184317: time=2026-07-15T14:23:47.425Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-011-hr-visualization-integration-validation-run-step-2950184317: STEP 1: Data Loading & Profiling — HR Workforce Visualization & Data Validation
+p-3-011-hr-visualization-integration-validation-run-step-2950184317:    HR data: 500 employees, 9 columns
+p-3-011-hr-visualization-integration-validation-run-step-2950184317:    Departments: 6, Status: {'Full-time': 355, 'Contract': 74, 'Part-time': 71}
+p-3-011-hr-visualization-integration-validation-run-step-2950184317:    Avg salary: $74,338, Avg tenure: 12.4 yrs
+p-3-011-hr-visualization-integration-validation-run-step-2950184317: 
+p-3-011-hr-visualization-integration-validation-run-step-2950184317:    Validation: 0 issues found
+p-3-011-hr-visualization-integration-validation-run-step-2950184317:    hr_data: 500 rows x 9 cols
+p-3-011-hr-visualization-integration-validation-run-step-2950184317: OK
+p-3-011-hr-visualization-integration-validation-run-step-2950184317: time=2026-07-15T14:23:48.425Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-011-hr-visualization-integration-validation-run-step-2950184317: time=2026-07-15T14:23:48.425Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-011-hr-visualization-integration-validation-run-step-1990881317: time=2026-07-15T14:24:04.075Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-011-hr-visualization-integration-validation-run-step-1990881317: /pipeline/scripts/step_02_clean.py:12: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-3-011-hr-visualization-integration-validation-run-step-1990881317: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-3-011-hr-visualization-integration-validation-run-step-1990881317:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-3-011-hr-visualization-integration-validation-run-step-1990881317: STEP 2: Data Cleaning & Standardization — HR Workforce Visualization & Data Validation
+p-3-011-hr-visualization-integration-validation-run-step-1990881317:    [len(df)] rows saved
+p-3-011-hr-visualization-integration-validation-run-step-1990881317: OK
+p-3-011-hr-visualization-integration-validation-run-step-1990881317: time=2026-07-15T14:24:05.075Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-011-hr-visualization-integration-validation-run-step-1990881317: time=2026-07-15T14:24:05.075Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-011-hr-visualization-integration-validation-run-step-3164785969: time=2026-07-15T14:24:14.129Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-011-hr-visualization-integration-validation-run-step-3164785969: STEP 3: Feature Engineering — HR Workforce Visualization & Data Validation
+p-3-011-hr-visualization-integration-validation-run-step-3164785969:    Created: tenure_group, age_group, bonus_pct
+p-3-011-hr-visualization-integration-validation-run-step-3164785969:    [len(df.columns)] columns
+p-3-011-hr-visualization-integration-validation-run-step-3164785969: OK
+p-3-011-hr-visualization-integration-validation-run-step-3164785969: time=2026-07-15T14:24:15.129Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-011-hr-visualization-integration-validation-run-step-3164785969: time=2026-07-15T14:24:15.129Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-011-hr-visualization-integration-validation-run-step-2980621361: time=2026-07-15T14:24:24.031Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-011-hr-visualization-integration-validation-run-step-2980621361: STEP 4: EDA & Visualization — HR Workforce Visualization & Data Validation
+p-3-011-hr-visualization-integration-validation-run-step-2980621361:    [len(num)] numerical features found
+p-3-011-hr-visualization-integration-validation-run-step-2980621361: OK
+p-3-011-hr-visualization-integration-validation-run-step-2980621361: time=2026-07-15T14:24:27.035Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-011-hr-visualization-integration-validation-run-step-2980621361: time=2026-07-15T14:24:27.035Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-011-hr-visualization-integration-validation-run-step-2433165421: time=2026-07-15T14:24:33.298Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-011-hr-visualization-integration-validation-run-step-2433165421: STEP 5: Statistical Analysis & Model Training — HR Workforce Visualization & Data Validation
+p-3-011-hr-visualization-integration-validation-run-step-2433165421: 
+p-3-011-hr-visualization-integration-validation-run-step-2433165421:    Workforce Clusters:
+p-3-011-hr-visualization-integration-validation-run-step-2433165421:      Cluster 0 (n=133): salary=$60,587, tenure=7.3yr, perf=3.0
+p-3-011-hr-visualization-integration-validation-run-step-2433165421:      Cluster 1 (n=166): salary=$64,840, tenure=7.7yr, perf=2.8
+p-3-011-hr-visualization-integration-validation-run-step-2433165421:      Cluster 2 (n=201): salary=$91,114, tenure=19.6yr, perf=3.0
+p-3-011-hr-visualization-integration-validation-run-step-2433165421: 
+p-3-011-hr-visualization-integration-validation-run-step-2433165421:    High Performer Prediction: ROC-AUC=0.546, Acc=63.00%
+p-3-011-hr-visualization-integration-validation-run-step-2433165421: time=2026-07-15T14:24:36.318Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-3-011-hr-visualization-integration-validation-run-step-2433165421: time=2026-07-15T14:24:36.318Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: time=2026-07-15T14:24:44.270Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: STEP 6: Final Report — HR Workforce Visualization & Data Validation
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: ======================================================================
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:     HR Workforce Visualization & Data Validation — FINAL SYNTHESIS REPORT
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:     2026-07-15 14:24:44
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: ======================================================================
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: 
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: Domain: HR Analytics
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: 
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: This pipeline executed a complete analysis workflow:
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:   1. Data Loading & Profiling — Ingested and profiled all data sources
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:   2. Data Cleaning & Standardization — Handled missing values and outliers
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:   3. Feature Engineering — Created domain-specific derived features
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:   4. Exploratory Data Analysis — Generated visualizations and correlation analysis
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:   5. Model Training — Trained and evaluated multiple ML models
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:   6. Final Report — Synthesized findings and recommendations
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: 
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: Key findings and model metrics are available in the output/ directory.
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: 
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: Monitoring Recommendations:
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:   • Track model performance monthly
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:   • Monitor feature drift quarterly
+p-3-011-hr-visualization-integration-validation-run-step-2405207973:   • Retrain with new data biannually
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: ======================================================================
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: OK
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: time=2026-07-15T14:24:45.270Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-3-011-hr-visualization-integration-validation-run-step-2405207973: time=2026-07-15T14:24:45.270Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

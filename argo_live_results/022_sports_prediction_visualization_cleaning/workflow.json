@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-5-022-sports-prediction-visualization-cleaning",
+        "generateName": "sports-prediction-visualization-cleaning",
+        "namespace": "default",
+        "uid": "b0b6011e-8cf5-4ff2-a728-4da1b001fb8c",
+        "resourceVersion": "11170",
+        "generation": 8,
+        "creationTimestamp": "2026-07-15T14:30:08Z",
+        "labels": {
+            "domain": "Sports",
+            "pipeline": "sports_prediction_visualization_cleaning",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:30:08Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:31:08Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-5-022-sports-prediction-visualization-cleaning": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-2443512969": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-2614397633": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-2953950505": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-2954538885": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-3382064737": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-3770657881": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-3960210287": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-3960754740": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-3961343120": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-4027467858": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-718085189": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-5-022-sports-prediction-visualization-cleaning-874098637": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/sports_prediction_visualization_cleaning:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:30:08Z",
+        "finishedAt": "2026-07-15T14:31:08Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-5-022-sports-prediction-visualization-cleaning": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning",
+                "name": "p-5-022-sports-prediction-visualization-cleaning",
+                "displayName": "p-5-022-sports-prediction-visualization-cleaning",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:30:08Z",
+                "finishedAt": "2026-07-15T14:31:08Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 67
+                },
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-2953950505"
+                ],
+                "outboundNodes": [
+                    "p-5-022-sports-prediction-visualization-cleaning-2614397633"
+                ]
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-2443512969": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-2443512969",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:08Z",
+                "finishedAt": "2026-07-15T14:30:16Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-3960754740"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-2614397633": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-2614397633",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:58Z",
+                "finishedAt": "2026-07-15T14:31:03Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-2953950505": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-2953950505",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:08Z",
+                "finishedAt": "2026-07-15T14:30:18Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 67
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-2443512969"
+                ]
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-2954538885": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-2954538885",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:48Z",
+                "finishedAt": "2026-07-15T14:30:58Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 27
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-3770657881"
+                ]
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-3382064737": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-3382064737",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:18Z",
+                "finishedAt": "2026-07-15T14:30:22Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-3960210287"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-3770657881": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-3770657881",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:48Z",
+                "finishedAt": "2026-07-15T14:30:55Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-3961343120"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-3960210287": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-3960210287",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:28Z",
+                "finishedAt": "2026-07-15T14:30:38Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 53
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-874098637"
+                ]
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-3960754740": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-3960754740",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:18Z",
+                "finishedAt": "2026-07-15T14:30:28Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 60
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-3382064737"
+                ]
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-3961343120": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-3961343120",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:58Z",
+                "finishedAt": "2026-07-15T14:31:08Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-2614397633"
+                ]
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-4027467858": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-4027467858",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:38Z",
+                "finishedAt": "2026-07-15T14:30:48Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 46
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-718085189"
+                ]
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-718085189": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-718085189",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:38Z",
+                "finishedAt": "2026-07-15T14:30:45Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-2954538885"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-5-022-sports-prediction-visualization-cleaning-874098637": {
+                "id": "p-5-022-sports-prediction-visualization-cleaning-874098637",
+                "name": "p-5-022-sports-prediction-visualization-cleaning[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-5-022-sports-prediction-visualization-cleaning",
+                "phase": "Succeeded",
+                "boundaryID": "p-5-022-sports-prediction-visualization-cleaning",
+                "startedAt": "2026-07-15T14:30:28Z",
+                "finishedAt": "2026-07-15T14:30:33Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-5-022-sports-prediction-visualization-cleaning-4027467858"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 2,
+            "memory": 67
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

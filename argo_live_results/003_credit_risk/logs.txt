@@ -1,0 +1,243 @@
+p-1-003-credit-risk-run-step-532894171: time=2026-07-15T14:16:18.136Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-003-credit-risk-run-step-532894171: ============================================================
+p-1-003-credit-risk-run-step-532894171: STEP 1: Data Loading & Profiling
+p-1-003-credit-risk-run-step-532894171: ============================================================
+p-1-003-credit-risk-run-step-532894171: 
+p-1-003-credit-risk-run-step-532894171: ────────────────────────────────────────
+p-1-003-credit-risk-run-step-532894171: 📊 APPLICATIONS: 500 rows × 11 cols
+p-1-003-credit-risk-run-step-532894171:    Columns: application_id, annual_income, loan_amount, loan_purpose, home_ownership...
+p-1-003-credit-risk-run-step-532894171:    Nulls: 0 columns have nulls
+p-1-003-credit-risk-run-step-532894171: 
+p-1-003-credit-risk-run-step-532894171: ────────────────────────────────────────
+p-1-003-credit-risk-run-step-532894171: 📊 CREDIT_HISTORY: 5564 rows × 6 cols
+p-1-003-credit-risk-run-step-532894171:    Columns: application_id, report_date, account_status, balance, credit_limit...
+p-1-003-credit-risk-run-step-532894171:    Nulls: 0 columns have nulls
+p-1-003-credit-risk-run-step-532894171: 
+p-1-003-credit-risk-run-step-532894171: ────────────────────────────────────────
+p-1-003-credit-risk-run-step-532894171: 📊 BUREAU_DATA: 500 rows × 10 cols
+p-1-003-credit-risk-run-step-532894171:    Columns: application_id, fico_score, total_accounts, delinquencies_2yrs, inquiries_6mo...
+p-1-003-credit-risk-run-step-532894171:    Nulls: 0 columns have nulls
+p-1-003-credit-risk-run-step-532894171: 
+p-1-003-credit-risk-run-step-532894171: 🎯 Target variable: 'default_flag' (default rate: 33.4%)
+p-1-003-credit-risk-run-step-532894171: 
+p-1-003-credit-risk-run-step-532894171: ✅ Step 1 complete — profiling saved + initial visualizations generated
+p-1-003-credit-risk-run-step-532894171: time=2026-07-15T14:16:21.137Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-003-credit-risk-run-step-532894171: time=2026-07-15T14:16:21.137Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-1936924903: time=2026-07-15T14:16:32.297Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-1-003-credit-risk-run-step-1936924903: ============================================================
+p-1-003-credit-risk-run-step-1936924903: STEP 2: Data Merging & Integration
+p-1-003-credit-risk-run-step-1936924903: ============================================================
+p-1-003-credit-risk-run-step-1936924903: 
+p-1-003-credit-risk-run-step-1936924903: 📋 Aggregating 5564 credit history records across 500 applications...
+p-1-003-credit-risk-run-step-1936924903:    After history merge: 500 rows
+p-1-003-credit-risk-run-step-1936924903:    After bureau merge: 500 rows × 30 cols
+p-1-003-credit-risk-run-step-1936924903: 
+p-1-003-credit-risk-run-step-1936924903: ✅ Step 2 complete — merged dataset: 500 rows × 30 cols
+p-1-003-credit-risk-run-step-1936924903: time=2026-07-15T14:16:33.298Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-003-credit-risk-run-step-1936924903: time=2026-07-15T14:16:33.298Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-656598759: time=2026-07-15T14:16:42.443Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-003-credit-risk-run-step-656598759: /pipeline/scripts/step_03_data-cleaning-standardization.py:51: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-1-003-credit-risk-run-step-656598759: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-1-003-credit-risk-run-step-656598759:   for col in df.select_dtypes(include=['object']).columns:
+p-1-003-credit-risk-run-step-656598759: ============================================================
+p-1-003-credit-risk-run-step-656598759: STEP 3: Data Cleaning & Standardization
+p-1-003-credit-risk-run-step-656598759: ============================================================
+p-1-003-credit-risk-run-step-656598759: 
+p-1-003-credit-risk-run-step-656598759: 📊 Loaded: 500 rows × 30 cols
+p-1-003-credit-risk-run-step-656598759: 
+p-1-003-credit-risk-run-step-656598759: 🧹 Nulls resolved: 0 → 0
+p-1-003-credit-risk-run-step-656598759:    Imputed numerical: 0 cols
+p-1-003-credit-risk-run-step-656598759:    Imputed categorical: 0 cols
+p-1-003-credit-risk-run-step-656598759:    Outlier-capped: 12 cols
+p-1-003-credit-risk-run-step-656598759: 
+p-1-003-credit-risk-run-step-656598759: ✅ Step 3 complete — cleaned data saved
+p-1-003-credit-risk-run-step-656598759: time=2026-07-15T14:16:43.444Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-003-credit-risk-run-step-656598759: time=2026-07-15T14:16:43.444Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-3229764547: time=2026-07-15T14:16:53.384Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-003-credit-risk-run-step-3229764547: ============================================================
+p-1-003-credit-risk-run-step-3229764547: STEP 4: Data Validation & Compliance Check
+p-1-003-credit-risk-run-step-3229764547: ============================================================
+p-1-003-credit-risk-run-step-3229764547: 
+p-1-003-credit-risk-run-step-3229764547: 📋 14 checks run: 14 ✅ passed, 0 ❌ failed
+p-1-003-credit-risk-run-step-3229764547:    Overall Status: PASS
+p-1-003-credit-risk-run-step-3229764547: 
+p-1-003-credit-risk-run-step-3229764547: ✅ Step 4 complete — compliance report saved
+p-1-003-credit-risk-run-step-3229764547: time=2026-07-15T14:16:54.384Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-3229764547: time=2026-07-15T14:16:54.384Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-003-credit-risk-run-step-3638433443: time=2026-07-15T14:17:02.760Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-003-credit-risk-run-step-3638433443: ============================================================
+p-1-003-credit-risk-run-step-3638433443: STEP 5: Feature Engineering
+p-1-003-credit-risk-run-step-3638433443: ============================================================
+p-1-003-credit-risk-run-step-3638433443: 
+p-1-003-credit-risk-run-step-3638433443: 🔧 Created 10 new features:
+p-1-003-credit-risk-run-step-3638433443:    ✓ DTI_category (4 bands)
+p-1-003-credit-risk-run-step-3638433443:    ✓ FICO_band (5 tiers)
+p-1-003-credit-risk-run-step-3638433443:    ✓ address_stability (months_at_address / age)
+p-1-003-credit-risk-run-step-3638433443:    ✓ utilization_normalized (0–1.5 scale)
+p-1-003-credit-risk-run-step-3638433443:    ✓ inquiry_velocity (inquiries/month)
+p-1-003-credit-risk-run-step-3638433443:    ✓ account_age_ratio
+p-1-003-credit-risk-run-step-3638433443:    ✓ payment_consistency (100 - delinquency%)
+p-1-003-credit-risk-run-step-3638433443:    ✓ income_loan_ratio
+p-1-003-credit-risk-run-step-3638433443:    ✓ loan_size (4 tiers)
+p-1-003-credit-risk-run-step-3638433443:    ✓ age_group (5 tiers)
+p-1-003-credit-risk-run-step-3638433443: 
+p-1-003-credit-risk-run-step-3638433443: ✅ Step 5 complete — 40 total columns (500 rows)
+p-1-003-credit-risk-run-step-3638433443: time=2026-07-15T14:17:03.760Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-003-credit-risk-run-step-3638433443: time=2026-07-15T14:17:03.760Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-3219823047: time=2026-07-15T14:17:12.564Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-003-credit-risk-run-step-3219823047: ============================================================
+p-1-003-credit-risk-run-step-3219823047: STEP 6: Exploratory Data Analysis
+p-1-003-credit-risk-run-step-3219823047: ============================================================
+p-1-003-credit-risk-run-step-3219823047: 
+p-1-003-credit-risk-run-step-3219823047: 📊 Default rate by FICO_band:
+p-1-003-credit-risk-run-step-3219823047:    Poor: 40.9% (n=66)
+p-1-003-credit-risk-run-step-3219823047:    Fair: 40.5% (n=173)
+p-1-003-credit-risk-run-step-3219823047:    Good: 31.9% (n=135)
+p-1-003-credit-risk-run-step-3219823047:    Very Good: 19.5% (n=82)
+p-1-003-credit-risk-run-step-3219823047:    Exceptional: 25.0% (n=44)
+p-1-003-credit-risk-run-step-3219823047: 
+p-1-003-credit-risk-run-step-3219823047: 📊 Default rate by DTI_category:
+p-1-003-credit-risk-run-step-3219823047:    Low: 30.1% (n=176)
+p-1-003-credit-risk-run-step-3219823047:    Medium: 29.1% (n=189)
+p-1-003-credit-risk-run-step-3219823047:    High: 43.3% (n=104)
+p-1-003-credit-risk-run-step-3219823047:    Very High: 45.2% (n=31)
+p-1-003-credit-risk-run-step-3219823047: 
+p-1-003-credit-risk-run-step-3219823047: 📊 Default rate by loan_purpose:
+p-1-003-credit-risk-run-step-3219823047:    Business: 40.0% (n=70)
+p-1-003-credit-risk-run-step-3219823047:    Car Purchase: 31.0% (n=71)
+p-1-003-credit-risk-run-step-3219823047:    Debt Consolidation: 38.9% (n=72)
+p-1-003-credit-risk-run-step-3219823047:    Education: 36.1% (n=72)
+p-1-003-credit-risk-run-step-3219823047:    Home Improvement: 20.5% (n=73)
+p-1-003-credit-risk-run-step-3219823047:    Medical: 43.4% (n=76)
+p-1-003-credit-risk-run-step-3219823047:    Vacation: 22.7% (n=66)
+p-1-003-credit-risk-run-step-3219823047: 
+p-1-003-credit-risk-run-step-3219823047: 📊 Default rate by home_ownership:
+p-1-003-credit-risk-run-step-3219823047:    Mortgage: 30.4% (n=224)
+p-1-003-credit-risk-run-step-3219823047:    Own: 36.6% (n=82)
+p-1-003-credit-risk-run-step-3219823047:    Rent: 35.6% (n=194)
+p-1-003-credit-risk-run-step-3219823047: 
+p-1-003-credit-risk-run-step-3219823047: 📊 Default rate by loan_size:
+p-1-003-credit-risk-run-step-3219823047:    Micro: 19.9% (n=226)
+p-1-003-credit-risk-run-step-3219823047:    Small: 46.5% (n=187)
+p-1-003-credit-risk-run-step-3219823047:    Medium: 40.2% (n=87)
+p-1-003-credit-risk-run-step-3219823047:    Large: nan% (n=0)
+p-1-003-credit-risk-run-step-3219823047: 
+p-1-003-credit-risk-run-step-3219823047: 📊 Default rate by age_group:
+p-1-003-credit-risk-run-step-3219823047:    18-25: 36.7% (n=49)
+p-1-003-credit-risk-run-step-3219823047:    26-35: 28.1% (n=89)
+p-1-003-credit-risk-run-step-3219823047:    36-50: 38.0% (n=142)
+p-1-003-credit-risk-run-step-3219823047:    51-65: 28.6% (n=126)
+p-1-003-credit-risk-run-step-3219823047:    65+: 36.2% (n=94)
+p-1-003-credit-risk-run-step-3219823047: 
+p-1-003-credit-risk-run-step-3219823047: 🔗 Top correlations with default_flag:
+p-1-003-credit-risk-run-step-3219823047:    income_loan_ratio: -0.322
+p-1-003-credit-risk-run-step-3219823047:    loan_amount: +0.221
+p-1-003-credit-risk-run-step-3219823047:    public_records: +0.197
+p-1-003-credit-risk-run-step-3219823047:    fico_score: -0.169
+p-1-003-credit-risk-run-step-3219823047:    dti_ratio: +0.129
+p-1-003-credit-risk-run-step-3219823047:    annual_income: -0.105
+p-1-003-credit-risk-run-step-3219823047:    avg_balance: +0.099
+p-1-003-credit-risk-run-step-3219823047:    max_balance: +0.097
+p-1-003-credit-risk-run-step-3219823047: 
+p-1-003-credit-risk-run-step-3219823047: ⚠️  High multicollinearity pairs (|r| > 0.8):
+p-1-003-credit-risk-run-step-3219823047:    inquiries_6mo ↔ inquiry_velocity: 1.0
+p-1-003-credit-risk-run-step-3219823047:    revolving_utilization ↔ utilization_normalized: 1.0
+p-1-003-credit-risk-run-step-3219823047: 
+p-1-003-credit-risk-run-step-3219823047: ✅ Step 6 complete — EDA results saved
+p-1-003-credit-risk-run-step-3219823047: time=2026-07-15T14:17:15.567Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-3219823047: time=2026-07-15T14:17:15.567Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-003-credit-risk-run-step-4190605911: time=2026-07-15T14:17:22.626Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-003-credit-risk-run-step-4190605911: ============================================================
+p-1-003-credit-risk-run-step-4190605911: STEP 7: Data Visualization — Risk Profiles
+p-1-003-credit-risk-run-step-4190605911: ============================================================
+p-1-003-credit-risk-run-step-4190605911: 📊 Risk profile dashboard generated with 4 panels
+p-1-003-credit-risk-run-step-4190605911: ✅ Step 7 complete
+p-1-003-credit-risk-run-step-4190605911: time=2026-07-15T14:17:25.636Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-003-credit-risk-run-step-4190605911: time=2026-07-15T14:17:25.636Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-3149628059: time=2026-07-15T14:17:32.723Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-003-credit-risk-run-step-3149628059: ============================================================
+p-1-003-credit-risk-run-step-3149628059: STEP 8: Data Visualization — Credit Behavior
+p-1-003-credit-risk-run-step-3149628059: ============================================================
+p-1-003-credit-risk-run-step-3149628059: 📊 Credit behavior dashboard generated
+p-1-003-credit-risk-run-step-3149628059: ✅ Step 8 complete
+p-1-003-credit-risk-run-step-3149628059: time=2026-07-15T14:17:34.724Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-003-credit-risk-run-step-3149628059: time=2026-07-15T14:17:34.724Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-2044636555: time=2026-07-15T14:17:42.827Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-003-credit-risk-run-step-2044636555: ============================================================
+p-1-003-credit-risk-run-step-2044636555: STEP 9: Statistical Analysis & Hypothesis Testing
+p-1-003-credit-risk-run-step-2044636555: ============================================================
+p-1-003-credit-risk-run-step-2044636555: 
+p-1-003-credit-risk-run-step-2044636555: 📊 H1: FICO score — t=-3.83, p=0.000147, d=-0.363
+p-1-003-credit-risk-run-step-2044636555:    Default mean: 654 | Non-default: 686
+p-1-003-credit-risk-run-step-2044636555: 
+p-1-003-credit-risk-run-step-2044636555: 📊 H2: DTI > 43 — χ²=1.53, p=0.216091, OR=1.70
+p-1-003-credit-risk-run-step-2044636555: 
+p-1-003-credit-risk-run-step-2044636555: 📊 H3: Employment — z=0.62, p=0.534364
+p-1-003-credit-risk-run-step-2044636555:    Short emp default: 35.0% | Long emp: 32.3%
+p-1-003-credit-risk-run-step-2044636555: 
+p-1-003-credit-risk-run-step-2044636555: ────────────────────────────────────────
+p-1-003-credit-risk-run-step-2044636555: 📋 Results: 1/3 hypotheses significant at α=0.05
+p-1-003-credit-risk-run-step-2044636555: 
+p-1-003-credit-risk-run-step-2044636555: ✅ Step 9 complete — statistical test results saved
+p-1-003-credit-risk-run-step-2044636555: time=2026-07-15T14:17:44.828Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-003-credit-risk-run-step-2044636555: time=2026-07-15T14:17:44.828Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-399384828: time=2026-07-15T14:17:52.872Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-003-credit-risk-run-step-399384828: /pipeline/scripts/step_10_data-preparation-for-modeling.py:31: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-1-003-credit-risk-run-step-399384828: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-1-003-credit-risk-run-step-399384828:   cat_cols = X.select_dtypes(include=['object', 'category']).columns.tolist()
+p-1-003-credit-risk-run-step-399384828: ============================================================
+p-1-003-credit-risk-run-step-399384828: STEP 10: Data Preparation for Modeling
+p-1-003-credit-risk-run-step-399384828: ============================================================
+p-1-003-credit-risk-run-step-399384828: 
+p-1-003-credit-risk-run-step-399384828: 🔑 Dropping ID columns: ['application_id']
+p-1-003-credit-risk-run-step-399384828: 
+p-1-003-credit-risk-run-step-399384828: 📊 Features: 30 numerical, 8 categorical
+p-1-003-credit-risk-run-step-399384828:    Numerical: ['annual_income', 'loan_amount', 'dti_ratio', 'age', 'months_at_address', 'n_accounts', 'avg_balance', 'max_balance', 'avg_utilization', 'max_utilization', 'pct_accounts_delinquent', 'has_charge_off', 'has_90plus_delinquency', 'fico_score', 'total_accounts', 'delinquencies_2yrs', 'inquiries_6mo', 'public_records', 'revolving_balance', 'revolving_utilization', 'oldest_account_months', 'credit_age_months', 'address_stability', 'utilization_normalized', 'inquiry_velocity', 'account_age_ratio', 'payment_consistency', 'income_loan_ratio', 'latest_report_date', 'earliest_report_date']
+p-1-003-credit-risk-run-step-399384828:    Categorical: ['loan_purpose', 'home_ownership', 'employment_length', 'state', 'DTI_category', 'FICO_band', 'loan_size', 'age_group']
+p-1-003-credit-risk-run-step-399384828: 
+p-1-003-credit-risk-run-step-399384828: 🔧 After encoding: 77 features (from 38 raw)
+p-1-003-credit-risk-run-step-399384828: 
+p-1-003-credit-risk-run-step-399384828: 📦 Data splits: Train=350 | Val=75 | Test=75
+p-1-003-credit-risk-run-step-399384828:    Train default rate: 33.4%
+p-1-003-credit-risk-run-step-399384828:    Val default rate: 33.3%
+p-1-003-credit-risk-run-step-399384828:    Test default rate: 33.3%
+p-1-003-credit-risk-run-step-399384828: 
+p-1-003-credit-risk-run-step-399384828: ✅ Step 10 complete — processed data & preprocessor saved
+p-1-003-credit-risk-run-step-399384828: time=2026-07-15T14:17:54.873Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-003-credit-risk-run-step-399384828: time=2026-07-15T14:17:54.873Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-1216684561: time=2026-07-15T14:18:02.841Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-003-credit-risk-run-step-1216684561: ============================================================
+p-1-003-credit-risk-run-step-1216684561: Traceback (most recent call last):
+p-1-003-credit-risk-run-step-1216684561:   File "/pipeline/scripts/step_11_model-training--baseline-models.py", line 128, in <module>
+p-1-003-credit-risk-run-step-1216684561: STEP 11: Model Training — Baseline Models
+p-1-003-credit-risk-run-step-1216684561: ============================================================
+p-1-003-credit-risk-run-step-1216684561: 
+p-1-003-credit-risk-run-step-1216684561: 🔷 Logistic Regression
+p-1-003-credit-risk-run-step-1216684561:    CV ROC-AUC: 0.8159 ± 0.0245
+p-1-003-credit-risk-run-step-1216684561:    Val ROC-AUC: 0.7504, PR-AUC: 0.5933
+p-1-003-credit-risk-run-step-1216684561: 
+p-1-003-credit-risk-run-step-1216684561: 🔷 Random Forest
+p-1-003-credit-risk-run-step-1216684561:    Top features: income_loan_ratio, loan_amount, fico_score
+p-1-003-credit-risk-run-step-1216684561:    CV ROC-AUC: 0.8173 ± 0.0368
+p-1-003-credit-risk-run-step-1216684561:    Val ROC-AUC: 0.6592, PR-AUC: 0.4841
+p-1-003-credit-risk-run-step-1216684561:     main()
+p-1-003-credit-risk-run-step-1216684561:   File "/pipeline/scripts/step_11_model-training--baseline-models.py", line 78, in main
+p-1-003-credit-risk-run-step-1216684561:     import lightgbm as lgb
+p-1-003-credit-risk-run-step-1216684561:   File "/usr/local/lib/python3.12/site-packages/lightgbm/__init__.py", line 11, in <module>
+p-1-003-credit-risk-run-step-1216684561:     from .basic import Booster, Dataset, Sequence, register_logger
+p-1-003-credit-risk-run-step-1216684561:   File "/usr/local/lib/python3.12/site-packages/lightgbm/basic.py", line 9, in <module>
+p-1-003-credit-risk-run-step-1216684561:     from .libpath import _LIB  # isort: skip
+p-1-003-credit-risk-run-step-1216684561:     ^^^^^^^^^^^^^^^^^^^^^^^^^
+p-1-003-credit-risk-run-step-1216684561:   File "/usr/local/lib/python3.12/site-packages/lightgbm/libpath.py", line 49, in <module>
+p-1-003-credit-risk-run-step-1216684561:     _LIB = ctypes.cdll.LoadLibrary(_find_lib_path()[0])
+p-1-003-credit-risk-run-step-1216684561:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+p-1-003-credit-risk-run-step-1216684561:   File "/usr/local/lib/python3.12/ctypes/__init__.py", line 460, in LoadLibrary
+p-1-003-credit-risk-run-step-1216684561:     return self._dlltype(name)
+p-1-003-credit-risk-run-step-1216684561:            ^^^^^^^^^^^^^^^^^^^
+p-1-003-credit-risk-run-step-1216684561:   File "/usr/local/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+p-1-003-credit-risk-run-step-1216684561:     self._handle = _dlopen(self._name, mode)
+p-1-003-credit-risk-run-step-1216684561:                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+p-1-003-credit-risk-run-step-1216684561: OSError: libgomp.so.1: cannot open shared object file: No such file or directory
+p-1-003-credit-risk-run-step-1216684561: time=2026-07-15T14:18:06.843Z level=INFO msg="sub-process exited" argo=true error="exit status 1"
+p-1-003-credit-risk-run-step-1216684561: time=2026-07-15T14:18:06.843Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-003-credit-risk-run-step-1216684561: Error: exit status 1

@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-14-070-transportation-prediction-cleaning-validation",
+        "generateName": "transportation-prediction-cleaning-validation",
+        "namespace": "default",
+        "uid": "4b8bdd9c-3a4d-4047-8cdd-c5c61b8f1d67",
+        "resourceVersion": "23156",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T14:56:37Z",
+        "labels": {
+            "domain": "Transportation",
+            "pipeline": "transportation_prediction_cleaning_validation",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:56:37Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:57:47Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-14-070-transportation-prediction-cleaning-validation": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-1030039850": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-1595492378": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-1754747143": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-1755438691": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-1822004714": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-1822696262": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-3440075070": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-520864818": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-681523980": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-748487361": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-778764766": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-070-transportation-prediction-cleaning-validation-878571526": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/transportation_prediction_cleaning_validation:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:56:37Z",
+        "finishedAt": "2026-07-15T14:57:47Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-14-070-transportation-prediction-cleaning-validation": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation",
+                "name": "p-14-070-transportation-prediction-cleaning-validation",
+                "displayName": "p-14-070-transportation-prediction-cleaning-validation",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:56:37Z",
+                "finishedAt": "2026-07-15T14:57:47Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 75
+                },
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-1822004714"
+                ],
+                "outboundNodes": [
+                    "p-14-070-transportation-prediction-cleaning-validation-1030039850"
+                ]
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-1030039850": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-1030039850",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:57:37Z",
+                "finishedAt": "2026-07-15T14:57:41Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 9
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-1595492378": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-1595492378",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:57:17Z",
+                "finishedAt": "2026-07-15T14:57:22Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 25
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-1822696262"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-1754747143": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-1754747143",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:56:57Z",
+                "finishedAt": "2026-07-15T14:57:07Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 68
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-520864818"
+                ]
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-1755438691": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-1755438691",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:57:37Z",
+                "finishedAt": "2026-07-15T14:57:47Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 9
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-1030039850"
+                ]
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-1822004714": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-1822004714",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:56:37Z",
+                "finishedAt": "2026-07-15T14:56:57Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 75
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-3440075070"
+                ]
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-1822696262": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-1822696262",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:57:27Z",
+                "finishedAt": "2026-07-15T14:57:37Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 29
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-778764766"
+                ]
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-3440075070": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-3440075070",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:56:37Z",
+                "finishedAt": "2026-07-15T14:56:48Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-1754747143"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-520864818": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-520864818",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:56:57Z",
+                "finishedAt": "2026-07-15T14:57:00Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-681523980"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-681523980": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-681523980",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:57:07Z",
+                "finishedAt": "2026-07-15T14:57:17Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 61
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-878571526"
+                ]
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-748487361": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-748487361",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:57:17Z",
+                "finishedAt": "2026-07-15T14:57:27Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 54
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-1595492378"
+                ]
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-778764766": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-778764766",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:57:27Z",
+                "finishedAt": "2026-07-15T14:57:32Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 20
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-1755438691"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-14-070-transportation-prediction-cleaning-validation-878571526": {
+                "id": "p-14-070-transportation-prediction-cleaning-validation-878571526",
+                "name": "p-14-070-transportation-prediction-cleaning-validation[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-070-transportation-prediction-cleaning-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-070-transportation-prediction-cleaning-validation",
+                "startedAt": "2026-07-15T14:57:07Z",
+                "finishedAt": "2026-07-15T14:57:10Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-14-070-transportation-prediction-cleaning-validation-748487361"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 3,
+            "memory": 75
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

@@ -1,0 +1,61 @@
+{
+  "pipeline": "066_transportation_integration_geospatial",
+  "batch": 14,
+  "workflow": "p-14-066-transportation-integration-geospatial",
+  "phase": "Succeeded",
+  "elapsed_s": 70,
+  "pod_duration_s": 36.0,
+  "node_count": 6,
+  "step_count": 6,
+  "steps_succeeded": 6,
+  "steps_failed": 0,
+  "steps": [
+    {
+      "name": "step-02",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-05",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-06",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-04",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-03",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 12.0,
+      "exit_code": "0",
+      "message": ""
+    }
+  ],
+  "image_tag": "custom-pipelines/transportation_integration_geospatial:latest",
+  "started_at": "2026-07-15T14:56:36Z",
+  "finished_at": "2026-07-15T14:57:46Z",
+  "cpu_seconds": 4,
+  "memory_mb_seconds": 77
+}

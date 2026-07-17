@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-16-076-transportation-prediction-visualization-geospatial",
+        "generateName": "transportation-prediction-visualization-geospatial",
+        "namespace": "default",
+        "uid": "db1c6153-da07-4887-b691-a587701d48ef",
+        "resourceVersion": "26005",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T15:02:37Z",
+        "labels": {
+            "domain": "Transportation",
+            "pipeline": "transportation_prediction_visualization_geospatial",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T15:02:37Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T15:03:48Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-16-076-transportation-prediction-visualization-geospatial": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-1206773367": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-1870205811": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-2116742557": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-2448309459": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-2840430359": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-2957484491": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-3122413959": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-3123105507": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-3123546792": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-3189671530": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-3190363078": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-16-076-transportation-prediction-visualization-geospatial-3685104663": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/transportation_prediction_visualization_geospatial:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T15:02:37Z",
+        "finishedAt": "2026-07-15T15:03:48Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-16-076-transportation-prediction-visualization-geospatial": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial",
+                "displayName": "p-16-076-transportation-prediction-visualization-geospatial",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T15:02:37Z",
+                "finishedAt": "2026-07-15T15:03:48Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 67
+                },
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-3123105507"
+                ],
+                "outboundNodes": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-1206773367"
+                ]
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-1206773367": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-1206773367",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:03:37Z",
+                "finishedAt": "2026-07-15T15:03:41Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-1870205811": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-1870205811",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:03:17Z",
+                "finishedAt": "2026-07-15T15:03:23Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-3122413959"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-2116742557": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-2116742557",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:03:07Z",
+                "finishedAt": "2026-07-15T15:03:17Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 53
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-3685104663"
+                ]
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-2448309459": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-2448309459",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:03:27Z",
+                "finishedAt": "2026-07-15T15:03:33Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-3189671530"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-2840430359": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-2840430359",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:02:57Z",
+                "finishedAt": "2026-07-15T15:03:02Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-2116742557"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-2957484491": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-2957484491",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:02:37Z",
+                "finishedAt": "2026-07-15T15:02:47Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-3190363078"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-3122413959": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-3122413959",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:03:27Z",
+                "finishedAt": "2026-07-15T15:03:37Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 27
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-2448309459"
+                ]
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-3123105507": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-3123105507",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:02:37Z",
+                "finishedAt": "2026-07-15T15:02:57Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 67
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-2957484491"
+                ]
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-3123546792": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-3123546792",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:03:17Z",
+                "finishedAt": "2026-07-15T15:03:27Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 46
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-1870205811"
+                ]
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-3189671530": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-3189671530",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:03:37Z",
+                "finishedAt": "2026-07-15T15:03:48Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-1206773367"
+                ]
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-3190363078": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-3190363078",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:02:57Z",
+                "finishedAt": "2026-07-15T15:03:07Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 60
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-2840430359"
+                ]
+            },
+            "p-16-076-transportation-prediction-visualization-geospatial-3685104663": {
+                "id": "p-16-076-transportation-prediction-visualization-geospatial-3685104663",
+                "name": "p-16-076-transportation-prediction-visualization-geospatial[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-16-076-transportation-prediction-visualization-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-16-076-transportation-prediction-visualization-geospatial",
+                "startedAt": "2026-07-15T15:03:07Z",
+                "finishedAt": "2026-07-15T15:03:11Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-16-076-transportation-prediction-visualization-geospatial-3123546792"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 2,
+            "memory": 67
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

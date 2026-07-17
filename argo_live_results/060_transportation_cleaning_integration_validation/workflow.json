@@ -1,0 +1,556 @@
+{
+    "metadata": {
+        "name": "p-12-060-transportation-cleaning-integration-validation",
+        "generateName": "transportation-cleaning-integration-validation",
+        "namespace": "default",
+        "uid": "1d9fa33a-297a-4324-9993-6611f725c406",
+        "resourceVersion": "20046",
+        "generation": 5,
+        "creationTimestamp": "2026-07-15T14:51:00Z",
+        "labels": {
+            "domain": "Transportation",
+            "pipeline": "transportation_cleaning_integration_validation",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Failed"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:51:00Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:51:30Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:message": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-12-060-transportation-cleaning-integration-validation": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:message": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-12-060-transportation-cleaning-integration-validation-3264976200": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:message": {},
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-12-060-transportation-cleaning-integration-validation-3280559788": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-12-060-transportation-cleaning-integration-validation-3347523169": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:message": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-12-060-transportation-cleaning-integration-validation-4232547584": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:persistentVolumeClaims": {},
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/transportation_cleaning_integration_validation:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Failed",
+        "startedAt": "2026-07-15T14:51:00Z",
+        "finishedAt": "2026-07-15T14:51:30Z",
+        "progress": "1/2",
+        "message": "child 'p-12-060-transportation-cleaning-integration-validation-3264976200' failed",
+        "nodes": {
+            "p-12-060-transportation-cleaning-integration-validation": {
+                "id": "p-12-060-transportation-cleaning-integration-validation",
+                "name": "p-12-060-transportation-cleaning-integration-validation",
+                "displayName": "p-12-060-transportation-cleaning-integration-validation",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-12-060-transportation-cleaning-integration-validation",
+                "phase": "Failed",
+                "message": "child 'p-12-060-transportation-cleaning-integration-validation-3264976200' failed",
+                "startedAt": "2026-07-15T14:51:00Z",
+                "finishedAt": "2026-07-15T14:51:30Z",
+                "progress": "1/2",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 15
+                },
+                "children": [
+                    "p-12-060-transportation-cleaning-integration-validation-3280559788"
+                ],
+                "outboundNodes": [
+                    "p-12-060-transportation-cleaning-integration-validation-3264976200"
+                ]
+            },
+            "p-12-060-transportation-cleaning-integration-validation-3264976200": {
+                "id": "p-12-060-transportation-cleaning-integration-validation-3264976200",
+                "name": "p-12-060-transportation-cleaning-integration-validation[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-12-060-transportation-cleaning-integration-validation",
+                "phase": "Failed",
+                "boundaryID": "p-12-060-transportation-cleaning-integration-validation",
+                "message": "main: Error (exit code 134)",
+                "startedAt": "2026-07-15T14:51:20Z",
+                "finishedAt": "2026-07-15T14:51:24Z",
+                "progress": "0/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "134"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-12-060-transportation-cleaning-integration-validation-3280559788": {
+                "id": "p-12-060-transportation-cleaning-integration-validation-3280559788",
+                "name": "p-12-060-transportation-cleaning-integration-validation[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-12-060-transportation-cleaning-integration-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-12-060-transportation-cleaning-integration-validation",
+                "startedAt": "2026-07-15T14:51:00Z",
+                "finishedAt": "2026-07-15T14:51:20Z",
+                "progress": "1/2",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 15
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-12-060-transportation-cleaning-integration-validation-4232547584"
+                ]
+            },
+            "p-12-060-transportation-cleaning-integration-validation-3347523169": {
+                "id": "p-12-060-transportation-cleaning-integration-validation-3347523169",
+                "name": "p-12-060-transportation-cleaning-integration-validation[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-12-060-transportation-cleaning-integration-validation",
+                "phase": "Failed",
+                "boundaryID": "p-12-060-transportation-cleaning-integration-validation",
+                "message": "child 'p-12-060-transportation-cleaning-integration-validation-3264976200' failed",
+                "startedAt": "2026-07-15T14:51:20Z",
+                "finishedAt": "2026-07-15T14:51:30Z",
+                "progress": "0/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-12-060-transportation-cleaning-integration-validation-3264976200"
+                ]
+            },
+            "p-12-060-transportation-cleaning-integration-validation-4232547584": {
+                "id": "p-12-060-transportation-cleaning-integration-validation-4232547584",
+                "name": "p-12-060-transportation-cleaning-integration-validation[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-12-060-transportation-cleaning-integration-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-12-060-transportation-cleaning-integration-validation",
+                "startedAt": "2026-07-15T14:51:00Z",
+                "finishedAt": "2026-07-15T14:51:12Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-12-060-transportation-cleaning-integration-validation-3347523169"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "persistentVolumeClaims": [
+            {
+                "name": "pipeline-output",
+                "persistentVolumeClaim": {
+                    "claimName": "p-12-060-transportation-cleaning-integration-validation-pipeline-output"
+                }
+            }
+        ],
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 0,
+            "memory": 15
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

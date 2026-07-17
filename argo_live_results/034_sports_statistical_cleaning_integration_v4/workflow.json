@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-7-034-sports-statistical-cleaning-integration-v4",
+        "generateName": "sports-statistical-cleaning-integration-v4",
+        "namespace": "default",
+        "uid": "e70f969f-4bc1-41e8-b120-653a5cbc6b98",
+        "resourceVersion": "13956",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T14:36:13Z",
+        "labels": {
+            "domain": "Sports",
+            "pipeline": "sports_statistical_cleaning_integration_v4",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:36:13Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:37:23Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-1114717145": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-2357111749": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-2513125197": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-2549011625": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-2549600005": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-3555271407": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-3555815860": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-3556404240": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-3622528978": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-4082539529": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-4253424193": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-7-034-sports-statistical-cleaning-integration-v4-726124001": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/sports_statistical_cleaning_integration_v4:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:36:13Z",
+        "finishedAt": "2026-07-15T14:37:23Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-7-034-sports-statistical-cleaning-integration-v4": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "displayName": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:36:13Z",
+                "finishedAt": "2026-07-15T14:37:23Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 71
+                },
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-2549011625"
+                ],
+                "outboundNodes": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-4253424193"
+                ]
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-1114717145": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-1114717145",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:37:03Z",
+                "finishedAt": "2026-07-15T14:37:09Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-3556404240"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-2357111749": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-2357111749",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:36:53Z",
+                "finishedAt": "2026-07-15T14:36:59Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-2549600005"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-2513125197": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-2513125197",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:36:43Z",
+                "finishedAt": "2026-07-15T14:36:46Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 12
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-3622528978"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-2549011625": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-2549011625",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:36:13Z",
+                "finishedAt": "2026-07-15T14:36:33Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 71
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-4082539529"
+                ]
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-2549600005": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-2549600005",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:37:03Z",
+                "finishedAt": "2026-07-15T14:37:13Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 26
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-1114717145"
+                ]
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-3555271407": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-3555271407",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:36:43Z",
+                "finishedAt": "2026-07-15T14:36:53Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 57
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-2513125197"
+                ]
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-3555815860": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-3555815860",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:36:33Z",
+                "finishedAt": "2026-07-15T14:36:43Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 64
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-726124001"
+                ]
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-3556404240": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-3556404240",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:37:13Z",
+                "finishedAt": "2026-07-15T14:37:23Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-4253424193"
+                ]
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-3622528978": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-3622528978",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:36:53Z",
+                "finishedAt": "2026-07-15T14:37:03Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 45
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-2357111749"
+                ]
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-4082539529": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-4082539529",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:36:13Z",
+                "finishedAt": "2026-07-15T14:36:23Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-3555815860"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-4253424193": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-4253424193",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:37:13Z",
+                "finishedAt": "2026-07-15T14:37:17Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-7-034-sports-statistical-cleaning-integration-v4-726124001": {
+                "id": "p-7-034-sports-statistical-cleaning-integration-v4-726124001",
+                "name": "p-7-034-sports-statistical-cleaning-integration-v4[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-7-034-sports-statistical-cleaning-integration-v4",
+                "phase": "Succeeded",
+                "boundaryID": "p-7-034-sports-statistical-cleaning-integration-v4",
+                "startedAt": "2026-07-15T14:36:33Z",
+                "finishedAt": "2026-07-15T14:36:37Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-7-034-sports-statistical-cleaning-integration-v4-3555271407"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 3,
+            "memory": 71
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

@@ -1,0 +1,1419 @@
+{
+    "metadata": {
+        "name": "p-1-005-demand-forecasting",
+        "generateName": "demand-forecasting",
+        "namespace": "default",
+        "uid": "5c95176f-996d-4b5b-95bf-0a1ea732d5ba",
+        "resourceVersion": "5912",
+        "generation": 13,
+        "creationTimestamp": "2026-07-15T14:16:09Z",
+        "labels": {
+            "domain": "Supply-Chain",
+            "pipeline": "demand_forecasting",
+            "steps": "10",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:16:09Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:18:00Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-1-005-demand-forecasting": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-1410463059": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-1633586983": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-1849502071": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-1918289833": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-1918731118": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-1918878213": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-235178931": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-2424039815": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-2924549615": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-2925094068": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-2925241163": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-2925682448": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-2990527258": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-2991807186": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-3203001315": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-3278774163": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-3306775503": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-3817162008": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-4208663559": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-005-demand-forecasting-561801023": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_data-loading-profiling.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_data-merging-integration.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_data-cleaning-standardization.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_time-series-decomposition.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_feature-engineering.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_07_exploratory-data-analysis.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-07",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_09_statistical-analysis.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-08",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_11_model-training-forecasting.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-09",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_14_inventory-optimization.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-10",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_15_final-synthesis-report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/demand_forecasting:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:16:09Z",
+        "finishedAt": "2026-07-15T14:18:00Z",
+        "progress": "10/10",
+        "nodes": {
+            "p-1-005-demand-forecasting": {
+                "id": "p-1-005-demand-forecasting",
+                "name": "p-1-005-demand-forecasting",
+                "displayName": "p-1-005-demand-forecasting",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:16:10Z",
+                "finishedAt": "2026-07-15T14:18:00Z",
+                "progress": "10/10",
+                "resourcesDuration": {
+                    "cpu": 6,
+                    "memory": 120
+                },
+                "children": [
+                    "p-1-005-demand-forecasting-2924549615"
+                ],
+                "outboundNodes": [
+                    "p-1-005-demand-forecasting-3817162008"
+                ]
+            },
+            "p-1-005-demand-forecasting-1410463059": {
+                "id": "p-1-005-demand-forecasting-1410463059",
+                "name": "p-1-005-demand-forecasting[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:16:30Z",
+                "finishedAt": "2026-07-15T14:16:34Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_data-merging-integration.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-005-demand-forecasting-1918289833"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-005-demand-forecasting-1633586983": {
+                "id": "p-1-005-demand-forecasting-1633586983",
+                "name": "p-1-005-demand-forecasting[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:16:10Z",
+                "finishedAt": "2026-07-15T14:16:23Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 13
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_data-loading-profiling.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-005-demand-forecasting-2991807186"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-005-demand-forecasting-1849502071": {
+                "id": "p-1-005-demand-forecasting-1849502071",
+                "name": "p-1-005-demand-forecasting[8]",
+                "displayName": "[8]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:40Z",
+                "finishedAt": "2026-07-15T14:17:50Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 20
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-005-demand-forecasting-2424039815"
+                ]
+            },
+            "p-1-005-demand-forecasting-1918289833": {
+                "id": "p-1-005-demand-forecasting-1918289833",
+                "name": "p-1-005-demand-forecasting[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:16:40Z",
+                "finishedAt": "2026-07-15T14:16:50Z",
+                "progress": "8/8",
+                "resourcesDuration": {
+                    "cpu": 5,
+                    "memory": 100
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-005-demand-forecasting-3203001315"
+                ]
+            },
+            "p-1-005-demand-forecasting-1918731118": {
+                "id": "p-1-005-demand-forecasting-1918731118",
+                "name": "p-1-005-demand-forecasting[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:10Z",
+                "finishedAt": "2026-07-15T14:17:20Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 71
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-005-demand-forecasting-3278774163"
+                ]
+            },
+            "p-1-005-demand-forecasting-1918878213": {
+                "id": "p-1-005-demand-forecasting-1918878213",
+                "name": "p-1-005-demand-forecasting[6]",
+                "displayName": "[6]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:20Z",
+                "finishedAt": "2026-07-15T14:17:30Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 58
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-005-demand-forecasting-235178931"
+                ]
+            },
+            "p-1-005-demand-forecasting-235178931": {
+                "id": "p-1-005-demand-forecasting-235178931",
+                "name": "p-1-005-demand-forecasting[6].step-07",
+                "displayName": "step-07",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:20Z",
+                "finishedAt": "2026-07-15T14:17:26Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_09_statistical-analysis.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-005-demand-forecasting-2925682448"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-005-demand-forecasting-2424039815": {
+                "id": "p-1-005-demand-forecasting-2424039815",
+                "name": "p-1-005-demand-forecasting[8].step-09",
+                "displayName": "step-09",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:40Z",
+                "finishedAt": "2026-07-15T14:17:45Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 13
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_14_inventory-optimization.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-005-demand-forecasting-2990527258"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-005-demand-forecasting-2924549615": {
+                "id": "p-1-005-demand-forecasting-2924549615",
+                "name": "p-1-005-demand-forecasting[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:16:10Z",
+                "finishedAt": "2026-07-15T14:16:30Z",
+                "progress": "10/10",
+                "resourcesDuration": {
+                    "cpu": 6,
+                    "memory": 120
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-005-demand-forecasting-1633586983"
+                ]
+            },
+            "p-1-005-demand-forecasting-2925094068": {
+                "id": "p-1-005-demand-forecasting-2925094068",
+                "name": "p-1-005-demand-forecasting[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:16:50Z",
+                "finishedAt": "2026-07-15T14:17:00Z",
+                "progress": "7/7",
+                "resourcesDuration": {
+                    "cpu": 5,
+                    "memory": 92
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-005-demand-forecasting-4208663559"
+                ]
+            },
+            "p-1-005-demand-forecasting-2925241163": {
+                "id": "p-1-005-demand-forecasting-2925241163",
+                "name": "p-1-005-demand-forecasting[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:00Z",
+                "finishedAt": "2026-07-15T14:17:10Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 79
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-005-demand-forecasting-561801023"
+                ]
+            },
+            "p-1-005-demand-forecasting-2925682448": {
+                "id": "p-1-005-demand-forecasting-2925682448",
+                "name": "p-1-005-demand-forecasting[7]",
+                "displayName": "[7]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:30Z",
+                "finishedAt": "2026-07-15T14:17:40Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 39
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-005-demand-forecasting-3306775503"
+                ]
+            },
+            "p-1-005-demand-forecasting-2990527258": {
+                "id": "p-1-005-demand-forecasting-2990527258",
+                "name": "p-1-005-demand-forecasting[9]",
+                "displayName": "[9]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:50Z",
+                "finishedAt": "2026-07-15T14:18:00Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-005-demand-forecasting-3817162008"
+                ]
+            },
+            "p-1-005-demand-forecasting-2991807186": {
+                "id": "p-1-005-demand-forecasting-2991807186",
+                "name": "p-1-005-demand-forecasting[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:16:30Z",
+                "finishedAt": "2026-07-15T14:16:40Z",
+                "progress": "9/9",
+                "resourcesDuration": {
+                    "cpu": 5,
+                    "memory": 107
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-005-demand-forecasting-1410463059"
+                ]
+            },
+            "p-1-005-demand-forecasting-3203001315": {
+                "id": "p-1-005-demand-forecasting-3203001315",
+                "name": "p-1-005-demand-forecasting[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:16:40Z",
+                "finishedAt": "2026-07-15T14:16:44Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_data-cleaning-standardization.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-005-demand-forecasting-2925094068"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-005-demand-forecasting-3278774163": {
+                "id": "p-1-005-demand-forecasting-3278774163",
+                "name": "p-1-005-demand-forecasting[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:10Z",
+                "finishedAt": "2026-07-15T14:17:15Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 13
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_07_exploratory-data-analysis.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-005-demand-forecasting-1918878213"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-005-demand-forecasting-3306775503": {
+                "id": "p-1-005-demand-forecasting-3306775503",
+                "name": "p-1-005-demand-forecasting[7].step-08",
+                "displayName": "step-08",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:30Z",
+                "finishedAt": "2026-07-15T14:17:36Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_11_model-training-forecasting.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-005-demand-forecasting-1849502071"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-005-demand-forecasting-3817162008": {
+                "id": "p-1-005-demand-forecasting-3817162008",
+                "name": "p-1-005-demand-forecasting[9].step-10",
+                "displayName": "step-10",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:50Z",
+                "finishedAt": "2026-07-15T14:17:54Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_15_final-synthesis-report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-005-demand-forecasting-4208663559": {
+                "id": "p-1-005-demand-forecasting-4208663559",
+                "name": "p-1-005-demand-forecasting[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:16:50Z",
+                "finishedAt": "2026-07-15T14:16:56Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 13
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_time-series-decomposition.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-005-demand-forecasting-2925241163"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-005-demand-forecasting-561801023": {
+                "id": "p-1-005-demand-forecasting-561801023",
+                "name": "p-1-005-demand-forecasting[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-005-demand-forecasting",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-005-demand-forecasting",
+                "startedAt": "2026-07-15T14:17:00Z",
+                "finishedAt": "2026-07-15T14:17:04Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_feature-engineering.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-005-demand-forecasting-1918731118"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 6,
+            "memory": 120
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

@@ -1,0 +1,61 @@
+{
+  "pipeline": "019_sports_prediction_cleaning_integration",
+  "batch": 4,
+  "workflow": "p-4-019-sports-prediction-cleaning-integration",
+  "phase": "Succeeded",
+  "elapsed_s": 0,
+  "pod_duration_s": 35.0,
+  "node_count": 6,
+  "step_count": 6,
+  "steps_succeeded": 6,
+  "steps_failed": 0,
+  "steps": [
+    {
+      "name": "step-03",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-02",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-04",
+      "phase": "Succeeded",
+      "duration_s": 7.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 8.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-05",
+      "phase": "Succeeded",
+      "duration_s": 7.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-06",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    }
+  ],
+  "image_tag": "custom-pipelines/sports_prediction_cleaning_integration:latest",
+  "started_at": "2026-07-15T14:26:56Z",
+  "finished_at": "2026-07-15T14:27:56Z",
+  "cpu_seconds": 2,
+  "memory_mb_seconds": 67
+}

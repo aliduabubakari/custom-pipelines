@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-18-086-transportation-statistical-geospatial-validation",
+        "generateName": "transportation-statistical-geospatial-validation",
+        "namespace": "default",
+        "uid": "84b8f76d-f135-4ceb-8984-eca9c97fe707",
+        "resourceVersion": "28440",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T15:08:38Z",
+        "labels": {
+            "domain": "Transportation",
+            "pipeline": "transportation_statistical_geospatial_validation",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T15:08:38Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T15:09:49Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-18-086-transportation-statistical-geospatial-validation": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-1913051399": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-2522415031": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-2523003411": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-2523547864": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-2590511245": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-2894211879": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-3663440218": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-3664028598": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-3752157667": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-490835971": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-69685275": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-18-086-transportation-statistical-geospatial-validation-714010663": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/transportation_statistical_geospatial_validation:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T15:08:38Z",
+        "finishedAt": "2026-07-15T15:09:49Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-18-086-transportation-statistical-geospatial-validation": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation",
+                "name": "p-18-086-transportation-statistical-geospatial-validation",
+                "displayName": "p-18-086-transportation-statistical-geospatial-validation",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T15:08:38Z",
+                "finishedAt": "2026-07-15T15:09:49Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 74
+                },
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-2523003411"
+                ],
+                "outboundNodes": [
+                    "p-18-086-transportation-statistical-geospatial-validation-1913051399"
+                ]
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-1913051399": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-1913051399",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:09:38Z",
+                "finishedAt": "2026-07-15T15:09:42Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 6
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-2522415031": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-2522415031",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:09:28Z",
+                "finishedAt": "2026-07-15T15:09:38Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 27
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-3752157667"
+                ]
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-2523003411": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-2523003411",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:08:38Z",
+                "finishedAt": "2026-07-15T15:08:58Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 74
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-69685275"
+                ]
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-2523547864": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-2523547864",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:09:18Z",
+                "finishedAt": "2026-07-15T15:09:28Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 47
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-490835971"
+                ]
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-2590511245": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-2590511245",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:09:08Z",
+                "finishedAt": "2026-07-15T15:09:18Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 60
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-714010663"
+                ]
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-2894211879": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-2894211879",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:08:58Z",
+                "finishedAt": "2026-07-15T15:09:01Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-2590511245"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-3663440218": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-3663440218",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:09:38Z",
+                "finishedAt": "2026-07-15T15:09:49Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 6
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-1913051399"
+                ]
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-3664028598": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-3664028598",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:08:58Z",
+                "finishedAt": "2026-07-15T15:09:08Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 67
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-2894211879"
+                ]
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-3752157667": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-3752157667",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:09:28Z",
+                "finishedAt": "2026-07-15T15:09:35Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 21
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-3663440218"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-490835971": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-490835971",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:09:18Z",
+                "finishedAt": "2026-07-15T15:09:24Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 20
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-2522415031"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-69685275": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-69685275",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:08:38Z",
+                "finishedAt": "2026-07-15T15:08:48Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-3664028598"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-18-086-transportation-statistical-geospatial-validation-714010663": {
+                "id": "p-18-086-transportation-statistical-geospatial-validation-714010663",
+                "name": "p-18-086-transportation-statistical-geospatial-validation[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-18-086-transportation-statistical-geospatial-validation",
+                "phase": "Succeeded",
+                "boundaryID": "p-18-086-transportation-statistical-geospatial-validation",
+                "startedAt": "2026-07-15T15:09:08Z",
+                "finishedAt": "2026-07-15T15:09:12Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 13
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-18-086-transportation-statistical-geospatial-validation-2523547864"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 3,
+            "memory": 74
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

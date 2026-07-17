@@ -1,0 +1,848 @@
+[14:10:03] B1: Building 1 images...
+[14:10:03] B1:   Building custom-pipelines/analytics_statistical_cleaning_integration:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 1.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 320.54kB done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#5 resolve docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28 0.0s done
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0B / 12.11MB 0.1s
+#5 sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28 10.37kB / 10.37kB done
+#5 sha256:cab2dbf575e971934a81e4622f5aba17aa7929719bd7e31033a3a83b97fd0464 1.75kB / 1.75kB done
+#5 sha256:25c5b8011a3425a140bf5fa73be0feabd3c0d5b323eecb19dc02437a368ae075 5.66kB / 5.66kB done
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0B / 29.78MB 0.1s
+#5 sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 0B / 1.29MB 0.1s
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 18.87MB / 29.78MB 0.3s
+#5 sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 1.29MB / 1.29MB 0.3s done
+#5 sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e 0B / 250B 0.3s
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 2.10MB / 12.11MB 0.4s
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 26.21MB / 29.78MB 0.4s
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 10.49MB / 12.11MB 0.5s
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 29.78MB / 29.78MB 0.5s done
+#5 sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e 250B / 250B 0.4s done
+#5 extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 12.11MB / 12.11MB 0.5s done
+#5 extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0.7s done
+#5 extracting sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 0.1s done
+#5 extracting sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0.1s
+#5 extracting sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0.4s done
+#5 extracting sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e done
+#5 DONE 1.8s
+
+#6 [2/6] WORKDIR /pipeline
+#6 DONE 0.1s
+
+#7 [3/6] COPY requirements.txt .
+#7 DONE 0.0s
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 1.444 Collecting matplotlib (from -r requirements.txt (line 1))
+#8 1.482   Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+#8 1.668 Collecting numpy (from -r requirements.txt (line 2))
+#8 1.678   Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 1.769 Collecting pandas (from -r requirements.txt (line 3))
+#8 1.779   Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+#8 1.877 Collecting pyarrow (from -r requirements.txt (line 4))
+#8 1.886   Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#8 1.953 Collecting scikit-learn (from -r requirements.txt (line 5))
+#8 1.962   Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#8 1.985 Collecting seaborn (from -r requirements.txt (line 6))
+#8 1.993   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#8 2.044 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.053   Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 2.067 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 1))
+#8 2.076   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 2.209 Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.219   Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+#8 2.285 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.294   Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+#8 2.323 Collecting packaging>=20.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.332   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+#8 2.486 Collecting pillow>=9 (from matplotlib->-r requirements.txt (line 1))
+#8 2.495   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+#8 2.523 Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 1))
+#8 2.532   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#8 2.547 Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 1))
+#8 2.556   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 2.673 Collecting scipy>=1.10.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.683   Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 2.722 Collecting joblib>=1.4.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.731   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#8 2.774 Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.783   Downloading narwhals-2.24.0-py3-none-any.whl.metadata (15 kB)
+#8 2.800 Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.809   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 2.866 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 1))
+#8 2.876   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 2.907 Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+#8 3.001    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 114.2 MB/s eta 0:00:00
+#8 3.011 Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 3.154    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 117.7 MB/s eta 0:00:00
+#8 3.164 Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.9 MB)
+#8 3.258    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 117.6 MB/s eta 0:00:00
+#8 3.267 Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (50.1 MB)
+#8 3.705    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 114.9 MB/s eta 0:00:00
+#8 3.716 Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+#8 3.796    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 117.8 MB/s eta 0:00:00
+#8 3.806 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#8 3.831 Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
+#8 3.852 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 3.877 Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 3.975    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 54.1 MB/s eta 0:00:00
+#8 3.986 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#8 3.997 Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+#8 4.011    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 131.7 MB/s eta 0:00:00
+#8 4.020 Downloading narwhals-2.24.0-py3-none-any.whl (461 kB)
+#8 4.034 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#8 4.044 Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+#8 4.106    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 118.4 MB/s eta 0:00:00
+#8 4.115 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#8 4.125 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 4.137 Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 4.447    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 114.7 MB/s eta 0:00:00
+#8 4.456 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 4.466 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 4.693 Installing collected packages: threadpoolctl, six, pyparsing, pyarrow, pillow, packaging, numpy, narwhals, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, contourpy, scikit-learn, pandas, matplotlib, seaborn
+#8 19.50 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.63.0 joblib-1.5.3 kiwisolver-1.5.0 matplotlib-3.11.0 narwhals-2.24.0 numpy-2.5.1 packaging-26.2 pandas-3.0.3 pillow-12.3.0 pyarrow-25.0.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 scikit-learn-1.9.0 scipy-1.18.0 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0
+#8 19.51 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 19.58 
+#8 19.58 [notice] A new release of pip is available: 25.0.1 -> 26.1.2
+#8 19.58 [notice] To update, run: pip install --upgrade pip
+#8 DONE 20.0s
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.4s done
+#11 writing image sha256:92a408a5f9c757fc7d2abe752185532d1dcccb4452fd4ab6ce730a86406985aa done
+#11 naming to docker.io/custom-pipelines/analytics_statistical_cleaning_integration:latest done
+#11 DONE 1.4s
+docker.io/custom pipelines/analytics_sta	saved	
+application/vnd.oci.image.manifest.v1+json sha256:7f2b9bf41d38d1db1090adc4a072ee4427cd2eeeb372e881751aedc5347e68dd
+Importing	elapsed: 8.9 s	total:   0.0 B	(0.0 B/s)	
+[14:10:41] B1:   ✓ 001_analytics_statistical_cleaning_integration built & imported
+[14:10:41] B1: Submitting workflows...
+I0715 14:10:41.368400  474535 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-1-001-analytics-statistical-cleaning-integration
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:10:41 +0000 (now)
+Progress:            
+[14:10:41] B1:   Submitted: 001_analytics_statistical_cleaning_integration → p-1-001-analytics-statistical-cleaning-integration
+[14:10:41] B1: Waiting for completion (timeout=600s)...
+[14:11:57] B1:   001_analytics_statistical_cleaning_integration: Succeeded (75s)
+[14:11:57] B1: Cleaning up...
+Total reclaimed space: 0B
+ID						RECLAIMABLE	SIZE		LAST ACCESSED
+uz28ihbg71azg4abiqqyit5my*              	true 		0B        	About a minute ago
+jhiu3oc0x1ml11uuhnpq4soub*              	true 	201B      	About a minute ago
+2mowb5714gyjqsn8tqbwuqdu9               	true 	9.442kB   	About a minute ago
+dzi9onw02asx7i27v04shutu6*              	true 	319.9kB   	About a minute ago
+ngmlpfy2qx5x4ub3taddnbp91               	true 	310.4kB   	About a minute ago
+nz8rhixdojxnl3gk7mnxt6qxf               	true 	593.1MB   	About a minute ago
+m1ql2uafz9qzx17mcy52b7ho1               	true 	53B       	About a minute ago
+juaq1npvd4yuewfchms63ry89               	true 	0B        	About a minute ago
+mqpqf8n08bte4uiz7qi3ak2xl               	true 	0B        	About a minute ago
+d7i6e1trn726h4ujypvtf266k               	true 	0B        	About a minute ago
+v2g6xaew36iarejv4mzuz7o8l               	true 	0B        	About a minute ago
+nt63m7cmx0i65dky9wz3swje4               	true 	0B        	About a minute ago
+Total:	593.7MB
+[14:11:58] B1: BATCH 1 COMPLETE
+[14:12:32] B1: Building 5 images...
+[14:12:32] B1:   Building custom-pipelines/analytics_statistical_cleaning_integration:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.8s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 320.54kB done
+#4 DONE 0.0s
+
+#5 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#5 resolve docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28 done
+#5 sha256:25c5b8011a3425a140bf5fa73be0feabd3c0d5b323eecb19dc02437a368ae075 5.66kB / 5.66kB done
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0B / 29.78MB 0.1s
+#5 sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 0B / 1.29MB 0.1s
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0B / 12.11MB 0.1s
+#5 sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28 10.37kB / 10.37kB done
+#5 sha256:cab2dbf575e971934a81e4622f5aba17aa7929719bd7e31033a3a83b97fd0464 1.75kB / 1.75kB done
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 8.39MB / 29.78MB 0.2s
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 26.21MB / 29.78MB 0.4s
+#5 sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 1.29MB / 1.29MB 0.3s done
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 3.15MB / 12.11MB 0.4s
+#5 sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e 0B / 250B 0.4s
+#5 sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 29.78MB / 29.78MB 0.5s done
+#5 sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 12.11MB / 12.11MB 0.5s done
+#5 sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e 250B / 250B 0.4s done
+#5 extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053
+#5 extracting sha256:062e450697faa5f02a3a74eba9864ee4d79bc9cfbd65769fc6cdff2c05c6a053 0.6s done
+#5 extracting sha256:98db2485a0d07a8914586b02387e3813aa7e9fed79ab252898d3e96e21c717ea 0.1s done
+#5 extracting sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0.1s
+#5 extracting sha256:48347b15c85fd6dde9c5b0259f378fbaee3ce231b30a42f2f2bcc4ea0285cbc9 0.4s done
+#5 extracting sha256:fd079632edc0ab4e9d10c77ec348d5057a976e6fc508e93855548096dec2ae1e done
+#5 DONE 1.7s
+
+#6 [2/6] WORKDIR /pipeline
+#6 DONE 0.1s
+
+#7 [3/6] COPY requirements.txt .
+#7 DONE 0.0s
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 1.531 Collecting matplotlib (from -r requirements.txt (line 1))
+#8 1.566   Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+#8 1.757 Collecting numpy (from -r requirements.txt (line 2))
+#8 1.766   Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 1.859 Collecting pandas (from -r requirements.txt (line 3))
+#8 1.868   Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+#8 1.970 Collecting pyarrow (from -r requirements.txt (line 4))
+#8 1.980   Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#8 2.046 Collecting scikit-learn (from -r requirements.txt (line 5))
+#8 2.056   Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#8 2.083 Collecting seaborn (from -r requirements.txt (line 6))
+#8 2.092   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#8 2.147 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.156   Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 2.172 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 1))
+#8 2.181   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 2.311 Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.321   Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+#8 2.386 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.395   Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+#8 2.421 Collecting packaging>=20.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.430   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+#8 2.585 Collecting pillow>=9 (from matplotlib->-r requirements.txt (line 1))
+#8 2.594   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+#8 2.627 Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 1))
+#8 2.636   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#8 2.653 Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 1))
+#8 2.661   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 2.790 Collecting scipy>=1.10.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.800   Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 2.838 Collecting joblib>=1.4.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.846   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#8 2.889 Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.898   Downloading narwhals-2.24.0-py3-none-any.whl.metadata (15 kB)
+#8 2.917 Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements.txt (line 5))
+#8 2.927   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 2.982 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 1))
+#8 2.991   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 3.025 Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+#8 3.119    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 113.5 MB/s eta 0:00:00
+#8 3.130 Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 3.273    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 120.0 MB/s eta 0:00:00
+#8 3.285 Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.9 MB)
+#8 3.379    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 117.9 MB/s eta 0:00:00
+#8 3.391 Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (50.1 MB)
+#8 3.840    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 111.8 MB/s eta 0:00:00
+#8 3.850 Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+#8 3.928    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 117.7 MB/s eta 0:00:00
+#8 3.941 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#8 3.952 Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
+#8 3.964 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 3.974 Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 4.017    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 119.7 MB/s eta 0:00:00
+#8 4.027 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#8 4.040 Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+#8 4.053    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 129.6 MB/s eta 0:00:00
+#8 4.062 Downloading narwhals-2.24.0-py3-none-any.whl (461 kB)
+#8 4.074 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#8 4.084 Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+#8 4.144    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 117.9 MB/s eta 0:00:00
+#8 4.155 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#8 4.165 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 4.175 Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 4.477    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 117.4 MB/s eta 0:00:00
+#8 4.488 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 4.498 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 4.725 Installing collected packages: threadpoolctl, six, pyparsing, pyarrow, pillow, packaging, numpy, narwhals, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, contourpy, scikit-learn, pandas, matplotlib, seaborn
+#8 19.74 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.63.0 joblib-1.5.3 kiwisolver-1.5.0 matplotlib-3.11.0 narwhals-2.24.0 numpy-2.5.1 packaging-26.2 pandas-3.0.3 pillow-12.3.0 pyarrow-25.0.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 scikit-learn-1.9.0 scipy-1.18.0 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0
+#8 19.74 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 19.82 
+#8 19.82 [notice] A new release of pip is available: 25.0.1 -> 26.1.2
+#8 19.82 [notice] To update, run: pip install --upgrade pip
+#8 DONE 20.4s
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 1.4s done
+#11 writing image sha256:62e93c7e3b105b5530eda11f2acab3e53064919a6db0d17f6f9aed330b33ced3 done
+#11 naming to docker.io/custom-pipelines/analytics_statistical_cleaning_integration:latest done
+#11 DONE 1.4s
+docker.io/custom pipelines/analytics_sta	saved	
+application/vnd.oci.image.manifest.v1+json sha256:cab9512517fa2ebb808bd87794289eeaf32e95b1aa3364a2b31c726c37e037cc
+Importing	elapsed: 8.9 s	total:   0.0 B	(0.0 B/s)	
+[14:13:10] B1:   ✓ 001_analytics_statistical_cleaning_integration built & imported
+[14:13:10] B1:   Building custom-pipelines/analytics_statistical_integration:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 29.31kB done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /pipeline
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 CACHED
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.5s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers 0.0s done
+#11 writing image sha256:a31b035ccc209a165f6f78b3a21d36e5fbcfdc08838148d38b24f9920d89fe76 done
+#11 naming to docker.io/custom-pipelines/analytics_statistical_integration:latest done
+#11 DONE 0.0s
+docker.io/custom pipelines/analytics_sta	saved	
+application/vnd.oci.image.manifest.v1+json sha256:adf297499a8e169a1d324a5357cff5e3640351c7ddcadb80a105a31c0a519b07
+Importing	elapsed: 6.8 s	total:   0.0 B	(0.0 B/s)	
+[14:13:23] B1:   ✓ 002_analytics_statistical_integration built & imported
+[14:13:23] B1:   Building custom-pipelines/credit_risk:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 DONE 0.0s
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 1.22MB done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /pipeline
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 DONE 0.0s
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 1.401 Collecting lightgbm (from -r requirements.txt (line 1))
+#8 1.441   Downloading lightgbm-4.6.0-py3-none-manylinux_2_28_x86_64.whl.metadata (17 kB)
+#8 1.568 Collecting matplotlib (from -r requirements.txt (line 2))
+#8 1.577   Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+#8 1.768 Collecting numpy (from -r requirements.txt (line 3))
+#8 1.778   Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 1.805 Collecting openpyxl (from -r requirements.txt (line 4))
+#8 1.814   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+#8 1.904 Collecting pandas (from -r requirements.txt (line 5))
+#8 1.913   Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+#8 2.014 Collecting pyarrow (from -r requirements.txt (line 6))
+#8 2.024   Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#8 2.092 Collecting scikit-learn (from -r requirements.txt (line 7))
+#8 2.103   Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#8 2.213 Collecting scipy (from -r requirements.txt (line 8))
+#8 2.223   Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 2.252 Collecting seaborn (from -r requirements.txt (line 9))
+#8 2.264   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#8 2.294 Collecting xgboost (from -r requirements.txt (line 10))
+#8 2.305   Downloading xgboost-3.3.0-py3-none-manylinux_2_28_x86_64.whl.metadata (2.0 kB)
+#8 2.364 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 2))
+#8 2.373   Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 2.391 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 2))
+#8 2.400   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 2.548 Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 2))
+#8 2.557   Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+#8 2.622 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 2))
+#8 2.632   Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+#8 2.658 Collecting packaging>=20.0 (from matplotlib->-r requirements.txt (line 2))
+#8 2.667   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+#8 2.802 Collecting pillow>=9 (from matplotlib->-r requirements.txt (line 2))
+#8 2.813   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+#8 2.842 Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 2))
+#8 2.851   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#8 2.867 Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 2))
+#8 2.876   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 2.890 Collecting et-xmlfile (from openpyxl->-r requirements.txt (line 4))
+#8 2.899   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+#8 2.950 Collecting joblib>=1.4.0 (from scikit-learn->-r requirements.txt (line 7))
+#8 2.959   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#8 3.002 Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements.txt (line 7))
+#8 3.011   Downloading narwhals-2.24.0-py3-none-any.whl.metadata (15 kB)
+#8 3.028 Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements.txt (line 7))
+#8 3.038   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 3.098 Collecting nvidia-nccl-cu12 (from xgboost->-r requirements.txt (line 10))
+#8 3.108   Downloading nvidia_nccl_cu12-2.30.7-py3-none-manylinux_2_18_x86_64.whl.metadata (2.1 kB)
+#8 3.130 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 2))
+#8 3.139   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 3.155 Downloading lightgbm-4.6.0-py3-none-manylinux_2_28_x86_64.whl (3.6 MB)
+#8 3.199    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 92.7 MB/s eta 0:00:00
+#8 3.209 Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+#8 3.295    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 118.4 MB/s eta 0:00:00
+#8 3.305 Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 3.448    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 117.5 MB/s eta 0:00:00
+#8 3.457 Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+#8 3.467 Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.9 MB)
+#8 3.563    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 115.9 MB/s eta 0:00:00
+#8 3.574 Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (50.1 MB)
+#8 4.002    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 117.1 MB/s eta 0:00:00
+#8 4.012 Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+#8 4.091    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 117.5 MB/s eta 0:00:00
+#8 4.100 Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 4.402    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 117.3 MB/s eta 0:00:00
+#8 4.412 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#8 4.425 Downloading xgboost-3.3.0-py3-none-manylinux_2_28_x86_64.whl (98.7 MB)
+#8 5.268    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 MB 117.5 MB/s eta 0:00:00
+#8 5.277 Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
+#8 5.289 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 5.298 Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 5.343    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 116.2 MB/s eta 0:00:00
+#8 5.353 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#8 5.365 Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+#8 5.378    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 129.5 MB/s eta 0:00:00
+#8 5.388 Downloading narwhals-2.24.0-py3-none-any.whl (461 kB)
+#8 5.402 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#8 5.412 Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+#8 5.473    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 117.2 MB/s eta 0:00:00
+#8 5.483 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#8 5.494 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 5.505 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 5.515 Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+#8 5.526 Downloading nvidia_nccl_cu12-2.30.7-py3-none-manylinux_2_18_x86_64.whl (303.4 MB)
+#8 8.144    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 303.4/303.4 MB 116.9 MB/s eta 0:00:00
+#8 8.154 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 8.637 Installing collected packages: threadpoolctl, six, pyparsing, pyarrow, pillow, packaging, nvidia-nccl-cu12, numpy, narwhals, kiwisolver, joblib, fonttools, et-xmlfile, cycler, scipy, python-dateutil, openpyxl, contourpy, xgboost, scikit-learn, pandas, matplotlib, lightgbm, seaborn
+#8 27.50 Successfully installed contourpy-1.3.3 cycler-0.12.1 et-xmlfile-2.0.0 fonttools-4.63.0 joblib-1.5.3 kiwisolver-1.5.0 lightgbm-4.6.0 matplotlib-3.11.0 narwhals-2.24.0 numpy-2.5.1 nvidia-nccl-cu12-2.30.7 openpyxl-3.1.5 packaging-26.2 pandas-3.0.3 pillow-12.3.0 pyarrow-25.0.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 scikit-learn-1.9.0 scipy-1.18.0 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0 xgboost-3.3.0
+#8 27.50 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 27.58 
+#8 27.58 [notice] A new release of pip is available: 25.0.1 -> 26.1.2
+#8 27.58 [notice] To update, run: pip install --upgrade pip
+#8 DONE 27.9s
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 2.4s done
+#11 writing image sha256:4d6863c09b26dccddf112f253f0c85158bb7c4a6f5228f6fafeb36d54818cc09 done
+#11 naming to docker.io/custom-pipelines/credit_risk:latest done
+#11 DONE 2.4s
+docker.io/custom pipelines/credit_risk:l	saved	
+application/vnd.oci.image.manifest.v1+json sha256:f0b0707a0d47a13ecc97a2af5a1925b623706bbb751ff9ce4cec4abe87a92ee8
+Importing	elapsed: 15.5s	total:   0.0 B	(0.0 B/s)	
+[14:14:17] B1:   ✓ 003_credit_risk built & imported
+[14:14:17] B1:   Building custom-pipelines/customer_churn:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 3.91MB 0.0s done
+#5 DONE 0.1s
+
+#6 [2/6] WORKDIR /pipeline
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 DONE 1.0s
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 1.340 Collecting lightgbm (from -r requirements.txt (line 1))
+#8 1.380   Downloading lightgbm-4.6.0-py3-none-manylinux_2_28_x86_64.whl.metadata (17 kB)
+#8 1.514 Collecting matplotlib (from -r requirements.txt (line 2))
+#8 1.524   Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+#8 1.736 Collecting numpy (from -r requirements.txt (line 3))
+#8 1.745   Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 1.837 Collecting pandas (from -r requirements.txt (line 4))
+#8 1.846   Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+#8 1.943 Collecting pyarrow (from -r requirements.txt (line 5))
+#8 1.954   Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#8 2.020 Collecting scikit-learn (from -r requirements.txt (line 6))
+#8 2.030   Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#8 2.142 Collecting scipy (from -r requirements.txt (line 7))
+#8 2.151   Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 2.180 Collecting seaborn (from -r requirements.txt (line 8))
+#8 2.189   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#8 2.220 Collecting xgboost (from -r requirements.txt (line 9))
+#8 2.230   Downloading xgboost-3.3.0-py3-none-manylinux_2_28_x86_64.whl.metadata (2.0 kB)
+#8 2.290 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 2))
+#8 2.300   Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 2.318 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 2))
+#8 2.327   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 2.473 Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 2))
+#8 2.483   Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+#8 2.549 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 2))
+#8 2.559   Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+#8 2.588 Collecting packaging>=20.0 (from matplotlib->-r requirements.txt (line 2))
+#8 2.597   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+#8 2.742 Collecting pillow>=9 (from matplotlib->-r requirements.txt (line 2))
+#8 2.757   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+#8 2.785 Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 2))
+#8 2.797   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#8 2.813 Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 2))
+#8 2.822   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 2.873 Collecting joblib>=1.4.0 (from scikit-learn->-r requirements.txt (line 6))
+#8 2.882   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#8 2.926 Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements.txt (line 6))
+#8 2.936   Downloading narwhals-2.24.0-py3-none-any.whl.metadata (15 kB)
+#8 2.953 Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements.txt (line 6))
+#8 2.963   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 3.033 Collecting nvidia-nccl-cu12 (from xgboost->-r requirements.txt (line 9))
+#8 3.043   Downloading nvidia_nccl_cu12-2.30.7-py3-none-manylinux_2_18_x86_64.whl.metadata (2.1 kB)
+#8 3.067 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 2))
+#8 3.076   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 3.094 Downloading lightgbm-4.6.0-py3-none-manylinux_2_28_x86_64.whl (3.6 MB)
+#8 3.137    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.6/3.6 MB 94.1 MB/s eta 0:00:00
+#8 3.150 Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+#8 3.241    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 113.0 MB/s eta 0:00:00
+#8 3.253 Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 3.419    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 101.7 MB/s eta 0:00:00
+#8 3.429 Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.9 MB)
+#8 3.530    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 112.3 MB/s eta 0:00:00
+#8 3.543 Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (50.1 MB)
+#8 3.974    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 116.7 MB/s eta 0:00:00
+#8 3.984 Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+#8 4.062    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 122.6 MB/s eta 0:00:00
+#8 4.072 Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 4.375    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 117.5 MB/s eta 0:00:00
+#8 4.384 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#8 4.398 Downloading xgboost-3.3.0-py3-none-manylinux_2_28_x86_64.whl (98.7 MB)
+#8 5.240    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 MB 117.3 MB/s eta 0:00:00
+#8 5.250 Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
+#8 5.262 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 5.273 Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 5.317    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 122.8 MB/s eta 0:00:00
+#8 5.326 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#8 5.338 Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+#8 5.351    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 118.7 MB/s eta 0:00:00
+#8 5.360 Downloading narwhals-2.24.0-py3-none-any.whl (461 kB)
+#8 5.373 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#8 5.383 Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+#8 5.443    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 122.8 MB/s eta 0:00:00
+#8 5.452 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#8 5.462 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 5.476 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 5.484 Downloading nvidia_nccl_cu12-2.30.7-py3-none-manylinux_2_18_x86_64.whl (303.4 MB)
+#8 8.159    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 303.4/303.4 MB 114.7 MB/s eta 0:00:00
+#8 8.168 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 8.626 Installing collected packages: threadpoolctl, six, pyparsing, pyarrow, pillow, packaging, nvidia-nccl-cu12, numpy, narwhals, kiwisolver, joblib, fonttools, cycler, scipy, python-dateutil, contourpy, xgboost, scikit-learn, pandas, matplotlib, lightgbm, seaborn
+#8 27.27 Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.63.0 joblib-1.5.3 kiwisolver-1.5.0 lightgbm-4.6.0 matplotlib-3.11.0 narwhals-2.24.0 numpy-2.5.1 nvidia-nccl-cu12-2.30.7 packaging-26.2 pandas-3.0.3 pillow-12.3.0 pyarrow-25.0.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 scikit-learn-1.9.0 scipy-1.18.0 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0 xgboost-3.3.0
+#8 27.27 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 27.35 
+#8 27.35 [notice] A new release of pip is available: 25.0.1 -> 26.1.2
+#8 27.35 [notice] To update, run: pip install --upgrade pip
+#8 DONE 28.0s
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 2.3s done
+#11 writing image sha256:657932c9f817f9b0e6173cdf580640dcac400ac90b4ac471f1bc18c740d6fd20 done
+#11 naming to docker.io/custom-pipelines/customer_churn:latest done
+#11 DONE 2.3s
+docker.io/custom pipelines/customer_chur	saved	
+application/vnd.oci.image.manifest.v1+json sha256:750f331056cb25185069bc233162453d93fb80d0c095609ff2fbffd3b0efc9ee
+Importing	elapsed: 16.2s	total:   0.0 B	(0.0 B/s)	
+[14:15:13] B1:   ✓ 004_customer_churn built & imported
+[14:15:13] B1:   Building custom-pipelines/demand_forecasting:latest...
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 240B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.4s
+
+#3 [internal] load .dockerignore
+#3 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.12-slim@sha256:c3d81d25b3154142b0b42eb1e61300024426268edeb5b5a26dd7ddf64d9daf28
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 3.42MB 0.0s done
+#5 DONE 0.0s
+
+#6 [2/6] WORKDIR /pipeline
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 DONE 0.7s
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 1.612 Collecting matplotlib (from -r requirements.txt (line 1))
+#8 1.660   Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+#8 1.859 Collecting numpy (from -r requirements.txt (line 2))
+#8 1.868   Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 1.890 Collecting openpyxl (from -r requirements.txt (line 3))
+#8 1.899   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+#8 2.001 Collecting pandas (from -r requirements.txt (line 4))
+#8 2.011   Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+#8 2.112 Collecting pyarrow (from -r requirements.txt (line 5))
+#8 2.122   Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#8 2.195 Collecting scikit-learn (from -r requirements.txt (line 6))
+#8 2.204   Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#8 2.323 Collecting scipy (from -r requirements.txt (line 7))
+#8 2.333   Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 2.364 Collecting seaborn (from -r requirements.txt (line 8))
+#8 2.373   Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+#8 2.406 Collecting xgboost (from -r requirements.txt (line 9))
+#8 2.416   Downloading xgboost-3.3.0-py3-none-manylinux_2_28_x86_64.whl.metadata (2.0 kB)
+#8 2.469 Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.479   Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (5.5 kB)
+#8 2.495 Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 1))
+#8 2.504   Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+#8 2.646 Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.659   Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (118 kB)
+#8 2.725 Collecting kiwisolver>=1.3.1 (from matplotlib->-r requirements.txt (line 1))
+#8 2.735   Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (5.1 kB)
+#8 2.763 Collecting packaging>=20.0 (from matplotlib->-r requirements.txt (line 1))
+#8 2.772   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+#8 2.923 Collecting pillow>=9 (from matplotlib->-r requirements.txt (line 1))
+#8 2.932   Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+#8 2.962 Collecting pyparsing>=3 (from matplotlib->-r requirements.txt (line 1))
+#8 2.971   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#8 2.989 Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 1))
+#8 2.998   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#8 3.014 Collecting et-xmlfile (from openpyxl->-r requirements.txt (line 3))
+#8 3.023   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+#8 3.068 Collecting joblib>=1.4.0 (from scikit-learn->-r requirements.txt (line 6))
+#8 3.077   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#8 3.123 Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements.txt (line 6))
+#8 3.131   Downloading narwhals-2.24.0-py3-none-any.whl.metadata (15 kB)
+#8 3.148 Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements.txt (line 6))
+#8 3.157   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#8 3.214 Collecting nvidia-nccl-cu12 (from xgboost->-r requirements.txt (line 9))
+#8 3.224   Downloading nvidia_nccl_cu12-2.30.7-py3-none-manylinux_2_18_x86_64.whl.metadata (2.1 kB)
+#8 3.248 Collecting six>=1.5 (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 1))
+#8 3.256   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#8 3.273 Downloading matplotlib-3.11.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.0 MB)
+#8 3.368    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.0/10.0 MB 113.2 MB/s eta 0:00:00
+#8 3.379 Downloading numpy-2.5.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 3.523    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 117.3 MB/s eta 0:00:00
+#8 3.533 Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+#8 3.544 Downloading pandas-3.0.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.9 MB)
+#8 3.638    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 118.3 MB/s eta 0:00:00
+#8 3.654 Downloading pyarrow-25.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (50.1 MB)
+#8 4.082    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 117.1 MB/s eta 0:00:00
+#8 4.093 Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+#8 4.171    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 121.2 MB/s eta 0:00:00
+#8 4.181 Downloading scipy-1.18.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 4.483    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 117.4 MB/s eta 0:00:00
+#8 4.495 Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+#8 4.507 Downloading xgboost-3.3.0-py3-none-manylinux_2_28_x86_64.whl (98.7 MB)
+#8 5.369    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.7/98.7 MB 114.7 MB/s eta 0:00:00
+#8 5.379 Downloading contourpy-1.3.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (362 kB)
+#8 5.394 Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+#8 5.406 Downloading fonttools-4.63.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.0 MB)
+#8 5.451    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.0/5.0 MB 126.3 MB/s eta 0:00:00
+#8 5.461 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#8 5.473 Downloading kiwisolver-1.5.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+#8 5.495    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 93.1 MB/s eta 0:00:00
+#8 5.506 Downloading narwhals-2.24.0-py3-none-any.whl (461 kB)
+#8 5.519 Downloading packaging-26.2-py3-none-any.whl (100 kB)
+#8 5.530 Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+#8 5.590    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 119.0 MB/s eta 0:00:00
+#8 5.599 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#8 5.609 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#8 5.620 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#8 5.629 Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+#8 5.648 Downloading nvidia_nccl_cu12-2.30.7-py3-none-manylinux_2_18_x86_64.whl (303.4 MB)
+#8 8.269    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 303.4/303.4 MB 115.8 MB/s eta 0:00:00
+#8 8.279 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#8 8.774 Installing collected packages: threadpoolctl, six, pyparsing, pyarrow, pillow, packaging, nvidia-nccl-cu12, numpy, narwhals, kiwisolver, joblib, fonttools, et-xmlfile, cycler, scipy, python-dateutil, openpyxl, contourpy, xgboost, scikit-learn, pandas, matplotlib, seaborn
+#8 28.06 Successfully installed contourpy-1.3.3 cycler-0.12.1 et-xmlfile-2.0.0 fonttools-4.63.0 joblib-1.5.3 kiwisolver-1.5.0 matplotlib-3.11.0 narwhals-2.24.0 numpy-2.5.1 nvidia-nccl-cu12-2.30.7 openpyxl-3.1.5 packaging-26.2 pandas-3.0.3 pillow-12.3.0 pyarrow-25.0.0 pyparsing-3.3.2 python-dateutil-2.9.0.post0 scikit-learn-1.9.0 scipy-1.18.0 seaborn-0.13.2 six-1.17.0 threadpoolctl-3.6.0 xgboost-3.3.0
+#8 28.06 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 28.14 
+#8 28.14 [notice] A new release of pip is available: 25.0.1 -> 26.1.2
+#8 28.14 [notice] To update, run: pip install --upgrade pip
+#8 DONE 28.8s
+
+#9 [5/6] COPY data/ /pipeline/data/
+#9 DONE 0.0s
+
+#10 [6/6] COPY scripts/ /pipeline/scripts/
+#10 DONE 0.0s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 2.3s done
+#11 writing image sha256:56a6b5a3856ad2b1dd4ef80317b442c82d171606356b85fc7b2ee9a6251de87c done
+#11 naming to docker.io/custom-pipelines/demand_forecasting:latest done
+#11 DONE 2.3s
+docker.io/custom pipelines/demand_foreca	saved	
+application/vnd.oci.image.manifest.v1+json sha256:6bed1edfd20ee18658622146d620e806b8237ad6be586d1bb75c313fcc365f82
+Importing	elapsed: 14.6s	total:   0.0 B	(0.0 B/s)	
+[14:16:09] B1:   ✓ 005_demand_forecasting built & imported
+[14:16:09] B1: Submitting workflows...
+I0715 14:16:09.635752  492210 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-1-001-analytics-statistical-cleaning-integration
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:16:09 +0000 (now)
+Progress:            
+[14:16:09] B1:   Submitted: 001_analytics_statistical_cleaning_integration → p-1-001-analytics-statistical-cleaning-integration
+I0715 14:16:09.717741  492255 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-1-002-analytics-statistical-integration
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:16:09 +0000 (now)
+Progress:            
+[14:16:09] B1:   Submitted: 002_analytics_statistical_integration → p-1-002-analytics-statistical-integration
+I0715 14:16:09.823328  492277 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-1-003-credit-risk
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:16:09 +0000 (now)
+Progress:            
+[14:16:09] B1:   Submitted: 003_credit_risk → p-1-003-credit-risk
+I0715 14:16:09.912916  492305 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-1-004-customer-churn
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:16:09 +0000 (now)
+Progress:            
+[14:16:09] B1:   Submitted: 004_customer_churn → p-1-004-customer-churn
+I0715 14:16:09.986618  492363 warnings.go:110] "Warning: unknown field \"spec.volumeClaimTemplates[0].metadata.creationTimestamp\""
+Name:                p-1-005-demand-forecasting
+Namespace:           default
+ServiceAccount:      argo-workflow
+Status:              Pending
+Created:             Wed Jul 15 14:16:09 +0000 (now)
+Progress:            
+[14:16:09] B1:   Submitted: 005_demand_forecasting → p-1-005-demand-forecasting
+[14:16:09] B1: Waiting for completion (timeout=600s)...
+[14:17:20] B1:   001_analytics_statistical_cleaning_integration: Succeeded (70s)
+[14:17:31] B1:   002_analytics_statistical_integration: Succeeded (10s)
+[14:18:12] B1:   003_credit_risk: Failed (40s)
+[14:18:22] B1:   004_customer_churn: Failed (10s)
+[14:18:23] B1:   005_demand_forecasting: Succeeded (0s)
+[14:18:24] B1: Cleaning up...
+Total reclaimed space: 0B
+ID						RECLAIMABLE	SIZE		LAST ACCESSED
+yjpayp99yoow0jyaml88gbn8g*              	true 		3.418MB   	2 minutes ago
+b2ic94o37y4seer4u9u1aaxd1               	true 	86.04kB   	4 minutes ago
+8rylx3umvbcwm8svf5vaubzjh*              	true 	28.84kB   	5 minutes ago
+lvub9lpqs9kizai8xbl1uleen*              	true 	1.219MB   	4 minutes ago
+zmupl5s0y360l6jnx3192ffk7               	true 	62.19kB   	3 minutes ago
+deulp79zs9w3v0xmeni830wuk*              	true 	0B        	5 minutes ago
+one45fdf91m8ne5gk0um4zhku*              	true 	319.9kB   	5 minutes ago
+om7vylrezzthht8dwbvvqbzcx               	true 	9.442kB   	5 minutes ago
+si6hafbb5ho4j0w78o7g77547*              	true 	201B      	4 minutes ago
+wwiuiv6yh7ji9jv3gd08hakjs*              	true 	201B      	2 minutes ago
+jwma57sa8k05cqlwnoe442u3j*              	true 	201B      	3 minutes ago
+lfoxn5ra7d38wh0y4q00p1csj*              	true 	0B        	4 minutes ago
+kmul0koe6kep9byyuaddervqv*              	true 	201B      	5 minutes ago
+deat5fppqsud307p596j56n2l               	true 	9.127kB   	5 minutes ago
+pnlybz0hh977l43k92ngsir9x               	true 	28.79kB   	2 minutes ago
+pidr3rmmt8fdbr4yfzk8tl0kn               	true 	3.848MB   	3 minutes ago
+x6imz3l9pb1ozzt04mokam2e4*              	true 	0B        	5 minutes ago
+u6m49539x60sfg252ndc2h2g3*              	true 	0B        	3 minutes ago
+uypyrr4drxm1n5iv94bhw1jpr*              	true 	3.91MB    	3 minutes ago
+uncy28jhirao9duvq8e47ttp1*              	true 	0B        	2 minutes ago
+3vfwla5b9n35ics5vm9rasrb4               	true 	3.39MB    	2 minutes ago
+go4zbhvgfucfnyl4nbq4gk8y6               	true 	1.216GB   	3 minutes ago
+ym6jozvmvqmimjngqvfamp77m               	true 	310.4kB   	5 minutes ago
+nrizcy9ajmhnbqn6c8qa7aw7z               	true 	1.133MB   	4 minutes ago
+gbcrkyjj2c0o6g1v7zwudiyyx               	true 	19.66kB   	5 minutes ago
+4yk0k4gdrjslfx58r62bjj4ti*              	true 	201B      	5 minutes ago
+weht5l3ufxppyz3vv4mxwfrgv               	true 	593.1MB   	5 minutes ago
+0fgcwo4k2yvrjbp2evprqtmbc               	true 	1.206GB   	2 minutes ago
+uswatx0k4yquywsxgmb2pfezy               	true 	1.218GB   	4 minutes ago
+lhwx4n9nbykkehlsxauyssoxv               	true 	76B       	3 minutes ago
+m8yd1k7sfaynn4d6u6s1z1d0a               	true 	76B       	2 minutes ago
+c2a25i5ol2ywo60s86mzachnn               	true 	53B       	5 minutes ago
+s9spt8o1tn18srj2s5ymkka2m               	true 	85B       	4 minutes ago
+fvo3dlp2lp1kf60pnh1zjcgd8               	true 	0B        	2 minutes ago
+zrf27jbqsobbovxscnzb03dy8               	true 	0B        	5 minutes ago
+xmq3nsb6jt4xbrlnw1qjaruyb               	true 	0B        	5 minutes ago
+hlrd07hxn2kay7mrarvddx82y               	true 	0B        	5 minutes ago
+q4lsqwyto25anzn3a992a9vlu               	true 	0B        	5 minutes ago
+Total:	4.25GB
+[14:18:27] B1: BATCH 1 COMPLETE

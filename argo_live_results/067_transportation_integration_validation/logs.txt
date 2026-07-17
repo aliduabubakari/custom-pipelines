@@ -1,0 +1,73 @@
+p-14-067-transportation-integration-validation-run-step-362222027: time=2026-07-15T14:56:44.599Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-14-067-transportation-integration-validation-run-step-362222027: STEP 1: Load & Profile — Transportation | Techniques: integration, validation
+p-14-067-transportation-integration-validation-run-step-362222027:    Data: 682 rows x 11 cols
+p-14-067-transportation-integration-validation-run-step-362222027:    Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+p-14-067-transportation-integration-validation-run-step-362222027:    departure_hour: mean=11.42, std=6.52
+p-14-067-transportation-integration-validation-run-step-362222027:    distance_km: mean=22.18, std=12.28
+p-14-067-transportation-integration-validation-run-step-362222027:    passengers: mean=29.85, std=5.32
+p-14-067-transportation-integration-validation-run-step-362222027:    fare_amount: mean=8.36, std=3.95
+p-14-067-transportation-integration-validation-run-step-362222027: OK
+p-14-067-transportation-integration-validation-run-step-362222027: time=2026-07-15T14:56:46.602Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-14-067-transportation-integration-validation-run-step-362222027: time=2026-07-15T14:56:46.604Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-14-067-transportation-integration-validation-run-step-245167895: time=2026-07-15T14:56:58.721Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-14-067-transportation-integration-validation-run-step-245167895: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-14-067-transportation-integration-validation-run-step-245167895: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-14-067-transportation-integration-validation-run-step-245167895:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-14-067-transportation-integration-validation-run-step-245167895: STEP 2: Clean & Standardize
+p-14-067-transportation-integration-validation-run-step-245167895:    Nulls: 0 → 0
+p-14-067-transportation-integration-validation-run-step-245167895: OK
+p-14-067-transportation-integration-validation-run-step-245167895: time=2026-07-15T14:56:59.722Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-14-067-transportation-integration-validation-run-step-245167895: time=2026-07-15T14:56:59.722Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-14-067-transportation-integration-validation-run-step-1089842199: time=2026-07-15T14:57:08.801Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-14-067-transportation-integration-validation-run-step-1089842199: STEP 3: Feature Engineering
+p-14-067-transportation-integration-validation-run-step-1089842199:    Created: 3 features
+p-14-067-transportation-integration-validation-run-step-1089842199:    14 columns
+p-14-067-transportation-integration-validation-run-step-1089842199: OK
+p-14-067-transportation-integration-validation-run-step-1089842199: time=2026-07-15T14:57:09.801Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-14-067-transportation-integration-validation-run-step-1089842199: time=2026-07-15T14:57:09.801Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-14-067-transportation-integration-validation-run-step-3569910643: time=2026-07-15T14:57:19.187Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-14-067-transportation-integration-validation-run-step-3569910643: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-14-067-transportation-integration-validation-run-step-3569910643: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-14-067-transportation-integration-validation-run-step-3569910643:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-14-067-transportation-integration-validation-run-step-3569910643: STEP 4: EDA & Visualization
+p-14-067-transportation-integration-validation-run-step-3569910643:    7 numerical, 4 categorical features
+p-14-067-transportation-integration-validation-run-step-3569910643: OK
+p-14-067-transportation-integration-validation-run-step-3569910643: time=2026-07-15T14:57:22.188Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-14-067-transportation-integration-validation-run-step-3569910643: time=2026-07-15T14:57:22.188Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-14-067-transportation-integration-validation-run-step-4148014291: time=2026-07-15T14:57:29.035Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-14-067-transportation-integration-validation-run-step-4148014291: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-14-067-transportation-integration-validation-run-step-4148014291: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-14-067-transportation-integration-validation-run-step-4148014291:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-14-067-transportation-integration-validation-run-step-4148014291: STEP 5: Model Training — integration, validation
+p-14-067-transportation-integration-validation-run-step-4148014291:    Accuracy: 0.540
+p-14-067-transportation-integration-validation-run-step-4148014291:    Model saved
+p-14-067-transportation-integration-validation-run-step-4148014291: time=2026-07-15T14:57:32.039Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-14-067-transportation-integration-validation-run-step-4148014291: time=2026-07-15T14:57:32.039Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-14-067-transportation-integration-validation-run-step-2906478199: time=2026-07-15T14:57:39.116Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-14-067-transportation-integration-validation-run-step-2906478199: STEP 6: Final Report
+p-14-067-transportation-integration-validation-run-step-2906478199: ======================================================================
+p-14-067-transportation-integration-validation-run-step-2906478199:     TRANSPORTATION PIPELINE: INTEGRATION, VALIDATION
+p-14-067-transportation-integration-validation-run-step-2906478199:     2026-07-15 14:57:39
+p-14-067-transportation-integration-validation-run-step-2906478199: ======================================================================
+p-14-067-transportation-integration-validation-run-step-2906478199: 
+p-14-067-transportation-integration-validation-run-step-2906478199: Domain: Transportation
+p-14-067-transportation-integration-validation-run-step-2906478199: Techniques Applied: integration, validation
+p-14-067-transportation-integration-validation-run-step-2906478199: 
+p-14-067-transportation-integration-validation-run-step-2906478199: Pipeline Steps:
+p-14-067-transportation-integration-validation-run-step-2906478199:   1. Data Loading & Profiling
+p-14-067-transportation-integration-validation-run-step-2906478199:   2. Data Cleaning & Standardization
+p-14-067-transportation-integration-validation-run-step-2906478199:   3. Feature Engineering
+p-14-067-transportation-integration-validation-run-step-2906478199:   4. Exploratory Data Analysis & Visualization
+p-14-067-transportation-integration-validation-run-step-2906478199:   5. Model Training & Evaluation
+p-14-067-transportation-integration-validation-run-step-2906478199:   6. Final Synthesis & Business Recommendations
+p-14-067-transportation-integration-validation-run-step-2906478199: 
+p-14-067-transportation-integration-validation-run-step-2906478199: Key outputs are available in the output/ directory.
+p-14-067-transportation-integration-validation-run-step-2906478199: 
+p-14-067-transportation-integration-validation-run-step-2906478199: Recommendations:
+p-14-067-transportation-integration-validation-run-step-2906478199:   • Monitor model performance monthly
+p-14-067-transportation-integration-validation-run-step-2906478199:   • Reassess feature importance quarterly
+p-14-067-transportation-integration-validation-run-step-2906478199:   • Retrain models with fresh data biannually
+p-14-067-transportation-integration-validation-run-step-2906478199: ======================================================================
+p-14-067-transportation-integration-validation-run-step-2906478199: OK
+p-14-067-transportation-integration-validation-run-step-2906478199: time=2026-07-15T14:57:40.116Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-14-067-transportation-integration-validation-run-step-2906478199: time=2026-07-15T14:57:40.116Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

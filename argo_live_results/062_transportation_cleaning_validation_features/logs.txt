@@ -1,0 +1,73 @@
+p-13-062-transportation-cleaning-validation-features-run-step-868444934: time=2026-07-15T14:53:56.896Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-062-transportation-cleaning-validation-features-run-step-868444934: STEP 1: Load & Profile — Transportation | Techniques: cleaning, features, validation
+p-13-062-transportation-cleaning-validation-features-run-step-868444934:    Data: 647 rows x 11 cols
+p-13-062-transportation-cleaning-validation-features-run-step-868444934:    Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+p-13-062-transportation-cleaning-validation-features-run-step-868444934:    departure_hour: mean=10.95, std=6.82
+p-13-062-transportation-cleaning-validation-features-run-step-868444934:    distance_km: mean=23.68, std=12.61
+p-13-062-transportation-cleaning-validation-features-run-step-868444934:    passengers: mean=29.97, std=5.59
+p-13-062-transportation-cleaning-validation-features-run-step-868444934:    fare_amount: mean=8.00, std=3.79
+p-13-062-transportation-cleaning-validation-features-run-step-868444934: OK
+p-13-062-transportation-cleaning-validation-features-run-step-868444934: time=2026-07-15T14:53:57.897Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-13-062-transportation-cleaning-validation-features-run-step-868444934: time=2026-07-15T14:53:57.897Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-13-062-transportation-cleaning-validation-features-run-step-4009709914: time=2026-07-15T14:54:10.043Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-062-transportation-cleaning-validation-features-run-step-4009709914: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-13-062-transportation-cleaning-validation-features-run-step-4009709914: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-13-062-transportation-cleaning-validation-features-run-step-4009709914:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-13-062-transportation-cleaning-validation-features-run-step-4009709914: STEP 2: Clean & Standardize
+p-13-062-transportation-cleaning-validation-features-run-step-4009709914:    Nulls: 0 → 0
+p-13-062-transportation-cleaning-validation-features-run-step-4009709914: OK
+p-13-062-transportation-cleaning-validation-features-run-step-4009709914: time=2026-07-15T14:54:11.043Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-13-062-transportation-cleaning-validation-features-run-step-4009709914: time=2026-07-15T14:54:11.043Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-13-062-transportation-cleaning-validation-features-run-step-1553485166: time=2026-07-15T14:54:20.442Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-062-transportation-cleaning-validation-features-run-step-1553485166: STEP 3: Feature Engineering
+p-13-062-transportation-cleaning-validation-features-run-step-1553485166:    Created: 3 features
+p-13-062-transportation-cleaning-validation-features-run-step-1553485166:    14 columns
+p-13-062-transportation-cleaning-validation-features-run-step-1553485166: OK
+p-13-062-transportation-cleaning-validation-features-run-step-1553485166: time=2026-07-15T14:54:21.442Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-13-062-transportation-cleaning-validation-features-run-step-1553485166: time=2026-07-15T14:54:21.442Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-13-062-transportation-cleaning-validation-features-run-step-3146780642: time=2026-07-15T14:54:31.212Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-062-transportation-cleaning-validation-features-run-step-3146780642: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-13-062-transportation-cleaning-validation-features-run-step-3146780642: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-13-062-transportation-cleaning-validation-features-run-step-3146780642:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-13-062-transportation-cleaning-validation-features-run-step-3146780642: STEP 4: EDA & Visualization
+p-13-062-transportation-cleaning-validation-features-run-step-3146780642:    7 numerical, 4 categorical features
+p-13-062-transportation-cleaning-validation-features-run-step-3146780642: OK
+p-13-062-transportation-cleaning-validation-features-run-step-3146780642: time=2026-07-15T14:54:34.219Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-13-062-transportation-cleaning-validation-features-run-step-3146780642: time=2026-07-15T14:54:34.219Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-13-062-transportation-cleaning-validation-features-run-step-2249403974: time=2026-07-15T14:54:40.406Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-13-062-transportation-cleaning-validation-features-run-step-2249403974: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-13-062-transportation-cleaning-validation-features-run-step-2249403974: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-13-062-transportation-cleaning-validation-features-run-step-2249403974:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-13-062-transportation-cleaning-validation-features-run-step-2249403974: STEP 5: Model Training — cleaning, features, validation
+p-13-062-transportation-cleaning-validation-features-run-step-2249403974:    Accuracy: 0.500
+p-13-062-transportation-cleaning-validation-features-run-step-2249403974:    Model saved
+p-13-062-transportation-cleaning-validation-features-run-step-2249403974: time=2026-07-15T14:54:43.412Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-13-062-transportation-cleaning-validation-features-run-step-2249403974: time=2026-07-15T14:54:43.412Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: time=2026-07-15T14:54:50.501Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: STEP 6: Final Report
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: ======================================================================
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:     TRANSPORTATION PIPELINE: CLEANING, FEATURES, VALIDATION
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:     2026-07-15 14:54:50
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: ======================================================================
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: 
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: Domain: Transportation
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: Techniques Applied: cleaning, features, validation
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: 
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: Pipeline Steps:
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:   1. Data Loading & Profiling
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:   2. Data Cleaning & Standardization
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:   3. Feature Engineering
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:   4. Exploratory Data Analysis & Visualization
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:   5. Model Training & Evaluation
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:   6. Final Synthesis & Business Recommendations
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: 
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: Key outputs are available in the output/ directory.
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: 
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: Recommendations:
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:   • Monitor model performance monthly
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:   • Reassess feature importance quarterly
+p-13-062-transportation-cleaning-validation-features-run-step-746719090:   • Retrain models with fresh data biannually
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: ======================================================================
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: OK
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: time=2026-07-15T14:54:51.501Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-13-062-transportation-cleaning-validation-features-run-step-746719090: time=2026-07-15T14:54:51.501Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

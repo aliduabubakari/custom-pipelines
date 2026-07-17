@@ -1,0 +1,221 @@
+p-1-004-customer-churn-run-step-1167362678: time=2026-07-15T14:16:18.141Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-1167362678: ============================================================
+p-1-004-customer-churn-run-step-1167362678: STEP 1: Data Loading & Profiling
+p-1-004-customer-churn-run-step-1167362678: ============================================================
+p-1-004-customer-churn-run-step-1167362678: 
+p-1-004-customer-churn-run-step-1167362678: 📊 CUSTOMERS: 500 profiles, 12 columns
+p-1-004-customer-churn-run-step-1167362678:    Columns: customer_id, segment, acquisition_channel, city, state, payment_method, plan_type, signup_date, tenure_days, monthly_fee, support_contacts, is_churned
+p-1-004-customer-churn-run-step-1167362678:    Churn rate: 28.0%
+p-1-004-customer-churn-run-step-1167362678:    Segments: {'Basic': 250, 'Premium': 168, 'Enterprise': 82}
+p-1-004-customer-churn-run-step-1167362678:    Nulls: 0 total
+p-1-004-customer-churn-run-step-1167362678: 
+p-1-004-customer-churn-run-step-1167362678: 📊 TRANSACTIONS: 15843 records across 500 customers
+p-1-004-customer-churn-run-step-1167362678:    Date range: 2019-01-20 to 2024-12-31
+p-1-004-customer-churn-run-step-1167362678:    Avg order value: $45.53
+p-1-004-customer-churn-run-step-1167362678:    Return rate: 7.9%
+p-1-004-customer-churn-run-step-1167362678:    Categories: 10
+p-1-004-customer-churn-run-step-1167362678: 
+p-1-004-customer-churn-run-step-1167362678: ✅ Step 1 complete
+p-1-004-customer-churn-run-step-1167362678: time=2026-07-15T14:16:20.143Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-1167362678: time=2026-07-15T14:16:20.143Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-854617674: time=2026-07-15T14:16:32.414Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-854617674: ============================================================
+p-1-004-customer-churn-run-step-854617674: STEP 2: Data Aggregation — Customer Metrics
+p-1-004-customer-churn-run-step-854617674: ============================================================
+p-1-004-customer-churn-run-step-854617674: 
+p-1-004-customer-churn-run-step-854617674: 📊 Aggregating 15843 transactions...
+p-1-004-customer-churn-run-step-854617674:    Aggregated: 500 customers with metrics
+p-1-004-customer-churn-run-step-854617674:    Avg spend: $1443 | Avg orders: 31.7
+p-1-004-customer-churn-run-step-854617674:    Avg return rate: 7.6% | Avg categories: 8.7
+p-1-004-customer-churn-run-step-854617674: 
+p-1-004-customer-churn-run-step-854617674: ✅ Step 2 complete
+p-1-004-customer-churn-run-step-854617674: time=2026-07-15T14:16:33.415Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-854617674: time=2026-07-15T14:16:33.415Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-514718174: time=2026-07-15T14:16:42.318Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-514718174: ============================================================
+p-1-004-customer-churn-run-step-514718174: STEP 3: Data Merging & Integration
+p-1-004-customer-churn-run-step-514718174: ============================================================
+p-1-004-customer-churn-run-step-514718174: 
+p-1-004-customer-churn-run-step-514718174: 📊 Merged: 500 rows (customers: 500, metrics: 500)
+p-1-004-customer-churn-run-step-514718174:    All customers matched: True
+p-1-004-customer-churn-run-step-514718174:    Churn rate preserved: 28.0%
+p-1-004-customer-churn-run-step-514718174: 
+p-1-004-customer-churn-run-step-514718174: ✅ Step 3 complete
+p-1-004-customer-churn-run-step-514718174: time=2026-07-15T14:16:43.320Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-514718174: time=2026-07-15T14:16:43.320Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-584657490: time=2026-07-15T14:16:53.530Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-584657490: /pipeline/scripts/step_04_data-cleaning-standardization.py:33: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-1-004-customer-churn-run-step-584657490: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-1-004-customer-churn-run-step-584657490:   for col in df.select_dtypes(include=['object']).columns:
+p-1-004-customer-churn-run-step-584657490: ============================================================
+p-1-004-customer-churn-run-step-584657490: STEP 4: Data Cleaning & Standardization
+p-1-004-customer-churn-run-step-584657490: ============================================================
+p-1-004-customer-churn-run-step-584657490: 
+p-1-004-customer-churn-run-step-584657490: 📊 Loaded: 500 rows × 23 cols
+p-1-004-customer-churn-run-step-584657490:    Nulls: 0 → 0
+p-1-004-customer-churn-run-step-584657490: 
+p-1-004-customer-churn-run-step-584657490: ✅ Step 4 complete
+p-1-004-customer-churn-run-step-584657490: time=2026-07-15T14:16:54.531Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-584657490: time=2026-07-15T14:16:54.531Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-3982248118: time=2026-07-15T14:17:02.644Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-3982248118: ============================================================
+p-1-004-customer-churn-run-step-3982248118: STEP 5: Feature Engineering
+p-1-004-customer-churn-run-step-3982248118: ============================================================
+p-1-004-customer-churn-run-step-3982248118: 
+p-1-004-customer-churn-run-step-3982248118: 🔧 Created 8 new features: recency_score (5 bins), frequency_score (5 bins), monetary_score (5 bins), engagement_score +4 more
+p-1-004-customer-churn-run-step-3982248118:    Final: 32 columns
+p-1-004-customer-churn-run-step-3982248118: ✅ Step 5 complete
+p-1-004-customer-churn-run-step-3982248118: time=2026-07-15T14:17:03.644Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-3982248118: time=2026-07-15T14:17:03.644Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-3828014178: time=2026-07-15T14:17:12.577Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-3828014178: ============================================================
+p-1-004-customer-churn-run-step-3828014178: STEP 6: Exploratory Data Analysis
+p-1-004-customer-churn-run-step-3828014178: ============================================================
+p-1-004-customer-churn-run-step-3828014178: 
+p-1-004-customer-churn-run-step-3828014178: 📊 Churn by segment:
+p-1-004-customer-churn-run-step-3828014178:    Basic: 41.2% (n=250)
+p-1-004-customer-churn-run-step-3828014178:    Enterprise: 9.8% (n=82)
+p-1-004-customer-churn-run-step-3828014178:    Premium: 17.3% (n=168)
+p-1-004-customer-churn-run-step-3828014178: 
+p-1-004-customer-churn-run-step-3828014178: 📊 Churn by acquisition_channel:
+p-1-004-customer-churn-run-step-3828014178:    Direct: 23.3% (n=43)
+p-1-004-customer-churn-run-step-3828014178:    Organic: 23.8% (n=151)
+p-1-004-customer-churn-run-step-3828014178:    Paid Search: 39.1% (n=115)
+p-1-004-customer-churn-run-step-3828014178:    Referral: 28.0% (n=118)
+p-1-004-customer-churn-run-step-3828014178:    Social Media: 21.9% (n=73)
+p-1-004-customer-churn-run-step-3828014178: 
+p-1-004-customer-churn-run-step-3828014178: 📊 Churn by plan_type:
+p-1-004-customer-churn-run-step-3828014178:    Annual: 26.4% (n=193)
+p-1-004-customer-churn-run-step-3828014178:    Monthly: 29.0% (n=307)
+p-1-004-customer-churn-run-step-3828014178: 
+p-1-004-customer-churn-run-step-3828014178: 📊 Churn by tenure_group:
+p-1-004-customer-churn-run-step-3828014178:    <1mo: nan% (n=0)
+p-1-004-customer-churn-run-step-3828014178:    1-3mo: nan% (n=0)
+p-1-004-customer-churn-run-step-3828014178:    3-6mo: nan% (n=0)
+p-1-004-customer-churn-run-step-3828014178:    6-12mo: 8.3% (n=36)
+p-1-004-customer-churn-run-step-3828014178:    1-2yr: 34.9% (n=86)
+p-1-004-customer-churn-run-step-3828014178:    2yr+: 28.3% (n=378)
+p-1-004-customer-churn-run-step-3828014178: 
+p-1-004-customer-churn-run-step-3828014178: 🔗 Top churn correlations:
+p-1-004-customer-churn-run-step-3828014178:    days_since_last_purchase: +0.386
+p-1-004-customer-churn-run-step-3828014178:    recency_score: -0.354
+p-1-004-customer-churn-run-step-3828014178:    purchase_count: -0.306
+p-1-004-customer-churn-run-step-3828014178:    category_diversity: -0.284
+p-1-004-customer-churn-run-step-3828014178:    total_spend: -0.276
+p-1-004-customer-churn-run-step-3828014178:    monthly_fee: -0.239
+p-1-004-customer-churn-run-step-3828014178:    engagement_score: -0.214
+p-1-004-customer-churn-run-step-3828014178:    frequency_score: -0.204
+p-1-004-customer-churn-run-step-3828014178: 
+p-1-004-customer-churn-run-step-3828014178: ✅ Step 6 complete
+p-1-004-customer-churn-run-step-3828014178: time=2026-07-15T14:17:15.579Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-3828014178: time=2026-07-15T14:17:15.579Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-2609861438: time=2026-07-15T14:17:22.598Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-2609861438: ============================================================
+p-1-004-customer-churn-run-step-2609861438: STEP 7: Data Visualization — Churn Patterns
+p-1-004-customer-churn-run-step-2609861438: ============================================================
+p-1-004-customer-churn-run-step-2609861438: 📊 Dashboard generated with 6 panels
+p-1-004-customer-churn-run-step-2609861438: ✅ Step 7 complete
+p-1-004-customer-churn-run-step-2609861438: time=2026-07-15T14:17:25.635Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-2609861438: time=2026-07-15T14:17:25.636Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-587612410: time=2026-07-15T14:17:32.724Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-1-004-customer-churn-run-step-587612410: /pipeline/scripts/step_08_data-visualization--behavioral-analysis.py:27: UserWarning: You passed an edgecolor/edgecolors ('none') for an unfilled marker ('x').  Matplotlib is ignoring the edgecolor in favor of the facecolor.  This behavior may change in the future.
+p-1-004-customer-churn-run-step-587612410:   axes[0, 0].scatter(subset["days_since_last_purchase"].clip(0, 365),
+p-1-004-customer-churn-run-step-587612410: ============================================================
+p-1-004-customer-churn-run-step-587612410: STEP 8: Data Visualization — Behavioral Analysis
+p-1-004-customer-churn-run-step-587612410: ============================================================
+p-1-004-customer-churn-run-step-587612410: 📊 Behavioral dashboard generated
+p-1-004-customer-churn-run-step-587612410: ✅ Step 8 complete
+p-1-004-customer-churn-run-step-587612410: time=2026-07-15T14:17:34.725Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-587612410: time=2026-07-15T14:17:34.725Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-598102342: time=2026-07-15T14:17:42.823Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-598102342: ============================================================
+p-1-004-customer-churn-run-step-598102342: STEP 9: Statistical Analysis
+p-1-004-customer-churn-run-step-598102342: ============================================================
+p-1-004-customer-churn-run-step-598102342: 📊 segment vs churn: χ²=44.75, p=0.0000 *
+p-1-004-customer-churn-run-step-598102342: 📊 acquisition_channel vs churn: χ²=10.18, p=0.0375 *
+p-1-004-customer-churn-run-step-598102342: 📊 plan_type vs churn: χ²=0.27, p=0.6033 
+p-1-004-customer-churn-run-step-598102342: 📊 tenure_days: t=-0.64, p=0.5235  (churned=1186.3 vs retained=1222.0)
+p-1-004-customer-churn-run-step-598102342: 📊 total_spend: t=-6.42, p=0.0000 * (churned=988.5 vs retained=1616.0)
+p-1-004-customer-churn-run-step-598102342: 📊 monthly_fee: t=-5.50, p=0.0000 * (churned=33.8 vs retained=58.0)
+p-1-004-customer-churn-run-step-598102342: 📊 support_contacts: t=3.32, p=0.0010 * (churned=1.8 vs retained=1.4)
+p-1-004-customer-churn-run-step-598102342: 📊 return_rate: t=2.39, p=0.0172 * (churned=0.1 vs retained=0.1)
+p-1-004-customer-churn-run-step-598102342: 📊 purchase_frequency: t=-4.38, p=0.0000 * (churned=0.8 vs retained=1.3)
+p-1-004-customer-churn-run-step-598102342: 📊 days_since_last_purchase: t=9.33, p=0.0000 * (churned=101.4 vs retained=35.3)
+p-1-004-customer-churn-run-step-598102342: 
+p-1-004-customer-churn-run-step-598102342: 📋 8/10 tests significant at α=0.05
+p-1-004-customer-churn-run-step-598102342: ✅ Step 9 complete
+p-1-004-customer-churn-run-step-598102342: time=2026-07-15T14:17:44.823Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-598102342: time=2026-07-15T14:17:44.823Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-1888627637: time=2026-07-15T14:17:52.908Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-1888627637: ============================================================
+p-1-004-customer-churn-run-step-1888627637: STEP 10: Cohort Analysis
+p-1-004-customer-churn-run-step-1888627637: ============================================================
+p-1-004-customer-churn-run-step-1888627637: 
+p-1-004-customer-churn-run-step-1888627637: 📊 Retention Matrix (8 cohorts):
+p-1-004-customer-churn-run-step-1888627637: Cohort     M    0 M    2 M    4 M    6 M    8 M   10 M   12
+p-1-004-customer-churn-run-step-1888627637: 2023-10      100%   100%   100%   100%   100%   100%   100%
+p-1-004-customer-churn-run-step-1888627637: 2023-11      100%   100%   100%   100%   100%   100%   100%
+p-1-004-customer-churn-run-step-1888627637: 2023-12      100%   100%   100%   100%   100%   100%   100%
+p-1-004-customer-churn-run-step-1888627637: 2024-01      100%   100%   100%   100%   100%   100%     0%
+p-1-004-customer-churn-run-step-1888627637: 2024-02      100%   100%   100%   100%   100%   100%     0%
+p-1-004-customer-churn-run-step-1888627637: 2024-03      100%   100%   100%   100%   100%    17%     0%
+p-1-004-customer-churn-run-step-1888627637: 2024-04      100%   100%   100%   100%   100%     0%     0%
+p-1-004-customer-churn-run-step-1888627637: 2024-05      100%   100%   100%   100%     0%     0%     0%
+p-1-004-customer-churn-run-step-1888627637: 
+p-1-004-customer-churn-run-step-1888627637: ✅ Step 10 complete
+p-1-004-customer-churn-run-step-1888627637: time=2026-07-15T14:17:54.934Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-1888627637: time=2026-07-15T14:17:54.934Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-1521663674: time=2026-07-15T14:18:02.852Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-1521663674: /pipeline/scripts/step_11_data-preparation-for-modeling.py:32: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-1-004-customer-churn-run-step-1521663674: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-1-004-customer-churn-run-step-1521663674:   cat_cols = X.select_dtypes(include=['object', 'category']).columns.tolist()
+p-1-004-customer-churn-run-step-1521663674: ============================================================
+p-1-004-customer-churn-run-step-1521663674: STEP 11: Data Preparation for Modeling
+p-1-004-customer-churn-run-step-1521663674: ============================================================
+p-1-004-customer-churn-run-step-1521663674: 
+p-1-004-customer-churn-run-step-1521663674: 📊 Features: 19 numerical, 8 categorical
+p-1-004-customer-churn-run-step-1521663674: 
+p-1-004-customer-churn-run-step-1521663674: 📦 Splits: Train=350 | Val=75 | Test=75
+p-1-004-customer-churn-run-step-1521663674:    Train churn rate: 28.0%
+p-1-004-customer-churn-run-step-1521663674:    Val churn rate: 28.0%
+p-1-004-customer-churn-run-step-1521663674:    Test churn rate: 28.0%
+p-1-004-customer-churn-run-step-1521663674: 
+p-1-004-customer-churn-run-step-1521663674: ✅ Step 11 complete — 68 features ready for modeling
+p-1-004-customer-churn-run-step-1521663674: time=2026-07-15T14:18:04.852Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-1-004-customer-churn-run-step-1521663674: time=2026-07-15T14:18:04.852Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-2792980934: time=2026-07-15T14:18:12.851Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-1-004-customer-churn-run-step-2792980934: ============================================================
+p-1-004-customer-churn-run-step-2792980934: Traceback (most recent call last):
+p-1-004-customer-churn-run-step-2792980934:   File "/pipeline/scripts/step_12_model-training--multi-model-comparison.py", line 120, in <module>
+p-1-004-customer-churn-run-step-2792980934: STEP 12: Model Training — Multi-Model Comparison
+p-1-004-customer-churn-run-step-2792980934: ============================================================
+p-1-004-customer-churn-run-step-2792980934: 
+p-1-004-customer-churn-run-step-2792980934: 🔷 Logistic Regression
+p-1-004-customer-churn-run-step-2792980934:    ROC-AUC: 0.7778
+p-1-004-customer-churn-run-step-2792980934: 
+p-1-004-customer-churn-run-step-2792980934: 🔷 Random Forest
+p-1-004-customer-churn-run-step-2792980934:    ROC-AUC: 0.8236
+p-1-004-customer-churn-run-step-2792980934: 
+p-1-004-customer-churn-run-step-2792980934: 🔷 XGBoost
+p-1-004-customer-churn-run-step-2792980934:     main()
+p-1-004-customer-churn-run-step-2792980934:    ROC-AUC: 0.7513
+p-1-004-customer-churn-run-step-2792980934:   File "/pipeline/scripts/step_12_model-training--multi-model-comparison.py", line 66, in main
+p-1-004-customer-churn-run-step-2792980934:     import lightgbm as lgb
+p-1-004-customer-churn-run-step-2792980934:   File "/usr/local/lib/python3.12/site-packages/lightgbm/__init__.py", line 11, in <module>
+p-1-004-customer-churn-run-step-2792980934:     from .basic import Booster, Dataset, Sequence, register_logger
+p-1-004-customer-churn-run-step-2792980934:   File "/usr/local/lib/python3.12/site-packages/lightgbm/basic.py", line 9, in <module>
+p-1-004-customer-churn-run-step-2792980934:     from .libpath import _LIB  # isort: skip
+p-1-004-customer-churn-run-step-2792980934:     ^^^^^^^^^^^^^^^^^^^^^^^^^
+p-1-004-customer-churn-run-step-2792980934:   File "/usr/local/lib/python3.12/site-packages/lightgbm/libpath.py", line 49, in <module>
+p-1-004-customer-churn-run-step-2792980934:     _LIB = ctypes.cdll.LoadLibrary(_find_lib_path()[0])
+p-1-004-customer-churn-run-step-2792980934:            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+p-1-004-customer-churn-run-step-2792980934:   File "/usr/local/lib/python3.12/ctypes/__init__.py", line 460, in LoadLibrary
+p-1-004-customer-churn-run-step-2792980934:     return self._dlltype(name)
+p-1-004-customer-churn-run-step-2792980934:            ^^^^^^^^^^^^^^^^^^^
+p-1-004-customer-churn-run-step-2792980934:   File "/usr/local/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+p-1-004-customer-churn-run-step-2792980934:     self._handle = _dlopen(self._name, mode)
+p-1-004-customer-churn-run-step-2792980934:                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+p-1-004-customer-churn-run-step-2792980934: OSError: libgomp.so.1: cannot open shared object file: No such file or directory
+p-1-004-customer-churn-run-step-2792980934: time=2026-07-15T14:18:17.852Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-1-004-customer-churn-run-step-2792980934: time=2026-07-15T14:18:17.852Z level=INFO msg="sub-process exited" argo=true error="exit status 1"
+p-1-004-customer-churn-run-step-2792980934: Error: exit status 1

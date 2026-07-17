@@ -1,0 +1,55 @@
+p-2-007-employee-attrition-run-step-400979880: time=2026-07-15T14:20:34.390Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-007-employee-attrition-run-step-400979880: STEP 1: Load & Profile
+p-2-007-employee-attrition-run-step-400979880:    employees: 500 rows x 19 cols
+p-2-007-employee-attrition-run-step-400979880:    engagement: 970 rows x 7 cols
+p-2-007-employee-attrition-run-step-400979880:    reviews: 2099 rows x 7 cols
+p-2-007-employee-attrition-run-step-400979880: OK
+p-2-007-employee-attrition-run-step-400979880: time=2026-07-15T14:20:36.391Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-007-employee-attrition-run-step-400979880: time=2026-07-15T14:20:36.391Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-007-employee-attrition-run-step-3757395408: time=2026-07-15T14:20:49.061Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-007-employee-attrition-run-step-3757395408: /pipeline/scripts/step_02_clean.py:12: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-2-007-employee-attrition-run-step-3757395408: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-2-007-employee-attrition-run-step-3757395408:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-2-007-employee-attrition-run-step-3757395408: STEP 2: Clean & Standardize
+p-2-007-employee-attrition-run-step-3757395408:    500 rows saved
+p-2-007-employee-attrition-run-step-3757395408: OK
+p-2-007-employee-attrition-run-step-3757395408: time=2026-07-15T14:20:50.061Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-007-employee-attrition-run-step-3757395408: time=2026-07-15T14:20:50.061Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-007-employee-attrition-run-step-1964857152: time=2026-07-15T14:20:58.932Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-007-employee-attrition-run-step-1964857152: STEP 3: Feature Engineering
+p-2-007-employee-attrition-run-step-1964857152:    Created: tenure_years, tenure_group
+p-2-007-employee-attrition-run-step-1964857152:    21 cols
+p-2-007-employee-attrition-run-step-1964857152: OK
+p-2-007-employee-attrition-run-step-1964857152: time=2026-07-15T14:20:59.933Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-007-employee-attrition-run-step-1964857152: time=2026-07-15T14:20:59.933Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-007-employee-attrition-run-step-2120870600: time=2026-07-15T14:21:07.944Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-007-employee-attrition-run-step-2120870600: STEP 4: EDA
+p-2-007-employee-attrition-run-step-2120870600:    12 numerical features
+p-2-007-employee-attrition-run-step-2120870600: OK
+p-2-007-employee-attrition-run-step-2120870600: time=2026-07-15T14:21:10.948Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-007-employee-attrition-run-step-2120870600: time=2026-07-15T14:21:10.948Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-007-employee-attrition-run-step-3928280072: time=2026-07-15T14:21:19.106Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-007-employee-attrition-run-step-3928280072: /pipeline/scripts/step_05_model.py:27: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-2-007-employee-attrition-run-step-3928280072: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-2-007-employee-attrition-run-step-3928280072:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-2-007-employee-attrition-run-step-3928280072: STEP 5: Model Training
+p-2-007-employee-attrition-run-step-3928280072:    Target: is_attrited
+p-2-007-employee-attrition-run-step-3928280072:    ROC-AUC: 0.680, Acc: 77.00%
+p-2-007-employee-attrition-run-step-3928280072: time=2026-07-15T14:21:22.107Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-007-employee-attrition-run-step-3928280072: time=2026-07-15T14:21:22.107Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-007-employee-attrition-run-step-789573024: time=2026-07-15T14:21:28.107Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-007-employee-attrition-run-step-789573024: STEP 6: Final Report
+p-2-007-employee-attrition-run-step-789573024: ============================================================
+p-2-007-employee-attrition-run-step-789573024:     EMPLOYEE ATTRITION PREDICTION — FINAL REPORT
+p-2-007-employee-attrition-run-step-789573024:     2026-07-15 14:21:28
+p-2-007-employee-attrition-run-step-789573024: ============================================================
+p-2-007-employee-attrition-run-step-789573024: 
+p-2-007-employee-attrition-run-step-789573024: Domain: HR Analytics
+p-2-007-employee-attrition-run-step-789573024: Predicting employee attrition using demographics, engagement surveys, and performance reviews.
+p-2-007-employee-attrition-run-step-789573024: 
+p-2-007-employee-attrition-run-step-789573024: This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+p-2-007-employee-attrition-run-step-789573024: Key outputs are in the output/ directory.
+p-2-007-employee-attrition-run-step-789573024: ============================================================
+p-2-007-employee-attrition-run-step-789573024: OK
+p-2-007-employee-attrition-run-step-789573024: time=2026-07-15T14:21:29.108Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-007-employee-attrition-run-step-789573024: time=2026-07-15T14:21:29.108Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

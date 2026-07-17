@@ -1,0 +1,75 @@
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790: time=2026-07-15T14:27:07.805Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790: STEP 1: Load & Profile — Sports | Techniques: prediction, statistical, visualization
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790:    Data: 553 rows x 17 cols
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790:    Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790:    games_played: mean=45.95, std=21.32
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790:    points_per_game: mean=12.56, std=7.68
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790:    assists_per_game: mean=4.02, std=2.82
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790:    rebounds_per_game: mean=6.19, std=3.64
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790: OK
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790: time=2026-07-15T14:27:08.806Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-4-020-sports-prediction-statistical-visualization-run-step-4241355790: time=2026-07-15T14:27:08.806Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-4-020-sports-prediction-statistical-visualization-run-step-499219842: time=2026-07-15T14:27:19.390Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-020-sports-prediction-statistical-visualization-run-step-499219842: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-4-020-sports-prediction-statistical-visualization-run-step-499219842: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-4-020-sports-prediction-statistical-visualization-run-step-499219842:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-4-020-sports-prediction-statistical-visualization-run-step-499219842: STEP 2: Clean & Standardize
+p-4-020-sports-prediction-statistical-visualization-run-step-499219842:    Nulls: 0 → 0
+p-4-020-sports-prediction-statistical-visualization-run-step-499219842: OK
+p-4-020-sports-prediction-statistical-visualization-run-step-499219842: time=2026-07-15T14:27:20.390Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-4-020-sports-prediction-statistical-visualization-run-step-499219842: time=2026-07-15T14:27:20.390Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-4-020-sports-prediction-statistical-visualization-run-step-4104050326: time=2026-07-15T14:27:29.334Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-020-sports-prediction-statistical-visualization-run-step-4104050326: STEP 3: Feature Engineering
+p-4-020-sports-prediction-statistical-visualization-run-step-4104050326:    Created: 3 features
+p-4-020-sports-prediction-statistical-visualization-run-step-4104050326:    20 columns
+p-4-020-sports-prediction-statistical-visualization-run-step-4104050326: OK
+p-4-020-sports-prediction-statistical-visualization-run-step-4104050326: time=2026-07-15T14:27:30.335Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-4-020-sports-prediction-statistical-visualization-run-step-4104050326: time=2026-07-15T14:27:30.335Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-4-020-sports-prediction-statistical-visualization-run-step-984281834: time=2026-07-15T14:27:39.306Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-020-sports-prediction-statistical-visualization-run-step-984281834: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-4-020-sports-prediction-statistical-visualization-run-step-984281834: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-4-020-sports-prediction-statistical-visualization-run-step-984281834:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-4-020-sports-prediction-statistical-visualization-run-step-984281834: STEP 4: EDA & Visualization
+p-4-020-sports-prediction-statistical-visualization-run-step-984281834:    16 numerical, 3 categorical features
+p-4-020-sports-prediction-statistical-visualization-run-step-984281834: OK
+p-4-020-sports-prediction-statistical-visualization-run-step-984281834: time=2026-07-15T14:27:42.327Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-4-020-sports-prediction-statistical-visualization-run-step-984281834: time=2026-07-15T14:27:42.327Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646: time=2026-07-15T14:27:49.378Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646: STEP 5: Model Training — prediction, statistical, visualization
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646:    ROC-AUC: 0.492, Acc: 61.26%
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646:    Pearson r: 0.011, p=0.7922
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646:    ANOVA by team: F=0.67, p=0.6168
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646:    Model saved
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646: time=2026-07-15T14:27:52.379Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-4-020-sports-prediction-statistical-visualization-run-step-2958457646: time=2026-07-15T14:27:52.379Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: time=2026-07-15T14:27:59.378Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: STEP 6: Final Report
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: ======================================================================
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:     SPORTS PIPELINE: PREDICTION, STATISTICAL, VISUALIZATION
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:     2026-07-15 14:27:59
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: ======================================================================
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: 
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: Domain: Sports
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: Techniques Applied: prediction, statistical, visualization
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: 
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: Pipeline Steps:
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:   1. Data Loading & Profiling
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:   2. Data Cleaning & Standardization
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:   3. Feature Engineering
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:   4. Exploratory Data Analysis & Visualization
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:   5. Model Training & Evaluation
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:   6. Final Synthesis & Business Recommendations
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: 
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: Key outputs are available in the output/ directory.
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: 
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: Recommendations:
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:   • Monitor model performance monthly
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:   • Reassess feature importance quarterly
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866:   • Retrain models with fresh data biannually
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: ======================================================================
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: OK
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: time=2026-07-15T14:28:00.379Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-4-020-sports-prediction-statistical-visualization-run-step-1688647866: time=2026-07-15T14:28:00.379Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

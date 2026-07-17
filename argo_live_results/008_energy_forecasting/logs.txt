@@ -1,0 +1,50 @@
+p-2-008-energy-forecasting-run-step-1385053784: time=2026-07-15T14:20:34.286Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-008-energy-forecasting-run-step-1385053784: STEP 1: Load & Profile
+p-2-008-energy-forecasting-run-step-1385053784:    energy: 8760 rows x 7 cols
+p-2-008-energy-forecasting-run-step-1385053784:    weather: 365 rows x 8 cols
+p-2-008-energy-forecasting-run-step-1385053784: OK
+p-2-008-energy-forecasting-run-step-1385053784: time=2026-07-15T14:20:36.287Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-008-energy-forecasting-run-step-1385053784: time=2026-07-15T14:20:36.287Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-008-energy-forecasting-run-step-2669842048: time=2026-07-15T14:20:49.050Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-2-008-energy-forecasting-run-step-2669842048: /pipeline/scripts/step_02_clean.py:12: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-2-008-energy-forecasting-run-step-2669842048: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-2-008-energy-forecasting-run-step-2669842048:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-2-008-energy-forecasting-run-step-2669842048: STEP 2: Clean & Standardize
+p-2-008-energy-forecasting-run-step-2669842048:    8760 rows saved
+p-2-008-energy-forecasting-run-step-2669842048: OK
+p-2-008-energy-forecasting-run-step-2669842048: time=2026-07-15T14:20:50.050Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-008-energy-forecasting-run-step-2669842048: time=2026-07-15T14:20:50.050Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-008-energy-forecasting-run-step-2147521776: time=2026-07-15T14:20:58.863Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-008-energy-forecasting-run-step-2147521776: STEP 3: Feature Engineering
+p-2-008-energy-forecasting-run-step-2147521776:    7 cols
+p-2-008-energy-forecasting-run-step-2147521776: OK
+p-2-008-energy-forecasting-run-step-2147521776: time=2026-07-15T14:20:59.863Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-008-energy-forecasting-run-step-2147521776: time=2026-07-15T14:20:59.863Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-008-energy-forecasting-run-step-708134136: time=2026-07-15T14:21:08.054Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-008-energy-forecasting-run-step-708134136: STEP 4: EDA
+p-2-008-energy-forecasting-run-step-708134136:    6 numerical features
+p-2-008-energy-forecasting-run-step-708134136: OK
+p-2-008-energy-forecasting-run-step-708134136: time=2026-07-15T14:21:11.059Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-008-energy-forecasting-run-step-708134136: time=2026-07-15T14:21:11.059Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-008-energy-forecasting-run-step-1021230776: time=2026-07-15T14:21:19.071Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-008-energy-forecasting-run-step-1021230776: STEP 5: Model Training
+p-2-008-energy-forecasting-run-step-1021230776:    Target: consumption_kwh
+p-2-008-energy-forecasting-run-step-1021230776:    MAE: 23.9, R2: 0.474
+p-2-008-energy-forecasting-run-step-1021230776: time=2026-07-15T14:21:22.072Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-2-008-energy-forecasting-run-step-1021230776: time=2026-07-15T14:21:22.072Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-2-008-energy-forecasting-run-step-4023691920: time=2026-07-15T14:21:28.142Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-2-008-energy-forecasting-run-step-4023691920: STEP 6: Final Report
+p-2-008-energy-forecasting-run-step-4023691920: ============================================================
+p-2-008-energy-forecasting-run-step-4023691920:     ENERGY CONSUMPTION FORECASTING — FINAL REPORT
+p-2-008-energy-forecasting-run-step-4023691920:     2026-07-15 14:21:28
+p-2-008-energy-forecasting-run-step-4023691920: ============================================================
+p-2-008-energy-forecasting-run-step-4023691920: 
+p-2-008-energy-forecasting-run-step-4023691920: Domain: Energy / Utilities
+p-2-008-energy-forecasting-run-step-4023691920: Forecasting energy consumption using historical patterns and weather covariates.
+p-2-008-energy-forecasting-run-step-4023691920: 
+p-2-008-energy-forecasting-run-step-4023691920: This pipeline executed: Load → Clean → Feature Engineering → EDA → Modeling → Report
+p-2-008-energy-forecasting-run-step-4023691920: Key outputs are in the output/ directory.
+p-2-008-energy-forecasting-run-step-4023691920: ============================================================
+p-2-008-energy-forecasting-run-step-4023691920: OK
+p-2-008-energy-forecasting-run-step-4023691920: time=2026-07-15T14:21:29.143Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-2-008-energy-forecasting-run-step-4023691920: time=2026-07-15T14:21:29.143Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

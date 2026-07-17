@@ -1,0 +1,78 @@
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089: time=2026-07-15T14:27:05.852Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089: STEP 1: Load & Profile — Sports | Techniques: clustering, statistical, visualization
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089:    Data: 532 rows x 17 cols
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089:    Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089:    games_played: mean=45.79, std=21.29
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089:    points_per_game: mean=11.71, std=7.51
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089:    assists_per_game: mean=4.03, std=2.80
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089:    rebounds_per_game: mean=6.00, std=3.78
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089: OK
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089: time=2026-07-15T14:27:06.852Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-4-017-sports-clustering-statistical-visualization-run-step-1910308089: time=2026-07-15T14:27:06.852Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-4-017-sports-clustering-statistical-visualization-run-step-2757660625: time=2026-07-15T14:27:19.132Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-017-sports-clustering-statistical-visualization-run-step-2757660625: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-4-017-sports-clustering-statistical-visualization-run-step-2757660625: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-4-017-sports-clustering-statistical-visualization-run-step-2757660625:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-4-017-sports-clustering-statistical-visualization-run-step-2757660625: STEP 2: Clean & Standardize
+p-4-017-sports-clustering-statistical-visualization-run-step-2757660625:    Nulls: 0 → 0
+p-4-017-sports-clustering-statistical-visualization-run-step-2757660625: OK
+p-4-017-sports-clustering-statistical-visualization-run-step-2757660625: time=2026-07-15T14:27:20.133Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-4-017-sports-clustering-statistical-visualization-run-step-2757660625: time=2026-07-15T14:27:20.133Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-4-017-sports-clustering-statistical-visualization-run-step-237420477: time=2026-07-15T14:27:29.180Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-017-sports-clustering-statistical-visualization-run-step-237420477: STEP 3: Feature Engineering
+p-4-017-sports-clustering-statistical-visualization-run-step-237420477:    Created: 3 features
+p-4-017-sports-clustering-statistical-visualization-run-step-237420477:    20 columns
+p-4-017-sports-clustering-statistical-visualization-run-step-237420477: OK
+p-4-017-sports-clustering-statistical-visualization-run-step-237420477: time=2026-07-15T14:27:30.181Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-4-017-sports-clustering-statistical-visualization-run-step-237420477: time=2026-07-15T14:27:30.181Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-4-017-sports-clustering-statistical-visualization-run-step-656455349: time=2026-07-15T14:27:39.422Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-017-sports-clustering-statistical-visualization-run-step-656455349: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-4-017-sports-clustering-statistical-visualization-run-step-656455349: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-4-017-sports-clustering-statistical-visualization-run-step-656455349:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-4-017-sports-clustering-statistical-visualization-run-step-656455349: STEP 4: EDA & Visualization
+p-4-017-sports-clustering-statistical-visualization-run-step-656455349:    16 numerical, 3 categorical features
+p-4-017-sports-clustering-statistical-visualization-run-step-656455349: OK
+p-4-017-sports-clustering-statistical-visualization-run-step-656455349: time=2026-07-15T14:27:42.425Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-4-017-sports-clustering-statistical-visualization-run-step-656455349: time=2026-07-15T14:27:42.425Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713: time=2026-07-15T14:27:49.262Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713: STEP 5: Model Training — clustering, statistical, visualization
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713:    Clusters (n=3):
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713:      Cluster 0 (n=219): mean free_throw_pct=0.734
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713:      Cluster 1 (n=88): mean free_throw_pct=0.764
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713:      Cluster 2 (n=225): mean free_throw_pct=0.745
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713:    Pearson r: -0.071, p=0.1008
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713:    ANOVA by team: F=1.81, p=0.1267
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713:    Model saved
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713: time=2026-07-15T14:27:51.264Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-4-017-sports-clustering-statistical-visualization-run-step-4107720713: time=2026-07-15T14:27:51.264Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: time=2026-07-15T14:27:59.376Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: STEP 6: Final Report
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: ======================================================================
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:     SPORTS PIPELINE: CLUSTERING, STATISTICAL, VISUALIZATION
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:     2026-07-15 14:27:59
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: ======================================================================
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: 
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: Domain: Sports
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: Techniques Applied: clustering, statistical, visualization
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: 
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: Pipeline Steps:
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:   1. Data Loading & Profiling
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:   2. Data Cleaning & Standardization
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:   3. Feature Engineering
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:   4. Exploratory Data Analysis & Visualization
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:   5. Model Training & Evaluation
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:   6. Final Synthesis & Business Recommendations
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: 
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: Key outputs are available in the output/ directory.
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: 
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: Recommendations:
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:   • Monitor model performance monthly
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:   • Reassess feature importance quarterly
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641:   • Retrain models with fresh data biannually
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: ======================================================================
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: OK
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: time=2026-07-15T14:28:00.376Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-4-017-sports-clustering-statistical-visualization-run-step-483406641: time=2026-07-15T14:28:00.376Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

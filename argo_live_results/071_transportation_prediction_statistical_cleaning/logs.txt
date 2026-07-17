@@ -1,0 +1,75 @@
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128: time=2026-07-15T14:59:58.507Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128: STEP 1: Load & Profile — Transportation | Techniques: cleaning, prediction, statistical
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128:    Data: 710 rows x 15 cols
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128:    Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128:    departure_hour: mean=11.06, std=6.50
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128:    distance_km: mean=22.23, std=12.84
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128:    passengers: mean=30.31, std=5.32
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128:    fare_amount: mean=8.38, std=3.97
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128: OK
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128: time=2026-07-15T14:59:59.507Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3847461128: time=2026-07-15T14:59:59.507Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3787752752: time=2026-07-15T15:00:12.627Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3787752752: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3787752752: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3787752752:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3787752752: STEP 2: Clean & Standardize
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3787752752:    Nulls: 0 → 0
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3787752752: OK
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3787752752: time=2026-07-15T15:00:13.628Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-15-071-transportation-prediction-statistical-cleaning-run-step-3787752752: time=2026-07-15T15:00:13.628Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-15-071-transportation-prediction-statistical-cleaning-run-step-1520215200: time=2026-07-15T15:00:22.790Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-071-transportation-prediction-statistical-cleaning-run-step-1520215200: STEP 3: Feature Engineering
+p-15-071-transportation-prediction-statistical-cleaning-run-step-1520215200:    Created: 3 features
+p-15-071-transportation-prediction-statistical-cleaning-run-step-1520215200:    18 columns
+p-15-071-transportation-prediction-statistical-cleaning-run-step-1520215200: OK
+p-15-071-transportation-prediction-statistical-cleaning-run-step-1520215200: time=2026-07-15T15:00:23.790Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-15-071-transportation-prediction-statistical-cleaning-run-step-1520215200: time=2026-07-15T15:00:23.790Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-15-071-transportation-prediction-statistical-cleaning-run-step-345557160: time=2026-07-15T15:00:32.958Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-071-transportation-prediction-statistical-cleaning-run-step-345557160: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-15-071-transportation-prediction-statistical-cleaning-run-step-345557160: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-15-071-transportation-prediction-statistical-cleaning-run-step-345557160:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-15-071-transportation-prediction-statistical-cleaning-run-step-345557160: STEP 4: EDA & Visualization
+p-15-071-transportation-prediction-statistical-cleaning-run-step-345557160:    11 numerical, 4 categorical features
+p-15-071-transportation-prediction-statistical-cleaning-run-step-345557160: OK
+p-15-071-transportation-prediction-statistical-cleaning-run-step-345557160: time=2026-07-15T15:00:35.963Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-15-071-transportation-prediction-statistical-cleaning-run-step-345557160: time=2026-07-15T15:00:35.963Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192: time=2026-07-15T15:00:42.889Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192: STEP 5: Model Training — cleaning, prediction, statistical
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192:    ROC-AUC: 0.735, Acc: 80.99%
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192:    Pearson r: -0.078, p=0.0375
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192:    ANOVA by route: F=2.02, p=0.0936
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192:    Model saved
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192: time=2026-07-15T15:00:45.891Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-15-071-transportation-prediction-statistical-cleaning-run-step-2051481192: time=2026-07-15T15:00:45.891Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: time=2026-07-15T15:00:52.933Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: STEP 6: Final Report
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: ======================================================================
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:     TRANSPORTATION PIPELINE: CLEANING, PREDICTION, STATISTICAL
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:     2026-07-15 15:00:52
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: ======================================================================
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: 
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: Domain: Transportation
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: Techniques Applied: cleaning, prediction, statistical
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: 
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: Pipeline Steps:
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:   1. Data Loading & Profiling
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:   2. Data Cleaning & Standardization
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:   3. Feature Engineering
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:   4. Exploratory Data Analysis & Visualization
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:   5. Model Training & Evaluation
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:   6. Final Synthesis & Business Recommendations
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: 
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: Key outputs are available in the output/ directory.
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: 
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: Recommendations:
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:   • Monitor model performance monthly
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:   • Reassess feature importance quarterly
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800:   • Retrain models with fresh data biannually
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: ======================================================================
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: OK
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: time=2026-07-15T15:00:53.934Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-15-071-transportation-prediction-statistical-cleaning-run-step-4050332800: time=2026-07-15T15:00:53.934Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

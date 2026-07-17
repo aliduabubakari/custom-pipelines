@@ -1,0 +1,76 @@
+p-5-024-sports-regression-prediction-statistical-run-step-916866290: time=2026-07-15T14:30:17.804Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-5-024-sports-regression-prediction-statistical-run-step-916866290: STEP 1: Load & Profile — Sports | Techniques: prediction, regression, statistical
+p-5-024-sports-regression-prediction-statistical-run-step-916866290:    Data: 581 rows x 19 cols
+p-5-024-sports-regression-prediction-statistical-run-step-916866290:    Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+p-5-024-sports-regression-prediction-statistical-run-step-916866290:    games_played: mean=46.24, std=20.78
+p-5-024-sports-regression-prediction-statistical-run-step-916866290:    points_per_game: mean=12.63, std=7.53
+p-5-024-sports-regression-prediction-statistical-run-step-916866290:    assists_per_game: mean=4.35, std=2.81
+p-5-024-sports-regression-prediction-statistical-run-step-916866290:    rebounds_per_game: mean=5.84, std=3.69
+p-5-024-sports-regression-prediction-statistical-run-step-916866290: OK
+p-5-024-sports-regression-prediction-statistical-run-step-916866290: time=2026-07-15T14:30:18.804Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-024-sports-regression-prediction-statistical-run-step-916866290: time=2026-07-15T14:30:18.804Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-5-024-sports-regression-prediction-statistical-run-step-2360639494: time=2026-07-15T14:30:31.409Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-024-sports-regression-prediction-statistical-run-step-2360639494: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-5-024-sports-regression-prediction-statistical-run-step-2360639494: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-5-024-sports-regression-prediction-statistical-run-step-2360639494:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-5-024-sports-regression-prediction-statistical-run-step-2360639494: STEP 2: Clean & Standardize
+p-5-024-sports-regression-prediction-statistical-run-step-2360639494:    Nulls: 0 → 0
+p-5-024-sports-regression-prediction-statistical-run-step-2360639494: OK
+p-5-024-sports-regression-prediction-statistical-run-step-2360639494: time=2026-07-15T14:30:32.410Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-024-sports-regression-prediction-statistical-run-step-2360639494: time=2026-07-15T14:30:32.410Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-5-024-sports-regression-prediction-statistical-run-step-1011978106: time=2026-07-15T14:30:41.459Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-024-sports-regression-prediction-statistical-run-step-1011978106: STEP 3: Feature Engineering
+p-5-024-sports-regression-prediction-statistical-run-step-1011978106:    Created: 3 features
+p-5-024-sports-regression-prediction-statistical-run-step-1011978106:    22 columns
+p-5-024-sports-regression-prediction-statistical-run-step-1011978106: OK
+p-5-024-sports-regression-prediction-statistical-run-step-1011978106: time=2026-07-15T14:30:42.459Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-024-sports-regression-prediction-statistical-run-step-1011978106: time=2026-07-15T14:30:42.459Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-5-024-sports-regression-prediction-statistical-run-step-2101127878: time=2026-07-15T14:30:51.565Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-024-sports-regression-prediction-statistical-run-step-2101127878: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-5-024-sports-regression-prediction-statistical-run-step-2101127878: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-5-024-sports-regression-prediction-statistical-run-step-2101127878:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-5-024-sports-regression-prediction-statistical-run-step-2101127878: STEP 4: EDA & Visualization
+p-5-024-sports-regression-prediction-statistical-run-step-2101127878:    18 numerical, 3 categorical features
+p-5-024-sports-regression-prediction-statistical-run-step-2101127878: OK
+p-5-024-sports-regression-prediction-statistical-run-step-2101127878: time=2026-07-15T14:30:54.575Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-024-sports-regression-prediction-statistical-run-step-2101127878: time=2026-07-15T14:30:54.575Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482: time=2026-07-15T14:31:00.499Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482: STEP 5: Model Training — prediction, regression, statistical
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482:    ROC-AUC: 0.633, Acc: 73.50%
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482:    MAE: 0.36, R2: -0.005
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482:    Pearson r: -0.044, p=0.2946
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482:    ANOVA by team: F=1.83, p=0.1240
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482:    Model saved
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482: time=2026-07-15T14:31:03.503Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-5-024-sports-regression-prediction-statistical-run-step-3343522482: time=2026-07-15T14:31:03.503Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: time=2026-07-15T14:31:11.565Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: STEP 6: Final Report
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: ======================================================================
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:     SPORTS PIPELINE: PREDICTION, REGRESSION, STATISTICAL
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:     2026-07-15 14:31:11
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: ======================================================================
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: 
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: Domain: Sports
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: Techniques Applied: prediction, regression, statistical
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: 
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: Pipeline Steps:
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:   1. Data Loading & Profiling
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:   2. Data Cleaning & Standardization
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:   3. Feature Engineering
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:   4. Exploratory Data Analysis & Visualization
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:   5. Model Training & Evaluation
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:   6. Final Synthesis & Business Recommendations
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: 
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: Key outputs are available in the output/ directory.
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: 
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: Recommendations:
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:   • Monitor model performance monthly
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:   • Reassess feature importance quarterly
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454:   • Retrain models with fresh data biannually
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: ======================================================================
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: OK
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: time=2026-07-15T14:31:12.566Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-5-024-sports-regression-prediction-statistical-run-step-3432425454: time=2026-07-15T14:31:12.566Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

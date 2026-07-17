@@ -1,0 +1,76 @@
+p-13-063-transportation-clustering-validation-run-step-2869816216: time=2026-07-15T14:53:55.904Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-063-transportation-clustering-validation-run-step-2869816216: STEP 1: Load & Profile — Transportation | Techniques: clustering, validation
+p-13-063-transportation-clustering-validation-run-step-2869816216:    Data: 654 rows x 13 cols
+p-13-063-transportation-clustering-validation-run-step-2869816216:    Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+p-13-063-transportation-clustering-validation-run-step-2869816216:    departure_hour: mean=10.65, std=6.67
+p-13-063-transportation-clustering-validation-run-step-2869816216:    distance_km: mean=22.64, std=12.96
+p-13-063-transportation-clustering-validation-run-step-2869816216:    passengers: mean=29.69, std=5.46
+p-13-063-transportation-clustering-validation-run-step-2869816216:    fare_amount: mean=8.17, std=3.83
+p-13-063-transportation-clustering-validation-run-step-2869816216: OK
+p-13-063-transportation-clustering-validation-run-step-2869816216: time=2026-07-15T14:53:56.906Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-13-063-transportation-clustering-validation-run-step-2869816216: time=2026-07-15T14:53:56.906Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-13-063-transportation-clustering-validation-run-step-2022463680: time=2026-07-15T14:54:10.026Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-063-transportation-clustering-validation-run-step-2022463680: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-13-063-transportation-clustering-validation-run-step-2022463680: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-13-063-transportation-clustering-validation-run-step-2022463680:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-13-063-transportation-clustering-validation-run-step-2022463680: STEP 2: Clean & Standardize
+p-13-063-transportation-clustering-validation-run-step-2022463680:    Nulls: 0 → 0
+p-13-063-transportation-clustering-validation-run-step-2022463680: OK
+p-13-063-transportation-clustering-validation-run-step-2022463680: time=2026-07-15T14:54:11.026Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-13-063-transportation-clustering-validation-run-step-2022463680: time=2026-07-15T14:54:11.026Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-13-063-transportation-clustering-validation-run-step-701500464: time=2026-07-15T14:54:20.052Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-063-transportation-clustering-validation-run-step-701500464: STEP 3: Feature Engineering
+p-13-063-transportation-clustering-validation-run-step-701500464:    Created: 3 features
+p-13-063-transportation-clustering-validation-run-step-701500464:    16 columns
+p-13-063-transportation-clustering-validation-run-step-701500464: OK
+p-13-063-transportation-clustering-validation-run-step-701500464: time=2026-07-15T14:54:21.052Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-13-063-transportation-clustering-validation-run-step-701500464: time=2026-07-15T14:54:21.052Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-13-063-transportation-clustering-validation-run-step-282465592: time=2026-07-15T14:54:31.333Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-063-transportation-clustering-validation-run-step-282465592: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-13-063-transportation-clustering-validation-run-step-282465592: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-13-063-transportation-clustering-validation-run-step-282465592:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-13-063-transportation-clustering-validation-run-step-282465592: STEP 4: EDA & Visualization
+p-13-063-transportation-clustering-validation-run-step-282465592:    9 numerical, 4 categorical features
+p-13-063-transportation-clustering-validation-run-step-282465592: OK
+p-13-063-transportation-clustering-validation-run-step-282465592: time=2026-07-15T14:54:34.338Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-13-063-transportation-clustering-validation-run-step-282465592: time=2026-07-15T14:54:34.338Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-13-063-transportation-clustering-validation-run-step-595562232: time=2026-07-15T14:54:40.370Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-063-transportation-clustering-validation-run-step-595562232: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-13-063-transportation-clustering-validation-run-step-595562232: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-13-063-transportation-clustering-validation-run-step-595562232:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-13-063-transportation-clustering-validation-run-step-595562232: STEP 5: Model Training — clustering, validation
+p-13-063-transportation-clustering-validation-run-step-595562232:    Clusters (n=3):
+p-13-063-transportation-clustering-validation-run-step-595562232:      Cluster 0 (n=270): mean avg_load_factor=0.602
+p-13-063-transportation-clustering-validation-run-step-595562232:      Cluster 1 (n=167): mean avg_load_factor=0.642
+p-13-063-transportation-clustering-validation-run-step-595562232:      Cluster 2 (n=217): mean avg_load_factor=0.607
+p-13-063-transportation-clustering-validation-run-step-595562232:    Model saved
+p-13-063-transportation-clustering-validation-run-step-595562232: time=2026-07-15T14:54:43.375Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-13-063-transportation-clustering-validation-run-step-595562232: time=2026-07-15T14:54:43.375Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-13-063-transportation-clustering-validation-run-step-4219876304: time=2026-07-15T14:54:50.482Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-13-063-transportation-clustering-validation-run-step-4219876304: STEP 6: Final Report
+p-13-063-transportation-clustering-validation-run-step-4219876304: ======================================================================
+p-13-063-transportation-clustering-validation-run-step-4219876304:     TRANSPORTATION PIPELINE: CLUSTERING, VALIDATION
+p-13-063-transportation-clustering-validation-run-step-4219876304:     2026-07-15 14:54:50
+p-13-063-transportation-clustering-validation-run-step-4219876304: ======================================================================
+p-13-063-transportation-clustering-validation-run-step-4219876304: 
+p-13-063-transportation-clustering-validation-run-step-4219876304: Domain: Transportation
+p-13-063-transportation-clustering-validation-run-step-4219876304: Techniques Applied: clustering, validation
+p-13-063-transportation-clustering-validation-run-step-4219876304: 
+p-13-063-transportation-clustering-validation-run-step-4219876304: Pipeline Steps:
+p-13-063-transportation-clustering-validation-run-step-4219876304:   1. Data Loading & Profiling
+p-13-063-transportation-clustering-validation-run-step-4219876304:   2. Data Cleaning & Standardization
+p-13-063-transportation-clustering-validation-run-step-4219876304:   3. Feature Engineering
+p-13-063-transportation-clustering-validation-run-step-4219876304:   4. Exploratory Data Analysis & Visualization
+p-13-063-transportation-clustering-validation-run-step-4219876304:   5. Model Training & Evaluation
+p-13-063-transportation-clustering-validation-run-step-4219876304:   6. Final Synthesis & Business Recommendations
+p-13-063-transportation-clustering-validation-run-step-4219876304: 
+p-13-063-transportation-clustering-validation-run-step-4219876304: Key outputs are available in the output/ directory.
+p-13-063-transportation-clustering-validation-run-step-4219876304: 
+p-13-063-transportation-clustering-validation-run-step-4219876304: Recommendations:
+p-13-063-transportation-clustering-validation-run-step-4219876304:   • Monitor model performance monthly
+p-13-063-transportation-clustering-validation-run-step-4219876304:   • Reassess feature importance quarterly
+p-13-063-transportation-clustering-validation-run-step-4219876304:   • Retrain models with fresh data biannually
+p-13-063-transportation-clustering-validation-run-step-4219876304: ======================================================================
+p-13-063-transportation-clustering-validation-run-step-4219876304: OK
+p-13-063-transportation-clustering-validation-run-step-4219876304: time=2026-07-15T14:54:51.483Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-13-063-transportation-clustering-validation-run-step-4219876304: time=2026-07-15T14:54:51.483Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

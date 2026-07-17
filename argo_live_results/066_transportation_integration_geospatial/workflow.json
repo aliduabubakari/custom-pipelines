@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-14-066-transportation-integration-geospatial",
+        "generateName": "transportation-integration-geospatial",
+        "namespace": "default",
+        "uid": "ec5ceb62-bd40-4eb7-92f5-4b5cb823125f",
+        "resourceVersion": "23117",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T14:56:36Z",
+        "labels": {
+            "domain": "Transportation",
+            "pipeline": "transportation_integration_geospatial",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:56:36Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:57:46Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-14-066-transportation-integration-geospatial": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-1200756294": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-1226154927": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-1226743307": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-1227287760": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-1229756402": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-1293412498": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-2004677678": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-220336430": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-220483525": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-3536190470": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-3935509946": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-14-066-transportation-integration-geospatial-977587762": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/transportation_integration_geospatial:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:56:36Z",
+        "finishedAt": "2026-07-15T14:57:46Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-14-066-transportation-integration-geospatial": {
+                "id": "p-14-066-transportation-integration-geospatial",
+                "name": "p-14-066-transportation-integration-geospatial",
+                "displayName": "p-14-066-transportation-integration-geospatial",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:56:36Z",
+                "finishedAt": "2026-07-15T14:57:46Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 77
+                },
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-220336430"
+                ],
+                "outboundNodes": [
+                    "p-14-066-transportation-integration-geospatial-2004677678"
+                ]
+            },
+            "p-14-066-transportation-integration-geospatial-1200756294": {
+                "id": "p-14-066-transportation-integration-geospatial-1200756294",
+                "name": "p-14-066-transportation-integration-geospatial[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:56:56Z",
+                "finishedAt": "2026-07-15T14:57:00Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-1227287760"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-14-066-transportation-integration-geospatial-1226154927": {
+                "id": "p-14-066-transportation-integration-geospatial-1226154927",
+                "name": "p-14-066-transportation-integration-geospatial[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:57:36Z",
+                "finishedAt": "2026-07-15T14:57:46Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-2004677678"
+                ]
+            },
+            "p-14-066-transportation-integration-geospatial-1226743307": {
+                "id": "p-14-066-transportation-integration-geospatial-1226743307",
+                "name": "p-14-066-transportation-integration-geospatial[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:56:56Z",
+                "finishedAt": "2026-07-15T14:57:06Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 64
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-1200756294"
+                ]
+            },
+            "p-14-066-transportation-integration-geospatial-1227287760": {
+                "id": "p-14-066-transportation-integration-geospatial-1227287760",
+                "name": "p-14-066-transportation-integration-geospatial[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:57:06Z",
+                "finishedAt": "2026-07-15T14:57:16Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 57
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-3935509946"
+                ]
+            },
+            "p-14-066-transportation-integration-geospatial-1229756402": {
+                "id": "p-14-066-transportation-integration-geospatial-1229756402",
+                "name": "p-14-066-transportation-integration-geospatial[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:57:26Z",
+                "finishedAt": "2026-07-15T14:57:32Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-1226154927"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-14-066-transportation-integration-geospatial-1293412498": {
+                "id": "p-14-066-transportation-integration-geospatial-1293412498",
+                "name": "p-14-066-transportation-integration-geospatial[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:57:26Z",
+                "finishedAt": "2026-07-15T14:57:36Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 26
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-1229756402"
+                ]
+            },
+            "p-14-066-transportation-integration-geospatial-2004677678": {
+                "id": "p-14-066-transportation-integration-geospatial-2004677678",
+                "name": "p-14-066-transportation-integration-geospatial[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:57:36Z",
+                "finishedAt": "2026-07-15T14:57:40Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-14-066-transportation-integration-geospatial-220336430": {
+                "id": "p-14-066-transportation-integration-geospatial-220336430",
+                "name": "p-14-066-transportation-integration-geospatial[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:56:36Z",
+                "finishedAt": "2026-07-15T14:56:56Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 77
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-977587762"
+                ]
+            },
+            "p-14-066-transportation-integration-geospatial-220483525": {
+                "id": "p-14-066-transportation-integration-geospatial-220483525",
+                "name": "p-14-066-transportation-integration-geospatial[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:57:16Z",
+                "finishedAt": "2026-07-15T14:57:26Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 50
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-3536190470"
+                ]
+            },
+            "p-14-066-transportation-integration-geospatial-3536190470": {
+                "id": "p-14-066-transportation-integration-geospatial-3536190470",
+                "name": "p-14-066-transportation-integration-geospatial[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:57:16Z",
+                "finishedAt": "2026-07-15T14:57:22Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 24
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-1293412498"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-14-066-transportation-integration-geospatial-3935509946": {
+                "id": "p-14-066-transportation-integration-geospatial-3935509946",
+                "name": "p-14-066-transportation-integration-geospatial[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:57:06Z",
+                "finishedAt": "2026-07-15T14:57:10Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-220483525"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-14-066-transportation-integration-geospatial-977587762": {
+                "id": "p-14-066-transportation-integration-geospatial-977587762",
+                "name": "p-14-066-transportation-integration-geospatial[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-14-066-transportation-integration-geospatial",
+                "phase": "Succeeded",
+                "boundaryID": "p-14-066-transportation-integration-geospatial",
+                "startedAt": "2026-07-15T14:56:36Z",
+                "finishedAt": "2026-07-15T14:56:48Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 13
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-14-066-transportation-integration-geospatial-1226743307"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 4,
+            "memory": 77
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

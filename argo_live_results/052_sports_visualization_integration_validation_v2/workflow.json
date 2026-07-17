@@ -1,0 +1,951 @@
+{
+    "metadata": {
+        "name": "p-11-052-sports-visualization-integration-validation-v2",
+        "generateName": "sports-visualization-integration-validation-v2",
+        "namespace": "default",
+        "uid": "2800eb4c-6f28-4108-825e-79341c034516",
+        "resourceVersion": "19355",
+        "generation": 9,
+        "creationTimestamp": "2026-07-15T14:48:10Z",
+        "labels": {
+            "domain": "Sports",
+            "pipeline": "sports_visualization_integration_validation_v2",
+            "steps": "6",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Succeeded"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:48:10Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:49:20Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-11-052-sports-visualization-integration-validation-v2": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-1166517467": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-2290057338": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-2290204433": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-2290645718": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-3296464215": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-3297008668": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-3297155763": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-3535613051": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-3659281643": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-4196506159": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-4233780999": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-11-052-sports-visualization-integration-validation-v2-493701711": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_load.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_clean.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_features.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_eda.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_model.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_report.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/sports_visualization_integration_validation_v2:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Succeeded",
+        "startedAt": "2026-07-15T14:48:10Z",
+        "finishedAt": "2026-07-15T14:49:20Z",
+        "progress": "6/6",
+        "nodes": {
+            "p-11-052-sports-visualization-integration-validation-v2": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2",
+                "name": "p-11-052-sports-visualization-integration-validation-v2",
+                "displayName": "p-11-052-sports-visualization-integration-validation-v2",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "startedAt": "2026-07-15T14:48:10Z",
+                "finishedAt": "2026-07-15T14:49:20Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 67
+                },
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-3296464215"
+                ],
+                "outboundNodes": [
+                    "p-11-052-sports-visualization-integration-validation-v2-3535613051"
+                ]
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-1166517467": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-1166517467",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:48:30Z",
+                "finishedAt": "2026-07-15T14:48:34Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_clean.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-2290204433"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-2290057338": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-2290057338",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:48:30Z",
+                "finishedAt": "2026-07-15T14:48:40Z",
+                "progress": "5/5",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 59
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-1166517467"
+                ]
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-2290204433": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-2290204433",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:48:40Z",
+                "finishedAt": "2026-07-15T14:48:50Z",
+                "progress": "4/4",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 52
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-3659281643"
+                ]
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-2290645718": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-2290645718",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:49:10Z",
+                "finishedAt": "2026-07-15T14:49:20Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-3535613051"
+                ]
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-3296464215": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-3296464215",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:48:10Z",
+                "finishedAt": "2026-07-15T14:48:30Z",
+                "progress": "6/6",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 67
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-493701711"
+                ]
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-3297008668": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-3297008668",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:48:50Z",
+                "finishedAt": "2026-07-15T14:49:00Z",
+                "progress": "3/3",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 45
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-4196506159"
+                ]
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-3297155763": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-3297155763",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:49:00Z",
+                "finishedAt": "2026-07-15T14:49:10Z",
+                "progress": "2/2",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 26
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-4233780999"
+                ]
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-3535613051": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-3535613051",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:49:10Z",
+                "finishedAt": "2026-07-15T14:49:14Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_report.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-3659281643": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-3659281643",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:48:40Z",
+                "finishedAt": "2026-07-15T14:48:44Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_features.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-3297008668"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-4196506159": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-4196506159",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:48:50Z",
+                "finishedAt": "2026-07-15T14:48:56Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_eda.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-3297155763"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-4233780999": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-4233780999",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:49:00Z",
+                "finishedAt": "2026-07-15T14:49:06Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_model.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-2290645718"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-11-052-sports-visualization-integration-validation-v2-493701711": {
+                "id": "p-11-052-sports-visualization-integration-validation-v2-493701711",
+                "name": "p-11-052-sports-visualization-integration-validation-v2[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-11-052-sports-visualization-integration-validation-v2",
+                "phase": "Succeeded",
+                "boundaryID": "p-11-052-sports-visualization-integration-validation-v2",
+                "startedAt": "2026-07-15T14:48:10Z",
+                "finishedAt": "2026-07-15T14:48:21Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_load.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-11-052-sports-visualization-integration-validation-v2-2290057338"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 2,
+            "memory": 67
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

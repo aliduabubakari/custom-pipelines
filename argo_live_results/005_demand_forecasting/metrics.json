@@ -1,0 +1,89 @@
+{
+  "pipeline": "005_demand_forecasting",
+  "batch": 1,
+  "workflow": "p-1-005-demand-forecasting",
+  "phase": "Succeeded",
+  "elapsed_s": 0,
+  "pod_duration_s": 57.0,
+  "node_count": 10,
+  "step_count": 10,
+  "steps_succeeded": 10,
+  "steps_failed": 0,
+  "steps": [
+    {
+      "name": "step-02",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 13.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-07",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-09",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-03",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-06",
+      "phase": "Succeeded",
+      "duration_s": 5.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-08",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-10",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-04",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-05",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    }
+  ],
+  "image_tag": "custom-pipelines/demand_forecasting:latest",
+  "started_at": "2026-07-15T14:16:09Z",
+  "finished_at": "2026-07-15T14:18:00Z",
+  "cpu_seconds": 6,
+  "memory_mb_seconds": 120
+}

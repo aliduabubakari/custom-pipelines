@@ -1,0 +1,130 @@
+==========================================================================================
+ARGO LIVE EXECUTION REPORT
+Generated: 2026-07-15 17:25:10
+Pipelines tested: 99
+==========================================================================================
+
+## Results Summary
+  ✅ Succeeded:    95 (96%)
+  ❌ Failed:        4 (4%)
+
+
+
+
+## Durations (successful pipelines)
+  Average: 15s
+  Min:     0s
+  Max:     70s
+
+## Steps: 598/602 passed (99%)
+
+## By Domain
+  analytics           : 2/2 succeeded (100%)
+  general-ml          : 8/10 succeeded (80%)
+  hr                  : 2/2 succeeded (100%)
+  sports              : 39/40 succeeded (98%)
+  transportation      : 44/45 succeeded (98%)
+
+    # Pipeline                                              Phase   Dur   Steps  CPU·s   MB·s
+------------------------------------------------------------------------------------------
+ ✅ 001_analytics_statistical_cleaning_integration   Succeeded   70s     6/6     2    67
+ ✅ 002_analytics_statistical_integration            Succeeded   10s     6/6     5    99
+ ❌ 003_credit_risk                                     Failed   40s   10/11     8   151
+ ❌ 004_customer_churn                                  Failed   10s   11/12     9   164
+ ✅ 005_demand_forecasting                           Succeeded    0s   10/10     6   120
+ ✅ 006_ecommerce_recommendation                     Succeeded   70s     6/6     3    72
+ ✅ 007_employee_attrition                           Succeeded    0s     6/6     4    82
+ ✅ 008_energy_forecasting                           Succeeded    0s     6/6     4    83
+ ✅ 009_healthcare_readmission                       Succeeded    0s     6/6     5    88
+ ✅ 010_hr_regression_visualization_integration      Succeeded    0s     6/6     5    83
+ ✅ 011_hr_visualization_integration_validation      Succeeded   70s     6/6     4    80
+ ✅ 012_insurance_claims                             Succeeded    0s     6/6     2    68
+ ✅ 013_predictive_maintenance                       Succeeded    0s     6/6     4    78
+ ✅ 014_sports_clustering_integration_validation     Succeeded    0s     6/6     2    68
+ ✅ 015_sports_clustering_prediction_statistical     Succeeded    0s     6/6     3    71
+ ✅ 016_sports_clustering_prediction_visualization   Succeeded   70s     6/6     2    66
+ ✅ 017_sports_clustering_statistical_visualization  Succeeded    0s     6/6     2    61
+ ✅ 018_sports_clustering_visualization_integration  Succeeded    0s     6/6     2    67
+ ✅ 019_sports_prediction_cleaning_integration       Succeeded    0s     6/6     2    67
+ ✅ 020_sports_prediction_statistical_visualization  Succeeded    0s     6/6     2    69
+ ✅ 021_sports_prediction_statistical_visualization  Succeeded   70s     6/6     2    67
+ ✅ 022_sports_prediction_visualization_cleaning     Succeeded    0s     6/6     2    67
+ ✅ 023_sports_regression_clustering_visualization   Succeeded    0s     6/6     2    67
+ ✅ 024_sports_regression_prediction_statistical     Succeeded    0s     6/6     2    66
+ ❌ 025_sports_regression_prediction_statistical_v2     Failed    0s     2/3     0    22
+ ✅ 026_sports_regression_prediction_statistical_v3  Succeeded   70s     6/6     3    74
+ ✅ 027_sports_regression_prediction_visualization   Succeeded    0s     6/6     3    74
+ ✅ 028_sports_regression_prediction_visualization_  Succeeded    0s     6/6     2    72
+ ✅ 029_sports_regression_statistical_visualization  Succeeded    0s     6/6     3    78
+ ✅ 030_sports_statistical_cleaning                  Succeeded    0s     6/6     2    71
+ ✅ 031_sports_statistical_cleaning_integration      Succeeded   70s     6/6     3    75
+ ✅ 032_sports_statistical_cleaning_integration_v2   Succeeded    0s     6/6     2    72
+ ✅ 033_sports_statistical_cleaning_integration_v3   Succeeded    0s     6/6     2    67
+ ✅ 034_sports_statistical_cleaning_integration_v4   Succeeded    0s     6/6     3    71
+ ✅ 035_sports_statistical_cleaning_integration_v5   Succeeded    0s     6/6     3    72
+ ✅ 036_sports_statistical_cleaning_validation       Succeeded   70s     6/6     2    70
+ ✅ 037_sports_statistical_integration               Succeeded    0s     6/6     3    73
+ ✅ 038_sports_statistical_integration_v2            Succeeded    0s     6/6     2    68
+ ✅ 039_sports_statistical_visualization_cleaning    Succeeded    0s     6/6     3    75
+ ✅ 040_sports_statistical_visualization_cleaning_v  Succeeded    0s     6/6     3    75
+ ✅ 041_sports_statistical_visualization_integratio  Succeeded   60s     6/6     2    70
+ ✅ 042_sports_validation_recovery                   Succeeded   10s     6/6     3    74
+ ✅ 043_sports_visualization                         Succeeded    0s     6/6     3    75
+ ✅ 044_sports_visualization_cleaning_integration    Succeeded    0s     6/6     2    67
+ ✅ 045_sports_visualization_cleaning_recovery       Succeeded    0s     6/6     3    72
+ ✅ 046_sports_visualization_cleaning_recovery_v2    Succeeded   70s     6/6     2    66
+ ✅ 047_sports_visualization_integration_features    Succeeded    0s     6/6     2    65
+ ✅ 048_sports_visualization_integration_geospatial  Succeeded    0s     6/6     2    66
+ ✅ 049_sports_visualization_integration_recovery    Succeeded    0s     6/6     2    66
+ ✅ 050_sports_visualization_integration_recovery_v  Succeeded    0s     6/6     2    66
+ ✅ 051_sports_visualization_integration_validation  Succeeded   70s     6/6     2    67
+ ✅ 052_sports_visualization_integration_validation  Succeeded    0s     6/6     2    67
+ ✅ 053_sports_visualization_validation_recovery     Succeeded    0s     6/6     3    71
+ ✅ 054_student_performance                          Succeeded    0s     6/6     2    66
+ ✅ 055_transportation_analysis                      Succeeded    0s     6/6     2    66
+ ✅ 056_transportation_cleaning                      Succeeded   70s     6/6     3    78
+ ✅ 057_transportation_cleaning_integration          Succeeded    0s     6/6     3    73
+ ✅ 058_transportation_cleaning_integration_geospat  Succeeded    0s     6/6     2    68
+ ✅ 059_transportation_cleaning_integration_recover  Succeeded    0s     6/6     2    69
+ ❌ 060_transportation_cleaning_integration_validat     Failed    0s     1/2     0    15
+ ✅ 061_transportation_cleaning_v2                   Succeeded   70s     6/6     4    80
+ ✅ 062_transportation_cleaning_validation_features  Succeeded    0s     6/6     2    72
+ ✅ 063_transportation_clustering_validation         Succeeded    0s     6/6     4    79
+ ✅ 064_transportation_integration                   Succeeded    0s     6/6     3    74
+ ✅ 065_transportation_integration_extra             Succeeded    0s     6/6     3    72
+ ✅ 066_transportation_integration_geospatial        Succeeded   70s     6/6     4    77
+ ✅ 067_transportation_integration_validation        Succeeded    0s     6/6     4    79
+ ✅ 068_transportation_prediction_cleaning           Succeeded    0s     6/6     4    80
+ ✅ 069_transportation_prediction_cleaning_integrat  Succeeded    0s     6/6     3    71
+ ✅ 070_transportation_prediction_cleaning_validati  Succeeded    0s     6/6     3    75
+ ✅ 071_transportation_prediction_statistical_clean  Succeeded   70s     6/6     2    69
+ ✅ 072_transportation_prediction_statistical_integ  Succeeded    0s     6/6     2    69
+ ✅ 073_transportation_prediction_validation         Succeeded    0s     6/6     4    78
+ ✅ 074_transportation_prediction_validation_recove  Succeeded    0s     6/6     3    72
+ ✅ 075_transportation_prediction_validation_v2      Succeeded    0s     6/6     2    67
+ ✅ 076_transportation_prediction_visualization_geo  Succeeded   70s     6/6     2    67
+ ✅ 077_transportation_prediction_visualization_int  Succeeded    0s     6/6     2    66
+ ✅ 078_transportation_prediction_visualization_int  Succeeded    0s     6/6     2    66
+ ✅ 079_transportation_regression                    Succeeded    0s     6/6     2    66
+ ✅ 080_transportation_regression_cleaning_integrat  Succeeded    0s     6/6     2    66
+ ✅ 081_transportation_regression_statistical_clean  Succeeded   70s     6/6     2    70
+ ✅ 082_transportation_regression_statistical_integ  Succeeded    0s     6/6     2    70
+ ✅ 083_transportation_regression_visualization_int  Succeeded    0s     6/6     2    70
+ ✅ 084_transportation_statistical_cleaning_integra  Succeeded    0s     6/6     2    71
+ ✅ 085_transportation_statistical_geospatial        Succeeded    0s     6/6     2    68
+ ✅ 086_transportation_statistical_geospatial_valid  Succeeded   70s     6/6     3    74
+ ✅ 087_transportation_statistical_integration       Succeeded    0s     6/6     3    76
+ ✅ 088_transportation_statistical_integration_v2    Succeeded    0s     6/6     3    72
+ ✅ 089_transportation_statistical_visualization_in  Succeeded    0s     6/6     3    73
+ ✅ 091_transportation_visualization                 Succeeded   70s     6/6     4    80
+ ✅ 092_transportation_visualization_cleaning_integ  Succeeded    0s     6/6     3    76
+ ✅ 093_transportation_visualization_cleaning_valid  Succeeded    0s     6/6     2    70
+ ✅ 094_transportation_visualization_cleaning_valid  Succeeded    0s     6/6     3    72
+ ✅ 095_transportation_visualization_geospatial      Succeeded    0s     6/6     3    72
+ ✅ 096_transportation_visualization_integration     Succeeded   70s     6/6     2    66
+ ✅ 097_transportation_visualization_integration_v2  Succeeded    0s     6/6     2    66
+ ✅ 098_transportation_visualization_integration_va  Succeeded    0s     6/6     2    66
+ ✅ 099_transportation_visualization_recovery_repor  Succeeded    0s     6/6     2    66
+ ✅ 100_transportation_visualization_v2              Succeeded    0s     6/6     2    67
+
+==========================================================================================

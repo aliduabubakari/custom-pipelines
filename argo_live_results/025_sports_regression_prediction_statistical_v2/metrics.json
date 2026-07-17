@@ -1,0 +1,40 @@
+{
+  "pipeline": "025_sports_regression_prediction_statistical_v2",
+  "batch": 5,
+  "workflow": "p-5-025-sports-regression-prediction-statistical-v2",
+  "phase": "Failed",
+  "elapsed_s": 0,
+  "pod_duration_s": 19.0,
+  "node_count": 3,
+  "step_count": 3,
+  "steps_succeeded": 2,
+  "steps_failed": 1,
+  "steps": [
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 11.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-02",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-03",
+      "phase": "Failed",
+      "duration_s": 4.0,
+      "exit_code": "134",
+      "message": "main: Error (exit code 134)"
+    }
+  ],
+  "image_tag": "custom-pipelines/sports_regression_prediction_statistical_v2:latest",
+  "started_at": "2026-07-15T14:30:09Z",
+  "finished_at": "2026-07-15T14:30:49Z",
+  "cpu_seconds": 0,
+  "memory_mb_seconds": 22
+}

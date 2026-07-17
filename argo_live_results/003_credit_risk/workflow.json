@@ -1,0 +1,1623 @@
+{
+    "metadata": {
+        "name": "p-1-003-credit-risk",
+        "generateName": "credit-risk",
+        "namespace": "default",
+        "uid": "bb4f3ac0-97cc-4fd5-8e7f-0a16c965a96e",
+        "resourceVersion": "6015",
+        "generation": 14,
+        "creationTimestamp": "2026-07-15T14:16:09Z",
+        "labels": {
+            "domain": "Finance",
+            "pipeline": "credit_risk",
+            "steps": "16",
+            "type": "ml-pipeline",
+            "workflows.argoproj.io/completed": "true",
+            "workflows.argoproj.io/creator": "system-admin",
+            "workflows.argoproj.io/phase": "Failed"
+        },
+        "annotations": {
+            "workflows.argoproj.io/pod-name-format": "v2"
+        },
+        "managedFields": [
+            {
+                "manager": "argo",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:16:09Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:generateName": {},
+                        "f:labels": {
+                            ".": {},
+                            "f:domain": {},
+                            "f:pipeline": {},
+                            "f:steps": {},
+                            "f:type": {},
+                            "f:workflows.argoproj.io/creator": {}
+                        }
+                    },
+                    "f:spec": {
+                        ".": {},
+                        "f:arguments": {},
+                        "f:entrypoint": {},
+                        "f:podGC": {
+                            ".": {},
+                            "f:strategy": {}
+                        },
+                        "f:serviceAccountName": {},
+                        "f:templates": {},
+                        "f:volumeClaimTemplates": {}
+                    },
+                    "f:status": {}
+                }
+            },
+            {
+                "manager": "workflow-controller",
+                "operation": "Update",
+                "apiVersion": "argoproj.io/v1alpha1",
+                "time": "2026-07-15T14:18:10Z",
+                "fieldsType": "FieldsV1",
+                "fieldsV1": {
+                    "f:metadata": {
+                        "f:annotations": {
+                            ".": {},
+                            "f:workflows.argoproj.io/pod-name-format": {}
+                        },
+                        "f:labels": {
+                            "f:workflows.argoproj.io/completed": {},
+                            "f:workflows.argoproj.io/phase": {}
+                        }
+                    },
+                    "f:status": {
+                        "f:artifactGCStatus": {
+                            ".": {},
+                            "f:notSpecified": {}
+                        },
+                        "f:artifactRepositoryRef": {
+                            ".": {},
+                            "f:artifactRepository": {},
+                            "f:default": {}
+                        },
+                        "f:conditions": {},
+                        "f:finishedAt": {},
+                        "f:message": {},
+                        "f:nodes": {
+                            ".": {},
+                            "f:p-1-003-credit-risk": {
+                                ".": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:message": {},
+                                "f:name": {},
+                                "f:outboundNodes": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-1216684561": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:message": {},
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-1936924903": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-2044636555": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-2576836983": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-2577381436": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-2577528531": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-2577969816": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-2644933197": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-2646066030": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-3149628059": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-3219823047": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-3229764547": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-3495594416": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:message": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-3638433443": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-3652576075": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-3717862170": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-3718009265": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-3718553718": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:id": {},
+                                "f:name": {},
+                                "f:nodeFlag": {},
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-399384828": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-4190605911": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-532894171": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            },
+                            "f:p-1-003-credit-risk-656598759": {
+                                ".": {},
+                                "f:boundaryID": {},
+                                "f:children": {},
+                                "f:displayName": {},
+                                "f:finishedAt": {},
+                                "f:hostNodeName": {},
+                                "f:id": {},
+                                "f:inputs": {
+                                    ".": {},
+                                    "f:parameters": {}
+                                },
+                                "f:name": {},
+                                "f:outputs": {
+                                    ".": {},
+                                    "f:exitCode": {}
+                                },
+                                "f:phase": {},
+                                "f:progress": {},
+                                "f:resourcesDuration": {
+                                    ".": {},
+                                    "f:cpu": {},
+                                    "f:memory": {}
+                                },
+                                "f:startedAt": {},
+                                "f:taskResultSynced": {},
+                                "f:templateName": {},
+                                "f:templateScope": {},
+                                "f:type": {}
+                            }
+                        },
+                        "f:persistentVolumeClaims": {},
+                        "f:phase": {},
+                        "f:progress": {},
+                        "f:resourcesDuration": {
+                            ".": {},
+                            "f:cpu": {},
+                            "f:memory": {}
+                        },
+                        "f:startedAt": {}
+                    }
+                }
+            }
+        ]
+    },
+    "spec": {
+        "templates": [
+            {
+                "name": "pipeline",
+                "inputs": {},
+                "outputs": {},
+                "metadata": {},
+                "steps": [
+                    [
+                        {
+                            "name": "step-01",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_01_data-loading-profiling.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-02",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_02_data-merging-integration.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-03",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_03_data-cleaning-standardization.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-04",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_04_data-validation-compliance-check.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-05",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_05_feature-engineering.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-06",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_06_exploratory-data-analysis.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-07",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_07_data-visualization--risk-profiles.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-08",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_08_data-visualization--credit-behavior.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-09",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_09_statistical-analysis-hypothesis-testing.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-10",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_10_data-preparation-for-modeling.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-11",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_11_model-training--baseline-models.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-12",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_12_model-training--advanced-ensemble.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-13",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_13_model-evaluation-threshold-optimization.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-14",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_14_model-explainability--shap-lime.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-15",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_15_fairness-regulatory-assessment.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    [
+                        {
+                            "name": "step-16",
+                            "template": "run-step",
+                            "arguments": {
+                                "parameters": [
+                                    {
+                                        "name": "script",
+                                        "value": "step_16_final-synthesis-business-recommendations.py"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                ]
+            },
+            {
+                "name": "run-step",
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script"
+                        }
+                    ]
+                },
+                "outputs": {},
+                "metadata": {},
+                "container": {
+                    "name": "",
+                    "image": "custom-pipelines/credit_risk:latest",
+                    "command": [
+                        "python"
+                    ],
+                    "args": [
+                        "/pipeline/scripts/{{inputs.parameters.script}}",
+                        "--data_dir",
+                        "/pipeline/data",
+                        "--output_dir",
+                        "/pipeline/output"
+                    ],
+                    "resources": {
+                        "limits": {
+                            "cpu": "2",
+                            "memory": "2Gi"
+                        },
+                        "requests": {
+                            "cpu": "500m",
+                            "memory": "512Mi"
+                        }
+                    },
+                    "volumeMounts": [
+                        {
+                            "name": "pipeline-output",
+                            "mountPath": "/pipeline/output"
+                        }
+                    ],
+                    "imagePullPolicy": "IfNotPresent"
+                }
+            }
+        ],
+        "entrypoint": "pipeline",
+        "arguments": {},
+        "serviceAccountName": "argo-workflow",
+        "volumeClaimTemplates": [
+            {
+                "metadata": {
+                    "name": "pipeline-output",
+                    "creationTimestamp": null
+                },
+                "spec": {
+                    "accessModes": [
+                        "ReadWriteOnce"
+                    ],
+                    "resources": {
+                        "requests": {
+                            "storage": "1Gi"
+                        }
+                    },
+                    "storageClassName": "local-path"
+                },
+                "status": {}
+            }
+        ],
+        "podGC": {
+            "strategy": "OnWorkflowCompletion"
+        }
+    },
+    "status": {
+        "phase": "Failed",
+        "startedAt": "2026-07-15T14:16:09Z",
+        "finishedAt": "2026-07-15T14:18:10Z",
+        "progress": "10/11",
+        "message": "child 'p-1-003-credit-risk-1216684561' failed",
+        "nodes": {
+            "p-1-003-credit-risk": {
+                "id": "p-1-003-credit-risk",
+                "name": "p-1-003-credit-risk",
+                "displayName": "p-1-003-credit-risk",
+                "type": "Steps",
+                "templateName": "pipeline",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Failed",
+                "message": "child 'p-1-003-credit-risk-1216684561' failed",
+                "startedAt": "2026-07-15T14:16:09Z",
+                "finishedAt": "2026-07-15T14:18:10Z",
+                "progress": "10/11",
+                "resourcesDuration": {
+                    "cpu": 8,
+                    "memory": 151
+                },
+                "children": [
+                    "p-1-003-credit-risk-2577528531"
+                ],
+                "outboundNodes": [
+                    "p-1-003-credit-risk-1216684561"
+                ]
+            },
+            "p-1-003-credit-risk-1216684561": {
+                "id": "p-1-003-credit-risk-1216684561",
+                "name": "p-1-003-credit-risk[10].step-11",
+                "displayName": "step-11",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Failed",
+                "boundaryID": "p-1-003-credit-risk",
+                "message": "main: Error (exit code 1)",
+                "startedAt": "2026-07-15T14:18:00Z",
+                "finishedAt": "2026-07-15T14:18:07Z",
+                "progress": "0/1",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 25
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_11_model-training--baseline-models.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "1"
+                },
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-003-credit-risk-1936924903": {
+                "id": "p-1-003-credit-risk-1936924903",
+                "name": "p-1-003-credit-risk[1].step-02",
+                "displayName": "step-02",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:16:29Z",
+                "finishedAt": "2026-07-15T14:16:34Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_02_data-merging-integration.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-003-credit-risk-2644933197"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-003-credit-risk-2044636555": {
+                "id": "p-1-003-credit-risk-2044636555",
+                "name": "p-1-003-credit-risk[8].step-09",
+                "displayName": "step-09",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:40Z",
+                "finishedAt": "2026-07-15T14:17:45Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 13
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_09_statistical-analysis-hypothesis-testing.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-003-credit-risk-2646066030"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-003-credit-risk-2576836983": {
+                "id": "p-1-003-credit-risk-2576836983",
+                "name": "p-1-003-credit-risk[4]",
+                "displayName": "[4]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:00Z",
+                "finishedAt": "2026-07-15T14:17:10Z",
+                "progress": "6/7",
+                "resourcesDuration": {
+                    "cpu": 7,
+                    "memory": 110
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-3638433443"
+                ]
+            },
+            "p-1-003-credit-risk-2577381436": {
+                "id": "p-1-003-credit-risk-2577381436",
+                "name": "p-1-003-credit-risk[7]",
+                "displayName": "[7]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:30Z",
+                "finishedAt": "2026-07-15T14:17:40Z",
+                "progress": "3/4",
+                "resourcesDuration": {
+                    "cpu": 5,
+                    "memory": 64
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-3149628059"
+                ]
+            },
+            "p-1-003-credit-risk-2577528531": {
+                "id": "p-1-003-credit-risk-2577528531",
+                "name": "p-1-003-credit-risk[0]",
+                "displayName": "[0]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:16:09Z",
+                "finishedAt": "2026-07-15T14:16:29Z",
+                "progress": "10/11",
+                "resourcesDuration": {
+                    "cpu": 8,
+                    "memory": 151
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-532894171"
+                ]
+            },
+            "p-1-003-credit-risk-2577969816": {
+                "id": "p-1-003-credit-risk-2577969816",
+                "name": "p-1-003-credit-risk[3]",
+                "displayName": "[3]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:16:50Z",
+                "finishedAt": "2026-07-15T14:17:00Z",
+                "progress": "7/8",
+                "resourcesDuration": {
+                    "cpu": 7,
+                    "memory": 117
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-3229764547"
+                ]
+            },
+            "p-1-003-credit-risk-2644933197": {
+                "id": "p-1-003-credit-risk-2644933197",
+                "name": "p-1-003-credit-risk[2]",
+                "displayName": "[2]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:16:39Z",
+                "finishedAt": "2026-07-15T14:16:50Z",
+                "progress": "8/9",
+                "resourcesDuration": {
+                    "cpu": 7,
+                    "memory": 125
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-656598759"
+                ]
+            },
+            "p-1-003-credit-risk-2646066030": {
+                "id": "p-1-003-credit-risk-2646066030",
+                "name": "p-1-003-credit-risk[9]",
+                "displayName": "[9]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:50Z",
+                "finishedAt": "2026-07-15T14:18:00Z",
+                "progress": "1/2",
+                "resourcesDuration": {
+                    "cpu": 3,
+                    "memory": 38
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-399384828"
+                ]
+            },
+            "p-1-003-credit-risk-3149628059": {
+                "id": "p-1-003-credit-risk-3149628059",
+                "name": "p-1-003-credit-risk[7].step-08",
+                "displayName": "step-08",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:30Z",
+                "finishedAt": "2026-07-15T14:17:35Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 13
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_08_data-visualization--credit-behavior.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-003-credit-risk-3652576075"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-003-credit-risk-3219823047": {
+                "id": "p-1-003-credit-risk-3219823047",
+                "name": "p-1-003-credit-risk[5].step-06",
+                "displayName": "step-06",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:10Z",
+                "finishedAt": "2026-07-15T14:17:16Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_06_exploratory-data-analysis.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-003-credit-risk-3718009265"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-003-credit-risk-3229764547": {
+                "id": "p-1-003-credit-risk-3229764547",
+                "name": "p-1-003-credit-risk[3].step-04",
+                "displayName": "step-04",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:16:50Z",
+                "finishedAt": "2026-07-15T14:16:55Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 7
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_04_data-validation-compliance-check.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-003-credit-risk-2576836983"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-003-credit-risk-3495594416": {
+                "id": "p-1-003-credit-risk-3495594416",
+                "name": "p-1-003-credit-risk[10]",
+                "displayName": "[10]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Failed",
+                "boundaryID": "p-1-003-credit-risk",
+                "message": "child 'p-1-003-credit-risk-1216684561' failed",
+                "startedAt": "2026-07-15T14:18:00Z",
+                "finishedAt": "2026-07-15T14:18:10Z",
+                "progress": "0/1",
+                "resourcesDuration": {
+                    "cpu": 2,
+                    "memory": 25
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-1216684561"
+                ]
+            },
+            "p-1-003-credit-risk-3638433443": {
+                "id": "p-1-003-credit-risk-3638433443",
+                "name": "p-1-003-credit-risk[4].step-05",
+                "displayName": "step-05",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:00Z",
+                "finishedAt": "2026-07-15T14:17:04Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_05_feature-engineering.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-003-credit-risk-3717862170"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-003-credit-risk-3652576075": {
+                "id": "p-1-003-credit-risk-3652576075",
+                "name": "p-1-003-credit-risk[8]",
+                "displayName": "[8]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:40Z",
+                "finishedAt": "2026-07-15T14:17:50Z",
+                "progress": "2/3",
+                "resourcesDuration": {
+                    "cpu": 4,
+                    "memory": 51
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-2044636555"
+                ]
+            },
+            "p-1-003-credit-risk-3717862170": {
+                "id": "p-1-003-credit-risk-3717862170",
+                "name": "p-1-003-credit-risk[5]",
+                "displayName": "[5]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:10Z",
+                "finishedAt": "2026-07-15T14:17:20Z",
+                "progress": "5/6",
+                "resourcesDuration": {
+                    "cpu": 7,
+                    "memory": 102
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-3219823047"
+                ]
+            },
+            "p-1-003-credit-risk-3718009265": {
+                "id": "p-1-003-credit-risk-3718009265",
+                "name": "p-1-003-credit-risk[6]",
+                "displayName": "[6]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:20Z",
+                "finishedAt": "2026-07-15T14:17:30Z",
+                "progress": "4/5",
+                "resourcesDuration": {
+                    "cpu": 6,
+                    "memory": 83
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-4190605911"
+                ]
+            },
+            "p-1-003-credit-risk-3718553718": {
+                "id": "p-1-003-credit-risk-3718553718",
+                "name": "p-1-003-credit-risk[1]",
+                "displayName": "[1]",
+                "type": "StepGroup",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:16:29Z",
+                "finishedAt": "2026-07-15T14:16:39Z",
+                "progress": "9/10",
+                "resourcesDuration": {
+                    "cpu": 7,
+                    "memory": 132
+                },
+                "nodeFlag": {},
+                "children": [
+                    "p-1-003-credit-risk-1936924903"
+                ]
+            },
+            "p-1-003-credit-risk-399384828": {
+                "id": "p-1-003-credit-risk-399384828",
+                "name": "p-1-003-credit-risk[9].step-10",
+                "displayName": "step-10",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:50Z",
+                "finishedAt": "2026-07-15T14:17:55Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 13
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_10_data-preparation-for-modeling.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-003-credit-risk-3495594416"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-003-credit-risk-4190605911": {
+                "id": "p-1-003-credit-risk-4190605911",
+                "name": "p-1-003-credit-risk[6].step-07",
+                "displayName": "step-07",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:17:20Z",
+                "finishedAt": "2026-07-15T14:17:26Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_07_data-visualization--risk-profiles.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-003-credit-risk-2577381436"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-003-credit-risk-532894171": {
+                "id": "p-1-003-credit-risk-532894171",
+                "name": "p-1-003-credit-risk[0].step-01",
+                "displayName": "step-01",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:16:09Z",
+                "finishedAt": "2026-07-15T14:16:22Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 1,
+                    "memory": 19
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_01_data-loading-profiling.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-003-credit-risk-3718553718"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            },
+            "p-1-003-credit-risk-656598759": {
+                "id": "p-1-003-credit-risk-656598759",
+                "name": "p-1-003-credit-risk[2].step-03",
+                "displayName": "step-03",
+                "type": "Pod",
+                "templateName": "run-step",
+                "templateScope": "local/p-1-003-credit-risk",
+                "phase": "Succeeded",
+                "boundaryID": "p-1-003-credit-risk",
+                "startedAt": "2026-07-15T14:16:39Z",
+                "finishedAt": "2026-07-15T14:16:44Z",
+                "progress": "1/1",
+                "resourcesDuration": {
+                    "cpu": 0,
+                    "memory": 8
+                },
+                "inputs": {
+                    "parameters": [
+                        {
+                            "name": "script",
+                            "value": "step_03_data-cleaning-standardization.py"
+                        }
+                    ]
+                },
+                "outputs": {
+                    "exitCode": "0"
+                },
+                "children": [
+                    "p-1-003-credit-risk-2577969816"
+                ],
+                "hostNodeName": "roberto-vm",
+                "taskResultSynced": true
+            }
+        },
+        "persistentVolumeClaims": [
+            {
+                "name": "pipeline-output",
+                "persistentVolumeClaim": {
+                    "claimName": "p-1-003-credit-risk-pipeline-output"
+                }
+            }
+        ],
+        "conditions": [
+            {
+                "type": "PodRunning",
+                "status": "False"
+            },
+            {
+                "type": "Completed",
+                "status": "True"
+            }
+        ],
+        "resourcesDuration": {
+            "cpu": 8,
+            "memory": 151
+        },
+        "artifactRepositoryRef": {
+            "default": true,
+            "artifactRepository": {}
+        },
+        "artifactGCStatus": {
+            "notSpecified": true
+        }
+    }
+}

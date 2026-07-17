@@ -1,0 +1,73 @@
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499: time=2026-07-15T14:51:07.132Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499: STEP 1: Load & Profile — Transportation | Techniques: cleaning, geospatial, integration
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499:    Data: 619 rows x 15 cols
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499:    Columns: ['trip_id', 'route', 'vehicle_type', 'departure_hour', 'distance_km', 'passengers', 'fare_amount', 'delay_minutes']...
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499:    departure_hour: mean=10.95, std=6.70
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499:    distance_km: mean=23.00, std=12.84
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499:    passengers: mean=29.94, std=5.58
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499:    fare_amount: mean=8.44, std=3.83
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499: OK
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499: time=2026-07-15T14:51:08.132Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3815067499: time=2026-07-15T14:51:08.132Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2668972471: time=2026-07-15T14:51:22.310Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2668972471: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2668972471: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2668972471:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2668972471: STEP 2: Clean & Standardize
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2668972471:    Nulls: 0 → 0
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2668972471: OK
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2668972471: time=2026-07-15T14:51:23.311Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2668972471: time=2026-07-15T14:51:23.311Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-12-058-transportation-cleaning-integration-geospatial-run-step-766560823: time=2026-07-15T14:51:32.331Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-12-058-transportation-cleaning-integration-geospatial-run-step-766560823: STEP 3: Feature Engineering
+p-12-058-transportation-cleaning-integration-geospatial-run-step-766560823:    Created: 3 features
+p-12-058-transportation-cleaning-integration-geospatial-run-step-766560823:    18 columns
+p-12-058-transportation-cleaning-integration-geospatial-run-step-766560823: OK
+p-12-058-transportation-cleaning-integration-geospatial-run-step-766560823: time=2026-07-15T14:51:33.332Z level=INFO msg="sub-process exited" error=<nil> argo=true
+p-12-058-transportation-cleaning-integration-geospatial-run-step-766560823: time=2026-07-15T14:51:33.332Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-12-058-transportation-cleaning-integration-geospatial-run-step-590328723: time=2026-07-15T14:51:42.638Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-12-058-transportation-cleaning-integration-geospatial-run-step-590328723: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-12-058-transportation-cleaning-integration-geospatial-run-step-590328723: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-12-058-transportation-cleaning-integration-geospatial-run-step-590328723:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-12-058-transportation-cleaning-integration-geospatial-run-step-590328723: STEP 4: EDA & Visualization
+p-12-058-transportation-cleaning-integration-geospatial-run-step-590328723:    11 numerical, 4 categorical features
+p-12-058-transportation-cleaning-integration-geospatial-run-step-590328723: OK
+p-12-058-transportation-cleaning-integration-geospatial-run-step-590328723: time=2026-07-15T14:51:45.642Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-058-transportation-cleaning-integration-geospatial-run-step-590328723: time=2026-07-15T14:51:45.642Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3039414899: time=2026-07-15T14:51:52.525Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3039414899: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3039414899: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3039414899:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3039414899: STEP 5: Model Training — cleaning, geospatial, integration
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3039414899:    MAE: 0.11, R2: -0.034
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3039414899:    Model saved
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3039414899: time=2026-07-15T14:51:55.531Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-058-transportation-cleaning-integration-geospatial-run-step-3039414899: time=2026-07-15T14:51:55.531Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: time=2026-07-15T14:52:01.601Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: STEP 6: Final Report
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: ======================================================================
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:     TRANSPORTATION PIPELINE: CLEANING, GEOSPATIAL, INTEGRATION
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:     2026-07-15 14:52:01
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: ======================================================================
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: 
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: Domain: Transportation
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: Techniques Applied: cleaning, geospatial, integration
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: 
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: Pipeline Steps:
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:   1. Data Loading & Profiling
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:   2. Data Cleaning & Standardization
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:   3. Feature Engineering
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:   4. Exploratory Data Analysis & Visualization
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:   5. Model Training & Evaluation
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:   6. Final Synthesis & Business Recommendations
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: 
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: Key outputs are available in the output/ directory.
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: 
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: Recommendations:
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:   • Monitor model performance monthly
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:   • Reassess feature importance quarterly
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079:   • Retrain models with fresh data biannually
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: ======================================================================
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: OK
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: time=2026-07-15T14:52:02.602Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-12-058-transportation-cleaning-integration-geospatial-run-step-2084589079: time=2026-07-15T14:52:02.602Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true

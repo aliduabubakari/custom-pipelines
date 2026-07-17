@@ -1,0 +1,61 @@
+{
+  "pipeline": "049_sports_visualization_integration_recovery",
+  "batch": 10,
+  "workflow": "p-10-049-sports-visualization-integration-recovery",
+  "phase": "Succeeded",
+  "elapsed_s": 0,
+  "pod_duration_s": 35.0,
+  "node_count": 6,
+  "step_count": 6,
+  "steps_succeeded": 6,
+  "steps_failed": 0,
+  "steps": [
+    {
+      "name": "step-02",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-04",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-06",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-05",
+      "phase": "Succeeded",
+      "duration_s": 6.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 11.0,
+      "exit_code": "0",
+      "message": ""
+    },
+    {
+      "name": "step-03",
+      "phase": "Succeeded",
+      "duration_s": 4.0,
+      "exit_code": "0",
+      "message": ""
+    }
+  ],
+  "image_tag": "custom-pipelines/sports_visualization_integration_recovery:latest",
+  "started_at": "2026-07-15T14:45:18Z",
+  "finished_at": "2026-07-15T14:46:28Z",
+  "cpu_seconds": 2,
+  "memory_mb_seconds": 66
+}

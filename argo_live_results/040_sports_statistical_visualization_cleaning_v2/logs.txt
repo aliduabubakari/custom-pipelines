@@ -1,0 +1,75 @@
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381: time=2026-07-15T14:39:22.645Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381: STEP 1: Load & Profile — Sports | Techniques: cleaning, statistical, visualization
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381:    Data: 493 rows x 14 cols
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381:    Columns: ['player_id', 'team', 'position', 'games_played', 'points_per_game', 'assists_per_game', 'rebounds_per_game', 'minutes_per_game']...
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381:    games_played: mean=45.56, std=21.32
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381:    points_per_game: mean=11.65, std=7.26
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381:    assists_per_game: mean=4.18, std=2.79
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381:    rebounds_per_game: mean=5.95, std=3.64
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381: OK
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381: time=2026-07-15T14:39:23.645Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1160897381: time=2026-07-15T14:39:23.645Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1493106381: time=2026-07-15T14:39:35.734Z level=INFO msg="waiting for signals" signalPath=/var/run/argo/ctr/main/signal argo=true
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1493106381: /pipeline/scripts/step_02_clean.py:14: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1493106381: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1493106381:   for c in df.select_dtypes(include=['object']).columns:df[c]=df[c].astype(str).str.strip()
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1493106381: STEP 2: Clean & Standardize
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1493106381:    Nulls: 0 → 0
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1493106381: OK
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1493106381: time=2026-07-15T14:39:36.735Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-1493106381: time=2026-07-15T14:39:36.735Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3053320025: time=2026-07-15T14:39:45.830Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3053320025: STEP 3: Feature Engineering
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3053320025:    Created: 3 features
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3053320025:    17 columns
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3053320025: OK
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3053320025: time=2026-07-15T14:39:46.831Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3053320025: time=2026-07-15T14:39:46.831Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-2763041017: time=2026-07-15T14:39:56.006Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-2763041017: /pipeline/scripts/step_04_eda.py:13: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-2763041017: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-2763041017:   cat=[c for c in df.select_dtypes(include=['object','category']).columns if df[c].nunique()<=15]
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-2763041017: STEP 4: EDA & Visualization
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-2763041017:    13 numerical, 3 categorical features
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-2763041017: OK
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-2763041017: time=2026-07-15T14:39:59.035Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-2763041017: time=2026-07-15T14:39:59.035Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717: time=2026-07-15T14:40:05.259Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717: /pipeline/scripts/step_05_model.py:24: Pandas4Warning: For backward compatibility, 'str' dtypes are included by select_dtypes when 'object' dtype is specified. This behavior is deprecated and will be removed in a future version. Explicitly pass 'str' to `include` to select them, or to `exclude` to remove them and silence this warning.
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717: See https://pandas.pydata.org/docs/user_guide/migration-3-strings.html#string-migration-select-dtypes for details on how to write code that works with pandas 2 and 3.
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717:   cat=[c for c in X.select_dtypes(include=['object','category']).columns if c in X.columns and X[c].nunique()<=20]
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717: STEP 5: Model Training — cleaning, statistical, visualization
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717:    Pearson r: 0.015, p=0.7361
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717:    ANOVA by team: F=0.82, p=0.5159
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717:    MAE: 0.08, R2: 0.001
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717:    Model saved
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717: time=2026-07-15T14:40:08.259Z level=INFO msg="sub-process exited" argo=true error=<nil>
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-3654253717: time=2026-07-15T14:40:08.259Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: time=2026-07-15T14:40:15.194Z level=INFO msg="waiting for signals" argo=true signalPath=/var/run/argo/ctr/main/signal
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: STEP 6: Final Report
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: ======================================================================
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:     SPORTS PIPELINE: CLEANING, STATISTICAL, VISUALIZATION
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:     2026-07-15 14:40:15
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: ======================================================================
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: 
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: Domain: Sports
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: Techniques Applied: cleaning, statistical, visualization
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: 
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: Pipeline Steps:
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:   1. Data Loading & Profiling
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:   2. Data Cleaning & Standardization
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:   3. Feature Engineering
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:   4. Exploratory Data Analysis & Visualization
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:   5. Model Training & Evaluation
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:   6. Final Synthesis & Business Recommendations
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: 
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: Key outputs are available in the output/ directory.
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: 
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: Recommendations:
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:   • Monitor model performance monthly
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:   • Reassess feature importance quarterly
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621:   • Retrain models with fresh data biannually
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: ======================================================================
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: OK
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: time=2026-07-15T14:40:16.194Z level=INFO msg="file signal handler exiting due to context cancellation" argo=true
+p-8-040-sports-statistical-visualization-cleaning-v2-run-step-287680621: time=2026-07-15T14:40:16.194Z level=INFO msg="sub-process exited" argo=true error=<nil>

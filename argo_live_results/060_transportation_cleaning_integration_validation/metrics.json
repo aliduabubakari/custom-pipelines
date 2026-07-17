@@ -1,0 +1,33 @@
+{
+  "pipeline": "060_transportation_cleaning_integration_validation",
+  "batch": 12,
+  "workflow": "p-12-060-transportation-cleaning-integration-validation",
+  "phase": "Failed",
+  "elapsed_s": 0,
+  "pod_duration_s": 16.0,
+  "node_count": 2,
+  "step_count": 2,
+  "steps_succeeded": 1,
+  "steps_failed": 1,
+  "steps": [
+    {
+      "name": "step-02",
+      "phase": "Failed",
+      "duration_s": 4.0,
+      "exit_code": "134",
+      "message": "main: Error (exit code 134)"
+    },
+    {
+      "name": "step-01",
+      "phase": "Succeeded",
+      "duration_s": 12.0,
+      "exit_code": "0",
+      "message": ""
+    }
+  ],
+  "image_tag": "custom-pipelines/transportation_cleaning_integration_validation:latest",
+  "started_at": "2026-07-15T14:51:00Z",
+  "finished_at": "2026-07-15T14:51:30Z",
+  "cpu_seconds": 0,
+  "memory_mb_seconds": 15
+}
